@@ -1,12 +1,13 @@
 # S2 Statistika Terapan FMIPA Unpad
 
-Website profesional satu halaman untuk Program Magister Statistika Terapan FMIPA Universitas Padjadjaran, dilengkapi chatbot akademik berbasis knowledge base Kurikulum OBE 2025.
+Website profesional satu halaman untuk Program Magister Statistika Terapan FMIPA Universitas Padjadjaran, dilengkapi chatbot akademik berbasis knowledge base Kurikulum OBE 2026 dan data lulusan.
 
 ## Fitur Utama
 
 - Landing page profesional dengan visual kampus/prodi, profil program, struktur kurikulum, profil lulusan, dan daftar mata kuliah.
-- Tabel mata kuliah dengan pencarian dan filter kelompok: Wajib, Pilihan, Riset, dan By Research.
-- Halaman silabus yang menampilkan deskripsi, bahan kajian, dan referensi dari PDF Kurikulum S2 Statistika 2025.
+- Tabel mata kuliah dengan pencarian dan filter kelompok: Wajib, Pilihan, Riset, Keterampilan Riset, dan Publikasi.
+- Halaman silabus yang menampilkan deskripsi, bahan kajian, dan referensi dari PDF Kurikulum S2 Statistika 2026.
+- Halaman lulusan dan tesis yang menampilkan ringkasan tahun lulus, tema riset, dan daftar judul tesis dari `Lulusan.xlsx`.
 - Chatbot akademik yang menjawab berdasarkan `data/knowledge_chunks.json`, termasuk dokumen kurikulum dan ringkasan resmi SMUP Program Magister.
 - Endpoint server `/api/chat` dengan mode retrieval lokal dan mode OpenAI API jika `OPENAI_API_KEY` tersedia.
 - Sumber jawaban ditampilkan sebagai rujukan halaman agar chatbot tidak terasa seperti mengarang.
@@ -25,10 +26,12 @@ Website profesional satu halaman untuk Program Magister Statistika Terapan FMIPA
 ├── data/
 │   ├── knowledge_base.md
 │   ├── knowledge_chunks.json
+│   ├── alumni.json
 │   └── syllabus.json
 ├── scripts/
 │   └── build-syllabus.mjs
-├── KURIKULUM S2 STATISTIKA 2025 - lengkap1.pdf
+├── KURIKULUM S2 STATISTIKA 2026.pdf
+├── Lulusan.xlsx
 ├── index.html
 ├── server.js
 ├── package.json
@@ -64,7 +67,7 @@ Jika `OPENAI_API_KEY` kosong, chatbot tetap berjalan dengan retrieval lokal dari
 Jika PDF kurikulum diperbarui, ganti file:
 
 ```text
-KURIKULUM S2 STATISTIKA 2025 - lengkap1.pdf
+KURIKULUM S2 STATISTIKA 2026.pdf
 ```
 
 Lalu jalankan:
@@ -73,7 +76,7 @@ Lalu jalankan:
 npm run build:syllabus
 ```
 
-Perintah ini akan membuat ulang `data/syllabus.json` dan menambahkan chunk `syllabus-*` ke `data/knowledge_chunks.json`, sehingga halaman Silabus dan chatbot memakai sumber yang sama.
+Perintah ini akan membuat ulang `data/syllabus.json` dan membangun ulang `data/knowledge_chunks.json` dari PDF 2026, chunk SMUP, chunk alumni, dan chunk silabus, sehingga halaman Silabus dan chatbot memakai sumber yang sama.
 
 ## Cara Kerja Chatbot
 
@@ -87,7 +90,7 @@ Untuk chatbot yang lebih mirip ChatGPT, aktifkan `OPENAI_API_KEY` di server. Mod
 
 ## Menambah Pengetahuan Chatbot
 
-Tambahkan dokumen resmi ke knowledge base sebelum meminta chatbot menjawab topik administratif seperti PMB, biaya, jadwal, RPL, beasiswa, kontak resmi, atau prosedur pendaftaran. Setelah dokumen ditambahkan dan diindeks ke `data/knowledge_chunks.json`, chatbot akan dapat mengambilnya sebagai sumber.
+Tambahkan dokumen resmi ke knowledge base sebelum meminta chatbot menjawab topik administratif seperti PMB, biaya, jadwal, RPL, beasiswa, kontak resmi, prosedur pendaftaran, atau data lulusan terbaru. Setelah dokumen ditambahkan dan diindeks ke `data/knowledge_chunks.json`, chatbot akan dapat mengambilnya sebagai sumber.
 
 ## Sumber SMUP Yang Sudah Masuk
 

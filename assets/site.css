@@ -333,7 +333,7 @@ p {
 
 .path-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
 
@@ -488,6 +488,147 @@ tbody tr:hover td {
 .empty-row td {
   color: var(--muted);
   text-align: center;
+}
+
+.alumni-dashboard {
+  display: grid;
+  grid-template-columns: 0.72fr 1.2fr 1.08fr;
+  gap: 16px;
+  align-items: stretch;
+  margin-bottom: 18px;
+}
+
+.metric-card,
+.year-panel,
+.theme-panel,
+.alumni-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(23, 23, 23, 0.06);
+}
+
+.metric-card {
+  display: grid;
+  align-content: center;
+  min-height: 168px;
+  padding: 24px;
+}
+
+.metric-card strong {
+  color: var(--red);
+  font-size: 54px;
+  line-height: 1;
+}
+
+.metric-card span {
+  margin-top: 8px;
+  color: var(--ink-soft);
+  font-weight: 900;
+}
+
+.year-panel,
+.theme-panel {
+  padding: 20px;
+}
+
+.year-panel h3,
+.theme-panel h3 {
+  margin-bottom: 14px;
+  font-size: 18px;
+}
+
+.year-bars {
+  display: grid;
+  gap: 10px;
+}
+
+.year-bar {
+  display: grid;
+  grid-template-columns: 52px 1fr 34px;
+  gap: 10px;
+  align-items: center;
+  color: var(--ink-soft);
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.year-bar div {
+  height: 11px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #ece2d3;
+}
+
+.year-bar i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--green);
+}
+
+.theme-panel ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.theme-panel li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.theme-panel strong {
+  color: var(--red);
+}
+
+.alumni-list {
+  max-height: 680px;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  padding-right: 8px;
+}
+
+.alumni-card {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  padding: 20px;
+}
+
+.alumni-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.alumni-card h3 {
+  margin-bottom: 0;
+  font-size: 18px;
+}
+
+.alumni-card p {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.alumni-card small {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 750;
+  line-height: 1.5;
 }
 
 .syllabus-toolbar {
@@ -836,7 +977,9 @@ tbody tr:hover td {
 
   .path-grid,
   .role-grid,
-  .syllabus-grid {
+  .syllabus-grid,
+  .alumni-dashboard,
+  .alumni-list {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -898,7 +1041,9 @@ tbody tr:hover td {
   .stat-grid,
   .path-grid,
   .role-grid,
-  .syllabus-grid {
+  .syllabus-grid,
+  .alumni-dashboard,
+  .alumni-list {
     grid-template-columns: 1fr;
   }
 
@@ -929,6 +1074,11 @@ tbody tr:hover td {
 
   .syllabus-grid {
     max-height: 620px;
+    padding-right: 4px;
+  }
+
+  .alumni-list {
+    max-height: 580px;
     padding-right: 4px;
   }
 

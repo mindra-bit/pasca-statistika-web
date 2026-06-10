@@ -1,0 +1,840 @@
+{
+  "source": "Lulusan.xlsx",
+  "title": "Daftar Judul Tesis Program Magister Statistika Terapan FMIPA Unpad",
+  "period": "2022-2026",
+  "summary": {
+    "total": 69,
+    "byYear": {
+      "2022": 14,
+      "2023": 16,
+      "2024": 10,
+      "2025": 23,
+      "2026": 6
+    },
+    "themes": [
+      {
+        "name": "Spasial, Lingkungan, dan Wilayah",
+        "count": 24
+      },
+      {
+        "name": "Regresi, Multivariat, dan Pemodelan",
+        "count": 16
+      },
+      {
+        "name": "Sains Data, AI, dan Machine Learning",
+        "count": 11
+      },
+      {
+        "name": "Statistika Terapan Lainnya",
+        "count": 9
+      },
+      {
+        "name": "Biostatistika dan Kesehatan",
+        "count": 6
+      },
+      {
+        "name": "Survei, Sosial, dan Kebijakan",
+        "count": 2
+      },
+      {
+        "name": "Aktuaria, Keuangan, dan Risiko",
+        "count": 1
+      }
+    ],
+    "topAdvisors": [
+      {
+        "name": "Dr. Irlandia Ginanjar. MS",
+        "count": 14
+      },
+      {
+        "name": "Dr. Yusep Suparman, M.Sc.",
+        "count": 14
+      },
+      {
+        "name": "Yudhie Andriyana, M.Sc., Ph.D",
+        "count": 13
+      },
+      {
+        "name": "Dr. Anindya Apriliyanti P. M.Si",
+        "count": 13
+      },
+      {
+        "name": "Dr. I Gede Nyoman Mindra Jaya, M.Si",
+        "count": 13
+      },
+      {
+        "name": "Dr. Bertho Tantular, S.Si., M.Si",
+        "count": 8
+      },
+      {
+        "name": "Dr. Gumgum Darmawan, S,Si. M.Sc",
+        "count": 6
+      },
+      {
+        "name": "Dr. Triyani Hendrawati,S.Si., M.Si.",
+        "count": 5
+      }
+    ]
+  },
+  "records": [
+    {
+      "no": 1,
+      "nama": "DHITA DIANA DEWI",
+      "npm": "140720200004",
+      "judul": "DETEKSI PENYAKIT COVID-19 BERDASARKAN CITRA X-RAY DADA MENGGUNAKAN CONVOLUTIONAL NEURAL NETWORK DENGAN TRANSFER LEARNING METHOD",
+      "pembimbing1": "Dr. Jadi Suprijadi, DEA",
+      "pembimbing2": "Dr. Anindya Apriliyanti P, M.Si",
+      "tahun_masuk": 2020,
+      "tahun_lulus": 2022,
+      "tema": "Sains Data, AI, dan Machine Learning"
+    },
+    {
+      "no": 2,
+      "nama": "NOVERLINA PUTRI P",
+      "npm": "140720200013",
+      "judul": "INTERPOLASI CURAH HUJAN DI PULAU SUMATERA DENGAN METODE HYBRID NEURAL NETWORK RESIDUAL KRIGING (NNRK)",
+      "pembimbing1": "Dr. Jadi Suprijadi, DEA",
+      "pembimbing2": "Dr. Anindya Apriliyanti P, M. Si",
+      "tahun_masuk": 2020,
+      "tahun_lulus": 2022,
+      "tema": "Sains Data, AI, dan Machine Learning"
+    },
+    {
+      "no": 3,
+      "nama": "FAJRIATUS SHOLIHAH",
+      "npm": "140720200003",
+      "judul": "ANALISIS ASOSIASI DARI TABEL KONTINGENSI DENGAN TAMBAHAN VARIABEL KONTINU MENGGUNAKAN HYRID SINGLY ORDERED CORRESPONDENCE ANALYSIS DENGAN NILAI KORELASI",
+      "pembimbing1": "Dr. Irlandia Ginanjar. MS",
+      "pembimbing2": "Drs. Yuyun Hidayat, MS.,PhD",
+      "tahun_masuk": 2020,
+      "tahun_lulus": 2022,
+      "tema": "Regresi, Multivariat, dan Pemodelan"
+    },
+    {
+      "no": 4,
+      "nama": "MARNITA SIMATUPANG",
+      "npm": "140720200014",
+      "judul": "PEMODELAN SEEMINGLY UNRELATED REGRESSION-SPATIAL DURBIN PANEL",
+      "pembimbing1": "Dr. Yusep Suparman, M.Sc.",
+      "pembimbing2": "Dr. Efi Fitriana, M.,Si",
+      "tahun_masuk": 2020,
+      "tahun_lulus": 2022,
+      "tema": "Spasial, Lingkungan, dan Wilayah"
+    },
+    {
+      "no": 5,
+      "nama": "ROSA ROSMANAH",
+      "npm": "140720200006",
+      "judul": "PEMODELAN GIZI BURUK BALITA USIA 0-59 BULAN MENGGUNAKAN BAYESIAN SEMIPARAMETRIC REGRESSION",
+      "pembimbing1": "Yudhie Andriyana, M.Sc., Ph.D",
+      "pembimbing2": "Dr. Anindya Apriliyanti P. M.Si",
+      "tahun_masuk": 2020,
+      "tahun_lulus": 2022,
+      "tema": "Biostatistika dan Kesehatan"
+    },
+    {
+      "no": 6,
+      "nama": "ANI PERTIWI",
+      "npm": "140720200019",
+      "judul": "PEMODELAN GEOGRAPHICALLY AND TEMPORALLY WEIGHTED REGRESSION PADA DATA PENDAPATAN ASLI DAERAH",
+      "pembimbing1": "Yudhie Andriyana, M.Sc., Ph.D",
+      "pembimbing2": "Dr. Lienda Novianti, M.Si.",
+      "tahun_masuk": 2020,
+      "tahun_lulus": 2022,
+      "tema": "Spasial, Lingkungan, dan Wilayah"
+    },
+    {
+      "no": 7,
+      "nama": "HASRAT IFOLALA ZEBUA",
+      "npm": "140720200012",
+      "judul": "GENERALIZED SPATIALLY VARYING COEFFICIENT MODEL (GSVCM) PADA ANGKA MIGRASI KELUAR DI PROVINSI JAWA TENGAH",
+      "pembimbing1": "Yudhie Andriyana, M.Sc., Ph.D",
+      "pembimbing2": "Dr. Efi Fitriana, M.,Si",
+      "tahun_masuk": 2020,
+      "tahun_lulus": 2022,
+      "tema": "Spasial, Lingkungan, dan Wilayah"
+    },
+    {
+      "no": 8,
+      "nama": "HUSNUL CHOTIMAH",
+      "npm": "140720200018",
+      "judul": "PERAMALAN EKSPOR DI INDONESIA MENGGUNAKAN MONOTONE COMPOSITE QUANTILE REGRESSION NEURAL NETWORK",
+      "pembimbing1": "Dr. Jadi Suprijadi, DEA",
+      "pembimbing2": "Yudhie Andriyana, M.Sc., Ph.D",
+      "tahun_masuk": 2020,
+      "tahun_lulus": 2022,
+      "tema": "Sains Data, AI, dan Machine Learning"
+    },
+    {
+      "no": 9,
+      "nama": "NURUL QISTHI",
+      "npm": "140720200002",
+      "judul": "PEMODELAN ANGKA KEMATIAN BAYI DI JAWA BARAT MENGGUNAKAN PENALIZED QUANTILE REGRESSION PADA DATA PANEL DENGAN FIXED EFFECTS MODEL",
+      "pembimbing1": "Yudhie Andriyana, M.Sc., Ph.D",
+      "pembimbing2": "Drs. Yuyun Hidayat, MS.,PhD",
+      "tahun_masuk": 2020,
+      "tahun_lulus": 2022,
+      "tema": "Regresi, Multivariat, dan Pemodelan"
+    },
+    {
+      "no": 10,
+      "nama": "VIEVIEN ABIGAIL DAMU DJARA",
+      "npm": "140720200015",
+      "judul": "PEMODELAN PREVALENSI STUNTING BALITA DI PULAU JAWA MENGGUNAKAN ROBUST SPATIAL AUTOREGRESSIVE MODEL WITH S-ESTIMATOR",
+      "pembimbing1": "Yudhie Andriyana, M.Sc., Ph.D",
+      "pembimbing2": "Dr. Lienda Novianti, M.Si.",
+      "tahun_masuk": 2020,
+      "tahun_lulus": 2022,
+      "tema": "Spasial, Lingkungan, dan Wilayah"
+    },
+    {
+      "no": 11,
+      "nama": "KARTIKA SARI",
+      "npm": "140720200009",
+      "judul": "PEMODELAN REGRESI BIVARIAT MIXED POISSON INVERSE GAUSSIAN PADA JUMLAH KEMATIAN IBU HAMIL DAN NIFAS DI PROVINSI JAWA TENGAH",
+      "pembimbing1": "Dr. Yusep Suparman, M.Sc.",
+      "pembimbing2": "Dr. Irlandia Ginanjar. MS",
+      "tahun_masuk": 2020,
+      "tahun_lulus": 2022,
+      "tema": "Spasial, Lingkungan, dan Wilayah"
+    },
+    {
+      "no": 12,
+      "nama": "PANDU PERMANA",
+      "npm": "140720200017",
+      "judul": "PENGELOMPOKAN PROVINSI BERDASARKAN INDIKATOR KEMISKINAN MENGGUNAKAN PENDEKATAN MODEL-BASED CLUSTERING DENGAN DISTRIBUSI T MULTIVARIAT",
+      "pembimbing1": "Dr. Irlandia Ginanjar. MS",
+      "pembimbing2": "Dr. Anindya Apriliyanti P. M.Si",
+      "tahun_masuk": 2020,
+      "tahun_lulus": 2022,
+      "tema": "Spasial, Lingkungan, dan Wilayah"
+    },
+    {
+      "no": 13,
+      "nama": "ZULFI HM",
+      "npm": "140720200010",
+      "judul": "PEMODELAN PERSAMAAN STRUKTURAL DENGAN LATEN LAG SPASIAL DAN LATEN EFEK SPESIFIK INDIVIDU",
+      "pembimbing1": "Dr. Efi Fitriana, M.,Si",
+      "pembimbing2": "Dr. Yusep Suparman, M.Sc.",
+      "tahun_masuk": 2020,
+      "tahun_lulus": 2022,
+      "tema": "Spasial, Lingkungan, dan Wilayah"
+    },
+    {
+      "no": 1,
+      "nama": "ARMALIA DESIYANTI",
+      "npm": "140720210005",
+      "judul": "PENDUGAAN RATA-RATA PENGELUARAN RUMAH TANGGA TINGKAT KECAMATAN DI PROVINSI JAWA TENGAH MENGGUNAKAN METODE EMPIRICAL BEST LINEAR UNBIASED PREDICTION-FAY HERRIOT (EBLUP-FH) MULTIVARIAT DENGAN PENAMBAHAN INFORMASI CLUSTER",
+      "pembimbing1": "Dr. Irlandia Ginanjar, S.Si., M.Si",
+      "pembimbing2": "Dr. Toni Toharudin, M.Sc.",
+      "tahun_masuk": 2021,
+      "tahun_lulus": 2023,
+      "tema": "Spasial, Lingkungan, dan Wilayah"
+    },
+    {
+      "no": 2,
+      "nama": "HAMIM TSALIS SOBLIA",
+      "npm": "140720210006",
+      "judul": "PEMANFAATAN MOBILE POSITIONING DATA DALAM PENAKSIRAN PENGARUH PEMINDAHAN IBU KOTA NEGARA INDONESIA PADA KEMACETAN DI JAKARTA MENGGUNAKAN ROBUST MM-ESTIMATION DENGAN RPBUST STANDARD ERROR",
+      "pembimbing1": "Dr. Yusep Suparman, M.Sc.",
+      "pembimbing2": "Defi Yusti Faidah, S.Si., M.Si",
+      "tahun_masuk": 2021,
+      "tahun_lulus": 2023,
+      "tema": "Statistika Terapan Lainnya"
+    },
+    {
+      "no": 3,
+      "nama": "ZULFA HIDAYAH SATRIA P.",
+      "npm": "140720200011",
+      "judul": "PEMODELAN KEMISKINAN DENGAN MEMPERTIMBANGKAN PENGARUH PERUBAHAN PERGERAKAN SELAMA PANDEMIK COVID-19 DI JAWA BARAT",
+      "pembimbing1": "Dr. Toni Toharudin, M.Sc.",
+      "pembimbing2": "Dr. Yusep Suparman, M.Sc.",
+      "tahun_masuk": 2020,
+      "tahun_lulus": 2023,
+      "tema": "Biostatistika dan Kesehatan"
+    },
+    {
+      "no": 4,
+      "nama": "HARIFA HANANTI",
+      "npm": "140720200007",
+      "judul": "PANEL QUANTILE REGRESSION MODEL DENGAN CORRELATED RANDOM EFFECTS PADA PEMODELAN KASUS GIZI BURUK BALITA DI INDONESIA",
+      "pembimbing1": "Dr. I Gede Nyoman Mindra Jaya, M.Si",
+      "pembimbing2": "Dr. Irlandia Ginanjar. MS",
+      "tahun_masuk": 2020,
+      "tahun_lulus": 2023,
+      "tema": "Biostatistika dan Kesehatan"
+    },
+    {
+      "no": 5,
+      "nama": "DELVI RUTANIA PRAMA",
+      "npm": "140720210003",
+      "judul": "PEMODELAN MIXED GEOGRAPHICALLY AND TEMPORALLY WEIGHTED REGRESSION (MGTWR) PADA DATA CRIME RATE DI JAWA TENGAH",
+      "pembimbing1": "Yudhie Andriyana, M.Sc., Ph.D",
+      "pembimbing2": "Dr. Gumgum Darmawan, S,Si. M.Sc",
+      "tahun_masuk": 2021,
+      "tahun_lulus": 2023,
+      "tema": "Spasial, Lingkungan, dan Wilayah"
+    },
+    {
+      "no": 6,
+      "nama": "TILAS NOTAPIRI",
+      "npm": "140720210009",
+      "judul": "PENAKSIRAN PARAMETER MODEL SIMULTAN POISSON-LOGIT",
+      "pembimbing1": "Dr. Yusep Suparman, M.Sc.",
+      "pembimbing2": "Yudhie Andriyana, M.Sc., Ph.D",
+      "tahun_masuk": 2021,
+      "tahun_lulus": 2023,
+      "tema": "Regresi, Multivariat, dan Pemodelan"
+    },
+    {
+      "no": 7,
+      "nama": "DEVI YANTI",
+      "npm": "140720210011",
+      "judul": "MODEL REGRESI PROBIT SPASIAL ERROR UNTUK MENGIDENTIFIKASI FAKTOR KESIAPSIAGAAN BENCANA ALAM DI KABUPATEN KUPANG",
+      "pembimbing1": "Budhi Handoko, M.Si., Ph.D",
+      "pembimbing2": "Dr. Yusep Suparman, M.Sc.",
+      "tahun_masuk": 2021,
+      "tahun_lulus": 2023,
+      "tema": "Spasial, Lingkungan, dan Wilayah"
+    },
+    {
+      "no": 8,
+      "nama": "NUR AZIZAH",
+      "npm": "140720210010",
+      "judul": "PENDEKATAN BIG DATA ANALISIS UNTUK IDENTIFIKASI VARIABEL PENTING DALAM PENGKLASIFIKASIAN RUMAH TANGGA MISKIN ENERGI MENGGUNAKAN CLASSIFICATION AND REGRESSION TREE (CART) DAN HYBRID SMOTE CLUSTER BASED UNDERSAMPLING",
+      "pembimbing1": "Dr. Irlandia Ginanjar. MS",
+      "pembimbing2": "Prof. Dr. Atje Setiawan Abdullah. M.S., Kom",
+      "tahun_masuk": 2021,
+      "tahun_lulus": 2023,
+      "tema": "Regresi, Multivariat, dan Pemodelan"
+    },
+    {
+      "no": 9,
+      "nama": "LUCY FITRIA DEWI",
+      "npm": "140720200008",
+      "judul": "PENERAPAN MODEL VECTOR AUTOREGRESSIVE INTEGRATED (VARI) UNTUK ANALISIS STRESS-TESTING PERBANKAN INDONESIA",
+      "pembimbing1": "Dr. Yusep Suparman, M.Sc.",
+      "pembimbing2": "Dr. I Gede Nyoman Mindra Jaya, M.Si",
+      "tahun_masuk": 2020,
+      "tahun_lulus": 2023,
+      "tema": "Regresi, Multivariat, dan Pemodelan"
+    },
+    {
+      "no": 10,
+      "nama": "WENNY SRIMEINDA TARIGAN",
+      "npm": "140720200020",
+      "judul": "ROBUST SPATIAL ERROR MODEL PADA IPM PROVINSI JAWA TENGAH",
+      "pembimbing1": "Yudhie Andriyana, M.Sc., Ph.D",
+      "pembimbing2": "Dr. Lienda Novianti, M.Si.",
+      "tahun_masuk": 2020,
+      "tahun_lulus": 2023,
+      "tema": "Spasial, Lingkungan, dan Wilayah"
+    },
+    {
+      "no": 11,
+      "nama": "RIZKA PRADITA PRASETYA",
+      "npm": "140720210004",
+      "judul": "PEMODELAN SPATIAL PANEL DINAMIS PADA TINGKAT PENGANGGURAN TERBUKA PROVINSI JAWA BARAT",
+      "pembimbing1": "Dr. I Gede Nyoman Mindra Jaya, M.Si",
+      "pembimbing2": "Prof. Dr. Yudi Rosandi",
+      "tahun_masuk": 2021,
+      "tahun_lulus": 2023,
+      "tema": "Spasial, Lingkungan, dan Wilayah"
+    },
+    {
+      "no": 12,
+      "nama": "MUHAMAD SOBARI",
+      "npm": "140720210008",
+      "judul": "IDENTIFIKASI OPTIMAL SPATIOTEMPORAL HOTSPOT KASUS DEMAM BERDARAH DI PROVINSI DKI JAKARTA MENGGUNAKAN EXCEEDANCE POSTERIOR PROBABILITY",
+      "pembimbing1": "Dr. I Gede Nyoman Mindra Jaya, M.Si",
+      "pembimbing2": "Prof. Dr. Budi Nurani R., MS",
+      "tahun_masuk": 2021,
+      "tahun_lulus": 2023,
+      "tema": "Spasial, Lingkungan, dan Wilayah"
+    },
+    {
+      "no": 13,
+      "nama": "ABDURRAHMAN AL GHIFARI",
+      "npm": "140720200001",
+      "judul": "PEMBENTUKAN PORTOFOLIO OPTIMAL SAHAM LQ45 DENGAN MENGGUNAKAN METODE MARKOWITZ",
+      "pembimbing1": "Dr. Toni Toharudin, M.Sc.",
+      "pembimbing2": "Dr. Triyani Hendrawati,S.Si., M.Si.",
+      "tahun_masuk": 2020,
+      "tahun_lulus": 2023,
+      "tema": "Statistika Terapan Lainnya"
+    },
+    {
+      "no": 14,
+      "nama": "DIAN ISLAMIATY PUTERI",
+      "npm": "140720210002",
+      "judul": "IMPLEMENTASI BIDIRECTIONAL LONG-SHORT TERM MEMORY (BiLSTM) DAN ALGORITMA GRID SEARCH DALAM PREDIKSI HARGA SAHAM SYARIAH",
+      "pembimbing1": "Dr. Gumgum Darmawan, S,Si. M.Sc",
+      "pembimbing2": "Prof. Dr. Budi Nurani Ruchjana., MS",
+      "tahun_masuk": 2021,
+      "tahun_lulus": 2023,
+      "tema": "Statistika Terapan Lainnya"
+    },
+    {
+      "no": 1,
+      "nama": "SYIFA AULIYAH HASANAH",
+      "npm": "140720220006",
+      "judul": "KLASIFIKASI PENYAKIT PARU-PARU MENGGUNAKAN ARSITEKTUR DENSEINRESNET",
+      "pembimbing1": "Dr. Anindya Apriliyanti P. M.Si",
+      "pembimbing2": "Prof. Dr. Atje Setiawan Abdullah. M.S., Kom",
+      "tahun_masuk": 2022,
+      "tahun_lulus": 2023,
+      "tema": "Biostatistika dan Kesehatan"
+    },
+    {
+      "no": 2,
+      "nama": "YUHANA NOTONEGORO",
+      "npm": "140720220004",
+      "judul": "PEMODELAN KEKUATAN SINYAL INTERNET DI JAWA BARAT MENGGUNAKAN LOGISTIK SPATIAL REGRESSION MODEL",
+      "pembimbing1": "Yudhie Andriyana, M.Sc., Ph.D",
+      "pembimbing2": "Prof. Dr. Budi Nurani Ruchjana., MS",
+      "tahun_masuk": 2022,
+      "tahun_lulus": 2024,
+      "tema": "Spasial, Lingkungan, dan Wilayah"
+    },
+    {
+      "no": 3,
+      "nama": "TAFIA HASNA PUTRI",
+      "npm": "140720220009",
+      "judul": "METODE BAYESIAN GAUSSIAN MARCOV RANDOM FIELD UNTUK INTERPOLASI SPATIOTEMPORAL KONSENTRASI PM2.5 DI DKI JAKARTA",
+      "pembimbing1": "Dr. Toni Toharudin, M.Sc.",
+      "pembimbing2": "Dr. I Gede Nyoman Mindra Jaya, M.Si",
+      "tahun_masuk": 2022,
+      "tahun_lulus": 2024,
+      "tema": "Regresi, Multivariat, dan Pemodelan"
+    },
+    {
+      "no": 4,
+      "nama": "IBNU TRY ROSADI",
+      "npm": "140720220010",
+      "judul": "PENGELOMPOKAN DATA TWEET MEMANFAATKAN K-PROTOTYPE DAN BIDIRECTIONAL GATED RECURRENT UNIT (GIBRU)DALAM RANGKA MENGHADAPI TAHUN POLITIK DI INDONESIA",
+      "pembimbing1": "Dr. Anindya Apriliyanti P. M.Si",
+      "pembimbing2": "Yudhie Andriyana, M.Sc., Ph.D",
+      "tahun_masuk": 2022,
+      "tahun_lulus": 2024,
+      "tema": "Statistika Terapan Lainnya"
+    },
+    {
+      "no": 5,
+      "nama": "RENATA AYIFA KRISTANTO",
+      "npm": "140720220008",
+      "judul": "METODE REKATEGORISASI UNTUK HYBRD JOINT CORRESPONDENCE ANALYSIS MENGGUNAKAN ELLIPTICAL CONFIDENCE REGIONS",
+      "pembimbing1": "Dr. Irlandia Ginanjar. MS",
+      "pembimbing2": "Dr. Titi Purwandari., MS",
+      "tahun_masuk": 2022,
+      "tahun_lulus": 2024,
+      "tema": "Regresi, Multivariat, dan Pemodelan"
+    },
+    {
+      "no": 6,
+      "nama": "SHANIA PUSPITA SARI",
+      "npm": "140720220002",
+      "judul": "PERAMALAN INSFLASI INDONESIA MENGGUNAKAN DYNAMIC MODEL AVERAGING (DMA)",
+      "pembimbing1": "Dr. Lienda Novianti, M.Si.",
+      "pembimbing2": "Dr. Irlandia Ginanjar. MS",
+      "tahun_masuk": 2022,
+      "tahun_lulus": 2024,
+      "tema": "Regresi, Multivariat, dan Pemodelan"
+    },
+    {
+      "no": 7,
+      "nama": "YUNITA DWI AYU NINTIAS",
+      "npm": "140720200005",
+      "judul": "PENERAPAN SPATIAL AUTOREGRESSIVE WITH AUTOTEGRESSIVE DISTURBANCE (SARAR) MENGGUNAKAN GENERALIZED METHOD OF MOMENT (GMM)UNTUK MENGIDENTIFIKASI FAKTOR-FAKTOR PENYEBAB KEMISKINAN DI JAWA BARAT",
+      "pembimbing1": "Yudhie Andriyana, M.Sc., Ph.D",
+      "pembimbing2": "Dr. Anindya Apriliyanti P. M.Si",
+      "tahun_masuk": 2020,
+      "tahun_lulus": 2022,
+      "tema": "Spasial, Lingkungan, dan Wilayah"
+    },
+    {
+      "no": 8,
+      "nama": "ELYN PRINA",
+      "npm": "140720220005",
+      "judul": "MULTIVARIATE LATENT GAUSSIAN MODEL DALAM PERAMALAN PENERIMAAN PPH WAJIB PAJAK ORANG PRIBADI DI KANWIL DJP JAKRTA SELATAN 1",
+      "pembimbing1": "Dr. Yusep Suparman, M.Sc.",
+      "pembimbing2": "Dr.Gumgum Darmawan, S.Si.,  M.Si.",
+      "tahun_masuk": 2022,
+      "tahun_lulus": 2024,
+      "tema": "Regresi, Multivariat, dan Pemodelan"
+    },
+    {
+      "no": 9,
+      "nama": "UKHTI NURPAJRIAH .S .I",
+      "npm": "140720220003",
+      "judul": "BAYESIAN SPASIAL MULTIGROUP UNTUK PEMODELAN PREVALENSI STUNTING DI INDONESIA",
+      "pembimbing1": "Dr. I Gede Nyoman Mindra Jaya, M.Si",
+      "pembimbing2": "Dr. Restu Arisanti, S.Si., M.Si",
+      "tahun_masuk": 2022,
+      "tahun_lulus": 2024,
+      "tema": "Spasial, Lingkungan, dan Wilayah"
+    },
+    {
+      "no": 10,
+      "nama": "ASRI YUNIAR",
+      "npm": "1407202200016",
+      "judul": "LATENT INDIVIDUAL SPECIFIC EFFECTS MODEL DENGAN KEKELIRUAN PENGUKURAN",
+      "pembimbing1": "Dr. Yusep Suparman, M.Sc.",
+      "pembimbing2": "",
+      "tahun_masuk": 2020,
+      "tahun_lulus": 2023,
+      "tema": "Regresi, Multivariat, dan Pemodelan"
+    },
+    {
+      "no": 11,
+      "nama": "NABILA DHIA ALIFA RAHMAH",
+      "npm": "140720220001",
+      "judul": "PERAMALAN PRODUKSI BIJIH TIMAH DENGAN POLA INTERMITTENT MENGGUNAKAN KOMBINASI SERIAK METODE KLASIFIKASI DAN PERAMALAN BERBASIS MACHINE LEARNING",
+      "pembimbing1": "Budhi Handoko, M.Si., Ph.D",
+      "pembimbing2": "Dr. Anindya Apriliyanti P. M.Si",
+      "tahun_masuk": 2022,
+      "tahun_lulus": 2024,
+      "tema": "Sains Data, AI, dan Machine Learning"
+    },
+    {
+      "no": 1,
+      "nama": "WIDI WILDANI ALFARISI",
+      "npm": "140720230006",
+      "judul": "PERAMALAN MENGGUNAKAN METODE HIBRIDA FTSMC-SSA PADA TINGKAT HUNIAN KAMAR HOTEL PROVINSI DAERAH ISTIMEWA YOGYAKARTA",
+      "pembimbing1": "Dr. Gumgum Darmawan, S,Si. M.Sc",
+      "pembimbing2": "Dr. Bertho Tantular, S.Si., M.Si",
+      "tahun_masuk": 2023,
+      "tahun_lulus": 2024,
+      "tema": "Spasial, Lingkungan, dan Wilayah"
+    },
+    {
+      "no": 2,
+      "nama": "FARIZA ALAMANDA PUTRI",
+      "npm": "140720230016",
+      "judul": "METODE SPASIOTEMPORAL COKRIGING UNTUK PENAKSIRAN KONSENTRASI PM, 2,5 DI PROVINSI DAERAH KHUSUS IBU KOTA JAKARTA",
+      "pembimbing1": "Dr. I Gede Nyoman Mindra Jaya, M.Si",
+      "pembimbing2": "Dr. Bertho Tantular, S.Si., M.Si",
+      "tahun_masuk": 2023,
+      "tahun_lulus": 2024,
+      "tema": "Spasial, Lingkungan, dan Wilayah"
+    },
+    {
+      "no": 3,
+      "nama": "ZHAFIRA HAURA",
+      "npm": "140720230002",
+      "judul": "PENERAPAN ENSEMBLE LEARNING MENGGUNAKAN METODE XGBOOST-SHAP UNTUK KLASIFIKASI PENYAKIT ALZHEIMER",
+      "pembimbing1": "Yudhie Andriyana, M.Sc., Ph.D",
+      "pembimbing2": "Dr.Sri Winarni, S. Si., M. Si",
+      "tahun_masuk": 2023,
+      "tahun_lulus": 2025,
+      "tema": "Sains Data, AI, dan Machine Learning"
+    },
+    {
+      "no": 4,
+      "nama": "DILA FITRIANI AZURI",
+      "npm": "140720230010",
+      "judul": "PEMETAAN KEKUATAN GEMPA MENGGUNAKAN BAYESIAN SPATIOTEMPORAL STOCHASTIC PARTIAL DIFFERENTIAL EQUATION (STUDI KASUS : PULAU SUMATRA )",
+      "pembimbing1": "Dr. I Gede Nyoman Mindra Jaya, M.Si",
+      "pembimbing2": "Prof Dr.rer.nat Yudi Rosandi,M.Si",
+      "tahun_masuk": 2023,
+      "tahun_lulus": 2025,
+      "tema": "Spasial, Lingkungan, dan Wilayah"
+    },
+    {
+      "no": 5,
+      "nama": "AYU SANGRILA",
+      "npm": "140720230005",
+      "judul": "PENDEKATAN MODEL -BASED CLUSTERING PADA PENGELOMPOKAN PASIEN PENYAKIT JANTUNG BERDASARKAN FAKTOR RISIKO ( STUDI KASUS : KLINIK CLEVELAND,OHIO )",
+      "pembimbing1": "Budhi Handoko,S.Si., M.Si., Ph.D",
+      "pembimbing2": "Dr.Defi Yusti Faidah, M.Si",
+      "tahun_masuk": 2023,
+      "tahun_lulus": 2025,
+      "tema": "Biostatistika dan Kesehatan"
+    },
+    {
+      "no": 6,
+      "nama": "M. RHAFI AHDIAN",
+      "npm": "140720230017",
+      "judul": "PENERAPAN MULTILEVEL STRUCTURAL EQUATION MODELING ( MSEM ) PADA CAPAIAN AKADEMIK SISWA SEKOLAH DASAR",
+      "pembimbing1": "Dr. Yusep Suparman, M.Sc.",
+      "pembimbing2": "Dr. Bertho Tantular, S.Si., M.Si",
+      "tahun_masuk": 2023,
+      "tahun_lulus": 2025,
+      "tema": "Regresi, Multivariat, dan Pemodelan"
+    },
+    {
+      "no": 7,
+      "nama": "SANDRINA NAJWA",
+      "npm": "140720230013",
+      "judul": "PENERAPAN METODE CNN-BILSTM DENGAN WORD EMBEDDING INDOBERT DALAM KLASIFIKASI EMOSI TERKAIT LAYANAN TELEKOMUNIKASI DI MEDIA SOSIAL",
+      "pembimbing1": "Dr.Sri Winarni, S. Si., M. Si",
+      "pembimbing2": "Dr. Anindya Apriliyanti P. M.Si",
+      "tahun_masuk": 2023,
+      "tahun_lulus": 2025,
+      "tema": "Sains Data, AI, dan Machine Learning"
+    },
+    {
+      "no": 8,
+      "nama": "THERESIA SAMARIA NAULI",
+      "npm": "140720230019",
+      "judul": "EVALUASI KUALITAS PEMETAAN DALAM JOINT CORRESPONDENCE ANALYSIS MENGGUNAKAN STRESS DENGAN ALTERNATIF SOLUSI MULTIPLE CORRESPONDENCE ANALYSIS",
+      "pembimbing1": "Dr. Irlandia Ginanjar. MS",
+      "pembimbing2": "Dr. Titi Purwandari., MS",
+      "tahun_masuk": 2023,
+      "tahun_lulus": 2025,
+      "tema": "Regresi, Multivariat, dan Pemodelan"
+    },
+    {
+      "no": 9,
+      "nama": "DHANTI AURILIA PRATIWI",
+      "npm": "140720230014",
+      "judul": "HYBRID KORESPONDENSI MULTIPEL UNTUK PENGELOMPOKAN OBJEK BERDASARKAN PADA KEBERGANTUNGAN DANKORELASI",
+      "pembimbing1": "Dr. Irlandia Ginanjar. MS",
+      "pembimbing2": "Dr. Titi Purwandari., MS",
+      "tahun_masuk": 2023,
+      "tahun_lulus": 2025,
+      "tema": "Statistika Terapan Lainnya"
+    },
+    {
+      "no": 10,
+      "nama": "NAJMA RAFIFA PUTRI.  S,",
+      "npm": "140720230018",
+      "judul": "PEMODELAN KLASIFIKASI INTENT OUT-OF SCOPE MENGGUNAKAN MODEL INDOBERT DENGAN MONTE CARLO DROPOUT",
+      "pembimbing1": "Dr. Anindya Apriliyanti P. M.Si",
+      "pembimbing2": "Dr. Afrida Helen,S.T.,M.Kom",
+      "tahun_masuk": 2023,
+      "tahun_lulus": 2025,
+      "tema": "Regresi, Multivariat, dan Pemodelan"
+    },
+    {
+      "no": 11,
+      "nama": "AISHA KUSUMA PUTRI",
+      "npm": "140720230001",
+      "judul": "METODE MACHINE LEARNING ATTENTIVE ITEM2VEC DALAM MEMNENTUKAN REKOMENDASI DESTINASI WISATA DI INDONESIA",
+      "pembimbing1": "Dr. Gumgum Darmawan, S,Si. M.Sc",
+      "pembimbing2": "Budhi Handoko,S.Si., M.Si., Ph.D",
+      "tahun_masuk": 2023,
+      "tahun_lulus": 2025,
+      "tema": "Sains Data, AI, dan Machine Learning"
+    },
+    {
+      "no": 12,
+      "nama": "AYU  INDRIANI",
+      "npm": "140720230022",
+      "judul": "PEMODELAN DYNAMIS SPATIO-TEMPORAL INLA UNTUK PERAMALAN KONSENTRASI PM'10 BERKAITAN DENGAN CURAH HUJAN DI PROVISI DKI JAKARTA",
+      "pembimbing1": "Dr. I Gede Nyoman Mindra Jaya, M.Si",
+      "pembimbing2": "Prof . Dr. Budi Nurani Ruchjana, MS",
+      "tahun_masuk": 2023,
+      "tahun_lulus": 2025,
+      "tema": "Spasial, Lingkungan, dan Wilayah"
+    },
+    {
+      "no": 13,
+      "nama": "WANDA ALIFIA",
+      "npm": "140720230004",
+      "judul": "PENDETEKSIAN HATE SPEECH PADA SOSIAL MEDIA X MENGGUNAKAN METODE STOCHASTIC WEIGHT AVERAGING GAUSSIAN -INDOBERT",
+      "pembimbing1": "Dr. Anindya Apriliyanti P. M.Si",
+      "pembimbing2": "Dr. I Gede Nyoman Mindra Jaya, M.Si",
+      "tahun_masuk": 2023,
+      "tahun_lulus": 2025,
+      "tema": "Survei, Sosial, dan Kebijakan"
+    },
+    {
+      "no": 14,
+      "nama": "LAILA  BUDIANTI",
+      "npm": "140720230009",
+      "judul": "MODEL GEOGRAPHICALLY WEIGHTED RANDOM FOREST ( GWRF ) DALAM MENGAKOMODASI HETEROGENITAS SPASIAL DAN NONLINERITAS",
+      "pembimbing1": "Dr. Yusep Suparman, M.Sc.",
+      "pembimbing2": "Dr. Restu Arisanti, S.Si., M.Si",
+      "tahun_masuk": 2023,
+      "tahun_lulus": 2025,
+      "tema": "Sains Data, AI, dan Machine Learning"
+    },
+    {
+      "no": 15,
+      "nama": "AULIA RAHMAN ALMADANI",
+      "npm": "140720230008",
+      "judul": "BAYESIAN SPATIAL PANEL MODEL PADA KASUS STUNTING DI PROVINSI JAWA BARAT",
+      "pembimbing1": "Dr. Yusep Suparman, M.Sc.",
+      "pembimbing2": "Dr. I Gede Nyoman Mindra Jaya, M.Si",
+      "tahun_masuk": 2023,
+      "tahun_lulus": 2025,
+      "tema": "Spasial, Lingkungan, dan Wilayah"
+    },
+    {
+      "no": 16,
+      "nama": "M.YASYFI AVICENA",
+      "npm": "140720230015",
+      "judul": "ANALISIS KASIFIKASI CITRA WAJAH MULTICLASS UNTUK DETEKSI RASA SAKIT SECARA REALTIME MENGGUNAKAN ARSITEKTUR MOBILENET DAN NASNETMOBILE",
+      "pembimbing1": "Dr. Anindya Apriliyanti P. M.Si",
+      "pembimbing2": "Dr. Triyani Hendrawati,S.Si., M.Si.",
+      "tahun_masuk": 2023,
+      "tahun_lulus": 2025,
+      "tema": "Sains Data, AI, dan Machine Learning"
+    },
+    {
+      "no": 17,
+      "nama": "JANATIN",
+      "npm": "140720230020",
+      "judul": "PEMODELAN GEOGRAPHICALLY WEIGHTED ZERO INFLATED POISON REGRESSION PADA KEJADIAN BANJIR DI KABUPATEN BANDUNG",
+      "pembimbing1": "Dr. Bertho Tantular, S.Si., M.Si",
+      "pembimbing2": "Dr. Restu Arisanti, S.Si., M.Si",
+      "tahun_masuk": 2023,
+      "tahun_lulus": 2025,
+      "tema": "Spasial, Lingkungan, dan Wilayah"
+    },
+    {
+      "no": 18,
+      "nama": "HANI NURHAPILAH",
+      "npm": "140720230011",
+      "judul": "THEREE-WAY ORDERED NON-SYMMETRICAL CORRESPONDENCE ANALYSIS UNTUK MENGIDENTIFIKASI KEBERGANTUNGAN UMUR DAN WILAYAH TERHADAP JENIS KEGIATAN PENDUDUK INDONESIA",
+      "pembimbing1": "Dr. Irlandia Ginanjar. MS",
+      "pembimbing2": "Dr. Bertho Tantular, S.Si., M.Si",
+      "tahun_masuk": 2023,
+      "tahun_lulus": 2025,
+      "tema": "Spasial, Lingkungan, dan Wilayah"
+    },
+    {
+      "no": 19,
+      "nama": "QURNIA AMANAH DWIADI",
+      "npm": "140720230007",
+      "judul": "PENGELOMPOKAN KABUPATEN /KOTA BERDASARKAN INDIKATOR KEMISKINAN MENGGUNAKAN ANALISIS KOMPONEN UTAMA DENGAN DEKOMPOSISI NILAI SINGULAR DAN PERFORMANCE IMFACT CHART",
+      "pembimbing1": "Dr. Irlandia Ginanjar. MS",
+      "pembimbing2": "Dr. Triyani Hendrawati,S.Si., M.Si.",
+      "tahun_masuk": 2023,
+      "tahun_lulus": 2025,
+      "tema": "Survei, Sosial, dan Kebijakan"
+    },
+    {
+      "no": 20,
+      "nama": "ANGGI ALNURIN PRASETYA",
+      "npm": "140720230011",
+      "judul": "PERAMALAN HARGA KONTRAK BERJANGKA NIKEL MENGGUNAKAN METODE BYBRID VARIATIONAL MODE DECOMPOSITION -BIDIRECTIONAL GATED RECURRENT UNIT ( VMD-BIGRU)",
+      "pembimbing1": "Yudhie Andriyana, M.Sc.",
+      "pembimbing2": "Dr. Bertho Tantular, S.Si., M.Si",
+      "tahun_masuk": 2023,
+      "tahun_lulus": 2025,
+      "tema": "Statistika Terapan Lainnya"
+    },
+    {
+      "no": 1,
+      "nama": "NISA AKBARILAH PUTRI",
+      "npm": "140720240007",
+      "judul": "ANALISIS SENTIMEN DAN TOPIK PADA ULASAN APLIKASI JAMSOSTEX MOBILE MENGGUNAKAN METODE INDOBERT DAN BERTOPIC",
+      "pembimbing1": "Dr. Anindya Apriliyanti P. M.Si",
+      "pembimbing2": "Dr.Sri Winarni, S. Si., M. Si",
+      "tahun_masuk": 2024,
+      "tahun_lulus": 2025,
+      "tema": "Statistika Terapan Lainnya"
+    },
+    {
+      "no": 2,
+      "nama": "M. RESTU AGAM",
+      "npm": "140720240006",
+      "judul": "INDENTIFIKASI AREA WAJAH PALING DISKRIMINATIF ANTARA NYERI FASIK DAN TONIK MENGGUNAKAN MODEL GAUSSIAN MARKOV RANDOM FIELD DAN DIVERGENSI KULLBACK-LEIBLER",
+      "pembimbing1": "Dr. Anindya Apriliyanti P. M.Si",
+      "pembimbing2": "Dr. Triyani Hendrawati,S.Si., M.Si.",
+      "tahun_masuk": 2024,
+      "tahun_lulus": 2025,
+      "tema": "Regresi, Multivariat, dan Pemodelan"
+    },
+    {
+      "no": 3,
+      "nama": "LEIVINA SALIA  PUTRI",
+      "npm": "140720240009",
+      "judul": "ANOVA-SIMULTANEOUS COMPONENT ANALYSIS (ASCA) BIPLOT UNTUK ANALISIS HUBUNGAN KELOMPOK KECAMATAN DENGAN INDIKATOR INTERVENSI STUNTING DI KOTA CIREBON",
+      "pembimbing1": "Dr. Irlandia Ginanjar. MS",
+      "pembimbing2": "Budhi Handoko, M.Si., Ph.D",
+      "tahun_masuk": 2024,
+      "tahun_lulus": 2025,
+      "tema": "Biostatistika dan Kesehatan"
+    },
+    {
+      "no": 4,
+      "nama": "DISA RAHMA KIRANA",
+      "npm": "140720240012",
+      "judul": "HYBRID STACKING - CORRESPONDENCE ANALYSIS FOR FUZZY DATA DAN KORELASI KOSINUS UNTUK ANALISIS ASOSIASI VARIABEL CAMPURAN",
+      "pembimbing1": "Dr. Irlandia Ginanjar. MS",
+      "pembimbing2": "Dr. Bertho Tantular, S.Si., M.Si",
+      "tahun_masuk": 2024,
+      "tahun_lulus": 2025,
+      "tema": "Regresi, Multivariat, dan Pemodelan"
+    },
+    {
+      "no": 5,
+      "nama": "GRACIA JOANNE CRISSAN BR.H.",
+      "npm": "140720240010",
+      "judul": "PENERAPAN ELLIPTICAL CONFIDENCE REGION UNTUK THREE-WAY CORRESPONDENCE ANALYSIS",
+      "pembimbing1": "Dr. Irlandia Ginanjar. MS",
+      "pembimbing2": "Dr. Bertho Tantular, S.Si., M.Si",
+      "tahun_masuk": 2024,
+      "tahun_lulus": 2025,
+      "tema": "Regresi, Multivariat, dan Pemodelan"
+    },
+    {
+      "no": 7,
+      "nama": "ANINDYA NITISARI",
+      "npm": "140720240008",
+      "judul": "PERAMALAN KURS BELI RUPIAH TERHADAP DOLAR AMERIKA SERIKAT MENGGUNAKAN METODE HYBRID SSA-FTSMC",
+      "pembimbing1": "Dr. Gumgum Darmawan, S,Si. M.Sc",
+      "pembimbing2": "Dr. Triyani Hendrawati,S.Si., M.Si.",
+      "tahun_masuk": 2024,
+      "tahun_lulus": 2026,
+      "tema": "Statistika Terapan Lainnya"
+    },
+    {
+      "no": 8,
+      "nama": "LURI ZAHARA",
+      "npm": "140720240014",
+      "judul": "PEMODELAN ISIDENSI TUBERKULOSIS DI PROVINSI JAWA BARAT MENGGUNAKAN ROBUST IMPROVED GEOGRAPHICALLY AND TEMPORALLY WEIGHTED REGRESSION",
+      "pembimbing1": "Dr. I Gede Nyoman Mindra Jaya, M.Si",
+      "pembimbing2": "Dr.Defi Yusti Faidah, M.Si",
+      "tahun_masuk": 2024,
+      "tahun_lulus": 2026,
+      "tema": "Spasial, Lingkungan, dan Wilayah"
+    },
+    {
+      "no": 9,
+      "nama": "SYAHLA ANISAH",
+      "npm": "140720240001",
+      "judul": "MODEL DISTRIBUSI CAMPURAN PISSON-GAMMA DAN CAMPURAN RAYLEIGH -GAMMA PADA DATA KLAIM ASURANSI THIRD PARTY LIABILITY ( TPL ) DI INDONESIA",
+      "pembimbing1": "Dr. Lienda Noviyanti, M.Si",
+      "pembimbing2": "Dr.Aceng Komarudin Mutaqin ,M.T.M.Si",
+      "tahun_masuk": 2024,
+      "tahun_lulus": 2026,
+      "tema": "Aktuaria, Keuangan, dan Risiko"
+    },
+    {
+      "no": 10,
+      "nama": "AGY ASWAD ILHAM",
+      "npm": "140720240004",
+      "judul": "DESAIN ULANG INDEX MATCH OUTCOME UNTUK BRI LIGA. I . INDONESIA 2024/2025",
+      "pembimbing1": "Dr. Yusep Suparman, M.Sc.",
+      "pembimbing2": "Dr.Aceng Komarudin Mutaqin ,M.T.M.Si",
+      "tahun_masuk": 2024,
+      "tahun_lulus": 2026,
+      "tema": "Statistika Terapan Lainnya"
+    },
+    {
+      "no": 11,
+      "nama": "MUHAMAD RAMDHAN",
+      "npm": "140720240003",
+      "judul": "PERAMALAN TARGET DAN RISIKO PERDAGANGAN NASDAQ-100 DENGAN SSA PADA PLATFORM ROBOTIC TRADING",
+      "pembimbing1": "Dr. Gumgum Darmawan, S,Si. M.Sc",
+      "pembimbing2": "Dr. Anindya Apriliyanti P. M.Si",
+      "tahun_masuk": 2024,
+      "tahun_lulus": 2026,
+      "tema": "Sains Data, AI, dan Machine Learning"
+    },
+    {
+      "no": 12,
+      "nama": "MUHAMMAD SAHID",
+      "npm": "140720240015",
+      "judul": "MARKET BASKET ANALYSIS BERBASIS BAYESIAN NETWORK PADA INDRUSTRI RITEL DI INDONESIA",
+      "pembimbing1": "Dr. I Gede Nyoman Mindra Jaya, M.Si",
+      "pembimbing2": "Dr. Restu Arisanti, S.Si., M.Si",
+      "tahun_masuk": 2024,
+      "tahun_lulus": 2026,
+      "tema": "Sains Data, AI, dan Machine Learning"
+    }
+  ]
+}
