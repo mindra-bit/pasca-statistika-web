@@ -1372,6 +1372,32 @@ tbody tr:hover td {
   line-height: 1;
 }
 
+.visitor-metrics a {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.visitor-metrics a:hover {
+  text-decoration: underline;
+}
+
+.integration-box.analytics-active {
+  border-style: solid;
+  border-color: rgba(14, 107, 88, 0.24);
+  background:
+    linear-gradient(135deg, rgba(14, 107, 88, 0.1), rgba(242, 169, 0, 0.12)),
+    #f8fff9;
+}
+
+.integration-box p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 .chat-section {
   color: #fff;
   background: #151515;

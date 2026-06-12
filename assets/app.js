@@ -140,7 +140,7 @@ const COMMENT_INTEGRATION = {
 };
 
 const ANALYTICS_INTEGRATION = {
-  goatCounterEndpoint: "",
+  goatCounterEndpoint: "https://s2statistika.goatcounter.com/count",
   cloudflareToken: ""
 };
 
@@ -168,8 +168,8 @@ const chatMessages = document.getElementById("chatMessages");
 const chatForm = document.getElementById("chatForm");
 const questionInput = document.getElementById("questionInput");
 const knowledgeCount = document.getElementById("knowledgeCount");
-const localVisitCount = document.getElementById("localVisitCount");
-const visitorOriginPreview = document.getElementById("visitorOriginPreview");
+const goatTotalCount = document.getElementById("goatTotalCount");
+const goatDashboardLink = document.getElementById("goatDashboardLink");
 
 const I18N = {
   id: {
@@ -288,10 +288,13 @@ const I18N = {
     commentsPublicText: "Komentar publik dapat dihubungkan ke GitHub Discussions melalui Giscus, sehingga komentar tersimpan di repositori dan bisa dimoderasi.",
     commentsConfigNeeded: "Komentar siap diaktifkan setelah konfigurasi Giscus diisi.",
     visitorTitle: "Statistik pengunjung",
-    visitorText: "Jumlah kunjungan, halaman populer, rujukan, perangkat, dan lokasi negara/kota sebaiknya dibaca dari dashboard analytics privat.",
-    visitorTotal: "Kunjungan lokal",
+    visitorText: "GoatCounter sudah aktif. Total kunjungan dapat ditampilkan di sini, sedangkan detail rujukan, perangkat, dan lokasi dibaca dari dashboard analytics.",
+    visitorTotal: "Total kunjungan",
     visitorOrigin: "Asal pengunjung",
-    analyticsConfigNeeded: "Analytics siap diaktifkan setelah kode GoatCounter atau Cloudflare Web Analytics tersedia.",
+    analyticsActiveTitle: "GoatCounter aktif.",
+    analyticsActiveText: "Jika total kunjungan belum muncul, aktifkan visitor counter di pengaturan GoatCounter. Data lokasi dan rujukan tetap dilihat dari dashboard privat.",
+    loadingMetric: "Memuat",
+    metricUnavailable: "Lihat dashboard",
     chatKicker: "Chatbot Akademik",
     chatTitle: "Tanya Kurikulum S2 Statistika Terapan",
     chatText: "Jawaban chatbot ditambatkan pada ekstraksi dokumen Kurikulum OBE 2026, dokumen kurikulum 2020-2026, panduan tesis, silabus mata kuliah, katalog materi HTML, data lulusan, tracer study, dan ringkasan administratif dari SMUP Program Magister.",
@@ -474,10 +477,13 @@ const I18N = {
     commentsPublicText: "Public comments can be connected to GitHub Discussions through Giscus, so comments are stored in the repository and can be moderated.",
     commentsConfigNeeded: "Comments are ready to activate after the Giscus configuration is added.",
     visitorTitle: "Visitor statistics",
-    visitorText: "Visit totals, popular pages, referrers, devices, and country/city locations should be viewed from a private analytics dashboard.",
-    visitorTotal: "Local visits",
+    visitorText: "GoatCounter is active. Total visits can be shown here, while referrers, devices, and locations are viewed from the analytics dashboard.",
+    visitorTotal: "Total visits",
     visitorOrigin: "Visitor origin",
-    analyticsConfigNeeded: "Analytics are ready to activate after a GoatCounter or Cloudflare Web Analytics code is available.",
+    analyticsActiveTitle: "GoatCounter is active.",
+    analyticsActiveText: "If total visits are not visible yet, enable the visitor counter in GoatCounter settings. Location and referrer data remain available in the private dashboard.",
+    loadingMetric: "Loading",
+    metricUnavailable: "View dashboard",
     chatKicker: "Academic Chatbot",
     chatTitle: "Ask About the Applied Statistics Master's Curriculum",
     chatText: "The chatbot answers are grounded in the 2026 OBE curriculum extraction, 2020-2026 curriculum documents, thesis guides, course syllabi, HTML learning material catalog, graduate data, tracer studies, and administrative summaries from SMUP.",
@@ -632,35 +638,37 @@ function applyLanguage() {
   renderMaterials();
   renderTracerStudies();
   renderAlumni();
-  renderLocalVisitorTrace();
+  renderAnalyticsPanel();
 }
 
-function renderLocalVisitorTrace() {
-  if (!localVisitCount) return;
-  let visits = Number(localVisitCount.textContent.replace(/\D/g, "") || "0");
-  try {
-    visits = Number(localStorage.getItem("s2WebsiteLocalVisits") || visits || "0");
-  } catch (error) {
-    visits = visits || 0;
+function goatCounterSiteUrl() {
+  return ANALYTICS_INTEGRATION.goatCounterEndpoint.replace(/\/count\/?$/, "");
+}
+
+function renderAnalyticsPanel() {
+  const siteUrl = goatCounterSiteUrl();
+  if (goatDashboardLink && siteUrl) {
+    goatDashboardLink.href = siteUrl;
   }
-  localVisitCount.textContent = new Intl.NumberFormat(currentLang === "en" ? "en-US" : "id-ID").format(visits);
-  if (visitorOriginPreview) {
-    visitorOriginPreview.textContent = currentLang === "en" ? "Private dashboard" : "Dashboard privat";
+  if (goatTotalCount && !goatTotalCount.dataset.loaded) {
+    goatTotalCount.textContent = t("loadingMetric");
   }
 }
 
-function updateLocalVisitorTrace() {
-  let visits = 1;
+async function updateGoatCounterTotal() {
+  if (!goatTotalCount || !ANALYTICS_INTEGRATION.goatCounterEndpoint) return;
+  const siteUrl = goatCounterSiteUrl();
+  goatTotalCount.textContent = t("loadingMetric");
   try {
-    visits = Number(localStorage.getItem("s2WebsiteLocalVisits") || "0") + 1;
-    localStorage.setItem("s2WebsiteLocalVisits", String(visits));
+    const response = await fetch(`${siteUrl}/counter/TOTAL.json`, { cache: "no-store" });
+    if (!response.ok) throw new Error("GoatCounter total is not publicly available.");
+    const data = await response.json();
+    goatTotalCount.textContent = data.count || t("metricUnavailable");
+    goatTotalCount.dataset.loaded = "true";
   } catch (error) {
-    visits = 1;
+    goatTotalCount.textContent = t("metricUnavailable");
+    goatTotalCount.dataset.loaded = "false";
   }
-  if (localVisitCount) {
-    localVisitCount.textContent = String(visits);
-  }
-  renderLocalVisitorTrace();
 }
 
 function mountCommentIntegration() {
@@ -694,6 +702,7 @@ function mountAnalyticsIntegration() {
     script.src = "https://gc.zgo.at/count.js";
     script.async = true;
     document.head.appendChild(script);
+    updateGoatCounterTotal();
   }
 
   if (ANALYTICS_INTEGRATION.cloudflareToken) {
@@ -1895,7 +1904,6 @@ chatForm.addEventListener("submit", (event) => {
 });
 
 applyLanguage();
-updateLocalVisitorTrace();
 mountCommentIntegration();
 mountAnalyticsIntegration();
 loadKnowledge();
