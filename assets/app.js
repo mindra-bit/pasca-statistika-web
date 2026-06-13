@@ -126,6 +126,7 @@ let materialsData = null;
 let thesisGuidesData = null;
 let tracerStudiesData = null;
 let curriculumDocsData = null;
+let pbmEvaluationsData = null;
 let activeFilter = "Semua";
 let serverChatAvailable = false;
 let serverApiReady = false;
@@ -163,6 +164,8 @@ const tracerStudyRows = document.getElementById("tracerStudyRows");
 const tracerStudyCount = document.getElementById("tracerStudyCount");
 const curriculumDocRows = document.getElementById("curriculumDocRows");
 const curriculumDocCount = document.getElementById("curriculumDocCount");
+const pbmEvaluationRows = document.getElementById("pbmEvaluationRows");
+const pbmEvaluationCount = document.getElementById("pbmEvaluationCount");
 const modeLabel = document.getElementById("modeLabel");
 const chatMessages = document.getElementById("chatMessages");
 const chatForm = document.getElementById("chatForm");
@@ -178,6 +181,7 @@ const I18N = {
     navProfile: "Profil",
     navCurriculum: "Kurikulum",
     navDocs: "Dokumen",
+    navPbmEvaluations: "Evaluasi",
     navGuide: "Panduan",
     navCourses: "Mata Kuliah",
     navMaterials: "Materi",
@@ -206,6 +210,42 @@ const I18N = {
     curriculumKicker: "Struktur Kurikulum",
     curriculumTitle: "Struktur 42 SKS dengan jalur kuliah, riset, dan RPL.",
     curriculumText: "Kurikulum OBE 2026 dirancang untuk memperkuat penguasaan teori, kemampuan analitik, kompetensi riset, rekognisi pembelajaran, dan publikasi ilmiah.",
+    navAcademicCalendar: "Kalender",
+    academicKicker: "Kalender Akademik",
+    academicTitle: "Semester Gasal 2026/2027 dalam satu infografis.",
+    academicText: "Ringkasan kegiatan akademik Universitas Padjadjaran untuk masa penerimaan mahasiswa baru, perkuliahan, administrasi, ujian, nilai, wisuda, dan akhir semester.",
+    academicSemesterLabel: "Semester Gasal",
+    academicSummaryClasses: "Perkuliahan",
+    academicSummaryMidterm: "Ujian Tengah Semester",
+    academicSummaryFinal: "Ujian Akhir Semester",
+    academicSummaryGraduation: "Wisuda",
+    academicAugOrientation: "Orientasi mahasiswa baru",
+    academicAugPmb: "Prosesi penerimaan mahasiswa baru",
+    academicAugKrs: "Pengisian KRS mahasiswa baru",
+    academicAugClassStart: "Perkuliahan tahap pertama dimulai",
+    academicAugMonev: "Monev data semester untuk pelaporan PDDIKTI",
+    academicAugPkrs: "Masa perubahan KRS",
+    academicSepDies: "Dies Natalis Universitas Padjadjaran",
+    academicSepLeaveSk: "Batas akhir SK Dekan tentang cuti",
+    academicSepStatus: "Batas akhir penetapan status mahasiswa",
+    academicOctMidterm: "Ujian Tengah Semester",
+    academicOctPddikti: "Pelaporan PDDIKTI semester genap sebelumnya",
+    academicOctGradDeadline: "Batas akhir pendaftaran Wisuda Gelombang I",
+    academicOctClassResume: "Perkuliahan tahap kedua",
+    academicNovGraduation: "Prosesi Wisuda Gelombang I",
+    academicDecFinal: "Ujian Akhir Semester",
+    academicDecGrades: "Pengumuman hasil ujian akhir semester",
+    academicJanPayment: "Pembayaran uang kuliah semester genap",
+    academicJanSchedule: "Unggah jadwal perkuliahan semester genap",
+    academicJanGradeProgram: "Perubahan Nilai T tingkat program studi",
+    academicJanGradDeadline: "Batas akhir pendaftaran Wisuda Gelombang II",
+    academicJanLeaveRequest: "Batas akhir permohonan cuti/penghentian studi sementara",
+    academicJanGradeFaculty: "Perubahan Nilai T tingkat fakultas",
+    academicJanAdvising: "Masa bimbingan akademik",
+    academicFebGraduation: "Prosesi Wisuda Gelombang II",
+    academicFebEnd: "Batas akhir Semester Gasal",
+    academicSourceTitle: "Sumber kalender",
+    academicSourceText: "Disarikan dari Kalender Kegiatan Akademik Universitas Padjadjaran Tahun 2026/2027.",
     courseworkTitle: "Magister Berbasis Kuliah",
     coursework1: "21 SKS mata kuliah wajib.",
     coursework2: "9 SKS mata kuliah pilihan.",
@@ -225,6 +265,14 @@ const I18N = {
     curriculumDocsAsk: "Tanyakan dokumen ke chatbot",
     curriculumDocPeriod: "Periode",
     curriculumDocArchive: "Arsip PDF",
+    pbmEvalKicker: "Evaluasi PBM",
+    pbmEvalTitle: "Arsip evaluasi pembelajaran per semester.",
+    pbmEvalText: "Dokumen Evaluasi PBM disusun sebagai blok akses cepat untuk meninjau arsip mutu akademik, proses belajar mengajar, dan bahan pemantauan setiap semester.",
+    pbmEvalCountLabel: "dokumen evaluasi",
+    pbmEvalAsk: "Tanyakan Evaluasi PBM ke chatbot",
+    pbmEvalArchive: "Arsip Evaluasi",
+    pbmEvalSemester: "Semester",
+    pbmEvalAcademicYear: "Tahun akademik",
     thesisGuideKicker: "Panduan Tesis",
     thesisGuideTitle: "Dokumen panduan penulisan dan pelaksanaan tesis.",
     thesisGuideText: "Rujukan resmi untuk penyusunan naskah tesis, Seminar Usulan Riset, Seminar Kemajuan Riset, dan Sidang Akhir Magister.",
@@ -289,20 +337,17 @@ const I18N = {
     commentsTitle: "Ruang komentar dan ringkasan kunjungan website.",
     commentsText: "Section ini disiapkan untuk komentar publik dan analytics pengunjung berbasis layanan eksternal yang aman untuk website statis.",
     commentsPublicTitle: "Komentar pengunjung",
-    commentsPublicText: "Komentar publik dapat dihubungkan ke GitHub Discussions melalui Giscus, sehingga komentar tersimpan di repositori dan bisa dimoderasi.",
     commentsConfigNeeded: "Komentar siap diaktifkan setelah konfigurasi Giscus diisi.",
     visitorTitle: "Statistik pengunjung",
-    visitorText: "GoatCounter sudah aktif. Total kunjungan dapat tampil di sini; rincian negara/kota, rujukan, perangkat, dan halaman populer tersedia di dashboard.",
     visitorTotal: "Total kunjungan",
     visitorOrigin: "Negara/kota",
     openAnalyticsDashboard: "Lihat dashboard",
     analyticsActiveTitle: "Negara/kota pengunjung tersedia di dashboard.",
-    analyticsActiveText: "Script GoatCounter di halaman publik hanya mengirim kunjungan dan dapat menampilkan total. Rincian lokasi, rujukan, perangkat, dan halaman populer dilihat melalui dashboard GoatCounter.",
     loadingMetric: "Memuat",
     metricUnavailable: "Lihat dashboard",
     chatKicker: "Chatbot Akademik",
     chatTitle: "Tanya Kurikulum S2 Statistika Terapan",
-    chatText: "Jawaban chatbot ditambatkan pada ekstraksi dokumen Kurikulum OBE 2026, dokumen kurikulum 2020-2026, panduan tesis, silabus mata kuliah, katalog materi HTML, data lulusan, tracer study, dan ringkasan administratif dari SMUP Program Magister.",
+    chatText: "Jawaban chatbot ditambatkan pada ekstraksi dokumen Kurikulum OBE 2026, dokumen kurikulum 2020-2026, Evaluasi PBM, panduan tesis, silabus mata kuliah, katalog materi HTML, data lulusan, tracer study, dan ringkasan administratif dari SMUP Program Magister.",
     knowledgePieces: "potongan pengetahuan terindeks",
     assistantName: "Asisten Prodi",
     loadingKnowledge: "Memuat knowledge base",
@@ -318,8 +363,9 @@ const I18N = {
     promptAlumni: "Tesis lulusan",
     promptTracer: "Tracer 2025",
     promptCurriculumDocs: "Dokumen 2026",
-    welcomeText: "Silakan ajukan pertanyaan tentang kurikulum 2026, dokumen kurikulum 2020-2026, jalur studi, SKS, CPL, panduan tesis, SUR, SKR, SAM, silabus, materi kuliah HTML, tracer study, tesis lulusan, biaya, pendaftaran, dan profil lulusan S2 Statistika Terapan.",
-    welcomeSources: "Sumber utama: Kurikulum OBE 2026, dokumen kurikulum, panduan tesis, data lulusan, tracer study, dan katalog materi kuliah",
+    promptPbmEvaluation: "Evaluasi PBM",
+    welcomeText: "Silakan ajukan pertanyaan tentang kurikulum 2026, dokumen kurikulum 2020-2026, Evaluasi PBM, jalur studi, SKS, CPL, panduan tesis, SUR, SKR, SAM, silabus, materi kuliah HTML, tracer study, tesis lulusan, biaya, pendaftaran, dan profil lulusan S2 Statistika Terapan.",
+    welcomeSources: "Sumber utama: Kurikulum OBE 2026, dokumen kurikulum, Evaluasi PBM, panduan tesis, data lulusan, tracer study, dan katalog materi kuliah",
     questionLabel: "Pertanyaan",
     questionPlaceholder: "Tulis pertanyaan...",
     send: "Kirim",
@@ -334,6 +380,7 @@ const I18N = {
     fileHtml: "File HTML",
     noThesisGuides: "Panduan tesis belum tersedia.",
     noCurriculumDocs: "Dokumen kurikulum belum tersedia.",
+    noPbmEvaluations: "Dokumen Evaluasi PBM belum tersedia.",
     noCourses: "Tidak ada mata kuliah yang cocok.",
     noSyllabus: "Silabus yang dicari belum ditemukan.",
     noMaterials: "Materi yang dicari belum ditemukan.",
@@ -372,6 +419,7 @@ const I18N = {
     navProfile: "Profile",
     navCurriculum: "Curriculum",
     navDocs: "Documents",
+    navPbmEvaluations: "Evaluation",
     navGuide: "Guides",
     navCourses: "Courses",
     navMaterials: "Materials",
@@ -400,6 +448,42 @@ const I18N = {
     curriculumKicker: "Curriculum Structure",
     curriculumTitle: "A 42-credit structure with coursework, research, and RPL pathways.",
     curriculumText: "The 2026 OBE curriculum strengthens theoretical mastery, analytical ability, research competence, learning recognition, and scientific publication.",
+    navAcademicCalendar: "Calendar",
+    academicKicker: "Academic Calendar",
+    academicTitle: "Odd Semester 2026/2027 in one infographic.",
+    academicText: "A visual summary of Universitas Padjadjaran academic activities for new student admission, classes, administration, exams, grades, graduation, and semester closing.",
+    academicSemesterLabel: "Odd Semester",
+    academicSummaryClasses: "Classes",
+    academicSummaryMidterm: "Midterm Exams",
+    academicSummaryFinal: "Final Exams",
+    academicSummaryGraduation: "Graduation",
+    academicAugOrientation: "New student orientation",
+    academicAugPmb: "New student admission ceremony",
+    academicAugKrs: "Course registration for new students",
+    academicAugClassStart: "First class period begins",
+    academicAugMonev: "Semester data monitoring for PDDIKTI reporting",
+    academicAugPkrs: "Course registration revision period",
+    academicSepDies: "Universitas Padjadjaran anniversary",
+    academicSepLeaveSk: "Dean decree deadline for academic leave",
+    academicSepStatus: "Student status determination deadline",
+    academicOctMidterm: "Midterm exams",
+    academicOctPddikti: "PDDIKTI reporting for previous even semester",
+    academicOctGradDeadline: "Graduation Wave I registration deadline",
+    academicOctClassResume: "Second class period",
+    academicNovGraduation: "Graduation Ceremony Wave I",
+    academicDecFinal: "Final exams",
+    academicDecGrades: "Final exam result announcement",
+    academicJanPayment: "Even semester tuition payment",
+    academicJanSchedule: "Even semester class schedule upload",
+    academicJanGradeProgram: "Grade T revision at program level",
+    academicJanGradDeadline: "Graduation Wave II registration deadline",
+    academicJanLeaveRequest: "Academic leave/temporary study suspension request deadline",
+    academicJanGradeFaculty: "Grade T revision at faculty level",
+    academicJanAdvising: "Academic advising period",
+    academicFebGraduation: "Graduation Ceremony Wave II",
+    academicFebEnd: "Odd Semester closing date",
+    academicSourceTitle: "Calendar source",
+    academicSourceText: "Summarized from Universitas Padjadjaran Academic Activity Calendar 2026/2027.",
     courseworkTitle: "Coursework-Based Master's",
     coursework1: "21 credits of required courses.",
     coursework2: "9 credits of elective courses.",
@@ -419,6 +503,14 @@ const I18N = {
     curriculumDocsAsk: "Ask the chatbot about documents",
     curriculumDocPeriod: "Period",
     curriculumDocArchive: "PDF Archive",
+    pbmEvalKicker: "Learning Evaluation",
+    pbmEvalTitle: "Teaching and learning evaluation archive by semester.",
+    pbmEvalText: "PBM evaluation documents are organized as quick-access blocks for academic quality archives, teaching-learning process review, and semester monitoring.",
+    pbmEvalCountLabel: "evaluation documents",
+    pbmEvalAsk: "Ask the chatbot about PBM evaluation",
+    pbmEvalArchive: "Evaluation Archive",
+    pbmEvalSemester: "Semester",
+    pbmEvalAcademicYear: "Academic year",
     thesisGuideKicker: "Thesis Guides",
     thesisGuideTitle: "Thesis writing and implementation guide documents.",
     thesisGuideText: "Official references for thesis writing, Research Proposal Seminar, Research Progress Seminar, and Master's Final Defense.",
@@ -483,20 +575,17 @@ const I18N = {
     commentsTitle: "Comment space and website visit summary.",
     commentsText: "This section is prepared for public comments and visitor analytics using external services that work safely with static websites.",
     commentsPublicTitle: "Visitor comments",
-    commentsPublicText: "Public comments can be connected to GitHub Discussions through Giscus, so comments are stored in the repository and can be moderated.",
     commentsConfigNeeded: "Comments are ready to activate after the Giscus configuration is added.",
     visitorTitle: "Visitor statistics",
-    visitorText: "GoatCounter is active. Total visits can appear here; country/city details, referrers, devices, and popular pages are available in the dashboard.",
     visitorTotal: "Total visits",
     visitorOrigin: "Country/city",
     openAnalyticsDashboard: "Open dashboard",
     analyticsActiveTitle: "Visitor country/city details are available in the dashboard.",
-    analyticsActiveText: "The GoatCounter script on the public page sends visits and can show total counts. Location, referrer, device, and popular-page details are viewed through the GoatCounter dashboard.",
     loadingMetric: "Loading",
     metricUnavailable: "View dashboard",
     chatKicker: "Academic Chatbot",
     chatTitle: "Ask About the Applied Statistics Master's Curriculum",
-    chatText: "The chatbot answers are grounded in the 2026 OBE curriculum extraction, 2020-2026 curriculum documents, thesis guides, course syllabi, HTML learning material catalog, graduate data, tracer studies, and administrative summaries from SMUP.",
+    chatText: "The chatbot answers are grounded in the 2026 OBE curriculum extraction, 2020-2026 curriculum documents, PBM evaluations, thesis guides, course syllabi, HTML learning material catalog, graduate data, tracer studies, and administrative summaries from SMUP.",
     knowledgePieces: "indexed knowledge chunks",
     assistantName: "Program Assistant",
     loadingKnowledge: "Loading knowledge base",
@@ -512,8 +601,9 @@ const I18N = {
     promptAlumni: "Graduate theses",
     promptTracer: "Tracer 2025",
     promptCurriculumDocs: "2026 Document",
-    welcomeText: "Ask about the 2026 curriculum, 2020-2026 curriculum documents, study pathways, credits, learning outcomes, thesis guides, SUR, SKR, SAM, syllabi, HTML learning materials, tracer studies, graduate theses, fees, admissions, and graduate profiles.",
-    welcomeSources: "Main sources: 2026 OBE Curriculum, curriculum documents, thesis guides, graduate data, tracer studies, and learning material catalog",
+    promptPbmEvaluation: "PBM Evaluation",
+    welcomeText: "Ask about the 2026 curriculum, 2020-2026 curriculum documents, PBM evaluations, study pathways, credits, learning outcomes, thesis guides, SUR, SKR, SAM, syllabi, HTML learning materials, tracer studies, graduate theses, fees, admissions, and graduate profiles.",
+    welcomeSources: "Main sources: 2026 OBE Curriculum, curriculum documents, PBM evaluations, thesis guides, graduate data, tracer studies, and learning material catalog",
     questionLabel: "Question",
     questionPlaceholder: "Type a question...",
     send: "Send",
@@ -528,6 +618,7 @@ const I18N = {
     fileHtml: "HTML file",
     noThesisGuides: "Thesis guides are not available yet.",
     noCurriculumDocs: "Curriculum documents are not available yet.",
+    noPbmEvaluations: "PBM evaluation documents are not available yet.",
     noCourses: "No matching courses found.",
     noSyllabus: "No matching syllabus found.",
     noMaterials: "No matching materials found.",
@@ -647,6 +738,7 @@ function applyLanguage() {
   renderSyllabus();
   renderMaterials();
   renderTracerStudies();
+  renderPbmEvaluations();
   renderAlumni();
   renderAnalyticsPanel();
 }
@@ -782,6 +874,9 @@ function expandQuestion(question) {
   if (/(dokumen kurikulum|file kurikulum|pdf kurikulum|arsip kurikulum|kurikulum 2020|kurikulum 2021|kurikulum 2022|kurikulum 2023|kurikulum 2024|kurikulum 2025|kurikulum 2026|curriculum document|curriculum pdf)/.test(normalized)) {
     synonyms.push("dokumen kurikulum file kurikulum pdf kurikulum arsip kurikulum curriculum document curriculum pdf 2020 2021 2022 2023 2024 2025 2026");
   }
+  if (/(evaluasi pbm|pbm|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|teaching learning evaluation)/.test(normalized)) {
+    synonyms.push("evaluasi pbm evaluasi pembelajaran proses belajar mengajar mutu akademik dokumen evaluasi semester ganjil genap learning evaluation teaching learning evaluation");
+  }
 
   return [question, ...synonyms].join(" ");
 }
@@ -802,6 +897,7 @@ function scoreChunk(question, chunk) {
     && !/silabus|sylabus|rps/.test(normalizedQuestion);
   const asksTracer = /tracer|tacer|waktu tunggu|pekerjaan pertama|serapan lulusan|bekerja sebelum lulus/.test(normalizedQuestion);
   const asksCurriculumDoc = /dokumen kurikulum|file kurikulum|pdf kurikulum|arsip kurikulum|curriculum document|curriculum pdf|buka kurikulum|download kurikulum|unduh kurikulum/.test(normalizedQuestion);
+  const asksPbmEvaluation = /evaluasi pbm|pbm|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|teaching learning evaluation|buka evaluasi|download evaluasi|unduh evaluasi/.test(normalizedQuestion);
 
   if (asksAlumni && chunk.id?.startsWith("alumni-")) score += 140;
   if (asksAlumni && chunk.id?.startsWith("syllabus-")) score -= 80;
@@ -813,6 +909,8 @@ function scoreChunk(question, chunk) {
   if (asksTracer && chunk.id?.startsWith("syllabus-")) score -= 60;
   if (asksCurriculumDoc && chunk.id?.startsWith("curriculum-doc-")) score += 180;
   if (asksCurriculumDoc && chunk.id?.startsWith("syllabus-")) score -= 50;
+  if (asksPbmEvaluation && chunk.id?.startsWith("pbm-evaluation-")) score += 185;
+  if (asksPbmEvaluation && chunk.id?.startsWith("syllabus-")) score -= 50;
 
   for (const token of tokens) {
     const matches = wholeTokenMatches(text, token);
@@ -883,6 +981,16 @@ function scoreChunk(question, chunk) {
     if (specificPhrase.length > 4 && metadata.includes(specificPhrase)) score += 70;
   }
 
+  if (chunk.id?.startsWith("pbm-evaluation-")) {
+    const metadata = normalize([chunk.id, chunk.sourceTitle, chunk.title, chunk.text].join(" "));
+    const specificTokens = tokens.filter((token) => !GENERIC_QUERY_TERMS.has(token));
+    for (const token of specificTokens) {
+      if (hasWholeToken(metadata, token)) score += 23;
+    }
+    const specificPhrase = specificTokens.join(" ");
+    if (specificPhrase.length > 4 && metadata.includes(specificPhrase)) score += 72;
+  }
+
   return score > 0 && chunk.id?.startsWith("manual") ? score + 2 : score;
 }
 
@@ -951,7 +1059,7 @@ function buildCapabilityAnswer(question) {
       "1. 2026 curriculum, credits, study pathways, RPL, CPL, and graduate profiles.",
       "2. Course syllabi, topics, references, and HTML learning materials.",
       "3. Thesis guides, SUR, SKR, and Master's Final Defense.",
-      "4. Graduate thesis data, tracer study reports, curriculum PDF archives, fees, and SMUP admissions.",
+      "4. Graduate thesis data, tracer study reports, curriculum PDF archives, PBM evaluation documents, fees, and SMUP admissions.",
       "",
       serverApiReady
         ? "Generative API mode is active, but answers remain grounded in the program knowledge base."
@@ -962,7 +1070,7 @@ function buildCapabilityAnswer(question) {
       "1. Kurikulum 2026, SKS, jalur studi, RPL, CPL, dan profil lulusan.",
       "2. Silabus mata kuliah, bahan kajian, referensi, dan materi HTML.",
       "3. Panduan tesis, SUR, SKR, dan Sidang Akhir Magister.",
-      "4. Data tesis lulusan, tracer study, arsip PDF kurikulum, biaya, dan pendaftaran SMUP.",
+      "4. Data tesis lulusan, tracer study, arsip PDF kurikulum, dokumen Evaluasi PBM, biaya, dan pendaftaran SMUP.",
       "",
       serverApiReady
         ? "Mode API generatif sedang aktif, tetapi jawaban tetap ditambatkan pada knowledge base prodi."
@@ -1226,6 +1334,14 @@ function curriculumDocDescription(doc) {
   return currentLang === "en" ? doc.descriptionEn || doc.description : doc.descriptionId || doc.description;
 }
 
+function pbmEvaluationTitle(doc) {
+  return currentLang === "en" ? doc.titleEn || doc.title : doc.titleId || doc.title;
+}
+
+function pbmEvaluationDescription(doc) {
+  return currentLang === "en" ? doc.descriptionEn || doc.description : doc.descriptionId || doc.description;
+}
+
 function findCurriculumDoc(question, hits = []) {
   const docs = curriculumDocsData?.documents || [];
   const text = normalize(question);
@@ -1243,6 +1359,38 @@ function findCurriculumDoc(question, hits = []) {
   for (const hit of hits) {
     if (!String(hit.id || "").startsWith("curriculum-doc-")) continue;
     const id = String(hit.id).replace(/^curriculum-doc-/, "");
+    const doc = docs.find((item) => item.id === id || normalize(item.title) === normalize(hit.title));
+    if (doc) return doc;
+  }
+
+  return null;
+}
+
+function findPbmEvaluation(question, hits = []) {
+  const docs = pbmEvaluationsData?.documents || [];
+  const text = normalize(question);
+  const yearPair = text.match(/\b(20\d{2})\s*(?:[/:-]|\s)\s*(20\d{2})\b/);
+  const academicYear = yearPair ? `${yearPair[1]}/${yearPair[2]}` : "";
+  const semester = /ganjil|odd/.test(text) ? "Ganjil" : (/genap|even/.test(text) ? "Genap" : "");
+
+  if (academicYear && semester) {
+    return docs.find((doc) => doc.academicYear === academicYear && doc.semester === semester) || null;
+  }
+  if (academicYear) {
+    return docs.find((doc) => doc.academicYear === academicYear) || null;
+  }
+
+  const year = text.match(/\b(2023|2024|2025|2026)\b/)?.[1];
+  if (year && semester) {
+    return docs.find((doc) => doc.academicYear.includes(year) && doc.semester === semester) || null;
+  }
+  if (year) {
+    return docs.find((doc) => doc.academicYear.includes(year)) || null;
+  }
+
+  for (const hit of hits) {
+    if (!String(hit.id || "").startsWith("pbm-evaluation-")) continue;
+    const id = String(hit.id).replace(/^pbm-evaluation-/, "");
     const doc = docs.find((item) => item.id === id || normalize(item.title) === normalize(hit.title));
     if (doc) return doc;
   }
@@ -1285,6 +1433,44 @@ function buildCurriculumDocAnswer(question, hits = []) {
   };
 }
 
+function buildPbmEvaluationAnswer(question, hits = []) {
+  const text = normalize(question);
+  const asksPbmEvaluation = /evaluasi pbm|pbm|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|teaching learning evaluation|buka evaluasi|download evaluasi|unduh evaluasi/.test(text);
+  if (!asksPbmEvaluation) return null;
+
+  const asksSpecific = /\b20\d{2}\b|ganjil|genap|odd|even/.test(text);
+  const selected = asksSpecific ? findPbmEvaluation(question, hits) : null;
+  const docs = selected ? [selected] : (pbmEvaluationsData?.documents || []);
+  if (!docs.length) return null;
+
+  const answer = docs
+    .map((doc) => {
+      if (currentLang === "en") {
+        return [
+          `${pbmEvaluationTitle(doc)}: ${pbmEvaluationDescription(doc)}`,
+          `Semester: ${doc.semesterEn || doc.semester}.`,
+          `Academic year: ${doc.academicYear}.`,
+          `File size: ${formatFileSize(doc.sizeKb)}.`,
+          `PDF: ${doc.href}`
+        ].join("\n");
+      }
+      return [
+        `${pbmEvaluationTitle(doc)}: ${pbmEvaluationDescription(doc)}`,
+        `Semester: ${doc.semester}.`,
+        `Tahun akademik: ${doc.academicYear}.`,
+        `Ukuran file: ${formatFileSize(doc.sizeKb)}.`,
+        `PDF: ${doc.href}`
+      ].join("\n");
+    })
+    .join("\n\n");
+
+  return {
+    answer,
+    sources: docs.map((doc) => ({ title: pbmEvaluationTitle(doc), url: doc.href })),
+    mode: "Local knowledge base"
+  };
+}
+
 function matchFact(question) {
   const text = normalize(question);
   const asksBiaya = /biaya|bpp|ukt|ipi|bayar|tagihan/.test(text);
@@ -1296,6 +1482,7 @@ function matchFact(question) {
   const asksMaterial = /materi|bahan ajar|modul|html|katalog|slide|pertemuan|file kuliah/.test(text);
   const asksTracer = /tracer|tacer|waktu tunggu|pekerjaan pertama|serapan lulusan|bekerja sebelum lulus/.test(text);
   const asksCurriculumDoc = /dokumen kurikulum|file kurikulum|pdf kurikulum|arsip kurikulum|curriculum document|curriculum pdf|buka kurikulum|download kurikulum|unduh kurikulum/.test(text);
+  const asksPbmEvaluation = /evaluasi pbm|pbm|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|teaching learning evaluation|buka evaluasi|download evaluasi|unduh evaluasi/.test(text);
   const asksThesisGuide = (
     (/tesis/.test(text) && /panduan|penulisan|format|pelaksanaan|proposal|naskah|bimbingan|penguji|sidang|seminar|sur|skr|sam/.test(text))
     || /panduan tesis|sur|skr|sam|sidang akhir|seminar usulan|seminar kemajuan/.test(text)
@@ -1311,6 +1498,7 @@ function matchFact(question) {
   if (asksMaterial) return null;
   if (asksTracer) return null;
   if (asksCurriculumDoc) return null;
+  if (asksPbmEvaluation) return null;
   if (asksThesisGuide) return null;
   if (asksAlumniData && !/profil lulusan/.test(text)) return null;
   if (/rpl|rekognisi/.test(text)) return FACTS.rpl;
@@ -1337,12 +1525,14 @@ function buildLocalAnswer(question) {
   const structuredMaterial = buildMaterialAnswer(question, hits);
   const structuredTracerStudy = buildTracerStudyAnswer(question, hits);
   const structuredCurriculumDoc = buildCurriculumDocAnswer(question, hits);
+  const structuredPbmEvaluation = buildPbmEvaluationAnswer(question, hits);
   const structuredThesisGuide = buildThesisGuideAnswer(question);
 
   if (structuredSyllabus) return structuredSyllabus;
   if (structuredMaterial) return structuredMaterial;
   if (structuredTracerStudy) return structuredTracerStudy;
   if (structuredCurriculumDoc) return structuredCurriculumDoc;
+  if (structuredPbmEvaluation) return structuredPbmEvaluation;
   if (structuredThesisGuide) return structuredThesisGuide;
 
   if (fact) {
@@ -1355,8 +1545,8 @@ function buildLocalAnswer(question) {
   if (!hits.length) {
     return {
       answer: currentLang === "en"
-        ? "I have not found that information in the program knowledge base. I can answer the curriculum, syllabi, HTML learning materials, thesis guides, graduate data, tracer studies, curriculum documents, fees, and admissions that have been indexed. Free-form answers outside this knowledge base require enabling a generative AI API on the server."
-        : "Saya belum menemukan informasi tersebut dalam knowledge base prodi. Saat ini saya bisa menjawab kurikulum, silabus, materi HTML, panduan tesis, data lulusan, tracer study, dokumen kurikulum, biaya, dan pendaftaran yang sudah terindeks. Jawaban bebas di luar knowledge base memerlukan API AI generatif yang aktif di server.",
+        ? "I have not found that information in the program knowledge base. I can answer the curriculum, syllabi, HTML learning materials, thesis guides, graduate data, tracer studies, curriculum documents, PBM evaluations, fees, and admissions that have been indexed. Free-form answers outside this knowledge base require enabling a generative AI API on the server."
+        : "Saya belum menemukan informasi tersebut dalam knowledge base prodi. Saat ini saya bisa menjawab kurikulum, silabus, materi HTML, panduan tesis, data lulusan, tracer study, dokumen kurikulum, Evaluasi PBM, biaya, dan pendaftaran yang sudah terindeks. Jawaban bebas di luar knowledge base memerlukan API AI generatif yang aktif di server.",
       sources: [],
       mode: "Local knowledge base"
     };
@@ -1377,9 +1567,11 @@ function buildLocalAnswer(question) {
           ? (currentLang === "en" ? "I found relevant tracer study reports:" : "Saya menemukan laporan tracer study yang relevan:")
           : hits[0]?.id?.startsWith("curriculum-doc-")
             ? (currentLang === "en" ? "I found relevant curriculum documents:" : "Saya menemukan dokumen kurikulum yang relevan:")
-            : currentLang === "en"
-              ? "I found relevant knowledge base excerpts:"
-              : "Saya menemukan potongan knowledge base yang relevan:";
+            : hits[0]?.id?.startsWith("pbm-evaluation-")
+              ? (currentLang === "en" ? "I found relevant PBM evaluation documents:" : "Saya menemukan dokumen Evaluasi PBM yang relevan:")
+              : currentLang === "en"
+                ? "I found relevant knowledge base excerpts:"
+                : "Saya menemukan potongan knowledge base yang relevan:";
 
   return {
     answer: `${intro}\n\n${excerpts}`,
@@ -1676,6 +1868,44 @@ function renderCurriculumDocs() {
     .join("");
 }
 
+function renderPbmEvaluations() {
+  if (!pbmEvaluationRows) return;
+  const docs = pbmEvaluationsData?.documents || [];
+
+  if (pbmEvaluationCount) pbmEvaluationCount.textContent = String(docs.length);
+
+  if (!docs.length) {
+    pbmEvaluationRows.innerHTML = `<p class="empty-note">${escapeHTML(t("noPbmEvaluations"))}</p>`;
+    return;
+  }
+
+  pbmEvaluationRows.innerHTML = docs
+    .map((doc) => {
+      const title = pbmEvaluationTitle(doc);
+      return `
+        <article class="pbm-evaluation-card">
+          <span class="badge">${escapeHTML(t("pbmEvalArchive"))}</span>
+          <div class="pbm-evaluation-period">
+            <span>${escapeHTML(currentLang === "en" ? doc.semesterEn || doc.semester : doc.semester)}</span>
+            <strong>${escapeHTML(doc.academicYear)}</strong>
+          </div>
+          <h3>${escapeHTML(title)}</h3>
+          <p>${escapeHTML(pbmEvaluationDescription(doc))}</p>
+          <div class="pbm-evaluation-meta">
+            <span>${escapeHTML(t("pbmEvalSemester"))}: ${escapeHTML(currentLang === "en" ? doc.semesterEn || doc.semester : doc.semester)}</span>
+            <span>${escapeHTML(t("pbmEvalAcademicYear"))}: ${escapeHTML(doc.academicYear)}</span>
+            <span>${escapeHTML(formatFileSize(doc.sizeKb))}</span>
+          </div>
+          <div class="pbm-evaluation-actions">
+            <a href="${escapeHTML(doc.href)}" target="_blank" rel="noopener">${escapeHTML(t("openPdf"))}</a>
+            <button type="button" data-pbm-evaluation-q="${currentLang === "en" ? `Open ${escapeHTML(title)}` : `Buka dokumen ${escapeHTML(title)}`}">${escapeHTML(t("askChatbot"))}</button>
+          </div>
+        </article>
+      `;
+    })
+    .join("");
+}
+
 function renderAlumni() {
   if (!alumniRows || !alumniData) return;
   const records = alumniData.records || [];
@@ -1821,6 +2051,19 @@ async function loadCurriculumDocs() {
   renderCurriculumDocs();
 }
 
+async function loadPbmEvaluations() {
+  try {
+    const response = await fetch("data/pbm_evaluations.json", { cache: "no-store" });
+    if (!response.ok) throw new Error("Dokumen Evaluasi PBM tidak dapat dimuat.");
+    const data = await response.json();
+    if (!data?.documents?.length) throw new Error("Dokumen Evaluasi PBM kosong.");
+    pbmEvaluationsData = data;
+  } catch (error) {
+    pbmEvaluationsData = { total: 0, documents: [] };
+  }
+  renderPbmEvaluations();
+}
+
 async function loadKnowledge() {
   try {
     const response = await fetch("data/knowledge_chunks.json", { cache: "no-store" });
@@ -1904,6 +2147,11 @@ curriculumDocRows?.addEventListener("click", (event) => {
   if (!button) return;
   ask(button.dataset.curriculumDocQ);
 });
+pbmEvaluationRows?.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-pbm-evaluation-q]");
+  if (!button) return;
+  ask(button.dataset.pbmEvaluationQ);
+});
 
 chatForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -1922,4 +2170,5 @@ loadMaterials();
 loadThesisGuides();
 loadTracerStudies();
 loadCurriculumDocs();
+loadPbmEvaluations();
 loadAlumni();

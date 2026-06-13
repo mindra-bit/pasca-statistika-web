@@ -8,6 +8,7 @@
     "build:thesis-guides": "node scripts/build-thesis-guides.mjs",
     "build:curriculum-docs": "node scripts/build-curriculum-docs.mjs",
     "build:tracer-studies": "node scripts/build-tracer-studies.mjs",
+    "build:pbm-evaluations": "node scripts/build-pbm-evaluations.mjs",
     "standardize:materials": "node scripts/standardize-material-template.mjs",
     "dev": "node server.js",
     "start": "node server.js"

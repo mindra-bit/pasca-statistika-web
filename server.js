@@ -38,6 +38,10 @@ const curriculumDocsPath = path.join(__dirname, "data", "curriculum_docs.json");
 const curriculumDocs = fs.existsSync(curriculumDocsPath)
   ? JSON.parse(fs.readFileSync(curriculumDocsPath, "utf8"))
   : { total: 0, documents: [] };
+const pbmEvaluationsPath = path.join(__dirname, "data", "pbm_evaluations.json");
+const pbmEvaluations = fs.existsSync(pbmEvaluationsPath)
+  ? JSON.parse(fs.readFileSync(pbmEvaluationsPath, "utf8"))
+  : { total: 0, documents: [] };
 const stopwords = new Set("yang dan untuk dengan pada dalam sebagai dari ke di ini itu adalah atau serta oleh agar akan dapat karena maka jika sudah telah juga yaitu bagi antara menjadi memiliki secara program studi magister statistika terapan unpad fmipa universitas padjadjaran kurikulum dokumen tahun prodi pertanyaan jawaban jawab chatbot chatboot luar s2 apa saja berapa".split(" "));
 const genericQueryTerms = new Set("silabus sylabus rps materi referensi deskripsi bahan kajian topik perkuliahan mata kuliah matakuliah course".split(" "));
 
@@ -181,6 +185,9 @@ function expandQuestion(question) {
   if (/(dokumen kurikulum|file kurikulum|pdf kurikulum|arsip kurikulum|kurikulum 2020|kurikulum 2021|kurikulum 2022|kurikulum 2023|kurikulum 2024|kurikulum 2025|kurikulum 2026|curriculum document|curriculum pdf)/.test(text)) {
     expansions.push("dokumen kurikulum file kurikulum pdf kurikulum arsip kurikulum curriculum document curriculum pdf 2020 2021 2022 2023 2024 2025 2026");
   }
+  if (/(evaluasi pbm|pbm|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|teaching learning evaluation)/.test(text)) {
+    expansions.push("evaluasi pbm evaluasi pembelajaran proses belajar mengajar mutu akademik dokumen evaluasi semester ganjil genap learning evaluation teaching learning evaluation");
+  }
 
   return [question, ...expansions].join(" ");
 }
@@ -200,6 +207,7 @@ function scoreChunk(question, chunk) {
     && !/silabus|sylabus|rps/.test(normalizedQuestion);
   const asksTracer = /tracer|tacer|waktu tunggu|pekerjaan pertama|serapan lulusan|bekerja sebelum lulus/.test(normalizedQuestion);
   const asksCurriculumDoc = /dokumen kurikulum|file kurikulum|pdf kurikulum|arsip kurikulum|curriculum document|curriculum pdf|buka kurikulum|download kurikulum|unduh kurikulum/.test(normalizedQuestion);
+  const asksPbmEvaluation = /evaluasi pbm|pbm|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|teaching learning evaluation|buka evaluasi|download evaluasi|unduh evaluasi/.test(normalizedQuestion);
 
   if (asksAlumni && chunk.id?.startsWith("alumni-")) score += 140;
   if (asksAlumni && chunk.id?.startsWith("syllabus-")) score -= 80;
@@ -211,6 +219,8 @@ function scoreChunk(question, chunk) {
   if (asksTracer && chunk.id?.startsWith("syllabus-")) score -= 60;
   if (asksCurriculumDoc && chunk.id?.startsWith("curriculum-doc-")) score += 180;
   if (asksCurriculumDoc && chunk.id?.startsWith("syllabus-")) score -= 50;
+  if (asksPbmEvaluation && chunk.id?.startsWith("pbm-evaluation-")) score += 185;
+  if (asksPbmEvaluation && chunk.id?.startsWith("syllabus-")) score -= 50;
 
   for (const token of tokens) {
     const matches = wholeTokenMatches(text, token);
@@ -281,6 +291,16 @@ function scoreChunk(question, chunk) {
     if (specificPhrase.length > 4 && metadata.includes(specificPhrase)) score += 70;
   }
 
+  if (chunk.id?.startsWith("pbm-evaluation-")) {
+    const metadata = normalize([chunk.id, chunk.sourceTitle, chunk.title, chunk.text].join(" "));
+    const specificTokens = tokens.filter((token) => !genericQueryTerms.has(token));
+    for (const token of specificTokens) {
+      if (hasWholeToken(metadata, token)) score += 23;
+    }
+    const specificPhrase = specificTokens.join(" ");
+    if (specificPhrase.length > 4 && metadata.includes(specificPhrase)) score += 72;
+  }
+
   return score > 0 && chunk.id?.startsWith("manual") ? score + 2 : score;
 }
 
@@ -349,7 +369,7 @@ function capabilityAnswer(question, language = "id") {
       "1. 2026 curriculum, credits, study pathways, RPL, CPL, and graduate profiles.",
       "2. Course syllabi, topics, references, and HTML learning materials.",
       "3. Thesis guides, SUR, SKR, and Master's Final Defense.",
-      "4. Graduate thesis data, tracer study reports, curriculum PDF archives, fees, and SMUP admissions.",
+      "4. Graduate thesis data, tracer study reports, curriculum PDF archives, PBM evaluation documents, fees, and SMUP admissions.",
       "",
       client
         ? "Generative API mode is active, but answers remain grounded in the program knowledge base."
@@ -360,7 +380,7 @@ function capabilityAnswer(question, language = "id") {
       "1. Kurikulum 2026, SKS, jalur studi, RPL, CPL, dan profil lulusan.",
       "2. Silabus mata kuliah, bahan kajian, referensi, dan materi HTML.",
       "3. Panduan tesis, SUR, SKR, dan Sidang Akhir Magister.",
-      "4. Data tesis lulusan, tracer study, arsip PDF kurikulum, biaya, dan pendaftaran SMUP.",
+      "4. Data tesis lulusan, tracer study, arsip PDF kurikulum, dokumen Evaluasi PBM, biaya, dan pendaftaran SMUP.",
       "",
       client
         ? "Mode API generatif sedang aktif, tetapi jawaban tetap ditambatkan pada knowledge base prodi."
@@ -592,6 +612,14 @@ function curriculumDocDescription(doc, language = "id") {
   return language === "en" ? doc.descriptionEn || doc.description : doc.descriptionId || doc.description;
 }
 
+function pbmEvaluationTitle(doc, language = "id") {
+  return language === "en" ? doc.titleEn || doc.title : doc.titleId || doc.title;
+}
+
+function pbmEvaluationDescription(doc, language = "id") {
+  return language === "en" ? doc.descriptionEn || doc.description : doc.descriptionId || doc.description;
+}
+
 function findCurriculumDoc(question, hits = []) {
   const docs = curriculumDocs.documents || [];
   const text = normalize(question);
@@ -609,6 +637,38 @@ function findCurriculumDoc(question, hits = []) {
   for (const hit of hits) {
     if (!String(hit.id || "").startsWith("curriculum-doc-")) continue;
     const id = String(hit.id).replace(/^curriculum-doc-/, "");
+    const doc = docs.find((item) => item.id === id || normalize(item.title) === normalize(hit.title));
+    if (doc) return doc;
+  }
+
+  return null;
+}
+
+function findPbmEvaluation(question, hits = []) {
+  const docs = pbmEvaluations.documents || [];
+  const text = normalize(question);
+  const yearPair = text.match(/\b(20\d{2})\s*(?:[/:-]|\s)\s*(20\d{2})\b/);
+  const academicYear = yearPair ? `${yearPair[1]}/${yearPair[2]}` : "";
+  const semester = /ganjil|odd/.test(text) ? "Ganjil" : (/genap|even/.test(text) ? "Genap" : "");
+
+  if (academicYear && semester) {
+    return docs.find((doc) => doc.academicYear === academicYear && doc.semester === semester) || null;
+  }
+  if (academicYear) {
+    return docs.find((doc) => doc.academicYear === academicYear) || null;
+  }
+
+  const year = text.match(/\b(2023|2024|2025|2026)\b/)?.[1];
+  if (year && semester) {
+    return docs.find((doc) => doc.academicYear.includes(year) && doc.semester === semester) || null;
+  }
+  if (year) {
+    return docs.find((doc) => doc.academicYear.includes(year)) || null;
+  }
+
+  for (const hit of hits) {
+    if (!String(hit.id || "").startsWith("pbm-evaluation-")) continue;
+    const id = String(hit.id).replace(/^pbm-evaluation-/, "");
     const doc = docs.find((item) => item.id === id || normalize(item.title) === normalize(hit.title));
     if (doc) return doc;
   }
@@ -651,6 +711,44 @@ function curriculumDocAnswer(question, hits = [], language = "id") {
   };
 }
 
+function pbmEvaluationAnswer(question, hits = [], language = "id") {
+  const text = normalize(question);
+  const asksPbmEvaluation = /evaluasi pbm|pbm|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|teaching learning evaluation|buka evaluasi|download evaluasi|unduh evaluasi/.test(text);
+  if (!asksPbmEvaluation) return null;
+
+  const asksSpecific = /\b20\d{2}\b|ganjil|genap|odd|even/.test(text);
+  const selected = asksSpecific ? findPbmEvaluation(question, hits) : null;
+  const docs = selected ? [selected] : (pbmEvaluations.documents || []);
+  if (!docs.length) return null;
+
+  const answer = docs
+    .map((doc) => {
+      if (language === "en") {
+        return [
+          `${pbmEvaluationTitle(doc, language)}: ${pbmEvaluationDescription(doc, language)}`,
+          `Semester: ${doc.semesterEn || doc.semester}.`,
+          `Academic year: ${doc.academicYear}.`,
+          `File size: ${formatFileSize(doc.sizeKb)}.`,
+          `PDF: ${doc.href}`
+        ].join("\n");
+      }
+      return [
+        `${pbmEvaluationTitle(doc, language)}: ${pbmEvaluationDescription(doc, language)}`,
+        `Semester: ${doc.semester}.`,
+        `Tahun akademik: ${doc.academicYear}.`,
+        `Ukuran file: ${formatFileSize(doc.sizeKb)}.`,
+        `PDF: ${doc.href}`
+      ].join("\n");
+    })
+    .join("\n\n");
+
+  return {
+    answer,
+    sources: docs.map((doc) => ({ title: pbmEvaluationTitle(doc, language), url: doc.href })),
+    mode: "Knowledge base server"
+  };
+}
+
 function matchFact(question) {
   const text = normalize(question);
   const asksBiaya = /biaya|bpp|ukt|ipi|bayar|tagihan/.test(text);
@@ -662,6 +760,7 @@ function matchFact(question) {
   const asksMaterial = /materi|bahan ajar|modul|html|katalog|slide|pertemuan|file kuliah/.test(text);
   const asksTracer = /tracer|tacer|waktu tunggu|pekerjaan pertama|serapan lulusan|bekerja sebelum lulus/.test(text);
   const asksCurriculumDoc = /dokumen kurikulum|file kurikulum|pdf kurikulum|arsip kurikulum|curriculum document|curriculum pdf|buka kurikulum|download kurikulum|unduh kurikulum/.test(text);
+  const asksPbmEvaluation = /evaluasi pbm|pbm|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|teaching learning evaluation|buka evaluasi|download evaluasi|unduh evaluasi/.test(text);
   const asksThesisGuide = (
     (/tesis/.test(text) && /panduan|penulisan|format|pelaksanaan|proposal|naskah|bimbingan|penguji|sidang|seminar|sur|skr|sam/.test(text))
     || /panduan tesis|sur|skr|sam|sidang akhir|seminar usulan|seminar kemajuan/.test(text)
@@ -677,6 +776,7 @@ function matchFact(question) {
   if (asksMaterial) return null;
   if (asksTracer) return null;
   if (asksCurriculumDoc) return null;
+  if (asksPbmEvaluation) return null;
   if (asksThesisGuide) return null;
   if (asksAlumniData && !/profil lulusan/.test(text)) return null;
   if (/rpl|rekognisi/.test(text)) return facts.rpl;
@@ -718,12 +818,14 @@ function localAnswer(question, language = "id") {
   const structuredMaterial = materialAnswer(question, hits);
   const structuredTracerStudy = tracerStudyAnswer(question, hits);
   const structuredCurriculumDoc = curriculumDocAnswer(question, hits, language);
+  const structuredPbmEvaluation = pbmEvaluationAnswer(question, hits, language);
   const structuredThesisGuide = thesisGuideAnswer(question);
 
   if (structuredSyllabus) return structuredSyllabus;
   if (structuredMaterial) return structuredMaterial;
   if (structuredTracerStudy) return structuredTracerStudy;
   if (structuredCurriculumDoc) return structuredCurriculumDoc;
+  if (structuredPbmEvaluation) return structuredPbmEvaluation;
   if (structuredThesisGuide) return structuredThesisGuide;
 
   if (fact) {
@@ -741,8 +843,8 @@ function localAnswer(question, language = "id") {
   if (!hits.length) {
     return {
       answer: language === "en"
-        ? "I have not found that information in the program knowledge base. I can answer the curriculum, syllabi, HTML learning materials, thesis guides, graduate data, tracer studies, curriculum documents, fees, and admissions that have been indexed. Free-form answers outside this knowledge base require enabling a generative AI API on the server."
-        : "Saya belum menemukan informasi tersebut dalam knowledge base prodi. Saat ini saya bisa menjawab kurikulum, silabus, materi HTML, panduan tesis, data lulusan, tracer study, dokumen kurikulum, biaya, dan pendaftaran yang sudah terindeks. Jawaban bebas di luar knowledge base memerlukan API AI generatif yang aktif di server.",
+        ? "I have not found that information in the program knowledge base. I can answer the curriculum, syllabi, HTML learning materials, thesis guides, graduate data, tracer studies, curriculum documents, PBM evaluations, fees, and admissions that have been indexed. Free-form answers outside this knowledge base require enabling a generative AI API on the server."
+        : "Saya belum menemukan informasi tersebut dalam knowledge base prodi. Saat ini saya bisa menjawab kurikulum, silabus, materi HTML, panduan tesis, data lulusan, tracer study, dokumen kurikulum, Evaluasi PBM, biaya, dan pendaftaran yang sudah terindeks. Jawaban bebas di luar knowledge base memerlukan API AI generatif yang aktif di server.",
       sources: [],
       mode: "Knowledge base server"
     };
@@ -758,7 +860,9 @@ function localAnswer(question, language = "id") {
           ? "Saya menemukan laporan tracer study yang relevan:"
           : hits[0]?.id?.startsWith("curriculum-doc-")
             ? "Saya menemukan dokumen kurikulum yang relevan:"
-            : "Saya menemukan potongan knowledge base yang relevan:";
+            : hits[0]?.id?.startsWith("pbm-evaluation-")
+              ? "Saya menemukan dokumen Evaluasi PBM yang relevan:"
+              : "Saya menemukan potongan knowledge base yang relevan:";
   const answer = [
     intro,
     "",
@@ -782,6 +886,7 @@ app.get("/api/health", (_req, res) => {
     thesisGuides: thesisGuides.total || thesisGuides.guides?.length || 0,
     tracerStudies: tracerStudies.total || tracerStudies.reports?.length || 0,
     curriculumDocs: curriculumDocs.total || curriculumDocs.documents?.length || 0,
+    pbmEvaluations: pbmEvaluations.total || pbmEvaluations.documents?.length || 0,
     apiReady: Boolean(client),
     model: client ? model : null
   });
@@ -811,6 +916,10 @@ app.get("/api/curriculum-docs", (_req, res) => {
   res.json(curriculumDocs);
 });
 
+app.get("/api/pbm-evaluations", (_req, res) => {
+  res.json(pbmEvaluations);
+});
+
 app.post("/api/chat", async (req, res) => {
   const question = String(req.body?.question || "").trim();
   const language = req.body?.language === "en" ? "en" : "id";
@@ -825,6 +934,7 @@ app.post("/api/chat", async (req, res) => {
     || materialAnswer(question, hits)
     || tracerStudyAnswer(question, hits)
     || curriculumDocAnswer(question, hits, language)
+    || pbmEvaluationAnswer(question, hits, language)
     || thesisGuideAnswer(question);
 
   if (directAnswer) {
