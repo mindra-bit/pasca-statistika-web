@@ -40,9 +40,11 @@
         <a href="#silabus" data-i18n="navSyllabus">Silabus</a>
         <a href="#materi" data-i18n="navMaterials">Materi</a>
         <a href="#panduan-tesis" data-i18n="navGuide">Panduan</a>
+        <a href="#evaluasi-perkuliahan" data-i18n="navLectureEvaluations">Monitoring</a>
         <a href="#evaluasi-pbm" data-i18n="navPbmEvaluations">Evaluasi</a>
         <a href="#lulusan" data-i18n="navGraduates">Lulusan</a>
         <a href="#tracer-studi" data-i18n="navTracer">Tracer</a>
+        <a href="#special-moment" data-i18n="navSpecialMoment">Momen</a>
         <a href="#komentar" data-i18n="navComments">Komentar</a>
         <a href="#chatbot" data-i18n="navChatbot">Chatbot</a>
       </nav>
@@ -89,7 +91,32 @@
       </div>
     </section>
 
-    <section class="section academic-calendar-section" id="kalender-akademik">
+    <div class="workspace-layout" id="program-workspace">
+      <aside class="workspace-sidebar" aria-label="Menu konten program">
+        <div class="workspace-sidebar-head">
+          <strong data-i18n="workspaceMenuTitle">Menu Program</strong>
+        </div>
+        <nav class="workspace-menu-list">
+          <a href="#kalender-akademik" data-workspace-target="kalender-akademik" data-i18n="workspaceAcademicCalendar">Kalender Akademik</a>
+          <a href="#profil-lulusan" data-workspace-target="profil-lulusan" data-i18n="workspaceGraduateProfile">Profil Lulusan</a>
+          <a href="#kurikulum" data-workspace-target="kurikulum" data-i18n="workspaceCurriculum">Struktur Kurikulum</a>
+          <a href="#dokumen-kurikulum" data-workspace-target="dokumen-kurikulum" data-i18n="workspaceCurriculumDocs">Dokumen Kurikulum</a>
+          <a href="#mata-kuliah" data-workspace-target="mata-kuliah" data-i18n="workspaceCourses">Daftar Mata Kuliah</a>
+          <a href="#silabus" data-workspace-target="silabus" data-i18n="workspaceSyllabus">Silabus Mata Kuliah</a>
+          <a href="#materi" data-workspace-target="materi" data-i18n="workspaceMaterials">Materi Mata Kuliah</a>
+          <a href="#panduan-tesis" data-workspace-target="panduan-tesis" data-i18n="workspaceThesisGuide">Panduan Tesis</a>
+          <a href="#evaluasi-perkuliahan" data-workspace-target="evaluasi-perkuliahan" data-i18n="workspaceLectureEvaluation">Evaluasi Perkuliahan</a>
+          <a href="#evaluasi-pbm" data-workspace-target="evaluasi-pbm" data-i18n="workspacePbmEvaluation">Evaluasi PBM</a>
+          <a href="#lulusan" data-workspace-target="lulusan" data-i18n="workspaceGraduates">Lulusan & Tesis</a>
+          <a href="#tracer-studi" data-workspace-target="tracer-studi" data-i18n="workspaceTracer">Tracer Studi</a>
+          <a href="#special-moment" data-workspace-target="special-moment" data-i18n="workspaceSpecialMoment">Special Moment</a>
+          <a href="#komentar" data-workspace-target="komentar" data-i18n="workspaceComments">Komentar & Jejak</a>
+        </nav>
+        <a class="workspace-chat-link" href="#chatbot" data-workspace-target="chatbot" data-i18n="workspaceChatbot">Chatbot Prodi</a>
+      </aside>
+
+      <div class="workspace-panels">
+    <section class="section academic-calendar-section active-panel" id="kalender-akademik">
       <div class="container">
         <div class="academic-calendar-hero">
           <div>
@@ -314,6 +341,11 @@
             <span data-i18n="pillBiostat">Biostatistik</span>
             <span data-i18n="pillDataScience">Sains Data</span>
           </div>
+          <div class="aee-highlight">
+            <span data-i18n="aeeLabel">AEE</span>
+            <strong>100%</strong>
+            <p data-i18n="aeeText">Kelulusan 4 tahun terakhir 100% tepat waktu.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -523,6 +555,27 @@
       </div>
     </section>
 
+    <section class="section lecture-evaluation-section" id="evaluasi-perkuliahan">
+      <div class="container">
+        <div class="lecture-evaluation-hero">
+          <div>
+            <p class="section-kicker" data-i18n="lectureEvalKicker">Evaluasi Pelaksanaan Perkuliahan</p>
+            <h2 data-i18n="lectureEvalTitle">Monitoring perkuliahan setiap sesi 1-16.</h2>
+            <p data-i18n="lectureEvalText">Blok ini berisi laporan evaluasi pelaksanaan perkuliahan per sesi/pertemuan. Ini berbeda dari Evaluasi PBM yang dilakukan pada akhir semester.</p>
+          </div>
+          <a class="lecture-evaluation-cta" href="https://bit.ly/EvaluasiGanjilMStat" target="_blank" rel="noopener">
+            <span data-i18n="lectureEvalCtaLabel">Form Monitoring Mahasiswa</span>
+            <strong data-i18n="lectureEvalCtaText">Isi Evaluasi Ganjil MStat</strong>
+          </a>
+        </div>
+        <div class="lecture-evaluation-toolbar">
+          <span><strong id="lectureEvaluationCount">1</strong> <span data-i18n="lectureEvalCountLabel">laporan HTML</span></span>
+          <a href="#chatbot" data-i18n="lectureEvalAsk">Tanyakan Evaluasi Perkuliahan ke chatbot</a>
+        </div>
+        <div class="lecture-evaluation-grid" id="lectureEvaluationRows" aria-live="polite"></div>
+      </div>
+    </section>
+
     <section class="section pbm-evaluation-section" id="evaluasi-pbm">
       <div class="container">
         <div class="section-head">
@@ -592,6 +645,28 @@
       </div>
     </section>
 
+    <section class="section special-moment-section" id="special-moment">
+      <div class="container">
+        <div class="course-head">
+          <div>
+            <p class="section-kicker" data-i18n="specialMomentKicker">Special Moment</p>
+            <h2 data-i18n="specialMomentTitle">Galeri momen tiap angkatan 2022-2025.</h2>
+            <p data-i18n="specialMomentText">Dokumentasi kegiatan dan kebersamaan mahasiswa ditata per angkatan agar mudah ditelusuri tanpa memuat semua foto sekaligus.</p>
+          </div>
+          <div class="special-moment-total">
+            <span data-i18n="specialMomentTotalLabel">Total foto</span>
+            <strong id="specialMomentTotal">54</strong>
+          </div>
+        </div>
+        <div class="special-moment-summary" id="specialMomentSummary" aria-label="Ringkasan foto per angkatan"></div>
+        <div class="special-moment-toolbar">
+          <div class="special-moment-tabs" id="specialMomentTabs" role="tablist" aria-label="Pilih angkatan"></div>
+          <span><strong id="specialMomentCount">0</strong> <span data-i18n="specialMomentShown">foto ditampilkan</span></span>
+        </div>
+        <div class="special-moment-gallery" id="specialMomentRows" aria-live="polite"></div>
+      </div>
+    </section>
+
     <section class="section comments-section" id="komentar">
       <div class="container">
         <div class="course-head">
@@ -639,7 +714,7 @@
         <div class="chat-copy">
           <p class="section-kicker" data-i18n="chatKicker">Chatbot Akademik</p>
           <h2 data-i18n="chatTitle">Tanya Kurikulum S2 Statistika Terapan</h2>
-          <p data-i18n="chatText">Jawaban chatbot ditambatkan pada ekstraksi dokumen Kurikulum OBE 2026, dokumen kurikulum 2020-2026, Evaluasi PBM, panduan tesis, silabus mata kuliah, katalog materi HTML, data lulusan, tracer study, dan ringkasan administratif dari SMUP Program Magister.</p>
+          <p data-i18n="chatText">Jawaban chatbot ditambatkan pada ekstraksi dokumen Kurikulum OBE 2026, dokumen kurikulum 2020-2026, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM, panduan tesis, silabus mata kuliah, katalog materi HTML, data lulusan, tracer study, Special Moment, dan ringkasan administratif dari SMUP Program Magister.</p>
           <div class="source-note">
             <strong id="knowledgeCount">562</strong>
             <span data-i18n="knowledgePieces">potongan pengetahuan terindeks</span>
@@ -666,13 +741,14 @@
             <button type="button" data-i18n="promptAlumni" data-q-id="Berikan contoh judul tesis lulusan tentang spasial" data-q-en="Give examples of graduate thesis titles about spatial topics">Tesis lulusan</button>
             <button type="button" data-i18n="promptTracer" data-q-id="Apa isi Tracer Studi 2025?" data-q-en="What is in the 2025 tracer study?">Tracer 2025</button>
             <button type="button" data-i18n="promptCurriculumDocs" data-q-id="Buka dokumen Kurikulum 2026" data-q-en="Open the 2026 curriculum document">Dokumen 2026</button>
+            <button type="button" data-i18n="promptLectureEvaluation" data-q-id="Apa itu Evaluasi Pelaksanaan Perkuliahan?" data-q-en="What is the course delivery evaluation?">Evaluasi Perkuliahan</button>
             <button type="button" data-i18n="promptPbmEvaluation" data-q-id="Apa saja dokumen Evaluasi PBM yang tersedia?" data-q-en="Which PBM evaluation documents are available?">Evaluasi PBM</button>
           </div>
           <div class="chat-messages" id="chatMessages">
             <div class="message bot">
               <strong data-i18n="assistantName">Asisten Prodi</strong>
-              <p data-i18n="welcomeText">Silakan ajukan pertanyaan tentang kurikulum 2026, dokumen kurikulum 2020-2026, Evaluasi PBM, jalur studi, SKS, CPL, panduan tesis, SUR, SKR, SAM, silabus, materi kuliah HTML, tracer study, tesis lulusan, biaya, pendaftaran, dan profil lulusan S2 Statistika Terapan.</p>
-              <small data-i18n="welcomeSources">Sumber utama: Kurikulum OBE 2026, dokumen kurikulum, Evaluasi PBM, panduan tesis, data lulusan, tracer study, dan katalog materi kuliah</small>
+              <p data-i18n="welcomeText">Silakan ajukan pertanyaan tentang kurikulum 2026, dokumen kurikulum 2020-2026, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM, jalur studi, SKS, CPL, panduan tesis, SUR, SKR, SAM, silabus, materi kuliah HTML, tracer study, Special Moment, tesis lulusan, biaya, pendaftaran, dan profil lulusan S2 Statistika Terapan.</p>
+              <small data-i18n="welcomeSources">Sumber utama: Kurikulum OBE 2026, dokumen kurikulum, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM, panduan tesis, data lulusan, tracer study, Special Moment, dan katalog materi kuliah</small>
             </div>
           </div>
           <form class="chat-form" id="chatForm">
@@ -683,6 +759,8 @@
         </div>
       </div>
     </section>
+      </div>
+    </div>
   </main>
 
   <footer class="footer">
