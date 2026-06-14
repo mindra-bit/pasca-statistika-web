@@ -104,6 +104,7 @@
           <a href="#web-s3" data-program-select="s3" data-workspace-target="web-s3" data-panel-scroll="s3-profil" data-i18n="s3ProfilesKicker">Profil Lulusan S3</a>
           <a href="#web-s3" data-program-select="s3" data-workspace-target="web-s3" data-panel-scroll="s3-cpl" data-i18n="s3CplKicker">Capaian Pembelajaran Lulusan</a>
           <a href="#web-s3" data-program-select="s3" data-workspace-target="web-s3" data-panel-scroll="s3-dokumen" data-i18n="s3DocsLabel">Dokumen Akademik</a>
+          <a href="#web-s3" data-program-select="s3" data-workspace-target="web-s3" data-panel-scroll="s3-survei" data-i18n="s3SurveysKicker">Survei S3</a>
           <a href="#web-s3" data-program-select="s3" data-workspace-target="web-s3" data-panel-scroll="s3-rps" data-i18n="s3RpsKicker">RPS S3 Statistika</a>
           <a href="#chatbot" data-program-select="s3" data-workspace-target="chatbot" data-i18n="workspaceChatbot">Chatbot Prodi</a>
         </nav>
@@ -502,7 +503,7 @@
             <h3 data-i18n="s3VisionTitle">Unggul, bereputasi internasional, dan berdampak.</h3>
             <p id="s3VisionText">Menjadi Program Studi Doktor Statistika yang unggul, bereputasi internasional, dan berdampak dalam pengembangan teori, metodologi, komputasi, serta sistem inferensi statistik untuk menyelesaikan persoalan kompleks lokal, nasional, dan global.</p>
           </article>
-          <article class="s3-card" id="s3-tujuan">
+          <article class="s3-card">
             <span class="badge" data-i18n="s3MissionLabel">Misi</span>
             <h3 data-i18n="s3MissionTitle">Pendidikan doktoral, riset orisinal, komputasi, dan kolaborasi.</h3>
             <ol class="s3-list" id="s3MissionRows"></ol>
@@ -510,14 +511,14 @@
         </div>
 
         <div class="s3-split-grid">
-          <article class="s3-card" id="s3-dokumen">
+          <article class="s3-card" id="s3-tujuan">
             <div class="s3-card-head">
               <span class="badge" data-i18n="s3ObjectivesLabel">Tujuan</span>
               <strong id="s3ObjectiveCount">7</strong>
             </div>
             <div class="s3-scroll-list" id="s3ObjectiveRows"></div>
           </article>
-          <article class="s3-card">
+          <article class="s3-card" id="s3-dokumen">
             <div class="s3-card-head">
               <span class="badge" data-i18n="s3DocsLabel">Dokumen Akademik</span>
               <strong id="s3DocumentCount">3</strong>
@@ -540,6 +541,15 @@
             <h3 data-i18n="s3CplTitle">Delapan CPL jenjang doktoral sesuai KKNI Level 9.</h3>
           </div>
           <div class="s3-cpl-grid" id="s3CplRows" aria-live="polite"></div>
+        </div>
+
+        <div class="s3-block" id="s3-survei">
+          <div class="section-head compact">
+            <p class="section-kicker" data-i18n="s3SurveysKicker">Survei S3</p>
+            <h3 data-i18n="s3SurveysTitle">Masukan pemangku kepentingan dan minat calon pendaftar S3 Statistika.</h3>
+            <p data-i18n="s3SurveysText">Dua formulir ini digunakan untuk menjaring masukan visi-misi, profil lulusan, minat studi doktoral, dan bidang riset yang dituju.</p>
+          </div>
+          <div class="s3-survey-grid" id="s3SurveyRows" aria-live="polite"></div>
         </div>
 
         <div class="s3-block" id="s3-rps">

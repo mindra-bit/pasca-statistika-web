@@ -172,6 +172,7 @@ const s3DocumentRows = document.getElementById("s3DocumentRows");
 const s3DocumentCount = document.getElementById("s3DocumentCount");
 const s3ProfileRows = document.getElementById("s3ProfileRows");
 const s3CplRows = document.getElementById("s3CplRows");
+const s3SurveyRows = document.getElementById("s3SurveyRows");
 const s3RpsSearch = document.getElementById("s3RpsSearch");
 const s3RpsSummary = document.getElementById("s3RpsSummary");
 const s3RpsRows = document.getElementById("s3RpsRows");
@@ -500,6 +501,11 @@ const I18N = {
     s3ProfilesTitle: "Peran lulusan doktor dalam akademik, riset, kebijakan, industri, kesehatan, survei, risiko, konsultansi, dan energi.",
     s3CplKicker: "Capaian Pembelajaran Lulusan",
     s3CplTitle: "Delapan CPL jenjang doktoral sesuai KKNI Level 9.",
+    s3SurveysKicker: "Survei S3",
+    s3SurveysTitle: "Masukan pemangku kepentingan dan minat calon pendaftar S3 Statistika.",
+    s3SurveysText: "Dua formulir ini digunakan untuk menjaring masukan visi-misi, profil lulusan, minat studi doktoral, dan bidang riset yang dituju.",
+    s3SurveyFill: "Isi survei",
+    s3SurveyArchive: "Buka arsip HTML",
     s3RpsKicker: "RPS S3 Statistika",
     s3RpsTitle: "Katalog RPS mata kuliah dan kegiatan akademik S3.",
     s3RpsText: "Seluruh RPS dari folder @Dokumen S3/RPS_S3_Statistika disusun sebagai katalog PDF yang bisa dicari, dibuka, dan ditanyakan ke chatbot.",
@@ -867,6 +873,11 @@ const I18N = {
     s3ProfilesTitle: "Doctoral graduate roles in academia, research, policy, industry, health, surveys, risk, consulting, and energy.",
     s3CplKicker: "Program Learning Outcomes",
     s3CplTitle: "Eight doctoral learning outcomes aligned with KKNI Level 9.",
+    s3SurveysKicker: "Doctoral Surveys",
+    s3SurveysTitle: "Stakeholder input and prospective applicant interest for the doctoral statistics program.",
+    s3SurveysText: "These two forms collect input on vision, mission, graduate profile, doctoral study interest, and intended research fields.",
+    s3SurveyFill: "Fill survey",
+    s3SurveyArchive: "Open HTML archive",
     s3RpsKicker: "Doctoral Statistics RPS",
     s3RpsTitle: "RPS catalog for doctoral courses and academic activities.",
     s3RpsText: "All RPS files from @Dokumen S3/RPS_S3_Statistika are organized as a searchable PDF catalog that can be opened and queried through the chatbot.",
@@ -2660,6 +2671,7 @@ function renderS3Site() {
     if (s3DocumentRows) s3DocumentRows.innerHTML = "";
     if (s3ProfileRows) s3ProfileRows.innerHTML = "";
     if (s3CplRows) s3CplRows.innerHTML = "";
+    if (s3SurveyRows) s3SurveyRows.innerHTML = "";
     if (s3RpsRows) s3RpsRows.innerHTML = `<p class="empty-note">${escapeHTML(t("s3NoRps"))}</p>`;
     return;
   }
@@ -2730,6 +2742,29 @@ function renderS3Site() {
           <p>${escapeHTML(item.text)}</p>
         </article>
       `)
+      .join("");
+  }
+
+  if (s3SurveyRows) {
+    s3SurveyRows.innerHTML = (data.surveys || [])
+      .map((survey) => {
+        const title = currentLang === "en" ? survey.titleEn || survey.title : survey.title;
+        const description = currentLang === "en" ? survey.descriptionEn || survey.description : survey.description;
+        return `
+          <article class="s3-survey-card">
+            <div class="s3-survey-content">
+              <span>${escapeHTML(survey.format || "HTML")} · ${escapeHTML(formatFileSize(survey.sizeKb))}</span>
+              <h4>${escapeHTML(title)}</h4>
+              <p>${escapeHTML(description)}</p>
+              <small>${escapeHTML(survey.shortUrl || "")}</small>
+            </div>
+            <div class="s3-survey-actions">
+              <a class="primary" href="${escapeHTML(survey.shortUrl || survey.href)}" target="_blank" rel="noopener noreferrer">${escapeHTML(t("s3SurveyFill"))}</a>
+              <a href="${escapeHTML(survey.href)}" target="_blank" rel="noopener noreferrer">${escapeHTML(t("s3SurveyArchive"))}</a>
+            </div>
+          </article>
+        `;
+      })
       .join("");
   }
 

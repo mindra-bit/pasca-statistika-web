@@ -3156,6 +3156,7 @@ tbody tr:hover td {
 .s3-card::before,
 .s3-profile-card::before,
 .s3-cpl-card::before,
+.s3-survey-card::before,
 .s3-rps-card::before {
   content: "";
   position: absolute;
@@ -3297,6 +3298,7 @@ tbody tr:hover td {
 
 .s3-profile-grid,
 .s3-cpl-grid,
+.s3-survey-grid,
 .s3-rps-grid {
   display: grid;
   gap: 16px;
@@ -3316,6 +3318,7 @@ tbody tr:hover td {
 
 .s3-profile-card,
 .s3-cpl-card,
+.s3-survey-card,
 .s3-rps-card {
   position: relative;
   overflow: hidden;
@@ -3374,6 +3377,86 @@ tbody tr:hover td {
 .s3-cpl-card strong {
   color: var(--ink);
   font-size: 15px;
+}
+
+.s3-survey-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.s3-survey-card {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 265px;
+  padding: 0;
+}
+
+.s3-survey-card::before {
+  background: linear-gradient(90deg, #114b5f, #0e6b58, #f7b32b);
+}
+
+.s3-survey-content {
+  padding: 24px 24px 10px;
+}
+
+.s3-survey-content span {
+  display: inline-flex;
+  width: fit-content;
+  border-radius: 999px;
+  padding: 7px 10px;
+  background: #edf7f4;
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.s3-survey-content h4 {
+  margin: 16px 0 10px;
+  color: var(--ink);
+  font-size: 21px;
+  line-height: 1.25;
+}
+
+.s3-survey-content p {
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.s3-survey-content small {
+  display: block;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 850;
+  overflow-wrap: anywhere;
+}
+
+.s3-survey-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 16px 24px 24px;
+}
+
+.s3-survey-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  border: 1px solid rgba(17, 75, 95, 0.18);
+  border-radius: 6px;
+  padding: 9px 14px;
+  background: #fff;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 950;
+  text-decoration: none;
+}
+
+.s3-survey-actions a.primary {
+  border-color: transparent;
+  background: linear-gradient(135deg, #114b5f, #0e6b58);
+  color: #fff;
 }
 
 .s3-rps-summary {
@@ -3991,6 +4074,7 @@ tbody tr:hover td {
   .s3-metric-grid,
   .s3-profile-grid,
   .s3-cpl-grid,
+  .s3-survey-grid,
   .s3-rps-summary,
   .s3-rps-grid,
   .syllabus-grid,
@@ -4163,6 +4247,7 @@ tbody tr:hover td {
   .s3-metric-grid,
   .s3-profile-grid,
   .s3-cpl-grid,
+  .s3-survey-grid,
   .s3-rps-summary,
   .s3-rps-grid,
   .syllabus-grid,

@@ -3868,6 +3868,12 @@
     "text": "Katalog RPS S3 Statistika memuat 14 dokumen PDF dengan total 54 SKS. Kelompok RPS: Fondasi & Metodologi 5 dokumen 17 SKS; Riset & Disertasi 6 dokumen 27 SKS; Diseminasi & Rekognisi 3 dokumen 10 SKS."
   },
   {
+    "id": "s3-survey-catalog",
+    "title": "Survei S3 Statistika",
+    "sourceTitle": "Survei S3 Statistika",
+    "text": "Survei S3 Statistika memuat formulir masukan untuk visi, misi, profil lulusan, minat mendaftar, dan bidang minat calon pendaftar. Link survei: Survei Penentuan Visi Misi dan Profil Lulusan https://bit.ly/S3_Stat_Unpad; Survei Minat Mendaftar S3 dan Bidang Minat yang Dituju https://tinyurl.com/SurveyS3Statistika."
+  },
+  {
     "id": "s3-document-kurikulum-s3-statistika",
     "title": "Kurikulum S3 Statistika",
     "sourceTitle": "Kurikulum S3 Statistika",
@@ -3887,6 +3893,20 @@
     "sourceTitle": "Naskah Urgensi S3 Statistika",
     "sourceUrl": "%40Dokumen%20S3/Naskah%20Urgensi%20S3%20Statistika.pdf",
     "text": "Naskah Urgensi S3 Statistika tersedia sebagai dokumen Program Doktor Statistika. Naskah urgensi pendirian dan pengembangan Program Doktor Statistika. Link dokumen: %40Dokumen%20S3/Naskah%20Urgensi%20S3%20Statistika.pdf. Format PDF, ukuran 18328 KB."
+  },
+  {
+    "id": "s3-survey-survei-penentuan-visi-misi-dan-profil-lulusan",
+    "title": "Survei Penentuan Visi Misi dan Profil Lulusan",
+    "sourceTitle": "Survei Penentuan Visi Misi dan Profil Lulusan",
+    "sourceUrl": "https://bit.ly/S3_Stat_Unpad",
+    "text": "Survei Penentuan Visi Misi dan Profil Lulusan tersedia untuk Program Doktor Statistika. Formulir masukan pemangku kepentingan untuk penyusunan visi, misi, dan profil lulusan Program Doktor Statistika. Link pengisian survei: https://bit.ly/S3_Stat_Unpad. Arsip HTML lokal: %40Dokumen%20S3/Survey%20Penentuan%20Visi%20Misi%20dan%20Profil%20Lulusan.html. Format HTML, ukuran 7697 KB."
+  },
+  {
+    "id": "s3-survey-survei-minat-mendaftar-s3-dan-bidang-minat-yang-dituju",
+    "title": "Survei Minat Mendaftar S3 dan Bidang Minat yang Dituju",
+    "sourceTitle": "Survei Minat Mendaftar S3 dan Bidang Minat yang Dituju",
+    "sourceUrl": "https://tinyurl.com/SurveyS3Statistika",
+    "text": "Survei Minat Mendaftar S3 dan Bidang Minat yang Dituju tersedia untuk Program Doktor Statistika. Formulir minat calon pendaftar S3 Statistika dan pemetaan bidang riset yang dituju. Link pengisian survei: https://tinyurl.com/SurveyS3Statistika. Arsip HTML lokal: %40Dokumen%20S3/Survei%20Minat%20Mendaftar%20S3%20dan%20Bidang%20Minat%20Yang%20Dituju.html. Format HTML, ukuran 7023 KB."
   },
   {
     "id": "s3-rps-doc-s3-rps-etika-dan-filsafat-keilmuan-statistika",

@@ -1,6 +1,6 @@
 {
   "source": "@Dokumen S3",
-  "generatedAt": "2026-06-14T08:24:44.533Z",
+  "generatedAt": "2026-06-14T10:29:45.110Z",
   "program": {
     "title": "S3 Statistika",
     "titleEn": "Doctoral Program in Statistics",
@@ -182,6 +182,32 @@
       "href": "%40Dokumen%20S3/Naskah%20Urgensi%20S3%20Statistika.pdf",
       "sizeKb": 18328,
       "format": "PDF"
+    }
+  ],
+  "surveys": [
+    {
+      "id": "survei-penentuan-visi-misi-dan-profil-lulusan",
+      "title": "Survei Penentuan Visi Misi dan Profil Lulusan",
+      "titleEn": "Survey for Determining Vision, Mission, and Graduate Profile",
+      "description": "Formulir masukan pemangku kepentingan untuk penyusunan visi, misi, dan profil lulusan Program Doktor Statistika.",
+      "descriptionEn": "Stakeholder input form for shaping the doctoral program vision, mission, and graduate profile.",
+      "file": "Survey Penentuan Visi Misi dan Profil Lulusan.html",
+      "href": "%40Dokumen%20S3/Survey%20Penentuan%20Visi%20Misi%20dan%20Profil%20Lulusan.html",
+      "shortUrl": "https://bit.ly/S3_Stat_Unpad",
+      "sizeKb": 7697,
+      "format": "HTML"
+    },
+    {
+      "id": "survei-minat-mendaftar-s3-dan-bidang-minat-yang-dituju",
+      "title": "Survei Minat Mendaftar S3 dan Bidang Minat yang Dituju",
+      "titleEn": "Doctoral Application Interest and Intended Research Field Survey",
+      "description": "Formulir minat calon pendaftar S3 Statistika dan pemetaan bidang riset yang dituju.",
+      "descriptionEn": "Prospective applicant interest form for the doctoral statistics program and intended research-field mapping.",
+      "file": "Survei Minat Mendaftar S3 dan Bidang Minat Yang Dituju.html",
+      "href": "%40Dokumen%20S3/Survei%20Minat%20Mendaftar%20S3%20dan%20Bidang%20Minat%20Yang%20Dituju.html",
+      "shortUrl": "https://tinyurl.com/SurveyS3Statistika",
+      "sizeKb": 7023,
+      "format": "HTML"
     }
   ],
   "rps": {

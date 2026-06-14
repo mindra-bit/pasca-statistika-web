@@ -53,6 +53,24 @@ function docEntry(fileName, title, description) {
   };
 }
 
+function surveyEntry(fileName, title, titleEn, description, descriptionEn, shortUrl) {
+  const fullPath = path.join(sourceDir, fileName);
+  const stat = fs.statSync(fullPath);
+  const relativePath = path.relative(rootDir, fullPath);
+  return {
+    id: slugify(title),
+    title,
+    titleEn,
+    description,
+    descriptionEn,
+    file: fileName,
+    href: encodeHref(relativePath),
+    shortUrl,
+    sizeKb: Math.round(stat.size / 1024),
+    format: "HTML"
+  };
+}
+
 const courseMeta = new Map([
   ["etika dan filsafat keilmuan statistika", {
     credits: 3,
@@ -347,6 +365,25 @@ const documents = [
   docEntry("Naskah Urgensi S3 Statistika.pdf", "Naskah Urgensi S3 Statistika", "Naskah urgensi pendirian dan pengembangan Program Doktor Statistika.")
 ];
 
+const surveys = [
+  surveyEntry(
+    "Survey Penentuan Visi Misi dan Profil Lulusan.html",
+    "Survei Penentuan Visi Misi dan Profil Lulusan",
+    "Survey for Determining Vision, Mission, and Graduate Profile",
+    "Formulir masukan pemangku kepentingan untuk penyusunan visi, misi, dan profil lulusan Program Doktor Statistika.",
+    "Stakeholder input form for shaping the doctoral program vision, mission, and graduate profile.",
+    "https://bit.ly/S3_Stat_Unpad"
+  ),
+  surveyEntry(
+    "Survei Minat Mendaftar S3 dan Bidang Minat Yang Dituju.html",
+    "Survei Minat Mendaftar S3 dan Bidang Minat yang Dituju",
+    "Doctoral Application Interest and Intended Research Field Survey",
+    "Formulir minat calon pendaftar S3 Statistika dan pemetaan bidang riset yang dituju.",
+    "Prospective applicant interest form for the doctoral statistics program and intended research-field mapping.",
+    "https://tinyurl.com/SurveyS3Statistika"
+  )
+];
+
 const manifest = {
   source: sourceDirName,
   generatedAt: new Date().toISOString(),
@@ -357,6 +394,7 @@ const manifest = {
   graduateProfiles,
   cpl,
   documents,
+  surveys,
   rps: {
     total: rpsDocuments.length,
     totalCredits: rpsDocuments.reduce((sum, doc) => sum + Number(doc.credits || 0), 0),
@@ -419,12 +457,25 @@ if (fs.existsSync(chunksPath)) {
       sourceTitle: "RPS S3 Statistika",
       text: `Katalog RPS S3 Statistika memuat ${rpsDocuments.length} dokumen PDF dengan total ${manifest.rps.totalCredits} SKS. Kelompok RPS: ${groups.map((group) => `${group.label} ${group.total} dokumen ${group.credits} SKS`).join("; ")}.`
     },
+    {
+      id: "s3-survey-catalog",
+      title: "Survei S3 Statistika",
+      sourceTitle: "Survei S3 Statistika",
+      text: `Survei S3 Statistika memuat formulir masukan untuk visi, misi, profil lulusan, minat mendaftar, dan bidang minat calon pendaftar. Link survei: ${surveys.map((survey) => `${survey.title} ${survey.shortUrl}`).join("; ")}.`
+    },
     ...documents.map((doc) => ({
       id: `s3-document-${doc.id}`,
       title: doc.title,
       sourceTitle: doc.title,
       sourceUrl: doc.href,
       text: `${doc.title} tersedia sebagai dokumen Program Doktor Statistika. ${doc.description} Link dokumen: ${doc.href}. Format ${doc.format}, ukuran ${doc.sizeKb} KB.`
+    })),
+    ...surveys.map((survey) => ({
+      id: `s3-survey-${survey.id}`,
+      title: survey.title,
+      sourceTitle: survey.title,
+      sourceUrl: survey.shortUrl,
+      text: `${survey.title} tersedia untuk Program Doktor Statistika. ${survey.description} Link pengisian survei: ${survey.shortUrl}. Arsip HTML lokal: ${survey.href}. Format ${survey.format}, ukuran ${survey.sizeKb} KB.`
     })),
     ...rpsDocuments.map((doc) => ({
       id: `s3-rps-doc-${doc.id}`,
