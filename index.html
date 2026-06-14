@@ -55,7 +55,7 @@
               <span data-i18n="frontS2Meta">Magister</span>
             </div>
             <div class="program-front-actions">
-              <a class="button button-primary" href="#profil" data-program-select="s2" data-workspace-target="profil" data-i18n="frontS2Open">Buka Informasi S2</a>
+              <a class="button button-primary" href="#program-profile" data-program-select="s2" data-workspace-target="program-profile" data-i18n="frontS2Open">Buka Informasi S2</a>
             </div>
           </article>
           <article class="program-front-card program-front-s3">
@@ -81,9 +81,7 @@
           <strong class="workspace-title-s3" data-i18n="frontS3MenuTitle">Menu Program Informasi S3 Statistika</strong>
         </div>
         <nav class="workspace-menu-list workspace-menu-s2">
-          <a href="#profil" data-program-select="s2" data-workspace-target="profil" data-i18n="workspaceProgramProfile">Profil Program</a>
-          <a href="#visi-misi" data-program-select="s2" data-workspace-target="visi-misi" data-i18n="workspaceVisionMission">Visi dan Misi</a>
-          <a href="#profil-lulusan" data-program-select="s2" data-workspace-target="profil-lulusan" data-i18n="workspaceGraduateProfile">Profil Lulusan</a>
+          <a href="#program-profile" data-program-select="s2" data-workspace-target="program-profile" data-i18n="workspaceProgramProfile">Program Profile</a>
           <a href="#kurikulum" data-program-select="s2" data-workspace-target="kurikulum" data-i18n="workspaceCurriculum">Struktur Kurikulum</a>
           <a href="#dokumen-kurikulum" data-program-select="s2" data-workspace-target="dokumen-kurikulum" data-i18n="workspaceCurriculumDocs">Dokumen Kurikulum</a>
           <a href="#mata-kuliah" data-program-select="s2" data-workspace-target="mata-kuliah" data-i18n="workspaceCourses">Daftar Mata Kuliah</a>
@@ -317,6 +315,89 @@
         <div class="calendar-source-note">
           <strong data-i18n="academicSourceTitle">Sumber kalender</strong>
           <span data-i18n="academicSourceText">Disarikan dari Kalender Kegiatan Akademik Universitas Padjadjaran Tahun 2026/2027.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section program-profile-section" id="program-profile">
+      <div class="container program-profile-panel">
+        <div class="section-head compact">
+          <p class="section-kicker" data-i18n="workspaceProgramProfile">Program Profile</p>
+          <h2 data-i18n="programProfileCombinedTitle">Profil lengkap S2 Statistika Terapan.</h2>
+          <p data-i18n="programProfileCombinedText">Ringkasan profil program, visi misi, dan profil lulusan ditempatkan dalam satu panel agar informasi awal S2 langsung utuh saat dibuka.</p>
+        </div>
+
+        <div class="program-profile-hero">
+          <div class="media-panel">
+            <img src="assets/campus-profile.jpg" alt="Gedung Universitas Padjadjaran" />
+          </div>
+          <div class="content-stack">
+            <p class="section-kicker" data-i18n="profileKicker">Profil Program</p>
+            <h3 data-i18n="profileTitle">Pusat pendidikan magister statistika yang unggul dalam pendidikan dan riset.</h3>
+            <p data-i18n="profileText">Program ini menyiapkan lulusan yang mampu mengembangkan metode statistika, mengelola riset, dan menerapkan analisis data pada masalah nyata melalui pendekatan interdisipliner.</p>
+            <div class="pill-grid" aria-label="Bidang kajian">
+              <span data-i18n="pillBusiness">Bisnis dan Industri</span>
+              <span data-i18n="pillSocial">Sosial</span>
+              <span data-i18n="pillActuarial">Aktuaria</span>
+              <span data-i18n="pillBiostat">Biostatistik</span>
+              <span data-i18n="pillDataScience">Sains Data</span>
+            </div>
+            <div class="aee-highlight">
+              <span data-i18n="aeeLabel">AEE</span>
+              <strong>100%</strong>
+              <p data-i18n="aeeText">Kelulusan 4 tahun terakhir 100% tepat waktu.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="program-profile-block">
+          <div class="section-head compact">
+            <p class="section-kicker" data-i18n="visionMissionKicker">Visi dan Misi</p>
+            <h3 data-i18n="visionMissionTitle">Arah pengembangan Program Magister Statistika Terapan.</h3>
+            <p data-i18n="visionMissionText">Visi dan misi program studi dirangkum dari dokumen Kurikulum OBE 2026 sebagai dasar penyelenggaraan pendidikan, riset, kerja sama, dan publikasi ilmiah.</p>
+          </div>
+          <div class="vision-mission-grid">
+            <article class="vision-card vision-card-featured">
+              <span class="badge" data-i18n="visionLabel">Visi</span>
+              <h3 data-i18n="visionTitle">Menjadi pusat pendidikan Magister Statistika yang unggul.</h3>
+              <p data-i18n="visionText">Menjadi pusat pendidikan Magister Statistika yang unggul dalam pendidikan dan riset, diakui secara internasional, serta memberikan dampak nyata bagi masyarakat, khususnya dalam bidang statistika bisnis dan industri, statistika sosial, aktuaria, biostatistika, dan sains data.</p>
+            </article>
+            <article class="vision-card">
+              <span class="badge" data-i18n="missionLabel">Misi</span>
+              <h3 data-i18n="missionTitle">Pendidikan, riset, kerja sama, dan publikasi ilmiah.</h3>
+              <ul class="mission-list">
+                <li data-i18n="mission1">Menyelenggarakan pendidikan dan pembelajaran magister dengan fokus pengembangan dan penerapan statistika di bisnis dan industri, sosial, aktuaria, biostatistika, dan sains data.</li>
+                <li data-i18n="mission2">Melaksanakan penelitian yang berdampak dan relevan dengan kebutuhan masyarakat serta perkembangan ilmu statistika.</li>
+                <li data-i18n="mission3">Mengembangkan kerja sama nasional dan internasional untuk memperkuat pendidikan, riset, dan jejaring akademik.</li>
+                <li data-i18n="mission4">Mendorong publikasi ilmiah bereputasi sebagai kontribusi program studi pada pengembangan keilmuan.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+
+        <div class="program-profile-block">
+          <div class="section-head compact">
+            <p class="section-kicker" data-i18n="graduateCompetencyKicker">Profil Lulusan</p>
+            <h3 data-i18n="graduateCompetencyTitle">Profil lulusan yang fleksibel untuk akademik, riset, konsultansi, dan industri.</h3>
+          </div>
+          <div class="role-grid">
+            <article class="role-card">
+              <h3 data-i18n="academicianTitle">Akademisi</h3>
+              <p data-i18n="academicianText">Siap berkarier sebagai dosen, instruktur, dan pembina akademik melalui Tri Dharma Perguruan Tinggi.</p>
+            </article>
+            <article class="role-card">
+              <h3 data-i18n="researcherTitle">Peneliti</h3>
+              <p data-i18n="researcherText">Mampu melakukan riset inovatif dalam statistika teoritis dan terapan serta menghasilkan karya ilmiah bermutu.</p>
+            </article>
+            <article class="role-card">
+              <h3 data-i18n="consultantTitle">Konsultan</h3>
+              <p data-i18n="consultantText">Memberikan layanan analisis data dan pemecahan masalah berbasis statistika untuk lembaga dan organisasi.</p>
+            </article>
+            <article class="role-card">
+              <h3 data-i18n="practitionerTitle">Praktisi</h3>
+              <p data-i18n="practitionerText">Bekerja sebagai profesional analitik di perusahaan, pemerintahan, industri, lembaga riset, dan jasa konsultansi.</p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
