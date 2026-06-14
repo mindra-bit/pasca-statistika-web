@@ -12,6 +12,7 @@
     "build:lecture-evaluations": "node scripts/build-lecture-evaluations.mjs",
     "build:special-moments": "node scripts/build-special-moments.mjs",
     "build:rps-docs": "node scripts/build-rps-docs.mjs",
+    "build:s3-site": "node scripts/build-s3-site.mjs",
     "standardize:materials": "node scripts/standardize-material-template.mjs",
     "dev": "node server.js",
     "start": "node server.js"

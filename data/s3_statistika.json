@@ -1,0 +1,454 @@
+{
+  "source": "@Dokumen S3",
+  "generatedAt": "2026-06-14T08:24:44.533Z",
+  "program": {
+    "title": "S3 Statistika",
+    "titleEn": "Doctoral Program in Statistics",
+    "subtitle": "FMIPA Universitas Padjadjaran",
+    "lead": "Program Doktor Statistika dirancang berbasis riset untuk menghasilkan kontribusi orisinal dalam teori, metodologi, komputasi, dan sistem inferensi statistik.",
+    "leadEn": "The Doctoral Program in Statistics is research-based and designed to produce original contributions in statistical theory, methodology, computation, and statistical inference systems.",
+    "studyLoad": "54 SKS",
+    "fullTime": "6 semester",
+    "partTime": "8 semester",
+    "maxStudy": "12 semester",
+    "structure": [
+      {
+        "label": "Kompetensi Kualifikasi Doktor",
+        "labelEn": "Doctoral Qualification Competence",
+        "credits": 12
+      },
+      {
+        "label": "Riset dan Disertasi",
+        "labelEn": "Research and Dissertation",
+        "credits": 42
+      }
+    ],
+    "highlights": [
+      "Riset doktoral berbasis novelty dan integritas ilmiah.",
+      "Komputasi statistik, reproducible research, dan responsible AI.",
+      "Publikasi, diseminasi, dashboard, software, dan policy brief sebagai luaran riset.",
+      "Ekosistem riset S2-S3 melalui research group, co-publication, dan doctoral colloquium."
+    ]
+  },
+  "vision": "Menjadi Program Studi Doktor Statistika yang unggul, bereputasi internasional, dan berdampak dalam pengembangan teori, metodologi, komputasi, serta sistem inferensi statistik untuk menyelesaikan persoalan kompleks lokal, nasional, dan global.",
+  "missions": [
+    "Menyelenggarakan pendidikan doktor statistika berbasis riset yang menekankan orisinalitas, integritas, kedalaman teori, dan kekuatan metodologi.",
+    "Mengembangkan riset statistik yang menghasilkan teori, metode, model, estimator, algoritma, dan sistem inferensi baru yang teruji.",
+    "Memperkuat komputasi statistik, reproducible research, dan responsible AI sebagai bagian dari pengembangan statistik modern.",
+    "Menghasilkan publikasi internasional bereputasi dan luaran inovatif berupa software, dashboard, policy brief, atau model keputusan.",
+    "Membangun ekosistem riset S2-S3 melalui research group, shared analytics laboratory, co-publication, dan doctoral colloquium.",
+    "Mengembangkan kerja sama nasional dan internasional untuk joint supervision, visiting professor, external examiner, dan riset kolaboratif."
+  ],
+  "objectives": [
+    "Menghasilkan lulusan doktor yang mampu mengembangkan teori, metode, dan model statistika baru atau teruji untuk menyelesaikan persoalan kompleks berbasis data.",
+    "Menghasilkan peneliti, akademisi, metodolog statistik, konsultan, dan pemimpin analitik yang mandiri, berintegritas, serta mampu menghasilkan kontribusi ilmiah orisinal.",
+    "Mengembangkan riset statistika modern yang mencakup inferensi statistik, statistika Bayesian, statistika komputasi, machine learning, sains data, statistika spasial-temporal, forecasting probabilistik, analitik risiko, causal inference, survei, statistika resmi, dan evaluasi kebijakan.",
+    "Meningkatkan luaran akademik bereputasi melalui publikasi ilmiah, diseminasi riset, kolaborasi nasional dan internasional, serta pengembangan inovasi berbasis statistika.",
+    "Membangun ekosistem riset kolaboratif dengan perguruan tinggi, lembaga pemerintah, industri, lembaga riset, asosiasi profesi, dan masyarakat pengguna data.",
+    "Mendukung pengambilan keputusan berbasis data melalui pengembangan model, sistem inferensi, evaluasi dampak kebijakan, dan decision dashboard yang valid, transparan, dan berkelanjutan.",
+    "Memperkuat mutu akademik dan daya saing internasional Program Studi Doktor Statistika melalui kurikulum berbasis riset, standar CPL jenjang KKNI Level 9, serta orientasi pada akreditasi internasional."
+  ],
+  "graduateProfiles": [
+    {
+      "code": "P1",
+      "title": "Akademisi Doktoral",
+      "titleEn": "Doctoral Academic",
+      "description": "Dosen dan pendidik yang mengembangkan pembelajaran dan riset statistika tingkat lanjut.",
+      "competencies": "Pengembangan kurikulum, publikasi, pembimbingan, dan kepemimpinan akademik."
+    },
+    {
+      "code": "P2",
+      "title": "Peneliti Utama",
+      "titleEn": "Principal Researcher",
+      "description": "Pemimpin riset di perguruan tinggi, lembaga riset, kementerian, BPS, industri, dan lembaga internasional.",
+      "competencies": "Desain riset, metodologi, hibah, publikasi, dan jejaring kolaborasi."
+    },
+    {
+      "code": "P3",
+      "title": "Metodolog Statistik",
+      "titleEn": "Statistical Methodologist",
+      "description": "Pengembang teori, model, estimator, algoritma, dan framework inferensi statistik.",
+      "competencies": "Advanced inference, validasi, simulasi, komputasi, dan reproducibility."
+    },
+    {
+      "code": "P4",
+      "title": "Data Policy Scientist",
+      "titleEn": "Data Policy Scientist",
+      "description": "Ahli yang menerjemahkan data dan bukti statistik menjadi rekomendasi kebijakan.",
+      "competencies": "Causal inference, policy analytics, dashboard, dan policy brief."
+    },
+    {
+      "code": "P5",
+      "title": "Epidemiological/Public Health Statistician",
+      "titleEn": "Epidemiological/Public Health Statistician",
+      "description": "Ahli statistik untuk kesehatan publik, disease mapping, dan evaluasi intervensi.",
+      "competencies": "Biostatistics, Bayesian/spatiotemporal model, dan public health analytics."
+    },
+    {
+      "code": "P6",
+      "title": "Survey and Official Statistics Specialist",
+      "titleEn": "Survey and Official Statistics Specialist",
+      "description": "Ahli statistik untuk survei kompleks, data administratif, dan statistik resmi.",
+      "competencies": "Sampling, small area estimation, calibration, dan data integration."
+    },
+    {
+      "code": "P7",
+      "title": "Risk, Actuarial, and Financial Analytics Scientist",
+      "titleEn": "Risk, Actuarial, and Financial Analytics Scientist",
+      "description": "Ahli risiko, aktuaria, dan pemodelan keuangan.",
+      "competencies": "Time series, extreme value, survival/loss model, dan risk analytics."
+    },
+    {
+      "code": "P8",
+      "title": "Statistical Consulting and Dashboard Leader",
+      "titleEn": "Statistical Consulting and Dashboard Leader",
+      "description": "Pemimpin konsultasi statistik dan pengembang sistem keputusan berbasis data.",
+      "competencies": "Communication, consulting, software, dashboard, dan stakeholder engagement."
+    },
+    {
+      "code": "P9",
+      "title": "Energy Transition and Renewable Energy Statistician",
+      "titleEn": "Energy Transition and Renewable Energy Statistician",
+      "description": "Ahli statistika untuk perencanaan, pemantauan, evaluasi, dan pengambilan keputusan Energi Baru Terbarukan serta transisi energi berkelanjutan.",
+      "competencies": "Spatiotemporal modeling, probabilistic forecasting, Bayesian hierarchical modeling, uncertainty quantification, risk analytics, causal-policy evaluation, optimal site selection, dan energy decision dashboard."
+    }
+  ],
+  "cpl": [
+    {
+      "code": "CPL-1",
+      "domain": "Sikap dan etika akademik",
+      "text": "Lulusan mampu menginternalisasi nilai religius, Pancasila, kemanusiaan, integritas akademik, etika riset, tanggung jawab sosial, dan tata kelola data yang bertanggung jawab."
+    },
+    {
+      "code": "CPL-2",
+      "domain": "Pengetahuan dan filosofi keilmuan",
+      "text": "Lulusan mampu mensintesis teori statistika, probabilitas, inferensi, pemodelan, komputasi, dan filosofi sains untuk merumuskan masalah ilmiah tingkat doktoral."
+    },
+    {
+      "code": "CPL-3",
+      "domain": "Kreasi metodologi statistik",
+      "text": "Lulusan mampu menciptakan, mengembangkan, dan memvalidasi metode, model, estimator, algoritma, atau sistem inferensi statistik yang orisinal dan teruji."
+    },
+    {
+      "code": "CPL-4",
+      "domain": "Komputasi dan reproducible research",
+      "text": "Lulusan mampu merancang komputasi statistik yang efisien, transparan, skalabel, dapat direproduksi, dan sesuai dengan prinsip responsible AI serta tata kelola data."
+    },
+    {
+      "code": "CPL-5",
+      "domain": "Riset interdisipliner berbasis statistika",
+      "text": "Lulusan mampu memimpin riset statistik pada masalah kompleks lintas bidang dengan tetap menjaga kontribusi metodologis statistika sebagai inti disertasi."
+    },
+    {
+      "code": "CPL-6",
+      "domain": "Diseminasi dan rekognisi ilmiah",
+      "text": "Lulusan mampu mendiseminasikan kontribusi riset melalui publikasi internasional bereputasi, konferensi, repository, dashboard, dan komunikasi ilmiah yang efektif."
+    },
+    {
+      "code": "CPL-7",
+      "domain": "Kepemimpinan riset",
+      "text": "Lulusan mampu memimpin kelompok riset, membangun kolaborasi nasional-internasional, mengelola proyek penelitian, dan membina komunitas ilmiah."
+    },
+    {
+      "code": "CPL-8",
+      "domain": "Dampak kebijakan dan inovasi",
+      "text": "Lulusan mampu menerjemahkan kontribusi statistik menjadi rekomendasi kebijakan, inovasi sistem keputusan, atau solusi berbasis data yang bermanfaat bagi masyarakat."
+    }
+  ],
+  "documents": [
+    {
+      "id": "kurikulum-s3-statistika",
+      "title": "Kurikulum S3 Statistika",
+      "description": "Dokumen kurikulum utama Program Doktor Statistika.",
+      "file": "Kurikulum S3 STATISTIKA.pdf",
+      "href": "%40Dokumen%20S3/Kurikulum%20S3%20STATISTIKA.pdf",
+      "sizeKb": 4041,
+      "format": "PDF"
+    },
+    {
+      "id": "naskah-syarat-akreditasi-minimal",
+      "title": "Naskah Syarat Akreditasi Minimal",
+      "description": "Naskah akademik untuk kebutuhan pemenuhan syarat akreditasi minimal.",
+      "file": "Naskah Syarat Akreditasi Minimal.pdf",
+      "href": "%40Dokumen%20S3/Naskah%20Syarat%20Akreditasi%20Minimal.pdf",
+      "sizeKb": 4763,
+      "format": "PDF"
+    },
+    {
+      "id": "naskah-urgensi-s3-statistika",
+      "title": "Naskah Urgensi S3 Statistika",
+      "description": "Naskah urgensi pendirian dan pengembangan Program Doktor Statistika.",
+      "file": "Naskah Urgensi S3 Statistika.pdf",
+      "href": "%40Dokumen%20S3/Naskah%20Urgensi%20S3%20Statistika.pdf",
+      "sizeKb": 18328,
+      "format": "PDF"
+    }
+  ],
+  "rps": {
+    "total": 14,
+    "totalCredits": 54,
+    "groups": [
+      {
+        "id": "fondasi-metodologi",
+        "label": "Fondasi & Metodologi",
+        "labelEn": "Foundations & Methodology",
+        "total": 5,
+        "credits": 17
+      },
+      {
+        "id": "riset-disertasi",
+        "label": "Riset & Disertasi",
+        "labelEn": "Research & Dissertation",
+        "total": 6,
+        "credits": 27
+      },
+      {
+        "id": "diseminasi-rekognisi",
+        "label": "Diseminasi & Rekognisi",
+        "labelEn": "Dissemination & Recognition",
+        "total": 3,
+        "credits": 10
+      }
+    ],
+    "documents": [
+      {
+        "id": "s3-rps-etika-dan-filsafat-keilmuan-statistika",
+        "title": "RPS Etika dan Filsafat Keilmuan Statistika",
+        "titleId": "RPS Etika dan Filsafat Keilmuan Statistika",
+        "titleEn": "Course Plan Ethics and Philosophy of Statistical Science",
+        "courseTitle": "Etika dan Filsafat Keilmuan Statistika",
+        "courseTitleEn": "Ethics and Philosophy of Statistical Science",
+        "credits": 3,
+        "group": "Fondasi & Metodologi",
+        "groupEn": "Foundations & Methodology",
+        "description": "Penguatan etika akademik, filsafat ilmu, integritas riset, dan tata kelola data pada jenjang doktoral.",
+        "file": "RPS Etika dan Filsafat Keilmuan Statistika.pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Etika%20dan%20Filsafat%20Keilmuan%20Statistika.pdf",
+        "sizeKb": 624,
+        "format": "PDF",
+        "source": "@Dokumen S3/RPS_S3_Statistika"
+      },
+      {
+        "id": "s3-rps-metodologi-riset-dan-penulisan-ilmiah",
+        "title": "RPS Metodologi Riset dan Penulisan Ilmiah",
+        "titleId": "RPS Metodologi Riset dan Penulisan Ilmiah",
+        "titleEn": "Course Plan Research Methodology and Scientific Writing",
+        "courseTitle": "Metodologi Riset dan Penulisan Ilmiah",
+        "courseTitleEn": "Research Methodology and Scientific Writing",
+        "credits": 3,
+        "group": "Fondasi & Metodologi",
+        "groupEn": "Foundations & Methodology",
+        "description": "Metodologi riset, rancangan penelitian, dan penulisan ilmiah untuk publikasi bereputasi.",
+        "file": "RPS Metodologi Riset dan Penulisan Ilmiah.pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Metodologi%20Riset%20dan%20Penulisan%20Ilmiah.pdf",
+        "sizeKb": 626,
+        "format": "PDF",
+        "source": "@Dokumen S3/RPS_S3_Statistika"
+      },
+      {
+        "id": "s3-rps-penguatan-riset-dasar",
+        "title": "RPS Penguatan Riset Dasar",
+        "titleId": "RPS Penguatan Riset Dasar",
+        "titleEn": "Course Plan Doctoral Research Foundation",
+        "courseTitle": "Penguatan Riset Dasar",
+        "courseTitleEn": "Doctoral Research Foundation",
+        "credits": 6,
+        "group": "Fondasi & Metodologi",
+        "groupEn": "Foundations & Methodology",
+        "description": "Penguatan fondasi teori, perumusan novelty, dan kesiapan riset statistik tingkat doktoral.",
+        "file": "RPS Penguatan Riset Dasar.pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Penguatan%20Riset%20Dasar.pdf",
+        "sizeKb": 616,
+        "format": "PDF",
+        "source": "@Dokumen S3/RPS_S3_Statistika"
+      },
+      {
+        "id": "s3-rps-penulisan-studi-literatur-review",
+        "title": "RPS Penulisan Studi Literatur Review",
+        "titleId": "RPS Penulisan Studi Literatur Review",
+        "titleEn": "Course Plan Literature Review Writing",
+        "courseTitle": "Penulisan Studi Literatur Review",
+        "courseTitleEn": "Literature Review Writing",
+        "credits": 3,
+        "group": "Fondasi & Metodologi",
+        "groupEn": "Foundations & Methodology",
+        "description": "Penyusunan kajian pustaka sistematis sebagai dasar posisi riset dan kebaruan disertasi.",
+        "file": "RPS Penulisan Studi Literatur Review.pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Penulisan%20Studi%20Literatur%20Review.pdf",
+        "sizeKb": 622,
+        "format": "PDF",
+        "source": "@Dokumen S3/RPS_S3_Statistika"
+      },
+      {
+        "id": "s3-rps-personal-development-skills",
+        "title": "RPS Personal Development Skills",
+        "titleId": "RPS Personal Development Skills",
+        "titleEn": "Course Plan Personal Development Skills",
+        "courseTitle": "Personal Development Skills",
+        "courseTitleEn": "Personal Development Skills",
+        "credits": 2,
+        "group": "Fondasi & Metodologi",
+        "groupEn": "Foundations & Methodology",
+        "description": "Penguatan kemandirian, kepemimpinan, komunikasi ilmiah, dan kesiapan karier doktoral.",
+        "file": "RPS Personal Development Skills.pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Personal%20Development%20Skills.pdf",
+        "sizeKb": 620,
+        "format": "PDF",
+        "source": "@Dokumen S3/RPS_S3_Statistika"
+      },
+      {
+        "id": "s3-rps-penelaahan-naskah-disertasi-1-pnd-1",
+        "title": "RPS Penelaahan Naskah Disertasi 1 (PND 1)",
+        "titleId": "RPS Penelaahan Naskah Disertasi 1 (PND 1)",
+        "titleEn": "Course Plan Dissertation Manuscript Review 1",
+        "courseTitle": "Penelaahan Naskah Disertasi 1 (PND 1)",
+        "courseTitleEn": "Dissertation Manuscript Review 1",
+        "credits": 3,
+        "group": "Riset & Disertasi",
+        "groupEn": "Research & Dissertation",
+        "description": "Penelaahan naskah disertasi tahap pertama untuk memastikan kemajuan riset dan kualitas argumen ilmiah.",
+        "file": "RPS Penelaahan Naskah Disertasi 1 (PND 1).pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Penelaahan%20Naskah%20Disertasi%201%20(PND%201).pdf",
+        "sizeKb": 626,
+        "format": "PDF",
+        "source": "@Dokumen S3/RPS_S3_Statistika"
+      },
+      {
+        "id": "s3-rps-penelaahan-naskah-disertasi-2-pnd-2",
+        "title": "RPS Penelaahan Naskah Disertasi 2 (PND 2)",
+        "titleId": "RPS Penelaahan Naskah Disertasi 2 (PND 2)",
+        "titleEn": "Course Plan Dissertation Manuscript Review 2",
+        "courseTitle": "Penelaahan Naskah Disertasi 2 (PND 2)",
+        "courseTitleEn": "Dissertation Manuscript Review 2",
+        "credits": 3,
+        "group": "Riset & Disertasi",
+        "groupEn": "Research & Dissertation",
+        "description": "Penelaahan naskah disertasi tahap kedua untuk mematangkan kontribusi, validasi, dan kesiapan ujian.",
+        "file": "RPS Penelaahan Naskah Disertasi 2 (PND 2).pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Penelaahan%20Naskah%20Disertasi%202%20(PND%202).pdf",
+        "sizeKb": 628,
+        "format": "PDF",
+        "source": "@Dokumen S3/RPS_S3_Statistika"
+      },
+      {
+        "id": "s3-rps-proposal-riset",
+        "title": "RPS Proposal Riset",
+        "titleId": "RPS Proposal Riset",
+        "titleEn": "Course Plan Research Proposal",
+        "courseTitle": "Proposal Riset",
+        "courseTitleEn": "Research Proposal",
+        "credits": 3,
+        "group": "Riset & Disertasi",
+        "groupEn": "Research & Dissertation",
+        "description": "Penyusunan proposal riset doktoral yang orisinal, terukur, dan selaras dengan CPL.",
+        "file": "RPS Proposal Riset.pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Proposal%20Riset.pdf",
+        "sizeKb": 613,
+        "format": "PDF",
+        "source": "@Dokumen S3/RPS_S3_Statistika"
+      },
+      {
+        "id": "s3-rps-seminar-usulan-riset-sur",
+        "title": "RPS Seminar Usulan Riset (SUR)",
+        "titleId": "RPS Seminar Usulan Riset (SUR)",
+        "titleEn": "Course Plan Research Proposal Seminar",
+        "courseTitle": "Seminar Usulan Riset (SUR)",
+        "courseTitleEn": "Research Proposal Seminar",
+        "credits": 6,
+        "group": "Riset & Disertasi",
+        "groupEn": "Research & Dissertation",
+        "description": "Seminar usulan riset untuk menguji kelayakan masalah, metode, dan kontribusi disertasi.",
+        "file": "RPS Seminar Usulan Riset (SUR).pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Seminar%20Usulan%20Riset%20(SUR).pdf",
+        "sizeKb": 622,
+        "format": "PDF",
+        "source": "@Dokumen S3/RPS_S3_Statistika"
+      },
+      {
+        "id": "s3-rps-sidang-promosi-doktor-spd",
+        "title": "RPS Sidang Promosi Doktor (SPD)",
+        "titleId": "RPS Sidang Promosi Doktor (SPD)",
+        "titleEn": "Course Plan Doctoral Promotion Defense",
+        "courseTitle": "Sidang Promosi Doktor (SPD)",
+        "courseTitleEn": "Doctoral Promotion Defense",
+        "credits": 6,
+        "group": "Riset & Disertasi",
+        "groupEn": "Research & Dissertation",
+        "description": "Sidang promosi doktor sebagai tahap akhir pertanggungjawaban ilmiah disertasi.",
+        "file": "RPS Sidang Promosi Doktor (SPD).pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Sidang%20Promosi%20Doktor%20(SPD).pdf",
+        "sizeKb": 625,
+        "format": "PDF",
+        "source": "@Dokumen S3/RPS_S3_Statistika"
+      },
+      {
+        "id": "s3-rps-ujian-naskah-disertasi-und",
+        "title": "RPS Ujian Naskah Disertasi (UND)",
+        "titleId": "RPS Ujian Naskah Disertasi (UND)",
+        "titleEn": "Course Plan Dissertation Manuscript Examination",
+        "courseTitle": "Ujian Naskah Disertasi (UND)",
+        "courseTitleEn": "Dissertation Manuscript Examination",
+        "credits": 6,
+        "group": "Riset & Disertasi",
+        "groupEn": "Research & Dissertation",
+        "description": "Ujian naskah disertasi untuk menilai kelayakan substansi, metodologi, dan kontribusi doktoral.",
+        "file": "RPS Ujian Naskah Disertasi (UND).pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Ujian%20Naskah%20Disertasi%20(UND).pdf",
+        "sizeKb": 623,
+        "format": "PDF",
+        "source": "@Dokumen S3/RPS_S3_Statistika"
+      },
+      {
+        "id": "s3-rps-diseminasi-internasional-di",
+        "title": "RPS Diseminasi Internasional (DI)",
+        "titleId": "RPS Diseminasi Internasional (DI)",
+        "titleEn": "Course Plan International Dissemination",
+        "courseTitle": "Diseminasi Internasional (DI)",
+        "courseTitleEn": "International Dissemination",
+        "credits": 4,
+        "group": "Diseminasi & Rekognisi",
+        "groupEn": "Dissemination & Recognition",
+        "description": "Diseminasi hasil riset pada forum internasional atau publikasi bereputasi.",
+        "file": "RPS Diseminasi Internasional (DI).pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Diseminasi%20Internasional%20(DI).pdf",
+        "sizeKb": 620,
+        "format": "PDF",
+        "source": "@Dokumen S3/RPS_S3_Statistika"
+      },
+      {
+        "id": "s3-rps-diseminasi-nasional-dn",
+        "title": "RPS Diseminasi Nasional (DN)",
+        "titleId": "RPS Diseminasi Nasional (DN)",
+        "titleEn": "Course Plan National Dissemination",
+        "courseTitle": "Diseminasi Nasional (DN)",
+        "courseTitleEn": "National Dissemination",
+        "credits": 2,
+        "group": "Diseminasi & Rekognisi",
+        "groupEn": "Dissemination & Recognition",
+        "description": "Diseminasi hasil riset pada forum nasional, komunitas akademik, atau pemangku kepentingan strategis.",
+        "file": "RPS Diseminasi Nasional (DN).pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Diseminasi%20Nasional%20(DN).pdf",
+        "sizeKb": 618,
+        "format": "PDF",
+        "source": "@Dokumen S3/RPS_S3_Statistika"
+      },
+      {
+        "id": "s3-rps-keterampilan-diseminasi-dan-pengembangan-pengetahuan",
+        "title": "RPS Keterampilan Diseminasi dan Pengembangan Pengetahuan",
+        "titleId": "RPS Keterampilan Diseminasi dan Pengembangan Pengetahuan",
+        "titleEn": "Course Plan Dissemination Skills and Knowledge Development",
+        "courseTitle": "Keterampilan Diseminasi dan Pengembangan Pengetahuan",
+        "courseTitleEn": "Dissemination Skills and Knowledge Development",
+        "credits": 4,
+        "group": "Diseminasi & Rekognisi",
+        "groupEn": "Dissemination & Recognition",
+        "description": "Penguatan kemampuan diseminasi, knowledge translation, publikasi, dan pengembangan dampak riset.",
+        "file": "RPS Keterampilan Diseminasi dan Pengembangan Pengetahuan.pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Keterampilan%20Diseminasi%20dan%20Pengembangan%20Pengetahuan.pdf",
+        "sizeKb": 637,
+        "format": "PDF",
+        "source": "@Dokumen S3/RPS_S3_Statistika"
+      }
+    ]
+  }
+}

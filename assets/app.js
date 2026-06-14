@@ -130,8 +130,10 @@ let curriculumDocsData = null;
 let lectureEvaluationsData = null;
 let pbmEvaluationsData = null;
 let rpsDocsData = null;
+let s3SiteData = null;
 let activeFilter = "Semua";
 let activeRpsFilter = "Semua";
+let activeS3RpsFilter = "Semua";
 let activeSpecialMomentYear = "";
 let serverChatAvailable = false;
 let serverApiReady = false;
@@ -159,6 +161,21 @@ const rpsSearch = document.getElementById("rpsSearch");
 const rpsRows = document.getElementById("rpsRows");
 const rpsCount = document.getElementById("rpsCount");
 const rpsSummary = document.getElementById("rpsSummary");
+const s3StudyLoad = document.getElementById("s3StudyLoad");
+const s3RpsTotal = document.getElementById("s3RpsTotal");
+const s3CplTotal = document.getElementById("s3CplTotal");
+const s3VisionText = document.getElementById("s3VisionText");
+const s3MissionRows = document.getElementById("s3MissionRows");
+const s3ObjectiveRows = document.getElementById("s3ObjectiveRows");
+const s3ObjectiveCount = document.getElementById("s3ObjectiveCount");
+const s3DocumentRows = document.getElementById("s3DocumentRows");
+const s3DocumentCount = document.getElementById("s3DocumentCount");
+const s3ProfileRows = document.getElementById("s3ProfileRows");
+const s3CplRows = document.getElementById("s3CplRows");
+const s3RpsSearch = document.getElementById("s3RpsSearch");
+const s3RpsSummary = document.getElementById("s3RpsSummary");
+const s3RpsRows = document.getElementById("s3RpsRows");
+const s3RpsCount = document.getElementById("s3RpsCount");
 const alumniSearch = document.getElementById("alumniSearch");
 const alumniRows = document.getElementById("alumniRows");
 const alumniCount = document.getElementById("alumniCount");
@@ -192,6 +209,8 @@ const goatDashboardLink = document.getElementById("goatDashboardLink");
 const workspaceLayout = document.getElementById("program-workspace");
 const workspacePanelIds = [
   "kalender-akademik",
+  "profil",
+  "visi-misi",
   "profil-lulusan",
   "kurikulum",
   "dokumen-kurikulum",
@@ -205,14 +224,18 @@ const workspacePanelIds = [
   "lulusan",
   "tracer-studi",
   "special-moment",
+  "web-s3",
   "komentar",
   "chatbot"
 ];
+let activeWorkspaceProgram = "none";
+let activePanelScrollTarget = "";
+let pendingWorkspaceSelection = null;
 
 const I18N = {
   id: {
     topbarCampus: "FMIPA Universitas Padjadjaran",
-    topbarCurriculum: "Kurikulum OBE 2026",
+    topbarCurriculum: "Portal S2 dan S3 Statistika",
     navProfile: "Profil",
     navCurriculum: "Kurikulum",
     navDocs: "Dokumen",
@@ -225,6 +248,7 @@ const I18N = {
     navGraduates: "Lulusan",
     navTracer: "Tracer",
     navSpecialMoment: "Momen",
+    navS3: "Web S3",
     navSyllabus: "Silabus",
     navRps: "RPS",
     navLectureEvaluations: "Monitoring",
@@ -233,6 +257,8 @@ const I18N = {
     navAsk: "Tanya Prodi",
     workspaceMenuTitle: "Menu Program",
     workspaceAcademicCalendar: "Kalender Akademik",
+    workspaceProgramProfile: "Profil Program",
+    workspaceVisionMission: "Visi dan Misi",
     workspaceGraduateProfile: "Profil Lulusan",
     workspaceCurriculum: "Struktur Kurikulum",
     workspaceCurriculumDocs: "Dokumen Kurikulum",
@@ -246,16 +272,31 @@ const I18N = {
     workspaceGraduates: "Lulusan & Tesis",
     workspaceTracer: "Tracer Studi",
     workspaceSpecialMoment: "Special Moment",
+    workspaceS3: "Web S3 Statistika",
+    workspaceS3Overview: "Ringkasan S3",
+    workspaceS3VisionMission: "Visi dan Misi",
     workspaceComments: "Komentar & Jejak",
     workspaceChatbot: "Chatbot Prodi",
-    heroKicker: "Program Magister",
-    heroLead: "Pendidikan magister 42 SKS berbasis statistika terapan, riset, komputasi, dan sains data untuk menjawab kebutuhan industri, pemerintahan, kesehatan, aktuaria, dan akademik.",
+    heroKicker: "Program Pascasarjana",
+    heroTitle: "Pasca Sarjana Statistika FMIPA UNPAD",
+    heroLead: "Portal akademik terpadu untuk Program S2 Statistika Terapan dan Program S3 Statistika FMIPA Universitas Padjadjaran.",
     heroAsk: "Tanya Chatbot",
     heroCurriculum: "Lihat Kurikulum",
-    statSks: "SKS kurikulum OBE",
-    statSchemes: "skema studi",
-    statAreas: "bahan kajian",
-    statCurriculum: "kurikulum OBE",
+    heroS3: "Web S3",
+    frontS2Title: "S2 Statistika Terapan",
+    frontS2Text: "Informasi kurikulum OBE 2026, kalender akademik, silabus, RPS, materi kuliah, panduan tesis, lulusan, tracer study, dan komentar pengunjung.",
+    frontS2Meta: "Magister",
+    frontS2Open: "Buka Informasi S2",
+    frontS3Title: "S3 Statistika",
+    frontS3Text: "Informasi Program Doktor Statistika: visi, misi, tujuan, profil lulusan, CPL, dokumen akademik, dan katalog RPS S3 berbasis PDF.",
+    frontS3Meta: "Doktor",
+    frontS3Open: "Buka Informasi S3",
+    frontS2MenuTitle: "Menu Program Informasi S2 Statistika Terapan",
+    frontS3MenuTitle: "Menu Program Informasi S3 Statistika",
+    statSks: "SKS S2 Statistika Terapan",
+    statSchemes: "SKS S3 Statistika",
+    statAreas: "RPS S2 tersedia",
+    statCurriculum: "RPS S3 tersedia",
     profileKicker: "Profil Program",
     profileTitle: "Pusat pendidikan magister statistika yang unggul dalam pendidikan dan riset.",
     profileText: "Program ini menyiapkan lulusan yang mampu mengembangkan metode statistika, mengelola riset, dan menerapkan analisis data pada masalah nyata melalui pendekatan interdisipliner.",
@@ -437,6 +478,41 @@ const I18N = {
     rpsDocument: "Dokumen RPS",
     rpsCredits: "SKS",
     rpsCourseCode: "Kode MK",
+    s3Kicker: "Web S3 Statistika",
+    s3Title: "Program Doktor Statistika FMIPA Unpad.",
+    s3Text: "Ruang informasi S3 Statistika yang memuat visi, misi, tujuan, profil lulusan, CPL, dokumen akademik, dan seluruh RPS mata kuliah/kegiatan doktoral.",
+    s3StudyLoad: "Beban Studi",
+    s3ResearchBased: "Kurikulum berbasis riset",
+    s3FullTime: "Penuh waktu",
+    s3PartTime: "Paruh waktu",
+    s3Semester: "semester",
+    s3RpsMetric: "RPS S3",
+    s3Documents: "dokumen",
+    s3CplMetric: "CPL",
+    s3Outcomes: "capaian",
+    s3VisionLabel: "Visi",
+    s3VisionTitle: "Unggul, bereputasi internasional, dan berdampak.",
+    s3MissionLabel: "Misi",
+    s3MissionTitle: "Pendidikan doktoral, riset orisinal, komputasi, dan kolaborasi.",
+    s3ObjectivesLabel: "Tujuan",
+    s3DocsLabel: "Dokumen Akademik",
+    s3ProfilesKicker: "Profil Lulusan S3",
+    s3ProfilesTitle: "Peran lulusan doktor dalam akademik, riset, kebijakan, industri, kesehatan, survei, risiko, konsultansi, dan energi.",
+    s3CplKicker: "Capaian Pembelajaran Lulusan",
+    s3CplTitle: "Delapan CPL jenjang doktoral sesuai KKNI Level 9.",
+    s3RpsKicker: "RPS S3 Statistika",
+    s3RpsTitle: "Katalog RPS mata kuliah dan kegiatan akademik S3.",
+    s3RpsText: "Seluruh RPS dari folder @Dokumen S3/RPS_S3_Statistika disusun sebagai katalog PDF yang bisa dicari, dibuka, dan ditanyakan ke chatbot.",
+    s3RpsSearchLabel: "Cari RPS S3",
+    s3RpsSearchPlaceholder: "SUR, diseminasi, riset dasar...",
+    s3RpsShown: "RPS tampil",
+    s3RpsAsk: "Tanyakan RPS S3 ke chatbot",
+    s3OpenDocx: "Buka PDF",
+    s3AskChatbot: "Tanya chatbot",
+    s3Credits: "SKS",
+    s3GroupAll: "Semua RPS S3",
+    s3NoData: "Data Web S3 belum tersedia.",
+    s3NoRps: "RPS S3 yang dicari belum ditemukan.",
     commentsKicker: "Komentar & Jejak Pengunjung",
     commentsTitle: "Ruang komentar dan ringkasan kunjungan website.",
     commentsText: "Section ini disiapkan untuk komentar publik dan analytics pengunjung berbasis layanan eksternal yang aman untuk website statis.",
@@ -524,7 +600,7 @@ const I18N = {
   },
   en: {
     topbarCampus: "Faculty of Mathematics and Natural Sciences, Universitas Padjadjaran",
-    topbarCurriculum: "2026 OBE Curriculum",
+    topbarCurriculum: "Statistics Master's and Doctoral Portal",
     navProfile: "Profile",
     navCurriculum: "Curriculum",
     navDocs: "Documents",
@@ -537,6 +613,7 @@ const I18N = {
     navGraduates: "Graduates",
     navTracer: "Tracer",
     navSpecialMoment: "Moments",
+    navS3: "S3 Site",
     navSyllabus: "Syllabus",
     navRps: "RPS",
     navLectureEvaluations: "Monitoring",
@@ -545,6 +622,8 @@ const I18N = {
     navAsk: "Ask Program",
     workspaceMenuTitle: "Program Menu",
     workspaceAcademicCalendar: "Academic Calendar",
+    workspaceProgramProfile: "Program Profile",
+    workspaceVisionMission: "Vision and Mission",
     workspaceGraduateProfile: "Graduate Profile",
     workspaceCurriculum: "Curriculum Structure",
     workspaceCurriculumDocs: "Curriculum Documents",
@@ -558,16 +637,31 @@ const I18N = {
     workspacePbmEvaluation: "Learning Evaluation",
     workspaceGraduates: "Graduates & Theses",
     workspaceTracer: "Tracer Studies",
+    workspaceS3: "Doctoral Statistics Site",
+    workspaceS3Overview: "S3 Overview",
+    workspaceS3VisionMission: "Vision and Mission",
     workspaceComments: "Comments & Visits",
     workspaceChatbot: "Program Chatbot",
-    heroKicker: "Master's Program",
-    heroLead: "A 42-credit master's program in applied statistics, research, computing, and data science for industry, government, health, actuarial, and academic needs.",
+    heroKicker: "Graduate Programs",
+    heroTitle: "Graduate Statistics Programs, FMIPA UNPAD",
+    heroLead: "An integrated academic portal for the Applied Statistics Master's Program and Doctoral Program in Statistics at FMIPA Universitas Padjadjaran.",
     heroAsk: "Ask Chatbot",
     heroCurriculum: "View Curriculum",
-    statSks: "OBE curriculum credits",
-    statSchemes: "study schemes",
-    statAreas: "knowledge areas",
-    statCurriculum: "OBE curriculum",
+    heroS3: "S3 Site",
+    frontS2Title: "Applied Statistics Master's Program",
+    frontS2Text: "Information on the 2026 OBE curriculum, academic calendar, syllabi, RPS, course materials, thesis guides, graduates, tracer studies, and visitor comments.",
+    frontS2Meta: "Master's",
+    frontS2Open: "Open S2 Information",
+    frontS3Title: "Doctoral Program in Statistics",
+    frontS3Text: "Doctoral program information: vision, mission, objectives, graduate profiles, learning outcomes, academic documents, and PDF-based doctoral RPS catalog.",
+    frontS3Meta: "Doctoral",
+    frontS3Open: "Open S3 Information",
+    frontS2MenuTitle: "Applied Statistics Master's Information Menu",
+    frontS3MenuTitle: "Doctoral Statistics Information Menu",
+    statSks: "S2 Applied Statistics credits",
+    statSchemes: "S3 Statistics credits",
+    statAreas: "S2 RPS available",
+    statCurriculum: "S3 RPS available",
     profileKicker: "Program Profile",
     profileTitle: "A master's education center in statistics with strength in teaching and research.",
     profileText: "The program prepares graduates to develop statistical methods, manage research, and apply data analysis to real problems through interdisciplinary approaches.",
@@ -749,6 +843,41 @@ const I18N = {
     rpsDocument: "RPS Document",
     rpsCredits: "Credits",
     rpsCourseCode: "Course code",
+    s3Kicker: "Doctoral Statistics Site",
+    s3Title: "Doctoral Program in Statistics, FMIPA Unpad.",
+    s3Text: "An information space for the doctoral program containing vision, mission, objectives, graduate profiles, learning outcomes, academic documents, and all doctoral course/activity RPS files.",
+    s3StudyLoad: "Study Load",
+    s3ResearchBased: "Research-based curriculum",
+    s3FullTime: "Full-time",
+    s3PartTime: "Part-time",
+    s3Semester: "semesters",
+    s3RpsMetric: "Doctoral RPS",
+    s3Documents: "documents",
+    s3CplMetric: "Learning outcomes",
+    s3Outcomes: "outcomes",
+    s3VisionLabel: "Vision",
+    s3VisionTitle: "Excellent, internationally reputable, and impactful.",
+    s3MissionLabel: "Mission",
+    s3MissionTitle: "Doctoral education, original research, computation, and collaboration.",
+    s3ObjectivesLabel: "Objectives",
+    s3DocsLabel: "Academic Documents",
+    s3ProfilesKicker: "Doctoral Graduate Profiles",
+    s3ProfilesTitle: "Doctoral graduate roles in academia, research, policy, industry, health, surveys, risk, consulting, and energy.",
+    s3CplKicker: "Program Learning Outcomes",
+    s3CplTitle: "Eight doctoral learning outcomes aligned with KKNI Level 9.",
+    s3RpsKicker: "Doctoral Statistics RPS",
+    s3RpsTitle: "RPS catalog for doctoral courses and academic activities.",
+    s3RpsText: "All RPS files from @Dokumen S3/RPS_S3_Statistika are organized as a searchable PDF catalog that can be opened and queried through the chatbot.",
+    s3RpsSearchLabel: "Search doctoral RPS",
+    s3RpsSearchPlaceholder: "SUR, dissemination, research foundation...",
+    s3RpsShown: "RPS shown",
+    s3RpsAsk: "Ask chatbot about doctoral RPS",
+    s3OpenDocx: "Open PDF",
+    s3AskChatbot: "Ask chatbot",
+    s3Credits: "credits",
+    s3GroupAll: "All doctoral RPS",
+    s3NoData: "Doctoral program data is not available yet.",
+    s3NoRps: "No matching doctoral RPS was found.",
     commentsKicker: "Comments & Visitor Trace",
     commentsTitle: "Comment space and website visit summary.",
     commentsText: "This section is prepared for public comments and visitor analytics using external services that work safely with static websites.",
@@ -899,13 +1028,62 @@ function activeWorkspaceIdFromHash() {
   return workspacePanelIds.includes(id) ? id : "kalender-akademik";
 }
 
-function setActiveWorkspacePanel(panelId = activeWorkspaceIdFromHash(), shouldScroll = false) {
+function workspaceProgramForPanel(panelId, fallback = activeWorkspaceProgram) {
+  if (panelId === "web-s3") return "s3";
+  if (panelId === "kalender-akademik") return "none";
+  if (panelId === "chatbot" || panelId === "komentar") {
+    return fallback === "s3" ? "s3" : "s2";
+  }
+  return workspacePanelIds.includes(panelId) ? "s2" : "none";
+}
+
+function setWorkspaceProgram(program = "none") {
+  activeWorkspaceProgram = ["s2", "s3"].includes(program) ? program : "none";
+  if (workspaceLayout) {
+    workspaceLayout.dataset.program = activeWorkspaceProgram;
+  }
+}
+
+function scrollWorkspaceToLayout() {
+  if (!workspaceLayout) return;
+  const targetTop = window.scrollY + workspaceLayout.getBoundingClientRect().top;
+  window.scrollTo({ top: Math.max(0, targetTop), behavior: "smooth" });
+}
+
+function scrollWithinWorkspacePanel(anchorId) {
+  if (!anchorId) return;
+  const anchor = document.getElementById(anchorId);
+  const activePanel = document.querySelector(".workspace-panels > .section.active-panel");
+  if (!anchor || !activePanel || !activePanel.contains(anchor)) return;
+  const panelRect = activePanel.getBoundingClientRect();
+  const anchorRect = anchor.getBoundingClientRect();
+  const top = activePanel.scrollTop + anchorRect.top - panelRect.top - 14;
+  activePanel.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+}
+
+function setActiveWorkspacePanel(
+  panelId = activeWorkspaceIdFromHash(),
+  shouldScroll = false,
+  programOverride = "",
+  panelScrollTarget = ""
+) {
   const activeId = workspacePanelIds.includes(panelId) ? panelId : "kalender-akademik";
+  const nextProgram = programOverride || workspaceProgramForPanel(activeId);
+  const nextPanelScrollTarget = panelScrollTarget || (activeId === "web-s3" ? "s3-overview" : "");
+  setWorkspaceProgram(nextProgram);
+  activePanelScrollTarget = nextPanelScrollTarget;
   document.querySelectorAll(".workspace-panels > .section").forEach((section) => {
     section.classList.toggle("active-panel", section.id === activeId);
   });
-  document.querySelectorAll("[data-workspace-target]").forEach((link) => {
-    const isActive = link.dataset.workspaceTarget === activeId;
+  document.querySelectorAll(".workspace-menu-list [data-workspace-target]").forEach((link) => {
+    const linkProgram = link.dataset.programSelect || activeWorkspaceProgram;
+    const linkPanelScrollTarget = link.dataset.panelScroll || "";
+    const sameProgram = linkProgram === activeWorkspaceProgram;
+    const samePanel = link.dataset.workspaceTarget === activeId;
+    const sameSubPanel = activePanelScrollTarget
+      ? linkPanelScrollTarget === activePanelScrollTarget
+      : !linkPanelScrollTarget;
+    const isActive = sameProgram && samePanel && sameSubPanel;
     link.classList.toggle("active", isActive);
     if (isActive) {
       link.setAttribute("aria-current", "page");
@@ -914,13 +1092,15 @@ function setActiveWorkspacePanel(panelId = activeWorkspaceIdFromHash(), shouldSc
     }
   });
   if (shouldScroll && workspaceLayout) {
-    const scrollWorkspace = () => {
-      const targetTop = window.scrollY + workspaceLayout.getBoundingClientRect().top;
-      window.scrollTo({ top: Math.max(0, targetTop), behavior: "smooth" });
-    };
-    requestAnimationFrame(scrollWorkspace);
-    window.setTimeout(scrollWorkspace, 120);
-    window.setTimeout(scrollWorkspace, 700);
+    requestAnimationFrame(scrollWorkspaceToLayout);
+    window.setTimeout(scrollWorkspaceToLayout, 120);
+    window.setTimeout(scrollWorkspaceToLayout, 700);
+  }
+  if (activePanelScrollTarget) {
+    const scrollSubPanel = () => scrollWithinWorkspacePanel(activePanelScrollTarget);
+    requestAnimationFrame(scrollSubPanel);
+    window.setTimeout(scrollSubPanel, 180);
+    window.setTimeout(scrollSubPanel, 760);
   }
 }
 
@@ -953,6 +1133,7 @@ function applyLanguage() {
   renderMaterials();
   renderTracerStudies();
   renderSpecialMoments();
+  renderS3Site();
   renderLectureEvaluations();
   renderPbmEvaluations();
   renderAlumni();
@@ -1081,6 +1262,9 @@ function expandQuestion(question) {
   if (/(rps|rencana pembelajaran semester|course plan|semester learning plan|download rps|unduh rps|buka rps)/.test(normalized)) {
     synonyms.push("rps rencana pembelajaran semester course plan semester learning plan dokumen pdf mata kuliah wajib pilihan");
   }
+  if (/(s3|doktor|doctoral|doctorate|program doktor|statistika doktor|web s3|disertasi|promosi doktor|pnd|und|spd|diseminasi nasional|diseminasi internasional)/.test(normalized)) {
+    synonyms.push("s3 doktor program doktor statistika doctoral doctorate disertasi promosi doktor pnd und spd rps s3 visi misi tujuan profil lulusan cpl doctoral learning outcomes");
+  }
   if (/(materi|bahan ajar|modul|html|katalog|slide|pertemuan)/.test(normalized)) {
     synonyms.push("materi html bahan ajar modul pembelajaran katalog kuliah file html");
   }
@@ -1123,7 +1307,10 @@ function scoreChunk(question, chunk) {
   const asksLectureEvaluation = /evaluasi pelaksanaan perkuliahan|evaluasi perkuliahan|monitoring perkuliahan|monitoring mahasiswa|pertemuan perkuliahan|sesi perkuliahan|course delivery evaluation|course evaluation|student monitoring/.test(normalizedQuestion);
   const asksPbmEvaluation = /evaluasi pbm|pbm|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|teaching learning evaluation|buka evaluasi|download evaluasi|unduh evaluasi/.test(normalizedQuestion);
   const asksRpsDoc = /rps|rencana pembelajaran semester|course plan|semester learning plan|buka rps|download rps|unduh rps/.test(normalizedQuestion);
+  const asksS3 = /s3|doktor|doctoral|doctorate|program doktor|statistika doktor|web s3|disertasi|promosi doktor|pnd|und|spd|diseminasi nasional|diseminasi internasional/.test(normalizedQuestion);
 
+  if (asksS3 && chunk.id?.startsWith("s3-")) score += 220;
+  if (asksS3 && (chunk.id?.startsWith("manual") || chunk.id?.startsWith("syllabus-") || chunk.id?.startsWith("rps-doc-"))) score -= 70;
   if (asksAlumni && chunk.id?.startsWith("alumni-")) score += 140;
   if (asksAlumni && chunk.id?.startsWith("syllabus-")) score -= 80;
   if (asksThesisGuide && chunk.id?.startsWith("thesis-guide-")) score += 160;
@@ -1252,6 +1439,16 @@ function scoreChunk(question, chunk) {
     if (specificPhrase.length > 4 && metadata.includes(specificPhrase)) score += 78;
   }
 
+  if (chunk.id?.startsWith("s3-")) {
+    const metadata = normalize([chunk.id, chunk.sourceTitle, chunk.title, chunk.text].join(" "));
+    const specificTokens = tokens.filter((token) => !GENERIC_QUERY_TERMS.has(token));
+    for (const token of specificTokens) {
+      if (hasWholeToken(metadata, token)) score += 30;
+    }
+    const specificPhrase = specificTokens.join(" ");
+    if (specificPhrase.length > 4 && metadata.includes(specificPhrase)) score += 90;
+  }
+
   return score > 0 && chunk.id?.startsWith("manual") ? score + 2 : score;
 }
 
@@ -1320,7 +1517,8 @@ function buildCapabilityAnswer(question) {
       "1. 2026 curriculum, credits, study pathways, RPL, CPL, and graduate profiles.",
       "2. Course syllabi, RPS/course plan PDFs, topics, references, and HTML learning materials.",
       "3. Thesis guides, SUR, SKR, and Master's Final Defense.",
-      "4. Graduate thesis data, tracer study reports, Special Moment gallery, curriculum PDF archives, course delivery evaluation reports, PBM evaluation documents, fees, and SMUP admissions.",
+      "4. S3 Statistics information: vision, mission, objectives, graduate profiles, CPL, academic documents, and doctoral RPS files.",
+      "5. Graduate thesis data, tracer study reports, Special Moment gallery, curriculum PDF archives, course delivery evaluation reports, PBM evaluation documents, fees, and SMUP admissions.",
       "",
       serverApiReady
         ? "Generative API mode is active, but answers remain grounded in the program knowledge base."
@@ -1331,7 +1529,8 @@ function buildCapabilityAnswer(question) {
       "1. Kurikulum 2026, SKS, jalur studi, RPL, CPL, dan profil lulusan.",
       "2. Silabus mata kuliah, PDF RPS, bahan kajian, referensi, dan materi HTML.",
       "3. Panduan tesis, SUR, SKR, dan Sidang Akhir Magister.",
-      "4. Data tesis lulusan, tracer study, Special Moment, arsip PDF kurikulum, Evaluasi Pelaksanaan Perkuliahan, dokumen Evaluasi PBM, biaya, dan pendaftaran SMUP.",
+      "4. Informasi S3 Statistika: visi, misi, tujuan, profil lulusan, CPL, dokumen akademik, dan RPS doktoral.",
+      "5. Data tesis lulusan, tracer study, Special Moment, arsip PDF kurikulum, Evaluasi Pelaksanaan Perkuliahan, dokumen Evaluasi PBM, biaya, dan pendaftaran SMUP.",
       "",
       serverApiReady
         ? "Mode API generatif sedang aktif, tetapi jawaban tetap ditambatkan pada knowledge base prodi."
@@ -1765,6 +1964,188 @@ function buildCurriculumDocAnswer(question, hits = []) {
   };
 }
 
+function isS3Question(question, hits = []) {
+  const text = normalize(question);
+  return /s3|doktor|doctoral|doctorate|program doktor|statistika doktor|web s3|disertasi|promosi doktor|pnd|und|spd|diseminasi nasional|diseminasi internasional/.test(text)
+    || hits.some((hit) => String(hit.id || "").startsWith("s3-"));
+}
+
+function s3RpsAlias(doc) {
+  const title = normalize(doc.courseTitle);
+  const aliases = [title, normalize(doc.title), normalize(doc.titleEn), normalize(doc.courseTitleEn)];
+  if (/seminar usulan riset/.test(title)) aliases.push("seminar usulan riset", "sur");
+  if (/penelaahan naskah disertasi 1/.test(title)) aliases.push("penelaahan naskah disertasi 1", "pnd 1", "pnd1");
+  if (/penelaahan naskah disertasi 2/.test(title)) aliases.push("penelaahan naskah disertasi 2", "pnd 2", "pnd2");
+  if (/ujian naskah disertasi/.test(title)) aliases.push("ujian naskah disertasi", "und");
+  if (/sidang promosi doktor/.test(title)) aliases.push("sidang promosi doktor", "spd");
+  if (/diseminasi nasional/.test(title)) aliases.push("diseminasi nasional", "dn");
+  if (/diseminasi internasional/.test(title)) aliases.push("diseminasi internasional", "di");
+  return aliases.filter(Boolean);
+}
+
+function findS3RpsDoc(question, hits = []) {
+  const docs = s3SiteData?.rps?.documents || [];
+  const text = normalize(question);
+  const directMatch = docs.find((doc) => s3RpsAlias(doc).some((alias) => alias && text.includes(alias)));
+  if (directMatch) return directMatch;
+
+  const hitDoc = hits.find((hit) => String(hit.id || "").startsWith("s3-rps-doc-"));
+  if (hitDoc) {
+    const href = hitDoc.sourceUrl || "";
+    const title = normalize(hitDoc.title || hitDoc.sourceTitle || "");
+    const match = docs.find((doc) => doc.href === href || normalize(doc.title) === title || normalize(doc.courseTitle) === title);
+    if (match) return match;
+  }
+  return null;
+}
+
+function s3RpsGroupFromQuestion(question) {
+  const text = normalize(question);
+  if (/fondasi|metodologi|filsafat|riset dasar|literatur|personal/.test(text)) return "Fondasi & Metodologi";
+  if (/disertasi|proposal|sur|pnd|und|spd|promosi/.test(text)) return "Riset & Disertasi";
+  if (/diseminasi|rekognisi|publikasi|nasional|internasional|dn|di/.test(text)) return "Diseminasi & Rekognisi";
+  return "";
+}
+
+function buildS3Answer(question, hits = []) {
+  if (!isS3Question(question, hits) || !s3SiteData) return null;
+  const text = normalize(question);
+  const docs = s3SiteData.documents || [];
+  const sources = docs.slice(0, 3).map((doc) => ({ title: doc.title, url: doc.href }));
+  const asksRps = /rps|rencana pembelajaran semester|course plan|semester learning plan|buka|download|unduh|sur|pnd|und|spd|diseminasi/.test(text);
+
+  if (asksRps) {
+    const selected = findS3RpsDoc(question, hits);
+    const group = s3RpsGroupFromQuestion(question);
+    const rpsDocs = selected
+      ? [selected]
+      : (s3SiteData.rps?.documents || []).filter((doc) => !group || doc.group === group);
+    if (rpsDocs.length) {
+      if (selected) {
+        const answer = currentLang === "en"
+          ? [
+            `${selected.titleEn || selected.title}: ${selected.description}`,
+            `Group: ${selected.groupEn || selected.group}.`,
+            `Credits: ${selected.credits || "-"}.`,
+            `File size: ${formatFileSize(selected.sizeKb)}.`,
+            `PDF: ${selected.href}`
+          ].join("\n")
+          : [
+            `${selected.title}: ${selected.description}`,
+            `Kelompok: ${selected.group}.`,
+            `SKS: ${selected.credits || "-"}.`,
+            `Ukuran file: ${formatFileSize(selected.sizeKb)}.`,
+            `PDF: ${selected.href}`
+          ].join("\n");
+        return {
+          answer,
+          sources: [{ title: selected.title, url: selected.href }],
+          mode: "Local knowledge base"
+        };
+      }
+
+      const list = rpsDocs
+        .slice(0, 20)
+        .map((doc, index) => `${index + 1}. ${currentLang === "en" ? doc.courseTitleEn || doc.courseTitle : doc.courseTitle} (${doc.group}, ${doc.credits || "-"} SKS) - ${doc.href}`)
+        .join("\n");
+      return {
+        answer: currentLang === "en"
+          ? `The S3 Statistics site contains ${rpsDocs.length} doctoral RPS documents${group ? ` in ${group}` : ""}.\n\n${list}`
+          : `Web S3 Statistika memuat ${rpsDocs.length} dokumen RPS doktoral${group ? ` pada kelompok ${group}` : ""}.\n\n${list}`,
+        sources: rpsDocs.slice(0, 8).map((doc) => ({ title: doc.title, url: doc.href })),
+        mode: "Local knowledge base"
+      };
+    }
+  }
+
+  if (/dokumen|kurikulum|akreditasi|urgensi|pdf|docx|file/.test(text)) {
+    const list = docs
+      .map((doc, index) => `${index + 1}. ${doc.title} - ${doc.href}`)
+      .join("\n");
+    return {
+      answer: currentLang === "en"
+        ? `The S3 Statistics academic documents available on the site are:\n\n${list}`
+        : `Dokumen akademik S3 Statistika yang tersedia di website:\n\n${list}`,
+      sources,
+      mode: "Local knowledge base"
+    };
+  }
+
+  if (/visi/.test(text) && !/misi/.test(text)) {
+    return {
+      answer: `Visi Program Studi Doktor Statistika:\n\n${s3SiteData.vision}`,
+      sources,
+      mode: "Local knowledge base"
+    };
+  }
+
+  if (/misi/.test(text) && !/visi/.test(text)) {
+    return {
+      answer: `Misi Program Studi Doktor Statistika:\n\n${numberedText(s3SiteData.missions || [], 10)}`,
+      sources,
+      mode: "Local knowledge base"
+    };
+  }
+
+  if (/visi/.test(text) && /misi/.test(text)) {
+    return {
+      answer: [
+        "Visi Program Studi Doktor Statistika:",
+        s3SiteData.vision,
+        "",
+        "Misi:",
+        numberedText(s3SiteData.missions || [], 10)
+      ].join("\n"),
+      sources,
+      mode: "Local knowledge base"
+    };
+  }
+
+  if (/tujuan|objective/.test(text)) {
+    return {
+      answer: `Tujuan Program Studi Doktor Statistika:\n\n${numberedText(s3SiteData.objectives || [], 10)}`,
+      sources,
+      mode: "Local knowledge base"
+    };
+  }
+
+  if (/profil|lulusan|karir|karier|pekerjaan|graduate profile/.test(text)) {
+    const list = (s3SiteData.graduateProfiles || [])
+      .map((profile, index) => `${index + 1}. ${profile.title}: ${profile.description} Kompetensi utama: ${profile.competencies}`)
+      .join("\n");
+    return {
+      answer: `Profil lulusan Program Studi Doktor Statistika:\n\n${list}`,
+      sources,
+      mode: "Local knowledge base"
+    };
+  }
+
+  if (/cpl|capaian|learning outcome|outcome/.test(text)) {
+    const list = (s3SiteData.cpl || [])
+      .map((item) => `${item.code} - ${item.domain}: ${item.text}`)
+      .join("\n");
+    return {
+      answer: `Capaian Pembelajaran Lulusan Program Studi Doktor Statistika:\n\n${list}`,
+      sources,
+      mode: "Local knowledge base"
+    };
+  }
+
+  const structure = (s3SiteData.program?.structure || [])
+    .map((item) => `${item.label}: ${item.credits} SKS`)
+    .join("; ");
+  return {
+    answer: [
+      "Web S3 Statistika memuat informasi Program Doktor Statistika FMIPA Unpad.",
+      `Beban studi: ${s3SiteData.program?.studyLoad || "54 SKS"}. Penuh waktu: ${s3SiteData.program?.fullTime || "6 semester"}. Paruh waktu: ${s3SiteData.program?.partTime || "8 semester"}.`,
+      `Struktur: ${structure}.`,
+      `RPS S3 tersedia: ${s3SiteData.rps?.total || s3SiteData.rps?.documents?.length || 0} dokumen.`
+    ].join("\n"),
+    sources,
+    mode: "Local knowledge base"
+  };
+}
+
 function buildRpsDocAnswer(question, hits = []) {
   const text = normalize(question);
   const asksRpsDoc = /rps|rencana pembelajaran semester|course plan|semester learning plan|buka rps|download rps|unduh rps/.test(text)
@@ -1907,6 +2288,7 @@ function matchFact(question) {
   const asksCurriculumDoc = /dokumen kurikulum|file kurikulum|pdf kurikulum|arsip kurikulum|curriculum document|curriculum pdf|buka kurikulum|download kurikulum|unduh kurikulum/.test(text);
   const asksLectureEvaluation = /evaluasi pelaksanaan perkuliahan|evaluasi perkuliahan|monitoring perkuliahan|monitoring mahasiswa|pertemuan perkuliahan|sesi perkuliahan|course delivery evaluation|course evaluation|student monitoring/.test(text);
   const asksPbmEvaluation = /evaluasi pbm|pbm|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|teaching learning evaluation|buka evaluasi|download evaluasi|unduh evaluasi/.test(text);
+  const asksS3 = /s3|doktor|doctoral|doctorate|program doktor|statistika doktor|web s3|disertasi|promosi doktor|pnd|und|spd|diseminasi nasional|diseminasi internasional/.test(text);
   const asksThesisGuide = (
     (/tesis/.test(text) && /panduan|penulisan|format|pelaksanaan|proposal|naskah|bimbingan|penguji|sidang|seminar|sur|skr|sam/.test(text))
     || /panduan tesis|sur|skr|sam|sidang akhir|seminar usulan|seminar kemajuan/.test(text)
@@ -1924,6 +2306,7 @@ function matchFact(question) {
   if (asksCurriculumDoc) return null;
   if (asksLectureEvaluation) return null;
   if (asksPbmEvaluation) return null;
+  if (asksS3) return null;
   if (asksThesisGuide) return null;
   if (asksAlumniData && !/profil lulusan/.test(text)) return null;
   if (/rpl|rekognisi/.test(text)) return FACTS.rpl;
@@ -1946,6 +2329,7 @@ function buildLocalAnswer(question) {
 
   const fact = matchFact(question);
   const hits = retrieve(question, 4);
+  const structuredS3 = buildS3Answer(question, hits);
   const structuredRpsDoc = buildRpsDocAnswer(question, hits);
   const structuredSyllabus = buildSyllabusAnswer(question, hits);
   const structuredMaterial = buildMaterialAnswer(question, hits);
@@ -1955,6 +2339,7 @@ function buildLocalAnswer(question) {
   const structuredPbmEvaluation = buildPbmEvaluationAnswer(question, hits);
   const structuredThesisGuide = buildThesisGuideAnswer(question);
 
+  if (structuredS3) return structuredS3;
   if (structuredRpsDoc) return structuredRpsDoc;
   if (structuredSyllabus) return structuredSyllabus;
   if (structuredMaterial) return structuredMaterial;
@@ -1992,6 +2377,8 @@ function buildLocalAnswer(question) {
       ? (currentLang === "en" ? "I found relevant HTML learning materials:" : "Saya menemukan materi HTML yang relevan:")
       : hits[0]?.id?.startsWith("thesis-guide-")
         ? (currentLang === "en" ? "I found relevant thesis guides:" : "Saya menemukan panduan tesis yang relevan:")
+        : hits[0]?.id?.startsWith("s3-")
+          ? (currentLang === "en" ? "I found relevant Doctoral Statistics site information:" : "Saya menemukan informasi Web S3 Statistika yang relevan:")
         : hits[0]?.id?.startsWith("tracer-study-")
           ? (currentLang === "en" ? "I found relevant tracer study reports:" : "Saya menemukan laporan tracer study yang relevan:")
           : hits[0]?.id?.startsWith("special-moment-")
@@ -2254,6 +2641,173 @@ function renderRpsDocs() {
           <div class="rps-actions">
             <a href="${escapeHTML(doc.href)}" target="_blank" rel="noopener">${escapeHTML(t("openPdf"))}</a>
             <button type="button" data-rps-q="${currentLang === "en" ? `Open ${escapeHTML(doc.titleEn || doc.title)}` : `Buka ${escapeHTML(doc.titleId || doc.title)}`}">${escapeHTML(t("askChatbot"))}</button>
+          </div>
+        </article>
+      `;
+    })
+    .join("");
+}
+
+function renderS3Site() {
+  if (!s3VisionText && !s3RpsRows) return;
+  const data = s3SiteData;
+
+  if (!data) {
+    if (s3MissionRows) s3MissionRows.innerHTML = "";
+    if (s3ObjectiveRows) s3ObjectiveRows.innerHTML = `<p class="empty-note">${escapeHTML(t("s3NoData"))}</p>`;
+    if (s3DocumentRows) s3DocumentRows.innerHTML = "";
+    if (s3ProfileRows) s3ProfileRows.innerHTML = "";
+    if (s3CplRows) s3CplRows.innerHTML = "";
+    if (s3RpsRows) s3RpsRows.innerHTML = `<p class="empty-note">${escapeHTML(t("s3NoRps"))}</p>`;
+    return;
+  }
+
+  if (s3StudyLoad) s3StudyLoad.textContent = data.program?.studyLoad || "54 SKS";
+  if (s3RpsTotal) s3RpsTotal.textContent = String(data.rps?.total || data.rps?.documents?.length || 0);
+  if (s3CplTotal) s3CplTotal.textContent = String(data.cpl?.length || 0);
+  if (s3VisionText) s3VisionText.textContent = data.vision || "";
+
+  if (s3MissionRows) {
+    s3MissionRows.innerHTML = (data.missions || [])
+      .map((mission) => `<li>${escapeHTML(mission)}</li>`)
+      .join("");
+  }
+
+  if (s3ObjectiveCount) s3ObjectiveCount.textContent = String(data.objectives?.length || 0);
+  if (s3ObjectiveRows) {
+    s3ObjectiveRows.innerHTML = (data.objectives || [])
+      .map((objective, index) => `
+        <article class="s3-mini-row">
+          <span>${String(index + 1).padStart(2, "0")}</span>
+          <p>${escapeHTML(objective)}</p>
+        </article>
+      `)
+      .join("");
+  }
+
+  if (s3DocumentCount) s3DocumentCount.textContent = String(data.documents?.length || 0);
+  if (s3DocumentRows) {
+    s3DocumentRows.innerHTML = (data.documents || [])
+      .map((doc) => `
+        <article class="s3-document-card">
+          <div>
+            <strong>${escapeHTML(doc.title)}</strong>
+            <p>${escapeHTML(doc.description)}</p>
+            <small>${escapeHTML(doc.format || "PDF")} · ${escapeHTML(formatFileSize(doc.sizeKb))}</small>
+          </div>
+          <a href="${escapeHTML(doc.href)}" target="_blank" rel="noopener">${escapeHTML(t("s3OpenDocx"))}</a>
+        </article>
+      `)
+      .join("");
+  }
+
+  if (s3ProfileRows) {
+    s3ProfileRows.innerHTML = (data.graduateProfiles || [])
+      .map((profile) => {
+        const title = currentLang === "en" ? profile.titleEn || profile.title : profile.title;
+        return `
+          <article class="s3-profile-card">
+            <span>${escapeHTML(profile.code)}</span>
+            <h4>${escapeHTML(title)}</h4>
+            <p>${escapeHTML(profile.description)}</p>
+            <small>${escapeHTML(profile.competencies)}</small>
+          </article>
+        `;
+      })
+      .join("");
+  }
+
+  if (s3CplRows) {
+    s3CplRows.innerHTML = (data.cpl || [])
+      .map((item) => `
+        <article class="s3-cpl-card">
+          <div>
+            <span>${escapeHTML(item.code)}</span>
+            <strong>${escapeHTML(item.domain)}</strong>
+          </div>
+          <p>${escapeHTML(item.text)}</p>
+        </article>
+      `)
+      .join("");
+  }
+
+  renderS3RpsDocs();
+}
+
+function renderS3RpsDocs() {
+  if (!s3RpsRows) return;
+  const docs = s3SiteData?.rps?.documents || [];
+  const query = normalize(s3RpsSearch?.value || "");
+  const filtered = docs.filter((doc) => {
+    const matchesFilter = activeS3RpsFilter === "Semua" || doc.group === activeS3RpsFilter;
+    const haystack = [
+      doc.title,
+      doc.titleEn,
+      doc.courseTitle,
+      doc.courseTitleEn,
+      doc.group,
+      doc.groupEn,
+      doc.description,
+      doc.file
+    ].join(" ");
+    return matchesFilter && (!query || normalize(haystack).includes(query));
+  });
+
+  if (s3RpsCount) s3RpsCount.textContent = String(filtered.length);
+
+  if (s3RpsSummary) {
+    const allSummary = {
+      label: t("s3GroupAll"),
+      filter: "Semua",
+      total: docs.length,
+      credits: s3SiteData?.rps?.totalCredits || docs.reduce((sum, doc) => sum + Number(doc.credits || 0), 0)
+    };
+    const groupSummaries = (s3SiteData?.rps?.groups || []).map((group) => ({
+      label: currentLang === "en" ? group.labelEn || group.label : group.label,
+      filter: group.label,
+      total: group.total,
+      credits: group.credits
+    }));
+    s3RpsSummary.innerHTML = [allSummary, ...groupSummaries]
+      .map((group) => `
+        <button class="s3-rps-summary-card${activeS3RpsFilter === group.filter ? " active" : ""}" type="button" data-s3-rps-filter="${escapeHTML(group.filter)}">
+          <span>${escapeHTML(group.label)}</span>
+          <strong>${escapeHTML(group.total || 0)}</strong>
+          <small>${escapeHTML(group.credits || 0)} ${escapeHTML(t("s3Credits"))}</small>
+        </button>
+      `)
+      .join("");
+  }
+
+  if (!filtered.length) {
+    s3RpsRows.innerHTML = `<p class="empty-note">${escapeHTML(t("s3NoRps"))}</p>`;
+    return;
+  }
+
+  s3RpsRows.innerHTML = filtered
+    .map((doc) => {
+      const title = currentLang === "en" ? doc.courseTitleEn || doc.courseTitle : doc.courseTitle;
+      const subtitle = currentLang === "en" && doc.courseTitleEn ? doc.courseTitle : doc.courseTitleEn || "";
+      const group = currentLang === "en" ? doc.groupEn || doc.group : doc.group;
+      const question = currentLang === "en"
+        ? `Open doctoral RPS ${doc.courseTitleEn || doc.courseTitle}`
+        : `Buka RPS S3 ${doc.courseTitle}`;
+      return `
+        <article class="s3-rps-card">
+          <div class="s3-rps-card-head">
+            <span class="badge">${escapeHTML(group)}</span>
+            <span>${escapeHTML(doc.format || "PDF")}</span>
+          </div>
+          <h4>${escapeHTML(title)}</h4>
+          ${subtitle && subtitle !== title ? `<p class="s3-rps-subtitle">${escapeHTML(subtitle)}</p>` : ""}
+          <p>${escapeHTML(doc.description)}</p>
+          <div class="s3-rps-meta">
+            <span>${escapeHTML(doc.credits || "-")} ${escapeHTML(t("s3Credits"))}</span>
+            <span>${escapeHTML(formatFileSize(doc.sizeKb))}</span>
+          </div>
+          <div class="rps-actions">
+            <a href="${escapeHTML(doc.href)}" target="_blank" rel="noopener">${escapeHTML(t("s3OpenDocx"))}</a>
+            <button type="button" data-s3-q="${escapeHTML(question)}">${escapeHTML(t("s3AskChatbot"))}</button>
           </div>
         </article>
       `;
@@ -2638,6 +3192,19 @@ async function loadRpsDocs() {
   renderRpsDocs();
 }
 
+async function loadS3Site() {
+  try {
+    const response = await fetch("data/s3_statistika.json", { cache: "no-store" });
+    if (!response.ok) throw new Error("Data Web S3 tidak dapat dimuat.");
+    const data = await response.json();
+    if (!data?.rps?.documents?.length) throw new Error("Data Web S3 kosong.");
+    s3SiteData = data;
+  } catch (error) {
+    s3SiteData = null;
+  }
+  renderS3Site();
+}
+
 async function loadMaterials() {
   try {
     const response = await fetch("data/materials.json", { cache: "no-store" });
@@ -2776,8 +3343,12 @@ document.querySelectorAll("[data-workspace-target]").forEach((link) => {
   link.addEventListener("click", () => {
     const target = link.dataset.workspaceTarget;
     if (!target) return;
+    const program = link.dataset.programSelect || workspaceProgramForPanel(target);
+    const panelScrollTarget = link.dataset.panelScroll || "";
+    pendingWorkspaceSelection = { target, program, panelScrollTarget };
     if (location.hash === `#${target}`) {
-      setActiveWorkspacePanel(target, true);
+      setActiveWorkspacePanel(target, true, program, panelScrollTarget);
+      pendingWorkspaceSelection = null;
     }
   });
 });
@@ -2785,7 +3356,17 @@ document.querySelectorAll("[data-workspace-target]").forEach((link) => {
 window.addEventListener("hashchange", () => {
   const id = decodeURIComponent(location.hash.replace(/^#/, ""));
   if (workspacePanelIds.includes(id)) {
-    setActiveWorkspacePanel(id, true);
+    const pending = pendingWorkspaceSelection?.target === id ? pendingWorkspaceSelection : null;
+    pendingWorkspaceSelection = null;
+    setActiveWorkspacePanel(
+      id,
+      true,
+      pending?.program || workspaceProgramForPanel(id),
+      pending?.panelScrollTarget || ""
+    );
+  } else if (id === "home" || !id) {
+    pendingWorkspaceSelection = null;
+    setActiveWorkspacePanel("kalender-akademik", false, "none");
   }
 });
 
@@ -2808,6 +3389,7 @@ document.querySelectorAll("[data-q-id], [data-q]").forEach((button) => {
 courseSearch.addEventListener("input", renderCourses);
 syllabusSearch?.addEventListener("input", renderSyllabus);
 rpsSearch?.addEventListener("input", renderRpsDocs);
+s3RpsSearch?.addEventListener("input", renderS3RpsDocs);
 alumniSearch?.addEventListener("input", renderAlumni);
 materialSearch?.addEventListener("input", renderMaterials);
 rpsRows?.addEventListener("click", (event) => {
@@ -2823,6 +3405,17 @@ function handleRpsFilterClick(event) {
 }
 document.querySelector(".rps-filter-tabs")?.addEventListener("click", handleRpsFilterClick);
 rpsSummary?.addEventListener("click", handleRpsFilterClick);
+s3RpsSummary?.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-s3-rps-filter]");
+  if (!button) return;
+  activeS3RpsFilter = button.dataset.s3RpsFilter || "Semua";
+  renderS3RpsDocs();
+});
+s3RpsRows?.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-s3-q]");
+  if (!button) return;
+  ask(button.dataset.s3Q);
+});
 materialRows?.addEventListener("click", (event) => {
   const button = event.target.closest("[data-material-q]");
   if (!button) return;
@@ -2871,13 +3464,18 @@ chatForm.addEventListener("submit", (event) => {
 });
 
 const initialWorkspaceHash = decodeURIComponent(location.hash.replace(/^#/, ""));
-setActiveWorkspacePanel(activeWorkspaceIdFromHash(), workspacePanelIds.includes(initialWorkspaceHash));
+const initialWorkspaceId = activeWorkspaceIdFromHash();
+const initialWorkspaceProgram = workspacePanelIds.includes(initialWorkspaceHash)
+  ? workspaceProgramForPanel(initialWorkspaceId, "s2")
+  : "none";
+setActiveWorkspacePanel(initialWorkspaceId, workspacePanelIds.includes(initialWorkspaceHash), initialWorkspaceProgram);
 applyLanguage();
 mountCommentIntegration();
 mountAnalyticsIntegration();
 loadKnowledge();
 loadSyllabus();
 loadRpsDocs();
+loadS3Site();
 loadMaterials();
 loadThesisGuides();
 loadTracerStudies();

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>S2 Statistika Terapan FMIPA Unpad</title>
-  <meta name="description" content="Website profesional Program Magister Statistika Terapan FMIPA Universitas Padjadjaran dengan chatbot kurikulum OBE 2026, RPS, panduan tesis, data lulusan, tracer study, silabus, dan materi kuliah HTML." />
+  <title>Pasca Sarjana Statistika FMIPA UNPAD</title>
+  <meta name="description" content="Website profesional Pasca Sarjana Statistika FMIPA Universitas Padjadjaran untuk Program S2 Statistika Terapan dan S3 Statistika." />
   <link rel="preload" href="assets/campus-hero.jpg" as="image" />
   <link rel="stylesheet" href="assets/site.css" />
 </head>
@@ -18,42 +18,21 @@
 
   <header class="site-header">
     <div class="container nav-shell">
-      <a class="brand" href="#home" aria-label="S2 Statistika Terapan FMIPA Unpad">
+      <a class="brand" href="#home" aria-label="Pasca Sarjana Statistika FMIPA UNPAD">
         <img src="assets/logo-unpad.png" alt="Logo Universitas Padjadjaran" />
         <span class="brand-lockup" aria-hidden="true">
           <span class="brand-line brand-line-main">
-            <span class="brand-chip brand-chip-main">S2 Statistika Terapan</span>
+            <span class="brand-chip brand-chip-main">Pasca Sarjana Statistika</span>
           </span>
           <span class="brand-line brand-line-sub">
-            <span class="brand-chip brand-chip-sub">FMIPA Unpad</span>
+            <span class="brand-chip brand-chip-sub">FMIPA UNPAD</span>
           </span>
         </span>
       </a>
-      <nav class="nav-links" aria-label="Navigasi utama">
-        <a href="#kalender-akademik" data-i18n="navAcademicCalendar">Kalender</a>
-        <a href="#profil" data-i18n="navProfile">Profil</a>
-        <a href="#visi-misi" data-i18n="navVisionMission">Visi Misi</a>
-        <a href="#profil-lulusan" data-i18n="navGraduateProfile">Profil Lulusan</a>
-        <a href="#kurikulum" data-i18n="navCurriculum">Kurikulum</a>
-        <a href="#dokumen-kurikulum" data-i18n="navDocs">Dokumen</a>
-        <a href="#mata-kuliah" data-i18n="navCourses">Mata Kuliah</a>
-        <a href="#silabus" data-i18n="navSyllabus">Silabus</a>
-        <a href="#rps" data-i18n="navRps">RPS</a>
-        <a href="#materi" data-i18n="navMaterials">Materi</a>
-        <a href="#panduan-tesis" data-i18n="navGuide">Panduan</a>
-        <a href="#evaluasi-perkuliahan" data-i18n="navLectureEvaluations">Monitoring</a>
-        <a href="#evaluasi-pbm" data-i18n="navPbmEvaluations">Evaluasi</a>
-        <a href="#lulusan" data-i18n="navGraduates">Lulusan</a>
-        <a href="#tracer-studi" data-i18n="navTracer">Tracer</a>
-        <a href="#special-moment" data-i18n="navSpecialMoment">Momen</a>
-        <a href="#komentar" data-i18n="navComments">Komentar</a>
-        <a href="#chatbot" data-i18n="navChatbot">Chatbot</a>
-      </nav>
       <div class="language-switch" role="group" aria-label="Pilihan bahasa">
         <button class="active" type="button" data-lang="id" aria-pressed="true">ID</button>
         <button type="button" data-lang="en" aria-pressed="false">EN</button>
       </div>
-      <a class="nav-action" href="#chatbot" data-i18n="navAsk">Tanya Prodi</a>
     </div>
   </header>
 
@@ -61,60 +40,75 @@
     <section class="hero" id="home" aria-labelledby="hero-title">
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="container hero-content">
-        <p class="eyebrow" data-i18n="heroKicker">Program Magister</p>
-        <h1 id="hero-title">S2 Statistika Terapan FMIPA Unpad</h1>
-        <p class="hero-lead" data-i18n="heroLead">Pendidikan magister 42 SKS berbasis statistika terapan, riset, komputasi, dan sains data untuk menjawab kebutuhan industri, pemerintahan, kesehatan, aktuaria, dan akademik.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#chatbot" data-i18n="heroAsk">Tanya Chatbot</a>
-          <a class="button button-secondary" href="#kurikulum" data-i18n="heroCurriculum">Lihat Kurikulum</a>
+        <div class="hero-intro">
+          <p class="eyebrow" data-i18n="heroKicker">Program Pascasarjana</p>
+          <h1 id="hero-title" data-i18n="heroTitle">Pasca Sarjana Statistika FMIPA UNPAD</h1>
+          <p class="hero-lead" data-i18n="heroLead">Portal akademik terpadu untuk Program S2 Statistika Terapan dan Program S3 Statistika FMIPA Universitas Padjadjaran.</p>
+        </div>
+        <div class="program-front-grid" aria-label="Pilihan program pascasarjana statistika">
+          <article class="program-front-card program-front-s2">
+            <span class="program-tag">S2</span>
+            <h2 data-i18n="frontS2Title">S2 Statistika Terapan</h2>
+            <p data-i18n="frontS2Text">Informasi kurikulum OBE 2026, kalender akademik, silabus, RPS, materi kuliah, panduan tesis, lulusan, tracer study, dan komentar pengunjung.</p>
+            <div class="program-front-meta">
+              <span>42 SKS</span>
+              <span data-i18n="frontS2Meta">Magister</span>
+            </div>
+            <div class="program-front-actions">
+              <a class="button button-primary" href="#profil" data-program-select="s2" data-workspace-target="profil" data-i18n="frontS2Open">Buka Informasi S2</a>
+            </div>
+          </article>
+          <article class="program-front-card program-front-s3">
+            <span class="program-tag">S3</span>
+            <h2 data-i18n="frontS3Title">S3 Statistika</h2>
+            <p data-i18n="frontS3Text">Informasi Program Doktor Statistika: visi, misi, tujuan, profil lulusan, CPL, dokumen akademik, dan katalog RPS S3 berbasis PDF.</p>
+            <div class="program-front-meta">
+              <span>54 SKS</span>
+              <span data-i18n="frontS3Meta">Doktor</span>
+            </div>
+            <div class="program-front-actions">
+              <a class="button button-primary" href="#web-s3" data-program-select="s3" data-workspace-target="web-s3" data-panel-scroll="s3-overview" data-i18n="frontS3Open">Buka Informasi S3</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="stat-band" aria-label="Ringkasan program">
-      <div class="container stat-grid">
-        <div class="stat-item">
-          <strong>42</strong>
-          <span data-i18n="statSks">SKS kurikulum OBE</span>
-        </div>
-        <div class="stat-item">
-          <strong>3</strong>
-          <span data-i18n="statSchemes">skema studi</span>
-        </div>
-        <div class="stat-item">
-          <strong>8</strong>
-          <span data-i18n="statAreas">bahan kajian</span>
-        </div>
-        <div class="stat-item">
-          <strong>2026</strong>
-          <span data-i18n="statCurriculum">kurikulum OBE</span>
-        </div>
-      </div>
-    </section>
-
-    <div class="workspace-layout" id="program-workspace">
+    <div class="workspace-layout" id="program-workspace" data-program="none">
       <aside class="workspace-sidebar" aria-label="Menu konten program">
         <div class="workspace-sidebar-head">
-          <strong data-i18n="workspaceMenuTitle">Menu Program</strong>
+          <strong class="workspace-title-s2" data-i18n="frontS2MenuTitle">Menu Program Informasi S2 Statistika Terapan</strong>
+          <strong class="workspace-title-s3" data-i18n="frontS3MenuTitle">Menu Program Informasi S3 Statistika</strong>
         </div>
-        <nav class="workspace-menu-list">
-          <a href="#kalender-akademik" data-workspace-target="kalender-akademik" data-i18n="workspaceAcademicCalendar">Kalender Akademik</a>
-          <a href="#profil-lulusan" data-workspace-target="profil-lulusan" data-i18n="workspaceGraduateProfile">Profil Lulusan</a>
-          <a href="#kurikulum" data-workspace-target="kurikulum" data-i18n="workspaceCurriculum">Struktur Kurikulum</a>
-          <a href="#dokumen-kurikulum" data-workspace-target="dokumen-kurikulum" data-i18n="workspaceCurriculumDocs">Dokumen Kurikulum</a>
-          <a href="#mata-kuliah" data-workspace-target="mata-kuliah" data-i18n="workspaceCourses">Daftar Mata Kuliah</a>
-          <a href="#silabus" data-workspace-target="silabus" data-i18n="workspaceSyllabus">Silabus Mata Kuliah</a>
-          <a href="#rps" data-workspace-target="rps" data-i18n="workspaceRps">RPS Mata Kuliah</a>
-          <a href="#materi" data-workspace-target="materi" data-i18n="workspaceMaterials">Materi Mata Kuliah</a>
-          <a href="#panduan-tesis" data-workspace-target="panduan-tesis" data-i18n="workspaceThesisGuide">Panduan Tesis</a>
-          <a href="#evaluasi-perkuliahan" data-workspace-target="evaluasi-perkuliahan" data-i18n="workspaceLectureEvaluation">Evaluasi Perkuliahan</a>
-          <a href="#evaluasi-pbm" data-workspace-target="evaluasi-pbm" data-i18n="workspacePbmEvaluation">Evaluasi PBM</a>
-          <a href="#lulusan" data-workspace-target="lulusan" data-i18n="workspaceGraduates">Lulusan & Tesis</a>
-          <a href="#tracer-studi" data-workspace-target="tracer-studi" data-i18n="workspaceTracer">Tracer Studi</a>
-          <a href="#special-moment" data-workspace-target="special-moment" data-i18n="workspaceSpecialMoment">Special Moment</a>
-          <a href="#komentar" data-workspace-target="komentar" data-i18n="workspaceComments">Komentar & Jejak</a>
+        <nav class="workspace-menu-list workspace-menu-s2">
+          <a href="#profil" data-program-select="s2" data-workspace-target="profil" data-i18n="workspaceProgramProfile">Profil Program</a>
+          <a href="#visi-misi" data-program-select="s2" data-workspace-target="visi-misi" data-i18n="workspaceVisionMission">Visi dan Misi</a>
+          <a href="#profil-lulusan" data-program-select="s2" data-workspace-target="profil-lulusan" data-i18n="workspaceGraduateProfile">Profil Lulusan</a>
+          <a href="#kurikulum" data-program-select="s2" data-workspace-target="kurikulum" data-i18n="workspaceCurriculum">Struktur Kurikulum</a>
+          <a href="#dokumen-kurikulum" data-program-select="s2" data-workspace-target="dokumen-kurikulum" data-i18n="workspaceCurriculumDocs">Dokumen Kurikulum</a>
+          <a href="#mata-kuliah" data-program-select="s2" data-workspace-target="mata-kuliah" data-i18n="workspaceCourses">Daftar Mata Kuliah</a>
+          <a href="#silabus" data-program-select="s2" data-workspace-target="silabus" data-i18n="workspaceSyllabus">Silabus Mata Kuliah</a>
+          <a href="#rps" data-program-select="s2" data-workspace-target="rps" data-i18n="workspaceRps">RPS Mata Kuliah</a>
+          <a href="#materi" data-program-select="s2" data-workspace-target="materi" data-i18n="workspaceMaterials">Materi Mata Kuliah</a>
+          <a href="#panduan-tesis" data-program-select="s2" data-workspace-target="panduan-tesis" data-i18n="workspaceThesisGuide">Panduan Tesis</a>
+          <a href="#evaluasi-perkuliahan" data-program-select="s2" data-workspace-target="evaluasi-perkuliahan" data-i18n="workspaceLectureEvaluation">Evaluasi Perkuliahan</a>
+          <a href="#evaluasi-pbm" data-program-select="s2" data-workspace-target="evaluasi-pbm" data-i18n="workspacePbmEvaluation">Evaluasi PBM</a>
+          <a href="#lulusan" data-program-select="s2" data-workspace-target="lulusan" data-i18n="workspaceGraduates">Lulusan & Tesis</a>
+          <a href="#tracer-studi" data-program-select="s2" data-workspace-target="tracer-studi" data-i18n="workspaceTracer">Tracer Studi</a>
+          <a href="#special-moment" data-program-select="s2" data-workspace-target="special-moment" data-i18n="workspaceSpecialMoment">Special Moment</a>
+          <a href="#komentar" data-program-select="s2" data-workspace-target="komentar" data-i18n="workspaceComments">Komentar & Jejak</a>
+          <a href="#chatbot" data-program-select="s2" data-workspace-target="chatbot" data-i18n="workspaceChatbot">Chatbot Prodi</a>
         </nav>
-        <a class="workspace-chat-link" href="#chatbot" data-workspace-target="chatbot" data-i18n="workspaceChatbot">Chatbot Prodi</a>
+        <nav class="workspace-menu-list workspace-menu-s3">
+          <a href="#web-s3" data-program-select="s3" data-workspace-target="web-s3" data-panel-scroll="s3-overview" data-i18n="workspaceS3Overview">Ringkasan S3</a>
+          <a href="#web-s3" data-program-select="s3" data-workspace-target="web-s3" data-panel-scroll="s3-vision-mission" data-i18n="workspaceS3VisionMission">Visi dan Misi</a>
+          <a href="#web-s3" data-program-select="s3" data-workspace-target="web-s3" data-panel-scroll="s3-tujuan" data-i18n="s3ObjectivesLabel">Tujuan</a>
+          <a href="#web-s3" data-program-select="s3" data-workspace-target="web-s3" data-panel-scroll="s3-profil" data-i18n="s3ProfilesKicker">Profil Lulusan S3</a>
+          <a href="#web-s3" data-program-select="s3" data-workspace-target="web-s3" data-panel-scroll="s3-cpl" data-i18n="s3CplKicker">Capaian Pembelajaran Lulusan</a>
+          <a href="#web-s3" data-program-select="s3" data-workspace-target="web-s3" data-panel-scroll="s3-dokumen" data-i18n="s3DocsLabel">Dokumen Akademik</a>
+          <a href="#web-s3" data-program-select="s3" data-workspace-target="web-s3" data-panel-scroll="s3-rps" data-i18n="s3RpsKicker">RPS S3 Statistika</a>
+          <a href="#chatbot" data-program-select="s3" data-workspace-target="chatbot" data-i18n="workspaceChatbot">Chatbot Prodi</a>
+        </nav>
       </aside>
 
       <div class="workspace-panels">
@@ -379,6 +373,112 @@
         <div class="vision-source-note">
           <strong data-i18n="visionSourceTitle">Sumber</strong>
           <span data-i18n="visionSourceText">Dokumen Kurikulum OBE 2026 Program Magister Statistika Terapan.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section s3-section" id="web-s3">
+      <div class="container">
+        <div class="s3-hero-panel" id="s3-overview">
+          <div class="s3-hero-copy">
+            <p class="section-kicker" data-i18n="s3Kicker">Web S3 Statistika</p>
+            <h2 data-i18n="s3Title">Program Doktor Statistika FMIPA Unpad.</h2>
+            <p data-i18n="s3Text">Ruang informasi S3 Statistika yang memuat visi, misi, tujuan, profil lulusan, CPL, dokumen akademik, dan seluruh RPS mata kuliah/kegiatan doktoral.</p>
+          </div>
+          <div class="s3-hero-metric">
+            <span data-i18n="s3StudyLoad">Beban Studi</span>
+            <strong id="s3StudyLoad">54 SKS</strong>
+            <small data-i18n="s3ResearchBased">Kurikulum berbasis riset</small>
+          </div>
+        </div>
+
+        <div class="s3-metric-grid" id="s3MetricRows" aria-label="Ringkasan Program S3">
+          <article>
+            <span data-i18n="s3FullTime">Penuh waktu</span>
+            <strong>6</strong>
+            <small data-i18n="s3Semester">semester</small>
+          </article>
+          <article>
+            <span data-i18n="s3PartTime">Paruh waktu</span>
+            <strong>8</strong>
+            <small data-i18n="s3Semester">semester</small>
+          </article>
+          <article>
+            <span data-i18n="s3RpsMetric">RPS S3</span>
+            <strong id="s3RpsTotal">14</strong>
+            <small data-i18n="s3Documents">dokumen</small>
+          </article>
+          <article>
+            <span data-i18n="s3CplMetric">CPL</span>
+            <strong id="s3CplTotal">8</strong>
+            <small data-i18n="s3Outcomes">capaian</small>
+          </article>
+        </div>
+
+        <div class="s3-vision-grid" id="s3-vision-mission">
+          <article class="s3-card s3-vision-card">
+            <span class="badge" data-i18n="s3VisionLabel">Visi</span>
+            <h3 data-i18n="s3VisionTitle">Unggul, bereputasi internasional, dan berdampak.</h3>
+            <p id="s3VisionText">Menjadi Program Studi Doktor Statistika yang unggul, bereputasi internasional, dan berdampak dalam pengembangan teori, metodologi, komputasi, serta sistem inferensi statistik untuk menyelesaikan persoalan kompleks lokal, nasional, dan global.</p>
+          </article>
+          <article class="s3-card" id="s3-tujuan">
+            <span class="badge" data-i18n="s3MissionLabel">Misi</span>
+            <h3 data-i18n="s3MissionTitle">Pendidikan doktoral, riset orisinal, komputasi, dan kolaborasi.</h3>
+            <ol class="s3-list" id="s3MissionRows"></ol>
+          </article>
+        </div>
+
+        <div class="s3-split-grid">
+          <article class="s3-card" id="s3-dokumen">
+            <div class="s3-card-head">
+              <span class="badge" data-i18n="s3ObjectivesLabel">Tujuan</span>
+              <strong id="s3ObjectiveCount">7</strong>
+            </div>
+            <div class="s3-scroll-list" id="s3ObjectiveRows"></div>
+          </article>
+          <article class="s3-card">
+            <div class="s3-card-head">
+              <span class="badge" data-i18n="s3DocsLabel">Dokumen Akademik</span>
+              <strong id="s3DocumentCount">3</strong>
+            </div>
+            <div class="s3-document-list" id="s3DocumentRows"></div>
+          </article>
+        </div>
+
+        <div class="s3-block" id="s3-profil">
+          <div class="section-head compact">
+            <p class="section-kicker" data-i18n="s3ProfilesKicker">Profil Lulusan S3</p>
+            <h3 data-i18n="s3ProfilesTitle">Peran lulusan doktor dalam akademik, riset, kebijakan, industri, kesehatan, survei, risiko, konsultansi, dan energi.</h3>
+          </div>
+          <div class="s3-profile-grid" id="s3ProfileRows" aria-live="polite"></div>
+        </div>
+
+        <div class="s3-block" id="s3-cpl">
+          <div class="section-head compact">
+            <p class="section-kicker" data-i18n="s3CplKicker">Capaian Pembelajaran Lulusan</p>
+            <h3 data-i18n="s3CplTitle">Delapan CPL jenjang doktoral sesuai KKNI Level 9.</h3>
+          </div>
+          <div class="s3-cpl-grid" id="s3CplRows" aria-live="polite"></div>
+        </div>
+
+        <div class="s3-block" id="s3-rps">
+          <div class="course-head">
+            <div>
+              <p class="section-kicker" data-i18n="s3RpsKicker">RPS S3 Statistika</p>
+              <h3 data-i18n="s3RpsTitle">Katalog RPS mata kuliah dan kegiatan akademik S3.</h3>
+              <p data-i18n="s3RpsText">Seluruh RPS dari folder @Dokumen S3/RPS_S3_Statistika disusun sebagai katalog PDF yang bisa dicari, dibuka, dan ditanyakan ke chatbot.</p>
+            </div>
+            <label class="search-field">
+              <span data-i18n="s3RpsSearchLabel">Cari RPS S3</span>
+              <input id="s3RpsSearch" type="search" placeholder="SUR, diseminasi, riset dasar..." data-i18n-placeholder="s3RpsSearchPlaceholder" autocomplete="off" />
+            </label>
+          </div>
+          <div class="s3-rps-summary" id="s3RpsSummary" aria-label="Ringkasan RPS S3"></div>
+          <div class="s3-rps-toolbar">
+            <span><strong id="s3RpsCount">14</strong> <span data-i18n="s3RpsShown">RPS tampil</span></span>
+            <a href="#chatbot" data-i18n="s3RpsAsk">Tanyakan RPS S3 ke chatbot</a>
+          </div>
+          <div class="s3-rps-grid" id="s3RpsRows" aria-live="polite"></div>
         </div>
       </div>
     </section>
@@ -796,7 +896,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div>
-        <strong>S2 Statistika Terapan FMIPA Universitas Padjadjaran</strong>
+        <strong>Pasca Sarjana Statistika FMIPA UNPAD</strong>
         <p data-i18n="footerText">Website profesional dengan chatbot berbasis knowledge base kurikulum.</p>
       </div>
       <a href="#home" data-i18n="backTop">Kembali ke atas</a>
