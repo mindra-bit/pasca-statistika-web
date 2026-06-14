@@ -140,7 +140,7 @@ let serverApiReady = false;
 
 const COMMENT_INTEGRATION = {
   giscus: {
-    repo: "mindra-bit/s2-statistika-terapan-web",
+    repo: "mindra-bit/pasca-statistika-web",
     repoId: "R_kgDOS0LQzg",
     category: "General",
     categoryId: "DIC_kwDOS0LQzs4C_B4p"
