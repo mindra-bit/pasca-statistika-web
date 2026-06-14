@@ -1,6 +1,6 @@
 {
   "source": "@Dokumen S3",
-  "generatedAt": "2026-06-14T10:29:45.110Z",
+  "generatedAt": "2026-06-14T15:05:31.579Z",
   "program": {
     "title": "S3 Statistika",
     "titleEn": "Doctoral Program in Statistics",
@@ -161,7 +161,7 @@
       "title": "Kurikulum S3 Statistika",
       "description": "Dokumen kurikulum utama Program Doktor Statistika.",
       "file": "Kurikulum S3 STATISTIKA.pdf",
-      "href": "%40Dokumen%20S3/Kurikulum%20S3%20STATISTIKA.pdf",
+      "href": "%40Dokumen%20S3/Kurikulum%20S3%20STATISTIKA.pdf?v=20260614143801",
       "sizeKb": 4041,
       "format": "PDF"
     },
@@ -170,7 +170,7 @@
       "title": "Naskah Syarat Akreditasi Minimal",
       "description": "Naskah akademik untuk kebutuhan pemenuhan syarat akreditasi minimal.",
       "file": "Naskah Syarat Akreditasi Minimal.pdf",
-      "href": "%40Dokumen%20S3/Naskah%20Syarat%20Akreditasi%20Minimal.pdf",
+      "href": "%40Dokumen%20S3/Naskah%20Syarat%20Akreditasi%20Minimal.pdf?v=20260614143751",
       "sizeKb": 4763,
       "format": "PDF"
     },
@@ -179,8 +179,8 @@
       "title": "Naskah Urgensi S3 Statistika",
       "description": "Naskah urgensi pendirian dan pengembangan Program Doktor Statistika.",
       "file": "Naskah Urgensi S3 Statistika.pdf",
-      "href": "%40Dokumen%20S3/Naskah%20Urgensi%20S3%20Statistika.pdf",
-      "sizeKb": 18328,
+      "href": "%40Dokumen%20S3/Naskah%20Urgensi%20S3%20Statistika.pdf?v=20260614220129",
+      "sizeKb": 7626,
       "format": "PDF"
     }
   ],
@@ -192,7 +192,7 @@
       "description": "Formulir masukan pemangku kepentingan untuk penyusunan visi, misi, dan profil lulusan Program Doktor Statistika.",
       "descriptionEn": "Stakeholder input form for shaping the doctoral program vision, mission, and graduate profile.",
       "file": "Survey Penentuan Visi Misi dan Profil Lulusan.html",
-      "href": "%40Dokumen%20S3/Survey%20Penentuan%20Visi%20Misi%20dan%20Profil%20Lulusan.html",
+      "href": "%40Dokumen%20S3/Survey%20Penentuan%20Visi%20Misi%20dan%20Profil%20Lulusan.html?v=20260614171509",
       "shortUrl": "https://bit.ly/S3_Stat_Unpad",
       "sizeKb": 7697,
       "format": "HTML"
@@ -204,7 +204,7 @@
       "description": "Formulir minat calon pendaftar S3 Statistika dan pemetaan bidang riset yang dituju.",
       "descriptionEn": "Prospective applicant interest form for the doctoral statistics program and intended research-field mapping.",
       "file": "Survei Minat Mendaftar S3 dan Bidang Minat Yang Dituju.html",
-      "href": "%40Dokumen%20S3/Survei%20Minat%20Mendaftar%20S3%20dan%20Bidang%20Minat%20Yang%20Dituju.html",
+      "href": "%40Dokumen%20S3/Survei%20Minat%20Mendaftar%20S3%20dan%20Bidang%20Minat%20Yang%20Dituju.html?v=20260614170606",
       "shortUrl": "https://tinyurl.com/SurveyS3Statistika",
       "sizeKb": 7023,
       "format": "HTML"
@@ -249,7 +249,7 @@
         "groupEn": "Foundations & Methodology",
         "description": "Penguatan etika akademik, filsafat ilmu, integritas riset, dan tata kelola data pada jenjang doktoral.",
         "file": "RPS Etika dan Filsafat Keilmuan Statistika.pdf",
-        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Etika%20dan%20Filsafat%20Keilmuan%20Statistika.pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Etika%20dan%20Filsafat%20Keilmuan%20Statistika.pdf?v=20260614143716",
         "sizeKb": 624,
         "format": "PDF",
         "source": "@Dokumen S3/RPS_S3_Statistika"
@@ -266,7 +266,7 @@
         "groupEn": "Foundations & Methodology",
         "description": "Metodologi riset, rancangan penelitian, dan penulisan ilmiah untuk publikasi bereputasi.",
         "file": "RPS Metodologi Riset dan Penulisan Ilmiah.pdf",
-        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Metodologi%20Riset%20dan%20Penulisan%20Ilmiah.pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Metodologi%20Riset%20dan%20Penulisan%20Ilmiah.pdf?v=20260614143739",
         "sizeKb": 626,
         "format": "PDF",
         "source": "@Dokumen S3/RPS_S3_Statistika"
@@ -283,7 +283,7 @@
         "groupEn": "Foundations & Methodology",
         "description": "Penguatan fondasi teori, perumusan novelty, dan kesiapan riset statistik tingkat doktoral.",
         "file": "RPS Penguatan Riset Dasar.pdf",
-        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Penguatan%20Riset%20Dasar.pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Penguatan%20Riset%20Dasar.pdf?v=20260614143726",
         "sizeKb": 616,
         "format": "PDF",
         "source": "@Dokumen S3/RPS_S3_Statistika"
@@ -300,7 +300,7 @@
         "groupEn": "Foundations & Methodology",
         "description": "Penyusunan kajian pustaka sistematis sebagai dasar posisi riset dan kebaruan disertasi.",
         "file": "RPS Penulisan Studi Literatur Review.pdf",
-        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Penulisan%20Studi%20Literatur%20Review.pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Penulisan%20Studi%20Literatur%20Review.pdf?v=20260614143700",
         "sizeKb": 622,
         "format": "PDF",
         "source": "@Dokumen S3/RPS_S3_Statistika"
@@ -317,7 +317,7 @@
         "groupEn": "Foundations & Methodology",
         "description": "Penguatan kemandirian, kepemimpinan, komunikasi ilmiah, dan kesiapan karier doktoral.",
         "file": "RPS Personal Development Skills.pdf",
-        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Personal%20Development%20Skills.pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Personal%20Development%20Skills.pdf?v=20260614143723",
         "sizeKb": 620,
         "format": "PDF",
         "source": "@Dokumen S3/RPS_S3_Statistika"
@@ -334,7 +334,7 @@
         "groupEn": "Research & Dissertation",
         "description": "Penelaahan naskah disertasi tahap pertama untuk memastikan kemajuan riset dan kualitas argumen ilmiah.",
         "file": "RPS Penelaahan Naskah Disertasi 1 (PND 1).pdf",
-        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Penelaahan%20Naskah%20Disertasi%201%20(PND%201).pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Penelaahan%20Naskah%20Disertasi%201%20(PND%201).pdf?v=20260614143729",
         "sizeKb": 626,
         "format": "PDF",
         "source": "@Dokumen S3/RPS_S3_Statistika"
@@ -351,7 +351,7 @@
         "groupEn": "Research & Dissertation",
         "description": "Penelaahan naskah disertasi tahap kedua untuk mematangkan kontribusi, validasi, dan kesiapan ujian.",
         "file": "RPS Penelaahan Naskah Disertasi 2 (PND 2).pdf",
-        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Penelaahan%20Naskah%20Disertasi%202%20(PND%202).pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Penelaahan%20Naskah%20Disertasi%202%20(PND%202).pdf?v=20260614143703",
         "sizeKb": 628,
         "format": "PDF",
         "source": "@Dokumen S3/RPS_S3_Statistika"
@@ -368,7 +368,7 @@
         "groupEn": "Research & Dissertation",
         "description": "Penyusunan proposal riset doktoral yang orisinal, terukur, dan selaras dengan CPL.",
         "file": "RPS Proposal Riset.pdf",
-        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Proposal%20Riset.pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Proposal%20Riset.pdf?v=20260614143736",
         "sizeKb": 613,
         "format": "PDF",
         "source": "@Dokumen S3/RPS_S3_Statistika"
@@ -385,7 +385,7 @@
         "groupEn": "Research & Dissertation",
         "description": "Seminar usulan riset untuk menguji kelayakan masalah, metode, dan kontribusi disertasi.",
         "file": "RPS Seminar Usulan Riset (SUR).pdf",
-        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Seminar%20Usulan%20Riset%20(SUR).pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Seminar%20Usulan%20Riset%20(SUR).pdf?v=20260614143713",
         "sizeKb": 622,
         "format": "PDF",
         "source": "@Dokumen S3/RPS_S3_Statistika"
@@ -402,7 +402,7 @@
         "groupEn": "Research & Dissertation",
         "description": "Sidang promosi doktor sebagai tahap akhir pertanggungjawaban ilmiah disertasi.",
         "file": "RPS Sidang Promosi Doktor (SPD).pdf",
-        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Sidang%20Promosi%20Doktor%20(SPD).pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Sidang%20Promosi%20Doktor%20(SPD).pdf?v=20260614143719",
         "sizeKb": 625,
         "format": "PDF",
         "source": "@Dokumen S3/RPS_S3_Statistika"
@@ -419,7 +419,7 @@
         "groupEn": "Research & Dissertation",
         "description": "Ujian naskah disertasi untuk menilai kelayakan substansi, metodologi, dan kontribusi doktoral.",
         "file": "RPS Ujian Naskah Disertasi (UND).pdf",
-        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Ujian%20Naskah%20Disertasi%20(UND).pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Ujian%20Naskah%20Disertasi%20(UND).pdf?v=20260614143710",
         "sizeKb": 623,
         "format": "PDF",
         "source": "@Dokumen S3/RPS_S3_Statistika"
@@ -436,7 +436,7 @@
         "groupEn": "Dissemination & Recognition",
         "description": "Diseminasi hasil riset pada forum internasional atau publikasi bereputasi.",
         "file": "RPS Diseminasi Internasional (DI).pdf",
-        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Diseminasi%20Internasional%20(DI).pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Diseminasi%20Internasional%20(DI).pdf?v=20260614143733",
         "sizeKb": 620,
         "format": "PDF",
         "source": "@Dokumen S3/RPS_S3_Statistika"
@@ -453,7 +453,7 @@
         "groupEn": "Dissemination & Recognition",
         "description": "Diseminasi hasil riset pada forum nasional, komunitas akademik, atau pemangku kepentingan strategis.",
         "file": "RPS Diseminasi Nasional (DN).pdf",
-        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Diseminasi%20Nasional%20(DN).pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Diseminasi%20Nasional%20(DN).pdf?v=20260614143706",
         "sizeKb": 618,
         "format": "PDF",
         "source": "@Dokumen S3/RPS_S3_Statistika"
@@ -470,7 +470,7 @@
         "groupEn": "Dissemination & Recognition",
         "description": "Penguatan kemampuan diseminasi, knowledge translation, publikasi, dan pengembangan dampak riset.",
         "file": "RPS Keterampilan Diseminasi dan Pengembangan Pengetahuan.pdf",
-        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Keterampilan%20Diseminasi%20dan%20Pengembangan%20Pengetahuan.pdf",
+        "href": "%40Dokumen%20S3/RPS_S3_Statistika/RPS%20Keterampilan%20Diseminasi%20dan%20Pengembangan%20Pengetahuan.pdf?v=20260614143656",
         "sizeKb": 637,
         "format": "PDF",
         "source": "@Dokumen S3/RPS_S3_Statistika"

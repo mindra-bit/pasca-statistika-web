@@ -16,6 +16,23 @@ function encodeHref(filePath) {
   return filePath.split(path.sep).map(encodeURIComponent).join("/");
 }
 
+function fileVersion(stat) {
+  const date = stat.mtime;
+  const pad = (value) => String(value).padStart(2, "0");
+  return [
+    date.getFullYear(),
+    pad(date.getMonth() + 1),
+    pad(date.getDate()),
+    pad(date.getHours()),
+    pad(date.getMinutes()),
+    pad(date.getSeconds())
+  ].join("");
+}
+
+function versionedHref(filePath, stat) {
+  return `${encodeHref(filePath)}?v=${fileVersion(stat)}`;
+}
+
 function normalize(value) {
   return String(value || "")
     .toLowerCase()
@@ -47,7 +64,7 @@ function docEntry(fileName, title, description) {
     title,
     description,
     file: fileName,
-    href: encodeHref(relativePath),
+    href: versionedHref(relativePath, stat),
     sizeKb: Math.round(stat.size / 1024),
     format: "PDF"
   };
@@ -64,7 +81,7 @@ function surveyEntry(fileName, title, titleEn, description, descriptionEn, short
     description,
     descriptionEn,
     file: fileName,
-    href: encodeHref(relativePath),
+    href: versionedHref(relativePath, stat),
     shortUrl,
     sizeKb: Math.round(stat.size / 1024),
     format: "HTML"
@@ -207,7 +224,7 @@ function buildRpsDocuments() {
         groupEn: meta.groupEn,
         description: meta.description,
         file: entry.name,
-        href: encodeHref(relativePath),
+        href: versionedHref(relativePath, stat),
         sizeKb: Math.round(stat.size / 1024),
         format: "PDF",
         source: `${sourceDirName}/${rpsDirName}`
