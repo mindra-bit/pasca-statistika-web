@@ -909,6 +909,7 @@ h1 {
 .workspace-panels > .pbm-evaluation-section,
 .workspace-panels > .rps-section,
 .workspace-panels > .special-moment-section,
+.workspace-panels > .testimonial-section,
 .workspace-panels > .s3-section,
 .workspace-panels > .comments-section,
 .workspace-panels > .chat-section {
@@ -2557,6 +2558,141 @@ tbody tr:hover td {
   font-weight: 850;
 }
 
+.testimonial-section {
+  background:
+    linear-gradient(180deg, #f7fbf9, #ffffff 48%, #fffaf1),
+    var(--surface);
+}
+
+.testimonial-total {
+  display: grid;
+  align-content: center;
+  min-height: 130px;
+  border: 1px solid rgba(221, 210, 193, 0.88);
+  border-radius: 8px;
+  padding: 22px;
+  color: #fff;
+  background: linear-gradient(135deg, #114b5f, #0e6b58 62%, #f2a900);
+  box-shadow: 0 18px 40px rgba(23, 23, 23, 0.1);
+}
+
+.testimonial-total span,
+.testimonial-total small {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.testimonial-total span {
+  text-transform: uppercase;
+}
+
+.testimonial-total strong {
+  color: #fff;
+  font-size: clamp(42px, 6vw, 66px);
+  line-height: 1;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  max-height: min(820px, 74svh);
+  overflow-y: auto;
+  padding-right: 7px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(14, 107, 88, 0.55) rgba(243, 234, 217, 0.72);
+}
+
+.testimonial-card {
+  position: relative;
+  align-self: start;
+  overflow: hidden;
+  border: 1px solid rgba(221, 210, 193, 0.92);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 16px 34px rgba(23, 23, 23, 0.08);
+}
+
+.testimonial-card::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0 0 auto;
+  height: 4px;
+  background: linear-gradient(90deg, #114b5f, #0e6b58, #f2a900);
+}
+
+.testimonial-card.portrait {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.82fr) minmax(0, 1fr);
+}
+
+.testimonial-media {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #111;
+}
+
+.testimonial-card.portrait .testimonial-media {
+  min-height: 100%;
+  aspect-ratio: 3 / 4;
+}
+
+.testimonial-media video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #111;
+}
+
+.testimonial-copy {
+  padding: 18px;
+}
+
+.testimonial-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.testimonial-meta span {
+  display: inline-flex;
+  width: fit-content;
+  border-radius: 999px;
+  padding: 6px 9px;
+  color: #0e6b58;
+  background: #edf7f4;
+  font-size: 11px;
+  font-weight: 950;
+}
+
+.testimonial-meta small {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 850;
+  text-align: right;
+}
+
+.testimonial-copy h3 {
+  margin: 14px 0 8px;
+  color: var(--ink);
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.testimonial-copy p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 .tracer-card h3 {
   margin: 0;
   font-size: 20px;
@@ -4070,6 +4206,7 @@ tbody tr:hover td {
   .rps-summary,
   .special-moment-summary,
   .special-moment-gallery,
+  .testimonial-grid,
   .rps-grid,
   .s3-metric-grid,
   .s3-profile-grid,
@@ -4243,6 +4380,7 @@ tbody tr:hover td {
   .rps-summary,
   .special-moment-summary,
   .special-moment-gallery,
+  .testimonial-grid,
   .rps-grid,
   .s3-metric-grid,
   .s3-profile-grid,
@@ -4259,6 +4397,24 @@ tbody tr:hover td {
 
   .program-profile-block .role-grid {
     grid-template-columns: 1fr;
+  }
+
+  .testimonial-card.portrait {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-card.portrait .testimonial-media {
+    min-height: auto;
+    aspect-ratio: 4 / 5;
+  }
+
+  .testimonial-meta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .testimonial-meta small {
+    text-align: left;
   }
 
   .syllabus-toolbar,

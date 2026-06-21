@@ -126,6 +126,7 @@ let materialsData = null;
 let thesisGuidesData = null;
 let tracerStudiesData = null;
 let specialMomentsData = null;
+let testimonialsData = null;
 let curriculumDocsData = null;
 let lectureEvaluationsData = null;
 let pbmEvaluationsData = null;
@@ -194,6 +195,8 @@ const specialMomentTabs = document.getElementById("specialMomentTabs");
 const specialMomentRows = document.getElementById("specialMomentRows");
 const specialMomentCount = document.getElementById("specialMomentCount");
 const specialMomentTotal = document.getElementById("specialMomentTotal");
+const testimonialRows = document.getElementById("testimonialRows");
+const testimonialTotal = document.getElementById("testimonialTotal");
 const curriculumDocRows = document.getElementById("curriculumDocRows");
 const curriculumDocCount = document.getElementById("curriculumDocCount");
 const lectureEvaluationRows = document.getElementById("lectureEvaluationRows");
@@ -223,6 +226,7 @@ const workspacePanelIds = [
   "lulusan",
   "tracer-studi",
   "special-moment",
+  "video-testimoni",
   "web-s3",
   "komentar",
   "chatbot"
@@ -273,6 +277,7 @@ const I18N = {
     workspaceGraduates: "Lulusan & Tesis",
     workspaceTracer: "Tracer Studi",
     workspaceSpecialMoment: "Special Moment",
+    workspaceTestimonials: "Video Testimoni",
     workspaceS3: "Web S3 Statistika",
     workspaceS3Overview: "Ringkasan S3",
     workspaceS3VisionMission: "Visi dan Misi",
@@ -439,6 +444,14 @@ const I18N = {
     specialMomentPhotos: "foto",
     specialMomentOpen: "Buka foto",
     specialMomentCohort: "Angkatan",
+    testimonialKicker: "Video Testimoni",
+    testimonialTitle: "Cerita singkat dari keluarga S2 Statistika Terapan.",
+    testimonialText: "Kumpulan video pengalaman dan kesan tentang Program S2 Statistika Terapan FMIPA Universitas Padjadjaran.",
+    testimonialTotalLabel: "Total video",
+    testimonialS2Only: "Khusus informasi Program S2",
+    testimonialBadge: "S2 Statistika Terapan",
+    testimonialPlay: "Putar video",
+    testimonialUnsupported: "Browser Anda tidak mendukung pemutar video HTML5.",
     coursesKicker: "Mata Kuliah",
     coursesTitle: "Daftar mata kuliah Kurikulum 2026",
     coursesSearchLabel: "Cari mata kuliah",
@@ -576,6 +589,7 @@ const I18N = {
     noMaterials: "Materi yang dicari belum ditemukan.",
     noTracer: "Laporan tracer study belum tersedia.",
     noSpecialMoments: "Foto Special Moment belum tersedia.",
+    noTestimonials: "Video testimoni S2 belum tersedia.",
     noAlumni: "Data lulusan yang dicari belum ditemukan.",
     studyMaterials: "Bahan kajian dan referensi",
     topics: "Bahan Kajian",
@@ -642,6 +656,7 @@ const I18N = {
     workspaceThesisGuide: "Thesis Guides",
     workspaceLectureEvaluation: "Course Evaluation",
     workspaceSpecialMoment: "Special Moment",
+    workspaceTestimonials: "Video Testimonials",
     workspacePbmEvaluation: "Learning Evaluation",
     workspaceGraduates: "Graduates & Theses",
     workspaceTracer: "Tracer Studies",
@@ -811,6 +826,14 @@ const I18N = {
     specialMomentPhotos: "photos",
     specialMomentOpen: "Open photo",
     specialMomentCohort: "Cohort",
+    testimonialKicker: "Video Testimonials",
+    testimonialTitle: "Short stories from the Applied Statistics Master's community.",
+    testimonialText: "A collection of experiences and reflections on the Applied Statistics Master's Program at FMIPA Universitas Padjadjaran.",
+    testimonialTotalLabel: "Total videos",
+    testimonialS2Only: "Applied Statistics Master's information only",
+    testimonialBadge: "Applied Statistics Master's",
+    testimonialPlay: "Play video",
+    testimonialUnsupported: "Your browser does not support HTML5 video playback.",
     coursesKicker: "Courses",
     coursesTitle: "Course list in the 2026 Curriculum",
     coursesSearchLabel: "Search courses",
@@ -948,6 +971,7 @@ const I18N = {
     noMaterials: "No matching materials found.",
     noTracer: "Tracer study reports are not available yet.",
     noSpecialMoments: "Special Moment photos are not available yet.",
+    noTestimonials: "Applied Statistics Master's testimonial videos are not available yet.",
     noAlumni: "No matching graduate data found.",
     studyMaterials: "Topics and references",
     topics: "Topics",
@@ -1146,6 +1170,7 @@ function applyLanguage() {
   renderMaterials();
   renderTracerStudies();
   renderSpecialMoments();
+  renderTestimonials();
   renderS3Site();
   renderLectureEvaluations();
   renderPbmEvaluations();
@@ -3011,6 +3036,62 @@ function renderSpecialMoments() {
     .join("");
 }
 
+function formatVideoDuration(seconds) {
+  const totalSeconds = Math.max(0, Math.round(Number(seconds || 0)));
+  const minutes = Math.floor(totalSeconds / 60);
+  const remainingSeconds = String(totalSeconds % 60).padStart(2, "0");
+  return `${minutes}:${remainingSeconds}`;
+}
+
+function renderTestimonials() {
+  if (!testimonialRows) return;
+  const videos = testimonialsData?.videos || [];
+
+  if (testimonialTotal) testimonialTotal.textContent = String(videos.length);
+
+  if (!videos.length) {
+    testimonialRows.innerHTML = `<p class="empty-note">${escapeHTML(t("noTestimonials"))}</p>`;
+    return;
+  }
+
+  testimonialRows.innerHTML = videos
+    .map((video) => {
+      const title = currentLang === "en" ? video.titleEn || video.titleId : video.titleId || video.titleEn;
+      const description = currentLang === "en"
+        ? video.descriptionEn || video.descriptionId
+        : video.descriptionId || video.descriptionEn;
+      const resolution = video.width && video.height ? `${video.width} × ${video.height}` : video.format || "MP4";
+      return `
+        <article class="testimonial-card ${escapeHTML(video.orientation || "landscape")}">
+          <div class="testimonial-media">
+            <video controls playsinline preload="metadata" poster="${escapeHTML(video.poster || "")}" aria-label="${escapeHTML(t("testimonialPlay"))}: ${escapeHTML(title)}">
+              <source src="${escapeHTML(video.href)}" type="${escapeHTML(video.mimeType || "video/mp4")}" />
+              ${escapeHTML(t("testimonialUnsupported"))}
+            </video>
+          </div>
+          <div class="testimonial-copy">
+            <div class="testimonial-meta">
+              <span>${escapeHTML(t("testimonialBadge"))}</span>
+              <small>${escapeHTML(formatVideoDuration(video.durationSeconds))} · ${escapeHTML(resolution)} · ${escapeHTML(formatFileSize(video.sizeKb))}</small>
+            </div>
+            <h3>${escapeHTML(title)}</h3>
+            <p>${escapeHTML(description)}</p>
+          </div>
+        </article>
+      `;
+    })
+    .join("");
+
+  const players = [...testimonialRows.querySelectorAll("video")];
+  players.forEach((player) => {
+    player.addEventListener("play", () => {
+      players.forEach((otherPlayer) => {
+        if (otherPlayer !== player && !otherPlayer.paused) otherPlayer.pause();
+      });
+    });
+  });
+}
+
 function renderCurriculumDocs() {
   if (!curriculumDocRows) return;
   const docs = curriculumDocsData?.documents || [];
@@ -3294,6 +3375,19 @@ async function loadSpecialMoments() {
   renderSpecialMoments();
 }
 
+async function loadTestimonials() {
+  try {
+    const response = await fetch("data/testimonials.json", { cache: "no-store" });
+    if (!response.ok) throw new Error("Video testimoni tidak dapat dimuat.");
+    const data = await response.json();
+    if (!data?.videos?.length) throw new Error("Video testimoni kosong.");
+    testimonialsData = data;
+  } catch (error) {
+    testimonialsData = { total: 0, totalDurationSeconds: 0, videos: [] };
+  }
+  renderTestimonials();
+}
+
 async function loadCurriculumDocs() {
   try {
     const response = await fetch("data/curriculum_docs.json", { cache: "no-store" });
@@ -3517,6 +3611,7 @@ loadMaterials();
 loadThesisGuides();
 loadTracerStudies();
 loadSpecialMoments();
+loadTestimonials();
 loadCurriculumDocs();
 loadLectureEvaluations();
 loadPbmEvaluations();
