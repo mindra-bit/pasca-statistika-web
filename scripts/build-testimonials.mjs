@@ -9,6 +9,7 @@ const rootDir = path.resolve(__dirname, "..");
 const sourceDirName = "@Video Testimoni";
 const sourceDir = path.join(rootDir, sourceDirName);
 const outputPosterDir = path.join(rootDir, "assets", "testimonials");
+const outputVideoDir = path.join(outputPosterDir, "videos");
 const outputPath = path.join(rootDir, "data", "testimonials.json");
 const chunksPath = path.join(rootDir, "data", "knowledge_chunks.json");
 const videoExtensions = new Set([".mp4", ".m4v", ".mov", ".webm"]);
@@ -69,9 +70,40 @@ function createPoster(inputPath, outputPath, metadata) {
   }
 }
 
+function createWebVideo(inputPath, sequence, metadata) {
+  if (metadata.codec.toLowerCase() === "h264" && path.extname(inputPath).toLowerCase() === ".mp4") {
+    return inputPath;
+  }
+
+  fs.mkdirSync(outputVideoDir, { recursive: true });
+  const outputPath = path.join(outputVideoDir, `testimonial-${sequence}.mp4`);
+  const result = spawnSync("ffmpeg", [
+    "-y",
+    "-loglevel", "error",
+    "-i", inputPath,
+    "-c:v", "libx264",
+    "-preset", "medium",
+    "-crf", "23",
+    "-pix_fmt", "yuv420p",
+    "-c:a", "aac",
+    "-b:a", "128k",
+    "-movflags", "+faststart",
+    outputPath
+  ], { encoding: "utf8" });
+
+  if (result.status !== 0) {
+    throw new Error(result.stderr || `Gagal membuat video web: ${inputPath}`);
+  }
+
+  return outputPath;
+}
+
 if (!fs.existsSync(sourceDir)) {
   throw new Error(`Folder Video Testimoni tidak ditemukan: ${sourceDir}`);
 }
+
+fs.rmSync(outputPosterDir, { recursive: true, force: true });
+fs.mkdirSync(outputPosterDir, { recursive: true });
 
 const videoFiles = fs.readdirSync(sourceDir, { withFileTypes: true })
   .filter((entry) => entry.isFile() && videoExtensions.has(path.extname(entry.name).toLowerCase()))
@@ -81,11 +113,15 @@ const videos = videoFiles.map((entry, index) => {
   const sourcePath = path.join(sourceDir, entry.name);
   const sourceStat = fs.statSync(sourcePath);
   const sourceRelative = path.relative(rootDir, sourcePath);
-  const metadata = probeVideo(sourcePath);
+  const sourceMetadata = probeVideo(sourcePath);
   const sequence = String(index + 1).padStart(2, "0");
+  const webVideoPath = createWebVideo(sourcePath, sequence, sourceMetadata);
+  const webVideoStat = fs.statSync(webVideoPath);
+  const webVideoRelative = path.relative(rootDir, webVideoPath);
+  const metadata = webVideoPath === sourcePath ? sourceMetadata : probeVideo(webVideoPath);
   const posterFile = `testimonial-${sequence}.jpg`;
   const posterPath = path.join(outputPosterDir, posterFile);
-  createPoster(sourcePath, posterPath, metadata);
+  createPoster(webVideoPath, posterPath, metadata);
   const posterStat = fs.statSync(posterPath);
   const posterRelative = path.relative(rootDir, posterPath);
 
@@ -96,11 +132,13 @@ const videos = videoFiles.map((entry, index) => {
     descriptionId: "Cerita singkat tentang pengalaman dan kesan bersama Program S2 Statistika Terapan FMIPA Unpad.",
     descriptionEn: "A short story about experiences with the Applied Statistics Master's Program at FMIPA Unpad.",
     file: entry.name,
-    href: versionedHref(sourceRelative, sourceStat),
+    href: versionedHref(webVideoRelative, webVideoStat),
+    sourceHref: versionedHref(sourceRelative, sourceStat),
     poster: versionedHref(posterRelative, posterStat),
-    mimeType: path.extname(entry.name).toLowerCase() === ".webm" ? "video/webm" : "video/mp4",
-    format: path.extname(entry.name).replace(".", "").toUpperCase(),
+    mimeType: "video/mp4",
+    format: "MP4",
     codec: metadata.codec.toUpperCase(),
+    optimizedForWeb: webVideoPath !== sourcePath,
     width: metadata.width,
     height: metadata.height,
     orientation: metadata.width >= metadata.height ? "landscape" : "portrait",
