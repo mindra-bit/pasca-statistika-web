@@ -49,6 +49,27 @@ function walk(dir) {
   });
 }
 
+function encodeRelativeHref(filePath) {
+  return path.relative(rootDir, filePath).split(path.sep).map(encodeURIComponent).join("/");
+}
+
+function findCompanionFile(folderPath, extension, preferredPattern, label) {
+  const candidates = fs.readdirSync(folderPath, { withFileTypes: true })
+    .filter((entry) => entry.isFile() && !entry.name.startsWith("~$") && entry.name.toLowerCase().endsWith(extension))
+    .map((entry) => path.join(folderPath, entry.name))
+    .sort((a, b) => {
+      const aPreferred = preferredPattern.test(path.basename(a)) ? 1 : 0;
+      const bPreferred = preferredPattern.test(path.basename(b)) ? 1 : 0;
+      return bPreferred - aPreferred || a.localeCompare(b, "id");
+    });
+
+  if (!candidates.length) {
+    throw new Error(`${label} tidak ditemukan di folder ${path.basename(folderPath)}`);
+  }
+
+  return candidates[0];
+}
+
 function extractTitle(html, fallback) {
   const titleMatch = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
   const h1Match = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i);
@@ -70,13 +91,28 @@ const htmlFiles = walk(materialsDir)
 
 const materials = htmlFiles.map((filePath, index) => {
   const relativePath = path.relative(rootDir, filePath);
-  const folder = path.basename(path.dirname(filePath));
+  const folderPath = path.dirname(filePath);
+  const folder = path.basename(folderPath);
   const html = fs.readFileSync(filePath, "utf8");
   const fallbackTitle = titleCase(folder);
   const title = extractTitle(html, fallbackTitle);
   const stat = fs.statSync(filePath);
+  const summaryPath = findCompanionFile(
+    folderPath,
+    ".pptx",
+    /_Profesional_dari_HTML\.pptx$/i,
+    "Presentasi ringkasan"
+  );
+  const contractPath = findCompanionFile(
+    folderPath,
+    ".docx",
+    /^Kontrak_Perkuliahan_.*\.docx$/i,
+    "Kontrak perkuliahan"
+  );
+  const summaryStat = fs.statSync(summaryPath);
+  const contractStat = fs.statSync(contractPath);
 
-  const href = relativePath.split(path.sep).map(encodeURIComponent).join("/");
+  const href = encodeRelativeHref(filePath);
   const viewerHref = `materi.html?src=${encodeURIComponent(href)}&title=${encodeURIComponent(title || fallbackTitle)}`;
 
   return {
@@ -88,6 +124,12 @@ const materials = htmlFiles.map((filePath, index) => {
     href,
     viewerHref,
     sizeKb: Math.round(stat.size / 1024),
+    summaryFile: path.basename(summaryPath),
+    summaryHref: encodeRelativeHref(summaryPath),
+    summarySizeKb: Math.round(summaryStat.size / 1024),
+    contractFile: path.basename(contractPath),
+    contractHref: encodeRelativeHref(contractPath),
+    contractSizeKb: Math.round(contractStat.size / 1024),
     source: materialsDirName
   };
 });
@@ -111,7 +153,7 @@ if (fs.existsSync(chunksPath)) {
     title: material.title,
     sourceTitle: `Materi HTML ${material.title}`,
     sourceUrl: material.viewerHref,
-    text: `Materi HTML ${material.title} tersedia pada folder ${material.folder}. Link viewer: ${material.viewerHref}. Link file asli: ${material.href}. Kategori: ${material.category}. File: ${material.file}. Ukuran: ${material.sizeKb} KB.`
+    text: `Materi ${material.title} tersedia pada folder ${material.folder}. Link materi HTML: ${material.viewerHref}. Link file HTML asli: ${material.href}. Link ringkasan PPTX: ${material.summaryHref}. Link kontrak perkuliahan DOCX: ${material.contractHref}. Kategori: ${material.category}. File HTML: ${material.file} (${material.sizeKb} KB). File ringkasan: ${material.summaryFile} (${material.summarySizeKb} KB). File kontrak: ${material.contractFile} (${material.contractSizeKb} KB).`
   }));
   fs.writeFileSync(chunksPath, `${JSON.stringify([...retained, ...materialChunks], null, 2)}\n`);
 }

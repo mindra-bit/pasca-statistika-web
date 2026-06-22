@@ -534,7 +534,14 @@ function materialFromHit(hit) {
 
 function materialScore(question, material) {
   const queryTokens = tokenize(question).filter((token) => !genericQueryTerms.has(token));
-  const haystack = normalize([material.title, material.category, material.folder, material.file].join(" "));
+  const haystack = normalize([
+    material.title,
+    material.category,
+    material.folder,
+    material.file,
+    material.summaryFile,
+    material.contractFile
+  ].join(" "));
   let score = 0;
   for (const token of queryTokens) {
     if (hasWholeToken(haystack, token)) score += 1;
@@ -584,13 +591,17 @@ function materialAnswer(question, hits) {
     const material = suggestions[0];
     return {
       answer: [
-        `Materi HTML ${material.title} tersedia di katalog materi kuliah.`,
+        `Paket pembelajaran ${material.title} tersedia di katalog materi kuliah.`,
         `Kategori: ${material.category || "Materi Kuliah"}.`,
-        `File: ${material.file || material.href}.`,
-        `Ukuran: ${formatFileSize(material.sizeKb)}.`,
-        `Link: ${material.viewerHref || material.href}`
+        `Materi HTML: ${material.viewerHref || material.href}`,
+        `Ringkasan PPTX: ${material.summaryHref || "-"}`,
+        `Kontrak perkuliahan DOCX: ${material.contractHref || "-"}`
       ].join("\n"),
-      sources: [{ title: `Materi HTML ${material.title}`, url: material.viewerHref || material.href }],
+      sources: [
+        { title: `Materi HTML ${material.title}`, url: material.viewerHref || material.href },
+        ...(material.summaryHref ? [{ title: `Ringkasan ${material.title}`, url: material.summaryHref }] : []),
+        ...(material.contractHref ? [{ title: `Kontrak ${material.title}`, url: material.contractHref }] : [])
+      ],
       mode: "Knowledge base server"
     };
   }

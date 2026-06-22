@@ -467,8 +467,8 @@ const I18N = {
     tableCredits: "SKS",
     tableGroup: "Kelompok",
     materialsKicker: "Materi Kuliah",
-    materialsTitle: "Katalog materi HTML per mata kuliah",
-    materialsText: "Materi dari folder @Materi Kuliah disusun sebagai katalog digital agar mahasiswa dapat mencari dan membuka bahan ajar dengan cepat.",
+    materialsTitle: "Materi, ringkasan, dan kontrak perkuliahan",
+    materialsText: "Setiap mata kuliah dilengkapi materi HTML, ringkasan presentasi, dan kontrak perkuliahan yang dapat dibuka langsung dari satu katalog.",
     materialsSearchLabel: "Cari materi",
     materialsSearchPlaceholder: "Spasial, aktuaria, regresi, epidemiologi...",
     materialsShown: "materi tampil",
@@ -574,7 +574,9 @@ const I18N = {
     backTop: "Kembali ke atas",
     openPdf: "Buka PDF",
     openReport: "Buka laporan",
-    openMaterial: "Buka materi",
+    openMaterial: "Buka Materi",
+    openSummary: "Buka Ringkasan",
+    openContract: "Buka Kontrak",
     askChatbot: "Tanya chatbot",
     pages: "halaman",
     folder: "Folder",
@@ -849,8 +851,8 @@ const I18N = {
     tableCredits: "Credits",
     tableGroup: "Group",
     materialsKicker: "Learning Materials",
-    materialsTitle: "HTML learning material catalog by course",
-    materialsText: "Materials from the @Materi Kuliah folder are organized as a digital catalog so students can search and open learning resources quickly.",
+    materialsTitle: "Course materials, summaries, and learning contracts",
+    materialsText: "Each course includes HTML material, a presentation summary, and a learning contract available from one catalog.",
     materialsSearchLabel: "Search materials",
     materialsSearchPlaceholder: "Spatial, actuarial, regression, epidemiology...",
     materialsShown: "materials shown",
@@ -956,7 +958,9 @@ const I18N = {
     backTop: "Back to top",
     openPdf: "Open PDF",
     openReport: "Open report",
-    openMaterial: "Open material",
+    openMaterial: "Open Material",
+    openSummary: "Open Summary",
+    openContract: "Open Contract",
     askChatbot: "Ask chatbot",
     pages: "pages",
     folder: "Folder",
@@ -1675,7 +1679,14 @@ function materialFromHit(hit) {
 
 function materialScore(question, material) {
   const queryTokens = tokenize(question).filter((token) => !GENERIC_QUERY_TERMS.has(token));
-  const haystack = normalize([material.title, material.category, material.folder, material.file].join(" "));
+  const haystack = normalize([
+    material.title,
+    material.category,
+    material.folder,
+    material.file,
+    material.summaryFile,
+    material.contractFile
+  ].join(" "));
   let score = 0;
   for (const token of queryTokens) {
     if (hasWholeToken(haystack, token)) score += 1;
@@ -1725,13 +1736,17 @@ function buildMaterialAnswer(question, hits) {
     const material = suggestions[0];
     return {
       answer: [
-        `Materi HTML ${material.title} tersedia di katalog materi kuliah.`,
+        `Paket pembelajaran ${material.title} tersedia di katalog materi kuliah.`,
         `Kategori: ${material.category || "Materi Kuliah"}.`,
-        `File: ${material.file || material.href}.`,
-        `Ukuran: ${formatFileSize(material.sizeKb)}.`,
-        `Link: ${material.viewerHref || material.href}`
+        `Materi HTML: ${material.viewerHref || material.href}`,
+        `Ringkasan PPTX: ${material.summaryHref || "-"}`,
+        `Kontrak perkuliahan DOCX: ${material.contractHref || "-"}`
       ].join("\n"),
-      sources: [{ title: `Materi HTML ${material.title}`, url: material.viewerHref || material.href }],
+      sources: [
+        { title: `Materi HTML ${material.title}`, url: material.viewerHref || material.href },
+        ...(material.summaryHref ? [{ title: `Ringkasan ${material.title}`, url: material.summaryHref }] : []),
+        ...(material.contractHref ? [{ title: `Kontrak ${material.title}`, url: material.contractHref }] : [])
+      ],
       mode: "Local knowledge base"
     };
   }
@@ -2887,6 +2902,8 @@ function renderMaterials() {
       material.category,
       material.folder,
       material.file,
+      material.summaryFile,
+      material.contractFile,
       material.source
     ].join(" ");
     return !query || normalize(haystack).includes(query);
@@ -2910,8 +2927,9 @@ function renderMaterials() {
         <p class="syllabus-code">${escapeHTML(material.file || t("fileHtml"))}</p>
         <p>${escapeHTML(t("folder"))}: ${escapeHTML(material.folder || material.source || "@Materi Kuliah")}</p>
         <div class="material-actions">
-          <a href="${escapeHTML(material.viewerHref || material.href)}" target="_blank" rel="noopener">${escapeHTML(t("openMaterial"))}</a>
-          <button type="button" data-material-q="${currentLang === "en" ? `Is there HTML learning material for ${escapeHTML(material.title)}?` : `Ada materi kuliah ${escapeHTML(material.title)}?`}">${escapeHTML(t("askChatbot"))}</button>
+          <a class="material-action material-action--content" href="${escapeHTML(material.viewerHref || material.href)}" target="_blank" rel="noopener">${escapeHTML(t("openMaterial"))}</a>
+          <a class="material-action material-action--summary" href="${escapeHTML(material.summaryHref)}" target="_blank" rel="noopener">${escapeHTML(t("openSummary"))}</a>
+          <a class="material-action material-action--contract" href="${escapeHTML(material.contractHref)}" target="_blank" rel="noopener">${escapeHTML(t("openContract"))}</a>
         </div>
       </article>
     `)
