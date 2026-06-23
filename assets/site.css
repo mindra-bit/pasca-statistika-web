@@ -1270,9 +1270,9 @@ p {
 
 .academic-front-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(380px, 0.58fr);
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.4fr);
   gap: 20px;
-  align-items: stretch;
+  align-items: start;
   margin-bottom: 26px;
 }
 
@@ -1301,12 +1301,13 @@ p {
 
 .accreditation-card {
   display: grid;
-  gap: 15px;
+  gap: 12px;
   align-content: start;
+  align-self: start;
   min-width: 0;
   border: 1px solid rgba(20, 61, 93, 0.24);
   border-radius: 8px;
-  padding: 18px;
+  padding: 14px;
   color: #fff;
   background:
     linear-gradient(145deg, rgba(20, 61, 93, 0.99), rgba(14, 107, 88, 0.96) 64%, rgba(242, 169, 0, 0.94) 135%),
@@ -1329,13 +1330,13 @@ p {
 .accreditation-heading h3 {
   margin: 0;
   color: #fff;
-  font-size: clamp(18px, 1.55vw, 23px);
+  font-size: clamp(16px, 1.4vw, 20px);
   line-height: 1.14;
 }
 
 .accreditation-status {
   display: inline-flex;
-  min-height: 58px;
+  min-height: 50px;
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.46);
@@ -1355,6 +1356,8 @@ p {
   border-radius: 7px;
   background: #fff;
   text-decoration: none;
+  width: min(100%, 300px);
+  justify-self: center;
 }
 
 .accreditation-preview img {
@@ -1390,7 +1393,7 @@ p {
 .accreditation-text {
   margin: 0;
   color: rgba(255, 255, 255, 0.84);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   line-height: 1.5;
 }
