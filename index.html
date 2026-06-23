@@ -6,7 +6,7 @@
   <title>Pasca Sarjana Statistika FMIPA UNPAD</title>
   <meta name="description" content="Website profesional Pasca Sarjana Statistika FMIPA Universitas Padjadjaran untuk Program S2 Statistika Terapan dan S3 Statistika." />
   <link rel="preload" href="assets/campus-hero.jpg" as="image" />
-  <link rel="stylesheet" href="assets/site.css?v=materials-files-20260622" />
+  <link rel="stylesheet" href="assets/site.css?v=accreditation-visible-v2-20260623" />
 </head>
 <body>
   <div class="topbar">
@@ -47,7 +47,10 @@
         </div>
         <div class="program-front-grid" aria-label="Pilihan program pascasarjana statistika">
           <article class="program-front-card program-front-s2">
-            <span class="program-tag">S2</span>
+            <div class="program-card-topline">
+              <span class="program-tag">S2</span>
+              <a class="program-accreditation-badge" href="#kalender-akademik" data-workspace-target="kalender-akademik" data-program-select="none" data-i18n="frontS2Accreditation">Akreditasi UNGGUL</a>
+            </div>
             <h2 data-i18n="frontS2Title">S2 Statistika Terapan</h2>
             <p data-i18n="frontS2Text">Informasi kurikulum OBE 2026, kalender akademik, silabus, RPS, materi kuliah, panduan tesis, lulusan, tracer study, dan komentar pengunjung.</p>
             <div class="program-front-meta">
@@ -114,16 +117,37 @@
       <div class="workspace-panels">
     <section class="section academic-calendar-section active-panel" id="kalender-akademik">
       <div class="container">
-        <div class="academic-calendar-hero">
-          <div>
-            <p class="section-kicker" data-i18n="academicKicker">Kalender Akademik</p>
-            <h2 data-i18n="academicTitle">Semester Gasal 2026/2027 dalam satu infografis.</h2>
-            <p data-i18n="academicText">Ringkasan kegiatan akademik Universitas Padjadjaran untuk masa penerimaan mahasiswa baru, perkuliahan, administrasi, ujian, nilai, wisuda, dan akhir semester.</p>
+        <div class="academic-front-grid">
+          <div class="academic-calendar-hero">
+            <div>
+              <p class="section-kicker" data-i18n="academicKicker">Kalender Akademik</p>
+              <h2 data-i18n="academicTitle">Semester Gasal 2026/2027 dalam satu infografis.</h2>
+              <p data-i18n="academicText">Ringkasan kegiatan akademik Universitas Padjadjaran untuk masa penerimaan mahasiswa baru, perkuliahan, administrasi, ujian, nilai, wisuda, dan akhir semester.</p>
+            </div>
+            <div class="academic-semester-card">
+              <span data-i18n="academicSemesterLabel">Semester Gasal</span>
+              <strong>15 Aug 2026 - 14 Feb 2027</strong>
+            </div>
           </div>
-          <div class="academic-semester-card">
-            <span data-i18n="academicSemesterLabel">Semester Gasal</span>
-            <strong>15 Aug 2026 - 14 Feb 2027</strong>
-          </div>
+
+          <article class="accreditation-card" aria-labelledby="accreditation-title">
+            <div class="accreditation-heading">
+              <span class="accreditation-status">UNGGUL</span>
+              <div>
+                <p class="section-kicker" data-i18n="accreditationKicker">Akreditasi S2</p>
+                <h3 id="accreditation-title" data-i18n="accreditationTitle">S2 Statistika Terapan FMIPA UNPAD</h3>
+              </div>
+            </div>
+            <a class="accreditation-preview" href="sertifikat-unggul-S2.png" target="_blank" rel="noopener" aria-label="Buka sertifikat akreditasi S2 Statistika Terapan ukuran penuh">
+              <img src="sertifikat-unggul-S2.png" alt="Sertifikat akreditasi Unggul S2 Statistika Terapan FMIPA Universitas Padjadjaran" />
+              <span data-i18n="accreditationView">Lihat sertifikat penuh</span>
+            </a>
+            <p class="accreditation-text" data-i18n="accreditationText">Terakreditasi Unggul oleh LAMSAMA sebagai pengakuan atas mutu akademik Program Magister Statistika Terapan.</p>
+            <div class="accreditation-meta">
+              <span><small data-i18n="accreditationNumber">Nomor sertifikat</small><strong>0341222</strong></span>
+              <span><small data-i18n="accreditationValidUntil">Berlaku sampai</small><strong>21 Desember 2027</strong></span>
+            </div>
+          </article>
         </div>
 
         <div class="calendar-summary-grid" aria-label="Ringkasan kalender akademik">
@@ -1013,6 +1037,6 @@
     </div>
   </footer>
 
-  <script src="assets/app.js?v=materials-files-20260622" defer></script>
+  <script src="assets/app.js?v=accreditation-visible-v2-20260623" defer></script>
 </body>
 </html>

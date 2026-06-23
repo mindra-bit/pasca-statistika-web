@@ -364,6 +364,43 @@ h1 {
   font-weight: 950;
 }
 
+.program-card-topline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 9px;
+}
+
+.program-accreditation-badge {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  border-radius: 6px;
+  padding: 6px 10px;
+  color: #201500;
+  background: linear-gradient(135deg, var(--gold), #ffe8a2);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 950;
+  box-shadow: 0 8px 18px rgba(23, 23, 23, 0.16);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.program-accreditation-badge:hover,
+.program-accreditation-badge:focus-visible {
+  color: #201500;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 22px rgba(23, 23, 23, 0.22);
+}
+
+.program-accreditation-badge:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
 .program-front-card h2 {
   margin: 2px 0 0;
   color: #fff;
@@ -1231,12 +1268,25 @@ p {
     var(--surface);
 }
 
+.academic-front-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(380px, 0.58fr);
+  gap: 20px;
+  align-items: stretch;
+  margin-bottom: 26px;
+}
+
 .academic-calendar-hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 290px;
   gap: 28px;
-  align-items: end;
-  margin-bottom: 24px;
+  align-items: stretch;
+  margin-bottom: 0;
+  border: 1px solid rgba(221, 210, 193, 0.86);
+  border-radius: 8px;
+  padding: 26px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 16px 34px rgba(23, 23, 23, 0.08);
 }
 
 .academic-calendar-hero h2 {
@@ -1247,6 +1297,132 @@ p {
   max-width: 820px;
   margin-bottom: 0;
   font-size: 17px;
+}
+
+.accreditation-card {
+  display: grid;
+  gap: 15px;
+  align-content: start;
+  min-width: 0;
+  border: 1px solid rgba(20, 61, 93, 0.24);
+  border-radius: 8px;
+  padding: 18px;
+  color: #fff;
+  background:
+    linear-gradient(145deg, rgba(20, 61, 93, 0.99), rgba(14, 107, 88, 0.96) 64%, rgba(242, 169, 0, 0.94) 135%),
+    #143d5d;
+  box-shadow: 0 18px 40px rgba(20, 61, 93, 0.2);
+}
+
+.accreditation-heading {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 13px;
+  align-items: center;
+}
+
+.accreditation-heading .section-kicker {
+  margin-bottom: 4px;
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.accreditation-heading h3 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(18px, 1.55vw, 23px);
+  line-height: 1.14;
+}
+
+.accreditation-status {
+  display: inline-flex;
+  min-height: 58px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  border-radius: 7px;
+  padding: 10px 12px;
+  color: #201500;
+  background: linear-gradient(135deg, var(--gold), #ffe8a2);
+  font-size: 14px;
+  font-weight: 950;
+}
+
+.accreditation-preview {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.54);
+  border-radius: 7px;
+  background: #fff;
+  text-decoration: none;
+}
+
+.accreditation-preview img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1123 / 794;
+  object-fit: contain;
+  transition: transform 180ms ease;
+}
+
+.accreditation-preview span {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 6px;
+  padding: 8px 10px;
+  color: #fff;
+  background: rgba(20, 61, 93, 0.94);
+  font-size: 12px;
+  font-weight: 900;
+  box-shadow: 0 8px 18px rgba(23, 23, 23, 0.2);
+}
+
+.accreditation-preview:hover img {
+  transform: scale(1.015);
+}
+
+.accreditation-preview:focus-visible {
+  outline: 3px solid #ffe8a2;
+  outline-offset: 3px;
+}
+
+.accreditation-text {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.accreditation-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.accreditation-meta span {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 7px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.accreditation-meta small {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.accreditation-meta strong {
+  overflow-wrap: anywhere;
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.25;
 }
 
 .academic-semester-card {
@@ -4211,6 +4387,7 @@ tbody tr:hover td {
   .program-front-grid,
   .program-profile-hero,
   .program-menu-front,
+  .academic-front-grid,
   .academic-calendar-hero,
   .lecture-evaluation-hero,
   .s3-hero-panel,
@@ -4498,8 +4675,20 @@ tbody tr:hover td {
     min-height: 130px;
   }
 
+  .academic-calendar-hero {
+    padding: 20px;
+  }
+
   .academic-semester-card strong {
     font-size: 24px;
+  }
+
+  .accreditation-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .accreditation-card {
+    padding: 16px;
   }
 
   .calendar-source-note {

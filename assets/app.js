@@ -290,6 +290,7 @@ const I18N = {
     heroCurriculum: "Lihat Kurikulum",
     heroS3: "Web S3",
     frontS2Title: "S2 Statistika Terapan",
+    frontS2Accreditation: "Akreditasi UNGGUL",
     frontS2Text: "Informasi kurikulum OBE 2026, kalender akademik, silabus, RPS, materi kuliah, panduan tesis, lulusan, tracer study, dan komentar pengunjung.",
     frontS2Meta: "Magister",
     frontS2Open: "Buka Informasi S2",
@@ -346,6 +347,12 @@ const I18N = {
     academicTitle: "Semester Gasal 2026/2027 dalam satu infografis.",
     academicText: "Ringkasan kegiatan akademik Universitas Padjadjaran untuk masa penerimaan mahasiswa baru, perkuliahan, administrasi, ujian, nilai, wisuda, dan akhir semester.",
     academicSemesterLabel: "Semester Gasal",
+    accreditationKicker: "Akreditasi S2",
+    accreditationTitle: "S2 Statistika Terapan FMIPA UNPAD",
+    accreditationText: "Terakreditasi Unggul oleh LAMSAMA sebagai pengakuan atas mutu akademik Program Magister Statistika Terapan.",
+    accreditationView: "Lihat sertifikat penuh",
+    accreditationNumber: "Nomor sertifikat",
+    accreditationValidUntil: "Berlaku sampai",
     academicSummaryClasses: "Perkuliahan",
     academicSummaryMidterm: "Ujian Tengah Semester",
     academicSummaryFinal: "Ujian Akhir Semester",
@@ -674,6 +681,7 @@ const I18N = {
     heroCurriculum: "View Curriculum",
     heroS3: "S3 Site",
     frontS2Title: "Applied Statistics Master's Program",
+    frontS2Accreditation: "UNGGUL Accreditation",
     frontS2Text: "Information on the 2026 OBE curriculum, academic calendar, syllabi, RPS, course materials, thesis guides, graduates, tracer studies, and visitor comments.",
     frontS2Meta: "Master's",
     frontS2Open: "Open S2 Information",
@@ -719,6 +727,12 @@ const I18N = {
     academicTitle: "Odd Semester 2026/2027 in one infographic.",
     academicText: "A visual summary of Universitas Padjadjaran academic activities for new student admission, classes, administration, exams, grades, graduation, and semester closing.",
     academicSemesterLabel: "Odd Semester",
+    accreditationKicker: "Master's Accreditation",
+    accreditationTitle: "Applied Statistics Master's, FMIPA UNPAD",
+    accreditationText: "Accredited UNGGUL by LAMSAMA in recognition of the academic quality of the Applied Statistics Master's Program.",
+    accreditationView: "View full certificate",
+    accreditationNumber: "Certificate number",
+    accreditationValidUntil: "Valid until",
     academicSummaryClasses: "Classes",
     academicSummaryMidterm: "Midterm Exams",
     academicSummaryFinal: "Final Exams",
@@ -1087,7 +1101,8 @@ function setWorkspaceProgram(program = "none") {
 
 function scrollWorkspaceToLayout() {
   if (!workspaceLayout) return;
-  const targetTop = window.scrollY + workspaceLayout.getBoundingClientRect().top;
+  const stickyHeaderHeight = document.querySelector(".site-header")?.offsetHeight || 0;
+  const targetTop = window.scrollY + workspaceLayout.getBoundingClientRect().top - stickyHeaderHeight - 12;
   window.scrollTo({ top: Math.max(0, targetTop), behavior: "smooth" });
 }
 
