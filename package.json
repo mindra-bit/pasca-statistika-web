@@ -7,6 +7,7 @@
     "build:materials": "node scripts/build-materials.mjs",
     "build:thesis-guides": "node scripts/build-thesis-guides.mjs",
     "build:curriculum-docs": "node scripts/build-curriculum-docs.mjs",
+    "build:lamsama-reports": "node scripts/build-lamsama-reports.mjs",
     "build:tracer-studies": "node scripts/build-tracer-studies.mjs",
     "build:pbm-evaluations": "node scripts/build-pbm-evaluations.mjs",
     "build:lecture-evaluations": "node scripts/build-lecture-evaluations.mjs",

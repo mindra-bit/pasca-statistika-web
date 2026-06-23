@@ -128,6 +128,7 @@ let tracerStudiesData = null;
 let specialMomentsData = null;
 let testimonialsData = null;
 let curriculumDocsData = null;
+let lamsamaReportsData = null;
 let lectureEvaluationsData = null;
 let pbmEvaluationsData = null;
 let rpsDocsData = null;
@@ -199,6 +200,8 @@ const testimonialRows = document.getElementById("testimonialRows");
 const testimonialTotal = document.getElementById("testimonialTotal");
 const curriculumDocRows = document.getElementById("curriculumDocRows");
 const curriculumDocCount = document.getElementById("curriculumDocCount");
+const lamsamaRows = document.getElementById("lamsamaRows");
+const lamsamaCount = document.getElementById("lamsamaCount");
 const lectureEvaluationRows = document.getElementById("lectureEvaluationRows");
 const lectureEvaluationCount = document.getElementById("lectureEvaluationCount");
 const pbmEvaluationRows = document.getElementById("pbmEvaluationRows");
@@ -214,6 +217,7 @@ const workspaceLayout = document.getElementById("program-workspace");
 const workspacePanelIds = [
   "kalender-akademik",
   "program-profile",
+  "lamsama",
   "kurikulum",
   "dokumen-kurikulum",
   "mata-kuliah",
@@ -261,6 +265,7 @@ const I18N = {
     workspaceMenuTitle: "Menu Program",
     workspaceAcademicCalendar: "Kalender Akademik",
     workspaceProgramProfile: "Program Profile",
+    workspaceLamsama: "LAMSAMA",
     workspaceVisionMission: "Visi dan Misi",
     workspaceGraduateProfile: "Profil Lulusan",
     programProfileCombinedTitle: "Profil lengkap S2 Statistika Terapan.",
@@ -291,7 +296,7 @@ const I18N = {
     heroS3: "Web S3",
     frontS2Title: "S2 Statistika Terapan",
     frontS2Accreditation: "Akreditasi UNGGUL",
-    frontS2Text: "Informasi kurikulum OBE 2026, kalender akademik, silabus, RPS, materi kuliah, panduan tesis, lulusan, tracer study, dan komentar pengunjung.",
+    frontS2Text: "Informasi kurikulum OBE 2026, laporan LAMSAMA, silabus, RPS, materi kuliah, panduan tesis, lulusan, tracer study, dan komentar pengunjung.",
     frontS2Meta: "Magister",
     frontS2Open: "Buka Informasi S2",
     frontS3Title: "S3 Statistika",
@@ -401,6 +406,19 @@ const I18N = {
     curriculumDocsText: "Empat PDF kurikulum ditempatkan sebagai rujukan resmi dan arsip akademik yang dapat dibuka langsung dari website.",
     curriculumDocsCountLabel: "dokumen kurikulum",
     curriculumDocsAsk: "Tanyakan dokumen ke chatbot",
+    lamsamaKicker: "LAMSAMA",
+    lamsamaTitle: "Laporan tahunan akreditasi S2 Statistika Terapan.",
+    lamsamaText: "Arsip pemantauan mutu dan tindak lanjut akreditasi bersama Lembaga Akreditasi Mandiri Sains Alam dan Ilmu Formal.",
+    lamsamaPeriodLabel: "Periode laporan",
+    lamsamaCountLabel: "laporan PDF",
+    lamsamaAssessmentLabel: "Asesmen lapangan",
+    lamsamaAsk: "Tanyakan LAMSAMA ke chatbot",
+    lamsamaYearLabel: "Tahun laporan",
+    lamsamaSequenceLabel: "Tahun ke-",
+    lamsamaArchive: "Laporan Akreditasi",
+    lamsamaOpen: "Buka laporan PDF",
+    lamsamaAskDocument: "Tanya chatbot",
+    noLamsamaReports: "Laporan tahunan LAMSAMA belum tersedia.",
     curriculumDocPeriod: "Periode",
     curriculumDocArchive: "Arsip PDF",
     pbmEvalKicker: "Evaluasi PBM",
@@ -652,6 +670,7 @@ const I18N = {
     workspaceMenuTitle: "Program Menu",
     workspaceAcademicCalendar: "Academic Calendar",
     workspaceProgramProfile: "Program Profile",
+    workspaceLamsama: "LAMSAMA",
     workspaceVisionMission: "Vision and Mission",
     workspaceGraduateProfile: "Graduate Profile",
     programProfileCombinedTitle: "Complete profile of the Applied Statistics Master's Program.",
@@ -682,7 +701,7 @@ const I18N = {
     heroS3: "S3 Site",
     frontS2Title: "Applied Statistics Master's Program",
     frontS2Accreditation: "UNGGUL Accreditation",
-    frontS2Text: "Information on the 2026 OBE curriculum, academic calendar, syllabi, RPS, course materials, thesis guides, graduates, tracer studies, and visitor comments.",
+    frontS2Text: "Information on the 2026 OBE curriculum, LAMSAMA reports, syllabi, RPS, course materials, thesis guides, graduates, tracer studies, and visitor comments.",
     frontS2Meta: "Master's",
     frontS2Open: "Open S2 Information",
     frontS3Title: "Doctoral Program in Statistics",
@@ -781,6 +800,19 @@ const I18N = {
     curriculumDocsText: "Four curriculum PDFs are provided as official references and academic archives that can be opened directly from the website.",
     curriculumDocsCountLabel: "curriculum documents",
     curriculumDocsAsk: "Ask the chatbot about documents",
+    lamsamaKicker: "LAMSAMA",
+    lamsamaTitle: "Annual accreditation reports for the Applied Statistics Master's Program.",
+    lamsamaText: "Quality monitoring and accreditation follow-up archive with the Independent Accreditation Agency for Natural Sciences and Formal Sciences.",
+    lamsamaPeriodLabel: "Report period",
+    lamsamaCountLabel: "PDF reports",
+    lamsamaAssessmentLabel: "Site assessment",
+    lamsamaAsk: "Ask the chatbot about LAMSAMA",
+    lamsamaYearLabel: "Report year",
+    lamsamaSequenceLabel: "Year ",
+    lamsamaArchive: "Accreditation Report",
+    lamsamaOpen: "Open PDF report",
+    lamsamaAskDocument: "Ask chatbot",
+    noLamsamaReports: "LAMSAMA annual reports are not yet available.",
     curriculumDocPeriod: "Period",
     curriculumDocArchive: "PDF Archive",
     lectureEvalKicker: "Course Delivery Evaluation",
@@ -1183,6 +1215,7 @@ function applyLanguage() {
   });
   renderCourses();
   renderCurriculumDocs();
+  renderLamsamaReports();
   renderThesisGuides();
   renderSyllabus();
   renderRpsDocs();
@@ -1862,6 +1895,16 @@ function curriculumDocDescription(doc) {
   return currentLang === "en" ? doc.descriptionEn || doc.description : doc.descriptionId || doc.description;
 }
 
+function lamsamaReportTitle(report) {
+  return currentLang === "en" ? report.titleEn || report.title : report.titleId || report.title;
+}
+
+function lamsamaReportDescription(report) {
+  return currentLang === "en"
+    ? report.descriptionEn || report.descriptionId
+    : report.descriptionId || report.descriptionEn;
+}
+
 function pbmEvaluationTitle(doc) {
   return currentLang === "en" ? doc.titleEn || doc.title : doc.titleId || doc.title;
 }
@@ -2391,6 +2434,40 @@ function matchFact(question) {
   return null;
 }
 
+function buildLamsamaAnswer(question) {
+  const text = normalize(question);
+  if (!/lamsama|laporan tahunan akreditasi|annual accreditation report/.test(text)) return null;
+
+  const allReports = lamsamaReportsData?.reports || [];
+  const requestedYear = Number(text.match(/20\d{2}/)?.[0]);
+  const reports = requestedYear
+    ? allReports.filter((report) => Number(report.year) === requestedYear)
+    : allReports;
+  if (!reports.length) return null;
+
+  const answer = currentLang === "en"
+    ? [
+        "Available LAMSAMA annual accreditation reports:",
+        "",
+        ...reports.map((report) => `${report.year} (Year ${report.sequence}): ${report.titleEn || report.title}. ${report.pages || "-"} pages, ${formatFileSize(report.sizeKb)}. PDF: ${report.href}`),
+        "",
+        `Site assessment date: ${lamsamaReportsData?.assessmentDate || "25-26 November 2022"}.`
+      ].join("\n")
+    : [
+        "Laporan tahunan akreditasi LAMSAMA yang tersedia:",
+        "",
+        ...reports.map((report) => `${report.year} (tahun ke-${report.sequence}): ${report.titleId || report.title}. ${report.pages || "-"} halaman, ${formatFileSize(report.sizeKb)}. PDF: ${report.href}`),
+        "",
+        `Tanggal asesmen lapangan: ${lamsamaReportsData?.assessmentDate || "25-26 November 2022"}.`
+      ].join("\n");
+
+  return {
+    answer,
+    sources: reports.map((report) => ({ title: lamsamaReportTitle(report), url: report.href })),
+    mode: "Local knowledge base"
+  };
+}
+
 function buildLocalAnswer(question) {
   const capabilityAnswer = buildCapabilityAnswer(question);
   if (capabilityAnswer) return capabilityAnswer;
@@ -2405,6 +2482,7 @@ function buildLocalAnswer(question) {
   const structuredCurriculumDoc = buildCurriculumDocAnswer(question, hits);
   const structuredLectureEvaluation = buildLectureEvaluationAnswer(question, hits);
   const structuredPbmEvaluation = buildPbmEvaluationAnswer(question, hits);
+  const structuredLamsama = buildLamsamaAnswer(question);
   const structuredThesisGuide = buildThesisGuideAnswer(question);
 
   if (structuredS3) return structuredS3;
@@ -2415,6 +2493,7 @@ function buildLocalAnswer(question) {
   if (structuredCurriculumDoc) return structuredCurriculumDoc;
   if (structuredLectureEvaluation) return structuredLectureEvaluation;
   if (structuredPbmEvaluation) return structuredPbmEvaluation;
+  if (structuredLamsama) return structuredLamsama;
   if (structuredThesisGuide) return structuredThesisGuide;
 
   if (fact) {
@@ -3159,6 +3238,49 @@ function renderCurriculumDocs() {
     .join("");
 }
 
+function renderLamsamaReports() {
+  if (!lamsamaRows) return;
+  const reports = lamsamaReportsData?.reports || [];
+
+  if (lamsamaCount) lamsamaCount.textContent = String(reports.length);
+
+  if (!reports.length) {
+    lamsamaRows.innerHTML = `<p class="empty-note">${escapeHTML(t("noLamsamaReports"))}</p>`;
+    return;
+  }
+
+  lamsamaRows.innerHTML = reports
+    .map((report) => {
+      const title = lamsamaReportTitle(report);
+      const question = currentLang === "en"
+        ? `Explain the LAMSAMA annual accreditation report for ${report.year}`
+        : `Jelaskan laporan tahunan akreditasi LAMSAMA tahun ${report.year}`;
+      return `
+        <article class="lamsama-card">
+          <div class="lamsama-card-head">
+            <span class="badge">${escapeHTML(t("lamsamaArchive"))}</span>
+            <small>${escapeHTML(report.pages || "-")} ${escapeHTML(t("pages"))}</small>
+          </div>
+          <div class="lamsama-year">
+            <span>${escapeHTML(t("lamsamaYearLabel"))}</span>
+            <strong>${escapeHTML(report.year)}</strong>
+          </div>
+          <h3>${escapeHTML(title)}</h3>
+          <p>${escapeHTML(lamsamaReportDescription(report))}</p>
+          <div class="lamsama-card-meta">
+            <span>${escapeHTML(t("lamsamaSequenceLabel"))}${escapeHTML(report.sequence)}</span>
+            <span>${escapeHTML(report.format || "PDF")} · ${escapeHTML(formatFileSize(report.sizeKb))}</span>
+          </div>
+          <div class="lamsama-card-actions">
+            <a href="${escapeHTML(report.href)}" target="_blank" rel="noopener">${escapeHTML(t("lamsamaOpen"))}</a>
+            <button type="button" data-lamsama-q="${escapeHTML(question)}">${escapeHTML(t("lamsamaAskDocument"))}</button>
+          </div>
+        </article>
+      `;
+    })
+    .join("");
+}
+
 function renderLectureEvaluations() {
   if (!lectureEvaluationRows) return;
   const docs = lectureEvaluationsData?.documents || [];
@@ -3434,6 +3556,19 @@ async function loadCurriculumDocs() {
   renderCurriculumDocs();
 }
 
+async function loadLamsamaReports() {
+  try {
+    const response = await fetch("data/lamsama_reports.json", { cache: "no-store" });
+    if (!response.ok) throw new Error("Laporan tahunan LAMSAMA tidak dapat dimuat.");
+    const data = await response.json();
+    if (!data?.reports?.length) throw new Error("Laporan tahunan LAMSAMA kosong.");
+    lamsamaReportsData = data;
+  } catch (error) {
+    lamsamaReportsData = { total: 0, reports: [] };
+  }
+  renderLamsamaReports();
+}
+
 async function loadLectureEvaluations() {
   try {
     const response = await fetch("data/lecture_evaluations.json", { cache: "no-store" });
@@ -3608,6 +3743,11 @@ curriculumDocRows?.addEventListener("click", (event) => {
   if (!button) return;
   ask(button.dataset.curriculumDocQ);
 });
+lamsamaRows?.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-lamsama-q]");
+  if (!button) return;
+  ask(button.dataset.lamsamaQ);
+});
 lectureEvaluationRows?.addEventListener("click", (event) => {
   const button = event.target.closest("[data-lecture-evaluation-q]");
   if (!button) return;
@@ -3646,6 +3786,7 @@ loadTracerStudies();
 loadSpecialMoments();
 loadTestimonials();
 loadCurriculumDocs();
+loadLamsamaReports();
 loadLectureEvaluations();
 loadPbmEvaluations();
 loadAlumni();

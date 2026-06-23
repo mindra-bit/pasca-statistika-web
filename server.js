@@ -42,6 +42,10 @@ const curriculumDocsPath = path.join(__dirname, "data", "curriculum_docs.json");
 const curriculumDocs = fs.existsSync(curriculumDocsPath)
   ? JSON.parse(fs.readFileSync(curriculumDocsPath, "utf8"))
   : { total: 0, documents: [] };
+const lamsamaReportsPath = path.join(__dirname, "data", "lamsama_reports.json");
+const lamsamaReports = fs.existsSync(lamsamaReportsPath)
+  ? JSON.parse(fs.readFileSync(lamsamaReportsPath, "utf8"))
+  : { total: 0, reports: [] };
 const lectureEvaluationsPath = path.join(__dirname, "data", "lecture_evaluations.json");
 const lectureEvaluations = fs.existsSync(lectureEvaluationsPath)
   ? JSON.parse(fs.readFileSync(lectureEvaluationsPath, "utf8"))
@@ -1246,6 +1250,40 @@ function uniqueSources(sources) {
   return unique.slice(0, 6);
 }
 
+function lamsamaAnswer(question, language = "id") {
+  const text = normalize(question);
+  if (!/lamsama|laporan tahunan akreditasi|annual accreditation report/.test(text)) return null;
+
+  const allReports = lamsamaReports.reports || [];
+  const requestedYear = Number(text.match(/20\d{2}/)?.[0]);
+  const reports = requestedYear
+    ? allReports.filter((report) => Number(report.year) === requestedYear)
+    : allReports;
+  if (!reports.length) return null;
+
+  const answer = language === "en"
+    ? [
+        "Available LAMSAMA annual accreditation reports:",
+        "",
+        ...reports.map((report) => `${report.year} (Year ${report.sequence}): ${report.titleEn || report.title}. ${report.pages || "-"} pages, ${formatFileSize(report.sizeKb)}. PDF: ${report.href}`),
+        "",
+        `Site assessment date: ${lamsamaReports.assessmentDate || "25-26 November 2022"}.`
+      ].join("\n")
+    : [
+        "Laporan tahunan akreditasi LAMSAMA yang tersedia:",
+        "",
+        ...reports.map((report) => `${report.year} (tahun ke-${report.sequence}): ${report.titleId || report.title}. ${report.pages || "-"} halaman, ${formatFileSize(report.sizeKb)}. PDF: ${report.href}`),
+        "",
+        `Tanggal asesmen lapangan: ${lamsamaReports.assessmentDate || "25-26 November 2022"}.`
+      ].join("\n");
+
+  return {
+    answer,
+    sources: reports.map((report) => ({ title: language === "en" ? report.titleEn || report.title : report.titleId || report.title, url: report.href })),
+    mode: "Knowledge base server"
+  };
+}
+
 function localAnswer(question, language = "id") {
   const capabilities = capabilityAnswer(question, language);
   if (capabilities) return capabilities;
@@ -1260,6 +1298,7 @@ function localAnswer(question, language = "id") {
   const structuredCurriculumDoc = curriculumDocAnswer(question, hits, language);
   const structuredLectureEvaluation = lectureEvaluationAnswer(question, hits, language);
   const structuredPbmEvaluation = pbmEvaluationAnswer(question, hits, language);
+  const structuredLamsama = lamsamaAnswer(question, language);
   const structuredThesisGuide = thesisGuideAnswer(question);
 
   if (structuredS3) return structuredS3;
@@ -1270,6 +1309,7 @@ function localAnswer(question, language = "id") {
   if (structuredCurriculumDoc) return structuredCurriculumDoc;
   if (structuredLectureEvaluation) return structuredLectureEvaluation;
   if (structuredPbmEvaluation) return structuredPbmEvaluation;
+  if (structuredLamsama) return structuredLamsama;
   if (structuredThesisGuide) return structuredThesisGuide;
 
   if (fact) {
@@ -1340,6 +1380,7 @@ app.get("/api/health", (_req, res) => {
     specialMoments: specialMoments.totalPhotos || 0,
     specialMomentCohorts: specialMoments.totalCohorts || specialMoments.cohorts?.length || 0,
     curriculumDocs: curriculumDocs.total || curriculumDocs.documents?.length || 0,
+    lamsamaReports: lamsamaReports.total || lamsamaReports.reports?.length || 0,
     lectureEvaluations: lectureEvaluations.total || lectureEvaluations.documents?.length || 0,
     pbmEvaluations: pbmEvaluations.total || pbmEvaluations.documents?.length || 0,
     rpsDocs: rpsDocs.total || rpsDocs.documents?.length || 0,
@@ -1377,6 +1418,10 @@ app.get("/api/special-moments", (_req, res) => {
 
 app.get("/api/curriculum-docs", (_req, res) => {
   res.json(curriculumDocs);
+});
+
+app.get("/api/lamsama-reports", (_req, res) => {
+  res.json(lamsamaReports);
 });
 
 app.get("/api/lecture-evaluations", (_req, res) => {
