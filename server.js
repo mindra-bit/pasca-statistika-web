@@ -46,6 +46,10 @@ const lamsamaReportsPath = path.join(__dirname, "data", "lamsama_reports.json");
 const lamsamaReports = fs.existsSync(lamsamaReportsPath)
   ? JSON.parse(fs.readFileSync(lamsamaReportsPath, "utf8"))
   : { total: 0, reports: [] };
+const scholarshipsPath = path.join(__dirname, "data", "scholarships.json");
+const scholarships = fs.existsSync(scholarshipsPath)
+  ? JSON.parse(fs.readFileSync(scholarshipsPath, "utf8"))
+  : { total: 0, scholarships: [] };
 const lectureEvaluationsPath = path.join(__dirname, "data", "lecture_evaluations.json");
 const lectureEvaluations = fs.existsSync(lectureEvaluationsPath)
   ? JSON.parse(fs.readFileSync(lectureEvaluationsPath, "utf8"))
@@ -1284,7 +1288,47 @@ function lamsamaAnswer(question, language = "id") {
   };
 }
 
+function scholarshipAnswer(question, language = "id") {
+  const text = normalize(question);
+  if (!/beasiswa|scholarship|lpdp|knb|brin|unpad glow|visiting grant|asean scholarship|mobility grant/.test(text)) return null;
+
+  const allScholarships = scholarships.scholarships || [];
+  const selected = allScholarships.find((item) => {
+    const candidates = [item.id, item.title, item.titleId, item.titleEn].map(normalize).filter(Boolean);
+    return candidates.some((candidate) => candidate.length >= 3 && text.includes(candidate));
+  });
+  const available = selected ? [selected] : allScholarships;
+  if (!available.length) return null;
+
+  const itemTitle = (item) => language === "en" ? item.titleEn || item.title : item.titleId || item.title;
+  const itemCategory = (item) => language === "en" ? item.categoryEn || item.categoryId : item.categoryId || item.categoryEn;
+  const itemAudience = (item) => language === "en" ? item.audienceEn || item.audienceId : item.audienceId || item.audienceEn;
+  const itemDescription = (item) => language === "en" ? item.descriptionEn || item.descriptionId : item.descriptionId || item.descriptionEn;
+  const answer = language === "en"
+    ? [
+        "Scholarship and mobility opportunities:",
+        "",
+        ...available.map((item) => `${itemTitle(item)} - ${itemCategory(item)}. Audience: ${itemAudience(item)}. ${itemDescription(item)} Official website: ${item.url}`)
+      ].join("\n")
+    : [
+        "Peluang beasiswa dan mobilitas yang tersedia:",
+        "",
+        ...available.map((item) => `${itemTitle(item)} - ${itemCategory(item)}. Sasaran: ${itemAudience(item)}. ${itemDescription(item)} Situs resmi: ${item.url}`)
+      ].join("\n");
+
+  return {
+    answer,
+    sources: available.map((item) => ({ title: itemTitle(item), url: item.url })),
+    mode: "Knowledge base server"
+  };
+}
+
 function localAnswer(question, language = "id") {
+  const directScholarship = scholarshipAnswer(question, language);
+  if (directScholarship) return directScholarship;
+  const directLamsama = lamsamaAnswer(question, language);
+  if (directLamsama) return directLamsama;
+
   const capabilities = capabilityAnswer(question, language);
   if (capabilities) return capabilities;
 
@@ -1298,7 +1342,6 @@ function localAnswer(question, language = "id") {
   const structuredCurriculumDoc = curriculumDocAnswer(question, hits, language);
   const structuredLectureEvaluation = lectureEvaluationAnswer(question, hits, language);
   const structuredPbmEvaluation = pbmEvaluationAnswer(question, hits, language);
-  const structuredLamsama = lamsamaAnswer(question, language);
   const structuredThesisGuide = thesisGuideAnswer(question);
 
   if (structuredS3) return structuredS3;
@@ -1309,7 +1352,6 @@ function localAnswer(question, language = "id") {
   if (structuredCurriculumDoc) return structuredCurriculumDoc;
   if (structuredLectureEvaluation) return structuredLectureEvaluation;
   if (structuredPbmEvaluation) return structuredPbmEvaluation;
-  if (structuredLamsama) return structuredLamsama;
   if (structuredThesisGuide) return structuredThesisGuide;
 
   if (fact) {
@@ -1381,6 +1423,7 @@ app.get("/api/health", (_req, res) => {
     specialMomentCohorts: specialMoments.totalCohorts || specialMoments.cohorts?.length || 0,
     curriculumDocs: curriculumDocs.total || curriculumDocs.documents?.length || 0,
     lamsamaReports: lamsamaReports.total || lamsamaReports.reports?.length || 0,
+    scholarships: scholarships.total || scholarships.scholarships?.length || 0,
     lectureEvaluations: lectureEvaluations.total || lectureEvaluations.documents?.length || 0,
     pbmEvaluations: pbmEvaluations.total || pbmEvaluations.documents?.length || 0,
     rpsDocs: rpsDocs.total || rpsDocs.documents?.length || 0,
@@ -1424,6 +1467,10 @@ app.get("/api/lamsama-reports", (_req, res) => {
   res.json(lamsamaReports);
 });
 
+app.get("/api/scholarships", (_req, res) => {
+  res.json(scholarships);
+});
+
 app.get("/api/lecture-evaluations", (_req, res) => {
   res.json(lectureEvaluations);
 });
@@ -1444,6 +1491,9 @@ app.post("/api/chat", async (req, res) => {
   const question = String(req.body?.question || "").trim();
   const language = req.body?.language === "en" ? "en" : "id";
   if (!question) return res.status(400).json({ error: "Pertanyaan tidak boleh kosong." });
+
+  const indexedDirectAnswer = scholarshipAnswer(question, language) || lamsamaAnswer(question, language);
+  if (indexedDirectAnswer) return res.json(indexedDirectAnswer);
 
   const capabilities = capabilityAnswer(question, language);
   if (capabilities) return res.json(capabilities);

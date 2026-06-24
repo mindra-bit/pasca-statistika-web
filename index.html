@@ -6,7 +6,7 @@
   <title>Pasca Sarjana Statistika FMIPA UNPAD</title>
   <meta name="description" content="Website profesional Pasca Sarjana Statistika FMIPA Universitas Padjadjaran untuk Program S2 Statistika Terapan dan S3 Statistika." />
   <link rel="preload" href="assets/campus-hero.jpg" as="image" />
-  <link rel="stylesheet" href="assets/site.css?v=lamsama-reports-20260623" />
+  <link rel="stylesheet" href="assets/site.css?v=scholarships-20260624" />
 </head>
 <body>
   <div class="topbar">
@@ -85,6 +85,7 @@
         </div>
         <nav class="workspace-menu-list workspace-menu-s2">
           <a href="#program-profile" data-program-select="s2" data-workspace-target="program-profile" data-i18n="workspaceProgramProfile">Program Profile</a>
+          <a href="#beasiswa" data-program-select="s2" data-workspace-target="beasiswa" data-i18n="workspaceScholarships">Beasiswa</a>
           <a href="#lamsama" data-program-select="s2" data-workspace-target="lamsama" data-i18n="workspaceLamsama">LAMSAMA</a>
           <a href="#kurikulum" data-program-select="s2" data-workspace-target="kurikulum" data-i18n="workspaceCurriculum">Struktur Kurikulum</a>
           <a href="#dokumen-kurikulum" data-program-select="s2" data-workspace-target="dokumen-kurikulum" data-i18n="workspaceCurriculumDocs">Dokumen Kurikulum</a>
@@ -426,6 +427,30 @@
             </article>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section scholarship-section" id="beasiswa">
+      <div class="container">
+        <div class="scholarship-hero">
+          <div>
+            <p class="section-kicker" data-i18n="scholarshipKicker">Beasiswa dan Mobilitas</p>
+            <h2 data-i18n="scholarshipTitle">Peluang pendanaan studi, riset, dan mobilitas global.</h2>
+            <p data-i18n="scholarshipText">Akses cepat menuju program beasiswa nasional, internasional, pendanaan riset, dan mobilitas yang relevan bagi komunitas pascasarjana.</p>
+          </div>
+          <div class="scholarship-summary">
+            <strong id="scholarshipCount">6</strong>
+            <span data-i18n="scholarshipCountLabel">program tersedia</span>
+            <small data-i18n="scholarshipCoverage">Studi · Riset · Mobilitas</small>
+          </div>
+        </div>
+
+        <div class="scholarship-note">
+          <p data-i18n="scholarshipNote">Jadwal pendaftaran, cakupan pendanaan, dan persyaratan mengikuti informasi terbaru dari masing-masing penyelenggara.</p>
+          <button type="button" data-q-id="Beasiswa apa saja yang tersedia untuk mahasiswa S2 Statistika Terapan?" data-q-en="Which scholarships are available for Applied Statistics master's students?" data-i18n="scholarshipAsk">Tanyakan beasiswa ke chatbot</button>
+        </div>
+
+        <div class="scholarship-grid" id="scholarshipRows" aria-live="polite"></div>
       </div>
     </section>
 
@@ -1065,6 +1090,6 @@
     </div>
   </footer>
 
-  <script src="assets/app.js?v=lamsama-reports-20260623" defer></script>
+  <script src="assets/app.js?v=scholarships-20260624" defer></script>
 </body>
 </html>

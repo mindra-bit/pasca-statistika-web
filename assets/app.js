@@ -129,6 +129,7 @@ let specialMomentsData = null;
 let testimonialsData = null;
 let curriculumDocsData = null;
 let lamsamaReportsData = null;
+let scholarshipsData = null;
 let lectureEvaluationsData = null;
 let pbmEvaluationsData = null;
 let rpsDocsData = null;
@@ -202,6 +203,8 @@ const curriculumDocRows = document.getElementById("curriculumDocRows");
 const curriculumDocCount = document.getElementById("curriculumDocCount");
 const lamsamaRows = document.getElementById("lamsamaRows");
 const lamsamaCount = document.getElementById("lamsamaCount");
+const scholarshipRows = document.getElementById("scholarshipRows");
+const scholarshipCount = document.getElementById("scholarshipCount");
 const lectureEvaluationRows = document.getElementById("lectureEvaluationRows");
 const lectureEvaluationCount = document.getElementById("lectureEvaluationCount");
 const pbmEvaluationRows = document.getElementById("pbmEvaluationRows");
@@ -217,6 +220,7 @@ const workspaceLayout = document.getElementById("program-workspace");
 const workspacePanelIds = [
   "kalender-akademik",
   "program-profile",
+  "beasiswa",
   "lamsama",
   "kurikulum",
   "dokumen-kurikulum",
@@ -265,6 +269,7 @@ const I18N = {
     workspaceMenuTitle: "Menu Program",
     workspaceAcademicCalendar: "Kalender Akademik",
     workspaceProgramProfile: "Program Profile",
+    workspaceScholarships: "Beasiswa",
     workspaceLamsama: "LAMSAMA",
     workspaceVisionMission: "Visi dan Misi",
     workspaceGraduateProfile: "Profil Lulusan",
@@ -296,7 +301,7 @@ const I18N = {
     heroS3: "Web S3",
     frontS2Title: "S2 Statistika Terapan",
     frontS2Accreditation: "Akreditasi UNGGUL",
-    frontS2Text: "Informasi kurikulum OBE 2026, laporan LAMSAMA, silabus, RPS, materi kuliah, panduan tesis, lulusan, tracer study, dan komentar pengunjung.",
+    frontS2Text: "Informasi kurikulum OBE 2026, beasiswa, laporan LAMSAMA, silabus, RPS, materi kuliah, panduan tesis, lulusan, dan tracer study.",
     frontS2Meta: "Magister",
     frontS2Open: "Buka Informasi S2",
     frontS3Title: "S3 Statistika",
@@ -419,6 +424,18 @@ const I18N = {
     lamsamaOpen: "Buka laporan PDF",
     lamsamaAskDocument: "Tanya chatbot",
     noLamsamaReports: "Laporan tahunan LAMSAMA belum tersedia.",
+    scholarshipKicker: "Beasiswa dan Mobilitas",
+    scholarshipTitle: "Peluang pendanaan studi, riset, dan mobilitas global.",
+    scholarshipText: "Akses cepat menuju program beasiswa nasional, internasional, pendanaan riset, dan mobilitas yang relevan bagi komunitas pascasarjana.",
+    scholarshipCountLabel: "program tersedia",
+    scholarshipCoverage: "Studi · Riset · Mobilitas",
+    scholarshipNote: "Jadwal pendaftaran, cakupan pendanaan, dan persyaratan mengikuti informasi terbaru dari masing-masing penyelenggara.",
+    scholarshipAsk: "Tanyakan beasiswa ke chatbot",
+    scholarshipAudience: "Sasaran",
+    scholarshipOfficial: "Kunjungi situs resmi",
+    scholarshipAskProgram: "Tanya chatbot",
+    scholarshipOfficialSite: "Situs resmi",
+    noScholarships: "Informasi beasiswa belum tersedia.",
     curriculumDocPeriod: "Periode",
     curriculumDocArchive: "Arsip PDF",
     pbmEvalKicker: "Evaluasi PBM",
@@ -670,6 +687,7 @@ const I18N = {
     workspaceMenuTitle: "Program Menu",
     workspaceAcademicCalendar: "Academic Calendar",
     workspaceProgramProfile: "Program Profile",
+    workspaceScholarships: "Scholarships",
     workspaceLamsama: "LAMSAMA",
     workspaceVisionMission: "Vision and Mission",
     workspaceGraduateProfile: "Graduate Profile",
@@ -701,7 +719,7 @@ const I18N = {
     heroS3: "S3 Site",
     frontS2Title: "Applied Statistics Master's Program",
     frontS2Accreditation: "UNGGUL Accreditation",
-    frontS2Text: "Information on the 2026 OBE curriculum, LAMSAMA reports, syllabi, RPS, course materials, thesis guides, graduates, tracer studies, and visitor comments.",
+    frontS2Text: "Information on the 2026 OBE curriculum, scholarships, LAMSAMA reports, syllabi, RPS, course materials, thesis guides, graduates, and tracer studies.",
     frontS2Meta: "Master's",
     frontS2Open: "Open S2 Information",
     frontS3Title: "Doctoral Program in Statistics",
@@ -813,6 +831,18 @@ const I18N = {
     lamsamaOpen: "Open PDF report",
     lamsamaAskDocument: "Ask chatbot",
     noLamsamaReports: "LAMSAMA annual reports are not yet available.",
+    scholarshipKicker: "Scholarships and Mobility",
+    scholarshipTitle: "Funding opportunities for study, research, and global mobility.",
+    scholarshipText: "Quick access to national and international scholarships, research funding, and mobility opportunities relevant to the graduate community.",
+    scholarshipCountLabel: "available programs",
+    scholarshipCoverage: "Study · Research · Mobility",
+    scholarshipNote: "Application dates, funding coverage, and eligibility requirements follow the latest information from each provider.",
+    scholarshipAsk: "Ask the chatbot about scholarships",
+    scholarshipAudience: "Audience",
+    scholarshipOfficial: "Visit official website",
+    scholarshipAskProgram: "Ask chatbot",
+    scholarshipOfficialSite: "Official website",
+    noScholarships: "Scholarship information is not yet available.",
     curriculumDocPeriod: "Period",
     curriculumDocArchive: "PDF Archive",
     lectureEvalKicker: "Course Delivery Evaluation",
@@ -1216,6 +1246,7 @@ function applyLanguage() {
   renderCourses();
   renderCurriculumDocs();
   renderLamsamaReports();
+  renderScholarships();
   renderThesisGuides();
   renderSyllabus();
   renderRpsDocs();
@@ -1905,6 +1936,22 @@ function lamsamaReportDescription(report) {
     : report.descriptionId || report.descriptionEn;
 }
 
+function scholarshipTitle(item) {
+  return currentLang === "en" ? item.titleEn || item.title : item.titleId || item.title;
+}
+
+function scholarshipDescription(item) {
+  return currentLang === "en" ? item.descriptionEn || item.descriptionId : item.descriptionId || item.descriptionEn;
+}
+
+function scholarshipCategory(item) {
+  return currentLang === "en" ? item.categoryEn || item.categoryId : item.categoryId || item.categoryEn;
+}
+
+function scholarshipAudience(item) {
+  return currentLang === "en" ? item.audienceEn || item.audienceId : item.audienceId || item.audienceEn;
+}
+
 function pbmEvaluationTitle(doc) {
   return currentLang === "en" ? doc.titleEn || doc.title : doc.titleId || doc.title;
 }
@@ -2468,7 +2515,43 @@ function buildLamsamaAnswer(question) {
   };
 }
 
+function buildScholarshipAnswer(question) {
+  const text = normalize(question);
+  if (!/beasiswa|scholarship|lpdp|knb|brin|unpad glow|visiting grant|asean scholarship|mobility grant/.test(text)) return null;
+
+  const allScholarships = scholarshipsData?.scholarships || [];
+  const selected = allScholarships.find((item) => {
+    const candidates = [item.id, item.title, item.titleId, item.titleEn].map(normalize).filter(Boolean);
+    return candidates.some((candidate) => candidate.length >= 3 && text.includes(candidate));
+  });
+  const scholarships = selected ? [selected] : allScholarships;
+  if (!scholarships.length) return null;
+
+  const answer = currentLang === "en"
+    ? [
+        "Scholarship and mobility opportunities:",
+        "",
+        ...scholarships.map((item) => `${scholarshipTitle(item)} - ${scholarshipCategory(item)}. Audience: ${scholarshipAudience(item)}. ${scholarshipDescription(item)} Official website: ${item.url}`)
+      ].join("\n")
+    : [
+        "Peluang beasiswa dan mobilitas yang tersedia:",
+        "",
+        ...scholarships.map((item) => `${scholarshipTitle(item)} - ${scholarshipCategory(item)}. Sasaran: ${scholarshipAudience(item)}. ${scholarshipDescription(item)} Situs resmi: ${item.url}`)
+      ].join("\n");
+
+  return {
+    answer,
+    sources: scholarships.map((item) => ({ title: scholarshipTitle(item), url: item.url })),
+    mode: "Local knowledge base"
+  };
+}
+
 function buildLocalAnswer(question) {
+  const directScholarship = buildScholarshipAnswer(question);
+  if (directScholarship) return directScholarship;
+  const directLamsama = buildLamsamaAnswer(question);
+  if (directLamsama) return directLamsama;
+
   const capabilityAnswer = buildCapabilityAnswer(question);
   if (capabilityAnswer) return capabilityAnswer;
 
@@ -2482,7 +2565,6 @@ function buildLocalAnswer(question) {
   const structuredCurriculumDoc = buildCurriculumDocAnswer(question, hits);
   const structuredLectureEvaluation = buildLectureEvaluationAnswer(question, hits);
   const structuredPbmEvaluation = buildPbmEvaluationAnswer(question, hits);
-  const structuredLamsama = buildLamsamaAnswer(question);
   const structuredThesisGuide = buildThesisGuideAnswer(question);
 
   if (structuredS3) return structuredS3;
@@ -2493,7 +2575,6 @@ function buildLocalAnswer(question) {
   if (structuredCurriculumDoc) return structuredCurriculumDoc;
   if (structuredLectureEvaluation) return structuredLectureEvaluation;
   if (structuredPbmEvaluation) return structuredPbmEvaluation;
-  if (structuredLamsama) return structuredLamsama;
   if (structuredThesisGuide) return structuredThesisGuide;
 
   if (fact) {
@@ -3281,6 +3362,48 @@ function renderLamsamaReports() {
     .join("");
 }
 
+function renderScholarships() {
+  if (!scholarshipRows) return;
+  const scholarships = scholarshipsData?.scholarships || [];
+
+  if (scholarshipCount) scholarshipCount.textContent = String(scholarships.length);
+
+  if (!scholarships.length) {
+    scholarshipRows.innerHTML = `<p class="empty-note">${escapeHTML(t("noScholarships"))}</p>`;
+    return;
+  }
+
+  scholarshipRows.innerHTML = scholarships
+    .map((item) => {
+      const title = scholarshipTitle(item);
+      const question = currentLang === "en"
+        ? `Explain the ${title} opportunity and provide its official link`
+        : `Jelaskan peluang ${title} dan berikan tautan resminya`;
+      return `
+        <article class="scholarship-card">
+          <a class="scholarship-media" href="${escapeHTML(item.url)}" target="_blank" rel="noopener" aria-label="${escapeHTML(t("scholarshipOfficial"))}: ${escapeHTML(title)}">
+            <img src="${escapeHTML(item.image)}" alt="${escapeHTML(title)}" loading="lazy" decoding="async" />
+            <span>${escapeHTML(t("scholarshipOfficialSite"))}</span>
+          </a>
+          <div class="scholarship-card-copy">
+            <span class="badge">${escapeHTML(scholarshipCategory(item))}</span>
+            <h3>${escapeHTML(title)}</h3>
+            <p>${escapeHTML(scholarshipDescription(item))}</p>
+            <div class="scholarship-audience">
+              <span>${escapeHTML(t("scholarshipAudience"))}</span>
+              <strong>${escapeHTML(scholarshipAudience(item))}</strong>
+            </div>
+            <div class="scholarship-actions">
+              <a href="${escapeHTML(item.url)}" target="_blank" rel="noopener">${escapeHTML(t("scholarshipOfficial"))}</a>
+              <button type="button" data-scholarship-q="${escapeHTML(question)}">${escapeHTML(t("scholarshipAskProgram"))}</button>
+            </div>
+          </div>
+        </article>
+      `;
+    })
+    .join("");
+}
+
 function renderLectureEvaluations() {
   if (!lectureEvaluationRows) return;
   const docs = lectureEvaluationsData?.documents || [];
@@ -3569,6 +3692,19 @@ async function loadLamsamaReports() {
   renderLamsamaReports();
 }
 
+async function loadScholarships() {
+  try {
+    const response = await fetch("data/scholarships.json", { cache: "no-store" });
+    if (!response.ok) throw new Error("Informasi beasiswa tidak dapat dimuat.");
+    const data = await response.json();
+    if (!data?.scholarships?.length) throw new Error("Informasi beasiswa kosong.");
+    scholarshipsData = data;
+  } catch (error) {
+    scholarshipsData = { total: 0, scholarships: [] };
+  }
+  renderScholarships();
+}
+
 async function loadLectureEvaluations() {
   try {
     const response = await fetch("data/lecture_evaluations.json", { cache: "no-store" });
@@ -3748,6 +3884,11 @@ lamsamaRows?.addEventListener("click", (event) => {
   if (!button) return;
   ask(button.dataset.lamsamaQ);
 });
+scholarshipRows?.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-scholarship-q]");
+  if (!button) return;
+  ask(button.dataset.scholarshipQ);
+});
 lectureEvaluationRows?.addEventListener("click", (event) => {
   const button = event.target.closest("[data-lecture-evaluation-q]");
   if (!button) return;
@@ -3787,6 +3928,7 @@ loadSpecialMoments();
 loadTestimonials();
 loadCurriculumDocs();
 loadLamsamaReports();
+loadScholarships();
 loadLectureEvaluations();
 loadPbmEvaluations();
 loadAlumni();
