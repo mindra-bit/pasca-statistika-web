@@ -34,6 +34,10 @@ const tracerStudiesPath = path.join(__dirname, "data", "tracer_studies.json");
 const tracerStudies = fs.existsSync(tracerStudiesPath)
   ? JSON.parse(fs.readFileSync(tracerStudiesPath, "utf8"))
   : { total: 0, reports: [], years: [] };
+const graduateUserSatisfactionPath = path.join(__dirname, "data", "graduate_user_satisfaction.json");
+const graduateUserSatisfaction = fs.existsSync(graduateUserSatisfactionPath)
+  ? JSON.parse(fs.readFileSync(graduateUserSatisfactionPath, "utf8"))
+  : { total: 0, reports: [], years: [] };
 const specialMomentsPath = path.join(__dirname, "data", "special_moments.json");
 const specialMoments = fs.existsSync(specialMomentsPath)
   ? JSON.parse(fs.readFileSync(specialMomentsPath, "utf8"))
@@ -212,14 +216,17 @@ function expandQuestion(question) {
   if (/(tracer|tacer|waktu tunggu|pekerjaan pertama|serapan lulusan|bekerja sebelum lulus)/.test(text)) {
     expansions.push("tracer study tracer studi waktu tunggu pekerjaan pertama serapan lulusan respons lulusan bekerja sebelum lulus");
   }
+  if (/(kepuasan pengguna|pengguna lulusan|user satisfaction|graduate user|employer satisfaction|survei pengguna)/.test(text)) {
+    expansions.push("kepuasan pengguna lulusan survei pengguna lulusan user satisfaction graduate user employer satisfaction mutu lulusan");
+  }
   if (/(special moment|momen|foto angkatan|galeri|gallery|dokumentasi)/.test(text)) {
     expansions.push("special moment momen galeri foto angkatan cohort dokumentasi kebersamaan mahasiswa");
   }
   if (/(dokumen kurikulum|file kurikulum|pdf kurikulum|arsip kurikulum|kurikulum 2020|kurikulum 2021|kurikulum 2022|kurikulum 2023|kurikulum 2024|kurikulum 2025|kurikulum 2026|curriculum document|curriculum pdf)/.test(text)) {
     expansions.push("dokumen kurikulum file kurikulum pdf kurikulum arsip kurikulum curriculum document curriculum pdf 2020 2021 2022 2023 2024 2025 2026");
   }
-  if (/(evaluasi pbm|pbm|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|teaching learning evaluation)/.test(text)) {
-    expansions.push("evaluasi pbm evaluasi pembelajaran proses belajar mengajar mutu akademik dokumen evaluasi semester ganjil genap learning evaluation teaching learning evaluation");
+  if (/(evaluasi pbm|pbm|pbm dosen|evaluasi dosen|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|lecturer evaluation|teaching learning evaluation)/.test(text)) {
+    expansions.push("evaluasi pbm dosen evaluasi pembelajaran evaluasi dosen proses belajar mengajar mutu akademik dokumen evaluasi semester ganjil genap learning evaluation lecturer evaluation teaching learning evaluation");
   }
 
   return [question, ...expansions].join(" ");
@@ -239,10 +246,11 @@ function scoreChunk(question, chunk) {
   const asksMaterial = /materi|bahan ajar|modul|html|katalog|slide|pertemuan|file kuliah/.test(normalizedQuestion)
     && !/silabus|sylabus|rps/.test(normalizedQuestion);
   const asksTracer = /tracer|tacer|waktu tunggu|pekerjaan pertama|serapan lulusan|bekerja sebelum lulus/.test(normalizedQuestion);
+  const asksGraduateUser = /kepuasan pengguna|pengguna lulusan|user satisfaction|graduate user|employer satisfaction|survei pengguna/.test(normalizedQuestion);
   const asksSpecialMoment = /special moment|momen|foto angkatan|galeri|gallery|dokumentasi/.test(normalizedQuestion);
   const asksCurriculumDoc = /dokumen kurikulum|file kurikulum|pdf kurikulum|arsip kurikulum|curriculum document|curriculum pdf|buka kurikulum|download kurikulum|unduh kurikulum/.test(normalizedQuestion);
   const asksLectureEvaluation = /evaluasi pelaksanaan perkuliahan|evaluasi perkuliahan|monitoring perkuliahan|monitoring mahasiswa|pertemuan perkuliahan|sesi perkuliahan|course delivery evaluation|course evaluation|student monitoring/.test(normalizedQuestion);
-  const asksPbmEvaluation = /evaluasi pbm|pbm|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|teaching learning evaluation|buka evaluasi|download evaluasi|unduh evaluasi/.test(normalizedQuestion);
+  const asksPbmEvaluation = /evaluasi pbm|pbm|pbm dosen|evaluasi dosen|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|lecturer evaluation|teaching learning evaluation|buka evaluasi|download evaluasi|unduh evaluasi/.test(normalizedQuestion);
   const asksRpsDoc = /rps|rencana pembelajaran semester|course plan|semester learning plan|buka rps|download rps|unduh rps/.test(normalizedQuestion);
   const asksS3 = /s3|doktor|doctoral|doctorate|program doktor|statistika doktor|web s3|disertasi|promosi doktor|pnd|und|spd|diseminasi nasional|diseminasi internasional/.test(normalizedQuestion);
 
@@ -256,6 +264,8 @@ function scoreChunk(question, chunk) {
   if (asksMaterial && chunk.id?.startsWith("syllabus-")) score -= 40;
   if (asksTracer && chunk.id?.startsWith("tracer-study-")) score += 170;
   if (asksTracer && chunk.id?.startsWith("syllabus-")) score -= 60;
+  if (asksGraduateUser && chunk.id?.startsWith("graduate-user-satisfaction-")) score += 190;
+  if (asksGraduateUser && chunk.id?.startsWith("tracer-study-")) score += 35;
   if (asksSpecialMoment && chunk.id?.startsWith("special-moment-")) score += 175;
   if (asksSpecialMoment && chunk.id?.startsWith("syllabus-")) score -= 60;
   if (asksCurriculumDoc && chunk.id?.startsWith("curriculum-doc-")) score += 180;
@@ -324,6 +334,16 @@ function scoreChunk(question, chunk) {
     }
     const specificPhrase = specificTokens.join(" ");
     if (specificPhrase.length > 4 && metadata.includes(specificPhrase)) score += 60;
+  }
+
+  if (chunk.id?.startsWith("graduate-user-satisfaction-")) {
+    const metadata = normalize([chunk.id, chunk.sourceTitle, chunk.title, chunk.text].join(" "));
+    const specificTokens = tokens.filter((token) => !genericQueryTerms.has(token));
+    for (const token of specificTokens) {
+      if (hasWholeToken(metadata, token)) score += 24;
+    }
+    const specificPhrase = specificTokens.join(" ");
+    if (specificPhrase.length > 4 && metadata.includes(specificPhrase)) score += 76;
   }
 
   if (chunk.id?.startsWith("special-moment-")) {
@@ -453,9 +473,9 @@ function capabilityAnswer(question, language = "id") {
       "I can answer questions using the website knowledge base, including:",
       "1. 2026 curriculum, credits, study pathways, RPL, CPL, and graduate profiles.",
       "2. Course syllabi, RPS/course plan PDFs, topics, references, and HTML learning materials.",
-      "3. Thesis guides, SUR, SKR, and Master's Final Defense.",
+      "3. Academic guides, thesis guides, SUR, SKR, and Master's Final Defense.",
       "4. S3 Statistics information: vision, mission, objectives, graduate profiles, CPL, academic documents, and doctoral RPS files.",
-      "5. Graduate thesis data, tracer study reports, Special Moment gallery, curriculum PDF archives, course delivery evaluation reports, PBM evaluation documents, fees, and SMUP admissions.",
+      "5. Graduate thesis data, tracer study reports, graduate user satisfaction reports, LAMSAMA documents, Special Moment gallery, curriculum PDF archives, course delivery evaluation reports, PBM-Lecturer Evaluation documents, fees, and SMUP admissions.",
       "",
       client
         ? "Generative API mode is active, but answers remain grounded in the program knowledge base."
@@ -465,9 +485,9 @@ function capabilityAnswer(question, language = "id") {
       "Saya bisa menjawab pertanyaan berdasarkan knowledge base website, terutama:",
       "1. Kurikulum 2026, SKS, jalur studi, RPL, CPL, dan profil lulusan.",
       "2. Silabus mata kuliah, PDF RPS, bahan kajian, referensi, dan materi HTML.",
-      "3. Panduan tesis, SUR, SKR, dan Sidang Akhir Magister.",
+      "3. Panduan akademik, panduan tesis, SUR, SKR, dan Sidang Akhir Magister.",
       "4. Informasi S3 Statistika: visi, misi, tujuan, profil lulusan, CPL, dokumen akademik, dan RPS doktoral.",
-      "5. Data tesis lulusan, tracer study, Special Moment, arsip PDF kurikulum, Evaluasi Pelaksanaan Perkuliahan, dokumen Evaluasi PBM, biaya, dan pendaftaran SMUP.",
+      "5. Data tesis lulusan, tracer study, laporan kepuasan pengguna lulusan, dokumen LAMSAMA, Special Moment, arsip PDF kurikulum, Evaluasi Pelaksanaan Perkuliahan, dokumen Evaluasi PBM-Dosen, biaya, dan pendaftaran SMUP.",
       "",
       client
         ? "Mode API generatif sedang aktif, tetapi jawaban tetap ditambatkan pada knowledge base prodi."
@@ -702,6 +722,80 @@ function tracerStudyAnswer(question, hits = []) {
   };
 }
 
+function graduateUserReportTitle(report, language = "id") {
+  return language === "en" ? report.titleEn || report.title : report.titleId || report.title;
+}
+
+function graduateUserReportDescription(report, language = "id") {
+  return language === "en"
+    ? report.descriptionEn || report.descriptionId
+    : report.descriptionId || report.descriptionEn;
+}
+
+function graduateUserReportLevel(report, language = "id") {
+  return language === "en" ? report.levelEn || report.level : report.level || report.levelEn;
+}
+
+function findGraduateUserReport(question) {
+  const docs = graduateUserSatisfaction.reports || [];
+  const text = normalize(question);
+  const requestedYear = text.match(/20\d{2}/)?.[0];
+  if (requestedYear) {
+    const byYear = docs.find((doc) => String(doc.year) === requestedYear);
+    if (byYear) return byYear;
+  }
+
+  if (/prodi|program/.test(text)) {
+    const byProgram = docs.find((doc) => normalize(doc.level).includes("prodi") || normalize(doc.levelEn).includes("program"));
+    if (byProgram) return byProgram;
+  }
+
+  if (/fakultas|faculty|fmipa/.test(text)) {
+    const byFaculty = docs.find((doc) => normalize(doc.level).includes("fakultas") || normalize(doc.levelEn).includes("faculty"));
+    if (byFaculty) return byFaculty;
+  }
+
+  return null;
+}
+
+function graduateUserSatisfactionAnswer(question, hits = [], language = "id") {
+  const text = normalize(question);
+  const asksGraduateUser = /kepuasan pengguna|pengguna lulusan|user satisfaction|graduate user|employer satisfaction|survei pengguna/.test(text)
+    || hits.some((hit) => String(hit.id || "").startsWith("graduate-user-satisfaction-"));
+  if (!asksGraduateUser) return null;
+
+  const selected = findGraduateUserReport(question);
+  const reports = selected ? [selected] : (graduateUserSatisfaction.reports || []);
+  if (!reports.length) return null;
+
+  const answer = reports
+    .map((report) => {
+      if (language === "en") {
+        return [
+          `${graduateUserReportTitle(report, language)}: ${graduateUserReportDescription(report, language)}`,
+          `Level: ${graduateUserReportLevel(report, language)}.`,
+          `Year: ${report.year}.`,
+          `Format: ${report.format || "PDF"}${report.pages ? `, ${report.pages} pages` : ""}.`,
+          `Report: ${report.href}`
+        ].join("\n");
+      }
+      return [
+        `${graduateUserReportTitle(report, language)}: ${graduateUserReportDescription(report, language)}`,
+        `Level: ${graduateUserReportLevel(report, language)}.`,
+        `Tahun: ${report.year}.`,
+        `Format: ${report.format || "PDF"}${report.pages ? `, ${report.pages} halaman` : ""}.`,
+        `Laporan: ${report.href}`
+      ].join("\n");
+    })
+    .join("\n\n");
+
+  return {
+    answer,
+    sources: reports.map((report) => ({ title: graduateUserReportTitle(report, language), url: report.href })),
+    mode: "Knowledge base server"
+  };
+}
+
 function curriculumDocTitle(doc, language = "id") {
   return language === "en" ? doc.titleEn || doc.title : doc.titleId || doc.title;
 }
@@ -711,11 +805,17 @@ function curriculumDocDescription(doc, language = "id") {
 }
 
 function pbmEvaluationTitle(doc, language = "id") {
-  return language === "en" ? doc.titleEn || doc.title : doc.titleId || doc.title;
+  const rawTitle = language === "en" ? doc.titleEn || doc.title : doc.titleId || doc.title;
+  return language === "en"
+    ? String(rawTitle).replace(/^Learning Evaluation/i, "PBM-Lecturer Evaluation")
+    : String(rawTitle).replace(/^Evaluasi PBM/i, "Evaluasi PBM-Dosen");
 }
 
 function pbmEvaluationDescription(doc, language = "id") {
-  return language === "en" ? doc.descriptionEn || doc.description : doc.descriptionId || doc.description;
+  const rawDescription = language === "en" ? doc.descriptionEn || doc.description : doc.descriptionId || doc.description;
+  return language === "en"
+    ? String(rawDescription).replace(/^Learning evaluation document/i, "PBM-Lecturer Evaluation document")
+    : String(rawDescription).replace(/^Dokumen evaluasi pembelajaran/i, "Dokumen Evaluasi PBM-Dosen");
 }
 
 function lectureEvaluationTitle(doc, language = "id") {
@@ -1131,7 +1231,7 @@ function lectureEvaluationAnswer(question, hits = [], language = "id") {
         return [
           `${lectureEvaluationTitle(doc, language)}: ${lectureEvaluationDescription(doc, language)}`,
           `Purpose: session-by-session monitoring from session ${doc.sessions || "1-16"}.`,
-          `This is different from PBM evaluations conducted at the end of the semester.`,
+          `This is different from PBM-Lecturer Evaluation conducted at the end of the semester.`,
           `HTML report: ${doc.href}`,
           `Student monitoring form: ${doc.monitoringUrl || lectureEvaluations.monitoringUrl || ""}`
         ].join("\n");
@@ -1139,7 +1239,7 @@ function lectureEvaluationAnswer(question, hits = [], language = "id") {
       return [
         `${lectureEvaluationTitle(doc, language)}: ${lectureEvaluationDescription(doc, language)}`,
         `Tujuan: monitoring perkuliahan per sesi/pertemuan, sesi ${doc.sessions || "1-16"}.`,
-        `Ini berbeda dari Evaluasi PBM yang dilakukan pada akhir semester.`,
+        `Ini berbeda dari Evaluasi PBM-Dosen yang dilakukan pada akhir semester.`,
         `Laporan HTML: ${doc.href}`,
         `Form monitoring mahasiswa: ${doc.monitoringUrl || lectureEvaluations.monitoringUrl || ""}`
       ].join("\n");
@@ -1155,7 +1255,7 @@ function lectureEvaluationAnswer(question, hits = [], language = "id") {
 
 function pbmEvaluationAnswer(question, hits = [], language = "id") {
   const text = normalize(question);
-  const asksPbmEvaluation = /evaluasi pbm|pbm|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|teaching learning evaluation|buka evaluasi|download evaluasi|unduh evaluasi/.test(text);
+  const asksPbmEvaluation = /evaluasi pbm|pbm|pbm dosen|evaluasi dosen|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|lecturer evaluation|teaching learning evaluation|buka evaluasi|download evaluasi|unduh evaluasi/.test(text);
   if (!asksPbmEvaluation) return null;
 
   const asksSpecific = /\b20\d{2}\b|ganjil|genap|odd|even/.test(text);
@@ -1201,9 +1301,10 @@ function matchFact(question) {
   const asksSyllabus = /silabus|sylabus|rps|referensi mata kuliah|topik kuliah|bahan kajian/.test(text);
   const asksMaterial = /materi|bahan ajar|modul|html|katalog|slide|pertemuan|file kuliah/.test(text);
   const asksTracer = /tracer|tacer|waktu tunggu|pekerjaan pertama|serapan lulusan|bekerja sebelum lulus/.test(text);
+  const asksGraduateUser = /kepuasan pengguna|pengguna lulusan|user satisfaction|graduate user|employer satisfaction|survei pengguna/.test(text);
   const asksCurriculumDoc = /dokumen kurikulum|file kurikulum|pdf kurikulum|arsip kurikulum|curriculum document|curriculum pdf|buka kurikulum|download kurikulum|unduh kurikulum/.test(text);
   const asksLectureEvaluation = /evaluasi pelaksanaan perkuliahan|evaluasi perkuliahan|monitoring perkuliahan|monitoring mahasiswa|pertemuan perkuliahan|sesi perkuliahan|course delivery evaluation|course evaluation|student monitoring/.test(text);
-  const asksPbmEvaluation = /evaluasi pbm|pbm|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|teaching learning evaluation|buka evaluasi|download evaluasi|unduh evaluasi/.test(text);
+  const asksPbmEvaluation = /evaluasi pbm|pbm|pbm dosen|evaluasi dosen|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|lecturer evaluation|teaching learning evaluation|buka evaluasi|download evaluasi|unduh evaluasi/.test(text);
   const asksS3 = /s3|doktor|doctoral|doctorate|program doktor|statistika doktor|web s3|disertasi|promosi doktor|pnd|und|spd|diseminasi nasional|diseminasi internasional/.test(text);
   const asksThesisGuide = (
     (/tesis/.test(text) && /panduan|penulisan|format|pelaksanaan|proposal|naskah|bimbingan|penguji|sidang|seminar|sur|skr|sam/.test(text))
@@ -1219,6 +1320,7 @@ function matchFact(question) {
   if (asksSyllabus) return null;
   if (asksMaterial) return null;
   if (asksTracer) return null;
+  if (asksGraduateUser) return null;
   if (asksCurriculumDoc) return null;
   if (asksLectureEvaluation) return null;
   if (asksPbmEvaluation) return null;
@@ -1254,9 +1356,22 @@ function uniqueSources(sources) {
   return unique.slice(0, 6);
 }
 
+function lamsamaReportTitle(report, language = "id") {
+  return language === "en" ? report.titleEn || report.title : report.titleId || report.title;
+}
+
+function lamsamaReportSequenceLabel(report, language = "id") {
+  if (report.sequenceLabelId || report.sequenceLabelEn) {
+    return language === "en"
+      ? report.sequenceLabelEn || report.sequenceLabelId
+      : report.sequenceLabelId || report.sequenceLabelEn;
+  }
+  return language === "en" ? `Year ${report.sequence || "-"}` : `tahun ke-${report.sequence || "-"}`;
+}
+
 function lamsamaAnswer(question, language = "id") {
   const text = normalize(question);
-  if (!/lamsama|laporan tahunan akreditasi|annual accreditation report/.test(text)) return null;
+  if (!/lamsama|akreditasi lamsama|laporan tahunan akreditasi|hasil asesmen|asesmen lamsama|annual accreditation report|assessment result/.test(text)) return null;
 
   const allReports = lamsamaReports.reports || [];
   const requestedYear = Number(text.match(/20\d{2}/)?.[0]);
@@ -1267,23 +1382,23 @@ function lamsamaAnswer(question, language = "id") {
 
   const answer = language === "en"
     ? [
-        "Available LAMSAMA annual accreditation reports:",
+        "Available LAMSAMA accreditation documents:",
         "",
-        ...reports.map((report) => `${report.year} (Year ${report.sequence}): ${report.titleEn || report.title}. ${report.pages || "-"} pages, ${formatFileSize(report.sizeKb)}. PDF: ${report.href}`),
+        ...reports.map((report) => `${report.year} (${lamsamaReportSequenceLabel(report, language)}): ${lamsamaReportTitle(report, language)}. ${report.pages || "-"} pages, ${formatFileSize(report.sizeKb)}. PDF: ${report.href}`),
         "",
         `Site assessment date: ${lamsamaReports.assessmentDate || "25-26 November 2022"}.`
       ].join("\n")
     : [
-        "Laporan tahunan akreditasi LAMSAMA yang tersedia:",
+        "Dokumen akreditasi LAMSAMA yang tersedia:",
         "",
-        ...reports.map((report) => `${report.year} (tahun ke-${report.sequence}): ${report.titleId || report.title}. ${report.pages || "-"} halaman, ${formatFileSize(report.sizeKb)}. PDF: ${report.href}`),
+        ...reports.map((report) => `${report.year} (${lamsamaReportSequenceLabel(report, language)}): ${lamsamaReportTitle(report, language)}. ${report.pages || "-"} halaman, ${formatFileSize(report.sizeKb)}. PDF: ${report.href}`),
         "",
         `Tanggal asesmen lapangan: ${lamsamaReports.assessmentDate || "25-26 November 2022"}.`
       ].join("\n");
 
   return {
     answer,
-    sources: reports.map((report) => ({ title: language === "en" ? report.titleEn || report.title : report.titleId || report.title, url: report.href })),
+    sources: reports.map((report) => ({ title: lamsamaReportTitle(report, language), url: report.href })),
     mode: "Knowledge base server"
   };
 }
@@ -1323,35 +1438,67 @@ function scholarshipAnswer(question, language = "id") {
   };
 }
 
+function academicGuideAnswer(question, language = "id") {
+  const text = normalize(question);
+  if (!/panduan akademik|dokumen akademik|sop akademik|academic guide|academic document|academic sop/.test(text)) return null;
+
+  const href = "%40SOP/DOKUMEN%20AKADEMIK%20S2.pdf";
+  const answer = language === "en"
+    ? [
+        "The S2 Academic Guide is available as a PDF document.",
+        "Document: S2 Academic Document.",
+        "Pages: 54 pages.",
+        "File size: 9.7 MB.",
+        `PDF: ${href}`
+      ].join("\n")
+    : [
+        "Panduan Akademik S2 tersedia sebagai dokumen PDF.",
+        "Dokumen: Dokumen Akademik S2.",
+        "Jumlah halaman: 54 halaman.",
+        "Ukuran file: 9.7 MB.",
+        `PDF: ${href}`
+      ].join("\n");
+
+  return {
+    answer,
+    sources: [{ title: language === "en" ? "S2 Academic Document" : "Dokumen Akademik S2", url: href }],
+    mode: "Knowledge base server"
+  };
+}
+
 function localAnswer(question, language = "id") {
   const directScholarship = scholarshipAnswer(question, language);
   if (directScholarship) return directScholarship;
   const directLamsama = lamsamaAnswer(question, language);
   if (directLamsama) return directLamsama;
+  const directAcademicGuide = academicGuideAnswer(question, language);
+  if (directAcademicGuide) return directAcademicGuide;
 
   const capabilities = capabilityAnswer(question, language);
   if (capabilities) return capabilities;
 
   const fact = matchFact(question);
   const hits = retrieve(question, 5);
+  const structuredLectureEvaluation = lectureEvaluationAnswer(question, hits, language);
+  const structuredPbmEvaluation = pbmEvaluationAnswer(question, hits, language);
   const structuredS3 = s3Answer(question, hits, language);
   const structuredRpsDoc = rpsDocAnswer(question, hits, language);
   const structuredSyllabus = syllabusAnswer(question, hits);
   const structuredMaterial = materialAnswer(question, hits);
+  const structuredGraduateUser = graduateUserSatisfactionAnswer(question, hits, language);
   const structuredTracerStudy = tracerStudyAnswer(question, hits);
   const structuredCurriculumDoc = curriculumDocAnswer(question, hits, language);
-  const structuredLectureEvaluation = lectureEvaluationAnswer(question, hits, language);
-  const structuredPbmEvaluation = pbmEvaluationAnswer(question, hits, language);
   const structuredThesisGuide = thesisGuideAnswer(question);
 
+  if (structuredLectureEvaluation) return structuredLectureEvaluation;
+  if (structuredPbmEvaluation) return structuredPbmEvaluation;
+  if (structuredGraduateUser) return structuredGraduateUser;
   if (structuredS3) return structuredS3;
   if (structuredRpsDoc) return structuredRpsDoc;
   if (structuredSyllabus) return structuredSyllabus;
   if (structuredMaterial) return structuredMaterial;
   if (structuredTracerStudy) return structuredTracerStudy;
   if (structuredCurriculumDoc) return structuredCurriculumDoc;
-  if (structuredLectureEvaluation) return structuredLectureEvaluation;
-  if (structuredPbmEvaluation) return structuredPbmEvaluation;
   if (structuredThesisGuide) return structuredThesisGuide;
 
   if (fact) {
@@ -1369,8 +1516,8 @@ function localAnswer(question, language = "id") {
   if (!hits.length) {
     return {
       answer: language === "en"
-        ? "I have not found that information in the program knowledge base. I can answer the curriculum, syllabi, RPS/course plan PDFs, HTML learning materials, thesis guides, graduate data, tracer studies, curriculum documents, course delivery evaluations, PBM evaluations, fees, and admissions that have been indexed. Free-form answers outside this knowledge base require enabling a generative AI API on the server."
-        : "Saya belum menemukan informasi tersebut dalam knowledge base prodi. Saat ini saya bisa menjawab kurikulum, silabus, PDF RPS, materi HTML, panduan tesis, data lulusan, tracer study, dokumen kurikulum, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM, biaya, dan pendaftaran yang sudah terindeks. Jawaban bebas di luar knowledge base memerlukan API AI generatif yang aktif di server.",
+        ? "I have not found that information in the program knowledge base. I can answer the curriculum, syllabi, RPS/course plan PDFs, HTML learning materials, academic guides, thesis guides, graduate data, tracer studies, graduate user satisfaction reports, curriculum documents, course delivery evaluations, PBM-Lecturer Evaluation, fees, and admissions that have been indexed. Free-form answers outside this knowledge base require enabling a generative AI API on the server."
+        : "Saya belum menemukan informasi tersebut dalam knowledge base prodi. Saat ini saya bisa menjawab kurikulum, silabus, PDF RPS, materi HTML, panduan akademik, panduan tesis, data lulusan, tracer study, laporan kepuasan pengguna lulusan, dokumen kurikulum, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM-Dosen, biaya, dan pendaftaran yang sudah terindeks. Jawaban bebas di luar knowledge base memerlukan API AI generatif yang aktif di server.",
       sources: [],
       mode: "Knowledge base server"
     };
@@ -1386,17 +1533,19 @@ function localAnswer(question, language = "id") {
           ? "Saya menemukan informasi Web S3 Statistika yang relevan:"
         : hits[0]?.id?.startsWith("tracer-study-")
           ? "Saya menemukan laporan tracer study yang relevan:"
-          : hits[0]?.id?.startsWith("special-moment-")
-            ? "Saya menemukan galeri Special Moment yang relevan:"
-            : hits[0]?.id?.startsWith("curriculum-doc-")
-              ? "Saya menemukan dokumen kurikulum yang relevan:"
-              : hits[0]?.id?.startsWith("lecture-evaluation-")
-                ? "Saya menemukan laporan Evaluasi Pelaksanaan Perkuliahan yang relevan:"
-                : hits[0]?.id?.startsWith("pbm-evaluation-")
-                  ? "Saya menemukan dokumen Evaluasi PBM yang relevan:"
-                  : hits[0]?.id?.startsWith("rps-doc-")
-                    ? "Saya menemukan dokumen RPS yang relevan:"
-                    : "Saya menemukan potongan knowledge base yang relevan:";
+          : hits[0]?.id?.startsWith("graduate-user-satisfaction-")
+            ? "Saya menemukan laporan kepuasan pengguna lulusan yang relevan:"
+            : hits[0]?.id?.startsWith("special-moment-")
+              ? "Saya menemukan galeri Special Moment yang relevan:"
+              : hits[0]?.id?.startsWith("curriculum-doc-")
+                ? "Saya menemukan dokumen kurikulum yang relevan:"
+                : hits[0]?.id?.startsWith("lecture-evaluation-")
+                  ? "Saya menemukan laporan Evaluasi Pelaksanaan Perkuliahan yang relevan:"
+                  : hits[0]?.id?.startsWith("pbm-evaluation-")
+                    ? "Saya menemukan dokumen Evaluasi PBM-Dosen yang relevan:"
+                    : hits[0]?.id?.startsWith("rps-doc-")
+                      ? "Saya menemukan dokumen RPS yang relevan:"
+                      : "Saya menemukan potongan knowledge base yang relevan:";
   const answer = [
     intro,
     "",
@@ -1419,6 +1568,7 @@ app.get("/api/health", (_req, res) => {
     materials: materials.total || materials.materials?.length || 0,
     thesisGuides: thesisGuides.total || thesisGuides.guides?.length || 0,
     tracerStudies: tracerStudies.total || tracerStudies.reports?.length || 0,
+    graduateUserSatisfaction: graduateUserSatisfaction.total || graduateUserSatisfaction.reports?.length || 0,
     specialMoments: specialMoments.totalPhotos || 0,
     specialMomentCohorts: specialMoments.totalCohorts || specialMoments.cohorts?.length || 0,
     curriculumDocs: curriculumDocs.total || curriculumDocs.documents?.length || 0,
@@ -1453,6 +1603,10 @@ app.get("/api/thesis-guides", (_req, res) => {
 
 app.get("/api/tracer-studies", (_req, res) => {
   res.json(tracerStudies);
+});
+
+app.get("/api/graduate-user-satisfaction", (_req, res) => {
+  res.json(graduateUserSatisfaction);
 });
 
 app.get("/api/special-moments", (_req, res) => {
@@ -1492,7 +1646,9 @@ app.post("/api/chat", async (req, res) => {
   const language = req.body?.language === "en" ? "en" : "id";
   if (!question) return res.status(400).json({ error: "Pertanyaan tidak boleh kosong." });
 
-  const indexedDirectAnswer = scholarshipAnswer(question, language) || lamsamaAnswer(question, language);
+  const indexedDirectAnswer = scholarshipAnswer(question, language)
+    || lamsamaAnswer(question, language)
+    || academicGuideAnswer(question, language);
   if (indexedDirectAnswer) return res.json(indexedDirectAnswer);
 
   const capabilities = capabilityAnswer(question, language);
@@ -1500,14 +1656,15 @@ app.post("/api/chat", async (req, res) => {
 
   const fact = matchFact(question);
   const hits = retrieve(question, 8);
-  const directAnswer = s3Answer(question, hits, language)
+  const directAnswer = lectureEvaluationAnswer(question, hits, language)
+    || pbmEvaluationAnswer(question, hits, language)
+    || graduateUserSatisfactionAnswer(question, hits, language)
+    || s3Answer(question, hits, language)
     || rpsDocAnswer(question, hits, language)
     || syllabusAnswer(question, hits)
     || materialAnswer(question, hits)
     || tracerStudyAnswer(question, hits)
     || curriculumDocAnswer(question, hits, language)
-    || lectureEvaluationAnswer(question, hits, language)
-    || pbmEvaluationAnswer(question, hits, language)
     || thesisGuideAnswer(question);
 
   if (directAnswer) {
@@ -1543,7 +1700,7 @@ app.post("/api/chat", async (req, res) => {
         "Jangan mengarang biaya, jadwal PMB, link pendaftaran, atau RPL.",
         "Jika pengguna menanyakan RPS, arahkan ke PDF RPS yang relevan. Jika pengguna menanyakan silabus, susun jawaban dari deskripsi, bahan kajian, dan referensi yang tersedia.",
         "Jika pengguna menanyakan S3 Statistika, Program Doktor, CPL doktoral, profil lulusan doktor, atau RPS S3, jawab berdasarkan konteks Web S3 Statistika.",
-        "Jika pengguna menanyakan panduan tesis, format penulisan tesis, SUR, SKR, atau SAM, jawab berdasarkan konteks Panduan Penulisan Tesis dan Panduan Pelaksanaan Tesis.",
+        "Jika pengguna menanyakan panduan akademik atau SOP akademik, arahkan ke Dokumen Akademik S2 di folder @SOP. Jika pengguna menanyakan panduan tesis, format penulisan tesis, SUR, SKR, atau SAM, jawab berdasarkan konteks Panduan Penulisan Tesis dan Panduan Pelaksanaan Tesis.",
         "Jika pengguna menanyakan dokumen kurikulum atau PDF kurikulum, arahkan ke dokumen kurikulum yang relevan dari konteks.",
         language === "en"
           ? "Use professional, concise English and include page or source references when available."

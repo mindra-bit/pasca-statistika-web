@@ -3,13 +3,36 @@
   "organization": "Lembaga Akreditasi Mandiri Sains Alam dan Ilmu Formal",
   "assessmentDate": "25-26 November 2022",
   "generatedAt": "2026-06-23T07:44:09.681Z",
-  "total": 3,
+  "total": 4,
   "years": [
+    2022,
     2023,
     2024,
     2025
   ],
   "reports": [
+    {
+      "id": "lamsama-asesmen-2022",
+      "type": "assessment",
+      "year": 2022,
+      "sequence": "Asesmen",
+      "badgeId": "Hasil Asesmen",
+      "badgeEn": "Assessment Result",
+      "periodLabelId": "Tanggal asesmen",
+      "periodLabelEn": "Assessment date",
+      "sequenceLabelId": "Dokumen asesmen",
+      "sequenceLabelEn": "Assessment document",
+      "title": "Laporan Hasil Asesmen LAMSAMA",
+      "titleId": "Laporan Hasil Asesmen LAMSAMA",
+      "titleEn": "LAMSAMA Assessment Result Report",
+      "descriptionId": "Laporan hasil asesmen LAMSAMA Program S2 Statistika Terapan FMIPA Universitas Padjadjaran.",
+      "descriptionEn": "Assessment result report from LAMSAMA for the Applied Statistics Master's Program, FMIPA Universitas Padjadjaran.",
+      "file": "05 - Laporan Hasil Asesmen LAMSAMA-S2-Stat-Terapan-Unpad.pdf",
+      "href": "%40LAMSAMA/05%20-%20Laporan%20Hasil%20Asesmen%20LAMSAMA-S2-Stat-Terapan-Unpad.pdf",
+      "format": "PDF",
+      "pages": 17,
+      "sizeKb": 436
+    },
     {
       "id": "lamsama-2025",
       "year": 2025,

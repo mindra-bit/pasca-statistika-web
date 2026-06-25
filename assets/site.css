@@ -944,6 +944,8 @@ h1 {
 .workspace-panels > .academic-calendar-section,
 .workspace-panels > .scholarship-section,
 .workspace-panels > .lamsama-section,
+.workspace-panels > .academic-guide-section,
+.workspace-panels > .evaluation-section,
 .workspace-panels > .lecture-evaluation-section,
 .workspace-panels > .pbm-evaluation-section,
 .workspace-panels > .rps-section,
@@ -1033,6 +1035,87 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
+}
+
+.curriculum-section {
+  background:
+    linear-gradient(180deg, #fffaf0, #ffffff 44%, #f4fbf8),
+    var(--surface);
+}
+
+.curriculum-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.curriculum-hub-card {
+  position: relative;
+  display: grid;
+  align-content: start;
+  min-height: 128px;
+  gap: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(221, 210, 193, 0.96);
+  border-radius: 8px;
+  padding: 18px;
+  color: var(--ink);
+  text-decoration: none;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.92)),
+    linear-gradient(135deg, rgba(14, 107, 88, 0.12), rgba(242, 169, 0, 0.18));
+  box-shadow: 0 14px 30px rgba(23, 23, 23, 0.07);
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.curriculum-hub-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 5px;
+  background: linear-gradient(90deg, var(--green), var(--gold));
+}
+
+.curriculum-hub-card.primary::before {
+  background: linear-gradient(90deg, var(--blue), var(--green), var(--gold));
+}
+
+.curriculum-hub-card.accent::before {
+  background: linear-gradient(90deg, var(--gold), var(--red));
+}
+
+.curriculum-hub-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(14, 107, 88, 0.38);
+  box-shadow: 0 18px 36px rgba(23, 23, 23, 0.1);
+}
+
+.curriculum-hub-card span {
+  margin-top: 8px;
+  color: var(--ink);
+  font-size: 18px;
+  font-weight: 950;
+  line-height: 1.15;
+}
+
+.curriculum-hub-card small {
+  color: var(--ink-soft);
+  font-size: 12px;
+  font-weight: 780;
+  line-height: 1.45;
+}
+
+.curriculum-structure-panel {
+  scroll-margin-top: 16px;
+  border: 1px solid rgba(221, 210, 193, 0.85);
+  border-radius: 8px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.74);
+}
+
+.section-head-compact {
+  margin-bottom: 18px;
 }
 
 .info-card,
@@ -1261,6 +1344,37 @@ p {
 .guide-actions button:hover {
   border-color: var(--green);
   color: var(--green);
+}
+
+.academic-guide-section {
+  background:
+    linear-gradient(180deg, #f7fbf9, #ffffff 48%, #fff8eb),
+    var(--surface);
+}
+
+.academic-guide-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.academic-guide-card {
+  max-width: 760px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.96)),
+    linear-gradient(135deg, rgba(242, 169, 0, 0.18), rgba(14, 107, 88, 0.14));
+}
+
+.evaluation-section {
+  background:
+    linear-gradient(180deg, #f7fbf9, #ffffff 46%, #fff8eb),
+    var(--surface);
+}
+
+.evaluation-hub-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.evaluation-hub-card {
+  min-height: 176px;
 }
 
 .academic-calendar-section {
@@ -2048,7 +2162,7 @@ p {
 
 .lamsama-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
 }
 
@@ -2072,6 +2186,15 @@ p {
   inset: 0 0 auto;
   height: 5px;
   background: linear-gradient(90deg, #143d5d, var(--green), var(--gold));
+}
+
+.lamsama-card.assessment::before {
+  background: linear-gradient(90deg, var(--gold), #fff0b6, var(--green));
+}
+
+.lamsama-card.assessment .lamsama-card-head .badge {
+  color: #211600;
+  background: linear-gradient(135deg, var(--gold), #fff0b6);
 }
 
 .lamsama-card-head,
@@ -2974,6 +3097,45 @@ tbody tr:hover td {
   transform: translateY(-1px);
 }
 
+.tracer-subsection {
+  display: grid;
+  gap: 14px;
+  margin-top: 20px;
+  border: 1px solid rgba(221, 210, 193, 0.9);
+  border-radius: 8px;
+  padding: 20px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.99)),
+    var(--paper);
+  box-shadow: 0 14px 34px rgba(23, 23, 23, 0.06);
+}
+
+.tracer-subsection-users {
+  background:
+    linear-gradient(180deg, rgba(247, 251, 249, 0.96), rgba(255, 255, 255, 0.99)),
+    var(--surface);
+}
+
+.tracer-subsection-head {
+  display: grid;
+  gap: 6px;
+  max-width: 920px;
+}
+
+.tracer-subsection-head h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(24px, 2.6vw, 34px);
+  line-height: 1.12;
+}
+
+.tracer-subsection-head p:last-child {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
 .tracer-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -3002,6 +3164,15 @@ tbody tr:hover td {
   inset: 0 0 auto;
   height: 5px;
   background: linear-gradient(90deg, var(--green), var(--gold));
+}
+
+.tracer-card.user-satisfaction-card::before {
+  background: linear-gradient(90deg, #143d5d, #2f8f75, #f2a900);
+}
+
+.tracer-card.user-satisfaction-card .badge {
+  color: #fff;
+  background: #143d5d;
 }
 
 .tracer-year {
@@ -4886,6 +5057,8 @@ tbody tr:hover td {
   }
 
   .path-grid,
+  .curriculum-hub-grid,
+  .evaluation-hub-grid,
   .role-grid,
   .vision-mission-grid,
   .guide-grid,
@@ -5061,6 +5234,8 @@ tbody tr:hover td {
   .program-front-grid,
   .program-menu-front,
   .path-grid,
+  .curriculum-hub-grid,
+  .evaluation-hub-grid,
   .role-grid,
   .vision-mission-grid,
   .guide-grid,

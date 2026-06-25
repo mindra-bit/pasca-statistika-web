@@ -1,0 +1,60 @@
+{
+  "source": "@Laporan Kepuasan Pengguna",
+  "generatedAt": "2026-06-25T00:00:00.000Z",
+  "total": 3,
+  "years": [
+    2022,
+    2024,
+    2025
+  ],
+  "reports": [
+    {
+      "id": "pengguna-lulusan-prodi-2025",
+      "year": 2025,
+      "level": "Prodi",
+      "levelEn": "Program",
+      "title": "Laporan Kepuasan Pengguna Lulusan Level Prodi 2025",
+      "titleId": "Laporan Kepuasan Pengguna Lulusan Level Prodi 2025",
+      "titleEn": "Graduate User Satisfaction Report - Program Level 2025",
+      "descriptionId": "Laporan analisis survei kepuasan pengguna terhadap lulusan S2 Statistika Terapan FMIPA Universitas Padjadjaran.",
+      "descriptionEn": "Analysis report of user satisfaction survey toward Applied Statistics master's graduates at FMIPA Universitas Padjadjaran.",
+      "file": "Level Prodi-LaporanKepPengguna 2025.html",
+      "href": "%40Laporan%20Kepuasan%20Pengguna/Level%20Prodi-LaporanKepPengguna%202025.html",
+      "format": "HTML",
+      "pages": null,
+      "sizeKb": 2517
+    },
+    {
+      "id": "pengguna-lulusan-fakultas-2024",
+      "year": 2024,
+      "level": "Fakultas",
+      "levelEn": "Faculty",
+      "title": "Laporan Survei Kepuasan Pengguna FMIPA Unpad 2024",
+      "titleId": "Laporan Survei Kepuasan Pengguna FMIPA Unpad 2024",
+      "titleEn": "FMIPA Unpad Graduate User Satisfaction Survey Report 2024",
+      "descriptionId": "Laporan survei kepuasan pengguna lulusan pada level fakultas sebagai rujukan mutu lulusan FMIPA Unpad.",
+      "descriptionEn": "Faculty-level graduate user satisfaction survey report as a graduate quality reference for FMIPA Unpad.",
+      "file": "Level Fakutlas - Laporan Survei Kepuasan Pengguna FMIPA Unpad 2024.pdf",
+      "href": "%40Laporan%20Kepuasan%20Pengguna/Level%20Fakutlas%20-%20Laporan%20Survei%20Kepuasan%20Pengguna%20FMIPA%20Unpad%202024.pdf",
+      "format": "PDF",
+      "pages": 17,
+      "sizeKb": 2637
+    },
+    {
+      "id": "pengguna-lulusan-fakultas-2022",
+      "year": 2022,
+      "level": "Fakultas",
+      "levelEn": "Faculty",
+      "title": "Laporan Survei Kepuasan Pengguna FMIPA Unpad 2022",
+      "titleId": "Laporan Survei Kepuasan Pengguna FMIPA Unpad 2022",
+      "titleEn": "FMIPA Unpad Graduate User Satisfaction Survey Report 2022",
+      "descriptionId": "Laporan survei kepuasan pengguna lulusan pada level fakultas sebagai rujukan evaluasi mutu lulusan FMIPA Unpad.",
+      "descriptionEn": "Faculty-level graduate user satisfaction survey report as a graduate quality evaluation reference for FMIPA Unpad.",
+      "file": "Level Fakutlas - Laporan Survei Kepuasan Pengguna FMIPA Unpad 2022.pdf",
+      "href": "%40Laporan%20Kepuasan%20Pengguna/Level%20Fakutlas%20-%20Laporan%20Survei%20Kepuasan%20Pengguna%20FMIPA%20Unpad%202022.pdf",
+      "format": "PDF",
+      "pages": 17,
+      "sizeKb": 2925
+    }
+  ]
+}

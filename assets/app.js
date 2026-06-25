@@ -125,6 +125,7 @@ let alumniData = null;
 let materialsData = null;
 let thesisGuidesData = null;
 let tracerStudiesData = null;
+let graduateUserSatisfactionData = null;
 let specialMomentsData = null;
 let testimonialsData = null;
 let curriculumDocsData = null;
@@ -192,6 +193,8 @@ const thesisGuideRows = document.getElementById("thesisGuideRows");
 const thesisGuideCount = document.getElementById("thesisGuideCount");
 const tracerStudyRows = document.getElementById("tracerStudyRows");
 const tracerStudyCount = document.getElementById("tracerStudyCount");
+const graduateUserRows = document.getElementById("graduateUserRows");
+const graduateUserCount = document.getElementById("graduateUserCount");
 const specialMomentSummary = document.getElementById("specialMomentSummary");
 const specialMomentTabs = document.getElementById("specialMomentTabs");
 const specialMomentRows = document.getElementById("specialMomentRows");
@@ -229,6 +232,8 @@ const workspacePanelIds = [
   "rps",
   "materi",
   "panduan-tesis",
+  "panduan-akademik",
+  "evaluasi",
   "evaluasi-perkuliahan",
   "evaluasi-pbm",
   "lulusan",
@@ -238,6 +243,21 @@ const workspacePanelIds = [
   "web-s3",
   "komentar",
   "chatbot"
+];
+const curriculumPanelIds = [
+  "kurikulum",
+  "dokumen-kurikulum",
+  "mata-kuliah",
+  "silabus",
+  "rps",
+  "materi",
+  "panduan-tesis",
+  "panduan-akademik"
+];
+const evaluationPanelIds = [
+  "evaluasi",
+  "evaluasi-perkuliahan",
+  "evaluasi-pbm"
 ];
 let activeWorkspaceProgram = "none";
 let activePanelScrollTarget = "";
@@ -275,15 +295,17 @@ const I18N = {
     workspaceGraduateProfile: "Profil Lulusan",
     programProfileCombinedTitle: "Profil lengkap S2 Statistika Terapan.",
     programProfileCombinedText: "Ringkasan profil program, visi misi, dan profil lulusan ditempatkan dalam satu panel agar informasi awal S2 langsung utuh saat dibuka.",
-    workspaceCurriculum: "Struktur Kurikulum",
+    workspaceCurriculum: "Kurikulum",
     workspaceCurriculumDocs: "Dokumen Kurikulum",
     workspaceCourses: "Daftar Mata Kuliah",
     workspaceSyllabus: "Silabus Mata Kuliah",
     workspaceRps: "RPS Mata Kuliah",
     workspaceMaterials: "Materi Mata Kuliah",
     workspaceThesisGuide: "Panduan Tesis",
+    workspaceAcademicGuide: "Panduan Akademik",
+    workspaceEvaluation: "Evaluasi",
     workspaceLectureEvaluation: "Evaluasi Perkuliahan",
-    workspacePbmEvaluation: "Evaluasi PBM",
+    workspacePbmEvaluation: "Evaluasi PBM-Dosen",
     workspaceGraduates: "Lulusan & Tesis",
     workspaceTracer: "Tracer Studi",
     workspaceSpecialMoment: "Special Moment",
@@ -301,7 +323,7 @@ const I18N = {
     heroS3: "Web S3",
     frontS2Title: "S2 Statistika Terapan",
     frontS2Accreditation: "Akreditasi UNGGUL",
-    frontS2Text: "Informasi kurikulum OBE 2026, beasiswa, laporan LAMSAMA, silabus, RPS, materi kuliah, panduan tesis, lulusan, dan tracer study.",
+    frontS2Text: "Informasi kurikulum OBE 2026, beasiswa, laporan LAMSAMA, silabus, RPS, materi kuliah, panduan akademik, panduan tesis, lulusan, dan tracer study.",
     frontS2Meta: "Magister",
     frontS2Open: "Buka Informasi S2",
     frontS3Title: "S3 Statistika",
@@ -341,9 +363,26 @@ const I18N = {
     curriculumKicker: "Struktur Kurikulum",
     curriculumTitle: "Struktur 42 SKS dengan jalur kuliah, riset, dan RPL.",
     curriculumText: "Kurikulum OBE 2026 dirancang untuk memperkuat penguasaan teori, kemampuan analitik, kompetensi riset, rekognisi pembelajaran, dan publikasi ilmiah.",
+    curriculumHubKicker: "Kurikulum",
+    curriculumHubTitle: "Pusat akses Kurikulum S2 Statistika Terapan.",
+    curriculumHubText: "Struktur kurikulum, dokumen resmi, daftar mata kuliah, silabus, RPS, materi, dan panduan akademik ditempatkan dalam satu pintu akses agar lebih mudah ditelusuri.",
+    curriculumHubStructure: "Struktur Kurikulum",
+    curriculumHubStructureText: "Jalur kuliah, riset, RPL, dan beban SKS",
+    curriculumHubDocsText: "Arsip PDF kurikulum 2020-2026",
+    curriculumHubCoursesText: "Daftar mata kuliah, SKS, dan kelompok",
+    curriculumHubSyllabusText: "Deskripsi, bahan kajian, dan referensi",
+    curriculumHubRpsText: "Dokumen RPS wajib dan pilihan",
+    curriculumHubMaterialsText: "Materi HTML, ringkasan, dan kontrak",
+    curriculumHubThesisText: "Penulisan dan pelaksanaan tesis",
+    curriculumHubAcademicGuideText: "SOP dan dokumen akademik S2",
+    evaluationHubKicker: "Evaluasi",
+    evaluationHubTitle: "Pusat akses evaluasi akademik S2.",
+    evaluationHubText: "Evaluasi perkuliahan dan Evaluasi PBM-Dosen dipisahkan sesuai tujuan, tetapi ditempatkan dalam satu pintu akses agar mudah ditemukan.",
+    evaluationHubLectureText: "Monitoring pelaksanaan perkuliahan sesi 1-16 dan form evaluasi mahasiswa",
+    evaluationHubPbmText: "Arsip evaluasi proses belajar mengajar dan kinerja dosen per semester",
     lectureEvalKicker: "Evaluasi Pelaksanaan Perkuliahan",
     lectureEvalTitle: "Monitoring perkuliahan setiap sesi 1-16.",
-    lectureEvalText: "Blok ini berisi laporan evaluasi pelaksanaan perkuliahan per sesi/pertemuan. Ini berbeda dari Evaluasi PBM yang dilakukan pada akhir semester.",
+    lectureEvalText: "Blok ini berisi laporan evaluasi pelaksanaan perkuliahan per sesi/pertemuan. Ini berbeda dari Evaluasi PBM-Dosen yang dilakukan pada akhir semester.",
     lectureEvalCtaLabel: "Form Monitoring Mahasiswa",
     lectureEvalCtaText: "Isi Evaluasi Ganjil MStat",
     lectureEvalCountLabel: "laporan HTML",
@@ -412,10 +451,10 @@ const I18N = {
     curriculumDocsCountLabel: "dokumen kurikulum",
     curriculumDocsAsk: "Tanyakan dokumen ke chatbot",
     lamsamaKicker: "LAMSAMA",
-    lamsamaTitle: "Laporan tahunan akreditasi S2 Statistika Terapan.",
-    lamsamaText: "Arsip pemantauan mutu dan tindak lanjut akreditasi bersama Lembaga Akreditasi Mandiri Sains Alam dan Ilmu Formal.",
+    lamsamaTitle: "Dokumen akreditasi LAMSAMA S2 Statistika Terapan.",
+    lamsamaText: "Arsip hasil asesmen, pemantauan mutu, dan tindak lanjut akreditasi bersama Lembaga Akreditasi Mandiri Sains Alam dan Ilmu Formal.",
     lamsamaPeriodLabel: "Periode laporan",
-    lamsamaCountLabel: "laporan PDF",
+    lamsamaCountLabel: "dokumen PDF",
     lamsamaAssessmentLabel: "Asesmen lapangan",
     lamsamaAsk: "Tanyakan LAMSAMA ke chatbot",
     lamsamaYearLabel: "Tahun laporan",
@@ -423,7 +462,8 @@ const I18N = {
     lamsamaArchive: "Laporan Akreditasi",
     lamsamaOpen: "Buka laporan PDF",
     lamsamaAskDocument: "Tanya chatbot",
-    noLamsamaReports: "Laporan tahunan LAMSAMA belum tersedia.",
+    lamsamaAssessmentDoc: "Dokumen asesmen",
+    noLamsamaReports: "Dokumen LAMSAMA belum tersedia.",
     scholarshipKicker: "Beasiswa dan Mobilitas",
     scholarshipTitle: "Peluang pendanaan studi, riset, dan mobilitas global.",
     scholarshipText: "Akses cepat menuju program beasiswa nasional, internasional, pendanaan riset, dan mobilitas yang relevan bagi komunitas pascasarjana.",
@@ -438,11 +478,11 @@ const I18N = {
     noScholarships: "Informasi beasiswa belum tersedia.",
     curriculumDocPeriod: "Periode",
     curriculumDocArchive: "Arsip PDF",
-    pbmEvalKicker: "Evaluasi PBM",
-    pbmEvalTitle: "Arsip evaluasi pembelajaran per semester.",
-    pbmEvalText: "Dokumen Evaluasi PBM disusun sebagai blok akses cepat untuk meninjau arsip mutu akademik, proses belajar mengajar, dan bahan pemantauan setiap semester.",
+    pbmEvalKicker: "Evaluasi PBM-Dosen",
+    pbmEvalTitle: "Arsip Evaluasi PBM-Dosen per semester.",
+    pbmEvalText: "Dokumen Evaluasi PBM-Dosen disusun sebagai blok akses cepat untuk meninjau arsip mutu akademik, proses belajar mengajar, dan bahan pemantauan kinerja dosen setiap semester.",
     pbmEvalCountLabel: "dokumen evaluasi",
-    pbmEvalAsk: "Tanyakan Evaluasi PBM ke chatbot",
+    pbmEvalAsk: "Tanyakan Evaluasi PBM-Dosen ke chatbot",
     pbmEvalArchive: "Arsip Evaluasi",
     pbmEvalSemester: "Semester",
     pbmEvalAcademicYear: "Tahun akademik",
@@ -451,6 +491,16 @@ const I18N = {
     thesisGuideText: "Rujukan resmi untuk penyusunan naskah tesis, Seminar Usulan Riset, Seminar Kemajuan Riset, dan Sidang Akhir Magister.",
     thesisGuideCountLabel: "dokumen panduan",
     thesisGuideAsk: "Tanyakan panduan ke chatbot",
+    academicGuideKicker: "Panduan Akademik",
+    academicGuideTitle: "Dokumen akademik S2 Statistika Terapan.",
+    academicGuideText: "Dokumen ini ditempatkan sebagai rujukan cepat untuk ketentuan akademik dan SOP penyelenggaraan Program S2 Statistika Terapan.",
+    academicGuideCountLabel: "dokumen akademik",
+    academicGuideAsk: "Tanyakan panduan akademik ke chatbot",
+    academicGuideDocTitle: "Dokumen Akademik S2",
+    academicGuideDocText: "Panduan akademik dari folder @SOP untuk membantu mahasiswa dan pengelola program membaca ketentuan akademik secara cepat.",
+    academicGuideTopic1: "Ketentuan dan administrasi akademik program",
+    academicGuideTopic2: "Rujukan SOP akademik S2 Statistika Terapan",
+    academicGuideTopic3: "Akses PDF langsung dari website",
     graduateCompetencyKicker: "Profil Lulusan",
     graduateCompetencyTitle: "Profil lulusan yang fleksibel untuk akademik, riset, konsultansi, dan industri.",
     academicianTitle: "Akademisi",
@@ -470,14 +520,27 @@ const I18N = {
     alumniYearDistribution: "Distribusi Tahun Lulus",
     alumniResearchThemes: "Tema Riset Dominan",
     tracerKicker: "Tracer Studi",
-    tracerTitle: "Tracer Studi lulusan 2022-2025",
-    tracerText: "Laporan tahunan tracer study diringkas sebagai blok akses cepat untuk melihat waktu tunggu kerja pertama, respons lulusan, dan indikator awal serapan lulusan.",
+    tracerTitle: "Tracer Studi dan kepuasan pengguna lulusan.",
+    tracerText: "Blok ini memisahkan laporan survei alumni dan laporan kepuasan pengguna lulusan agar evaluasi luaran program lebih mudah dibaca.",
     tracerCtaBadge: "Form Resmi Unpad",
     tracerCtaTitle: "Isi Tracer Study Universitas Padjadjaran",
     tracerCtaText: "Alumni dapat meninggalkan jejak karier dan pengalaman studi melalui form tracer study resmi Unpad.",
     tracerCtaButton: "Buka Form Tracer Study",
+    tracerAlumniKicker: "Alumni",
+    tracerAlumniTitle: "Survey kepada alumni",
+    tracerAlumniText: "Laporan tracer study tahunan untuk melihat waktu tunggu kerja pertama, respons lulusan, dan indikator awal serapan lulusan.",
     tracerCountLabel: "laporan tracer study",
     tracerAsk: "Tanyakan tracer study ke chatbot",
+    graduateUserKicker: "Pengguna Lulusan",
+    graduateUserTitle: "Survey kepada pengguna lulusan",
+    graduateUserText: "Laporan kepuasan pengguna lulusan pada level program studi dan fakultas sebagai bahan evaluasi mutu lulusan.",
+    graduateUserCountLabel: "laporan kepuasan pengguna",
+    graduateUserAsk: "Tanyakan pengguna lulusan ke chatbot",
+    graduateUserLevel: "Level",
+    graduateUserFormat: "Format",
+    graduateUserPages: "Halaman",
+    graduateUserOpen: "Buka laporan",
+    graduateUserAskDocument: "Tanya chatbot",
     specialMomentKicker: "Special Moment",
     specialMomentTitle: "Galeri momen tiap angkatan 2022-2025.",
     specialMomentText: "Dokumentasi kegiatan dan kebersamaan mahasiswa ditata per angkatan agar mudah ditelusuri tanpa memuat semua foto sekaligus.",
@@ -588,7 +651,7 @@ const I18N = {
     metricUnavailable: "Lihat dashboard",
     chatKicker: "Chatbot Akademik",
     chatTitle: "Tanya Kurikulum S2 Statistika Terapan",
-    chatText: "Jawaban chatbot ditambatkan pada ekstraksi dokumen Kurikulum OBE 2026, dokumen kurikulum 2020-2026, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM, panduan tesis, silabus mata kuliah, PDF RPS, katalog materi HTML, data lulusan, tracer study, Special Moment, dan ringkasan administratif dari SMUP Program Magister.",
+    chatText: "Jawaban chatbot ditambatkan pada ekstraksi dokumen Kurikulum OBE 2026, dokumen kurikulum 2020-2026, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM-Dosen, panduan akademik, panduan tesis, silabus mata kuliah, PDF RPS, katalog materi HTML, data lulusan, tracer study, Special Moment, dan ringkasan administratif dari SMUP Program Magister.",
     knowledgePieces: "potongan pengetahuan terindeks",
     assistantName: "Asisten Prodi",
     loadingKnowledge: "Memuat knowledge base",
@@ -606,9 +669,9 @@ const I18N = {
     promptTracer: "Tracer 2025",
     promptCurriculumDocs: "Dokumen 2026",
     promptLectureEvaluation: "Evaluasi Perkuliahan",
-    promptPbmEvaluation: "Evaluasi PBM",
-    welcomeText: "Silakan ajukan pertanyaan tentang kurikulum 2026, dokumen kurikulum 2020-2026, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM, jalur studi, SKS, CPL, panduan tesis, SUR, SKR, SAM, silabus, PDF RPS, materi kuliah HTML, tracer study, Special Moment, tesis lulusan, biaya, pendaftaran, dan profil lulusan S2 Statistika Terapan.",
-    welcomeSources: "Sumber utama: Kurikulum OBE 2026, dokumen kurikulum, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM, panduan tesis, data lulusan, tracer study, Special Moment, RPS 2026, dan katalog materi kuliah",
+    promptPbmEvaluation: "Evaluasi PBM-Dosen",
+    welcomeText: "Silakan ajukan pertanyaan tentang kurikulum 2026, dokumen kurikulum 2020-2026, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM-Dosen, jalur studi, SKS, CPL, panduan akademik, panduan tesis, SUR, SKR, SAM, silabus, PDF RPS, materi kuliah HTML, tracer study, kepuasan pengguna lulusan, LAMSAMA, Special Moment, tesis lulusan, biaya, pendaftaran, dan profil lulusan S2 Statistika Terapan.",
+    welcomeSources: "Sumber utama: Kurikulum OBE 2026, dokumen kurikulum, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM-Dosen, panduan akademik, panduan tesis, data lulusan, tracer study, kepuasan pengguna lulusan, LAMSAMA, Special Moment, RPS 2026, dan katalog materi kuliah",
     questionLabel: "Pertanyaan",
     questionPlaceholder: "Tulis pertanyaan...",
     send: "Kirim",
@@ -626,12 +689,13 @@ const I18N = {
     noThesisGuides: "Panduan tesis belum tersedia.",
     noCurriculumDocs: "Dokumen kurikulum belum tersedia.",
     noLectureEvaluations: "Laporan Evaluasi Pelaksanaan Perkuliahan belum tersedia.",
-    noPbmEvaluations: "Dokumen Evaluasi PBM belum tersedia.",
+    noPbmEvaluations: "Dokumen Evaluasi PBM-Dosen belum tersedia.",
     noCourses: "Tidak ada mata kuliah yang cocok.",
     noSyllabus: "Silabus yang dicari belum ditemukan.",
     noRpsDocs: "Dokumen RPS yang dicari belum ditemukan.",
     noMaterials: "Materi yang dicari belum ditemukan.",
     noTracer: "Laporan tracer study belum tersedia.",
+    noGraduateUserReports: "Laporan kepuasan pengguna lulusan belum tersedia.",
     noSpecialMoments: "Foto Special Moment belum tersedia.",
     noTestimonials: "Video testimoni S2 belum tersedia.",
     noAlumni: "Data lulusan yang dicari belum ditemukan.",
@@ -693,17 +757,19 @@ const I18N = {
     workspaceGraduateProfile: "Graduate Profile",
     programProfileCombinedTitle: "Complete profile of the Applied Statistics Master's Program.",
     programProfileCombinedText: "Program profile, vision and mission, and graduate profile are combined in one panel so the first S2 view feels complete.",
-    workspaceCurriculum: "Curriculum Structure",
+    workspaceCurriculum: "Curriculum",
     workspaceCurriculumDocs: "Curriculum Documents",
     workspaceCourses: "Course List",
     workspaceSyllabus: "Course Syllabus",
     workspaceRps: "Course RPS",
     workspaceMaterials: "Course Materials",
     workspaceThesisGuide: "Thesis Guides",
+    workspaceAcademicGuide: "Academic Guide",
+    workspaceEvaluation: "Evaluation",
     workspaceLectureEvaluation: "Course Evaluation",
     workspaceSpecialMoment: "Special Moment",
     workspaceTestimonials: "Video Testimonials",
-    workspacePbmEvaluation: "Learning Evaluation",
+    workspacePbmEvaluation: "PBM-Lecturer Evaluation",
     workspaceGraduates: "Graduates & Theses",
     workspaceTracer: "Tracer Studies",
     workspaceS3: "Doctoral Statistics Site",
@@ -719,7 +785,7 @@ const I18N = {
     heroS3: "S3 Site",
     frontS2Title: "Applied Statistics Master's Program",
     frontS2Accreditation: "UNGGUL Accreditation",
-    frontS2Text: "Information on the 2026 OBE curriculum, scholarships, LAMSAMA reports, syllabi, RPS, course materials, thesis guides, graduates, and tracer studies.",
+    frontS2Text: "Information on the 2026 OBE curriculum, scholarships, LAMSAMA reports, syllabi, RPS, course materials, academic guides, thesis guides, graduates, and tracer studies.",
     frontS2Meta: "Master's",
     frontS2Open: "Open S2 Information",
     frontS3Title: "Doctoral Program in Statistics",
@@ -759,6 +825,23 @@ const I18N = {
     curriculumKicker: "Curriculum Structure",
     curriculumTitle: "A 42-credit structure with coursework, research, and RPL pathways.",
     curriculumText: "The 2026 OBE curriculum strengthens theoretical mastery, analytical ability, research competence, learning recognition, and scientific publication.",
+    curriculumHubKicker: "Curriculum",
+    curriculumHubTitle: "The Applied Statistics Master's curriculum access center.",
+    curriculumHubText: "Curriculum structure, official documents, course list, syllabi, RPS, materials, and academic guides are organized in one entry point for easier navigation.",
+    curriculumHubStructure: "Curriculum Structure",
+    curriculumHubStructureText: "Coursework, research, RPL, and credits",
+    curriculumHubDocsText: "Curriculum PDF archive 2020-2026",
+    curriculumHubCoursesText: "Course list, credits, and groups",
+    curriculumHubSyllabusText: "Descriptions, topics, and references",
+    curriculumHubRpsText: "Required and elective RPS documents",
+    curriculumHubMaterialsText: "HTML materials, summaries, and contracts",
+    curriculumHubThesisText: "Thesis writing and implementation",
+    curriculumHubAcademicGuideText: "S2 academic SOP and documents",
+    evaluationHubKicker: "Evaluation",
+    evaluationHubTitle: "The S2 academic evaluation access center.",
+    evaluationHubText: "Course delivery evaluation and PBM-Lecturer Evaluation are separated by purpose, but grouped in one access point for easier navigation.",
+    evaluationHubLectureText: "Session 1-16 course delivery monitoring and student evaluation form",
+    evaluationHubPbmText: "Teaching-learning process and lecturer evaluation archives by semester",
     navAcademicCalendar: "Calendar",
     academicKicker: "Academic Calendar",
     academicTitle: "Odd Semester 2026/2027 in one infographic.",
@@ -819,10 +902,10 @@ const I18N = {
     curriculumDocsCountLabel: "curriculum documents",
     curriculumDocsAsk: "Ask the chatbot about documents",
     lamsamaKicker: "LAMSAMA",
-    lamsamaTitle: "Annual accreditation reports for the Applied Statistics Master's Program.",
-    lamsamaText: "Quality monitoring and accreditation follow-up archive with the Independent Accreditation Agency for Natural Sciences and Formal Sciences.",
+    lamsamaTitle: "LAMSAMA accreditation documents for the Applied Statistics Master's Program.",
+    lamsamaText: "Assessment result, quality monitoring, and accreditation follow-up archive with the Independent Accreditation Agency for Natural Sciences and Formal Sciences.",
     lamsamaPeriodLabel: "Report period",
-    lamsamaCountLabel: "PDF reports",
+    lamsamaCountLabel: "PDF documents",
     lamsamaAssessmentLabel: "Site assessment",
     lamsamaAsk: "Ask the chatbot about LAMSAMA",
     lamsamaYearLabel: "Report year",
@@ -830,7 +913,8 @@ const I18N = {
     lamsamaArchive: "Accreditation Report",
     lamsamaOpen: "Open PDF report",
     lamsamaAskDocument: "Ask chatbot",
-    noLamsamaReports: "LAMSAMA annual reports are not yet available.",
+    lamsamaAssessmentDoc: "Assessment document",
+    noLamsamaReports: "LAMSAMA documents are not yet available.",
     scholarshipKicker: "Scholarships and Mobility",
     scholarshipTitle: "Funding opportunities for study, research, and global mobility.",
     scholarshipText: "Quick access to national and international scholarships, research funding, and mobility opportunities relevant to the graduate community.",
@@ -847,7 +931,7 @@ const I18N = {
     curriculumDocArchive: "PDF Archive",
     lectureEvalKicker: "Course Delivery Evaluation",
     lectureEvalTitle: "Session-by-session monitoring from session 1 to 16.",
-    lectureEvalText: "This block contains course delivery evaluation reports by session/meeting. It is different from PBM evaluations conducted at the end of the semester.",
+    lectureEvalText: "This block contains course delivery evaluation reports by session/meeting. It is different from PBM-Lecturer Evaluation conducted at the end of the semester.",
     lectureEvalCtaLabel: "Student Monitoring Form",
     lectureEvalCtaText: "Submit Odd Semester MStat Evaluation",
     lectureEvalCountLabel: "HTML report",
@@ -856,11 +940,11 @@ const I18N = {
     lectureEvalSessions: "Sessions",
     lectureEvalMonitoring: "Student monitoring",
     lectureEvalOpenHtml: "Open HTML Report",
-    pbmEvalKicker: "Learning Evaluation",
-    pbmEvalTitle: "Teaching and learning evaluation archive by semester.",
-    pbmEvalText: "PBM evaluation documents are organized as quick-access blocks for academic quality archives, teaching-learning process review, and semester monitoring.",
+    pbmEvalKicker: "PBM-Lecturer Evaluation",
+    pbmEvalTitle: "PBM-Lecturer Evaluation archive by semester.",
+    pbmEvalText: "PBM-Lecturer Evaluation documents are organized as quick-access blocks for academic quality archives, teaching-learning process review, and lecturer performance monitoring by semester.",
     pbmEvalCountLabel: "evaluation documents",
-    pbmEvalAsk: "Ask the chatbot about PBM evaluation",
+    pbmEvalAsk: "Ask the chatbot about PBM-Lecturer Evaluation",
     pbmEvalArchive: "Evaluation Archive",
     pbmEvalSemester: "Semester",
     pbmEvalAcademicYear: "Academic year",
@@ -869,6 +953,16 @@ const I18N = {
     thesisGuideText: "Official references for thesis writing, Research Proposal Seminar, Research Progress Seminar, and Master's Final Defense.",
     thesisGuideCountLabel: "guide documents",
     thesisGuideAsk: "Ask the chatbot about guides",
+    academicGuideKicker: "Academic Guide",
+    academicGuideTitle: "Academic documents for the Applied Statistics Master's Program.",
+    academicGuideText: "This document is provided as a quick reference for academic regulations and SOPs for the Applied Statistics Master's Program.",
+    academicGuideCountLabel: "academic document",
+    academicGuideAsk: "Ask the chatbot about the academic guide",
+    academicGuideDocTitle: "S2 Academic Document",
+    academicGuideDocText: "An academic guide from the @SOP folder to help students and program managers access academic regulations quickly.",
+    academicGuideTopic1: "Academic regulations and administration",
+    academicGuideTopic2: "SOP reference for the Applied Statistics Master's Program",
+    academicGuideTopic3: "Direct PDF access from the website",
     graduateCompetencyKicker: "Graduate Profile",
     graduateCompetencyTitle: "Flexible graduate profiles for academia, research, consulting, and industry.",
     academicianTitle: "Academician",
@@ -888,14 +982,27 @@ const I18N = {
     alumniYearDistribution: "Graduation Year Distribution",
     alumniResearchThemes: "Dominant Research Themes",
     tracerKicker: "Tracer Study",
-    tracerTitle: "Graduate tracer studies 2022-2025",
-    tracerText: "Annual tracer study reports are summarized as quick-access blocks for first-job waiting time, graduate responses, and early employment indicators.",
+    tracerTitle: "Tracer studies and graduate user satisfaction.",
+    tracerText: "This block separates alumni survey reports and graduate user satisfaction reports so program outcomes are easier to review.",
     tracerCtaBadge: "Official Unpad Form",
     tracerCtaTitle: "Fill Out Universitas Padjadjaran Tracer Study",
     tracerCtaText: "Graduates can leave their career and study-experience record through Unpad's official tracer study form.",
     tracerCtaButton: "Open Tracer Study Form",
+    tracerAlumniKicker: "Alumni",
+    tracerAlumniTitle: "Alumni survey",
+    tracerAlumniText: "Annual tracer study reports for first-job waiting time, graduate responses, and early employment indicators.",
     tracerCountLabel: "tracer study reports",
     tracerAsk: "Ask the chatbot about tracer studies",
+    graduateUserKicker: "Graduate Users",
+    graduateUserTitle: "Graduate user survey",
+    graduateUserText: "Graduate user satisfaction reports at program and faculty levels as references for graduate quality evaluation.",
+    graduateUserCountLabel: "user satisfaction reports",
+    graduateUserAsk: "Ask the chatbot about graduate users",
+    graduateUserLevel: "Level",
+    graduateUserFormat: "Format",
+    graduateUserPages: "Pages",
+    graduateUserOpen: "Open report",
+    graduateUserAskDocument: "Ask chatbot",
     specialMomentKicker: "Special Moment",
     specialMomentTitle: "Photo gallery by cohort 2022-2025.",
     specialMomentText: "Student activities and shared moments are organized by cohort so visitors can browse them easily without loading every photo at once.",
@@ -1006,7 +1113,7 @@ const I18N = {
     metricUnavailable: "View dashboard",
     chatKicker: "Academic Chatbot",
     chatTitle: "Ask About the Applied Statistics Master's Curriculum",
-    chatText: "The chatbot answers are grounded in the 2026 OBE curriculum extraction, 2020-2026 curriculum documents, course delivery evaluations, PBM evaluations, thesis guides, course syllabi, RPS PDFs, HTML learning material catalog, graduate data, tracer studies, Special Moment gallery, and administrative summaries from SMUP.",
+    chatText: "The chatbot answers are grounded in the 2026 OBE curriculum extraction, 2020-2026 curriculum documents, course delivery evaluations, PBM-Lecturer Evaluation, academic guides, thesis guides, course syllabi, RPS PDFs, HTML learning material catalog, graduate data, tracer studies, Special Moment gallery, and administrative summaries from SMUP.",
     knowledgePieces: "indexed knowledge chunks",
     assistantName: "Program Assistant",
     loadingKnowledge: "Loading knowledge base",
@@ -1024,9 +1131,9 @@ const I18N = {
     promptTracer: "Tracer 2025",
     promptCurriculumDocs: "2026 Document",
     promptLectureEvaluation: "Course Evaluation",
-    promptPbmEvaluation: "PBM Evaluation",
-    welcomeText: "Ask about the 2026 curriculum, 2020-2026 curriculum documents, course delivery evaluations, PBM evaluations, study pathways, credits, learning outcomes, thesis guides, SUR, SKR, SAM, syllabi, RPS PDFs, HTML learning materials, tracer studies, Special Moment gallery, graduate theses, fees, admissions, and graduate profiles.",
-    welcomeSources: "Main sources: 2026 OBE Curriculum, curriculum documents, course delivery evaluations, PBM evaluations, thesis guides, graduate data, tracer studies, Special Moment gallery, RPS 2026, and learning material catalog",
+    promptPbmEvaluation: "PBM-Lecturer Evaluation",
+    welcomeText: "Ask about the 2026 curriculum, 2020-2026 curriculum documents, course delivery evaluations, PBM-Lecturer Evaluation, study pathways, credits, learning outcomes, academic guides, thesis guides, SUR, SKR, SAM, syllabi, RPS PDFs, HTML learning materials, tracer studies, graduate user satisfaction reports, LAMSAMA, Special Moment gallery, graduate theses, fees, admissions, and graduate profiles.",
+    welcomeSources: "Main sources: 2026 OBE Curriculum, curriculum documents, course delivery evaluations, PBM-Lecturer Evaluation, academic guides, thesis guides, graduate data, tracer studies, graduate user satisfaction reports, LAMSAMA, Special Moment gallery, RPS 2026, and learning material catalog",
     questionLabel: "Question",
     questionPlaceholder: "Type a question...",
     send: "Send",
@@ -1044,12 +1151,13 @@ const I18N = {
     noThesisGuides: "Thesis guides are not available yet.",
     noCurriculumDocs: "Curriculum documents are not available yet.",
     noLectureEvaluations: "Course delivery evaluation reports are not available yet.",
-    noPbmEvaluations: "PBM evaluation documents are not available yet.",
+    noPbmEvaluations: "PBM-Lecturer Evaluation documents are not available yet.",
     noCourses: "No matching courses found.",
     noSyllabus: "No matching syllabus found.",
     noRpsDocs: "No matching RPS document found.",
     noMaterials: "No matching materials found.",
     noTracer: "Tracer study reports are not available yet.",
+    noGraduateUserReports: "Graduate user satisfaction reports are not available yet.",
     noSpecialMoments: "Special Moment photos are not available yet.",
     noTestimonials: "Applied Statistics Master's testimonial videos are not available yet.",
     noAlumni: "No matching graduate data found.",
@@ -1196,9 +1304,14 @@ function setActiveWorkspacePanel(
   document.querySelectorAll(".workspace-menu-list [data-workspace-target]").forEach((link) => {
     const linkProgram = link.dataset.programSelect || activeWorkspaceProgram;
     const linkPanelScrollTarget = link.dataset.panelScroll || "";
+    const linkTarget = link.dataset.workspaceTarget;
+    const parentCurriculumMatch = linkTarget === "kurikulum" && curriculumPanelIds.includes(activeId);
+    const parentEvaluationMatch = linkTarget === "evaluasi" && evaluationPanelIds.includes(activeId);
     const sameProgram = linkProgram === activeWorkspaceProgram;
-    const samePanel = link.dataset.workspaceTarget === activeId;
-    const sameSubPanel = activePanelScrollTarget
+    const samePanel = linkTarget === activeId || parentCurriculumMatch || parentEvaluationMatch;
+    const sameSubPanel = parentCurriculumMatch || parentEvaluationMatch
+      ? true
+      : activePanelScrollTarget
       ? linkPanelScrollTarget === activePanelScrollTarget
       : !linkPanelScrollTarget;
     const isActive = sameProgram && samePanel && sameSubPanel;
@@ -1252,6 +1365,7 @@ function applyLanguage() {
   renderRpsDocs();
   renderMaterials();
   renderTracerStudies();
+  renderGraduateUserSatisfaction();
   renderSpecialMoments();
   renderTestimonials();
   renderS3Site();
@@ -1395,14 +1509,17 @@ function expandQuestion(question) {
   if (/(tracer|tacer|waktu tunggu|pekerjaan pertama|serapan lulusan|bekerja sebelum lulus)/.test(normalized)) {
     synonyms.push("tracer study tracer studi waktu tunggu pekerjaan pertama serapan lulusan respons lulusan bekerja sebelum lulus");
   }
+  if (/(kepuasan pengguna|pengguna lulusan|user satisfaction|graduate user|employer satisfaction|survei pengguna)/.test(normalized)) {
+    synonyms.push("kepuasan pengguna lulusan survei pengguna lulusan user satisfaction graduate user employer satisfaction mutu lulusan");
+  }
   if (/(special moment|momen|foto angkatan|galeri|gallery|dokumentasi)/.test(normalized)) {
     synonyms.push("special moment momen galeri foto angkatan cohort dokumentasi kebersamaan mahasiswa");
   }
   if (/(dokumen kurikulum|file kurikulum|pdf kurikulum|arsip kurikulum|kurikulum 2020|kurikulum 2021|kurikulum 2022|kurikulum 2023|kurikulum 2024|kurikulum 2025|kurikulum 2026|curriculum document|curriculum pdf)/.test(normalized)) {
     synonyms.push("dokumen kurikulum file kurikulum pdf kurikulum arsip kurikulum curriculum document curriculum pdf 2020 2021 2022 2023 2024 2025 2026");
   }
-  if (/(evaluasi pbm|pbm|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|teaching learning evaluation)/.test(normalized)) {
-    synonyms.push("evaluasi pbm evaluasi pembelajaran proses belajar mengajar mutu akademik dokumen evaluasi semester ganjil genap learning evaluation teaching learning evaluation");
+  if (/(evaluasi pbm|pbm|pbm dosen|evaluasi dosen|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|lecturer evaluation|teaching learning evaluation)/.test(normalized)) {
+    synonyms.push("evaluasi pbm dosen evaluasi pembelajaran evaluasi dosen proses belajar mengajar mutu akademik dokumen evaluasi semester ganjil genap learning evaluation lecturer evaluation teaching learning evaluation");
   }
 
   return [question, ...synonyms].join(" ");
@@ -1423,10 +1540,11 @@ function scoreChunk(question, chunk) {
   const asksMaterial = /materi|bahan ajar|modul|html|katalog|slide|pertemuan|file kuliah/.test(normalizedQuestion)
     && !/silabus|sylabus|rps/.test(normalizedQuestion);
   const asksTracer = /tracer|tacer|waktu tunggu|pekerjaan pertama|serapan lulusan|bekerja sebelum lulus/.test(normalizedQuestion);
+  const asksGraduateUser = /kepuasan pengguna|pengguna lulusan|user satisfaction|graduate user|employer satisfaction|survei pengguna/.test(normalizedQuestion);
   const asksSpecialMoment = /special moment|momen|foto angkatan|galeri|gallery|dokumentasi/.test(normalizedQuestion);
   const asksCurriculumDoc = /dokumen kurikulum|file kurikulum|pdf kurikulum|arsip kurikulum|curriculum document|curriculum pdf|buka kurikulum|download kurikulum|unduh kurikulum/.test(normalizedQuestion);
   const asksLectureEvaluation = /evaluasi pelaksanaan perkuliahan|evaluasi perkuliahan|monitoring perkuliahan|monitoring mahasiswa|pertemuan perkuliahan|sesi perkuliahan|course delivery evaluation|course evaluation|student monitoring/.test(normalizedQuestion);
-  const asksPbmEvaluation = /evaluasi pbm|pbm|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|teaching learning evaluation|buka evaluasi|download evaluasi|unduh evaluasi/.test(normalizedQuestion);
+  const asksPbmEvaluation = /evaluasi pbm|pbm|pbm dosen|evaluasi dosen|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|lecturer evaluation|teaching learning evaluation|buka evaluasi|download evaluasi|unduh evaluasi/.test(normalizedQuestion);
   const asksRpsDoc = /rps|rencana pembelajaran semester|course plan|semester learning plan|buka rps|download rps|unduh rps/.test(normalizedQuestion);
   const asksS3 = /s3|doktor|doctoral|doctorate|program doktor|statistika doktor|web s3|disertasi|promosi doktor|pnd|und|spd|diseminasi nasional|diseminasi internasional/.test(normalizedQuestion);
 
@@ -1440,6 +1558,8 @@ function scoreChunk(question, chunk) {
   if (asksMaterial && chunk.id?.startsWith("syllabus-")) score -= 40;
   if (asksTracer && chunk.id?.startsWith("tracer-study-")) score += 170;
   if (asksTracer && chunk.id?.startsWith("syllabus-")) score -= 60;
+  if (asksGraduateUser && chunk.id?.startsWith("graduate-user-satisfaction-")) score += 190;
+  if (asksGraduateUser && chunk.id?.startsWith("tracer-study-")) score += 35;
   if (asksSpecialMoment && chunk.id?.startsWith("special-moment-")) score += 175;
   if (asksSpecialMoment && chunk.id?.startsWith("syllabus-")) score -= 60;
   if (asksCurriculumDoc && chunk.id?.startsWith("curriculum-doc-")) score += 180;
@@ -1508,6 +1628,16 @@ function scoreChunk(question, chunk) {
     }
     const specificPhrase = specificTokens.join(" ");
     if (specificPhrase.length > 4 && metadata.includes(specificPhrase)) score += 60;
+  }
+
+  if (chunk.id?.startsWith("graduate-user-satisfaction-")) {
+    const metadata = normalize([chunk.id, chunk.sourceTitle, chunk.title, chunk.text].join(" "));
+    const specificTokens = tokens.filter((token) => !genericQueryTerms.has(token));
+    for (const token of specificTokens) {
+      if (hasWholeToken(metadata, token)) score += 24;
+    }
+    const specificPhrase = specificTokens.join(" ");
+    if (specificPhrase.length > 4 && metadata.includes(specificPhrase)) score += 76;
   }
 
   if (chunk.id?.startsWith("special-moment-")) {
@@ -1637,9 +1767,9 @@ function buildCapabilityAnswer(question) {
       "I can answer questions using the website knowledge base, including:",
       "1. 2026 curriculum, credits, study pathways, RPL, CPL, and graduate profiles.",
       "2. Course syllabi, RPS/course plan PDFs, topics, references, and HTML learning materials.",
-      "3. Thesis guides, SUR, SKR, and Master's Final Defense.",
+      "3. Academic guides, thesis guides, SUR, SKR, and Master's Final Defense.",
       "4. S3 Statistics information: vision, mission, objectives, graduate profiles, CPL, academic documents, and doctoral RPS files.",
-      "5. Graduate thesis data, tracer study reports, Special Moment gallery, curriculum PDF archives, course delivery evaluation reports, PBM evaluation documents, fees, and SMUP admissions.",
+      "5. Graduate thesis data, tracer study reports, graduate user satisfaction reports, LAMSAMA documents, Special Moment gallery, curriculum PDF archives, course delivery evaluation reports, PBM-Lecturer Evaluation documents, fees, and SMUP admissions.",
       "",
       serverApiReady
         ? "Generative API mode is active, but answers remain grounded in the program knowledge base."
@@ -1649,9 +1779,9 @@ function buildCapabilityAnswer(question) {
       "Saya bisa menjawab pertanyaan berdasarkan knowledge base website, terutama:",
       "1. Kurikulum 2026, SKS, jalur studi, RPL, CPL, dan profil lulusan.",
       "2. Silabus mata kuliah, PDF RPS, bahan kajian, referensi, dan materi HTML.",
-      "3. Panduan tesis, SUR, SKR, dan Sidang Akhir Magister.",
+      "3. Panduan akademik, panduan tesis, SUR, SKR, dan Sidang Akhir Magister.",
       "4. Informasi S3 Statistika: visi, misi, tujuan, profil lulusan, CPL, dokumen akademik, dan RPS doktoral.",
-      "5. Data tesis lulusan, tracer study, Special Moment, arsip PDF kurikulum, Evaluasi Pelaksanaan Perkuliahan, dokumen Evaluasi PBM, biaya, dan pendaftaran SMUP.",
+      "5. Data tesis lulusan, tracer study, laporan kepuasan pengguna lulusan, dokumen LAMSAMA, Special Moment, arsip PDF kurikulum, Evaluasi Pelaksanaan Perkuliahan, dokumen Evaluasi PBM-Dosen, biaya, dan pendaftaran SMUP.",
       "",
       serverApiReady
         ? "Mode API generatif sedang aktif, tetapi jawaban tetap ditambatkan pada knowledge base prodi."
@@ -1918,6 +2048,66 @@ function buildTracerStudyAnswer(question, hits = []) {
   };
 }
 
+function findGraduateUserReport(question) {
+  const docs = graduateUserSatisfactionData?.reports || [];
+  const text = normalize(question);
+  const requestedYear = text.match(/20\d{2}/)?.[0];
+  if (requestedYear) {
+    const byYear = docs.find((doc) => String(doc.year) === requestedYear);
+    if (byYear) return byYear;
+  }
+
+  if (/prodi|program/.test(text)) {
+    const byProgram = docs.find((doc) => normalize(doc.level).includes("prodi") || normalize(doc.levelEn).includes("program"));
+    if (byProgram) return byProgram;
+  }
+
+  if (/fakultas|faculty|fmipa/.test(text)) {
+    const byFaculty = docs.find((doc) => normalize(doc.level).includes("fakultas") || normalize(doc.levelEn).includes("faculty"));
+    if (byFaculty) return byFaculty;
+  }
+
+  return null;
+}
+
+function buildGraduateUserSatisfactionAnswer(question, hits = []) {
+  const text = normalize(question);
+  const asksGraduateUser = /kepuasan pengguna|pengguna lulusan|user satisfaction|graduate user|employer satisfaction|survei pengguna/.test(text)
+    || hits.some((hit) => String(hit.id || "").startsWith("graduate-user-satisfaction-"));
+  if (!asksGraduateUser) return null;
+
+  const selected = findGraduateUserReport(question);
+  const reports = selected ? [selected] : (graduateUserSatisfactionData?.reports || []);
+  if (!reports.length) return null;
+
+  const answer = reports
+    .map((report) => {
+      if (currentLang === "en") {
+        return [
+          `${graduateUserReportTitle(report)}: ${graduateUserReportDescription(report)}`,
+          `Level: ${graduateUserReportLevel(report)}.`,
+          `Year: ${report.year}.`,
+          `Format: ${report.format || "PDF"}${report.pages ? `, ${report.pages} pages` : ""}.`,
+          `Report: ${report.href}`
+        ].join("\n");
+      }
+      return [
+        `${graduateUserReportTitle(report)}: ${graduateUserReportDescription(report)}`,
+        `Level: ${graduateUserReportLevel(report)}.`,
+        `Tahun: ${report.year}.`,
+        `Format: ${report.format || "PDF"}${report.pages ? `, ${report.pages} halaman` : ""}.`,
+        `Laporan: ${report.href}`
+      ].join("\n");
+    })
+    .join("\n\n");
+
+  return {
+    answer,
+    sources: reports.map((report) => ({ title: graduateUserReportTitle(report), url: report.href })),
+    mode: "Local knowledge base"
+  };
+}
+
 function curriculumDocTitle(doc) {
   return currentLang === "en" ? doc.titleEn || doc.title : doc.titleId || doc.title;
 }
@@ -1934,6 +2124,41 @@ function lamsamaReportDescription(report) {
   return currentLang === "en"
     ? report.descriptionEn || report.descriptionId
     : report.descriptionId || report.descriptionEn;
+}
+
+function lamsamaReportBadge(report) {
+  return currentLang === "en"
+    ? report.badgeEn || t("lamsamaArchive")
+    : report.badgeId || t("lamsamaArchive");
+}
+
+function lamsamaReportPeriodLabel(report) {
+  return currentLang === "en"
+    ? report.periodLabelEn || t("lamsamaYearLabel")
+    : report.periodLabelId || t("lamsamaYearLabel");
+}
+
+function lamsamaReportSequenceLabel(report) {
+  if (report.sequenceLabelId || report.sequenceLabelEn) {
+    return currentLang === "en"
+      ? report.sequenceLabelEn || report.sequenceLabelId
+      : report.sequenceLabelId || report.sequenceLabelEn;
+  }
+  return `${t("lamsamaSequenceLabel")}${report.sequence || "-"}`;
+}
+
+function graduateUserReportTitle(report) {
+  return currentLang === "en" ? report.titleEn || report.title : report.titleId || report.title;
+}
+
+function graduateUserReportDescription(report) {
+  return currentLang === "en"
+    ? report.descriptionEn || report.descriptionId
+    : report.descriptionId || report.descriptionEn;
+}
+
+function graduateUserReportLevel(report) {
+  return currentLang === "en" ? report.levelEn || report.level : report.level || report.levelEn;
 }
 
 function scholarshipTitle(item) {
@@ -1953,11 +2178,17 @@ function scholarshipAudience(item) {
 }
 
 function pbmEvaluationTitle(doc) {
-  return currentLang === "en" ? doc.titleEn || doc.title : doc.titleId || doc.title;
+  const rawTitle = currentLang === "en" ? doc.titleEn || doc.title : doc.titleId || doc.title;
+  return currentLang === "en"
+    ? String(rawTitle).replace(/^Learning Evaluation/i, "PBM-Lecturer Evaluation")
+    : String(rawTitle).replace(/^Evaluasi PBM/i, "Evaluasi PBM-Dosen");
 }
 
 function pbmEvaluationDescription(doc) {
-  return currentLang === "en" ? doc.descriptionEn || doc.description : doc.descriptionId || doc.description;
+  const rawDescription = currentLang === "en" ? doc.descriptionEn || doc.description : doc.descriptionId || doc.description;
+  return currentLang === "en"
+    ? String(rawDescription).replace(/^Learning evaluation document/i, "PBM-Lecturer Evaluation document")
+    : String(rawDescription).replace(/^Dokumen evaluasi pembelajaran/i, "Dokumen Evaluasi PBM-Dosen");
 }
 
 function lectureEvaluationTitle(doc) {
@@ -2373,7 +2604,7 @@ function buildLectureEvaluationAnswer(question, hits = []) {
         return [
           `${lectureEvaluationTitle(doc)}: ${lectureEvaluationDescription(doc)}`,
           `Purpose: session-by-session monitoring from session ${doc.sessions || "1-16"}.`,
-          `This is different from PBM evaluations conducted at the end of the semester.`,
+          `This is different from PBM-Lecturer Evaluation conducted at the end of the semester.`,
           `HTML report: ${doc.href}`,
           `Student monitoring form: ${doc.monitoringUrl || lectureEvaluationsData?.monitoringUrl || ""}`
         ].join("\n");
@@ -2381,7 +2612,7 @@ function buildLectureEvaluationAnswer(question, hits = []) {
       return [
         `${lectureEvaluationTitle(doc)}: ${lectureEvaluationDescription(doc)}`,
         `Tujuan: monitoring perkuliahan per sesi/pertemuan, sesi ${doc.sessions || "1-16"}.`,
-        `Ini berbeda dari Evaluasi PBM yang dilakukan pada akhir semester.`,
+        `Ini berbeda dari Evaluasi PBM-Dosen yang dilakukan pada akhir semester.`,
         `Laporan HTML: ${doc.href}`,
         `Form monitoring mahasiswa: ${doc.monitoringUrl || lectureEvaluationsData?.monitoringUrl || ""}`
       ].join("\n");
@@ -2397,7 +2628,7 @@ function buildLectureEvaluationAnswer(question, hits = []) {
 
 function buildPbmEvaluationAnswer(question, hits = []) {
   const text = normalize(question);
-  const asksPbmEvaluation = /evaluasi pbm|pbm|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|teaching learning evaluation|buka evaluasi|download evaluasi|unduh evaluasi/.test(text);
+  const asksPbmEvaluation = /evaluasi pbm|pbm|pbm dosen|evaluasi dosen|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|lecturer evaluation|teaching learning evaluation|buka evaluasi|download evaluasi|unduh evaluasi/.test(text);
   if (!asksPbmEvaluation) return null;
 
   const asksSpecific = /\b20\d{2}\b|ganjil|genap|odd|even/.test(text);
@@ -2443,9 +2674,10 @@ function matchFact(question) {
   const asksSyllabus = /silabus|sylabus|rps|referensi mata kuliah|topik kuliah|bahan kajian/.test(text);
   const asksMaterial = /materi|bahan ajar|modul|html|katalog|slide|pertemuan|file kuliah/.test(text);
   const asksTracer = /tracer|tacer|waktu tunggu|pekerjaan pertama|serapan lulusan|bekerja sebelum lulus/.test(text);
+  const asksGraduateUser = /kepuasan pengguna|pengguna lulusan|user satisfaction|graduate user|employer satisfaction|survei pengguna/.test(text);
   const asksCurriculumDoc = /dokumen kurikulum|file kurikulum|pdf kurikulum|arsip kurikulum|curriculum document|curriculum pdf|buka kurikulum|download kurikulum|unduh kurikulum/.test(text);
   const asksLectureEvaluation = /evaluasi pelaksanaan perkuliahan|evaluasi perkuliahan|monitoring perkuliahan|monitoring mahasiswa|pertemuan perkuliahan|sesi perkuliahan|course delivery evaluation|course evaluation|student monitoring/.test(text);
-  const asksPbmEvaluation = /evaluasi pbm|pbm|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|teaching learning evaluation|buka evaluasi|download evaluasi|unduh evaluasi/.test(text);
+  const asksPbmEvaluation = /evaluasi pbm|pbm|pbm dosen|evaluasi dosen|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|lecturer evaluation|teaching learning evaluation|buka evaluasi|download evaluasi|unduh evaluasi/.test(text);
   const asksS3 = /s3|doktor|doctoral|doctorate|program doktor|statistika doktor|web s3|disertasi|promosi doktor|pnd|und|spd|diseminasi nasional|diseminasi internasional/.test(text);
   const asksThesisGuide = (
     (/tesis/.test(text) && /panduan|penulisan|format|pelaksanaan|proposal|naskah|bimbingan|penguji|sidang|seminar|sur|skr|sam/.test(text))
@@ -2461,6 +2693,7 @@ function matchFact(question) {
   if (asksSyllabus) return null;
   if (asksMaterial) return null;
   if (asksTracer) return null;
+  if (asksGraduateUser) return null;
   if (asksCurriculumDoc) return null;
   if (asksLectureEvaluation) return null;
   if (asksPbmEvaluation) return null;
@@ -2483,7 +2716,7 @@ function matchFact(question) {
 
 function buildLamsamaAnswer(question) {
   const text = normalize(question);
-  if (!/lamsama|laporan tahunan akreditasi|annual accreditation report/.test(text)) return null;
+  if (!/lamsama|akreditasi lamsama|laporan tahunan akreditasi|hasil asesmen|asesmen lamsama|annual accreditation report|assessment result/.test(text)) return null;
 
   const allReports = lamsamaReportsData?.reports || [];
   const requestedYear = Number(text.match(/20\d{2}/)?.[0]);
@@ -2494,16 +2727,16 @@ function buildLamsamaAnswer(question) {
 
   const answer = currentLang === "en"
     ? [
-        "Available LAMSAMA annual accreditation reports:",
+        "Available LAMSAMA accreditation documents:",
         "",
-        ...reports.map((report) => `${report.year} (Year ${report.sequence}): ${report.titleEn || report.title}. ${report.pages || "-"} pages, ${formatFileSize(report.sizeKb)}. PDF: ${report.href}`),
+        ...reports.map((report) => `${report.year} (${lamsamaReportSequenceLabel(report)}): ${lamsamaReportTitle(report)}. ${report.pages || "-"} pages, ${formatFileSize(report.sizeKb)}. PDF: ${report.href}`),
         "",
         `Site assessment date: ${lamsamaReportsData?.assessmentDate || "25-26 November 2022"}.`
       ].join("\n")
     : [
-        "Laporan tahunan akreditasi LAMSAMA yang tersedia:",
+        "Dokumen akreditasi LAMSAMA yang tersedia:",
         "",
-        ...reports.map((report) => `${report.year} (tahun ke-${report.sequence}): ${report.titleId || report.title}. ${report.pages || "-"} halaman, ${formatFileSize(report.sizeKb)}. PDF: ${report.href}`),
+        ...reports.map((report) => `${report.year} (${lamsamaReportSequenceLabel(report)}): ${lamsamaReportTitle(report)}. ${report.pages || "-"} halaman, ${formatFileSize(report.sizeKb)}. PDF: ${report.href}`),
         "",
         `Tanggal asesmen lapangan: ${lamsamaReportsData?.assessmentDate || "25-26 November 2022"}.`
       ].join("\n");
@@ -2546,35 +2779,67 @@ function buildScholarshipAnswer(question) {
   };
 }
 
+function buildAcademicGuideAnswer(question) {
+  const text = normalize(question);
+  if (!/panduan akademik|dokumen akademik|sop akademik|academic guide|academic document|academic sop/.test(text)) return null;
+
+  const href = "%40SOP/DOKUMEN%20AKADEMIK%20S2.pdf";
+  const answer = currentLang === "en"
+    ? [
+        "The S2 Academic Guide is available as a PDF document.",
+        "Document: S2 Academic Document.",
+        "Pages: 54 pages.",
+        "File size: 9.7 MB.",
+        `PDF: ${href}`
+      ].join("\n")
+    : [
+        "Panduan Akademik S2 tersedia sebagai dokumen PDF.",
+        "Dokumen: Dokumen Akademik S2.",
+        "Jumlah halaman: 54 halaman.",
+        "Ukuran file: 9.7 MB.",
+        `PDF: ${href}`
+      ].join("\n");
+
+  return {
+    answer,
+    sources: [{ title: currentLang === "en" ? "S2 Academic Document" : "Dokumen Akademik S2", url: href }],
+    mode: "Local knowledge base"
+  };
+}
+
 function buildLocalAnswer(question) {
   const directScholarship = buildScholarshipAnswer(question);
   if (directScholarship) return directScholarship;
   const directLamsama = buildLamsamaAnswer(question);
   if (directLamsama) return directLamsama;
+  const directAcademicGuide = buildAcademicGuideAnswer(question);
+  if (directAcademicGuide) return directAcademicGuide;
 
   const capabilityAnswer = buildCapabilityAnswer(question);
   if (capabilityAnswer) return capabilityAnswer;
 
   const fact = matchFact(question);
   const hits = retrieve(question, 4);
+  const structuredLectureEvaluation = buildLectureEvaluationAnswer(question, hits);
+  const structuredPbmEvaluation = buildPbmEvaluationAnswer(question, hits);
   const structuredS3 = buildS3Answer(question, hits);
   const structuredRpsDoc = buildRpsDocAnswer(question, hits);
   const structuredSyllabus = buildSyllabusAnswer(question, hits);
   const structuredMaterial = buildMaterialAnswer(question, hits);
+  const structuredGraduateUser = buildGraduateUserSatisfactionAnswer(question, hits);
   const structuredTracerStudy = buildTracerStudyAnswer(question, hits);
   const structuredCurriculumDoc = buildCurriculumDocAnswer(question, hits);
-  const structuredLectureEvaluation = buildLectureEvaluationAnswer(question, hits);
-  const structuredPbmEvaluation = buildPbmEvaluationAnswer(question, hits);
   const structuredThesisGuide = buildThesisGuideAnswer(question);
 
+  if (structuredLectureEvaluation) return structuredLectureEvaluation;
+  if (structuredPbmEvaluation) return structuredPbmEvaluation;
+  if (structuredGraduateUser) return structuredGraduateUser;
   if (structuredS3) return structuredS3;
   if (structuredRpsDoc) return structuredRpsDoc;
   if (structuredSyllabus) return structuredSyllabus;
   if (structuredMaterial) return structuredMaterial;
   if (structuredTracerStudy) return structuredTracerStudy;
   if (structuredCurriculumDoc) return structuredCurriculumDoc;
-  if (structuredLectureEvaluation) return structuredLectureEvaluation;
-  if (structuredPbmEvaluation) return structuredPbmEvaluation;
   if (structuredThesisGuide) return structuredThesisGuide;
 
   if (fact) {
@@ -2587,8 +2852,8 @@ function buildLocalAnswer(question) {
   if (!hits.length) {
     return {
       answer: currentLang === "en"
-        ? "I have not found that information in the program knowledge base. I can answer the curriculum, syllabi, RPS/course plan PDFs, HTML learning materials, thesis guides, graduate data, tracer studies, curriculum documents, course delivery evaluations, PBM evaluations, fees, and admissions that have been indexed. Free-form answers outside this knowledge base require enabling a generative AI API on the server."
-        : "Saya belum menemukan informasi tersebut dalam knowledge base prodi. Saat ini saya bisa menjawab kurikulum, silabus, PDF RPS, materi HTML, panduan tesis, data lulusan, tracer study, dokumen kurikulum, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM, biaya, dan pendaftaran yang sudah terindeks. Jawaban bebas di luar knowledge base memerlukan API AI generatif yang aktif di server.",
+        ? "I have not found that information in the program knowledge base. I can answer the curriculum, syllabi, RPS/course plan PDFs, HTML learning materials, academic guides, thesis guides, graduate data, tracer studies, graduate user satisfaction reports, curriculum documents, course delivery evaluations, PBM-Lecturer Evaluation, fees, and admissions that have been indexed. Free-form answers outside this knowledge base require enabling a generative AI API on the server."
+        : "Saya belum menemukan informasi tersebut dalam knowledge base prodi. Saat ini saya bisa menjawab kurikulum, silabus, PDF RPS, materi HTML, panduan akademik, panduan tesis, data lulusan, tracer study, laporan kepuasan pengguna lulusan, dokumen kurikulum, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM-Dosen, biaya, dan pendaftaran yang sudah terindeks. Jawaban bebas di luar knowledge base memerlukan API AI generatif yang aktif di server.",
       sources: [],
       mode: "Local knowledge base"
     };
@@ -2609,19 +2874,21 @@ function buildLocalAnswer(question) {
           ? (currentLang === "en" ? "I found relevant Doctoral Statistics site information:" : "Saya menemukan informasi Web S3 Statistika yang relevan:")
         : hits[0]?.id?.startsWith("tracer-study-")
           ? (currentLang === "en" ? "I found relevant tracer study reports:" : "Saya menemukan laporan tracer study yang relevan:")
-          : hits[0]?.id?.startsWith("special-moment-")
-            ? (currentLang === "en" ? "I found relevant Special Moment gallery entries:" : "Saya menemukan galeri Special Moment yang relevan:")
-            : hits[0]?.id?.startsWith("curriculum-doc-")
-              ? (currentLang === "en" ? "I found relevant curriculum documents:" : "Saya menemukan dokumen kurikulum yang relevan:")
-              : hits[0]?.id?.startsWith("lecture-evaluation-")
-                ? (currentLang === "en" ? "I found relevant course delivery evaluation reports:" : "Saya menemukan laporan Evaluasi Pelaksanaan Perkuliahan yang relevan:")
-                : hits[0]?.id?.startsWith("pbm-evaluation-")
-                  ? (currentLang === "en" ? "I found relevant PBM evaluation documents:" : "Saya menemukan dokumen Evaluasi PBM yang relevan:")
-                  : hits[0]?.id?.startsWith("rps-doc-")
-                    ? (currentLang === "en" ? "I found relevant RPS documents:" : "Saya menemukan dokumen RPS yang relevan:")
-                    : currentLang === "en"
-                      ? "I found relevant knowledge base excerpts:"
-                      : "Saya menemukan potongan knowledge base yang relevan:";
+          : hits[0]?.id?.startsWith("graduate-user-satisfaction-")
+            ? (currentLang === "en" ? "I found relevant graduate user satisfaction reports:" : "Saya menemukan laporan kepuasan pengguna lulusan yang relevan:")
+            : hits[0]?.id?.startsWith("special-moment-")
+              ? (currentLang === "en" ? "I found relevant Special Moment gallery entries:" : "Saya menemukan galeri Special Moment yang relevan:")
+              : hits[0]?.id?.startsWith("curriculum-doc-")
+                ? (currentLang === "en" ? "I found relevant curriculum documents:" : "Saya menemukan dokumen kurikulum yang relevan:")
+                : hits[0]?.id?.startsWith("lecture-evaluation-")
+                  ? (currentLang === "en" ? "I found relevant course delivery evaluation reports:" : "Saya menemukan laporan Evaluasi Pelaksanaan Perkuliahan yang relevan:")
+                  : hits[0]?.id?.startsWith("pbm-evaluation-")
+                    ? (currentLang === "en" ? "I found relevant PBM-Lecturer Evaluation documents:" : "Saya menemukan dokumen Evaluasi PBM-Dosen yang relevan:")
+                    : hits[0]?.id?.startsWith("rps-doc-")
+                      ? (currentLang === "en" ? "I found relevant RPS documents:" : "Saya menemukan dokumen RPS yang relevan:")
+                      : currentLang === "en"
+                        ? "I found relevant knowledge base excerpts:"
+                        : "Saya menemukan potongan knowledge base yang relevan:";
 
   return {
     answer: `${intro}\n\n${excerpts}`,
@@ -3159,6 +3426,53 @@ function renderTracerStudies() {
     .join("");
 }
 
+function renderGraduateUserSatisfaction() {
+  if (!graduateUserRows) return;
+  const reports = graduateUserSatisfactionData?.reports || [];
+
+  if (graduateUserCount) graduateUserCount.textContent = String(reports.length);
+
+  if (!reports.length) {
+    graduateUserRows.innerHTML = `<p class="empty-note">${escapeHTML(t("noGraduateUserReports"))}</p>`;
+    return;
+  }
+
+  graduateUserRows.innerHTML = reports
+    .map((report) => {
+      const title = graduateUserReportTitle(report);
+      const question = currentLang === "en"
+        ? `What is in ${title}?`
+        : `Apa isi ${title}?`;
+      return `
+        <article class="tracer-card user-satisfaction-card">
+          <span class="badge">${escapeHTML(graduateUserReportLevel(report))}</span>
+          <div class="tracer-year">${escapeHTML(report.year)}</div>
+          <h3>${escapeHTML(title)}</h3>
+          <p>${escapeHTML(graduateUserReportDescription(report))}</p>
+          <dl class="tracer-metrics">
+            <div>
+              <dt>${escapeHTML(t("graduateUserLevel"))}</dt>
+              <dd>${escapeHTML(graduateUserReportLevel(report))}</dd>
+            </div>
+            <div>
+              <dt>${escapeHTML(t("graduateUserFormat"))}</dt>
+              <dd>${escapeHTML(report.format || "PDF")}</dd>
+            </div>
+            <div>
+              <dt>${escapeHTML(t("graduateUserPages"))}</dt>
+              <dd>${escapeHTML(report.pages || "-")}</dd>
+            </div>
+          </dl>
+          <div class="tracer-actions">
+            <a href="${escapeHTML(report.href)}" target="_blank" rel="noopener">${escapeHTML(t("graduateUserOpen"))}</a>
+            <button type="button" data-user-satisfaction-q="${escapeHTML(question)}">${escapeHTML(t("graduateUserAskDocument"))}</button>
+          </div>
+        </article>
+      `;
+    })
+    .join("");
+}
+
 function specialMomentCohortTitle(cohort) {
   return currentLang === "en" ? cohort.titleEn || cohort.title : cohort.titleId || cohort.title;
 }
@@ -3334,22 +3648,22 @@ function renderLamsamaReports() {
     .map((report) => {
       const title = lamsamaReportTitle(report);
       const question = currentLang === "en"
-        ? `Explain the LAMSAMA annual accreditation report for ${report.year}`
-        : `Jelaskan laporan tahunan akreditasi LAMSAMA tahun ${report.year}`;
+        ? `Explain ${title}`
+        : `Jelaskan ${title}`;
       return `
-        <article class="lamsama-card">
+        <article class="lamsama-card ${escapeHTML(report.type || "")}">
           <div class="lamsama-card-head">
-            <span class="badge">${escapeHTML(t("lamsamaArchive"))}</span>
+            <span class="badge">${escapeHTML(lamsamaReportBadge(report))}</span>
             <small>${escapeHTML(report.pages || "-")} ${escapeHTML(t("pages"))}</small>
           </div>
           <div class="lamsama-year">
-            <span>${escapeHTML(t("lamsamaYearLabel"))}</span>
+            <span>${escapeHTML(lamsamaReportPeriodLabel(report))}</span>
             <strong>${escapeHTML(report.year)}</strong>
           </div>
           <h3>${escapeHTML(title)}</h3>
           <p>${escapeHTML(lamsamaReportDescription(report))}</p>
           <div class="lamsama-card-meta">
-            <span>${escapeHTML(t("lamsamaSequenceLabel"))}${escapeHTML(report.sequence)}</span>
+            <span>${escapeHTML(lamsamaReportSequenceLabel(report))}</span>
             <span>${escapeHTML(report.format || "PDF")} · ${escapeHTML(formatFileSize(report.sizeKb))}</span>
           </div>
           <div class="lamsama-card-actions">
@@ -3640,6 +3954,19 @@ async function loadTracerStudies() {
   renderTracerStudies();
 }
 
+async function loadGraduateUserSatisfaction() {
+  try {
+    const response = await fetch("data/graduate_user_satisfaction.json", { cache: "no-store" });
+    if (!response.ok) throw new Error("Laporan kepuasan pengguna lulusan tidak dapat dimuat.");
+    const data = await response.json();
+    if (!data?.reports?.length) throw new Error("Laporan kepuasan pengguna lulusan kosong.");
+    graduateUserSatisfactionData = data;
+  } catch (error) {
+    graduateUserSatisfactionData = { total: 0, reports: [], years: [] };
+  }
+  renderGraduateUserSatisfaction();
+}
+
 async function loadSpecialMoments() {
   try {
     const response = await fetch("data/special_moments.json", { cache: "no-store" });
@@ -3721,9 +4048,9 @@ async function loadLectureEvaluations() {
 async function loadPbmEvaluations() {
   try {
     const response = await fetch("data/pbm_evaluations.json", { cache: "no-store" });
-    if (!response.ok) throw new Error("Dokumen Evaluasi PBM tidak dapat dimuat.");
+    if (!response.ok) throw new Error("Dokumen Evaluasi PBM-Dosen tidak dapat dimuat.");
     const data = await response.json();
-    if (!data?.documents?.length) throw new Error("Dokumen Evaluasi PBM kosong.");
+    if (!data?.documents?.length) throw new Error("Dokumen Evaluasi PBM-Dosen kosong.");
     pbmEvaluationsData = data;
   } catch (error) {
     pbmEvaluationsData = { total: 0, documents: [] };
@@ -3861,10 +4188,18 @@ thesisGuideRows?.addEventListener("click", (event) => {
   if (!button) return;
   ask(button.dataset.guideQ);
 });
+document.querySelectorAll("[data-academic-guide-q]").forEach((button) => {
+  button.addEventListener("click", () => ask(button.dataset.academicGuideQ));
+});
 tracerStudyRows?.addEventListener("click", (event) => {
   const button = event.target.closest("[data-tracer-q]");
   if (!button) return;
   ask(button.dataset.tracerQ);
+});
+graduateUserRows?.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-user-satisfaction-q]");
+  if (!button) return;
+  ask(button.dataset.userSatisfactionQ);
 });
 function handleSpecialMomentYearClick(event) {
   const button = event.target.closest("[data-special-year]");
@@ -3924,6 +4259,7 @@ loadS3Site();
 loadMaterials();
 loadThesisGuides();
 loadTracerStudies();
+loadGraduateUserSatisfaction();
 loadSpecialMoments();
 loadTestimonials();
 loadCurriculumDocs();
