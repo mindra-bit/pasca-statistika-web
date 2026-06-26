@@ -835,6 +835,7 @@ h1 {
 }
 
 .program-profile-hero,
+.program-milestone-card,
 .program-profile-block {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -877,6 +878,62 @@ h1 {
 
 .program-profile-block {
   padding: 22px;
+}
+
+.program-milestone-card {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.36fr) minmax(0, 1fr);
+  gap: 20px;
+  align-items: stretch;
+  margin: 0;
+  padding: 18px;
+}
+
+.program-milestone-copy {
+  display: grid;
+  align-content: center;
+  gap: 8px;
+  border-radius: 8px;
+  padding: 22px;
+  color: #fff;
+  background:
+    linear-gradient(135deg, rgba(20, 61, 93, 0.98), rgba(14, 107, 88, 0.94) 58%, rgba(242, 169, 0, 0.95)),
+    var(--green);
+}
+
+.program-milestone-copy .section-kicker {
+  color: #fff1bc;
+}
+
+.program-milestone-copy h3 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(22px, 2.2vw, 31px);
+  line-height: 1.12;
+}
+
+.program-milestone-copy p:last-child {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.program-milestone-image {
+  display: block;
+  overflow: hidden;
+  border: 1px solid rgba(221, 210, 193, 0.9);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 12px 26px rgba(23, 23, 23, 0.08);
+}
+
+.program-milestone-image img {
+  display: block;
+  width: 100%;
+  max-height: min(520px, 62svh);
+  object-fit: contain;
+  background: #fff;
 }
 
 .program-profile-block .section-head {
@@ -5038,6 +5095,7 @@ tbody tr:hover td {
   .course-head,
   .program-front-grid,
   .program-profile-hero,
+  .program-milestone-card,
   .program-menu-front,
   .academic-front-grid,
   .academic-calendar-hero,
@@ -5218,6 +5276,10 @@ tbody tr:hover td {
   }
 
   .program-profile-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .program-milestone-card {
     grid-template-columns: 1fr;
   }
 
