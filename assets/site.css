@@ -542,9 +542,9 @@ h1 {
 }
 
 .workspace-layout {
-  width: min(1500px, calc(100% - 36px));
+  width: min(1540px, calc(100% - 32px));
   display: grid;
-  grid-template-columns: 276px minmax(0, 1fr);
+  grid-template-columns: 328px minmax(0, 1fr);
   gap: 24px;
   align-items: start;
   margin: 0 auto;
@@ -656,6 +656,49 @@ h1 {
 .workspace-layout[data-program="s2"] .workspace-menu-s2,
 .workspace-layout[data-program="s3"] .workspace-menu-s3 {
   display: grid;
+}
+
+.workspace-sidebar-video {
+  display: none;
+  overflow: hidden;
+  border: 1px solid rgba(221, 210, 193, 0.95);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 243, 234, 0.78)),
+    #fff;
+  box-shadow: 0 12px 24px rgba(23, 23, 23, 0.06);
+}
+
+.workspace-layout[data-program="s2"] .workspace-sidebar-video-s2 {
+  display: grid;
+}
+
+.workspace-sidebar-video-copy {
+  display: grid;
+  gap: 3px;
+  padding: 12px 12px 10px;
+}
+
+.workspace-sidebar-video-copy span {
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 950;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.workspace-sidebar-video-copy strong {
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+.workspace-sidebar-video video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-top: 1px solid rgba(221, 210, 193, 0.85);
+  background: #101820;
 }
 
 .workspace-panels {
@@ -5080,6 +5123,10 @@ tbody tr:hover td {
   .workspace-menu-list a {
     min-width: max-content;
     white-space: nowrap;
+  }
+
+  .workspace-sidebar-video {
+    display: none !important;
   }
 
   .workspace-chat-link {
