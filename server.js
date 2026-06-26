@@ -54,6 +54,10 @@ const scholarshipsPath = path.join(__dirname, "data", "scholarships.json");
 const scholarships = fs.existsSync(scholarshipsPath)
   ? JSON.parse(fs.readFileSync(scholarshipsPath, "utf8"))
   : { total: 0, scholarships: [] };
+const pkmReportsPath = path.join(__dirname, "data", "pkm_reports.json");
+const pkmReports = fs.existsSync(pkmReportsPath)
+  ? JSON.parse(fs.readFileSync(pkmReportsPath, "utf8"))
+  : { total: 0, reports: [] };
 const lectureEvaluationsPath = path.join(__dirname, "data", "lecture_evaluations.json");
 const lectureEvaluations = fs.existsSync(lectureEvaluationsPath)
   ? JSON.parse(fs.readFileSync(lectureEvaluationsPath, "utf8"))
@@ -218,6 +222,9 @@ function expandQuestion(question) {
   }
   if (/(kepuasan pengguna|pengguna lulusan|user satisfaction|graduate user|employer satisfaction|survei pengguna)/.test(text)) {
     expansions.push("kepuasan pengguna lulusan survei pengguna lulusan user satisfaction graduate user employer satisfaction mutu lulusan");
+  }
+  if (/(pkm|pengabdian|program pengabdian|pengabdian masyarakat|community engagement|community service)/.test(text)) {
+    expansions.push("pkm program pengabdian pengabdian kepada masyarakat laporan kegiatan community engagement community service applied statistics");
   }
   if (/(special moment|momen|foto angkatan|galeri|gallery|dokumentasi)/.test(text)) {
     expansions.push("special moment momen galeri foto angkatan cohort dokumentasi kebersamaan mahasiswa");
@@ -475,7 +482,7 @@ function capabilityAnswer(question, language = "id") {
       "2. Course syllabi, RPS/course plan PDFs, topics, references, and HTML learning materials.",
       "3. Academic guides, thesis guides, SUR, SKR, and Master's Final Defense.",
       "4. S3 Statistics information: vision, mission, objectives, graduate profiles, CPL, academic documents, and doctoral RPS files.",
-      "5. Graduate thesis data, tracer study reports, graduate user satisfaction reports, LAMSAMA documents, Special Moment gallery, curriculum PDF archives, course delivery evaluation reports, PBM-Lecturer Evaluation documents, fees, and SMUP admissions.",
+      "5. Graduate thesis data, tracer study reports, graduate user satisfaction reports, LAMSAMA documents, community engagement reports, Special Moment gallery, curriculum PDF archives, course delivery evaluation reports, PBM-Lecturer Evaluation documents, fees, and SMUP admissions.",
       "",
       client
         ? "Generative API mode is active, but answers remain grounded in the program knowledge base."
@@ -487,7 +494,7 @@ function capabilityAnswer(question, language = "id") {
       "2. Silabus mata kuliah, PDF RPS, bahan kajian, referensi, dan materi HTML.",
       "3. Panduan akademik, panduan tesis, SUR, SKR, dan Sidang Akhir Magister.",
       "4. Informasi S3 Statistika: visi, misi, tujuan, profil lulusan, CPL, dokumen akademik, dan RPS doktoral.",
-      "5. Data tesis lulusan, tracer study, laporan kepuasan pengguna lulusan, dokumen LAMSAMA, Special Moment, arsip PDF kurikulum, Evaluasi Pelaksanaan Perkuliahan, dokumen Evaluasi PBM-Dosen, biaya, dan pendaftaran SMUP.",
+      "5. Data tesis lulusan, tracer study, laporan kepuasan pengguna lulusan, dokumen LAMSAMA, laporan Program Pengabdian, Special Moment, arsip PDF kurikulum, Evaluasi Pelaksanaan Perkuliahan, dokumen Evaluasi PBM-Dosen, biaya, dan pendaftaran SMUP.",
       "",
       client
         ? "Mode API generatif sedang aktif, tetapi jawaban tetap ditambatkan pada knowledge base prodi."
@@ -1305,6 +1312,7 @@ function matchFact(question) {
   const asksCurriculumDoc = /dokumen kurikulum|file kurikulum|pdf kurikulum|arsip kurikulum|curriculum document|curriculum pdf|buka kurikulum|download kurikulum|unduh kurikulum/.test(text);
   const asksLectureEvaluation = /evaluasi pelaksanaan perkuliahan|evaluasi perkuliahan|monitoring perkuliahan|monitoring mahasiswa|pertemuan perkuliahan|sesi perkuliahan|course delivery evaluation|course evaluation|student monitoring/.test(text);
   const asksPbmEvaluation = /evaluasi pbm|pbm|pbm dosen|evaluasi dosen|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|lecturer evaluation|teaching learning evaluation|buka evaluasi|download evaluasi|unduh evaluasi/.test(text);
+  const asksPkm = /pkm|pengabdian|program pengabdian|pengabdian masyarakat|community engagement|community service/.test(text);
   const asksS3 = /s3|doktor|doctoral|doctorate|program doktor|statistika doktor|web s3|disertasi|promosi doktor|pnd|und|spd|diseminasi nasional|diseminasi internasional/.test(text);
   const asksThesisGuide = (
     (/tesis/.test(text) && /panduan|penulisan|format|pelaksanaan|proposal|naskah|bimbingan|penguji|sidang|seminar|sur|skr|sam/.test(text))
@@ -1324,6 +1332,7 @@ function matchFact(question) {
   if (asksCurriculumDoc) return null;
   if (asksLectureEvaluation) return null;
   if (asksPbmEvaluation) return null;
+  if (asksPkm) return null;
   if (asksS3) return null;
   if (asksThesisGuide) return null;
   if (asksAlumniData && !/profil lulusan/.test(text)) return null;
@@ -1403,6 +1412,56 @@ function lamsamaAnswer(question, language = "id") {
   };
 }
 
+function pkmReportTitle(report, language = "id") {
+  return language === "en" ? report.titleEn || report.titleId : report.titleId || report.titleEn;
+}
+
+function pkmReportPeriod(report, language = "id") {
+  return language === "en" ? report.periodEn || report.period : report.period || report.periodEn;
+}
+
+function pkmReportFocus(report, language = "id") {
+  return language === "en" ? report.focusEn || report.focusId : report.focusId || report.focusEn;
+}
+
+function pkmAnswer(question, language = "id") {
+  const text = normalize(question);
+  if (!/pkm|pengabdian|program pengabdian|pengabdian masyarakat|community engagement|community service/.test(text)) return null;
+
+  const reports = pkmReports.reports || [];
+  if (!reports.length) return null;
+
+  const answer = language === "en"
+    ? [
+        "Available community engagement program reports:",
+        "",
+        ...reports.map((report) => [
+          `${pkmReportTitle(report, language)}.`,
+          `Period: ${pkmReportPeriod(report, language)}.`,
+          `Focus: ${pkmReportFocus(report, language)}.`,
+          `${report.pages || "-"} pages, ${formatFileSize(report.sizeKb)}.`,
+          `PDF: ${report.href}`
+        ].join(" "))
+      ].join("\n")
+    : [
+        "Laporan Program Pengabdian yang tersedia:",
+        "",
+        ...reports.map((report) => [
+          `${pkmReportTitle(report, language)}.`,
+          `Periode: ${pkmReportPeriod(report, language)}.`,
+          `Fokus: ${pkmReportFocus(report, language)}.`,
+          `${report.pages || "-"} halaman, ${formatFileSize(report.sizeKb)}.`,
+          `PDF: ${report.href}`
+        ].join(" "))
+      ].join("\n");
+
+  return {
+    answer,
+    sources: reports.map((report) => ({ title: pkmReportTitle(report, language), url: report.href })),
+    mode: "Knowledge base server"
+  };
+}
+
 function scholarshipAnswer(question, language = "id") {
   const text = normalize(question);
   if (!/beasiswa|scholarship|lpdp|knb|brin|unpad glow|visiting grant|asean scholarship|mobility grant/.test(text)) return null;
@@ -1471,6 +1530,8 @@ function localAnswer(question, language = "id") {
   if (directScholarship) return directScholarship;
   const directLamsama = lamsamaAnswer(question, language);
   if (directLamsama) return directLamsama;
+  const directPkm = pkmAnswer(question, language);
+  if (directPkm) return directPkm;
   const directAcademicGuide = academicGuideAnswer(question, language);
   if (directAcademicGuide) return directAcademicGuide;
 
@@ -1516,8 +1577,8 @@ function localAnswer(question, language = "id") {
   if (!hits.length) {
     return {
       answer: language === "en"
-        ? "I have not found that information in the program knowledge base. I can answer the curriculum, syllabi, RPS/course plan PDFs, HTML learning materials, academic guides, thesis guides, graduate data, tracer studies, graduate user satisfaction reports, curriculum documents, course delivery evaluations, PBM-Lecturer Evaluation, fees, and admissions that have been indexed. Free-form answers outside this knowledge base require enabling a generative AI API on the server."
-        : "Saya belum menemukan informasi tersebut dalam knowledge base prodi. Saat ini saya bisa menjawab kurikulum, silabus, PDF RPS, materi HTML, panduan akademik, panduan tesis, data lulusan, tracer study, laporan kepuasan pengguna lulusan, dokumen kurikulum, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM-Dosen, biaya, dan pendaftaran yang sudah terindeks. Jawaban bebas di luar knowledge base memerlukan API AI generatif yang aktif di server.",
+        ? "I have not found that information in the program knowledge base. I can answer the curriculum, syllabi, RPS/course plan PDFs, HTML learning materials, academic guides, thesis guides, graduate data, tracer studies, graduate user satisfaction reports, LAMSAMA, community engagement reports, curriculum documents, course delivery evaluations, PBM-Lecturer Evaluation, fees, and admissions that have been indexed. Free-form answers outside this knowledge base require enabling a generative AI API on the server."
+        : "Saya belum menemukan informasi tersebut dalam knowledge base prodi. Saat ini saya bisa menjawab kurikulum, silabus, PDF RPS, materi HTML, panduan akademik, panduan tesis, data lulusan, tracer study, laporan kepuasan pengguna lulusan, LAMSAMA, laporan Program Pengabdian, dokumen kurikulum, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM-Dosen, biaya, dan pendaftaran yang sudah terindeks. Jawaban bebas di luar knowledge base memerlukan API AI generatif yang aktif di server.",
       sources: [],
       mode: "Knowledge base server"
     };
@@ -1574,6 +1635,7 @@ app.get("/api/health", (_req, res) => {
     curriculumDocs: curriculumDocs.total || curriculumDocs.documents?.length || 0,
     lamsamaReports: lamsamaReports.total || lamsamaReports.reports?.length || 0,
     scholarships: scholarships.total || scholarships.scholarships?.length || 0,
+    pkmReports: pkmReports.total || pkmReports.reports?.length || 0,
     lectureEvaluations: lectureEvaluations.total || lectureEvaluations.documents?.length || 0,
     pbmEvaluations: pbmEvaluations.total || pbmEvaluations.documents?.length || 0,
     rpsDocs: rpsDocs.total || rpsDocs.documents?.length || 0,
@@ -1625,6 +1687,10 @@ app.get("/api/scholarships", (_req, res) => {
   res.json(scholarships);
 });
 
+app.get("/api/pkm-reports", (_req, res) => {
+  res.json(pkmReports);
+});
+
 app.get("/api/lecture-evaluations", (_req, res) => {
   res.json(lectureEvaluations);
 });
@@ -1648,6 +1714,7 @@ app.post("/api/chat", async (req, res) => {
 
   const indexedDirectAnswer = scholarshipAnswer(question, language)
     || lamsamaAnswer(question, language)
+    || pkmAnswer(question, language)
     || academicGuideAnswer(question, language);
   if (indexedDirectAnswer) return res.json(indexedDirectAnswer);
 
