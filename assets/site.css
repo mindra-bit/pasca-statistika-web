@@ -1044,6 +1044,7 @@ h1 {
 .workspace-panels > .academic-calendar-section,
 .workspace-panels > .scholarship-section,
 .workspace-panels > .lamsama-section,
+.workspace-panels > .pkm-section,
 .workspace-panels > .academic-guide-section,
 .workspace-panels > .evaluation-section,
 .workspace-panels > .lecture-evaluation-section,
@@ -2392,6 +2393,284 @@ p {
 .lamsama-card-actions a:hover,
 .lamsama-card-actions button:hover,
 .lamsama-context button:hover {
+  filter: brightness(1.04);
+}
+
+.pkm-section {
+  background:
+    linear-gradient(180deg, #f7fbf9 0%, #ffffff 48%, #fbf6ea 100%),
+    var(--paper);
+}
+
+.pkm-hero {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 24px;
+  align-items: end;
+  border-radius: 8px;
+  padding: 28px;
+  color: #fff;
+  background:
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0 1px, transparent 1px 18px),
+    linear-gradient(135deg, rgba(20, 61, 93, 0.98), rgba(14, 107, 88, 0.96) 58%, rgba(242, 169, 0, 0.9) 128%),
+    #143d5d;
+  box-shadow: 0 20px 42px rgba(20, 61, 93, 0.18);
+}
+
+.pkm-hero::after {
+  content: "";
+  position: absolute;
+  right: -36px;
+  bottom: -58px;
+  width: 340px;
+  height: 180px;
+  opacity: 0.28;
+  background:
+    linear-gradient(90deg, transparent 0 14px, rgba(255, 255, 255, 0.78) 14px 34px, transparent 34px 48px),
+    linear-gradient(180deg, transparent 0 42px, rgba(255, 255, 255, 0.55) 42px 46px, transparent 46px 100%);
+  clip-path: polygon(0 82%, 12% 54%, 24% 68%, 38% 34%, 54% 48%, 68% 18%, 82% 30%, 100% 0, 100% 100%, 0 100%);
+  pointer-events: none;
+}
+
+.pkm-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.pkm-hero .section-kicker {
+  color: #ffe091;
+}
+
+.pkm-hero h2 {
+  max-width: 860px;
+  margin-bottom: 12px;
+  color: #fff;
+  font-size: clamp(29px, 3vw, 44px);
+}
+
+.pkm-hero-copy > p:last-child {
+  max-width: 880px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 15px;
+}
+
+.pkm-summary {
+  display: grid;
+  gap: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 8px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.pkm-summary span {
+  color: #ffe091;
+  font-size: 11px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.pkm-summary strong {
+  color: #fff;
+  font-size: 38px;
+  line-height: 1;
+}
+
+.pkm-summary small {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.pkm-context {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 18px 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px 16px;
+  background: #fff;
+}
+
+.pkm-context div {
+  display: grid;
+  gap: 3px;
+}
+
+.pkm-context span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.pkm-context strong {
+  color: var(--ink);
+  font-size: 15px;
+}
+
+.pkm-context button,
+.pkm-card-actions a,
+.pkm-card-actions button {
+  min-height: 40px;
+  border: 1px solid var(--green);
+  border-radius: 6px;
+  padding: 9px 12px;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 900;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pkm-context button {
+  color: #fff;
+  background: var(--green);
+}
+
+.pkm-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.pkm-card {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  gap: 14px;
+  min-height: 360px;
+  border: 1px solid rgba(221, 210, 193, 0.9);
+  border-radius: 8px;
+  padding: 22px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(250, 246, 237, 0.78)),
+    #fff;
+  box-shadow: 0 16px 34px rgba(23, 23, 23, 0.08);
+}
+
+.pkm-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 5px;
+  background: linear-gradient(90deg, #143d5d, var(--green), var(--gold));
+}
+
+.pkm-card-head,
+.pkm-card-meta,
+.pkm-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pkm-card-head,
+.pkm-card-meta {
+  justify-content: space-between;
+}
+
+.pkm-card-head .badge {
+  color: #fff;
+  background: #143d5d;
+}
+
+.pkm-card-head small {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.pkm-period {
+  display: grid;
+  gap: 6px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 13px;
+}
+
+.pkm-period span,
+.pkm-focus span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.pkm-period strong {
+  color: var(--green);
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 0.95;
+}
+
+.pkm-card h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 22px;
+  line-height: 1.18;
+}
+
+.pkm-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.58;
+}
+
+.pkm-focus {
+  display: grid;
+  gap: 4px;
+  border: 1px solid rgba(221, 210, 193, 0.86);
+  border-radius: 8px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.pkm-focus strong {
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.pkm-card-meta {
+  margin-top: auto;
+  border-top: 1px solid var(--line);
+  padding-top: 11px;
+  color: var(--ink-soft);
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.pkm-card-actions {
+  align-items: stretch;
+}
+
+.pkm-card-actions a,
+.pkm-card-actions button {
+  flex: 1 1 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.pkm-card-actions a {
+  color: #fff;
+  background: var(--green);
+}
+
+.pkm-card-actions button {
+  color: var(--green);
+  background: #fff;
+}
+
+.pkm-card-actions a:hover,
+.pkm-card-actions button:hover,
+.pkm-context button:hover {
   filter: brightness(1.04);
 }
 
@@ -5148,6 +5427,7 @@ tbody tr:hover td {
   .academic-calendar-hero,
   .scholarship-hero,
   .lamsama-hero,
+  .pkm-hero,
   .lecture-evaluation-hero,
   .s3-hero-panel,
   .s3-vision-grid,
@@ -5170,6 +5450,7 @@ tbody tr:hover td {
   .curriculum-doc-grid,
   .scholarship-grid,
   .lamsama-grid,
+  .pkm-grid,
   .lecture-evaluation-grid,
   .pbm-evaluation-grid,
   .calendar-summary-grid,
@@ -5351,6 +5632,7 @@ tbody tr:hover td {
   .curriculum-doc-grid,
   .scholarship-grid,
   .lamsama-grid,
+  .pkm-grid,
   .lecture-evaluation-grid,
   .pbm-evaluation-grid,
   .calendar-summary-grid,
@@ -5420,12 +5702,18 @@ tbody tr:hover td {
     flex-direction: column;
   }
 
+  .pkm-context {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
   .scholarship-note {
     align-items: flex-start;
     flex-direction: column;
   }
 
   .lamsama-context button,
+  .pkm-context button,
   .scholarship-note button {
     width: 100%;
   }

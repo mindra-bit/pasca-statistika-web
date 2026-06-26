@@ -131,6 +131,7 @@ let testimonialsData = null;
 let curriculumDocsData = null;
 let lamsamaReportsData = null;
 let scholarshipsData = null;
+let pkmReportsData = null;
 let lectureEvaluationsData = null;
 let pbmEvaluationsData = null;
 let rpsDocsData = null;
@@ -208,6 +209,8 @@ const lamsamaRows = document.getElementById("lamsamaRows");
 const lamsamaCount = document.getElementById("lamsamaCount");
 const scholarshipRows = document.getElementById("scholarshipRows");
 const scholarshipCount = document.getElementById("scholarshipCount");
+const pkmRows = document.getElementById("pkmRows");
+const pkmReportCount = document.getElementById("pkmReportCount");
 const lectureEvaluationRows = document.getElementById("lectureEvaluationRows");
 const lectureEvaluationCount = document.getElementById("lectureEvaluationCount");
 const pbmEvaluationRows = document.getElementById("pbmEvaluationRows");
@@ -225,6 +228,7 @@ const workspacePanelIds = [
   "program-profile",
   "beasiswa",
   "lamsama",
+  "program-pengabdian",
   "kurikulum",
   "dokumen-kurikulum",
   "mata-kuliah",
@@ -291,6 +295,7 @@ const I18N = {
     workspaceProgramProfile: "Program Profile",
     workspaceScholarships: "Beasiswa",
     workspaceLamsama: "LAMSAMA",
+    workspacePkm: "Program Pengabdian",
     workspaceVisionMission: "Visi dan Misi",
     workspaceGraduateProfile: "Profil Lulusan",
     programProfileCombinedTitle: "Profil lengkap S2 Statistika Terapan.",
@@ -330,7 +335,7 @@ const I18N = {
     heroS3: "Web S3",
     frontS2Title: "S2 Statistika Terapan",
     frontS2Accreditation: "Akreditasi UNGGUL",
-    frontS2Text: "Informasi kurikulum OBE 2026, beasiswa, laporan LAMSAMA, silabus, RPS, materi kuliah, panduan akademik, panduan tesis, lulusan, dan tracer study.",
+    frontS2Text: "Informasi kurikulum OBE 2026, beasiswa, laporan LAMSAMA, Program Pengabdian, silabus, RPS, materi kuliah, panduan akademik, panduan tesis, lulusan, dan tracer study.",
     frontS2Meta: "Magister",
     frontS2Open: "Buka Informasi S2",
     frontS3Title: "S3 Statistika",
@@ -471,6 +476,20 @@ const I18N = {
     lamsamaAskDocument: "Tanya chatbot",
     lamsamaAssessmentDoc: "Dokumen asesmen",
     noLamsamaReports: "Dokumen LAMSAMA belum tersedia.",
+    pkmKicker: "Program Pengabdian",
+    pkmTitle: "Arsip kegiatan pengabdian berbasis statistika terapan.",
+    pkmText: "Blok ini menghimpun laporan kegiatan Program Pengabdian sebagai dokumentasi kontribusi akademik, penerapan statistika, dan kolaborasi program studi dengan masyarakat.",
+    pkmSummaryLabel: "Dokumen tersedia",
+    pkmSummaryText: "laporan PDF",
+    pkmFocusLabel: "Fokus kegiatan",
+    pkmFocusText: "Pengabdian kepada masyarakat berbasis statistika terapan",
+    pkmAsk: "Tanyakan Program Pengabdian ke chatbot",
+    pkmArchive: "Laporan PKM",
+    pkmPeriodLabel: "Periode",
+    pkmFocusCardLabel: "Fokus",
+    pkmOpen: "Buka laporan PDF",
+    pkmAskDocument: "Tanya chatbot",
+    noPkmReports: "Laporan Program Pengabdian belum tersedia.",
     scholarshipKicker: "Beasiswa dan Mobilitas",
     scholarshipTitle: "Peluang pendanaan studi, riset, dan mobilitas global.",
     scholarshipText: "Akses cepat menuju program beasiswa nasional, internasional, pendanaan riset, dan mobilitas yang relevan bagi komunitas pascasarjana.",
@@ -658,7 +677,7 @@ const I18N = {
     metricUnavailable: "Lihat dashboard",
     chatKicker: "Chatbot Akademik",
     chatTitle: "Tanya Kurikulum S2 Statistika Terapan",
-    chatText: "Jawaban chatbot ditambatkan pada ekstraksi dokumen Kurikulum OBE 2026, dokumen kurikulum 2020-2026, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM-Dosen, panduan akademik, panduan tesis, silabus mata kuliah, PDF RPS, katalog materi HTML, data lulusan, tracer study, Special Moment, dan ringkasan administratif dari SMUP Program Magister.",
+    chatText: "Jawaban chatbot ditambatkan pada ekstraksi dokumen Kurikulum OBE 2026, dokumen kurikulum 2020-2026, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM-Dosen, panduan akademik, panduan tesis, silabus mata kuliah, PDF RPS, katalog materi HTML, data lulusan, tracer study, LAMSAMA, Program Pengabdian, Special Moment, dan ringkasan administratif dari SMUP Program Magister.",
     knowledgePieces: "potongan pengetahuan terindeks",
     assistantName: "Asisten Prodi",
     loadingKnowledge: "Memuat knowledge base",
@@ -677,8 +696,8 @@ const I18N = {
     promptCurriculumDocs: "Dokumen 2026",
     promptLectureEvaluation: "Evaluasi Perkuliahan",
     promptPbmEvaluation: "Evaluasi PBM-Dosen",
-    welcomeText: "Silakan ajukan pertanyaan tentang kurikulum 2026, dokumen kurikulum 2020-2026, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM-Dosen, jalur studi, SKS, CPL, panduan akademik, panduan tesis, SUR, SKR, SAM, silabus, PDF RPS, materi kuliah HTML, tracer study, kepuasan pengguna lulusan, LAMSAMA, Special Moment, tesis lulusan, biaya, pendaftaran, dan profil lulusan S2 Statistika Terapan.",
-    welcomeSources: "Sumber utama: Kurikulum OBE 2026, dokumen kurikulum, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM-Dosen, panduan akademik, panduan tesis, data lulusan, tracer study, kepuasan pengguna lulusan, LAMSAMA, Special Moment, RPS 2026, dan katalog materi kuliah",
+    welcomeText: "Silakan ajukan pertanyaan tentang kurikulum 2026, dokumen kurikulum 2020-2026, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM-Dosen, jalur studi, SKS, CPL, panduan akademik, panduan tesis, SUR, SKR, SAM, silabus, PDF RPS, materi kuliah HTML, tracer study, kepuasan pengguna lulusan, LAMSAMA, Program Pengabdian, Special Moment, tesis lulusan, biaya, pendaftaran, dan profil lulusan S2 Statistika Terapan.",
+    welcomeSources: "Sumber utama: Kurikulum OBE 2026, dokumen kurikulum, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM-Dosen, panduan akademik, panduan tesis, data lulusan, tracer study, kepuasan pengguna lulusan, LAMSAMA, Program Pengabdian, Special Moment, RPS 2026, dan katalog materi kuliah",
     questionLabel: "Pertanyaan",
     questionPlaceholder: "Tulis pertanyaan...",
     send: "Kirim",
@@ -760,6 +779,7 @@ const I18N = {
     workspaceProgramProfile: "Program Profile",
     workspaceScholarships: "Scholarships",
     workspaceLamsama: "LAMSAMA",
+    workspacePkm: "Community Engagement",
     workspaceVisionMission: "Vision and Mission",
     workspaceGraduateProfile: "Graduate Profile",
     programProfileCombinedTitle: "Complete profile of the Applied Statistics Master's Program.",
@@ -799,7 +819,7 @@ const I18N = {
     heroS3: "S3 Site",
     frontS2Title: "Applied Statistics Master's Program",
     frontS2Accreditation: "UNGGUL Accreditation",
-    frontS2Text: "Information on the 2026 OBE curriculum, scholarships, LAMSAMA reports, syllabi, RPS, course materials, academic guides, thesis guides, graduates, and tracer studies.",
+    frontS2Text: "Information on the 2026 OBE curriculum, scholarships, LAMSAMA reports, community engagement, syllabi, RPS, course materials, academic guides, thesis guides, graduates, and tracer studies.",
     frontS2Meta: "Master's",
     frontS2Open: "Open S2 Information",
     frontS3Title: "Doctoral Program in Statistics",
@@ -929,6 +949,20 @@ const I18N = {
     lamsamaAskDocument: "Ask chatbot",
     lamsamaAssessmentDoc: "Assessment document",
     noLamsamaReports: "LAMSAMA documents are not yet available.",
+    pkmKicker: "Community Engagement",
+    pkmTitle: "Applied statistics community engagement activity archive.",
+    pkmText: "This block collects Program Pengabdian reports as documentation of academic contribution, statistical application, and program collaboration with communities.",
+    pkmSummaryLabel: "Available documents",
+    pkmSummaryText: "PDF report",
+    pkmFocusLabel: "Activity focus",
+    pkmFocusText: "Community engagement based on applied statistics",
+    pkmAsk: "Ask the chatbot about community engagement",
+    pkmArchive: "PKM Report",
+    pkmPeriodLabel: "Period",
+    pkmFocusCardLabel: "Focus",
+    pkmOpen: "Open PDF report",
+    pkmAskDocument: "Ask chatbot",
+    noPkmReports: "Community engagement reports are not yet available.",
     scholarshipKicker: "Scholarships and Mobility",
     scholarshipTitle: "Funding opportunities for study, research, and global mobility.",
     scholarshipText: "Quick access to national and international scholarships, research funding, and mobility opportunities relevant to the graduate community.",
@@ -1127,7 +1161,7 @@ const I18N = {
     metricUnavailable: "View dashboard",
     chatKicker: "Academic Chatbot",
     chatTitle: "Ask About the Applied Statistics Master's Curriculum",
-    chatText: "The chatbot answers are grounded in the 2026 OBE curriculum extraction, 2020-2026 curriculum documents, course delivery evaluations, PBM-Lecturer Evaluation, academic guides, thesis guides, course syllabi, RPS PDFs, HTML learning material catalog, graduate data, tracer studies, Special Moment gallery, and administrative summaries from SMUP.",
+    chatText: "The chatbot answers are grounded in the 2026 OBE curriculum extraction, 2020-2026 curriculum documents, course delivery evaluations, PBM-Lecturer Evaluation, academic guides, thesis guides, course syllabi, RPS PDFs, HTML learning material catalog, graduate data, tracer studies, LAMSAMA, community engagement reports, Special Moment gallery, and administrative summaries from SMUP.",
     knowledgePieces: "indexed knowledge chunks",
     assistantName: "Program Assistant",
     loadingKnowledge: "Loading knowledge base",
@@ -1146,8 +1180,8 @@ const I18N = {
     promptCurriculumDocs: "2026 Document",
     promptLectureEvaluation: "Course Evaluation",
     promptPbmEvaluation: "PBM-Lecturer Evaluation",
-    welcomeText: "Ask about the 2026 curriculum, 2020-2026 curriculum documents, course delivery evaluations, PBM-Lecturer Evaluation, study pathways, credits, learning outcomes, academic guides, thesis guides, SUR, SKR, SAM, syllabi, RPS PDFs, HTML learning materials, tracer studies, graduate user satisfaction reports, LAMSAMA, Special Moment gallery, graduate theses, fees, admissions, and graduate profiles.",
-    welcomeSources: "Main sources: 2026 OBE Curriculum, curriculum documents, course delivery evaluations, PBM-Lecturer Evaluation, academic guides, thesis guides, graduate data, tracer studies, graduate user satisfaction reports, LAMSAMA, Special Moment gallery, RPS 2026, and learning material catalog",
+    welcomeText: "Ask about the 2026 curriculum, 2020-2026 curriculum documents, course delivery evaluations, PBM-Lecturer Evaluation, study pathways, credits, learning outcomes, academic guides, thesis guides, SUR, SKR, SAM, syllabi, RPS PDFs, HTML learning materials, tracer studies, graduate user satisfaction reports, LAMSAMA, community engagement reports, Special Moment gallery, graduate theses, fees, admissions, and graduate profiles.",
+    welcomeSources: "Main sources: 2026 OBE Curriculum, curriculum documents, course delivery evaluations, PBM-Lecturer Evaluation, academic guides, thesis guides, graduate data, tracer studies, graduate user satisfaction reports, LAMSAMA, community engagement reports, Special Moment gallery, RPS 2026, and learning material catalog",
     questionLabel: "Question",
     questionPlaceholder: "Type a question...",
     send: "Send",
@@ -1525,6 +1559,9 @@ function expandQuestion(question) {
   }
   if (/(kepuasan pengguna|pengguna lulusan|user satisfaction|graduate user|employer satisfaction|survei pengguna)/.test(normalized)) {
     synonyms.push("kepuasan pengguna lulusan survei pengguna lulusan user satisfaction graduate user employer satisfaction mutu lulusan");
+  }
+  if (/(pkm|pengabdian|program pengabdian|pengabdian masyarakat|community engagement|community service)/.test(normalized)) {
+    synonyms.push("pkm program pengabdian pengabdian kepada masyarakat laporan kegiatan community engagement community service applied statistics");
   }
   if (/(special moment|momen|foto angkatan|galeri|gallery|dokumentasi)/.test(normalized)) {
     synonyms.push("special moment momen galeri foto angkatan cohort dokumentasi kebersamaan mahasiswa");
@@ -2161,6 +2198,24 @@ function lamsamaReportSequenceLabel(report) {
   return `${t("lamsamaSequenceLabel")}${report.sequence || "-"}`;
 }
 
+function pkmReportTitle(report) {
+  return currentLang === "en" ? report.titleEn || report.titleId : report.titleId || report.titleEn;
+}
+
+function pkmReportDescription(report) {
+  return currentLang === "en"
+    ? report.descriptionEn || report.descriptionId
+    : report.descriptionId || report.descriptionEn;
+}
+
+function pkmReportPeriod(report) {
+  return currentLang === "en" ? report.periodEn || report.period : report.period || report.periodEn;
+}
+
+function pkmReportFocus(report) {
+  return currentLang === "en" ? report.focusEn || report.focusId : report.focusId || report.focusEn;
+}
+
 function graduateUserReportTitle(report) {
   return currentLang === "en" ? report.titleEn || report.title : report.titleId || report.title;
 }
@@ -2692,6 +2747,7 @@ function matchFact(question) {
   const asksCurriculumDoc = /dokumen kurikulum|file kurikulum|pdf kurikulum|arsip kurikulum|curriculum document|curriculum pdf|buka kurikulum|download kurikulum|unduh kurikulum/.test(text);
   const asksLectureEvaluation = /evaluasi pelaksanaan perkuliahan|evaluasi perkuliahan|monitoring perkuliahan|monitoring mahasiswa|pertemuan perkuliahan|sesi perkuliahan|course delivery evaluation|course evaluation|student monitoring/.test(text);
   const asksPbmEvaluation = /evaluasi pbm|pbm|pbm dosen|evaluasi dosen|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|lecturer evaluation|teaching learning evaluation|buka evaluasi|download evaluasi|unduh evaluasi/.test(text);
+  const asksPkm = /pkm|pengabdian|program pengabdian|pengabdian masyarakat|community engagement|community service/.test(text);
   const asksS3 = /s3|doktor|doctoral|doctorate|program doktor|statistika doktor|web s3|disertasi|promosi doktor|pnd|und|spd|diseminasi nasional|diseminasi internasional/.test(text);
   const asksThesisGuide = (
     (/tesis/.test(text) && /panduan|penulisan|format|pelaksanaan|proposal|naskah|bimbingan|penguji|sidang|seminar|sur|skr|sam/.test(text))
@@ -2711,6 +2767,7 @@ function matchFact(question) {
   if (asksCurriculumDoc) return null;
   if (asksLectureEvaluation) return null;
   if (asksPbmEvaluation) return null;
+  if (asksPkm) return null;
   if (asksS3) return null;
   if (asksThesisGuide) return null;
   if (asksAlumniData && !/profil lulusan/.test(text)) return null;
@@ -2758,6 +2815,44 @@ function buildLamsamaAnswer(question) {
   return {
     answer,
     sources: reports.map((report) => ({ title: lamsamaReportTitle(report), url: report.href })),
+    mode: "Local knowledge base"
+  };
+}
+
+function buildPkmAnswer(question) {
+  const text = normalize(question);
+  if (!/pkm|pengabdian|program pengabdian|pengabdian masyarakat|community engagement|community service/.test(text)) return null;
+
+  const reports = pkmReportsData?.reports || [];
+  if (!reports.length) return null;
+
+  const answer = currentLang === "en"
+    ? [
+        "Available community engagement program reports:",
+        "",
+        ...reports.map((report) => [
+          `${pkmReportTitle(report)}.`,
+          `Period: ${pkmReportPeriod(report)}.`,
+          `Focus: ${pkmReportFocus(report)}.`,
+          `${report.pages || "-"} pages, ${formatFileSize(report.sizeKb)}.`,
+          `PDF: ${report.href}`
+        ].join(" "))
+      ].join("\n")
+    : [
+        "Laporan Program Pengabdian yang tersedia:",
+        "",
+        ...reports.map((report) => [
+          `${pkmReportTitle(report)}.`,
+          `Periode: ${pkmReportPeriod(report)}.`,
+          `Fokus: ${pkmReportFocus(report)}.`,
+          `${report.pages || "-"} halaman, ${formatFileSize(report.sizeKb)}.`,
+          `PDF: ${report.href}`
+        ].join(" "))
+      ].join("\n");
+
+  return {
+    answer,
+    sources: reports.map((report) => ({ title: pkmReportTitle(report), url: report.href })),
     mode: "Local knowledge base"
   };
 }
@@ -2826,6 +2921,8 @@ function buildLocalAnswer(question) {
   if (directScholarship) return directScholarship;
   const directLamsama = buildLamsamaAnswer(question);
   if (directLamsama) return directLamsama;
+  const directPkm = buildPkmAnswer(question);
+  if (directPkm) return directPkm;
   const directAcademicGuide = buildAcademicGuideAnswer(question);
   if (directAcademicGuide) return directAcademicGuide;
 
@@ -2866,8 +2963,8 @@ function buildLocalAnswer(question) {
   if (!hits.length) {
     return {
       answer: currentLang === "en"
-        ? "I have not found that information in the program knowledge base. I can answer the curriculum, syllabi, RPS/course plan PDFs, HTML learning materials, academic guides, thesis guides, graduate data, tracer studies, graduate user satisfaction reports, curriculum documents, course delivery evaluations, PBM-Lecturer Evaluation, fees, and admissions that have been indexed. Free-form answers outside this knowledge base require enabling a generative AI API on the server."
-        : "Saya belum menemukan informasi tersebut dalam knowledge base prodi. Saat ini saya bisa menjawab kurikulum, silabus, PDF RPS, materi HTML, panduan akademik, panduan tesis, data lulusan, tracer study, laporan kepuasan pengguna lulusan, dokumen kurikulum, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM-Dosen, biaya, dan pendaftaran yang sudah terindeks. Jawaban bebas di luar knowledge base memerlukan API AI generatif yang aktif di server.",
+        ? "I have not found that information in the program knowledge base. I can answer the curriculum, syllabi, RPS/course plan PDFs, HTML learning materials, academic guides, thesis guides, graduate data, tracer studies, graduate user satisfaction reports, LAMSAMA, community engagement reports, curriculum documents, course delivery evaluations, PBM-Lecturer Evaluation, fees, and admissions that have been indexed. Free-form answers outside this knowledge base require enabling a generative AI API on the server."
+        : "Saya belum menemukan informasi tersebut dalam knowledge base prodi. Saat ini saya bisa menjawab kurikulum, silabus, PDF RPS, materi HTML, panduan akademik, panduan tesis, data lulusan, tracer study, laporan kepuasan pengguna lulusan, LAMSAMA, laporan Program Pengabdian, dokumen kurikulum, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM-Dosen, biaya, dan pendaftaran yang sudah terindeks. Jawaban bebas di luar knowledge base memerlukan API AI generatif yang aktif di server.",
       sources: [],
       mode: "Local knowledge base"
     };
@@ -3690,6 +3787,53 @@ function renderLamsamaReports() {
     .join("");
 }
 
+function renderPkmReports() {
+  if (!pkmRows) return;
+  const reports = pkmReportsData?.reports || [];
+
+  if (pkmReportCount) pkmReportCount.textContent = String(reports.length);
+
+  if (!reports.length) {
+    pkmRows.innerHTML = `<p class="empty-note">${escapeHTML(t("noPkmReports"))}</p>`;
+    return;
+  }
+
+  pkmRows.innerHTML = reports
+    .map((report) => {
+      const title = pkmReportTitle(report);
+      const question = currentLang === "en"
+        ? `Explain ${title}`
+        : `Jelaskan ${title}`;
+      return `
+        <article class="pkm-card">
+          <div class="pkm-card-head">
+            <span class="badge">${escapeHTML(t("pkmArchive"))}</span>
+            <small>${escapeHTML(report.pages || "-")} ${escapeHTML(t("pages"))}</small>
+          </div>
+          <div class="pkm-period">
+            <span>${escapeHTML(t("pkmPeriodLabel"))}</span>
+            <strong>${escapeHTML(pkmReportPeriod(report))}</strong>
+          </div>
+          <h3>${escapeHTML(title)}</h3>
+          <p>${escapeHTML(pkmReportDescription(report))}</p>
+          <div class="pkm-focus">
+            <span>${escapeHTML(t("pkmFocusCardLabel"))}</span>
+            <strong>${escapeHTML(pkmReportFocus(report))}</strong>
+          </div>
+          <div class="pkm-card-meta">
+            <span>${escapeHTML(report.format || "PDF")}</span>
+            <span>${escapeHTML(formatFileSize(report.sizeKb))}</span>
+          </div>
+          <div class="pkm-card-actions">
+            <a href="${escapeHTML(report.href)}" target="_blank" rel="noopener">${escapeHTML(t("pkmOpen"))}</a>
+            <button type="button" data-pkm-q="${escapeHTML(question)}">${escapeHTML(t("pkmAskDocument"))}</button>
+          </div>
+        </article>
+      `;
+    })
+    .join("");
+}
+
 function renderScholarships() {
   if (!scholarshipRows) return;
   const scholarships = scholarshipsData?.scholarships || [];
@@ -4033,6 +4177,19 @@ async function loadLamsamaReports() {
   renderLamsamaReports();
 }
 
+async function loadPkmReports() {
+  try {
+    const response = await fetch("data/pkm_reports.json", { cache: "no-store" });
+    if (!response.ok) throw new Error("Laporan Program Pengabdian tidak dapat dimuat.");
+    const data = await response.json();
+    if (!data?.reports?.length) throw new Error("Laporan Program Pengabdian kosong.");
+    pkmReportsData = data;
+  } catch (error) {
+    pkmReportsData = { total: 0, reports: [] };
+  }
+  renderPkmReports();
+}
+
 async function loadScholarships() {
   try {
     const response = await fetch("data/scholarships.json", { cache: "no-store" });
@@ -4233,6 +4390,11 @@ lamsamaRows?.addEventListener("click", (event) => {
   if (!button) return;
   ask(button.dataset.lamsamaQ);
 });
+pkmRows?.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-pkm-q]");
+  if (!button) return;
+  ask(button.dataset.pkmQ);
+});
 scholarshipRows?.addEventListener("click", (event) => {
   const button = event.target.closest("[data-scholarship-q]");
   if (!button) return;
@@ -4278,6 +4440,7 @@ loadSpecialMoments();
 loadTestimonials();
 loadCurriculumDocs();
 loadLamsamaReports();
+loadPkmReports();
 loadScholarships();
 loadLectureEvaluations();
 loadPbmEvaluations();
