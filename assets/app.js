@@ -33,6 +33,129 @@ const COURSES = [
   ["Sidang Akhir Magister (Tesis)", "Master's Thesis Defense", "6", "Riset"]
 ];
 
+const INSPIRATION_VOICES = [
+  {
+    name: "I Gede Nyoman Mindra Jaya",
+    image: "assets/inspiration/pesan-kaprodi.jpg",
+    roleKey: "inspirationHeadRole",
+    messageId: "Perjalanan panjang dan penuh perjuangan akhirnya membuahkan hasil. Rumah MStat akan selalu terbuka untuk kalian.",
+    messageEn: "Your long and determined journey has borne fruit. The MStat home will always be open to all of you.",
+    focusX: "100%", focusY: "36%", zoom: 2.35
+  },
+  {
+    name: "Wanda Alifia",
+    image: "assets/inspiration/pesan-wanda-alifia.jpg",
+    messageId: "Saya bersyukur bisa belajar di bawah bimbingan Bapak, yang tidak hanya memberikan ilmu, tetapi juga motivasi dan inspirasi.",
+    messageEn: "I am grateful to have learned under your guidance, which provided not only knowledge but also motivation and inspiration.",
+    focusX: "99%", focusY: "0%", zoom: 2.55
+  },
+  {
+    name: "Widi Wildani Alfarisi",
+    image: "assets/inspiration/pesan-widi-wildani-alfarisi.jpg",
+    messageId: "Terima kasih banyak, Pak, atas bimbingannya selama saya menjalani S2. Banyak sekali ilmu yang saya dapat dari Bapak.",
+    messageEn: "Thank you for guiding me throughout my master's study. I learned so much from you.",
+    focusX: "100%", focusY: "0%", zoom: 2.6
+  },
+  {
+    name: "Najma Rafifah Putri Syaleya",
+    image: "assets/inspiration/pesan-najma-rafifah-putri-syaleya.jpg",
+    messageId: "Terima kasih banyak, Pak, untuk usaha, bimbingan, dan dukungannya selama ini. Semoga Bapak terus sukses dan sehat selalu.",
+    messageEn: "Thank you for your effort, guidance, and support. May you always be successful and in good health.",
+    focusX: "100%", focusY: "0%", zoom: 2.5
+  },
+  {
+    name: "Fariza Alamanda Putri",
+    image: "assets/inspiration/pesan-fariza-alamanda-putri.jpg",
+    messageId: "Terima kasih, Pak Mindra, atas kesabaran Bapak selama membimbing kami. Banyak sekali kenangan bersama dosen dan teman-teman selama kuliah.",
+    messageEn: "Thank you, Pak Mindra, for patiently guiding us. I carry many memories with our lecturers and friends throughout the program.",
+    focusX: "100%", focusY: "0%", zoom: 2.55
+  },
+  {
+    name: "Sandrina Najwa",
+    image: "assets/inspiration/pesan-sandrina-najwa.jpg",
+    messageId: "Terima kasih atas masukan dan sarannya. Mohon maaf jika selama sidang ada kata yang kurang berkenan.",
+    messageEn: "Thank you for your feedback and advice. Please forgive any words during the defense that may have been inappropriate.",
+    focusX: "100%", focusY: "0%", zoom: 2.6
+  },
+  {
+    name: "Dila Fitriani Azuri",
+    image: "assets/inspiration/pesan-dila-fitriani-azuri.jpg",
+    messageId: "Terima kasih atas bimbingan dan ilmunya, serta untuk seluruh dosen dan sivitas akademika yang telah membantu kami.",
+    messageEn: "Thank you for your guidance and knowledge, and to all lecturers and academic staff who supported us.",
+    focusX: "93%", focusY: "0%", zoom: 2.55
+  },
+  {
+    name: "Theresia Samaria Nauli",
+    image: "assets/inspiration/pesan-theresia-samaria-nauli.jpg",
+    messageId: "Terima kasih untuk semua dukungan dan bimbingan selama studi kami di Magister Statistika. Semoga Bapak selalu sehat dan dilancarkan dalam setiap kesibukan.",
+    messageEn: "Thank you for all the support and guidance throughout our master's study in statistics. May you always be healthy and successful.",
+    focusX: "99%", focusY: "0%", zoom: 2.55
+  },
+  {
+    name: "Zhafira Haura",
+    image: "assets/inspiration/pesan-zhafira-haura.jpg",
+    messageId: "Terima kasih untuk segala ilmu, bimbingan, dan arahan sehingga kami dapat menyelesaikan perkuliahan ini.",
+    messageEn: "Thank you for all the knowledge, guidance, and direction that helped us complete this academic journey.",
+    focusX: "92%", focusY: "12%", zoom: 2.45
+  },
+  {
+    name: "Dhanti Aurilia Pratiwi",
+    image: "assets/inspiration/pesan-dhanti-aurilia-pratiwi.jpg",
+    messageId: "Terima kasih atas bantuan dan bimbingannya sejak kami baru masuk sampai sekarang. Semoga kita terus saling terhubung.",
+    messageEn: "Thank you for your help and guidance from the beginning of our studies until today. May we always stay connected.",
+    focusX: "100%", focusY: "0%", zoom: 2.55
+  },
+  {
+    name: "Muhammad Rhafi Ahdian",
+    image: "assets/inspiration/pesan-muhammad-rhafi-ahdian.jpg",
+    messageId: "Bapak selalu mendukung dan memotivasi kami dalam menyelesaikan perkuliahan di MStat. Semua yang telah berlalu akan selalu kami kenang.",
+    messageEn: "You always supported and motivated us throughout our MStat studies. We will always remember this journey.",
+    focusX: "100%", focusY: "0%", zoom: 2.6
+  },
+  {
+    name: "Aisha Kusuma Putri",
+    image: "assets/inspiration/pesan-aisha-kusuma-putri.jpg",
+    messageId: "Terima kasih banyak atas bantuan selama ini dan karena selalu mengusahakan yang terbaik untuk kami semua.",
+    messageEn: "Thank you for all your help and for always striving to give the very best to all of us.",
+    focusX: "100%", focusY: "2%", zoom: 2.55
+  },
+  {
+    name: "Ayu Sangrila",
+    image: "assets/inspiration/pesan-ayu-sangrila.jpg",
+    messageId: "Terima kasih atas bimbingan dan dukungannya, serta telah mengusahakan yang terbaik untuk kami. Semoga silaturahmi tetap terjaga.",
+    messageEn: "Thank you for your guidance, support, and dedication to giving us the best. May our connection always remain strong.",
+    focusX: "97%", focusY: "7%", zoom: 2.5
+  },
+  {
+    name: "Muhammad Yasyfi Avicenna",
+    image: "assets/inspiration/pesan-muhammad-yasyfi-avicenna.jpg",
+    messageId: "Kami tidak akan melupakan jasa para dosen yang telah membina dan membimbing kami hingga saat ini.",
+    messageEn: "We will never forget the lecturers who have nurtured and guided us throughout this journey.",
+    focusX: "96%", focusY: "0%", zoom: 2.55
+  },
+  {
+    name: "Ayu Indriani",
+    image: "assets/inspiration/pesan-ayu-indriani.jpg",
+    messageId: "Terima kasih atas pembelajaran dan bimbingannya, karena selalu sabar dan mengusahakan yang terbaik untuk kami.",
+    messageEn: "Thank you for your teaching and guidance, for your patience, and for always doing your best for us.",
+    focusX: "100%", focusY: "8%", zoom: 2.5
+  },
+  {
+    name: "Laila Budhanti",
+    image: "assets/inspiration/pesan-laila-budhanti.jpg",
+    messageId: "Semua proses pembelajaran yang kami lalui terasa lebih bermakna berkat arahan dan motivasi dari Bapak.",
+    messageEn: "Every part of our learning journey became more meaningful because of your guidance and encouragement.",
+    focusX: "100%", focusY: "0%", zoom: 2.6
+  },
+  {
+    name: "Aulia Rahman Al Madani",
+    image: "assets/inspiration/pesan-aulia-rahman-al-madani.jpg",
+    messageId: "Terima kasih atas bimbingan, ilmu, bantuan, dan arahan selama proses perkuliahan. Menjadi bagian dari MStat 23 adalah pengalaman yang berkesan.",
+    messageEn: "Thank you for your guidance, knowledge, help, and direction. Being part of MStat 23 has been a memorable experience.",
+    focusX: "100%", focusY: "0%", zoom: 2.55
+  }
+];
+
 const FACTS = {
   sks: {
     answer: "Berdasarkan dokumen Kurikulum OBE 2026, beban studi S2 Statistika Terapan adalah 42 SKS. Jalur berbasis kuliah terdiri atas 21 SKS mata kuliah wajib, 9 SKS mata kuliah pilihan, dan 12 SKS tesis: Seminar Usulan Riset 2 SKS, Seminar Kemajuan Riset 4 SKS, dan Sidang Akhir Magister 6 SKS.",
@@ -303,6 +426,18 @@ const I18N = {
     milestoneKicker: "Milestone Program",
     milestoneTitle: "Perjalanan pengembangan S2 Statistika Terapan.",
     milestoneText: "Milestone program ditampilkan sebagai ringkasan visual perkembangan akademik, mutu, dan capaian Program S2 Statistika Terapan FMIPA Universitas Padjadjaran.",
+    inspirationKicker: "Pesan dan Inspirasi",
+    inspirationTitle: "Suara dari perjalanan akademik kami.",
+    inspirationText: "Pesan, kenangan, dan semangat yang tumbuh bersama keluarga besar S2 Statistika Terapan.",
+    inspirationPrevious: "Pesan sebelumnya",
+    inspirationNext: "Pesan berikutnya",
+    inspirationFirst: "Tampilkan gambar pertama",
+    inspirationSecond: "Tampilkan gambar kedua",
+    inspirationCollection: "MStat Moments",
+    inspirationAlumniRole: "Alumni MStat",
+    inspirationHeadRole: "Ketua Program Studi",
+    inspirationOpenOriginal: "Buka pesan asli",
+    inspirationRegionLabel: "Kumpulan pesan dan inspirasi",
     workspaceCurriculum: "Kurikulum",
     workspaceCurriculumDocs: "Dokumen Kurikulum",
     workspaceCourses: "Daftar Mata Kuliah",
@@ -787,6 +922,18 @@ const I18N = {
     milestoneKicker: "Program Milestone",
     milestoneTitle: "Development journey of the Applied Statistics Master's Program.",
     milestoneText: "The program milestone is presented as a visual summary of academic development, quality progress, and achievements of the Applied Statistics Master's Program at FMIPA Universitas Padjadjaran.",
+    inspirationKicker: "Messages and Inspiration",
+    inspirationTitle: "Voices from our academic journey.",
+    inspirationText: "Messages, memories, and encouragement shared across the Applied Statistics Master's community.",
+    inspirationPrevious: "Previous message",
+    inspirationNext: "Next message",
+    inspirationFirst: "Show the first image",
+    inspirationSecond: "Show the second image",
+    inspirationCollection: "MStat Moments",
+    inspirationAlumniRole: "MStat Alumni",
+    inspirationHeadRole: "Head of Study Program",
+    inspirationOpenOriginal: "Open original message",
+    inspirationRegionLabel: "Messages and inspiration collection",
     workspaceCurriculum: "Curriculum",
     workspaceCurriculumDocs: "Curriculum Documents",
     workspaceCourses: "Course List",
@@ -1389,6 +1536,20 @@ function setMode(key) {
   modeLabel.textContent = t(key);
 }
 
+function updateInspirationVoiceLanguage() {
+  const cards = [...document.querySelectorAll("[data-voice-card]")];
+  cards.forEach((card, cardIndex) => {
+    card.setAttribute("aria-label", currentLang === "en"
+      ? `Message ${cardIndex + 1} of ${cards.length}`
+      : `Pesan ${cardIndex + 1} dari ${cards.length}`);
+  });
+  document.querySelectorAll("[data-voice-source]").forEach((link) => {
+    link.title = t("inspirationOpenOriginal");
+  });
+  const viewport = document.querySelector("[data-voice-viewport]");
+  if (viewport) viewport.setAttribute("aria-label", t("inspirationRegionLabel"));
+}
+
 function applyLanguage() {
   document.documentElement.lang = currentLang;
   document.querySelectorAll("[data-i18n]").forEach((element) => {
@@ -1421,6 +1582,152 @@ function applyLanguage() {
   renderPbmEvaluations();
   renderAlumni();
   renderAnalyticsPanel();
+  updateInspirationVoiceLanguage();
+}
+
+function renderInspirationVoices() {
+  const track = document.getElementById("inspirationVoiceTrack");
+  if (!track) return;
+  track.innerHTML = INSPIRATION_VOICES.map((voice, index) => {
+    const roleKey = voice.roleKey || "inspirationAlumniRole";
+    return `
+      <article class="inspiration-voice-card" data-voice-card aria-label="Pesan ${index + 1} dari ${INSPIRATION_VOICES.length}">
+        <div class="inspiration-voice-card-head">
+          <div class="inspiration-voice-avatar" style="--voice-focus-x:${escapeHTML(voice.focusX)};--voice-focus-y:${escapeHTML(voice.focusY)};--voice-zoom:${escapeHTML(voice.zoom)}" aria-hidden="true">
+            <img src="${escapeHTML(voice.image)}" alt="" loading="lazy" decoding="async" />
+          </div>
+          <div class="inspiration-voice-identity">
+            <strong>${escapeHTML(voice.name)}</strong>
+            <span data-i18n="${escapeHTML(roleKey)}">${escapeHTML(t(roleKey))}</span>
+          </div>
+          <a class="inspiration-voice-source" href="${escapeHTML(voice.image)}" target="_blank" rel="noopener" data-voice-source title="${escapeHTML(t("inspirationOpenOriginal"))}">
+            <span aria-hidden="true">&#8599;</span>
+            <span class="sr-only" data-i18n="inspirationOpenOriginal">${escapeHTML(t("inspirationOpenOriginal"))}</span>
+          </a>
+        </div>
+        <blockquote>
+          <p>
+            <span class="inspiration-voice-lang inspiration-voice-lang-id">${escapeHTML(voice.messageId)}</span>
+            <span class="inspiration-voice-lang inspiration-voice-lang-en" lang="en">${escapeHTML(voice.messageEn)}</span>
+          </p>
+        </blockquote>
+      </article>
+    `;
+  }).join("");
+}
+
+function setupInspirationVoices() {
+  const showcase = document.querySelector("[data-inspiration-voices]");
+  if (!showcase) return;
+  renderInspirationVoices();
+
+  const viewport = showcase.querySelector("[data-voice-viewport]");
+  const cards = [...showcase.querySelectorAll("[data-voice-card]")];
+  const currentLabel = showcase.querySelector("[data-voice-current]");
+  const totalLabel = showcase.querySelector("[data-voice-total]");
+  const progress = showcase.querySelector("[data-voice-progress]");
+  const previousButton = showcase.querySelector("[data-voice-previous]");
+  const nextButton = showcase.querySelector("[data-voice-next]");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let activeIndex = 0;
+  let autoplayTimer = null;
+  let scrollFrame = null;
+  let resumeTimer = null;
+  let showcaseIsVisible = false;
+
+  if (totalLabel) totalLabel.textContent = String(cards.length).padStart(2, "0");
+
+  function stopAutoplay() {
+    if (!autoplayTimer) return;
+    window.clearInterval(autoplayTimer);
+    autoplayTimer = null;
+  }
+
+  function startAutoplay() {
+    stopAutoplay();
+    if (reducedMotion.matches || !showcaseIsVisible || document.hidden || cards.length < 2) return;
+    autoplayTimer = window.setInterval(() => goToCard(activeIndex + 1, false), 7000);
+  }
+
+  function updateStatus(index) {
+    activeIndex = Math.max(0, Math.min(index, cards.length - 1));
+    if (currentLabel) currentLabel.textContent = String(activeIndex + 1).padStart(2, "0");
+    if (progress) progress.style.width = `${((activeIndex + 1) / cards.length) * 100}%`;
+    cards.forEach((card, cardIndex) => {
+      if (cardIndex === activeIndex) card.setAttribute("aria-current", "true");
+      else card.removeAttribute("aria-current");
+    });
+  }
+
+  function goToCard(index, restartAutoplay = true) {
+    const targetIndex = (index + cards.length) % cards.length;
+    const target = cards[targetIndex];
+    if (!viewport || !target) return;
+    viewport.scrollTo({
+      left: target.offsetLeft,
+      behavior: reducedMotion.matches ? "auto" : "smooth"
+    });
+    updateStatus(targetIndex);
+    if (restartAutoplay) startAutoplay();
+  }
+
+  previousButton?.addEventListener("click", () => goToCard(activeIndex - 1));
+  nextButton?.addEventListener("click", () => goToCard(activeIndex + 1));
+
+  viewport?.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      goToCard(activeIndex - 1);
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      goToCard(activeIndex + 1);
+    } else if (event.key === "Home") {
+      event.preventDefault();
+      goToCard(0);
+    } else if (event.key === "End") {
+      event.preventDefault();
+      goToCard(cards.length - 1);
+    }
+  });
+
+  viewport?.addEventListener("pointerdown", stopAutoplay);
+  viewport?.addEventListener("scroll", () => {
+    stopAutoplay();
+    if (scrollFrame) window.cancelAnimationFrame(scrollFrame);
+    scrollFrame = window.requestAnimationFrame(() => {
+      const step = cards[1]?.offsetLeft - cards[0]?.offsetLeft || cards[0]?.offsetWidth || 1;
+      updateStatus(Math.round((viewport.scrollLeft || 0) / step));
+    });
+    window.clearTimeout(resumeTimer);
+    resumeTimer = window.setTimeout(startAutoplay, 1100);
+  }, { passive: true });
+
+  showcase.addEventListener("pointerenter", stopAutoplay);
+  showcase.addEventListener("pointerleave", startAutoplay);
+  showcase.addEventListener("focusin", stopAutoplay);
+  showcase.addEventListener("focusout", (event) => {
+    if (!showcase.contains(event.relatedTarget)) startAutoplay();
+  });
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) stopAutoplay();
+    else startAutoplay();
+  });
+  reducedMotion.addEventListener?.("change", startAutoplay);
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(([entry]) => {
+      showcaseIsVisible = Boolean(entry?.isIntersecting);
+      if (showcaseIsVisible) startAutoplay();
+      else stopAutoplay();
+    }, { threshold: 0.35 });
+    observer.observe(showcase);
+  } else {
+    showcaseIsVisible = true;
+    startAutoplay();
+  }
+
+  updateStatus(0);
 }
 
 function goatCounterSiteUrl() {
@@ -4425,6 +4732,7 @@ const initialWorkspaceProgram = workspacePanelIds.includes(initialWorkspaceHash)
   ? workspaceProgramForPanel(initialWorkspaceId, "s2")
   : "none";
 setActiveWorkspacePanel(initialWorkspaceId, workspacePanelIds.includes(initialWorkspaceHash), initialWorkspaceProgram);
+setupInspirationVoices();
 applyLanguage();
 mountCommentIntegration();
 mountAnalyticsIntegration();
