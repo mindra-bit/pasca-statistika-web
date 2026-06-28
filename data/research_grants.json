@@ -1,0 +1,529 @@
+{
+  "source": "@Hibah.xlsx",
+  "total": 45,
+  "totalAmount": 2744335000,
+  "linkedDocuments": 24,
+  "period": [
+    2022,
+    2026
+  ],
+  "years": {
+    "2026": {
+      "count": 4,
+      "amount": 157000000
+    },
+    "2025": {
+      "count": 17,
+      "amount": 844020000
+    },
+    "2024": {
+      "count": 7,
+      "amount": 297475000
+    },
+    "2023": {
+      "count": 13,
+      "amount": 1380840000
+    },
+    "2022": {
+      "count": 4,
+      "amount": 65000000
+    }
+  },
+  "grants": [
+    {
+      "id": "2026-HB01",
+      "year": 2026,
+      "researcher": "Dr. Bertho Tantular, S.Si., M.Si.",
+      "title": "Pemberdayaan Desa Berbasis Data: Pengolahan dan Visualisasi Data untuk Pengembangan Digtal Marketing Desa Rancakalong",
+      "scheme": "Hibah PPM",
+      "contractNumber": "6078/UN6./PM.01.01/2026",
+      "fundingSource": "Universitas Padjadjaran",
+      "amount": 7000000,
+      "documentHref": null
+    },
+    {
+      "id": "2026-RS01",
+      "year": 2026,
+      "researcher": "Prof. Yuyun Hidayat, Drs., M.S., Ph.D.",
+      "title": "Strategi Pengelolaan Limbah Baterai Nasional Berbasis Model Proyeksi Weibeull untuk Mitigasi Risiko Lingkungan dan Optimasi Ekonomi Sirkular",
+      "scheme": "Riset Kompetensi Dosen Unpad",
+      "contractNumber": "5951/UN6.D/PT.00/2026",
+      "fundingSource": "Universitas Padjadjaran",
+      "amount": 50000000,
+      "documentHref": "https://drive.google.com/file/d/1pbrx6fuT3DP_ViOZ7FbHdztTmxuzBiEl/view?usp=sharing"
+    },
+    {
+      "id": "2026-RS02",
+      "year": 2026,
+      "researcher": "Dr. Gumgum Darmawan, S.Si., M.Si.",
+      "title": "Implementasi Tme Series Modeling dalam Simulasi Cuaca untuk Pengembangan Early Warning System",
+      "scheme": "Riset Kompetensi Dosen Unpad",
+      "contractNumber": "5862/UN6.D/PT.00/2026",
+      "fundingSource": "Universitas Padjadjaran",
+      "amount": 50000000,
+      "documentHref": "https://drive.google.com/file/d/1ARiqPHRagqQ4pgfLWqXN9dcqSsjYZK0m/view?usp=sharing"
+    },
+    {
+      "id": "2026-RS03",
+      "year": 2026,
+      "researcher": "Prof. I Gede Nyoman Mindra Jaya, S.Si., M.Si., Ph.D",
+      "title": "Pengembangan Sistem Peringatan Dini Gempa Bumi di Indonesia Berbasis AI untuk Deteksi Cepat Sinyal Seismik",
+      "scheme": "Riset Kompetensi Dosen Unpad",
+      "contractNumber": "5946/UN6.D/PT.00/2026",
+      "fundingSource": "Universitas Padjadjaran",
+      "amount": 50000000,
+      "documentHref": "https://drive.google.com/file/d/1AK7E06J_pI1zuWKrAJCjuiCbq980ntRE/view?usp=sharing"
+    },
+    {
+      "id": "2025-HB01",
+      "year": 2025,
+      "researcher": "Yudhie Andriyana, S.Si., M.Sc., Ph.D",
+      "title": "Model Regresi Quantile Spatial Autoregressive Exogenous Dengan Pendekatan Casetti Untuk Prediksi Fenomena Iklim Di Indonesia",
+      "scheme": "Program Bantuan Operasional Penelitian",
+      "contractNumber": "1709/UN6.3.1/PT.00/2025",
+      "fundingSource": "Kemen diktisaintek",
+      "amount": 93020000,
+      "documentHref": "https://drive.google.com/file/d/11HTN8F7jOsfV2_ZwuMxmnuDIcVZ8vxZ1/view?usp=sharing"
+    },
+    {
+      "id": "2025-HB02",
+      "year": 2025,
+      "researcher": "Dr. Restu Arisanti, S.Si., M.Si",
+      "title": "Methodological Development Of Generalized Linear Mixed Models: A Systematic Review With Applications In Tuberculosis Epidemiology",
+      "scheme": "Hibah Penulisan Artikel Review Batch 2 Equity - WCU T.A 2025",
+      "contractNumber": "5652/UN6.3.1/PT.00/2025",
+      "fundingSource": "Universitas Padjadjaran",
+      "amount": 25000000,
+      "documentHref": "https://drive.google.com/file/d/1thiK06bodKl8ZdLGa1QtchoYznTwkmET/view?usp=sharing"
+    },
+    {
+      "id": "2025-HB03",
+      "year": 2025,
+      "researcher": "Prof. I Gede Nyoman Mindra Jaya, S.Si., M.Si., Ph.D",
+      "title": "Machine Learning And Bayesian Approaches For The Diagnosis And Prediction Of Tropical Diseases: A Systematic Review",
+      "scheme": "Hibah Penulisan Artikel Review Batch 2 Equity - WCU T.A 2025",
+      "contractNumber": "5637/UN6.3.1/PT.00/2025",
+      "fundingSource": "Universitas Padjadjaran",
+      "amount": 25000000,
+      "documentHref": "https://drive.google.com/file/d/1nLptIqYr5vsStBTuJyRhIT3HF1KnYCfs/view?usp=sharing"
+    },
+    {
+      "id": "2025-HB04",
+      "year": 2025,
+      "researcher": "Dr. Irlandia Ginanjar, S.Si., M.Si",
+      "title": "Digging Up The Growth Of Correspondence Analysis In Indonesia: Its Use For Studying Archaeology Data",
+      "scheme": "Hibah Penulisan Artikel Review Batch 2 Equity - WCU T.A 2025",
+      "contractNumber": "5683/UN6.3.1/PT.00/2025",
+      "fundingSource": "Universitas Padjadjaran",
+      "amount": 25000000,
+      "documentHref": "https://drive.google.com/file/d/1YwmUjUkUM0QBuiTVhLiiXJn0NFEHeqeS/view?usp=sharing"
+    },
+    {
+      "id": "2025-HB05",
+      "year": 2025,
+      "researcher": "Dr. Triyani Hendrawati, S.Si., M.Si",
+      "title": "The Evolution Of Time Series Clustering: Foundations, Methodological Progress, And Future Research Challenges",
+      "scheme": "Hibah Penulisan Artikel Review Batch 2 Equity - WCU T.A 2025",
+      "contractNumber": "5711/UN6.3.1/PT.00/2025",
+      "fundingSource": "Universitas Padjadjaran",
+      "amount": 25000000,
+      "documentHref": "https://drive.google.com/file/d/12oZiqPo-h4H4FS-OcqdaNZHFFSgEhRdB/view?usp=sharing"
+    },
+    {
+      "id": "2025-HB06",
+      "year": 2025,
+      "researcher": "Dr. Sri Winarni, S.Si., M.Si",
+      "title": "Pengenalan Karakter Plat Kendaraan Berbasis Gaussian Copula Dan Fitur Data Simbolik Untuk Sistem Parkir Kampus Cerdas",
+      "scheme": "Hibah Riset Equity - WCU Batch 2 Unpad Tahun 2025",
+      "contractNumber": "5586/UN6.3.1/PT.00/2025",
+      "fundingSource": "Universitas Padjadjaran",
+      "amount": 101000000,
+      "documentHref": "https://drive.google.com/file/d/1KFrnbgdUSd7M27OV4qOotkEtEigb5Qxo/view?usp=sharing"
+    },
+    {
+      "id": "2025-HB07",
+      "year": 2025,
+      "researcher": "Budhi Handoko, S.Si., M.Si., Ph.D",
+      "title": "Harnessing Expert Judgment in Complex Systems: A Review of Models, Methods, and Applications for Uncertainty Quantification and Decision Making",
+      "scheme": "Hibah Penulisan Artikel Review",
+      "contractNumber": "4492/UN6.D/PT.00/2025",
+      "fundingSource": "Universitas Padjadjaran",
+      "amount": 15000000,
+      "documentHref": "https://drive.google.com/file/d/1KPBpsZpRzD9rVFvlSc3HKLJkf7Acj04d/view?usp=sharing"
+    },
+    {
+      "id": "2025-HB08",
+      "year": 2025,
+      "researcher": "Dr. Lienda Noviyanti, M.Si",
+      "title": "Pemodelan Risiko Kerugian Finasial Secara Aktuaria Akibat Potensi Gempa Bumi sesar Besar Cimandiri Di Kota Baru Parahyangan",
+      "scheme": "Hibah Penulisan Artikel Review",
+      "contractNumber": "4489/UN6.D/PT.00/2025",
+      "fundingSource": "Universitas Padjadjaran",
+      "amount": 15000000,
+      "documentHref": "https://drive.google.com/file/d/1B6b6_AOebG_IOyUN8c8MgvTQLFut-72P/view?usp=sharing"
+    },
+    {
+      "id": "2025-HB09",
+      "year": 2025,
+      "researcher": "Dr. Yusep Suparman, S.Si., M.Sc",
+      "title": "Pemodelan Persamaan Struktural: Analisis Kausal Dalam Penelitian Kuantitatif",
+      "scheme": "Hibah Penulisan Buku Ajar/ Referensi",
+      "contractNumber": "4418/UN6.D/PT.00/2025",
+      "fundingSource": "Universitas Padjadjaran",
+      "amount": 10000000,
+      "documentHref": "https://drive.google.com/file/d/15AlRfbY_0-15zejBNfxVCxep32kh2P-o/view?usp=sharing"
+    },
+    {
+      "id": "2025-HB10",
+      "year": 2025,
+      "researcher": "Dr. Restu Arisanti, S.Si., M.Si",
+      "title": "Analisis Data Kategori Dengan R: KOnsep, Metode, Dan Aplikasi",
+      "scheme": "Hibah Penulisan Buku Ajar/ Referensi",
+      "contractNumber": "4410/UN6.D/PT.00/2025",
+      "fundingSource": "Universitas Padjadjaran",
+      "amount": 10000000,
+      "documentHref": "https://drive.google.com/file/d/1SCeKi0OsHTNSYXa7_w_alEaaquzZLaS6/view?usp=sharing"
+    },
+    {
+      "id": "2025-RS01",
+      "year": 2025,
+      "researcher": "Yudhie Andriyana, S.Si., M.Sc., Ph.D",
+      "title": "Supervisor Riset Bagi Peneliti Post-Doctoral atas nama Dr. Annisa Nur Falah, M.Mat",
+      "scheme": "Penelitian Post-Doctoral Tahun 2025",
+      "contractNumber": "1210/UN6.3.1/PT.00/2025",
+      "fundingSource": "Universitas Padjadjaran",
+      "amount": 60000000,
+      "documentHref": "https://drive.google.com/file/d/1LcN76SC_H5ljnUIlLsjRopqOa79rc7D4/view?usp=sharing"
+    },
+    {
+      "id": "2025-RS02",
+      "year": 2025,
+      "researcher": "Yudhie Andriyana, S.Si., M.Sc., Ph.D",
+      "title": "Non-Crossing Conditional Quantile Curves Dalam Space Time Varying Coefficient Model Pada Kasus Penyakit Menular Di Jawa Barat",
+      "scheme": "Riset Disertasi Doktor Unpad",
+      "contractNumber": "1000/UN6.3.1/PT.00/2025",
+      "fundingSource": "Universitas Padjadjaran",
+      "amount": 60000000,
+      "documentHref": "https://drive.google.com/file/d/1ngij6Kk2nOdOuGS2ncGr4Wh1L5wjbTKI/view?usp=sharing"
+    },
+    {
+      "id": "2025-RS03",
+      "year": 2025,
+      "researcher": "Dr. Sri Winarni, S.Si., M.Si",
+      "title": "Model Klasifikasi Penyakit Tanaman Padi Berbasis Deep Learning Dan Copula Gaussian Untuk Mendukung Keberlanjutan Pertanian Presisi",
+      "scheme": "Riset International Matching Funds Research Grant (IMF)",
+      "contractNumber": "4356/UN6.D/PT.00/2025",
+      "fundingSource": "Universitas Padjadjaran",
+      "amount": 105000000,
+      "documentHref": "https://drive.google.com/file/d/1_bz3xyD2YGW3LY3XbmfCh-pnuJbb-Rsr/view?usp=sharing"
+    },
+    {
+      "id": "2025-RS04",
+      "year": 2025,
+      "researcher": "Dr. Gumgum Darmawan, S.Si., M.Si",
+      "title": "Model Penetapan Harga Derivatif Cuaca Dengan Proses Long Memory Dan Black-Scholes Fraksional",
+      "scheme": "Riset Kompetensi Dosen Unpad",
+      "contractNumber": "4583/UN6.D/PT.00/2025",
+      "fundingSource": "Universitas Padjadjaran",
+      "amount": 70000000,
+      "documentHref": "https://drive.google.com/file/d/1YED_zGSuDOOO76b7c3Cx-zLOdFFVk4UV/view?usp=sharing"
+    },
+    {
+      "id": "2025-RS05",
+      "year": 2025,
+      "researcher": "Prof. Drs. Yuyun Hidayat, MS., Ph.D",
+      "title": "Assesing The Quality Of Teaching Stability In Higher Education Using Yuyun-Longitudinal Mode Analysis",
+      "scheme": "Riset Kompetensi Dosen Unpad",
+      "contractNumber": "4592/UN6.D/PT.00/2025",
+      "fundingSource": "Universitas Padjadjaran",
+      "amount": 65000000,
+      "documentHref": "https://drive.google.com/file/d/1IElMIAbSD8mIi1YF3jMTGmWnpavabX2d/view?usp=sharing"
+    },
+    {
+      "id": "2025-RS06",
+      "year": 2025,
+      "researcher": "Dr. Anindya Apriliyanti Pravitasari, S.Si., M.Si",
+      "title": "Pemodelan Natural Language Processing Dalam Pembuatan Chatbot AI Untuk Kegiatan Akademik Program Studi Di Universitas Padjadjaran",
+      "scheme": "Riset Kompetensi Dosen Unpad",
+      "contractNumber": "4584/UN6.D/PT.00/2025",
+      "fundingSource": "Universitas Padjadjaran",
+      "amount": 70000000,
+      "documentHref": "https://drive.google.com/file/d/1rtqTc2TSrs3Hr13vnUDf-yiMcHJr01Tn/view?usp=sharing"
+    },
+    {
+      "id": "2025-RS07",
+      "year": 2025,
+      "researcher": "Prof. Dr. I Gede Nyoman Mindra Jaya, M.Si.",
+      "title": "Integrasi Bayesian Deep Learning Untuk Pemodelan Geospasial Beresolusi Tinggi",
+      "scheme": "Riset Kompetensi Dosen Unpad",
+      "contractNumber": "4582/UN6.D/PT.00/2025",
+      "fundingSource": "Universitas Padjadjaran",
+      "amount": 70000000,
+      "documentHref": "https://drive.google.com/file/d/1k_I5l-7sBQlITtveKSJIMO95-pENDjHH/view?usp=sharing"
+    },
+    {
+      "id": "2024-01",
+      "year": 2024,
+      "researcher": "Prof. Drs. Yuyun Hidayat, MS., Ph.D",
+      "title": "Quality Improvement Oriented Research Menggunakan Model Statistika.",
+      "scheme": "Academic Leadership Grant",
+      "contractNumber": null,
+      "fundingSource": null,
+      "amount": 100000000,
+      "documentHref": null
+    },
+    {
+      "id": "2024-02",
+      "year": 2024,
+      "researcher": "Prof. Drs. Yuyun Hidayat, MS., Ph.D",
+      "title": "Model Black-Scholes untuk Penentuan Harga Opsi Beli dan Opsi Jual Menggunakan Time Series Berbasis Machine Learning.",
+      "scheme": "Riset Data Pustaka dan Daring",
+      "contractNumber": null,
+      "fundingSource": null,
+      "amount": 15000000,
+      "documentHref": null
+    },
+    {
+      "id": "2024-03",
+      "year": 2024,
+      "researcher": "Yudhie Andriyana, S.Si., M.Sc., Ph.D",
+      "title": "Pengembangan Model Regresi Kuantil dalam Mengatasi Permasalahan Sosial di Masyarakat.",
+      "scheme": "Riset Data Pustaka dan Daring",
+      "contractNumber": null,
+      "fundingSource": null,
+      "amount": 15000000,
+      "documentHref": null
+    },
+    {
+      "id": "2024-04",
+      "year": 2024,
+      "researcher": "Dr. Irlandia Ginanjar, S.Si., M.Si",
+      "title": "Metode Kategorisasi Berdasarkan Asosiasi Antar Variabel Multivariat Menggunakan Analisis Korespondensi, Komponen Utama dan Kluster.",
+      "scheme": "Riset Kompetensi Dosen Unpad",
+      "contractNumber": null,
+      "fundingSource": null,
+      "amount": 68875000,
+      "documentHref": "https://drive.google.com/file/d/1XVZ3e3KNpqlJpHnO1kYXwzVvHvTnxg0L/view"
+    },
+    {
+      "id": "2024-05",
+      "year": 2024,
+      "researcher": "Dr. Sri Winarni, S.Si., M.Si",
+      "title": "Exploring MNIST: Membandingkan Karakteristik Citra Melalui Fitur Fungsi Distribusi.",
+      "scheme": "Riset Data Pustaka dan Daring",
+      "contractNumber": null,
+      "fundingSource": null,
+      "amount": 15000000,
+      "documentHref": "https://drive.google.com/file/d/1_PBf_Be9rx7g37w8GYpTq8WogA5CLRS-/view"
+    },
+    {
+      "id": "2024-06",
+      "year": 2024,
+      "researcher": "Dr. Dra. Titi Purwandari, MS.",
+      "title": "Analisis Hubungan Ketahanan Ekonomi Dengan Pendapatan Per Kapita Kabupaten dan Kota Di Jawa Barat.",
+      "scheme": "Riset Kompetensi Dosen Unpad",
+      "contractNumber": null,
+      "fundingSource": null,
+      "amount": 68600000,
+      "documentHref": "https://drive.google.com/file/d/14SrTQfnghXNY3LyH1FVeBnSoi7KeY45A/view"
+    },
+    {
+      "id": "2024-07",
+      "year": 2024,
+      "researcher": "Dr. Dra. Titi Purwandari, MS.",
+      "title": "Diferensi Fraksional Dalam Model time Series Untuk Analisis Data Keuangan.",
+      "scheme": "Riset Data Pustaka dan Daring",
+      "contractNumber": null,
+      "fundingSource": null,
+      "amount": 15000000,
+      "documentHref": "https://drive.google.com/file/d/1OySO82BmmfRugiukLA3eBDw2yW6QMfP6/view"
+    },
+    {
+      "id": "2023-01",
+      "year": 2023,
+      "researcher": "Prof. Drs. Yuyun Hidayat, MS., Ph.D",
+      "title": "Quality Improvement Oriented Research Menggunakan Model Statistika.",
+      "scheme": "Academic Leadership Grant",
+      "contractNumber": null,
+      "fundingSource": null,
+      "amount": 100000000,
+      "documentHref": null
+    },
+    {
+      "id": "2023-02",
+      "year": 2023,
+      "researcher": "Prof. Drs. Yuyun Hidayat, MS., Ph.D",
+      "title": "Model Optimisasi Portofolio Investasi Mean-VaR Berbasis Preferensi Toleransi Risiko Melibatkan Saham-Saham Yang Memiliki Volatilitas Asimetri.",
+      "scheme": "Riset Data Pustaka dan Daring",
+      "contractNumber": null,
+      "fundingSource": null,
+      "amount": 25000000,
+      "documentHref": null
+    },
+    {
+      "id": "2023-03",
+      "year": 2023,
+      "researcher": "Dr. Dra. Titi Purwandari, MS., M.S",
+      "title": "Profil Ketahanan Ekonomi Kabupaten/Kota di Jawa barat Menggunakan K-Medoid Clustering Berbasis Jarak Dynamic Time Warping.",
+      "scheme": "Riset Kompetensi Dosen Unpad",
+      "contractNumber": null,
+      "fundingSource": null,
+      "amount": 42000000,
+      "documentHref": null
+    },
+    {
+      "id": "2023-04",
+      "year": 2023,
+      "researcher": "Dr. Dra. Titi Purwandari, MS., M.S",
+      "title": "Model Minimasi Risiko Dengan Target Return Tertentu Dalam Portofolio Investasi Menggunakan Algoritma Genetika.",
+      "scheme": "Riset Data Pustaka dan Daring",
+      "contractNumber": null,
+      "fundingSource": null,
+      "amount": 25000000,
+      "documentHref": null
+    },
+    {
+      "id": "2023-05",
+      "year": 2023,
+      "researcher": "Dr. Irlandia Ginanjar, S.Si., M.Si",
+      "title": "Metode Kategorisasi Berdasarkan Asosiasi Antar Variabel Multivariat Menggunakan Analisis Korespondensi, Komponen Utama dan Kluster.",
+      "scheme": "Riset Kompetensi Dosen Unpad",
+      "contractNumber": null,
+      "fundingSource": null,
+      "amount": 50000000,
+      "documentHref": null
+    },
+    {
+      "id": "2023-06",
+      "year": 2023,
+      "researcher": "Dr. Gumgum Darmawan, S.Si., M.Si",
+      "title": "Pemodelan Data Deret Waktu Berdasarkan Kalender Hijriyah Dengan Pendekatan Machine Learning.",
+      "scheme": "Riset Percepatan Lektor Kepala",
+      "contractNumber": null,
+      "fundingSource": null,
+      "amount": 48200000,
+      "documentHref": null
+    },
+    {
+      "id": "2023-07",
+      "year": 2023,
+      "researcher": "Dr. Triyani Hendrawati, S.Si., M.Si",
+      "title": "Deteksi Ekspresi Wajah Pasien Secara Real Time Dengan Pendekatan Machine Learning.",
+      "scheme": "Riset Percepatan Lektor Kepala",
+      "contractNumber": null,
+      "fundingSource": null,
+      "amount": 48000000,
+      "documentHref": null
+    },
+    {
+      "id": "2023-08",
+      "year": 2023,
+      "researcher": "Yudhie Andriyana, S.Si., M.Sc., Ph.D",
+      "title": "Pengembangan Model Robust Spatio Temporal permasalahan sosial dan kesehatan masyarakat.",
+      "scheme": "Riset Percepatan Lektor Kepala",
+      "contractNumber": null,
+      "fundingSource": null,
+      "amount": 62000000,
+      "documentHref": null
+    },
+    {
+      "id": "2023-09",
+      "year": 2023,
+      "researcher": "Dr. Restu Arisanti, S.Si., M.Si",
+      "title": "Generalized Linear Mixed Model Dan Machine Learning Untuk Pemodelan Kasus TB Paru Di Propinsi Jawa Barat.",
+      "scheme": "Riset Percepatan Lektor Kepala",
+      "contractNumber": null,
+      "fundingSource": null,
+      "amount": 45750000,
+      "documentHref": null
+    },
+    {
+      "id": "2023-10",
+      "year": 2023,
+      "researcher": "Dr. Dra. Titi Purwandari, MS., M.S",
+      "title": "Model Penentuan Premi dan Cadangan Asuransi Untuk Pembiayaan Kerugian Akibat Bencana Berbasis Masyarakat dan Pemerintahan Lokal Serta Pengendaliannya.",
+      "scheme": null,
+      "contractNumber": null,
+      "fundingSource": null,
+      "amount": 100200000,
+      "documentHref": null
+    },
+    {
+      "id": "2023-11",
+      "year": 2023,
+      "researcher": "Prof. I Gede Nyoman Mindra Jaya, S.Si., M.Si., Ph.D",
+      "title": "Pengembangan Aplikasi Peringatan Dini Berbagai Penyakit Menular Secara Simultan Berbasis Web.",
+      "scheme": null,
+      "contractNumber": null,
+      "fundingSource": null,
+      "amount": 59900000,
+      "documentHref": null
+    },
+    {
+      "id": "2023-12",
+      "year": 2023,
+      "researcher": "Dr. Anindya Apriliyanti Pravitasari, S.Si., M.Si",
+      "title": "Pembentukan Model 3D CT-Scan Thorax Covid-19 Dengan Pendekatan Machine Learning.",
+      "scheme": null,
+      "contractNumber": null,
+      "fundingSource": null,
+      "amount": 78875000,
+      "documentHref": null
+    },
+    {
+      "id": "2023-13",
+      "year": 2023,
+      "researcher": "Prof. Drs. Yuyun Hidayat, MS., Ph.D",
+      "title": "Developing Employee Turnover Forecast Tool For Human Resource Management By Measuring Employees Wellbeing Gap Expectations.",
+      "scheme": null,
+      "contractNumber": null,
+      "fundingSource": null,
+      "amount": 695915000,
+      "documentHref": null
+    },
+    {
+      "id": "2022-01",
+      "year": 2022,
+      "researcher": "Prof. Drs. Yuyun Hidayat, MS., Ph.D",
+      "title": "Pengendalian Kualitas Pemberian Kredit pada Suatu Lembaga Keuangan Menggunakan Logika Fuzzy Metode Tsukamoto.",
+      "scheme": "Riset Data Pustaka dan Daring",
+      "contractNumber": null,
+      "fundingSource": null,
+      "amount": 25000000,
+      "documentHref": null
+    },
+    {
+      "id": "2022-02",
+      "year": 2022,
+      "researcher": "Dr. Irlandia Ginanjar S.Si., M.Si",
+      "title": "Triplot Analisis Korespondensi dan Korelasi untuk Menganalisis Asosiasi Data Multivariat dengan Skala Pengukuran Campuran.",
+      "scheme": "Riset Percepatan Lektor Kepala",
+      "contractNumber": null,
+      "fundingSource": null,
+      "amount": 40000000,
+      "documentHref": null
+    },
+    {
+      "id": "2022-03",
+      "year": 2022,
+      "researcher": "Prof. I Gede Nyoman Mindra Jaya, S.Si., M.Si., Ph.D",
+      "title": "Pengembangan Aplikasi Peringatan Dini Berbagai Penyakit Menular Secara Simultan Berbasis Web.",
+      "scheme": null,
+      "contractNumber": null,
+      "fundingSource": null,
+      "amount": 0,
+      "documentHref": null
+    },
+    {
+      "id": "2022-04",
+      "year": 2022,
+      "researcher": "Dr. Anindya Apriliyanti Pravitasari, S.Si., M.Si",
+      "title": "TeDi (Teman Disabilitas): All in One Accessibility Mobile Application.",
+      "scheme": null,
+      "contractNumber": null,
+      "fundingSource": null,
+      "amount": 0,
+      "documentHref": null
+    }
+  ]
+}

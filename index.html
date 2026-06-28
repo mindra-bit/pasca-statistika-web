@@ -6,7 +6,7 @@
   <title>Pasca Sarjana Statistika FMIPA UNPAD</title>
   <meta name="description" content="Website profesional Pasca Sarjana Statistika FMIPA Universitas Padjadjaran untuk Program S2 Statistika Terapan dan S3 Statistika." />
   <link rel="preload" href="assets/campus-hero.jpg" as="image" />
-  <link rel="stylesheet" href="assets/site.css?v=inspiration-voices-20260628" />
+  <link rel="stylesheet" href="assets/site.css?v=research-grants-20260628" />
 </head>
 <body>
   <div class="topbar">
@@ -52,7 +52,7 @@
               <a class="program-accreditation-badge" href="#kalender-akademik" data-workspace-target="kalender-akademik" data-program-select="none" data-i18n="frontS2Accreditation">Akreditasi UNGGUL</a>
             </div>
             <h2 data-i18n="frontS2Title">S2 Statistika Terapan</h2>
-            <p data-i18n="frontS2Text">Informasi kurikulum OBE 2026, beasiswa, laporan LAMSAMA, Program Pengabdian, silabus, RPS, materi kuliah, panduan akademik, panduan tesis, lulusan, dan tracer study.</p>
+            <p data-i18n="frontS2Text">Informasi kurikulum OBE 2026, beasiswa, laporan LAMSAMA, Program Pengabdian, hibah riset dosen, jejaring PKS-MoA, silabus, RPS, materi kuliah, panduan akademik, panduan tesis, lulusan, dan tracer study.</p>
             <div class="program-front-meta">
               <span>42 SKS</span>
               <span data-i18n="frontS2Meta">Magister</span>
@@ -88,6 +88,8 @@
           <a href="#beasiswa" data-program-select="s2" data-workspace-target="beasiswa" data-i18n="workspaceScholarships">Beasiswa</a>
           <a href="#lamsama" data-program-select="s2" data-workspace-target="lamsama" data-i18n="workspaceLamsama">LAMSAMA</a>
           <a href="#program-pengabdian" data-program-select="s2" data-workspace-target="program-pengabdian" data-i18n="workspacePkm">Program Pengabdian</a>
+          <a href="#hibah-riset" data-program-select="s2" data-workspace-target="hibah-riset" data-i18n="workspaceResearchGrants">Hibah Riset Dosen</a>
+          <a href="#pks-moa" data-program-select="s2" data-workspace-target="pks-moa" data-i18n="workspacePksMoa">PKS-MoA</a>
           <a href="#kurikulum" data-program-select="s2" data-workspace-target="kurikulum" data-i18n="workspaceCurriculum">Kurikulum</a>
           <a href="#evaluasi" data-program-select="s2" data-workspace-target="evaluasi" data-i18n="workspaceEvaluation">Evaluasi</a>
           <a href="#lulusan" data-program-select="s2" data-workspace-target="lulusan" data-i18n="workspaceGraduates">Lulusan & Tesis</a>
@@ -560,6 +562,107 @@
         </div>
 
         <div class="pkm-grid" id="pkmRows" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section research-grant-section" id="hibah-riset">
+      <div class="container">
+        <div class="research-grant-hero">
+          <div class="research-grant-hero-copy">
+            <p class="section-kicker" data-i18n="grantKicker">Hibah Riset Dosen</p>
+            <h2 data-i18n="grantTitle">Portofolio riset yang tumbuh dari data, kolaborasi, dan dampak.</h2>
+            <p data-i18n="grantText">Dokumentasi hibah dan pendanaan riset dosen Statistika FMIPA UNPAD, meliputi pengembangan metode, kesehatan, lingkungan, teknologi, sosial, aktuaria, dan kecerdasan artifisial.</p>
+          </div>
+          <div class="research-grant-metrics" aria-label="Ringkasan hibah riset dosen">
+            <div>
+              <span data-i18n="grantTotalLabel">Kegiatan riset</span>
+              <strong id="grantTotalCount">45</strong>
+            </div>
+            <div>
+              <span data-i18n="grantFundingLabel">Total pendanaan</span>
+              <strong id="grantTotalAmount">Rp2,74 M</strong>
+            </div>
+            <div>
+              <span data-i18n="grantDocumentLabel">Dokumen tertaut</span>
+              <strong id="grantLinkedCount">24</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="research-grant-year-tabs" id="grantYearTabs" role="group" aria-label="Filter tahun hibah">
+          <button class="active" type="button" data-grant-year="all" aria-pressed="true" data-i18n="grantAllYears">Semua Tahun</button>
+        </div>
+
+        <div class="research-grant-toolbar">
+          <label class="research-grant-search" for="grantSearch">
+            <span class="sr-only" data-i18n="grantSearchLabel">Cari hibah riset</span>
+            <span aria-hidden="true">&#128269;</span>
+            <input id="grantSearch" type="search" data-i18n-placeholder="grantSearchPlaceholder" placeholder="Cari peneliti, judul, skema, atau sumber dana" autocomplete="off" />
+          </label>
+          <a class="research-grant-source" href="%40Hibah.xlsx" target="_blank" rel="noopener">
+            <span aria-hidden="true">&#8681;</span>
+            <span data-i18n="grantDownloadSource">Buka data Excel</span>
+          </a>
+        </div>
+
+        <div class="research-grant-result-bar">
+          <div>
+            <strong id="grantVisibleCount">45</strong>
+            <span data-i18n="grantShownLabel">kegiatan ditampilkan</span>
+          </div>
+          <span id="grantVisibleAmount">Rp2.744.335.000</span>
+        </div>
+        <div class="research-grant-grid" id="grantRows" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section pks-moa-section" id="pks-moa">
+      <div class="container">
+        <div class="pks-moa-hero">
+          <div class="pks-moa-hero-copy">
+            <p class="section-kicker" data-i18n="pksMoaKicker">PKS-MoA</p>
+            <h2 data-i18n="pksMoaTitle">Jejaring kerja sama nasional dan internasional.</h2>
+            <p data-i18n="pksMoaText">Portofolio perjanjian kerja sama pendidikan, penelitian, pertukaran mahasiswa, serta pengabdian kepada masyarakat bersama mitra institusi.</p>
+          </div>
+          <div class="pks-moa-metrics" aria-label="Ringkasan kerja sama">
+            <div>
+              <span data-i18n="pksMoaTotal">Total kerja sama</span>
+              <strong id="pksMoaTotalCount">17</strong>
+            </div>
+            <div>
+              <span data-i18n="pksMoaNational">Nasional</span>
+              <strong id="pksMoaNationalCount">7</strong>
+            </div>
+            <div>
+              <span data-i18n="pksMoaInternational">Internasional</span>
+              <strong id="pksMoaInternationalCount">10</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="pks-moa-toolbar">
+          <div class="pks-moa-filter-tabs" role="group" aria-label="Filter jenis kerja sama">
+            <button class="active" type="button" data-pks-moa-filter="Semua" aria-pressed="true" data-i18n="pksMoaFilterAll">Semua</button>
+            <button type="button" data-pks-moa-filter="PKS" aria-pressed="false">PKS</button>
+            <button type="button" data-pks-moa-filter="MoU" aria-pressed="false">MoU</button>
+            <button type="button" data-pks-moa-filter="MoA" aria-pressed="false">MoA</button>
+          </div>
+          <label class="pks-moa-search" for="pksMoaSearch">
+            <span class="sr-only" data-i18n="pksMoaSearchLabel">Cari kerja sama</span>
+            <span aria-hidden="true">&#128269;</span>
+            <input id="pksMoaSearch" type="search" data-i18n-placeholder="pksMoaSearchPlaceholder" placeholder="Cari mitra, kegiatan, atau nomor dokumen" autocomplete="off" />
+          </label>
+          <a class="pks-moa-source-link" href="assets/pks-moa-source.png" target="_blank" rel="noopener">
+            <span aria-hidden="true">&#9638;</span>
+            <span data-i18n="pksMoaSource">Lihat tabel sumber</span>
+          </a>
+        </div>
+
+        <div class="pks-moa-result-bar">
+          <strong id="pksMoaVisibleCount">17</strong>
+          <span data-i18n="pksMoaRecorded">dokumen kerja sama ditampilkan</span>
+        </div>
+        <div class="pks-moa-grid" id="pksMoaRows" aria-live="polite"></div>
       </div>
     </section>
 
@@ -1285,6 +1388,6 @@
     </div>
   </footer>
 
-  <script src="assets/app.js?v=inspiration-voices-order-20260628" defer></script>
+  <script src="assets/app.js?v=research-grants-20260628" defer></script>
 </body>
 </html>

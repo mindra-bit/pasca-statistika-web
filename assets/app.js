@@ -255,6 +255,10 @@ let curriculumDocsData = null;
 let lamsamaReportsData = null;
 let scholarshipsData = null;
 let pkmReportsData = null;
+let researchGrantsData = null;
+let activeGrantYear = "all";
+let pksMoaData = null;
+let activePksMoaFilter = "Semua";
 let lectureEvaluationsData = null;
 let pbmEvaluationsData = null;
 let rpsDocsData = null;
@@ -334,6 +338,20 @@ const scholarshipRows = document.getElementById("scholarshipRows");
 const scholarshipCount = document.getElementById("scholarshipCount");
 const pkmRows = document.getElementById("pkmRows");
 const pkmReportCount = document.getElementById("pkmReportCount");
+const grantRows = document.getElementById("grantRows");
+const grantSearch = document.getElementById("grantSearch");
+const grantYearTabs = document.getElementById("grantYearTabs");
+const grantTotalCount = document.getElementById("grantTotalCount");
+const grantTotalAmount = document.getElementById("grantTotalAmount");
+const grantLinkedCount = document.getElementById("grantLinkedCount");
+const grantVisibleCount = document.getElementById("grantVisibleCount");
+const grantVisibleAmount = document.getElementById("grantVisibleAmount");
+const pksMoaRows = document.getElementById("pksMoaRows");
+const pksMoaSearch = document.getElementById("pksMoaSearch");
+const pksMoaVisibleCount = document.getElementById("pksMoaVisibleCount");
+const pksMoaTotalCount = document.getElementById("pksMoaTotalCount");
+const pksMoaNationalCount = document.getElementById("pksMoaNationalCount");
+const pksMoaInternationalCount = document.getElementById("pksMoaInternationalCount");
 const lectureEvaluationRows = document.getElementById("lectureEvaluationRows");
 const lectureEvaluationCount = document.getElementById("lectureEvaluationCount");
 const pbmEvaluationRows = document.getElementById("pbmEvaluationRows");
@@ -352,6 +370,8 @@ const workspacePanelIds = [
   "beasiswa",
   "lamsama",
   "program-pengabdian",
+  "hibah-riset",
+  "pks-moa",
   "kurikulum",
   "dokumen-kurikulum",
   "mata-kuliah",
@@ -419,6 +439,8 @@ const I18N = {
     workspaceScholarships: "Beasiswa",
     workspaceLamsama: "LAMSAMA",
     workspacePkm: "Program Pengabdian",
+    workspaceResearchGrants: "Hibah Riset Dosen",
+    workspacePksMoa: "PKS-MoA",
     workspaceVisionMission: "Visi dan Misi",
     workspaceGraduateProfile: "Profil Lulusan",
     programProfileCombinedTitle: "Profil lengkap S2 Statistika Terapan.",
@@ -470,7 +492,7 @@ const I18N = {
     heroS3: "Web S3",
     frontS2Title: "S2 Statistika Terapan",
     frontS2Accreditation: "Akreditasi UNGGUL",
-    frontS2Text: "Informasi kurikulum OBE 2026, beasiswa, laporan LAMSAMA, Program Pengabdian, silabus, RPS, materi kuliah, panduan akademik, panduan tesis, lulusan, dan tracer study.",
+    frontS2Text: "Informasi kurikulum OBE 2026, beasiswa, laporan LAMSAMA, Program Pengabdian, hibah riset dosen, jejaring PKS-MoA, silabus, RPS, materi kuliah, panduan akademik, panduan tesis, lulusan, dan tracer study.",
     frontS2Meta: "Magister",
     frontS2Open: "Buka Informasi S2",
     frontS3Title: "S3 Statistika",
@@ -625,6 +647,42 @@ const I18N = {
     pkmOpen: "Buka laporan PDF",
     pkmAskDocument: "Tanya chatbot",
     noPkmReports: "Laporan Program Pengabdian belum tersedia.",
+    grantKicker: "Hibah Riset Dosen",
+    grantTitle: "Portofolio riset yang tumbuh dari data, kolaborasi, dan dampak.",
+    grantText: "Dokumentasi hibah dan pendanaan riset dosen Statistika FMIPA UNPAD, meliputi pengembangan metode, kesehatan, lingkungan, teknologi, sosial, aktuaria, dan kecerdasan artifisial.",
+    grantTotalLabel: "Kegiatan riset",
+    grantFundingLabel: "Total pendanaan",
+    grantDocumentLabel: "Dokumen tertaut",
+    grantAllYears: "Semua Tahun",
+    grantSearchLabel: "Cari hibah riset",
+    grantSearchPlaceholder: "Cari peneliti, judul, skema, atau sumber dana",
+    grantDownloadSource: "Buka data Excel",
+    grantShownLabel: "kegiatan ditampilkan",
+    grantResearcherLabel: "Peneliti utama",
+    grantSchemeLabel: "Skema riset",
+    grantFundingSourceLabel: "Sumber dana",
+    grantContractLabel: "Nomor kontrak",
+    grantAmountLabel: "Nilai pendanaan",
+    grantOpenDocument: "Buka dokumen",
+    grantDocumentUnavailable: "Dokumen belum tertaut",
+    grantNotListed: "Tidak dicantumkan",
+    grantNoResults: "Tidak ada hibah riset yang cocok dengan pencarian.",
+    pksMoaKicker: "PKS-MoA",
+    pksMoaTitle: "Jejaring kerja sama nasional dan internasional.",
+    pksMoaText: "Portofolio perjanjian kerja sama pendidikan, penelitian, pertukaran mahasiswa, serta pengabdian kepada masyarakat bersama mitra institusi.",
+    pksMoaTotal: "Total kerja sama",
+    pksMoaNational: "Nasional",
+    pksMoaInternational: "Internasional",
+    pksMoaFilterAll: "Semua",
+    pksMoaSearchLabel: "Cari kerja sama",
+    pksMoaSearchPlaceholder: "Cari mitra, kegiatan, atau nomor dokumen",
+    pksMoaSource: "Lihat tabel sumber",
+    pksMoaRecorded: "dokumen kerja sama ditampilkan",
+    pksMoaPartner: "Mitra kolaborasi",
+    pksMoaDocument: "Dokumen tercatat",
+    pksMoaOpen: "Buka dokumen",
+    pksMoaSourceTable: "Lihat pada tabel sumber",
+    pksMoaNoResults: "Tidak ada kerja sama yang cocok dengan pencarian.",
     scholarshipKicker: "Beasiswa dan Mobilitas",
     scholarshipTitle: "Peluang pendanaan studi, riset, dan mobilitas global.",
     scholarshipText: "Akses cepat menuju program beasiswa nasional, internasional, pendanaan riset, dan mobilitas yang relevan bagi komunitas pascasarjana.",
@@ -915,6 +973,8 @@ const I18N = {
     workspaceScholarships: "Scholarships",
     workspaceLamsama: "LAMSAMA",
     workspacePkm: "Community Engagement",
+    workspaceResearchGrants: "Faculty Research Grants",
+    workspacePksMoa: "Partnerships",
     workspaceVisionMission: "Vision and Mission",
     workspaceGraduateProfile: "Graduate Profile",
     programProfileCombinedTitle: "Complete profile of the Applied Statistics Master's Program.",
@@ -966,7 +1026,7 @@ const I18N = {
     heroS3: "S3 Site",
     frontS2Title: "Applied Statistics Master's Program",
     frontS2Accreditation: "UNGGUL Accreditation",
-    frontS2Text: "Information on the 2026 OBE curriculum, scholarships, LAMSAMA reports, community engagement, syllabi, RPS, course materials, academic guides, thesis guides, graduates, and tracer studies.",
+    frontS2Text: "Information on the 2026 OBE curriculum, scholarships, LAMSAMA reports, community engagement, faculty research grants, the PKS-MoA partnership network, syllabi, RPS, course materials, academic guides, thesis guides, graduates, and tracer studies.",
     frontS2Meta: "Master's",
     frontS2Open: "Open S2 Information",
     frontS3Title: "Doctoral Program in Statistics",
@@ -1110,6 +1170,42 @@ const I18N = {
     pkmOpen: "Open PDF report",
     pkmAskDocument: "Ask chatbot",
     noPkmReports: "Community engagement reports are not yet available.",
+    grantKicker: "Faculty Research Grants",
+    grantTitle: "A research portfolio built through data, collaboration, and impact.",
+    grantText: "Faculty research grant and funding records across methodological development, health, environment, technology, society, actuarial science, and artificial intelligence.",
+    grantTotalLabel: "Research activities",
+    grantFundingLabel: "Total funding",
+    grantDocumentLabel: "Linked documents",
+    grantAllYears: "All Years",
+    grantSearchLabel: "Search research grants",
+    grantSearchPlaceholder: "Search researchers, titles, schemes, or funding sources",
+    grantDownloadSource: "Open Excel data",
+    grantShownLabel: "activities shown",
+    grantResearcherLabel: "Lead researcher",
+    grantSchemeLabel: "Research scheme",
+    grantFundingSourceLabel: "Funding source",
+    grantContractLabel: "Contract number",
+    grantAmountLabel: "Funding amount",
+    grantOpenDocument: "Open document",
+    grantDocumentUnavailable: "Document not linked",
+    grantNotListed: "Not listed",
+    grantNoResults: "No research grants match your search.",
+    pksMoaKicker: "PKS-MoA",
+    pksMoaTitle: "National and international partnership network.",
+    pksMoaText: "A portfolio of agreements for education, research, student exchange, and community engagement with institutional partners.",
+    pksMoaTotal: "Total partnerships",
+    pksMoaNational: "National",
+    pksMoaInternational: "International",
+    pksMoaFilterAll: "All",
+    pksMoaSearchLabel: "Search partnerships",
+    pksMoaSearchPlaceholder: "Search partners, activities, or document numbers",
+    pksMoaSource: "View source table",
+    pksMoaRecorded: "partnership documents shown",
+    pksMoaPartner: "Collaborating partner",
+    pksMoaDocument: "Recorded document",
+    pksMoaOpen: "Open document",
+    pksMoaSourceTable: "View in source table",
+    pksMoaNoResults: "No partnerships match your search.",
     scholarshipKicker: "Scholarships and Mobility",
     scholarshipTitle: "Funding opportunities for study, research, and global mobility.",
     scholarshipText: "Quick access to national and international scholarships, research funding, and mobility opportunities relevant to the graduate community.",
@@ -1568,6 +1664,9 @@ function applyLanguage() {
   renderCourses();
   renderCurriculumDocs();
   renderLamsamaReports();
+  renderPkmReports();
+  renderResearchGrants();
+  renderPksMoa();
   renderScholarships();
   renderThesisGuides();
   renderSyllabus();
@@ -2197,6 +2296,16 @@ function formatFileSize(kb) {
   if (!value) return "HTML";
   if (value >= 1024) return `${(value / 1024).toFixed(value >= 10240 ? 0 : 1).replace(/\.0$/, "")} MB`;
   return `${value} KB`;
+}
+
+function formatGrantAmount(value, compact = false) {
+  return new Intl.NumberFormat(currentLang === "en" ? "en-US" : "id-ID", {
+    style: "currency",
+    currency: "IDR",
+    maximumFractionDigits: compact ? 1 : 0,
+    notation: compact ? "compact" : "standard",
+    compactDisplay: "short"
+  }).format(Number(value) || 0);
 }
 
 function renderThesisGuides() {
@@ -4141,6 +4250,166 @@ function renderPkmReports() {
     .join("");
 }
 
+function renderResearchGrants() {
+  if (!grantRows) return;
+  const grants = researchGrantsData?.grants || [];
+  const query = normalize(grantSearch?.value || "");
+  const visible = grants.filter((grant) => {
+    const matchesYear = activeGrantYear === "all" || String(grant.year) === activeGrantYear;
+    const searchable = normalize([
+      grant.id,
+      grant.year,
+      grant.researcher,
+      grant.title,
+      grant.scheme,
+      grant.contractNumber,
+      grant.fundingSource
+    ].join(" "));
+    return matchesYear && (!query || searchable.includes(query));
+  });
+  const visibleFunding = visible.reduce((total, grant) => total + (Number(grant.amount) || 0), 0);
+
+  if (grantTotalCount) grantTotalCount.textContent = String(researchGrantsData?.total || grants.length);
+  if (grantTotalAmount) grantTotalAmount.textContent = formatGrantAmount(researchGrantsData?.totalAmount || 0, true);
+  if (grantLinkedCount) grantLinkedCount.textContent = String(researchGrantsData?.linkedDocuments || 0);
+  if (grantVisibleCount) grantVisibleCount.textContent = String(visible.length);
+  if (grantVisibleAmount) grantVisibleAmount.textContent = formatGrantAmount(visibleFunding);
+
+  if (grantYearTabs) {
+    const years = Object.entries(researchGrantsData?.years || {})
+      .sort((left, right) => Number(right[0]) - Number(left[0]));
+    grantYearTabs.innerHTML = [
+      `<button class="${activeGrantYear === "all" ? "active" : ""}" type="button" data-grant-year="all" aria-pressed="${String(activeGrantYear === "all")}">
+        <span>${escapeHTML(t("grantAllYears"))}</span>
+        <small>${escapeHTML(researchGrantsData?.total || grants.length)}</small>
+      </button>`,
+      ...years.map(([year, summary]) => `
+        <button class="${activeGrantYear === year ? "active" : ""}" type="button" data-grant-year="${escapeHTML(year)}" aria-pressed="${String(activeGrantYear === year)}">
+          <span>${escapeHTML(year)}</span>
+          <small>${escapeHTML(summary.count)}</small>
+        </button>
+      `)
+    ].join("");
+  }
+
+  if (!visible.length) {
+    grantRows.innerHTML = `<p class="empty-note">${escapeHTML(t("grantNoResults"))}</p>`;
+    return;
+  }
+
+  grantRows.innerHTML = visible.map((grant) => {
+    const scheme = grant.scheme || t("grantNotListed");
+    const fundingSource = grant.fundingSource || t("grantNotListed");
+    const contractNumber = grant.contractNumber || t("grantNotListed");
+    const documentAction = grant.documentHref
+      ? `<a href="${escapeHTML(grant.documentHref)}" target="_blank" rel="noopener"><span>${escapeHTML(t("grantOpenDocument"))}</span><span aria-hidden="true">&#8599;</span></a>`
+      : `<span class="research-grant-unavailable">${escapeHTML(t("grantDocumentUnavailable"))}</span>`;
+    return `
+      <article class="research-grant-card">
+        <div class="research-grant-card-head">
+          <span>${escapeHTML(grant.id)}</span>
+          <strong>${escapeHTML(grant.year)}</strong>
+        </div>
+        <div class="research-grant-researcher">
+          <span>${escapeHTML(t("grantResearcherLabel"))}</span>
+          <h3>${escapeHTML(grant.researcher)}</h3>
+        </div>
+        <p class="research-grant-card-title">${escapeHTML(grant.title)}</p>
+        <div class="research-grant-scheme">
+          <span>${escapeHTML(t("grantSchemeLabel"))}</span>
+          <strong>${escapeHTML(scheme)}</strong>
+        </div>
+        <dl class="research-grant-meta">
+          <div>
+            <dt>${escapeHTML(t("grantFundingSourceLabel"))}</dt>
+            <dd>${escapeHTML(fundingSource)}</dd>
+          </div>
+          <div>
+            <dt>${escapeHTML(t("grantContractLabel"))}</dt>
+            <dd>${escapeHTML(contractNumber)}</dd>
+          </div>
+        </dl>
+        <div class="research-grant-card-foot">
+          <div>
+            <span>${escapeHTML(t("grantAmountLabel"))}</span>
+            <strong>${escapeHTML(grant.amount > 0 ? formatGrantAmount(grant.amount) : t("grantNotListed"))}</strong>
+          </div>
+          ${documentAction}
+        </div>
+      </article>
+    `;
+  }).join("");
+}
+
+function renderPksMoa() {
+  if (!pksMoaRows) return;
+  const agreements = pksMoaData?.agreements || [];
+  const query = normalize(pksMoaSearch?.value || "");
+  const visible = agreements.filter((agreement) => {
+    const matchesType = activePksMoaFilter === "Semua" || agreement.type === activePksMoaFilter;
+    const searchable = normalize([
+      agreement.type,
+      agreement.year,
+      agreement.scope,
+      agreement.number,
+      agreement.titleId,
+      agreement.titleEn,
+      agreement.collaborator,
+      agreement.documentLabel
+    ].join(" "));
+    return matchesType && (!query || searchable.includes(query));
+  });
+
+  if (pksMoaTotalCount) pksMoaTotalCount.textContent = String(pksMoaData?.total || agreements.length);
+  if (pksMoaNationalCount) pksMoaNationalCount.textContent = String(pksMoaData?.national || 0);
+  if (pksMoaInternationalCount) pksMoaInternationalCount.textContent = String(pksMoaData?.international || 0);
+  if (pksMoaVisibleCount) pksMoaVisibleCount.textContent = String(visible.length);
+
+  document.querySelectorAll("[data-pks-moa-filter]").forEach((button) => {
+    const isActive = button.dataset.pksMoaFilter === activePksMoaFilter;
+    button.classList.toggle("active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+
+  if (!visible.length) {
+    pksMoaRows.innerHTML = `<p class="empty-note">${escapeHTML(t("pksMoaNoResults"))}</p>`;
+    return;
+  }
+
+  pksMoaRows.innerHTML = visible.map((agreement) => {
+    const title = currentLang === "en" ? agreement.titleEn : agreement.titleId;
+    const scope = currentLang === "en"
+      ? (agreement.scope === "Internasional" ? t("pksMoaInternational") : t("pksMoaNational"))
+      : agreement.scope;
+    const href = agreement.href || "assets/pks-moa-source.png";
+    const actionLabel = agreement.href ? t("pksMoaOpen") : t("pksMoaSourceTable");
+    const typeClass = String(agreement.type || "").toLowerCase();
+    return `
+      <article class="pks-moa-card ${escapeHTML(typeClass)}">
+        <div class="pks-moa-card-head">
+          <span class="pks-moa-type">${escapeHTML(agreement.type)}</span>
+          <span class="pks-moa-scope">${escapeHTML(scope)}</span>
+          <strong>${escapeHTML(agreement.year)}</strong>
+        </div>
+        <div class="pks-moa-partner">
+          <span data-i18n="pksMoaPartner">${escapeHTML(t("pksMoaPartner"))}</span>
+          <h3>${escapeHTML(agreement.collaborator)}</h3>
+        </div>
+        <p class="pks-moa-title">${escapeHTML(title)}</p>
+        <div class="pks-moa-number">${escapeHTML(agreement.number)}</div>
+        <div class="pks-moa-document">
+          <span data-i18n="pksMoaDocument">${escapeHTML(t("pksMoaDocument"))}</span>
+          <strong>${escapeHTML(agreement.documentLabel)}</strong>
+        </div>
+        <a class="pks-moa-open" href="${escapeHTML(href)}" target="_blank" rel="noopener">
+          <span>${escapeHTML(actionLabel)}</span>
+          <span aria-hidden="true">&#8599;</span>
+        </a>
+      </article>
+    `;
+  }).join("");
+}
+
 function renderScholarships() {
   if (!scholarshipRows) return;
   const scholarships = scholarshipsData?.scholarships || [];
@@ -4497,6 +4766,39 @@ async function loadPkmReports() {
   renderPkmReports();
 }
 
+async function loadResearchGrants() {
+  try {
+    const response = await fetch("data/research_grants.json", { cache: "no-store" });
+    if (!response.ok) throw new Error("Data Hibah Riset Dosen tidak dapat dimuat.");
+    const data = await response.json();
+    if (!data?.grants?.length) throw new Error("Data Hibah Riset Dosen kosong.");
+    researchGrantsData = data;
+  } catch (error) {
+    researchGrantsData = {
+      total: 0,
+      totalAmount: 0,
+      linkedDocuments: 0,
+      period: [],
+      years: {},
+      grants: []
+    };
+  }
+  renderResearchGrants();
+}
+
+async function loadPksMoa() {
+  try {
+    const response = await fetch("data/pks_moa.json", { cache: "no-store" });
+    if (!response.ok) throw new Error("Data PKS-MoA tidak dapat dimuat.");
+    const data = await response.json();
+    if (!data?.agreements?.length) throw new Error("Data PKS-MoA kosong.");
+    pksMoaData = data;
+  } catch (error) {
+    pksMoaData = { total: 0, national: 0, international: 0, agreements: [] };
+  }
+  renderPksMoa();
+}
+
 async function loadScholarships() {
   try {
     const response = await fetch("data/scholarships.json", { cache: "no-store" });
@@ -4702,6 +5004,20 @@ pkmRows?.addEventListener("click", (event) => {
   if (!button) return;
   ask(button.dataset.pkmQ);
 });
+grantYearTabs?.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-grant-year]");
+  if (!button) return;
+  activeGrantYear = button.dataset.grantYear || "all";
+  renderResearchGrants();
+});
+grantSearch?.addEventListener("input", renderResearchGrants);
+document.querySelector(".pks-moa-filter-tabs")?.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-pks-moa-filter]");
+  if (!button) return;
+  activePksMoaFilter = button.dataset.pksMoaFilter || "Semua";
+  renderPksMoa();
+});
+pksMoaSearch?.addEventListener("input", renderPksMoa);
 scholarshipRows?.addEventListener("click", (event) => {
   const button = event.target.closest("[data-scholarship-q]");
   if (!button) return;
@@ -4749,6 +5065,8 @@ loadTestimonials();
 loadCurriculumDocs();
 loadLamsamaReports();
 loadPkmReports();
+loadResearchGrants();
+loadPksMoa();
 loadScholarships();
 loadLectureEvaluations();
 loadPbmEvaluations();
