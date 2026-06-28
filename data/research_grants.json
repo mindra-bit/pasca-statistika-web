@@ -1,5 +1,5 @@
 {
-  "source": "@Hibah.xlsx",
+  "source": "Arsip lokal admin",
   "total": 45,
   "totalAmount": 2744335000,
   "linkedDocuments": 24,
@@ -8,25 +8,25 @@
     2026
   ],
   "years": {
-    "2026": {
+    "2022": {
       "count": 4,
-      "amount": 157000000
-    },
-    "2025": {
-      "count": 17,
-      "amount": 844020000
-    },
-    "2024": {
-      "count": 7,
-      "amount": 297475000
+      "amount": 65000000
     },
     "2023": {
       "count": 13,
       "amount": 1380840000
     },
-    "2022": {
+    "2024": {
+      "count": 7,
+      "amount": 297475000
+    },
+    "2025": {
+      "count": 17,
+      "amount": 844020000
+    },
+    "2026": {
       "count": 4,
-      "amount": 65000000
+      "amount": 157000000
     }
   },
   "grants": [
@@ -39,7 +39,7 @@
       "contractNumber": "6078/UN6./PM.01.01/2026",
       "fundingSource": "Universitas Padjadjaran",
       "amount": 7000000,
-      "documentHref": null
+      "documentAvailable": false
     },
     {
       "id": "2026-RS01",
@@ -50,7 +50,7 @@
       "contractNumber": "5951/UN6.D/PT.00/2026",
       "fundingSource": "Universitas Padjadjaran",
       "amount": 50000000,
-      "documentHref": "https://drive.google.com/file/d/1pbrx6fuT3DP_ViOZ7FbHdztTmxuzBiEl/view?usp=sharing"
+      "documentAvailable": true
     },
     {
       "id": "2026-RS02",
@@ -61,7 +61,7 @@
       "contractNumber": "5862/UN6.D/PT.00/2026",
       "fundingSource": "Universitas Padjadjaran",
       "amount": 50000000,
-      "documentHref": "https://drive.google.com/file/d/1ARiqPHRagqQ4pgfLWqXN9dcqSsjYZK0m/view?usp=sharing"
+      "documentAvailable": true
     },
     {
       "id": "2026-RS03",
@@ -72,7 +72,7 @@
       "contractNumber": "5946/UN6.D/PT.00/2026",
       "fundingSource": "Universitas Padjadjaran",
       "amount": 50000000,
-      "documentHref": "https://drive.google.com/file/d/1AK7E06J_pI1zuWKrAJCjuiCbq980ntRE/view?usp=sharing"
+      "documentAvailable": true
     },
     {
       "id": "2025-HB01",
@@ -83,7 +83,7 @@
       "contractNumber": "1709/UN6.3.1/PT.00/2025",
       "fundingSource": "Kemen diktisaintek",
       "amount": 93020000,
-      "documentHref": "https://drive.google.com/file/d/11HTN8F7jOsfV2_ZwuMxmnuDIcVZ8vxZ1/view?usp=sharing"
+      "documentAvailable": true
     },
     {
       "id": "2025-HB02",
@@ -94,7 +94,7 @@
       "contractNumber": "5652/UN6.3.1/PT.00/2025",
       "fundingSource": "Universitas Padjadjaran",
       "amount": 25000000,
-      "documentHref": "https://drive.google.com/file/d/1thiK06bodKl8ZdLGa1QtchoYznTwkmET/view?usp=sharing"
+      "documentAvailable": true
     },
     {
       "id": "2025-HB03",
@@ -105,7 +105,7 @@
       "contractNumber": "5637/UN6.3.1/PT.00/2025",
       "fundingSource": "Universitas Padjadjaran",
       "amount": 25000000,
-      "documentHref": "https://drive.google.com/file/d/1nLptIqYr5vsStBTuJyRhIT3HF1KnYCfs/view?usp=sharing"
+      "documentAvailable": true
     },
     {
       "id": "2025-HB04",
@@ -116,7 +116,7 @@
       "contractNumber": "5683/UN6.3.1/PT.00/2025",
       "fundingSource": "Universitas Padjadjaran",
       "amount": 25000000,
-      "documentHref": "https://drive.google.com/file/d/1YwmUjUkUM0QBuiTVhLiiXJn0NFEHeqeS/view?usp=sharing"
+      "documentAvailable": true
     },
     {
       "id": "2025-HB05",
@@ -127,7 +127,7 @@
       "contractNumber": "5711/UN6.3.1/PT.00/2025",
       "fundingSource": "Universitas Padjadjaran",
       "amount": 25000000,
-      "documentHref": "https://drive.google.com/file/d/12oZiqPo-h4H4FS-OcqdaNZHFFSgEhRdB/view?usp=sharing"
+      "documentAvailable": true
     },
     {
       "id": "2025-HB06",
@@ -138,7 +138,7 @@
       "contractNumber": "5586/UN6.3.1/PT.00/2025",
       "fundingSource": "Universitas Padjadjaran",
       "amount": 101000000,
-      "documentHref": "https://drive.google.com/file/d/1KFrnbgdUSd7M27OV4qOotkEtEigb5Qxo/view?usp=sharing"
+      "documentAvailable": true
     },
     {
       "id": "2025-HB07",
@@ -149,7 +149,7 @@
       "contractNumber": "4492/UN6.D/PT.00/2025",
       "fundingSource": "Universitas Padjadjaran",
       "amount": 15000000,
-      "documentHref": "https://drive.google.com/file/d/1KPBpsZpRzD9rVFvlSc3HKLJkf7Acj04d/view?usp=sharing"
+      "documentAvailable": true
     },
     {
       "id": "2025-HB08",
@@ -160,7 +160,7 @@
       "contractNumber": "4489/UN6.D/PT.00/2025",
       "fundingSource": "Universitas Padjadjaran",
       "amount": 15000000,
-      "documentHref": "https://drive.google.com/file/d/1B6b6_AOebG_IOyUN8c8MgvTQLFut-72P/view?usp=sharing"
+      "documentAvailable": true
     },
     {
       "id": "2025-HB09",
@@ -171,7 +171,7 @@
       "contractNumber": "4418/UN6.D/PT.00/2025",
       "fundingSource": "Universitas Padjadjaran",
       "amount": 10000000,
-      "documentHref": "https://drive.google.com/file/d/15AlRfbY_0-15zejBNfxVCxep32kh2P-o/view?usp=sharing"
+      "documentAvailable": true
     },
     {
       "id": "2025-HB10",
@@ -182,7 +182,7 @@
       "contractNumber": "4410/UN6.D/PT.00/2025",
       "fundingSource": "Universitas Padjadjaran",
       "amount": 10000000,
-      "documentHref": "https://drive.google.com/file/d/1SCeKi0OsHTNSYXa7_w_alEaaquzZLaS6/view?usp=sharing"
+      "documentAvailable": true
     },
     {
       "id": "2025-RS01",
@@ -193,7 +193,7 @@
       "contractNumber": "1210/UN6.3.1/PT.00/2025",
       "fundingSource": "Universitas Padjadjaran",
       "amount": 60000000,
-      "documentHref": "https://drive.google.com/file/d/1LcN76SC_H5ljnUIlLsjRopqOa79rc7D4/view?usp=sharing"
+      "documentAvailable": true
     },
     {
       "id": "2025-RS02",
@@ -204,7 +204,7 @@
       "contractNumber": "1000/UN6.3.1/PT.00/2025",
       "fundingSource": "Universitas Padjadjaran",
       "amount": 60000000,
-      "documentHref": "https://drive.google.com/file/d/1ngij6Kk2nOdOuGS2ncGr4Wh1L5wjbTKI/view?usp=sharing"
+      "documentAvailable": true
     },
     {
       "id": "2025-RS03",
@@ -215,7 +215,7 @@
       "contractNumber": "4356/UN6.D/PT.00/2025",
       "fundingSource": "Universitas Padjadjaran",
       "amount": 105000000,
-      "documentHref": "https://drive.google.com/file/d/1_bz3xyD2YGW3LY3XbmfCh-pnuJbb-Rsr/view?usp=sharing"
+      "documentAvailable": true
     },
     {
       "id": "2025-RS04",
@@ -226,7 +226,7 @@
       "contractNumber": "4583/UN6.D/PT.00/2025",
       "fundingSource": "Universitas Padjadjaran",
       "amount": 70000000,
-      "documentHref": "https://drive.google.com/file/d/1YED_zGSuDOOO76b7c3Cx-zLOdFFVk4UV/view?usp=sharing"
+      "documentAvailable": true
     },
     {
       "id": "2025-RS05",
@@ -237,7 +237,7 @@
       "contractNumber": "4592/UN6.D/PT.00/2025",
       "fundingSource": "Universitas Padjadjaran",
       "amount": 65000000,
-      "documentHref": "https://drive.google.com/file/d/1IElMIAbSD8mIi1YF3jMTGmWnpavabX2d/view?usp=sharing"
+      "documentAvailable": true
     },
     {
       "id": "2025-RS06",
@@ -248,7 +248,7 @@
       "contractNumber": "4584/UN6.D/PT.00/2025",
       "fundingSource": "Universitas Padjadjaran",
       "amount": 70000000,
-      "documentHref": "https://drive.google.com/file/d/1rtqTc2TSrs3Hr13vnUDf-yiMcHJr01Tn/view?usp=sharing"
+      "documentAvailable": true
     },
     {
       "id": "2025-RS07",
@@ -259,7 +259,7 @@
       "contractNumber": "4582/UN6.D/PT.00/2025",
       "fundingSource": "Universitas Padjadjaran",
       "amount": 70000000,
-      "documentHref": "https://drive.google.com/file/d/1k_I5l-7sBQlITtveKSJIMO95-pENDjHH/view?usp=sharing"
+      "documentAvailable": true
     },
     {
       "id": "2024-01",
@@ -270,7 +270,7 @@
       "contractNumber": null,
       "fundingSource": null,
       "amount": 100000000,
-      "documentHref": null
+      "documentAvailable": false
     },
     {
       "id": "2024-02",
@@ -281,7 +281,7 @@
       "contractNumber": null,
       "fundingSource": null,
       "amount": 15000000,
-      "documentHref": null
+      "documentAvailable": false
     },
     {
       "id": "2024-03",
@@ -292,7 +292,7 @@
       "contractNumber": null,
       "fundingSource": null,
       "amount": 15000000,
-      "documentHref": null
+      "documentAvailable": false
     },
     {
       "id": "2024-04",
@@ -303,7 +303,7 @@
       "contractNumber": null,
       "fundingSource": null,
       "amount": 68875000,
-      "documentHref": "https://drive.google.com/file/d/1XVZ3e3KNpqlJpHnO1kYXwzVvHvTnxg0L/view"
+      "documentAvailable": true
     },
     {
       "id": "2024-05",
@@ -314,7 +314,7 @@
       "contractNumber": null,
       "fundingSource": null,
       "amount": 15000000,
-      "documentHref": "https://drive.google.com/file/d/1_PBf_Be9rx7g37w8GYpTq8WogA5CLRS-/view"
+      "documentAvailable": true
     },
     {
       "id": "2024-06",
@@ -325,7 +325,7 @@
       "contractNumber": null,
       "fundingSource": null,
       "amount": 68600000,
-      "documentHref": "https://drive.google.com/file/d/14SrTQfnghXNY3LyH1FVeBnSoi7KeY45A/view"
+      "documentAvailable": true
     },
     {
       "id": "2024-07",
@@ -336,7 +336,7 @@
       "contractNumber": null,
       "fundingSource": null,
       "amount": 15000000,
-      "documentHref": "https://drive.google.com/file/d/1OySO82BmmfRugiukLA3eBDw2yW6QMfP6/view"
+      "documentAvailable": true
     },
     {
       "id": "2023-01",
@@ -347,7 +347,7 @@
       "contractNumber": null,
       "fundingSource": null,
       "amount": 100000000,
-      "documentHref": null
+      "documentAvailable": false
     },
     {
       "id": "2023-02",
@@ -358,7 +358,7 @@
       "contractNumber": null,
       "fundingSource": null,
       "amount": 25000000,
-      "documentHref": null
+      "documentAvailable": false
     },
     {
       "id": "2023-03",
@@ -369,7 +369,7 @@
       "contractNumber": null,
       "fundingSource": null,
       "amount": 42000000,
-      "documentHref": null
+      "documentAvailable": false
     },
     {
       "id": "2023-04",
@@ -380,7 +380,7 @@
       "contractNumber": null,
       "fundingSource": null,
       "amount": 25000000,
-      "documentHref": null
+      "documentAvailable": false
     },
     {
       "id": "2023-05",
@@ -391,7 +391,7 @@
       "contractNumber": null,
       "fundingSource": null,
       "amount": 50000000,
-      "documentHref": null
+      "documentAvailable": false
     },
     {
       "id": "2023-06",
@@ -402,7 +402,7 @@
       "contractNumber": null,
       "fundingSource": null,
       "amount": 48200000,
-      "documentHref": null
+      "documentAvailable": false
     },
     {
       "id": "2023-07",
@@ -413,7 +413,7 @@
       "contractNumber": null,
       "fundingSource": null,
       "amount": 48000000,
-      "documentHref": null
+      "documentAvailable": false
     },
     {
       "id": "2023-08",
@@ -424,7 +424,7 @@
       "contractNumber": null,
       "fundingSource": null,
       "amount": 62000000,
-      "documentHref": null
+      "documentAvailable": false
     },
     {
       "id": "2023-09",
@@ -435,7 +435,7 @@
       "contractNumber": null,
       "fundingSource": null,
       "amount": 45750000,
-      "documentHref": null
+      "documentAvailable": false
     },
     {
       "id": "2023-10",
@@ -446,7 +446,7 @@
       "contractNumber": null,
       "fundingSource": null,
       "amount": 100200000,
-      "documentHref": null
+      "documentAvailable": false
     },
     {
       "id": "2023-11",
@@ -457,7 +457,7 @@
       "contractNumber": null,
       "fundingSource": null,
       "amount": 59900000,
-      "documentHref": null
+      "documentAvailable": false
     },
     {
       "id": "2023-12",
@@ -468,7 +468,7 @@
       "contractNumber": null,
       "fundingSource": null,
       "amount": 78875000,
-      "documentHref": null
+      "documentAvailable": false
     },
     {
       "id": "2023-13",
@@ -479,7 +479,7 @@
       "contractNumber": null,
       "fundingSource": null,
       "amount": 695915000,
-      "documentHref": null
+      "documentAvailable": false
     },
     {
       "id": "2022-01",
@@ -490,7 +490,7 @@
       "contractNumber": null,
       "fundingSource": null,
       "amount": 25000000,
-      "documentHref": null
+      "documentAvailable": false
     },
     {
       "id": "2022-02",
@@ -501,7 +501,7 @@
       "contractNumber": null,
       "fundingSource": null,
       "amount": 40000000,
-      "documentHref": null
+      "documentAvailable": false
     },
     {
       "id": "2022-03",
@@ -512,7 +512,7 @@
       "contractNumber": null,
       "fundingSource": null,
       "amount": 0,
-      "documentHref": null
+      "documentAvailable": false
     },
     {
       "id": "2022-04",
@@ -523,7 +523,7 @@
       "contractNumber": null,
       "fundingSource": null,
       "amount": 0,
-      "documentHref": null
+      "documentAvailable": false
     }
   ]
 }

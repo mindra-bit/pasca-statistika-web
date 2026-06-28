@@ -257,6 +257,9 @@ let scholarshipsData = null;
 let pkmReportsData = null;
 let researchGrantsData = null;
 let activeGrantYear = "all";
+let facultyPublicationsData = null;
+let activePublicationView = "publications";
+let activePublicationYear = "all";
 let pksMoaData = null;
 let activePksMoaFilter = "Semua";
 let lectureEvaluationsData = null;
@@ -346,12 +349,27 @@ const grantTotalAmount = document.getElementById("grantTotalAmount");
 const grantLinkedCount = document.getElementById("grantLinkedCount");
 const grantVisibleCount = document.getElementById("grantVisibleCount");
 const grantVisibleAmount = document.getElementById("grantVisibleAmount");
+const publicationRows = document.getElementById("publicationRows");
+const publicationSearch = document.getElementById("publicationSearch");
+const publicationYearTabs = document.getElementById("publicationYearTabs");
+const publicationSheetSummary = document.getElementById("publicationSheetSummary");
+const publicationYearSummary = document.getElementById("publicationYearSummary");
+const publicationIndexSummary = document.getElementById("publicationIndexSummary");
+const publicationCategorySummary = document.getElementById("publicationCategorySummary");
+const publicationTotalCount = document.getElementById("publicationTotalCount");
+const publicationFacultyCount = document.getElementById("publicationFacultyCount");
+const publicationPeriod = document.getElementById("publicationPeriod");
+const publicationVisibleCount = document.getElementById("publicationVisibleCount");
+const publicationVisibleLabel = document.getElementById("publicationVisibleLabel");
 const pksMoaRows = document.getElementById("pksMoaRows");
 const pksMoaSearch = document.getElementById("pksMoaSearch");
 const pksMoaVisibleCount = document.getElementById("pksMoaVisibleCount");
 const pksMoaTotalCount = document.getElementById("pksMoaTotalCount");
 const pksMoaNationalCount = document.getElementById("pksMoaNationalCount");
 const pksMoaInternationalCount = document.getElementById("pksMoaInternationalCount");
+const adminAccessDialog = document.getElementById("adminAccessDialog");
+const adminAccessDocumentName = document.getElementById("adminAccessDocumentName");
+const adminAccessEmail = document.getElementById("adminAccessEmail");
 const lectureEvaluationRows = document.getElementById("lectureEvaluationRows");
 const lectureEvaluationCount = document.getElementById("lectureEvaluationCount");
 const pbmEvaluationRows = document.getElementById("pbmEvaluationRows");
@@ -369,8 +387,6 @@ const workspacePanelIds = [
   "program-profile",
   "beasiswa",
   "lamsama",
-  "program-pengabdian",
-  "hibah-riset",
   "pks-moa",
   "kurikulum",
   "dokumen-kurikulum",
@@ -385,6 +401,9 @@ const workspacePanelIds = [
   "evaluasi-pbm",
   "lulusan",
   "tracer-studi",
+  "program-pengabdian",
+  "hibah-riset",
+  "publikasi-dosen",
   "special-moment",
   "video-testimoni",
   "web-s3",
@@ -440,6 +459,7 @@ const I18N = {
     workspaceLamsama: "LAMSAMA",
     workspacePkm: "Program Pengabdian",
     workspaceResearchGrants: "Hibah Riset Dosen",
+    workspaceFacultyPublications: "Publikasi Dosen",
     workspacePksMoa: "PKS-MoA",
     workspaceVisionMission: "Visi dan Misi",
     workspaceGraduateProfile: "Profil Lulusan",
@@ -492,7 +512,7 @@ const I18N = {
     heroS3: "Web S3",
     frontS2Title: "S2 Statistika Terapan",
     frontS2Accreditation: "Akreditasi UNGGUL",
-    frontS2Text: "Informasi kurikulum OBE 2026, beasiswa, laporan LAMSAMA, Program Pengabdian, hibah riset dosen, jejaring PKS-MoA, silabus, RPS, materi kuliah, panduan akademik, panduan tesis, lulusan, dan tracer study.",
+    frontS2Text: "Informasi kurikulum OBE 2026, beasiswa, laporan LAMSAMA, Program Pengabdian, hibah riset dan publikasi dosen, jejaring PKS-MoA, silabus, RPS, materi kuliah, panduan akademik, panduan tesis, lulusan, dan tracer study.",
     frontS2Meta: "Magister",
     frontS2Open: "Buka Informasi S2",
     frontS3Title: "S3 Statistika",
@@ -652,21 +672,57 @@ const I18N = {
     grantText: "Dokumentasi hibah dan pendanaan riset dosen Statistika FMIPA UNPAD, meliputi pengembangan metode, kesehatan, lingkungan, teknologi, sosial, aktuaria, dan kecerdasan artifisial.",
     grantTotalLabel: "Kegiatan riset",
     grantFundingLabel: "Total pendanaan",
-    grantDocumentLabel: "Dokumen tertaut",
+    grantDocumentLabel: "Kontrak terbatas",
     grantAllYears: "Semua Tahun",
     grantSearchLabel: "Cari hibah riset",
     grantSearchPlaceholder: "Cari peneliti, judul, skema, atau sumber dana",
-    grantDownloadSource: "Buka data Excel",
+    grantDownloadSource: "Data kontrak khusus admin",
+    grantAccessNotice: "Dokumen kontrak penelitian hanya dapat diakses oleh admin.",
     grantShownLabel: "kegiatan ditampilkan",
     grantResearcherLabel: "Peneliti utama",
     grantSchemeLabel: "Skema riset",
     grantFundingSourceLabel: "Sumber dana",
     grantContractLabel: "Nomor kontrak",
     grantAmountLabel: "Nilai pendanaan",
-    grantOpenDocument: "Buka dokumen",
-    grantDocumentUnavailable: "Dokumen belum tertaut",
+    grantOpenDocument: "Dokumen khusus admin",
+    grantDocumentUnavailable: "Kontrak belum tersedia",
     grantNotListed: "Tidak dicantumkan",
     grantNoResults: "Tidak ada hibah riset yang cocok dengan pencarian.",
+    publicationKicker: "Publikasi Dosen",
+    publicationTitle: "Jejak publikasi yang memperkuat kontribusi Statistika.",
+    publicationText: "Ringkasan publikasi dosen Statistika FMIPA UNPAD yang berhasil dihimpun dari sumber publik SINTA untuk periode 2022–2026.",
+    publicationTotalLabel: "Publikasi terhimpun",
+    publicationFacultyLabel: "Profil dosen",
+    publicationPeriodLabel: "Periode data",
+    publicationSheetKicker: "Ringkasan Workbook",
+    publicationSheetTitle: "Ikhtisar dari setiap sheet data.",
+    publicationOpenWorkbook: "Buka workbook Excel",
+    publicationYearKicker: "Tren Tahunan",
+    publicationYearTitle: "Publikasi per tahun",
+    publicationIndexKicker: "Sumber Indeks",
+    publicationIndexTitle: "Komposisi sumber publik",
+    publicationCategoryKicker: "Kategori",
+    publicationCategoryTitle: "SINTA dan kuartil Scopus",
+    publicationDataNote: "Data merupakan versi publik terverifikasi. Publikasi penuh yang berada di balik SINTA Insight atau login resmi mungkin belum tercakup.",
+    publicationViewRecords: "Daftar Publikasi",
+    publicationViewFaculty: "Profil Dosen",
+    publicationAllYears: "Semua Tahun",
+    publicationSearchLabel: "Cari publikasi atau dosen",
+    publicationSearchPlaceholder: "Cari judul, dosen, jurnal, kategori, atau ID",
+    publicationRecordsShown: "publikasi ditampilkan",
+    publicationFacultyShown: "profil dosen ditampilkan",
+    publicationSheetLabel: "Sheet",
+    publicationLecturerLabel: "Dosen",
+    publicationVenueLabel: "Jurnal / prosiding",
+    publicationIndexSourceLabel: "Sumber indeks",
+    publicationSintaScoreLabel: "SINTA Score 3Yr",
+    publicationHIndexLabel: "H-Index Scopus",
+    publicationCapturedLabel: "Publikasi terhimpun",
+    publicationSintaIdLabel: "SINTA ID",
+    publicationScopusIdLabel: "Scopus ID",
+    publicationOpenSinta: "Buka profil SINTA",
+    publicationNoRecords: "Tidak ada publikasi yang cocok dengan filter.",
+    publicationNoFaculty: "Tidak ada profil dosen yang cocok dengan filter.",
     pksMoaKicker: "PKS-MoA",
     pksMoaTitle: "Jejaring kerja sama nasional dan internasional.",
     pksMoaText: "Portofolio perjanjian kerja sama pendidikan, penelitian, pertukaran mahasiswa, serta pengabdian kepada masyarakat bersama mitra institusi.",
@@ -676,13 +732,22 @@ const I18N = {
     pksMoaFilterAll: "Semua",
     pksMoaSearchLabel: "Cari kerja sama",
     pksMoaSearchPlaceholder: "Cari mitra, kegiatan, atau nomor dokumen",
-    pksMoaSource: "Lihat tabel sumber",
+    pksMoaSource: "Tabel sumber khusus admin",
+    pksMoaAccessNotice: "Dokumen PKS, MoU, dan MoA hanya dapat diakses oleh admin.",
     pksMoaRecorded: "dokumen kerja sama ditampilkan",
     pksMoaPartner: "Mitra kolaborasi",
     pksMoaDocument: "Dokumen tercatat",
-    pksMoaOpen: "Buka dokumen",
-    pksMoaSourceTable: "Lihat pada tabel sumber",
+    pksMoaOpen: "Dokumen khusus admin",
+    pksMoaSourceTable: "Dokumen khusus admin",
     pksMoaNoResults: "Tidak ada kerja sama yang cocok dengan pencarian.",
+    adminAccessKicker: "Akses Terbatas",
+    adminAccessTitle: "Dokumen hanya untuk admin",
+    adminAccessText: "Dokumen PKS/MoA dan kontrak penelitian tidak tersedia untuk akses publik. Mohon hubungi admin di mindra@unpad.ac.id.",
+    adminAccessEmailLabel: "Admin dokumen",
+    adminAccessContextLabel: "Dokumen yang diminta",
+    adminAccessContact: "Hubungi admin",
+    adminAccessClose: "Tutup",
+    adminAccessCloseLabel: "Tutup dialog",
     scholarshipKicker: "Beasiswa dan Mobilitas",
     scholarshipTitle: "Peluang pendanaan studi, riset, dan mobilitas global.",
     scholarshipText: "Akses cepat menuju program beasiswa nasional, internasional, pendanaan riset, dan mobilitas yang relevan bagi komunitas pascasarjana.",
@@ -974,6 +1039,7 @@ const I18N = {
     workspaceLamsama: "LAMSAMA",
     workspacePkm: "Community Engagement",
     workspaceResearchGrants: "Faculty Research Grants",
+    workspaceFacultyPublications: "Faculty Publications",
     workspacePksMoa: "Partnerships",
     workspaceVisionMission: "Vision and Mission",
     workspaceGraduateProfile: "Graduate Profile",
@@ -1026,7 +1092,7 @@ const I18N = {
     heroS3: "S3 Site",
     frontS2Title: "Applied Statistics Master's Program",
     frontS2Accreditation: "UNGGUL Accreditation",
-    frontS2Text: "Information on the 2026 OBE curriculum, scholarships, LAMSAMA reports, community engagement, faculty research grants, the PKS-MoA partnership network, syllabi, RPS, course materials, academic guides, thesis guides, graduates, and tracer studies.",
+    frontS2Text: "Information on the 2026 OBE curriculum, scholarships, LAMSAMA reports, community engagement, faculty research grants and publications, the PKS-MoA partnership network, syllabi, RPS, course materials, academic guides, thesis guides, graduates, and tracer studies.",
     frontS2Meta: "Master's",
     frontS2Open: "Open S2 Information",
     frontS3Title: "Doctoral Program in Statistics",
@@ -1175,21 +1241,57 @@ const I18N = {
     grantText: "Faculty research grant and funding records across methodological development, health, environment, technology, society, actuarial science, and artificial intelligence.",
     grantTotalLabel: "Research activities",
     grantFundingLabel: "Total funding",
-    grantDocumentLabel: "Linked documents",
+    grantDocumentLabel: "Restricted contracts",
     grantAllYears: "All Years",
     grantSearchLabel: "Search research grants",
     grantSearchPlaceholder: "Search researchers, titles, schemes, or funding sources",
-    grantDownloadSource: "Open Excel data",
+    grantDownloadSource: "Admin-only contract data",
+    grantAccessNotice: "Research contract documents are accessible only to the administrator.",
     grantShownLabel: "activities shown",
     grantResearcherLabel: "Lead researcher",
     grantSchemeLabel: "Research scheme",
     grantFundingSourceLabel: "Funding source",
     grantContractLabel: "Contract number",
     grantAmountLabel: "Funding amount",
-    grantOpenDocument: "Open document",
-    grantDocumentUnavailable: "Document not linked",
+    grantOpenDocument: "Admin-only document",
+    grantDocumentUnavailable: "Contract not available",
     grantNotListed: "Not listed",
     grantNoResults: "No research grants match your search.",
+    publicationKicker: "Faculty Publications",
+    publicationTitle: "A publication record strengthening the contribution of Statistics.",
+    publicationText: "A summary of Statistics faculty publications collected from public SINTA sources for the 2022–2026 period.",
+    publicationTotalLabel: "Publications captured",
+    publicationFacultyLabel: "Faculty profiles",
+    publicationPeriodLabel: "Data period",
+    publicationSheetKicker: "Workbook Summary",
+    publicationSheetTitle: "Overview of each data sheet.",
+    publicationOpenWorkbook: "Open Excel workbook",
+    publicationYearKicker: "Annual Trend",
+    publicationYearTitle: "Publications by year",
+    publicationIndexKicker: "Index Sources",
+    publicationIndexTitle: "Public source composition",
+    publicationCategoryKicker: "Categories",
+    publicationCategoryTitle: "SINTA and Scopus quartiles",
+    publicationDataNote: "This is a verified public-data version. Full publications behind SINTA Insight or official login may not be included.",
+    publicationViewRecords: "Publication Records",
+    publicationViewFaculty: "Faculty Profiles",
+    publicationAllYears: "All Years",
+    publicationSearchLabel: "Search publications or faculty",
+    publicationSearchPlaceholder: "Search titles, faculty, journals, categories, or IDs",
+    publicationRecordsShown: "publications shown",
+    publicationFacultyShown: "faculty profiles shown",
+    publicationSheetLabel: "Sheet",
+    publicationLecturerLabel: "Faculty member",
+    publicationVenueLabel: "Journal / proceedings",
+    publicationIndexSourceLabel: "Index source",
+    publicationSintaScoreLabel: "SINTA Score 3Yr",
+    publicationHIndexLabel: "Scopus H-Index",
+    publicationCapturedLabel: "Publications captured",
+    publicationSintaIdLabel: "SINTA ID",
+    publicationScopusIdLabel: "Scopus ID",
+    publicationOpenSinta: "Open SINTA profile",
+    publicationNoRecords: "No publications match the selected filters.",
+    publicationNoFaculty: "No faculty profiles match the selected filters.",
     pksMoaKicker: "PKS-MoA",
     pksMoaTitle: "National and international partnership network.",
     pksMoaText: "A portfolio of agreements for education, research, student exchange, and community engagement with institutional partners.",
@@ -1199,13 +1301,22 @@ const I18N = {
     pksMoaFilterAll: "All",
     pksMoaSearchLabel: "Search partnerships",
     pksMoaSearchPlaceholder: "Search partners, activities, or document numbers",
-    pksMoaSource: "View source table",
+    pksMoaSource: "Admin-only source table",
+    pksMoaAccessNotice: "PKS, MoU, and MoA documents are accessible only to the administrator.",
     pksMoaRecorded: "partnership documents shown",
     pksMoaPartner: "Collaborating partner",
     pksMoaDocument: "Recorded document",
-    pksMoaOpen: "Open document",
-    pksMoaSourceTable: "View in source table",
+    pksMoaOpen: "Admin-only document",
+    pksMoaSourceTable: "Admin-only document",
     pksMoaNoResults: "No partnerships match your search.",
+    adminAccessKicker: "Restricted Access",
+    adminAccessTitle: "Administrator-only document",
+    adminAccessText: "PKS/MoA and research contract documents are not available for public access. Please contact the administrator at mindra@unpad.ac.id.",
+    adminAccessEmailLabel: "Document administrator",
+    adminAccessContextLabel: "Requested document",
+    adminAccessContact: "Contact administrator",
+    adminAccessClose: "Close",
+    adminAccessCloseLabel: "Close dialog",
     scholarshipKicker: "Scholarships and Mobility",
     scholarshipTitle: "Funding opportunities for study, research, and global mobility.",
     scholarshipText: "Quick access to national and international scholarships, research funding, and mobility opportunities relevant to the graduate community.",
@@ -1656,6 +1767,10 @@ function applyLanguage() {
     const key = element.dataset.i18nPlaceholder;
     if (key) element.setAttribute("placeholder", t(key));
   });
+  document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
+    const key = element.dataset.i18nAriaLabel;
+    if (key) element.setAttribute("aria-label", t(key));
+  });
   document.querySelectorAll("[data-lang]").forEach((button) => {
     const isActive = button.dataset.lang === currentLang;
     button.classList.toggle("active", isActive);
@@ -1666,6 +1781,7 @@ function applyLanguage() {
   renderLamsamaReports();
   renderPkmReports();
   renderResearchGrants();
+  renderFacultyPublications();
   renderPksMoa();
   renderScholarships();
   renderThesisGuides();
@@ -4301,8 +4417,8 @@ function renderResearchGrants() {
     const scheme = grant.scheme || t("grantNotListed");
     const fundingSource = grant.fundingSource || t("grantNotListed");
     const contractNumber = grant.contractNumber || t("grantNotListed");
-    const documentAction = grant.documentHref
-      ? `<a href="${escapeHTML(grant.documentHref)}" target="_blank" rel="noopener"><span>${escapeHTML(t("grantOpenDocument"))}</span><span aria-hidden="true">&#8599;</span></a>`
+    const documentAction = grant.documentAvailable
+      ? `<button class="restricted-document-button" type="button" data-admin-document data-admin-document-type="grant" data-admin-document-name="${escapeHTML(`${grant.id} - ${grant.title}`)}"><span>${escapeHTML(t("grantOpenDocument"))}</span><span aria-hidden="true">&#128274;</span></button>`
       : `<span class="research-grant-unavailable">${escapeHTML(t("grantDocumentUnavailable"))}</span>`;
     return `
       <article class="research-grant-card">
@@ -4336,6 +4452,182 @@ function renderResearchGrants() {
           </div>
           ${documentAction}
         </div>
+      </article>
+    `;
+  }).join("");
+}
+
+function renderFacultyPublications() {
+  if (!publicationRows) return;
+  const data = facultyPublicationsData || {};
+  const publications = [...(data.publications || [])]
+    .sort((left, right) => right.year - left.year || left.id - right.id);
+  const faculty = data.faculty || [];
+  const query = normalize(publicationSearch?.value || "");
+
+  if (publicationTotalCount) publicationTotalCount.textContent = String(data.totals?.publications || publications.length);
+  if (publicationFacultyCount) publicationFacultyCount.textContent = String(data.totals?.lecturers || faculty.length);
+  if (publicationPeriod) publicationPeriod.textContent = data.period?.length ? `${data.period[0]}–${data.period[1]}` : "-";
+
+  if (publicationSheetSummary) {
+    publicationSheetSummary.innerHTML = (data.sheetSummaries || []).map((summary) => `
+      <article class="faculty-publication-sheet-card ${escapeHTML(summary.id)}">
+        <span>${escapeHTML(t("publicationSheetLabel"))} · ${escapeHTML(summary.sheet)}</span>
+        <div>
+          <strong>${escapeHTML(summary.value)}</strong>
+          <small>${escapeHTML(currentLang === "en" ? summary.unitEn : summary.unitId)}</small>
+        </div>
+        <h4>${escapeHTML(currentLang === "en" ? summary.titleEn : summary.titleId)}</h4>
+        <p>${escapeHTML(currentLang === "en" ? summary.descriptionEn : summary.descriptionId)}</p>
+      </article>
+    `).join("");
+  }
+
+  if (publicationYearSummary) {
+    const years = data.years || [];
+    const maxYearCount = Math.max(...years.map((item) => item.count), 1);
+    publicationYearSummary.innerHTML = years.map((item) => `
+      <div class="faculty-publication-year-row">
+        <span>${escapeHTML(item.year)}</span>
+        <div><i style="width:${escapeHTML(Math.round((item.count / maxYearCount) * 100))}%"></i></div>
+        <strong>${escapeHTML(item.count)}</strong>
+      </div>
+    `).join("");
+  }
+
+  if (publicationIndexSummary) {
+    const indexSources = data.indexSources || [];
+    const total = indexSources.reduce((sum, item) => sum + item.count, 0) || 1;
+    publicationIndexSummary.innerHTML = `
+      <div class="faculty-publication-index-track" aria-hidden="true">
+        ${indexSources.map((item, index) => `<i class="source-${index + 1}" style="width:${escapeHTML((item.count / total) * 100)}%"></i>`).join("")}
+      </div>
+      <div class="faculty-publication-index-legend">
+        ${indexSources.map((item, index) => `
+          <div><i class="source-${index + 1}"></i><span>${escapeHTML(item.name)}</span><strong>${escapeHTML(item.count)}</strong></div>
+        `).join("")}
+      </div>
+    `;
+  }
+
+  if (publicationCategorySummary) {
+    publicationCategorySummary.innerHTML = (data.categories || []).map((item) => `
+      <span><b>${escapeHTML(item.count)}</b>${escapeHTML(item.name)}</span>
+    `).join("");
+  }
+
+  document.querySelectorAll("[data-publication-view]").forEach((button) => {
+    const isActive = button.dataset.publicationView === activePublicationView;
+    button.classList.toggle("active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+
+  if (publicationYearTabs) {
+    const years = [...(data.years || [])].sort((left, right) => right.year - left.year);
+    publicationYearTabs.innerHTML = [
+      `<button class="${activePublicationYear === "all" ? "active" : ""}" type="button" data-publication-year="all" aria-pressed="${String(activePublicationYear === "all")}">${escapeHTML(t("publicationAllYears"))}</button>`,
+      ...years.map((item) => `<button class="${activePublicationYear === String(item.year) ? "active" : ""}" type="button" data-publication-year="${escapeHTML(item.year)}" aria-pressed="${String(activePublicationYear === String(item.year))}">${escapeHTML(item.year)} <small>${escapeHTML(item.count)}</small></button>`)
+    ].join("");
+  }
+
+  if (activePublicationView === "faculty") {
+    const visibleFaculty = faculty.filter((person) => {
+      const matchesYear = activePublicationYear === "all" || Number(person.byYear?.[activePublicationYear] || 0) > 0;
+      const searchable = normalize([
+        person.name,
+        person.sintaId,
+        person.scopusId,
+        person.googleScholarId,
+        person.wosId
+      ].join(" "));
+      return matchesYear && (!query || searchable.includes(query));
+    });
+    if (publicationVisibleCount) publicationVisibleCount.textContent = String(visibleFaculty.length);
+    if (publicationVisibleLabel) {
+      publicationVisibleLabel.dataset.i18n = "publicationFacultyShown";
+      publicationVisibleLabel.textContent = t("publicationFacultyShown");
+    }
+    if (!visibleFaculty.length) {
+      publicationRows.innerHTML = `<p class="empty-note">${escapeHTML(t("publicationNoFaculty"))}</p>`;
+      return;
+    }
+    publicationRows.innerHTML = visibleFaculty.map((person) => {
+      const maxYear = Math.max(...Object.values(person.byYear || {}).map(Number), 1);
+      return `
+        <article class="faculty-profile-card">
+          <div class="faculty-profile-head">
+            <span>${escapeHTML(t("publicationSintaIdLabel"))} ${escapeHTML(person.sintaId)}</span>
+            <strong>${escapeHTML(person.education)}</strong>
+          </div>
+          <h3>${escapeHTML(person.name)}</h3>
+          <div class="faculty-profile-metrics">
+            <div><span>${escapeHTML(t("publicationCapturedLabel"))}</span><strong>${escapeHTML(person.publicationsCaptured)}</strong></div>
+            <div><span>${escapeHTML(t("publicationSintaScoreLabel"))}</span><strong>${escapeHTML(person.sintaScore3Yr)}</strong></div>
+            <div><span>${escapeHTML(t("publicationHIndexLabel"))}</span><strong>${escapeHTML(person.hIndexScopus)}</strong></div>
+          </div>
+          <div class="faculty-profile-years">
+            ${Object.entries(person.byYear || {}).map(([year, count]) => `
+              <div><span>${escapeHTML(year)}</span><i><b style="width:${escapeHTML(Math.round((Number(count) / maxYear) * 100))}%"></b></i><strong>${escapeHTML(count)}</strong></div>
+            `).join("")}
+          </div>
+          <div class="faculty-profile-ids">
+            <span>${escapeHTML(t("publicationScopusIdLabel"))}</span>
+            <strong>${escapeHTML(person.scopusId)}</strong>
+          </div>
+          <a href="${escapeHTML(person.sintaProfile)}" target="_blank" rel="noopener"><span>${escapeHTML(t("publicationOpenSinta"))}</span><span aria-hidden="true">&#8599;</span></a>
+        </article>
+      `;
+    }).join("");
+    return;
+  }
+
+  const visiblePublications = publications.filter((publication) => {
+    const matchesYear = activePublicationYear === "all" || String(publication.year) === activePublicationYear;
+    const searchable = normalize([
+      publication.title,
+      publication.lecturer,
+      publication.venue,
+      publication.category,
+      publication.indexSource,
+      publication.sintaId,
+      publication.scopusId
+    ].join(" "));
+    return matchesYear && (!query || searchable.includes(query));
+  });
+  if (publicationVisibleCount) publicationVisibleCount.textContent = String(visiblePublications.length);
+  if (publicationVisibleLabel) {
+    publicationVisibleLabel.dataset.i18n = "publicationRecordsShown";
+    publicationVisibleLabel.textContent = t("publicationRecordsShown");
+  }
+  if (!visiblePublications.length) {
+    publicationRows.innerHTML = `<p class="empty-note">${escapeHTML(t("publicationNoRecords"))}</p>`;
+    return;
+  }
+  publicationRows.innerHTML = visiblePublications.map((publication) => {
+    const categoryClass = publication.category.startsWith("Scopus")
+      ? "scopus"
+      : publication.category.startsWith("Sinta") ? "sinta" : "other";
+    return `
+      <article class="faculty-publication-card ${categoryClass}">
+        <div class="faculty-publication-card-head">
+          <span>${escapeHTML(publication.category)}</span>
+          <strong>${escapeHTML(publication.year)}</strong>
+        </div>
+        <div class="faculty-publication-author">
+          <span>${escapeHTML(t("publicationLecturerLabel"))}</span>
+          <strong>${escapeHTML(publication.lecturer)}</strong>
+        </div>
+        <h3>${escapeHTML(publication.title)}</h3>
+        <div class="faculty-publication-venue">
+          <span>${escapeHTML(t("publicationVenueLabel"))}</span>
+          <strong>${escapeHTML(publication.venue)}</strong>
+        </div>
+        <div class="faculty-publication-card-metrics">
+          <div><span>${escapeHTML(t("publicationIndexSourceLabel"))}</span><strong>${escapeHTML(publication.indexSource)}</strong></div>
+          <div><span>${escapeHTML(t("publicationSintaScoreLabel"))}</span><strong>${escapeHTML(publication.sintaScore3Yr)}</strong></div>
+          <div><span>${escapeHTML(t("publicationHIndexLabel"))}</span><strong>${escapeHTML(publication.hIndexScopus)}</strong></div>
+        </div>
+        <a href="${escapeHTML(publication.href)}" target="_blank" rel="noopener"><span>${escapeHTML(t("publicationOpenSinta"))}</span><span aria-hidden="true">&#8599;</span></a>
       </article>
     `;
   }).join("");
@@ -4381,8 +4673,6 @@ function renderPksMoa() {
     const scope = currentLang === "en"
       ? (agreement.scope === "Internasional" ? t("pksMoaInternational") : t("pksMoaNational"))
       : agreement.scope;
-    const href = agreement.href || "assets/pks-moa-source.png";
-    const actionLabel = agreement.href ? t("pksMoaOpen") : t("pksMoaSourceTable");
     const typeClass = String(agreement.type || "").toLowerCase();
     return `
       <article class="pks-moa-card ${escapeHTML(typeClass)}">
@@ -4401,13 +4691,39 @@ function renderPksMoa() {
           <span data-i18n="pksMoaDocument">${escapeHTML(t("pksMoaDocument"))}</span>
           <strong>${escapeHTML(agreement.documentLabel)}</strong>
         </div>
-        <a class="pks-moa-open" href="${escapeHTML(href)}" target="_blank" rel="noopener">
-          <span>${escapeHTML(actionLabel)}</span>
-          <span aria-hidden="true">&#8599;</span>
-        </a>
+        <button class="pks-moa-open restricted-document-button" type="button" data-admin-document data-admin-document-type="pks" data-admin-document-name="${escapeHTML(agreement.documentLabel)}">
+          <span>${escapeHTML(t("pksMoaOpen"))}</span>
+          <span aria-hidden="true">&#128274;</span>
+        </button>
       </article>
     `;
   }).join("");
+}
+
+function openAdminAccessDialog(documentName = "-") {
+  if (!adminAccessDialog) return;
+  const requestedDocument = String(documentName || "-").trim() || "-";
+  if (adminAccessDocumentName) adminAccessDocumentName.textContent = requestedDocument;
+  if (adminAccessEmail) {
+    const subject = currentLang === "en"
+      ? `Document access request: ${requestedDocument}`
+      : `Permohonan akses dokumen: ${requestedDocument}`;
+    adminAccessEmail.href = `mailto:mindra@unpad.ac.id?subject=${encodeURIComponent(subject)}`;
+  }
+  if (typeof adminAccessDialog.showModal === "function") {
+    adminAccessDialog.showModal();
+  } else {
+    adminAccessDialog.setAttribute("open", "");
+  }
+}
+
+function closeAdminAccessDialog() {
+  if (!adminAccessDialog) return;
+  if (typeof adminAccessDialog.close === "function") {
+    adminAccessDialog.close();
+  } else {
+    adminAccessDialog.removeAttribute("open");
+  }
 }
 
 function renderScholarships() {
@@ -4786,6 +5102,29 @@ async function loadResearchGrants() {
   renderResearchGrants();
 }
 
+async function loadFacultyPublications() {
+  try {
+    const response = await fetch("data/faculty_publications.json", { cache: "no-store" });
+    if (!response.ok) throw new Error("Data Publikasi Dosen tidak dapat dimuat.");
+    const data = await response.json();
+    if (!data?.publications?.length || !data?.faculty?.length) throw new Error("Data Publikasi Dosen kosong.");
+    facultyPublicationsData = data;
+  } catch (error) {
+    facultyPublicationsData = {
+      totals: { publications: 0, lecturers: 0 },
+      period: [],
+      sheetSummaries: [],
+      years: [],
+      categories: [],
+      indexSources: [],
+      publications: [],
+      faculty: [],
+      notes: []
+    };
+  }
+  renderFacultyPublications();
+}
+
 async function loadPksMoa() {
   try {
     const response = await fetch("data/pks_moa.json", { cache: "no-store" });
@@ -5011,6 +5350,19 @@ grantYearTabs?.addEventListener("click", (event) => {
   renderResearchGrants();
 });
 grantSearch?.addEventListener("input", renderResearchGrants);
+document.querySelector(".faculty-publication-view-tabs")?.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-publication-view]");
+  if (!button) return;
+  activePublicationView = button.dataset.publicationView || "publications";
+  renderFacultyPublications();
+});
+publicationYearTabs?.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-publication-year]");
+  if (!button) return;
+  activePublicationYear = button.dataset.publicationYear || "all";
+  renderFacultyPublications();
+});
+publicationSearch?.addEventListener("input", renderFacultyPublications);
 document.querySelector(".pks-moa-filter-tabs")?.addEventListener("click", (event) => {
   const button = event.target.closest("[data-pks-moa-filter]");
   if (!button) return;
@@ -5018,6 +5370,20 @@ document.querySelector(".pks-moa-filter-tabs")?.addEventListener("click", (event
   renderPksMoa();
 });
 pksMoaSearch?.addEventListener("input", renderPksMoa);
+document.addEventListener("click", (event) => {
+  const accessButton = event.target.closest("[data-admin-document]");
+  if (accessButton) {
+    const localizedDocumentName = currentLang === "en"
+      ? accessButton.dataset.adminDocumentNameEn || accessButton.dataset.adminDocumentName
+      : accessButton.dataset.adminDocumentNameId || accessButton.dataset.adminDocumentName;
+    openAdminAccessDialog(localizedDocumentName);
+    return;
+  }
+  if (event.target.closest("[data-admin-access-close]")) closeAdminAccessDialog();
+});
+adminAccessDialog?.addEventListener("click", (event) => {
+  if (event.target === adminAccessDialog) closeAdminAccessDialog();
+});
 scholarshipRows?.addEventListener("click", (event) => {
   const button = event.target.closest("[data-scholarship-q]");
   if (!button) return;
@@ -5066,6 +5432,7 @@ loadCurriculumDocs();
 loadLamsamaReports();
 loadPkmReports();
 loadResearchGrants();
+loadFacultyPublications();
 loadPksMoa();
 loadScholarships();
 loadLectureEvaluations();

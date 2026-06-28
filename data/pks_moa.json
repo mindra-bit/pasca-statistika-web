@@ -12,7 +12,8 @@
       "titleId": "Pendidikan, Penelitian, Pengabdian kepada Masyarakat dan Peningkatan Kualitas Sumber Daya Manusia serta Dukungan Program Merdeka Belajar Kampus Merdeka",
       "titleEn": "Education, Research, Community Engagement, Human Resource Quality Improvement, and Support for the Independent Campus Program",
       "collaborator": "FMIPA Universitas Brawijaya",
-      "documentLabel": "PKS FMIPA Brawijaya 2025 (1).pdf"
+      "documentLabel": "PKS FMIPA Brawijaya 2025 (1).pdf",
+      "documentAvailable": true
     },
     {
       "id": "mou-unimap-2025",
@@ -24,7 +25,7 @@
       "titleEn": "Memorandum of Understanding",
       "collaborator": "Universiti Malaysia Perlis",
       "documentLabel": "Dokumen MoU Universiti Malaysia Perlis",
-      "href": "https://drive.google.com/file/d/1YMxleZ4UE7ChpZHVLTN04e1OrYmoZcjF/view?usp=drive_link"
+      "documentAvailable": true
     },
     {
       "id": "mou-kwansei-gakuin-2025",
@@ -36,7 +37,7 @@
       "titleEn": "Memorandum of Understanding",
       "collaborator": "Kwansei Gakuin University, Japan",
       "documentLabel": "Dokumen MoU Kwansei Gakuin University",
-      "href": "https://drive.google.com/file/d/1eAWDgYS5IRvrQYCDuWKUNAp3Abf-KTni/view?usp=drive_link"
+      "documentAvailable": true
     },
     {
       "id": "moa-umt-2025",
@@ -48,7 +49,7 @@
       "titleEn": "Agreement for Joint Courses, Joint Research, and Student Exchange",
       "collaborator": "Fakulti Sains dan Sekitaran Marin (FSSM), Universiti Malaysia Terengganu",
       "documentLabel": "Dokumen MoA Universiti Malaysia Terengganu",
-      "href": "https://drive.google.com/file/d/1iO2-45aKBdtUQqGoluQsbfrPtSqZkC/view?usp=sharing"
+      "documentAvailable": true
     },
     {
       "id": "pks-rshs-2025",
@@ -59,7 +60,8 @@
       "titleId": "Survei Kepuasan Masyarakat dan Survei Kepuasan Pegawai",
       "titleEn": "Community Satisfaction and Employee Satisfaction Surveys",
       "collaborator": "Rumah Sakit Hasan Sadikin (RSHS) Bandung",
-      "documentLabel": "PKS Rumah Sakit Umum Pusat Dr. Hasan Sadikin Bandung 2025.pdf"
+      "documentLabel": "PKS Rumah Sakit Umum Pusat Dr. Hasan Sadikin Bandung 2025.pdf",
+      "documentAvailable": true
     },
     {
       "id": "mou-osaka-2025",
@@ -70,7 +72,8 @@
       "titleId": "MoU Kolaborasi Akademik dan Penelitian",
       "titleEn": "MoU for Academic and Research Collaboration",
       "collaborator": "Osaka Metropolitan University, Japan",
-      "documentLabel": "774 MoU Rector Osaka Metropolitan University Japan - UNPAD 2025.pdf"
+      "documentLabel": "774 MoU Rector Osaka Metropolitan University Japan - UNPAD 2025.pdf",
+      "documentAvailable": true
     },
     {
       "id": "moa-osaka-2025",
@@ -81,7 +84,8 @@
       "titleId": "Perjanjian Kerja Sama Pertukaran Pelajar",
       "titleEn": "Student Exchange Cooperation Agreement",
       "collaborator": "FMIPA Unpad dan Osaka Metropolitan University",
-      "documentLabel": "MoA Dean Osaka Metropolitan University Japan 2025.pdf"
+      "documentLabel": "MoA Dean Osaka Metropolitan University Japan 2025.pdf",
+      "documentAvailable": true
     },
     {
       "id": "mou-jsr-2025",
@@ -93,7 +97,7 @@
       "titleEn": "Memorandum of Understanding for Education, Research, and Community Engagement",
       "collaborator": "PT JSR Indonesia Sehat",
       "documentLabel": "Dokumen MoU PT JSR Indonesia Sehat",
-      "href": "https://drive.google.com/file/d/1OJKbAG5YcTv7_S-uKMGw3cZBMWGEWH6j/view?usp=drive_link"
+      "documentAvailable": true
     },
     {
       "id": "mou-vel-tech-2025",
@@ -104,7 +108,8 @@
       "titleId": "Kerja Sama Pendidikan dan Penelitian",
       "titleEn": "Education and Research Cooperation",
       "collaborator": "Vel Tech University, Chennai, India",
-      "documentLabel": "Vel Tech Rangarajan Sangunthala R&D Institute of Science and Technology, Chennai, India - Unpad (FMIPA) MoU 2025.pdf"
+      "documentLabel": "Vel Tech Rangarajan Sangunthala R&D Institute of Science and Technology, Chennai, India - Unpad (FMIPA) MoU 2025.pdf",
+      "documentAvailable": true
     },
     {
       "id": "pks-itera-2025",
@@ -115,7 +120,8 @@
       "titleId": "Pengembangan Bidang Pendidikan, Penelitian dan Pengabdian kepada Masyarakat",
       "titleEn": "Development in Education, Research, and Community Engagement",
       "collaborator": "Institut Teknologi Sumatera",
-      "documentLabel": "PKS Final ITERA.pdf"
+      "documentLabel": "PKS Final ITERA.pdf",
+      "documentAvailable": true
     },
     {
       "id": "pks-diskominfo-jabar-2024",
@@ -126,7 +132,8 @@
       "titleId": "Penyelenggaraan Implementasi Fungsi Tri Dharma Perguruan Tinggi dalam Mendukung Pengelolaan Data Statistik Sektoral di Provinsi Jawa Barat",
       "titleEn": "Implementation of Higher Education Tri Dharma Functions to Support Sectoral Statistical Data Management in West Java",
       "collaborator": "Pemda Provinsi Jawa Barat (Diskominfo)",
-      "documentLabel": "PKS Diskominfo Pemda Provinsi Jabar 2024.pdf"
+      "documentLabel": "PKS Diskominfo Pemda Provinsi Jabar 2024.pdf",
+      "documentAvailable": true
     },
     {
       "id": "pks-rshs-2024",
@@ -137,7 +144,8 @@
       "titleId": "Survei Kepuasan Masyarakat dan Survei Kepuasan Pegawai",
       "titleEn": "Community Satisfaction and Employee Satisfaction Surveys",
       "collaborator": "Rumah Sakit Umum Pusat Dr. Hasan Sadikin Bandung",
-      "documentLabel": "PKS RSHS Bandung 2024.pdf"
+      "documentLabel": "PKS RSHS Bandung 2024.pdf",
+      "documentAvailable": true
     },
     {
       "id": "moa-giz-2024",
@@ -148,7 +156,8 @@
       "titleId": "Programm Soziale Sicherung",
       "titleEn": "Social Protection Programme",
       "collaborator": "Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH, Dag-Hammarskjöld",
-      "documentLabel": "908 GIZ Jerman - FMIPA local subsidy MoA 2024.pdf"
+      "documentLabel": "908 GIZ Jerman - FMIPA local subsidy MoA 2024.pdf",
+      "documentAvailable": true
     },
     {
       "id": "pks-its-2024",
@@ -160,7 +169,7 @@
       "titleEn": "Implementation of Higher Education Tri Dharma to Support the Independent Campus Programme",
       "collaborator": "Fakultas Sains dan Analitika Data, Institut Teknologi Sepuluh Nopember",
       "documentLabel": "Dokumen PKS Institut Teknologi Sepuluh Nopember",
-      "href": "https://drive.google.com/file/d/1pSggVdLNJERmBDY4IzvyBj8oD_VhWs6/view?usp=sharing"
+      "documentAvailable": true
     },
     {
       "id": "moa-leiden-2025",
@@ -171,7 +180,8 @@
       "titleId": "PKS Akademik dan Penelitian",
       "titleEn": "Academic and Research Cooperation",
       "collaborator": "Universiteit Leiden",
-      "documentLabel": "MOA UNPAD Leiden FWN signed-FINAL.pdf"
+      "documentLabel": "MOA UNPAD Leiden FWN signed-FINAL.pdf",
+      "documentAvailable": true
     },
     {
       "id": "moa-agder-2024",
@@ -182,7 +192,8 @@
       "titleId": "PKS Akademik dan Penelitian",
       "titleEn": "Academic and Research Cooperation",
       "collaborator": "University of Agder, Norway",
-      "documentLabel": "1466 UiA University of Agder Norway - FMIPA MoA Academic and Research 2024.pdf"
+      "documentLabel": "1466 UiA University of Agder Norway - FMIPA MoA Academic and Research 2024.pdf",
+      "documentAvailable": true
     },
     {
       "id": "moa-hasselt-2022",
@@ -193,7 +204,8 @@
       "titleId": "PKS Pertukaran Mata Kuliah",
       "titleEn": "Course Exchange Cooperation Agreement",
       "collaborator": "Universiteit Hasselt",
-      "documentLabel": "Perjanjian Kerjasama Unpad dengan Univ. Hasselt 08 Maret 2022 (3).pdf"
+      "documentLabel": "Perjanjian Kerjasama Unpad dengan Univ. Hasselt 08 Maret 2022 (3).pdf",
+      "documentAvailable": true
     }
   ]
 }

@@ -6,7 +6,7 @@
   <title>Pasca Sarjana Statistika FMIPA UNPAD</title>
   <meta name="description" content="Website profesional Pasca Sarjana Statistika FMIPA Universitas Padjadjaran untuk Program S2 Statistika Terapan dan S3 Statistika." />
   <link rel="preload" href="assets/campus-hero.jpg" as="image" />
-  <link rel="stylesheet" href="assets/site.css?v=research-grants-20260628" />
+  <link rel="stylesheet" href="assets/site.css?v=admin-documents-v2-20260628" />
 </head>
 <body>
   <div class="topbar">
@@ -52,7 +52,7 @@
               <a class="program-accreditation-badge" href="#kalender-akademik" data-workspace-target="kalender-akademik" data-program-select="none" data-i18n="frontS2Accreditation">Akreditasi UNGGUL</a>
             </div>
             <h2 data-i18n="frontS2Title">S2 Statistika Terapan</h2>
-            <p data-i18n="frontS2Text">Informasi kurikulum OBE 2026, beasiswa, laporan LAMSAMA, Program Pengabdian, hibah riset dosen, jejaring PKS-MoA, silabus, RPS, materi kuliah, panduan akademik, panduan tesis, lulusan, dan tracer study.</p>
+            <p data-i18n="frontS2Text">Informasi kurikulum OBE 2026, beasiswa, laporan LAMSAMA, Program Pengabdian, hibah riset dan publikasi dosen, jejaring PKS-MoA, silabus, RPS, materi kuliah, panduan akademik, panduan tesis, lulusan, dan tracer study.</p>
             <div class="program-front-meta">
               <span>42 SKS</span>
               <span data-i18n="frontS2Meta">Magister</span>
@@ -87,13 +87,14 @@
           <a href="#program-profile" data-program-select="s2" data-workspace-target="program-profile" data-i18n="workspaceProgramProfile">Program Profile</a>
           <a href="#beasiswa" data-program-select="s2" data-workspace-target="beasiswa" data-i18n="workspaceScholarships">Beasiswa</a>
           <a href="#lamsama" data-program-select="s2" data-workspace-target="lamsama" data-i18n="workspaceLamsama">LAMSAMA</a>
-          <a href="#program-pengabdian" data-program-select="s2" data-workspace-target="program-pengabdian" data-i18n="workspacePkm">Program Pengabdian</a>
-          <a href="#hibah-riset" data-program-select="s2" data-workspace-target="hibah-riset" data-i18n="workspaceResearchGrants">Hibah Riset Dosen</a>
           <a href="#pks-moa" data-program-select="s2" data-workspace-target="pks-moa" data-i18n="workspacePksMoa">PKS-MoA</a>
           <a href="#kurikulum" data-program-select="s2" data-workspace-target="kurikulum" data-i18n="workspaceCurriculum">Kurikulum</a>
           <a href="#evaluasi" data-program-select="s2" data-workspace-target="evaluasi" data-i18n="workspaceEvaluation">Evaluasi</a>
           <a href="#lulusan" data-program-select="s2" data-workspace-target="lulusan" data-i18n="workspaceGraduates">Lulusan & Tesis</a>
           <a href="#tracer-studi" data-program-select="s2" data-workspace-target="tracer-studi" data-i18n="workspaceTracer">Tracer Studi</a>
+          <a href="#program-pengabdian" data-program-select="s2" data-workspace-target="program-pengabdian" data-i18n="workspacePkm">Program Pengabdian</a>
+          <a href="#hibah-riset" data-program-select="s2" data-workspace-target="hibah-riset" data-i18n="workspaceResearchGrants">Hibah Riset Dosen</a>
+          <a href="#publikasi-dosen" data-program-select="s2" data-workspace-target="publikasi-dosen" data-i18n="workspaceFacultyPublications">Publikasi Dosen</a>
           <a href="#special-moment" data-program-select="s2" data-workspace-target="special-moment" data-i18n="workspaceSpecialMoment">Special Moment</a>
           <a href="#video-testimoni" data-program-select="s2" data-workspace-target="video-testimoni" data-i18n="workspaceTestimonials">Video Testimoni</a>
           <a href="#komentar" data-program-select="s2" data-workspace-target="komentar" data-i18n="workspaceComments">Komentar & Jejak</a>
@@ -583,7 +584,7 @@
               <strong id="grantTotalAmount">Rp2,74 M</strong>
             </div>
             <div>
-              <span data-i18n="grantDocumentLabel">Dokumen tertaut</span>
+              <span data-i18n="grantDocumentLabel">Kontrak terbatas</span>
               <strong id="grantLinkedCount">24</strong>
             </div>
           </div>
@@ -599,10 +600,15 @@
             <span aria-hidden="true">&#128269;</span>
             <input id="grantSearch" type="search" data-i18n-placeholder="grantSearchPlaceholder" placeholder="Cari peneliti, judul, skema, atau sumber dana" autocomplete="off" />
           </label>
-          <a class="research-grant-source" href="%40Hibah.xlsx" target="_blank" rel="noopener">
-            <span aria-hidden="true">&#8681;</span>
-            <span data-i18n="grantDownloadSource">Buka data Excel</span>
-          </a>
+          <button class="research-grant-source" type="button" data-admin-document data-admin-document-type="grant" data-admin-document-name="Data kontrak penelitian" data-admin-document-name-id="Data kontrak penelitian" data-admin-document-name-en="Research contract data">
+            <span aria-hidden="true">&#128274;</span>
+            <span data-i18n="grantDownloadSource">Data kontrak khusus admin</span>
+          </button>
+        </div>
+
+        <div class="restricted-access-notice">
+          <span aria-hidden="true">&#128274;</span>
+          <p data-i18n="grantAccessNotice">Dokumen kontrak penelitian hanya dapat diakses oleh admin.</p>
         </div>
 
         <div class="research-grant-result-bar">
@@ -613,6 +619,95 @@
           <span id="grantVisibleAmount">Rp2.744.335.000</span>
         </div>
         <div class="research-grant-grid" id="grantRows" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section faculty-publication-section" id="publikasi-dosen">
+      <div class="container">
+        <div class="faculty-publication-hero">
+          <div class="faculty-publication-hero-copy">
+            <p class="section-kicker" data-i18n="publicationKicker">Publikasi Dosen</p>
+            <h2 data-i18n="publicationTitle">Jejak publikasi yang memperkuat kontribusi Statistika.</h2>
+            <p data-i18n="publicationText">Ringkasan publikasi dosen Statistika FMIPA UNPAD yang berhasil dihimpun dari sumber publik SINTA untuk periode 2022–2026.</p>
+          </div>
+          <div class="faculty-publication-metrics" aria-label="Ringkasan publikasi dosen">
+            <div>
+              <span data-i18n="publicationTotalLabel">Publikasi terhimpun</span>
+              <strong id="publicationTotalCount">124</strong>
+            </div>
+            <div>
+              <span data-i18n="publicationFacultyLabel">Profil dosen</span>
+              <strong id="publicationFacultyCount">17</strong>
+            </div>
+            <div>
+              <span data-i18n="publicationPeriodLabel">Periode data</span>
+              <strong id="publicationPeriod">2022–2026</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="faculty-publication-sheet-head">
+          <div>
+            <span data-i18n="publicationSheetKicker">Ringkasan Workbook</span>
+            <h3 data-i18n="publicationSheetTitle">Ikhtisar dari setiap sheet data.</h3>
+          </div>
+          <a href="%40Publikasi%20Dosen.xlsx" target="_blank" rel="noopener">
+            <span aria-hidden="true">&#8681;</span>
+            <span data-i18n="publicationOpenWorkbook">Buka workbook Excel</span>
+          </a>
+        </div>
+        <div class="faculty-publication-sheet-grid" id="publicationSheetSummary"></div>
+
+        <div class="faculty-publication-analysis">
+          <section class="faculty-publication-year-panel" aria-labelledby="publication-year-title">
+            <div class="faculty-publication-panel-head">
+              <span data-i18n="publicationYearKicker">Tren Tahunan</span>
+              <strong id="publication-year-title" data-i18n="publicationYearTitle">Publikasi per tahun</strong>
+            </div>
+            <div class="faculty-publication-year-bars" id="publicationYearSummary"></div>
+          </section>
+          <section class="faculty-publication-index-panel" aria-labelledby="publication-index-title">
+            <div class="faculty-publication-panel-head">
+              <span data-i18n="publicationIndexKicker">Sumber Indeks</span>
+              <strong id="publication-index-title" data-i18n="publicationIndexTitle">Komposisi sumber publik</strong>
+            </div>
+            <div class="faculty-publication-index-summary" id="publicationIndexSummary"></div>
+          </section>
+          <section class="faculty-publication-category-panel" aria-labelledby="publication-category-title">
+            <div class="faculty-publication-panel-head">
+              <span data-i18n="publicationCategoryKicker">Kategori</span>
+              <strong id="publication-category-title" data-i18n="publicationCategoryTitle">SINTA dan kuartil Scopus</strong>
+            </div>
+            <div class="faculty-publication-category-summary" id="publicationCategorySummary"></div>
+          </section>
+        </div>
+
+        <div class="faculty-publication-note">
+          <span aria-hidden="true">i</span>
+          <p data-i18n="publicationDataNote">Data merupakan versi publik terverifikasi. Publikasi penuh yang berada di balik SINTA Insight atau login resmi mungkin belum tercakup.</p>
+        </div>
+
+        <div class="faculty-publication-controls">
+          <div class="faculty-publication-view-tabs" role="group" aria-label="Pilihan tampilan publikasi">
+            <button class="active" type="button" data-publication-view="publications" aria-pressed="true" data-i18n="publicationViewRecords">Daftar Publikasi</button>
+            <button type="button" data-publication-view="faculty" aria-pressed="false" data-i18n="publicationViewFaculty">Profil Dosen</button>
+          </div>
+          <div class="faculty-publication-year-tabs" id="publicationYearTabs" role="group" aria-label="Filter tahun publikasi"></div>
+        </div>
+
+        <div class="faculty-publication-toolbar">
+          <label class="faculty-publication-search" for="publicationSearch">
+            <span class="sr-only" data-i18n="publicationSearchLabel">Cari publikasi atau dosen</span>
+            <span aria-hidden="true">&#128269;</span>
+            <input id="publicationSearch" type="search" data-i18n-placeholder="publicationSearchPlaceholder" placeholder="Cari judul, dosen, jurnal, kategori, atau ID" autocomplete="off" />
+          </label>
+        </div>
+
+        <div class="faculty-publication-result-bar">
+          <strong id="publicationVisibleCount">124</strong>
+          <span id="publicationVisibleLabel" data-i18n="publicationRecordsShown">publikasi ditampilkan</span>
+        </div>
+        <div class="faculty-publication-grid" id="publicationRows" aria-live="polite"></div>
       </div>
     </section>
 
@@ -652,10 +747,15 @@
             <span aria-hidden="true">&#128269;</span>
             <input id="pksMoaSearch" type="search" data-i18n-placeholder="pksMoaSearchPlaceholder" placeholder="Cari mitra, kegiatan, atau nomor dokumen" autocomplete="off" />
           </label>
-          <a class="pks-moa-source-link" href="assets/pks-moa-source.png" target="_blank" rel="noopener">
-            <span aria-hidden="true">&#9638;</span>
-            <span data-i18n="pksMoaSource">Lihat tabel sumber</span>
-          </a>
+          <button class="pks-moa-source-link" type="button" data-admin-document data-admin-document-type="pks" data-admin-document-name="Tabel sumber PKS-MoA" data-admin-document-name-id="Tabel sumber PKS-MoA" data-admin-document-name-en="PKS-MoA source table">
+            <span aria-hidden="true">&#128274;</span>
+            <span data-i18n="pksMoaSource">Tabel sumber khusus admin</span>
+          </button>
+        </div>
+
+        <div class="restricted-access-notice">
+          <span aria-hidden="true">&#128274;</span>
+          <p data-i18n="pksMoaAccessNotice">Dokumen PKS, MoU, dan MoA hanya dapat diakses oleh admin.</p>
         </div>
 
         <div class="pks-moa-result-bar">
@@ -1378,6 +1478,25 @@
     </div>
   </main>
 
+  <dialog class="admin-access-dialog" id="adminAccessDialog" aria-labelledby="adminAccessTitle">
+    <div class="admin-access-dialog-panel">
+      <button class="admin-access-dialog-close" type="button" data-admin-access-close aria-label="Tutup dialog" data-i18n-aria-label="adminAccessCloseLabel">&#215;</button>
+      <span class="admin-access-dialog-icon" aria-hidden="true">&#128274;</span>
+      <p class="section-kicker" data-i18n="adminAccessKicker">Akses Terbatas</p>
+      <h2 id="adminAccessTitle" data-i18n="adminAccessTitle">Dokumen hanya untuk admin</h2>
+      <p data-i18n="adminAccessText">Dokumen PKS/MoA dan kontrak penelitian tidak tersedia untuk akses publik. Mohon hubungi admin di mindra@unpad.ac.id.</p>
+      <div class="admin-access-dialog-contact">
+        <span data-i18n="adminAccessEmailLabel">Admin dokumen</span>
+        <a href="mailto:mindra@unpad.ac.id">mindra@unpad.ac.id</a>
+      </div>
+      <p class="admin-access-dialog-context"><span data-i18n="adminAccessContextLabel">Dokumen yang diminta</span>: <strong id="adminAccessDocumentName">-</strong></p>
+      <div class="admin-access-dialog-actions">
+        <a id="adminAccessEmail" href="mailto:mindra@unpad.ac.id" data-i18n="adminAccessContact">Hubungi admin</a>
+        <button type="button" data-admin-access-close data-i18n="adminAccessClose">Tutup</button>
+      </div>
+    </div>
+  </dialog>
+
   <footer class="footer">
     <div class="container footer-inner">
       <div>
@@ -1388,6 +1507,6 @@
     </div>
   </footer>
 
-  <script src="assets/app.js?v=research-grants-20260628" defer></script>
+  <script src="assets/app.js?v=admin-documents-v2-20260628" defer></script>
 </body>
 </html>

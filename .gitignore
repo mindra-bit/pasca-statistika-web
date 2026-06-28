@@ -2,6 +2,10 @@ node_modules/
 .env
 .env.local
 .DS_Store
+~$*
+.private/
+@Hibah.xlsx
+assets/pks-moa-source.png
 @Special Moment/
 Buku Panduan Penulisan Tesis S2 Statistika Terapan Tahun Akademik 2026:2027.pdf
 Buku Pelaksanaan Tesis SUR SKR SAM S2 Statistika Terapan Tahun Akademik 2026:2027.pdf
