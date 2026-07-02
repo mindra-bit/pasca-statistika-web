@@ -1,0 +1,1057 @@
+{
+  "generatedAt": "2026-07-02T00:00:00+07:00",
+  "primaryYears": [
+    2024,
+    2025,
+    2026
+  ],
+  "historicalYears": [
+    2022,
+    2023
+  ],
+  "methodology": {
+    "primarySource": "@Tracer Study/Tracer Studi 2026/Data.xlsx",
+    "historicalSource": "@Tracer Study/Data.xlsx",
+    "primaryNoteId": "Tren utama 2024-2026 menggunakan satu sumber data terbaru dengan cakupan kumulatif sampai tahun laporan.",
+    "primaryNoteEn": "The 2024-2026 primary trend uses one current data source with cumulative coverage through each report year.",
+    "historicalNoteId": "Laporan 2022-2023 memakai data awal dan ditampilkan sebagai pembanding historis, bukan rangkaian yang sepenuhnya sebanding.",
+    "historicalNoteEn": "The 2022-2023 reports use the original dataset and are shown as historical benchmarks, not as a fully comparable series.",
+    "references": [
+      {
+        "title": "Tracer Study Unpad",
+        "url": "https://alumni.unpad.ac.id/alumni/tracer-study-unpad/"
+      },
+      {
+        "title": "Tracer Study Fakultas Pertanian Unpad",
+        "url": "https://faperta.unpad.ac.id/en/tracer-study/"
+      }
+    ]
+  },
+  "years": [
+    {
+      "year": 2022,
+      "sourceGroup": "historical",
+      "source": "Data.xlsx",
+      "graduationRange": [
+        2009,
+        2022
+      ],
+      "responses": 77,
+      "kpis": {
+        "medianWaitMonths": 0.0,
+        "meanWaitMonths": 0.7,
+        "validWait": 77,
+        "within3MonthsPct": 94.8,
+        "within6MonthsPct": 96.1,
+        "workingBeforeGraduationPct": 89.6,
+        "appliedStatisticsPct": 84.4,
+        "jobSatisfactionPct": 85.7,
+        "incomeAtLeastUmrPct": 100.0,
+        "fieldAlignmentPct": null,
+        "fieldAlignmentValid": 0,
+        "educationAlignmentPct": null,
+        "educationAlignmentValid": 0,
+        "competenceHelpfulPct": null,
+        "competenceHelpfulValid": 0
+      },
+      "distributions": {
+        "wait": [
+          {
+            "key": "0-bulan",
+            "label": "0 bulan",
+            "count": 69,
+            "pct": 89.6
+          },
+          {
+            "key": "0-3-bulan",
+            "label": ">0-3 bulan",
+            "count": 4,
+            "pct": 5.2
+          },
+          {
+            "key": "3-6-bulan",
+            "label": ">3-6 bulan",
+            "count": 1,
+            "pct": 1.3
+          },
+          {
+            "key": "6-12-bulan",
+            "label": ">6-12 bulan",
+            "count": 1,
+            "pct": 1.3
+          },
+          {
+            "key": "12-bulan",
+            "label": ">12 bulan",
+            "count": 2,
+            "pct": 2.6
+          },
+          {
+            "key": "tidak-diketahui",
+            "label": "Tidak diketahui",
+            "count": 0,
+            "pct": 0.0
+          }
+        ],
+        "firstIncome": [
+          {
+            "key": "rp-1-5-juta",
+            "label": "< Rp. 1,5 juta",
+            "count": 4,
+            "pct": 5.2
+          },
+          {
+            "key": "rp-1-5-juta-2-5-juta",
+            "label": "Rp. 1,5 juta - < 2,5 juta",
+            "count": 17,
+            "pct": 22.1
+          },
+          {
+            "key": "rp-2-5-juta-3-5-juta",
+            "label": "Rp. 2,5 juta - < 3,5 juta",
+            "count": 13,
+            "pct": 16.9
+          },
+          {
+            "key": "rp-3-5-juta-4-5-juta",
+            "label": "Rp. 3,5 juta - < 4,5 juta",
+            "count": 17,
+            "pct": 22.1
+          },
+          {
+            "key": "4-5-juta",
+            "label": ">= 4,5 juta",
+            "count": 26,
+            "pct": 33.8
+          }
+        ],
+        "currentIncome": [
+          {
+            "key": "rp-3-jt",
+            "label": "< Rp. 3 jt",
+            "count": 3,
+            "pct": 3.9
+          },
+          {
+            "key": "rp-3-jt-6-jt",
+            "label": "Rp. 3 jt - < 6 jt",
+            "count": 12,
+            "pct": 15.6
+          },
+          {
+            "key": "rp-6-jt-9-jt",
+            "label": "Rp. 6 jt - < 9 jt",
+            "count": 20,
+            "pct": 26.0
+          },
+          {
+            "key": "rp-9-jt-12-jt",
+            "label": "Rp. 9 jt - < 12 jt",
+            "count": 32,
+            "pct": 41.6
+          },
+          {
+            "key": "12-jt",
+            "label": ">=12 jt",
+            "count": 10,
+            "pct": 13.0
+          }
+        ],
+        "workplace": [
+          {
+            "key": "perusahaan-instansi-nasional",
+            "label": "Perusahaan/ instansi Nasional",
+            "count": 58,
+            "pct": 75.3
+          },
+          {
+            "key": "perusahaan-instansi-lokal-wilayah",
+            "label": "Perusahaan/ instansi Lokal / Wilayah",
+            "count": 18,
+            "pct": 23.4
+          },
+          {
+            "key": "melanjutkan-studi",
+            "label": "Melanjutkan studi",
+            "count": 1,
+            "pct": 1.3
+          }
+        ],
+        "fieldAlignment": [],
+        "educationAlignment": [],
+        "competenceHelpful": []
+      }
+    },
+    {
+      "year": 2023,
+      "sourceGroup": "historical",
+      "source": "Data.xlsx",
+      "graduationRange": [
+        2009,
+        2023
+      ],
+      "responses": 83,
+      "kpis": {
+        "medianWaitMonths": 0.0,
+        "meanWaitMonths": 0.7,
+        "validWait": 83,
+        "within3MonthsPct": 95.2,
+        "within6MonthsPct": 96.4,
+        "workingBeforeGraduationPct": 90.4,
+        "appliedStatisticsPct": 83.1,
+        "jobSatisfactionPct": 85.5,
+        "incomeAtLeastUmrPct": 100.0,
+        "fieldAlignmentPct": null,
+        "fieldAlignmentValid": 0,
+        "educationAlignmentPct": null,
+        "educationAlignmentValid": 0,
+        "competenceHelpfulPct": null,
+        "competenceHelpfulValid": 0
+      },
+      "distributions": {
+        "wait": [
+          {
+            "key": "0-bulan",
+            "label": "0 bulan",
+            "count": 75,
+            "pct": 90.4
+          },
+          {
+            "key": "0-3-bulan",
+            "label": ">0-3 bulan",
+            "count": 4,
+            "pct": 4.8
+          },
+          {
+            "key": "3-6-bulan",
+            "label": ">3-6 bulan",
+            "count": 1,
+            "pct": 1.2
+          },
+          {
+            "key": "6-12-bulan",
+            "label": ">6-12 bulan",
+            "count": 1,
+            "pct": 1.2
+          },
+          {
+            "key": "12-bulan",
+            "label": ">12 bulan",
+            "count": 2,
+            "pct": 2.4
+          },
+          {
+            "key": "tidak-diketahui",
+            "label": "Tidak diketahui",
+            "count": 0,
+            "pct": 0.0
+          }
+        ],
+        "firstIncome": [
+          {
+            "key": "rp-1-5-juta",
+            "label": "< Rp. 1,5 juta",
+            "count": 4,
+            "pct": 4.8
+          },
+          {
+            "key": "rp-1-5-juta-2-5-juta",
+            "label": "Rp. 1,5 juta - < 2,5 juta",
+            "count": 18,
+            "pct": 21.7
+          },
+          {
+            "key": "rp-2-5-juta-3-5-juta",
+            "label": "Rp. 2,5 juta - < 3,5 juta",
+            "count": 13,
+            "pct": 15.7
+          },
+          {
+            "key": "rp-3-5-juta-4-5-juta",
+            "label": "Rp. 3,5 juta - < 4,5 juta",
+            "count": 18,
+            "pct": 21.7
+          },
+          {
+            "key": "4-5-juta",
+            "label": ">= 4,5 juta",
+            "count": 30,
+            "pct": 36.1
+          }
+        ],
+        "currentIncome": [
+          {
+            "key": "rp-3-jt",
+            "label": "< Rp. 3 jt",
+            "count": 3,
+            "pct": 3.6
+          },
+          {
+            "key": "rp-3-jt-6-jt",
+            "label": "Rp. 3 jt - < 6 jt",
+            "count": 13,
+            "pct": 15.7
+          },
+          {
+            "key": "rp-6-jt-9-jt",
+            "label": "Rp. 6 jt - < 9 jt",
+            "count": 20,
+            "pct": 24.1
+          },
+          {
+            "key": "rp-9-jt-12-jt",
+            "label": "Rp. 9 jt - < 12 jt",
+            "count": 37,
+            "pct": 44.6
+          },
+          {
+            "key": "12-jt",
+            "label": ">=12 jt",
+            "count": 10,
+            "pct": 12.0
+          }
+        ],
+        "workplace": [
+          {
+            "key": "perusahaan-instansi-nasional",
+            "label": "Perusahaan/ instansi Nasional",
+            "count": 61,
+            "pct": 73.5
+          },
+          {
+            "key": "perusahaan-instansi-lokal-wilayah",
+            "label": "Perusahaan/ instansi Lokal / Wilayah",
+            "count": 21,
+            "pct": 25.3
+          },
+          {
+            "key": "melanjutkan-studi",
+            "label": "Melanjutkan studi",
+            "count": 1,
+            "pct": 1.2
+          }
+        ],
+        "fieldAlignment": [],
+        "educationAlignment": [],
+        "competenceHelpful": []
+      }
+    },
+    {
+      "year": 2024,
+      "sourceGroup": "primary",
+      "source": "Tracer Studi 2026/Data.xlsx",
+      "graduationRange": [
+        2022,
+        2024
+      ],
+      "responses": 26,
+      "kpis": {
+        "medianWaitMonths": 0.0,
+        "meanWaitMonths": 1.5,
+        "validWait": 26,
+        "within3MonthsPct": 84.6,
+        "within6MonthsPct": 92.3,
+        "workingBeforeGraduationPct": 69.2,
+        "appliedStatisticsPct": 92.3,
+        "jobSatisfactionPct": 100.0,
+        "incomeAtLeastUmrPct": 96.2,
+        "fieldAlignmentPct": 57.1,
+        "fieldAlignmentValid": 7,
+        "educationAlignmentPct": 57.1,
+        "educationAlignmentValid": 7,
+        "competenceHelpfulPct": 85.7,
+        "competenceHelpfulValid": 7
+      },
+      "distributions": {
+        "wait": [
+          {
+            "key": "0-bulan",
+            "label": "0 bulan",
+            "count": 18,
+            "pct": 69.2
+          },
+          {
+            "key": "0-3-bulan",
+            "label": ">0-3 bulan",
+            "count": 4,
+            "pct": 15.4
+          },
+          {
+            "key": "3-6-bulan",
+            "label": ">3-6 bulan",
+            "count": 2,
+            "pct": 7.7
+          },
+          {
+            "key": "6-12-bulan",
+            "label": ">6-12 bulan",
+            "count": 1,
+            "pct": 3.8
+          },
+          {
+            "key": "12-bulan",
+            "label": ">12 bulan",
+            "count": 1,
+            "pct": 3.8
+          },
+          {
+            "key": "tidak-diketahui",
+            "label": "Tidak diketahui",
+            "count": 0,
+            "pct": 0.0
+          }
+        ],
+        "firstIncome": [
+          {
+            "key": "rp-1-5-juta",
+            "label": "< Rp. 1,5 juta",
+            "count": 1,
+            "pct": 3.8
+          },
+          {
+            "key": "rp-1-5-juta-2-5-juta",
+            "label": "Rp. 1,5 juta - < 2,5 juta",
+            "count": 1,
+            "pct": 3.8
+          },
+          {
+            "key": "rp-2-5-juta-3-5-juta",
+            "label": "Rp. 2,5 juta - < 3,5 juta",
+            "count": 2,
+            "pct": 7.7
+          },
+          {
+            "key": "rp-3-5-juta-4-5-juta",
+            "label": "Rp. 3,5 juta - < 4,5 juta",
+            "count": 2,
+            "pct": 7.7
+          },
+          {
+            "key": "4-5-juta",
+            "label": ">= 4,5 juta",
+            "count": 20,
+            "pct": 76.9
+          }
+        ],
+        "currentIncome": [
+          {
+            "key": "rp-3-jt-6-jt",
+            "label": "Rp. 3 jt - < 6 jt",
+            "count": 3,
+            "pct": 11.5
+          },
+          {
+            "key": "rp-6-jt-9-jt",
+            "label": "Rp. 6 jt - < 9 jt",
+            "count": 8,
+            "pct": 30.8
+          },
+          {
+            "key": "rp-9-jt-12-jt",
+            "label": "Rp. 9 jt - < 12 jt",
+            "count": 12,
+            "pct": 46.2
+          },
+          {
+            "key": "12-jt",
+            "label": ">=12 jt",
+            "count": 3,
+            "pct": 11.5
+          }
+        ],
+        "workplace": [
+          {
+            "key": "perusahaan-instansi-nasional",
+            "label": "Perusahaan/ instansi Nasional",
+            "count": 13,
+            "pct": 50.0
+          },
+          {
+            "key": "perusahaan-instansi-multinasional-internasional",
+            "label": "Perusahaan/ instansi Multinasional/ Internasional",
+            "count": 9,
+            "pct": 34.6
+          },
+          {
+            "key": "perusahaan-instansi-lokal-wilayah",
+            "label": "Perusahaan/ instansi Lokal / Wilayah",
+            "count": 3,
+            "pct": 11.5
+          },
+          {
+            "key": "berwirausaha-tidak-berbadan-hukum",
+            "label": "Berwirausaha tidak berbadan hukum",
+            "count": 1,
+            "pct": 3.8
+          }
+        ],
+        "fieldAlignment": [
+          {
+            "key": "sangat-sesuai",
+            "label": "Sangat sesuai",
+            "count": 1,
+            "pct": 14.3
+          },
+          {
+            "key": "sesuai",
+            "label": "Sesuai",
+            "count": 3,
+            "pct": 42.9
+          },
+          {
+            "key": "cukup-sesuai",
+            "label": "Cukup sesuai",
+            "count": 3,
+            "pct": 42.9
+          }
+        ],
+        "educationAlignment": [
+          {
+            "key": "sesuai",
+            "label": "Sesuai",
+            "count": 4,
+            "pct": 57.1
+          },
+          {
+            "key": "cukup-sesuai",
+            "label": "Cukup sesuai",
+            "count": 2,
+            "pct": 28.6
+          },
+          {
+            "key": "kurang-sesuai",
+            "label": "Kurang sesuai",
+            "count": 1,
+            "pct": 14.3
+          }
+        ],
+        "competenceHelpful": [
+          {
+            "key": "sangat-membantu",
+            "label": "Sangat membantu",
+            "count": 2,
+            "pct": 28.6
+          },
+          {
+            "key": "membantu",
+            "label": "Membantu",
+            "count": 4,
+            "pct": 57.1
+          },
+          {
+            "key": "cukup-membantu",
+            "label": "Cukup membantu",
+            "count": 1,
+            "pct": 14.3
+          }
+        ]
+      }
+    },
+    {
+      "year": 2025,
+      "sourceGroup": "primary",
+      "source": "Tracer Studi 2026/Data.xlsx",
+      "graduationRange": [
+        2022,
+        2025
+      ],
+      "responses": 47,
+      "kpis": {
+        "medianWaitMonths": 0.0,
+        "meanWaitMonths": 1.9,
+        "validWait": 46,
+        "within3MonthsPct": 78.3,
+        "within6MonthsPct": 95.7,
+        "workingBeforeGraduationPct": 51.1,
+        "appliedStatisticsPct": 76.6,
+        "jobSatisfactionPct": 80.9,
+        "incomeAtLeastUmrPct": 85.1,
+        "fieldAlignmentPct": 56.5,
+        "fieldAlignmentValid": 23,
+        "educationAlignmentPct": 43.5,
+        "educationAlignmentValid": 23,
+        "competenceHelpfulPct": 91.3,
+        "competenceHelpfulValid": 23
+      },
+      "distributions": {
+        "wait": [
+          {
+            "key": "0-bulan",
+            "label": "0 bulan",
+            "count": 24,
+            "pct": 51.1
+          },
+          {
+            "key": "0-3-bulan",
+            "label": ">0-3 bulan",
+            "count": 12,
+            "pct": 25.5
+          },
+          {
+            "key": "3-6-bulan",
+            "label": ">3-6 bulan",
+            "count": 8,
+            "pct": 17.0
+          },
+          {
+            "key": "6-12-bulan",
+            "label": ">6-12 bulan",
+            "count": 1,
+            "pct": 2.1
+          },
+          {
+            "key": "12-bulan",
+            "label": ">12 bulan",
+            "count": 1,
+            "pct": 2.1
+          },
+          {
+            "key": "tidak-diketahui",
+            "label": "Tidak diketahui",
+            "count": 1,
+            "pct": 2.1
+          }
+        ],
+        "firstIncome": [
+          {
+            "key": "rp-1-5-juta",
+            "label": "< Rp. 1,5 juta",
+            "count": 4,
+            "pct": 8.5
+          },
+          {
+            "key": "rp-1-5-juta-2-5-juta",
+            "label": "Rp. 1,5 juta - < 2,5 juta",
+            "count": 6,
+            "pct": 12.8
+          },
+          {
+            "key": "rp-2-5-juta-3-5-juta",
+            "label": "Rp. 2,5 juta - < 3,5 juta",
+            "count": 5,
+            "pct": 10.6
+          },
+          {
+            "key": "rp-3-5-juta-4-5-juta",
+            "label": "Rp. 3,5 juta - < 4,5 juta",
+            "count": 3,
+            "pct": 6.4
+          },
+          {
+            "key": "4-5-juta",
+            "label": ">= 4,5 juta",
+            "count": 29,
+            "pct": 61.7
+          }
+        ],
+        "currentIncome": [
+          {
+            "key": "rp-3-jt",
+            "label": "< Rp. 3 jt",
+            "count": 3,
+            "pct": 6.4
+          },
+          {
+            "key": "rp-3-jt-6-jt",
+            "label": "Rp. 3 jt - < 6 jt",
+            "count": 11,
+            "pct": 23.4
+          },
+          {
+            "key": "rp-6-jt-9-jt",
+            "label": "Rp. 6 jt - < 9 jt",
+            "count": 16,
+            "pct": 34.0
+          },
+          {
+            "key": "rp-9-jt-12-jt",
+            "label": "Rp. 9 jt - < 12 jt",
+            "count": 13,
+            "pct": 27.7
+          },
+          {
+            "key": "12-jt",
+            "label": ">=12 jt",
+            "count": 4,
+            "pct": 8.5
+          }
+        ],
+        "workplace": [
+          {
+            "key": "perusahaan-instansi-nasional",
+            "label": "Perusahaan/ instansi Nasional",
+            "count": 17,
+            "pct": 37.8
+          },
+          {
+            "key": "perusahaan-instansi-multinasional-internasional",
+            "label": "Perusahaan/ instansi Multinasional/ Internasional",
+            "count": 11,
+            "pct": 24.4
+          },
+          {
+            "key": "perusahaan-instansi-lokal-wilayah",
+            "label": "Perusahaan/ instansi Lokal / Wilayah",
+            "count": 8,
+            "pct": 17.8
+          },
+          {
+            "key": "perusahaan-instansi-lokal-wilayah-perusahaan-instansi-nasional",
+            "label": "Perusahaan/ instansi Lokal / Wilayah, Perusahaan/ instansi Nasional",
+            "count": 4,
+            "pct": 8.9
+          },
+          {
+            "key": "berwirausaha-tidak-berbadan-hukum",
+            "label": "Berwirausaha tidak berbadan hukum",
+            "count": 3,
+            "pct": 6.7
+          },
+          {
+            "key": "berwirausaha-tidak-berbadan-hukum-perusahaan-instansi-lokal-wilayah",
+            "label": "Berwirausaha tidak berbadan hukum, Perusahaan/ instansi Lokal / Wilayah",
+            "count": 2,
+            "pct": 4.4
+          }
+        ],
+        "fieldAlignment": [
+          {
+            "key": "sangat-sesuai",
+            "label": "Sangat sesuai",
+            "count": 3,
+            "pct": 13.0
+          },
+          {
+            "key": "sesuai",
+            "label": "Sesuai",
+            "count": 10,
+            "pct": 43.5
+          },
+          {
+            "key": "cukup-sesuai",
+            "label": "Cukup sesuai",
+            "count": 7,
+            "pct": 30.4
+          },
+          {
+            "key": "kurang-sesuai",
+            "label": "Kurang sesuai",
+            "count": 2,
+            "pct": 8.7
+          },
+          {
+            "key": "tidak-sesuai",
+            "label": "Tidak sesuai",
+            "count": 1,
+            "pct": 4.3
+          }
+        ],
+        "educationAlignment": [
+          {
+            "key": "sangat-sesuai",
+            "label": "Sangat sesuai",
+            "count": 3,
+            "pct": 13.0
+          },
+          {
+            "key": "sesuai",
+            "label": "Sesuai",
+            "count": 7,
+            "pct": 30.4
+          },
+          {
+            "key": "cukup-sesuai",
+            "label": "Cukup sesuai",
+            "count": 9,
+            "pct": 39.1
+          },
+          {
+            "key": "kurang-sesuai",
+            "label": "Kurang sesuai",
+            "count": 3,
+            "pct": 13.0
+          },
+          {
+            "key": "tidak-sesuai",
+            "label": "Tidak sesuai",
+            "count": 1,
+            "pct": 4.3
+          }
+        ],
+        "competenceHelpful": [
+          {
+            "key": "sangat-membantu",
+            "label": "Sangat membantu",
+            "count": 8,
+            "pct": 34.8
+          },
+          {
+            "key": "membantu",
+            "label": "Membantu",
+            "count": 13,
+            "pct": 56.5
+          },
+          {
+            "key": "cukup-membantu",
+            "label": "Cukup membantu",
+            "count": 2,
+            "pct": 8.7
+          }
+        ]
+      }
+    },
+    {
+      "year": 2026,
+      "sourceGroup": "primary",
+      "source": "Tracer Studi 2026/Data.xlsx",
+      "graduationRange": [
+        2022,
+        2026
+      ],
+      "responses": 55,
+      "kpis": {
+        "medianWaitMonths": 0.0,
+        "meanWaitMonths": 1.8,
+        "validWait": 53,
+        "within3MonthsPct": 77.4,
+        "within6MonthsPct": 96.2,
+        "workingBeforeGraduationPct": 52.7,
+        "appliedStatisticsPct": 76.4,
+        "jobSatisfactionPct": 80.0,
+        "incomeAtLeastUmrPct": 85.5,
+        "fieldAlignmentPct": 51.6,
+        "fieldAlignmentValid": 31,
+        "educationAlignmentPct": 48.4,
+        "educationAlignmentValid": 31,
+        "competenceHelpfulPct": 93.5,
+        "competenceHelpfulValid": 31
+      },
+      "distributions": {
+        "wait": [
+          {
+            "key": "0-bulan",
+            "label": "0 bulan",
+            "count": 29,
+            "pct": 52.7
+          },
+          {
+            "key": "0-3-bulan",
+            "label": ">0-3 bulan",
+            "count": 12,
+            "pct": 21.8
+          },
+          {
+            "key": "3-6-bulan",
+            "label": ">3-6 bulan",
+            "count": 10,
+            "pct": 18.2
+          },
+          {
+            "key": "6-12-bulan",
+            "label": ">6-12 bulan",
+            "count": 1,
+            "pct": 1.8
+          },
+          {
+            "key": "12-bulan",
+            "label": ">12 bulan",
+            "count": 1,
+            "pct": 1.8
+          },
+          {
+            "key": "tidak-diketahui",
+            "label": "Tidak diketahui",
+            "count": 2,
+            "pct": 3.6
+          }
+        ],
+        "firstIncome": [
+          {
+            "key": "rp-1-5-juta",
+            "label": "< Rp. 1,5 juta",
+            "count": 4,
+            "pct": 7.3
+          },
+          {
+            "key": "rp-1-5-juta-2-5-juta",
+            "label": "Rp. 1,5 juta - < 2,5 juta",
+            "count": 7,
+            "pct": 12.7
+          },
+          {
+            "key": "rp-2-5-juta-3-5-juta",
+            "label": "Rp. 2,5 juta - < 3,5 juta",
+            "count": 6,
+            "pct": 10.9
+          },
+          {
+            "key": "rp-3-5-juta-4-5-juta",
+            "label": "Rp. 3,5 juta - < 4,5 juta",
+            "count": 4,
+            "pct": 7.3
+          },
+          {
+            "key": "4-5-juta",
+            "label": ">= 4,5 juta",
+            "count": 34,
+            "pct": 61.8
+          }
+        ],
+        "currentIncome": [
+          {
+            "key": "rp-3-jt",
+            "label": "< Rp. 3 jt",
+            "count": 5,
+            "pct": 9.1
+          },
+          {
+            "key": "rp-3-jt-6-jt",
+            "label": "Rp. 3 jt - < 6 jt",
+            "count": 13,
+            "pct": 23.6
+          },
+          {
+            "key": "rp-6-jt-9-jt",
+            "label": "Rp. 6 jt - < 9 jt",
+            "count": 17,
+            "pct": 30.9
+          },
+          {
+            "key": "rp-9-jt-12-jt",
+            "label": "Rp. 9 jt - < 12 jt",
+            "count": 15,
+            "pct": 27.3
+          },
+          {
+            "key": "12-jt",
+            "label": ">=12 jt",
+            "count": 5,
+            "pct": 9.1
+          }
+        ],
+        "workplace": [
+          {
+            "key": "perusahaan-instansi-nasional",
+            "label": "Perusahaan/ instansi Nasional",
+            "count": 23,
+            "pct": 44.2
+          },
+          {
+            "key": "perusahaan-instansi-multinasional-internasional",
+            "label": "Perusahaan/ instansi Multinasional/ Internasional",
+            "count": 11,
+            "pct": 21.2
+          },
+          {
+            "key": "perusahaan-instansi-lokal-wilayah",
+            "label": "Perusahaan/ instansi Lokal / Wilayah",
+            "count": 9,
+            "pct": 17.3
+          },
+          {
+            "key": "perusahaan-instansi-lokal-wilayah-perusahaan-instansi-nasional",
+            "label": "Perusahaan/ instansi Lokal / Wilayah, Perusahaan/ instansi Nasional",
+            "count": 4,
+            "pct": 7.7
+          },
+          {
+            "key": "berwirausaha-tidak-berbadan-hukum",
+            "label": "Berwirausaha tidak berbadan hukum",
+            "count": 3,
+            "pct": 5.8
+          },
+          {
+            "key": "berwirausaha-tidak-berbadan-hukum-perusahaan-instansi-lokal-wilayah",
+            "label": "Berwirausaha tidak berbadan hukum, Perusahaan/ instansi Lokal / Wilayah",
+            "count": 2,
+            "pct": 3.8
+          }
+        ],
+        "fieldAlignment": [
+          {
+            "key": "sangat-sesuai",
+            "label": "Sangat sesuai",
+            "count": 4,
+            "pct": 12.9
+          },
+          {
+            "key": "sesuai",
+            "label": "Sesuai",
+            "count": 12,
+            "pct": 38.7
+          },
+          {
+            "key": "cukup-sesuai",
+            "label": "Cukup sesuai",
+            "count": 10,
+            "pct": 32.3
+          },
+          {
+            "key": "kurang-sesuai",
+            "label": "Kurang sesuai",
+            "count": 4,
+            "pct": 12.9
+          },
+          {
+            "key": "tidak-sesuai",
+            "label": "Tidak sesuai",
+            "count": 1,
+            "pct": 3.2
+          }
+        ],
+        "educationAlignment": [
+          {
+            "key": "sangat-sesuai",
+            "label": "Sangat sesuai",
+            "count": 4,
+            "pct": 12.9
+          },
+          {
+            "key": "sesuai",
+            "label": "Sesuai",
+            "count": 11,
+            "pct": 35.5
+          },
+          {
+            "key": "cukup-sesuai",
+            "label": "Cukup sesuai",
+            "count": 11,
+            "pct": 35.5
+          },
+          {
+            "key": "kurang-sesuai",
+            "label": "Kurang sesuai",
+            "count": 4,
+            "pct": 12.9
+          },
+          {
+            "key": "tidak-sesuai",
+            "label": "Tidak sesuai",
+            "count": 1,
+            "pct": 3.2
+          }
+        ],
+        "competenceHelpful": [
+          {
+            "key": "sangat-membantu",
+            "label": "Sangat membantu",
+            "count": 12,
+            "pct": 38.7
+          },
+          {
+            "key": "membantu",
+            "label": "Membantu",
+            "count": 17,
+            "pct": 54.8
+          },
+          {
+            "key": "cukup-membantu",
+            "label": "Cukup membantu",
+            "count": 2,
+            "pct": 6.5
+          }
+        ]
+      }
+    }
+  ]
+}

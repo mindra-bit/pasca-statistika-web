@@ -1,12 +1,13 @@
 {
   "source": "@Tracer Study",
-  "generatedAt": "2026-06-11T08:57:46.293Z",
-  "total": 4,
+  "generatedAt": "2026-07-02T18:14:23+07:00",
+  "total": 5,
   "years": [
     "2022",
     "2023",
     "2024",
-    "2025"
+    "2025",
+    "2026"
   ],
   "reports": [
     {
@@ -25,7 +26,7 @@
         "workingBeforeGraduation": "89,6%"
       },
       "summary": "Indikator utama laporan ini adalah waktu tunggu pekerjaan pertama.  Dari 77 respons valid, median waktu tunggu adalah 0,0 bulan dengan rata-rata 0,7 bulan.",
-      "source": "@Tracer Study"
+      "source": "@Tracer Study/Data.xlsx"
     },
     {
       "id": "tracer-studi-2023",
@@ -43,7 +44,7 @@
         "workingBeforeGraduation": "90,4%"
       },
       "summary": "Indikator utama laporan ini adalah waktu tunggu pekerjaan pertama.  Dari 83 respons valid, median waktu tunggu adalah 0,0 bulan dengan rata-rata 0,7 bulan.",
-      "source": "@Tracer Study"
+      "source": "@Tracer Study/Data.xlsx"
     },
     {
       "id": "tracer-studi-2024",
@@ -53,15 +54,15 @@
       "folder": "Tracer Studi 2024",
       "file": "laporan_tracer_studi_2024.html",
       "href": "%40Tracer%20Study/Tracer%20Studi%202024/laporan_tracer_studi_2024.html",
-      "sizeKb": 122,
+      "sizeKb": 116,
       "metrics": {
-        "responses": "92",
+        "responses": "26",
         "medianWait": "0,0 bulan",
-        "firstJobUnder3Months": "94,6%",
-        "workingBeforeGraduation": "88,0%"
+        "firstJobUnder3Months": "84,6%",
+        "workingBeforeGraduation": "69,2%"
       },
-      "summary": "Indikator utama laporan ini adalah waktu tunggu pekerjaan pertama.  Dari 92 respons valid, median waktu tunggu adalah 0,0 bulan dengan rata-rata 0,7 bulan.",
-      "source": "@Tracer Study"
+      "summary": "Laporan menganalisis 26 respons lulusan 2022–2024 dari data terbaru. Median waktu tunggu adalah 0,0 bulan dengan rata-rata 1,5 bulan.",
+      "source": "@Tracer Study/Tracer Studi 2026/Data.xlsx"
     },
     {
       "id": "tracer-studi-2025",
@@ -71,15 +72,33 @@
       "folder": "Tracer Studi 2025",
       "file": "laporan_tracer_studi_2025.html",
       "href": "%40Tracer%20Study/Tracer%20Studi%202025/laporan_tracer_studi_2025.html",
-      "sizeKb": 124,
+      "sizeKb": 121,
       "metrics": {
-        "responses": "97",
+        "responses": "47",
         "medianWait": "0,0 bulan",
-        "firstJobUnder3Months": "92,8%",
-        "workingBeforeGraduation": "84,5%"
+        "firstJobUnder3Months": "78,3%",
+        "workingBeforeGraduation": "51,1%"
       },
-      "summary": "Indikator utama laporan ini adalah waktu tunggu pekerjaan pertama.  Dari 97 respons valid, median waktu tunggu adalah 0,0 bulan dengan rata-rata 0,8 bulan.",
-      "source": "@Tracer Study"
+      "summary": "Laporan menganalisis 47 respons lulusan 2022–2025 dari data terbaru. Dari 46 respons waktu tunggu yang valid, median adalah 0,0 bulan dengan rata-rata 1,9 bulan.",
+      "source": "@Tracer Study/Tracer Studi 2026/Data.xlsx"
+    },
+    {
+      "id": "tracer-studi-2026",
+      "year": "2026",
+      "title": "Tracer Studi 2026",
+      "reportTitle": "Laporan Tracer Study 2026",
+      "folder": "Tracer Studi 2026",
+      "file": "laporan_tracer_studi_2026.html",
+      "href": "%40Tracer%20Study/Tracer%20Studi%202026/laporan_tracer_studi_2026.html",
+      "sizeKb": 123,
+      "metrics": {
+        "responses": "55",
+        "medianWait": "0,0 bulan",
+        "firstJobUnder3Months": "77,4%",
+        "workingBeforeGraduation": "52,7%"
+      },
+      "summary": "Laporan menganalisis 55 respons lulusan 2022–2026 dari data terbaru. Dari 53 respons waktu tunggu yang valid, median adalah 0,0 bulan dengan rata-rata 1,8 bulan.",
+      "source": "@Tracer Study/Tracer Studi 2026/Data.xlsx"
     }
   ]
 }

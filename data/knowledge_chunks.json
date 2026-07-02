@@ -3330,32 +3330,46 @@
     "text": "Panduan Pelaksanaan Tesis SUR, SKR, dan SAM, halaman 26: BUKU PANDUAN SUR – SKR – SAM Daftar Rujukan Program Studi Magister Statistika Terapan FMIPA Universitas Padjadjaran. (2023). Pedoman penyusunan tesis magister statistika terapan [Dokumen internal program studi]. Fakultas Matematika dan Ilmu Pengetahuan Alam Universitas Padjadjaran. (2023). Dokumen akademik program magister FMIPA Unpad [Dokumen akademik internal]. Universitas Padjadjaran. (2025). Peraturan Rektor Universitas Padjadjaran Nomor 23 Tahun 2025 tentang perubahan atas Peraturan Rektor Universitas Padjadjaran Nomor 10 Tahun 2025 tentang penyelenggaraan pendidikan magister di Universitas Padjadjaran https://jdih.unpad.ac.id/dokumen/peraturan-rektor- universitas-padjadjaran-nomor-23-tahun-2025-tentang-perubahan-atas-peraturan- rektor-universitas-padjadjaran-nomor-10-tahun-2025-tentang-penyelenggaraan- pendidikan-magister-di-universitas-padjadjaran Sekolah Pascasarjana Universitas Padjadjaran. (2022). Pedoman tesis disertasi SPS 2022 https://pasca.unpad.ac.id/wp-content/uploads/2022/10/Pedoman-Tesis-Disertasi- SPS-2022.pdf Universitas Padjadjaran. (2014). Panduan umum penyusunan dan penulisan tesis dan disertasi, penulisan artikel ilmiah, penyusunan dalil https://pasca.unpad.ac.id/wp- content/uploads/2021/12/Pedoman-Tesis-Disertasi_Artikel-Ilmiah-dan-Dalil- 2014.pdf Azuri, D. F. (2025). Pemetaan kekuatan gempa menggunakan Bayesian spatiotemporal stochastic partial differential equation (studi kasus: Pulau Sumatra) [Tesis magister]. Universitas Padjadjaran. S2 Statistika Terapan FMIPA UNPAD - 22 -"
   },
   {
+    "id": "tracer-summary-dashboard-2024-2026",
+    "title": "Ringkasan Dinamis Tracer Study 2024-2026",
+    "sourceTitle": "Dashboard Tracer Study S2 Statistika Terapan",
+    "sourceUrl": "#tracer-studi",
+    "text": "Dashboard tracer study menampilkan tren utama kumulatif 2024-2026 dari sumber data terbaru yang sama. Indikator yang tersedia meliputi jumlah respons, rata-rata dan distribusi waktu tunggu pekerjaan pertama, bekerja sebelum lulus, distribusi penghasilan pertama, distribusi penghasilan saat ini, pendapatan minimal setara UMR, penerapan kompetensi statistika, kepuasan kerja, kesesuaian bidang kerja, kesesuaian tingkat pendidikan, dan manfaat kompetensi. Tahun 2022-2023 menggunakan data awal dan ditampilkan sebagai pembanding historis, bukan seri yang sepenuhnya sebanding dengan tren 2024-2026. Pada cakupan 2026 terdapat 55 respons lulusan 2022-2026; rata-rata waktu tunggu 1,8 bulan, 77,4% memperoleh pekerjaan paling lama tiga bulan atau telah bekerja sebelum lulus, 52,7% telah bekerja sebelum lulus, 85,5% berpendapatan minimal setara UMR, 76,4% menerapkan atau sangat menerapkan statistika, dan 80,0% menilai pekerjaannya memuaskan atau sangat memuaskan."
+  },
+  {
     "id": "tracer-study-2022",
     "title": "Tracer Studi 2022",
     "sourceTitle": "Tracer Studi 2022",
     "sourceUrl": "%40Tracer%20Study/Tracer%20Studi%202022/laporan_tracer_studi_2022.html",
-    "text": "Tracer Studi 2022 tersedia sebagai laporan HTML pada folder Tracer Studi 2022. Link: %40Tracer%20Study/Tracer%20Studi%202022/laporan_tracer_studi_2022.html. Respons dianalisis: 77. Median waktu tunggu kerja pertama: 0,0 bulan. Pekerjaan pertama <= 3 bulan: 94,8%. Sudah bekerja sebelum lulus: 89,6%. Ringkasan: Indikator utama laporan ini adalah waktu tunggu pekerjaan pertama.  Dari 77 respons valid, median waktu tunggu adalah 0,0 bulan dengan rata-rata 0,7 bulan."
+    "text": "Tracer Studi 2022 tersedia sebagai laporan HTML pada folder Tracer Studi 2022. Laporan menggunakan data awal dengan batas maksimum tahun lulus 2022. Link: %40Tracer%20Study/Tracer%20Studi%202022/laporan_tracer_studi_2022.html. Respons dianalisis: 77. Median waktu tunggu kerja pertama: 0,0 bulan. Pekerjaan pertama <= 3 bulan: 94,8%. Sudah bekerja sebelum lulus: 89,6%. Dari 77 respons valid, rata-rata waktu tunggu adalah 0,7 bulan."
   },
   {
     "id": "tracer-study-2023",
     "title": "Tracer Studi 2023",
     "sourceTitle": "Tracer Studi 2023",
     "sourceUrl": "%40Tracer%20Study/Tracer%20Studi%202023/laporan_tracer_studi_2023.html",
-    "text": "Tracer Studi 2023 tersedia sebagai laporan HTML pada folder Tracer Studi 2023. Link: %40Tracer%20Study/Tracer%20Studi%202023/laporan_tracer_studi_2023.html. Respons dianalisis: 83. Median waktu tunggu kerja pertama: 0,0 bulan. Pekerjaan pertama <= 3 bulan: 95,2%. Sudah bekerja sebelum lulus: 90,4%. Ringkasan: Indikator utama laporan ini adalah waktu tunggu pekerjaan pertama.  Dari 83 respons valid, median waktu tunggu adalah 0,0 bulan dengan rata-rata 0,7 bulan."
+    "text": "Tracer Studi 2023 tersedia sebagai laporan HTML pada folder Tracer Studi 2023. Laporan menggunakan data awal dengan batas maksimum tahun lulus 2023. Link: %40Tracer%20Study/Tracer%20Studi%202023/laporan_tracer_studi_2023.html. Respons dianalisis: 83. Median waktu tunggu kerja pertama: 0,0 bulan. Pekerjaan pertama <= 3 bulan: 95,2%. Sudah bekerja sebelum lulus: 90,4%. Dari 83 respons valid, rata-rata waktu tunggu adalah 0,7 bulan."
   },
   {
     "id": "tracer-study-2024",
     "title": "Tracer Studi 2024",
     "sourceTitle": "Tracer Studi 2024",
     "sourceUrl": "%40Tracer%20Study/Tracer%20Studi%202024/laporan_tracer_studi_2024.html",
-    "text": "Tracer Studi 2024 tersedia sebagai laporan HTML pada folder Tracer Studi 2024. Link: %40Tracer%20Study/Tracer%20Studi%202024/laporan_tracer_studi_2024.html. Respons dianalisis: 92. Median waktu tunggu kerja pertama: 0,0 bulan. Pekerjaan pertama <= 3 bulan: 94,6%. Sudah bekerja sebelum lulus: 88,0%. Ringkasan: Indikator utama laporan ini adalah waktu tunggu pekerjaan pertama.  Dari 92 respons valid, median waktu tunggu adalah 0,0 bulan dengan rata-rata 0,7 bulan."
+    "text": "Tracer Studi 2024 tersedia sebagai laporan HTML pada folder Tracer Studi 2024. Laporan menggunakan data terbaru yang sama dengan sumber Tracer Studi 2026, dibatasi pada lulusan 2022-2024. Link: %40Tracer%20Study/Tracer%20Studi%202024/laporan_tracer_studi_2024.html. Respons dianalisis: 26. Median waktu tunggu kerja pertama: 0,0 bulan. Pekerjaan pertama <= 3 bulan: 84,6%. Sudah bekerja sebelum lulus: 69,2%. Dari 26 respons valid, rata-rata waktu tunggu adalah 1,5 bulan."
   },
   {
     "id": "tracer-study-2025",
     "title": "Tracer Studi 2025",
     "sourceTitle": "Tracer Studi 2025",
     "sourceUrl": "%40Tracer%20Study/Tracer%20Studi%202025/laporan_tracer_studi_2025.html",
-    "text": "Tracer Studi 2025 tersedia sebagai laporan HTML pada folder Tracer Studi 2025. Link: %40Tracer%20Study/Tracer%20Studi%202025/laporan_tracer_studi_2025.html. Respons dianalisis: 97. Median waktu tunggu kerja pertama: 0,0 bulan. Pekerjaan pertama <= 3 bulan: 92,8%. Sudah bekerja sebelum lulus: 84,5%. Ringkasan: Indikator utama laporan ini adalah waktu tunggu pekerjaan pertama.  Dari 97 respons valid, median waktu tunggu adalah 0,0 bulan dengan rata-rata 0,8 bulan."
+    "text": "Tracer Studi 2025 tersedia sebagai laporan HTML pada folder Tracer Studi 2025. Laporan menggunakan data terbaru yang sama dengan sumber Tracer Studi 2026, dibatasi pada lulusan 2022-2025. Link: %40Tracer%20Study/Tracer%20Studi%202025/laporan_tracer_studi_2025.html. Respons dianalisis: 47. Median waktu tunggu kerja pertama: 0,0 bulan. Pekerjaan pertama <= 3 bulan: 78,3%. Sudah bekerja sebelum lulus: 51,1%. Dari 46 respons waktu tunggu yang valid, rata-rata waktu tunggu adalah 1,9 bulan."
+  },
+  {
+    "id": "tracer-study-2026",
+    "title": "Tracer Studi 2026",
+    "sourceTitle": "Tracer Studi 2026",
+    "sourceUrl": "%40Tracer%20Study/Tracer%20Studi%202026/laporan_tracer_studi_2026.html",
+    "text": "Tracer Studi 2026 tersedia sebagai laporan HTML profesional pada folder Tracer Studi 2026. Laporan menggunakan data terbaru dan menganalisis alumni lulusan 2022-2026. Link: %40Tracer%20Study/Tracer%20Studi%202026/laporan_tracer_studi_2026.html. Respons dianalisis: 55. Sudah bekerja sebelum lulus: 52,7%. Dari 53 respons waktu tunggu yang valid, median waktu tunggu pekerjaan pertama adalah 0,0 bulan, rata-rata 1,8 bulan, dan 77,4% memperoleh pekerjaan paling lama tiga bulan atau telah bekerja sebelum lulus. Sebanyak 76,4% menerapkan atau sangat menerapkan statistika dalam pekerjaan, 80,0% menilai pekerjaan memuaskan atau sangat memuaskan, dan 85,5% berpendapatan minimal setara UMR."
   },
   {
     "id": "pbm-evaluation-evaluasi-pbm-genap-2023-2024",

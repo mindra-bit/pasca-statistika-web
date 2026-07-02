@@ -248,6 +248,8 @@ let alumniData = null;
 let materialsData = null;
 let thesisGuidesData = null;
 let tracerStudiesData = null;
+let tracerSummaryData = null;
+let activeTracerSummaryYear = "2026";
 let graduateUserSatisfactionData = null;
 let specialMomentsData = null;
 let testimonialsData = null;
@@ -324,6 +326,7 @@ const thesisGuideRows = document.getElementById("thesisGuideRows");
 const thesisGuideCount = document.getElementById("thesisGuideCount");
 const tracerStudyRows = document.getElementById("tracerStudyRows");
 const tracerStudyCount = document.getElementById("tracerStudyCount");
+const tracerSummaryDashboard = document.getElementById("tracerSummaryDashboard");
 const graduateUserRows = document.getElementById("graduateUserRows");
 const graduateUserCount = document.getElementById("graduateUserCount");
 const specialMomentSummary = document.getElementById("specialMomentSummary");
@@ -815,6 +818,36 @@ const I18N = {
     tracerAlumniText: "Laporan tracer study tahunan untuk melihat waktu tunggu kerja pertama, respons lulusan, dan indikator awal serapan lulusan.",
     tracerCountLabel: "laporan tracer study",
     tracerAsk: "Tanyakan tracer study ke chatbot",
+    tracerSummaryBadge: "Ringkasan Dinamis",
+    tracerSummaryTitle: "Outcome lulusan dalam satu tampilan.",
+    tracerSummaryText: "Pilih tahun 2022-2026 untuk memperbarui seluruh indikator dan grafik. Tren utama 2024-2026 menggunakan sumber data terbaru; 2022-2023 ditampilkan sebagai pembanding historis.",
+    tracerSummaryCumulative: "Cakupan kumulatif",
+    tracerSummaryOpenReport: "Buka laporan tahun ini",
+    tracerSummaryResponses: "Respons dianalisis",
+    tracerSummaryMeanWait: "Rata-rata waktu tunggu",
+    tracerSummaryMonths: "bulan",
+    tracerSummaryUnder3: "Pekerjaan <= 3 bulan",
+    tracerSummaryBeforeGraduate: "Bekerja sebelum lulus",
+    tracerSummaryIncomeUmr: "Pendapatan >= UMR",
+    tracerSummaryApplied: "Statistika diterapkan",
+    tracerSummaryTrendTitle: "Tren indikator utama",
+    tracerSummaryTrendText: "Perbandingan kumulatif 2024-2026 dari sumber data yang sama.",
+    tracerSummaryWaitTitle: "Distribusi waktu tunggu",
+    tracerSummaryWaitText: "Termasuk alumni yang telah bekerja sebelum lulus pada kategori 0 bulan.",
+    tracerSummaryIncomeTitle: "Pergerakan penghasilan",
+    tracerSummaryIncomeText: "Distribusi penghasilan pertama dibandingkan dengan penghasilan saat ini.",
+    tracerSummaryFirstIncome: "Penghasilan pertama",
+    tracerSummaryCurrentIncome: "Penghasilan saat ini",
+    tracerSummaryQualityTitle: "Relevansi dan kualitas outcome",
+    tracerSummaryFieldAlignment: "Sesuai bidang ilmu",
+    tracerSummaryEducationAlignment: "Sesuai tingkat pendidikan",
+    tracerSummaryHelpful: "Kompetensi membantu pekerjaan",
+    tracerSummarySatisfaction: "Pekerjaan memuaskan",
+    tracerSummaryValid: "respons valid",
+    tracerSummaryHistoricalTitle: "Pembanding historis 2022-2023",
+    tracerSummaryHistoricalText: "Menggunakan data awal; ditampilkan sebagai konteks dan tidak dibandingkan langsung dengan tren utama.",
+    tracerSummaryReference: "Rujukan indikator",
+    tracerSummaryNoData: "Data ringkasan tracer study belum tersedia.",
     graduateUserKicker: "Pengguna Lulusan",
     graduateUserTitle: "Survey kepada pengguna lulusan",
     graduateUserText: "Laporan kepuasan pengguna lulusan pada level program studi dan fakultas sebagai bahan evaluasi mutu lulusan.",
@@ -950,7 +983,7 @@ const I18N = {
     promptGuide: "Panduan tesis",
     promptThesisFlow: "SUR SKR SAM",
     promptAlumni: "Tesis lulusan",
-    promptTracer: "Tracer 2025",
+    promptTracer: "Tracer 2026",
     promptCurriculumDocs: "Dokumen 2026",
     promptLectureEvaluation: "Evaluasi Perkuliahan",
     promptPbmEvaluation: "Evaluasi PBM-Dosen",
@@ -1395,6 +1428,36 @@ const I18N = {
     tracerAlumniText: "Annual tracer study reports for first-job waiting time, graduate responses, and early employment indicators.",
     tracerCountLabel: "tracer study reports",
     tracerAsk: "Ask the chatbot about tracer studies",
+    tracerSummaryBadge: "Dynamic Summary",
+    tracerSummaryTitle: "Graduate outcomes in one view.",
+    tracerSummaryText: "Select a year from 2022-2026 to update every indicator and chart. The 2024-2026 primary trend uses the current dataset; 2022-2023 are shown as historical comparisons.",
+    tracerSummaryCumulative: "Cumulative coverage",
+    tracerSummaryOpenReport: "Open this year's report",
+    tracerSummaryResponses: "Responses analyzed",
+    tracerSummaryMeanWait: "Average waiting time",
+    tracerSummaryMonths: "months",
+    tracerSummaryUnder3: "First job <= 3 months",
+    tracerSummaryBeforeGraduate: "Working before graduation",
+    tracerSummaryIncomeUmr: "Income >= minimum wage",
+    tracerSummaryApplied: "Statistics applied at work",
+    tracerSummaryTrendTitle: "Key indicator trend",
+    tracerSummaryTrendText: "Cumulative 2024-2026 comparison from the same data source.",
+    tracerSummaryWaitTitle: "Waiting-time distribution",
+    tracerSummaryWaitText: "Graduates already working before graduation are included in the 0-month category.",
+    tracerSummaryIncomeTitle: "Income progression",
+    tracerSummaryIncomeText: "First-job income distribution compared with current income.",
+    tracerSummaryFirstIncome: "First-job income",
+    tracerSummaryCurrentIncome: "Current income",
+    tracerSummaryQualityTitle: "Outcome relevance and quality",
+    tracerSummaryFieldAlignment: "Aligned with field of study",
+    tracerSummaryEducationAlignment: "Aligned with education level",
+    tracerSummaryHelpful: "Competencies support the job",
+    tracerSummarySatisfaction: "Satisfied with current job",
+    tracerSummaryValid: "valid responses",
+    tracerSummaryHistoricalTitle: "Historical benchmark 2022-2023",
+    tracerSummaryHistoricalText: "Uses the original dataset; shown as context and not directly compared with the primary trend.",
+    tracerSummaryReference: "Indicator references",
+    tracerSummaryNoData: "Tracer study summary data is not available yet.",
     graduateUserKicker: "Graduate Users",
     graduateUserTitle: "Graduate user survey",
     graduateUserText: "Graduate user satisfaction reports at program and faculty levels as references for graduate quality evaluation.",
@@ -1530,7 +1593,7 @@ const I18N = {
     promptGuide: "Thesis guide",
     promptThesisFlow: "SUR SKR SAM",
     promptAlumni: "Graduate theses",
-    promptTracer: "Tracer 2025",
+    promptTracer: "Tracer 2026",
     promptCurriculumDocs: "2026 Document",
     promptLectureEvaluation: "Course Evaluation",
     promptPbmEvaluation: "PBM-Lecturer Evaluation",
@@ -1788,6 +1851,7 @@ function applyLanguage() {
   renderSyllabus();
   renderRpsDocs();
   renderMaterials();
+  renderTracerSummary();
   renderTracerStudies();
   renderGraduateUserSatisfaction();
   renderSpecialMoments();
@@ -4021,9 +4085,233 @@ function renderMaterials() {
     .join("");
 }
 
+function formatTracerSummaryValue(value, suffix = "%") {
+  if (value === null || value === undefined || Number.isNaN(Number(value))) return "-";
+  const formatted = new Intl.NumberFormat(currentLang === "en" ? "en-US" : "id-ID", {
+    maximumFractionDigits: 1
+  }).format(Number(value));
+  return `${formatted}${suffix}`;
+}
+
+function tracerCategoryLabel(label) {
+  if (currentLang !== "en") return label;
+  const translations = {
+    "0 bulan": "0 months",
+    ">0-3 bulan": ">0-3 months",
+    ">3-6 bulan": ">3-6 months",
+    ">6-12 bulan": ">6-12 months",
+    ">12 bulan": ">12 months",
+    "Tidak diketahui": "Unknown",
+    "< Rp. 1,5 juta": "< IDR 1.5m",
+    "Rp. 1,5 juta - < 2,5 juta": "IDR 1.5m - < 2.5m",
+    "Rp. 2,5 juta - < 3,5 juta": "IDR 2.5m - < 3.5m",
+    "Rp. 3,5 juta - < 4,5 juta": "IDR 3.5m - < 4.5m",
+    ">= 4,5 juta": ">= IDR 4.5m",
+    "< Rp. 3 jt": "< IDR 3m",
+    "Rp. 3 jt - < 6 jt": "IDR 3m - < 6m",
+    "Rp. 6 jt - < 9 jt": "IDR 6m - < 9m",
+    "Rp. 9 jt - < 12 jt": "IDR 9m - < 12m",
+    ">=12 jt": ">= IDR 12m"
+  };
+  return translations[label] || label;
+}
+
+function tracerDistributionBars(items = []) {
+  if (!items.length) return `<p class="empty-note">${escapeHTML(t("tracerSummaryNoData"))}</p>`;
+  return `
+    <div class="tracer-summary-bars">
+      ${items.map((item) => {
+        const width = Math.max(0, Math.min(100, Number(item.pct) || 0));
+        return `
+          <div class="tracer-summary-bar-row">
+            <span>${escapeHTML(tracerCategoryLabel(item.label))}</span>
+            <div class="tracer-summary-bar-track" aria-hidden="true"><i style="width:${width}%"></i></div>
+            <strong>${escapeHTML(formatTracerSummaryValue(item.pct))} <small>n=${escapeHTML(item.count)}</small></strong>
+          </div>
+        `;
+      }).join("")}
+    </div>
+  `;
+}
+
+function tracerIncomeStack(title, items = []) {
+  if (!items.length) return "";
+  const segments = items.map((item, index) => {
+    const width = Math.max(0, Math.min(100, Number(item.pct) || 0));
+    const label = tracerCategoryLabel(item.label);
+    return `<span class="tracer-income-segment tone-${(index % 5) + 1}" style="width:${width}%" title="${escapeHTML(label)}: ${escapeHTML(formatTracerSummaryValue(item.pct))}"></span>`;
+  }).join("");
+  const legend = items.map((item, index) => `
+    <li>
+      <span class="tracer-income-swatch tone-${(index % 5) + 1}" aria-hidden="true"></span>
+      <span>${escapeHTML(tracerCategoryLabel(item.label))}</span>
+      <strong>${escapeHTML(formatTracerSummaryValue(item.pct))}</strong>
+    </li>
+  `).join("");
+  return `
+    <div class="tracer-income-group">
+      <h5>${escapeHTML(title)}</h5>
+      <div class="tracer-income-stack" role="img" aria-label="${escapeHTML(title)}">${segments}</div>
+      <ul class="tracer-income-legend">${legend}</ul>
+    </div>
+  `;
+}
+
+function renderTracerSummary() {
+  if (!tracerSummaryDashboard) return;
+  const rows = tracerSummaryData?.years || [];
+  const primaryYears = tracerSummaryData?.primaryYears || [2024, 2025, 2026];
+  const historicalYears = tracerSummaryData?.historicalYears || [2022, 2023];
+  const orderedRows = [...rows].sort((a, b) => Number(a.year) - Number(b.year));
+  const primary = orderedRows
+    .filter((row) => primaryYears.includes(Number(row.year)))
+  const historical = orderedRows
+    .filter((row) => historicalYears.includes(Number(row.year)))
+  const selectableYears = orderedRows;
+
+  if (!selectableYears.length || !primary.length) {
+    tracerSummaryDashboard.innerHTML = `<p class="empty-note">${escapeHTML(t("tracerSummaryNoData"))}</p>`;
+    return;
+  }
+
+  if (!selectableYears.some((row) => String(row.year) === String(activeTracerSummaryYear))) {
+    activeTracerSummaryYear = String(selectableYears[selectableYears.length - 1].year);
+  }
+  const selected = selectableYears.find((row) => String(row.year) === String(activeTracerSummaryYear)) || selectableYears[selectableYears.length - 1];
+  const selectedReport = (tracerStudiesData?.reports || []).find((report) => String(report.year) === String(selected.year));
+  const kpis = selected.kpis || {};
+  const graduationRange = selected.graduationRange || [2022, selected.year];
+
+  const tabs = selectableYears.map((row) => {
+    const active = String(row.year) === String(selected.year);
+    return `<button type="button" data-tracer-summary-year="${escapeHTML(row.year)}" class="${active ? "active" : ""}" aria-pressed="${active}">${escapeHTML(row.year)}</button>`;
+  }).join("");
+
+  const kpiCards = [
+    [t("tracerSummaryResponses"), selected.responses, `${graduationRange[0]}-${graduationRange[1]}`],
+    [t("tracerSummaryMeanWait"), formatTracerSummaryValue(kpis.meanWaitMonths, ""), t("tracerSummaryMonths")],
+    [t("tracerSummaryUnder3"), formatTracerSummaryValue(kpis.within3MonthsPct), `n=${kpis.validWait || "-"}`],
+    [t("tracerSummaryBeforeGraduate"), formatTracerSummaryValue(kpis.workingBeforeGraduationPct), `${selected.responses} ${currentLang === "en" ? "responses" : "respons"}`],
+    [t("tracerSummaryIncomeUmr"), formatTracerSummaryValue(kpis.incomeAtLeastUmrPct), `${selected.responses} ${currentLang === "en" ? "responses" : "respons"}`],
+    [t("tracerSummaryApplied"), formatTracerSummaryValue(kpis.appliedStatisticsPct), `${selected.responses} ${currentLang === "en" ? "responses" : "respons"}`]
+  ].map(([label, value, note]) => `
+    <article class="tracer-summary-kpi">
+      <span>${escapeHTML(label)}</span>
+      <strong>${escapeHTML(value)}</strong>
+      <small>${escapeHTML(note)}</small>
+    </article>
+  `).join("");
+
+  const trendIndicators = [
+    [t("tracerSummaryUnder3"), "within3MonthsPct"],
+    [t("tracerSummaryBeforeGraduate"), "workingBeforeGraduationPct"],
+    [t("tracerSummaryIncomeUmr"), "incomeAtLeastUmrPct"],
+    [t("tracerSummaryApplied"), "appliedStatisticsPct"],
+    [t("tracerSummarySatisfaction"), "jobSatisfactionPct"]
+  ];
+  const trendRows = trendIndicators.map(([label, key]) => `
+    <div class="tracer-trend-row">
+      <span>${escapeHTML(label)}</span>
+      <div class="tracer-trend-values">
+        ${primary.map((row) => {
+          const value = row.kpis?.[key];
+          const width = Math.max(0, Math.min(100, Number(value) || 0));
+          const active = String(row.year) === String(selected.year);
+          return `
+            <div class="tracer-trend-point ${active ? "is-selected" : ""}">
+              <small>${escapeHTML(row.year)}</small>
+              <div class="tracer-trend-track"><i style="width:${width}%"></i></div>
+              <strong>${escapeHTML(formatTracerSummaryValue(value))}</strong>
+            </div>
+          `;
+        }).join("")}
+      </div>
+    </div>
+  `).join("");
+
+  const qualityItems = [
+    [t("tracerSummaryFieldAlignment"), kpis.fieldAlignmentPct, kpis.fieldAlignmentValid],
+    [t("tracerSummaryEducationAlignment"), kpis.educationAlignmentPct, kpis.educationAlignmentValid],
+    [t("tracerSummaryHelpful"), kpis.competenceHelpfulPct, kpis.competenceHelpfulValid],
+    [t("tracerSummarySatisfaction"), kpis.jobSatisfactionPct, selected.responses]
+  ];
+  const qualityRows = qualityItems.map(([label, value, valid]) => {
+    const width = Math.max(0, Math.min(100, Number(value) || 0));
+    return `
+      <div class="tracer-quality-row">
+        <div><span>${escapeHTML(label)}</span><small>${escapeHTML(valid || 0)} ${escapeHTML(t("tracerSummaryValid"))}</small></div>
+        <div class="tracer-quality-track"><i style="width:${width}%"></i></div>
+        <strong>${escapeHTML(formatTracerSummaryValue(value))}</strong>
+      </div>
+    `;
+  }).join("");
+
+  const historicalCards = historical.map((row) => `
+    <article class="tracer-history-card">
+      <strong>${escapeHTML(row.year)}</strong>
+      <span>${escapeHTML(row.responses)} ${currentLang === "en" ? "responses" : "respons"}</span>
+      <dl>
+        <div><dt>${escapeHTML(t("tracerSummaryUnder3"))}</dt><dd>${escapeHTML(formatTracerSummaryValue(row.kpis?.within3MonthsPct))}</dd></div>
+        <div><dt>${escapeHTML(t("tracerSummaryBeforeGraduate"))}</dt><dd>${escapeHTML(formatTracerSummaryValue(row.kpis?.workingBeforeGraduationPct))}</dd></div>
+      </dl>
+    </article>
+  `).join("");
+
+  const methodology = tracerSummaryData?.methodology || {};
+  const references = (methodology.references || []).map((reference) => `
+    <a href="${escapeHTML(reference.url)}" target="_blank" rel="noopener">${escapeHTML(reference.title)}</a>
+  `).join("");
+
+  tracerSummaryDashboard.innerHTML = `
+    <div class="tracer-summary-head">
+      <div>
+        <span class="tracer-summary-badge">${escapeHTML(t("tracerSummaryBadge"))}</span>
+        <h4>${escapeHTML(t("tracerSummaryTitle"))}</h4>
+        <p>${escapeHTML(t("tracerSummaryText"))}</p>
+      </div>
+      <div class="tracer-summary-year-tabs" role="group" aria-label="${escapeHTML(t("tracerSummaryCumulative"))}">${tabs}</div>
+    </div>
+    <div class="tracer-summary-context">
+      <span>${escapeHTML(t("tracerSummaryCumulative"))}: <strong>${escapeHTML(graduationRange[0])}-${escapeHTML(graduationRange[1])}</strong></span>
+      ${selectedReport ? `<a href="${escapeHTML(selectedReport.href)}" target="_blank" rel="noopener">${escapeHTML(t("tracerSummaryOpenReport"))}</a>` : ""}
+    </div>
+    <div class="tracer-summary-kpis">${kpiCards}</div>
+    <div class="tracer-summary-grid">
+      <article class="tracer-summary-panel tracer-summary-panel-wide">
+        <header><h5>${escapeHTML(t("tracerSummaryTrendTitle"))}</h5><p>${escapeHTML(t("tracerSummaryTrendText"))}</p></header>
+        <div class="tracer-trend-chart">${trendRows}</div>
+      </article>
+      <article class="tracer-summary-panel">
+        <header><h5>${escapeHTML(t("tracerSummaryWaitTitle"))}</h5><p>${escapeHTML(t("tracerSummaryWaitText"))}</p></header>
+        ${tracerDistributionBars(selected.distributions?.wait || [])}
+      </article>
+      <article class="tracer-summary-panel tracer-summary-panel-wide">
+        <header><h5>${escapeHTML(t("tracerSummaryIncomeTitle"))}</h5><p>${escapeHTML(t("tracerSummaryIncomeText"))}</p></header>
+        <div class="tracer-income-comparison">
+          ${tracerIncomeStack(t("tracerSummaryFirstIncome"), selected.distributions?.firstIncome || [])}
+          ${tracerIncomeStack(t("tracerSummaryCurrentIncome"), selected.distributions?.currentIncome || [])}
+        </div>
+      </article>
+      <article class="tracer-summary-panel">
+        <header><h5>${escapeHTML(t("tracerSummaryQualityTitle"))}</h5></header>
+        <div class="tracer-quality-list">${qualityRows}</div>
+      </article>
+    </div>
+    <div class="tracer-history-block">
+      <div><h5>${escapeHTML(t("tracerSummaryHistoricalTitle"))}</h5><p>${escapeHTML(t("tracerSummaryHistoricalText"))}</p></div>
+      <div class="tracer-history-cards">${historicalCards}</div>
+    </div>
+    <div class="tracer-summary-sources">
+      <p>${escapeHTML(currentLang === "en" ? methodology.primaryNoteEn : methodology.primaryNoteId)}</p>
+      <span>${escapeHTML(t("tracerSummaryReference"))}: ${references}</span>
+    </div>
+  `;
+}
+
 function renderTracerStudies() {
   if (!tracerStudyRows) return;
-  const reports = tracerStudiesData?.reports || [];
+  const reports = [...(tracerStudiesData?.reports || [])]
+    .sort((a, b) => Number(a.year) - Number(b.year));
 
   if (tracerStudyCount) tracerStudyCount.textContent = String(reports.length);
 
@@ -5001,6 +5289,14 @@ async function loadTracerStudies() {
   } catch (error) {
     tracerStudiesData = { total: 0, reports: [], years: [] };
   }
+  try {
+    const summaryResponse = await fetch("data/tracer_summary.json", { cache: "no-store" });
+    if (!summaryResponse.ok) throw new Error("Ringkasan tracer study tidak dapat dimuat.");
+    tracerSummaryData = await summaryResponse.json();
+  } catch (error) {
+    tracerSummaryData = { primaryYears: [], historicalYears: [], years: [] };
+  }
+  renderTracerSummary();
   renderTracerStudies();
 }
 
@@ -5314,6 +5610,12 @@ tracerStudyRows?.addEventListener("click", (event) => {
   const button = event.target.closest("[data-tracer-q]");
   if (!button) return;
   ask(button.dataset.tracerQ);
+});
+tracerSummaryDashboard?.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-tracer-summary-year]");
+  if (!button) return;
+  activeTracerSummaryYear = button.dataset.tracerSummaryYear || activeTracerSummaryYear;
+  renderTracerSummary();
 });
 graduateUserRows?.addEventListener("click", (event) => {
   const button = event.target.closest("[data-user-satisfaction-q]");
