@@ -132,3 +132,52 @@ buildLocalAnswer = function buildSafeLocalAnswer(question) {
     };
   }
 };
+
+if (!workspacePanelIds.includes("evaluasi-project-mahasiswa-2026")) {
+  workspacePanelIds.push("evaluasi-project-mahasiswa-2026");
+}
+if (!evaluationPanelIds.includes("evaluasi-project-mahasiswa-2026")) {
+  evaluationPanelIds.push("evaluasi-project-mahasiswa-2026");
+}
+
+Object.assign(I18N.id, {
+  workspaceProjectEvaluation: "Evaluasi Project Mahasiswa 2026",
+  evaluationHubText: "Evaluasi perkuliahan, Evaluasi PBM-Dosen, dan Evaluasi Project Mahasiswa ditempatkan dalam satu pintu akses agar mudah ditemukan.",
+  evaluationHubProjectText: "Form evaluasi project Epidemiologi, Analisis Spasial, dan Pembelajaran Mesin",
+  projectEvalKicker: "Evaluasi Project Mahasiswa",
+  projectEvalTitle: "Form evaluasi project mata kuliah 2026.",
+  projectEvalText: "Pilih mata kuliah untuk membuka form penilaian project mahasiswa. Setiap tautan mengarah langsung ke formulir evaluasi yang sesuai.",
+  projectEvalPeriod: "Periode",
+  projectEvalCourseLabel: "Mata Kuliah",
+  projectEvalEpidemiology: "Epidemiologi",
+  projectEvalEpidemiologyText: "Evaluasi project mahasiswa pada mata kuliah Epidemiologi.",
+  projectEvalSpatial: "Analisis Spasial",
+  projectEvalSpatialText: "Evaluasi paper dan project mahasiswa pada mata kuliah Analisis Spasial.",
+  projectEvalMachineLearning: "Pembelajaran Mesin",
+  projectEvalMachineLearningText: "Evaluasi makalah dan project mahasiswa pada mata kuliah Pembelajaran Mesin.",
+  projectEvalOpen: "Buka Form Evaluasi"
+});
+
+Object.assign(I18N.en, {
+  workspaceProjectEvaluation: "Student Project Evaluation 2026",
+  evaluationHubText: "Course delivery evaluation, PBM-Lecturer Evaluation, and Student Project Evaluation are grouped in one access point for easier navigation.",
+  evaluationHubProjectText: "Project evaluation forms for Epidemiology, Spatial Analysis, and Machine Learning",
+  projectEvalKicker: "Student Project Evaluation",
+  projectEvalTitle: "2026 course project evaluation forms.",
+  projectEvalText: "Choose a course to open its student project assessment form. Each link leads directly to the relevant evaluation form.",
+  projectEvalPeriod: "Period",
+  projectEvalCourseLabel: "Course",
+  projectEvalEpidemiology: "Epidemiology",
+  projectEvalEpidemiologyText: "Student project evaluation for the Epidemiology course.",
+  projectEvalSpatial: "Spatial Analysis",
+  projectEvalSpatialText: "Student paper and project evaluation for the Spatial Analysis course.",
+  projectEvalMachineLearning: "Machine Learning",
+  projectEvalMachineLearningText: "Student paper and project evaluation for the Machine Learning course.",
+  projectEvalOpen: "Open Evaluation Form"
+});
+
+applyLanguage();
+
+if (decodeURIComponent(window.location.hash.replace(/^#/, "")) === "evaluasi-project-mahasiswa-2026") {
+  setActiveWorkspacePanel("evaluasi-project-mahasiswa-2026", true, "s2");
+}
