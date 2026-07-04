@@ -1,0 +1,152 @@
+.evaluation-hub-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.evaluation-hub-card.project {
+  border-color: rgba(45, 87, 134, 0.34);
+  background: linear-gradient(145deg, #f5f9fd, #ffffff 62%, #eef7f3);
+}
+
+.student-project-section {
+  border-block: 1px solid rgba(35, 70, 105, 0.14);
+  background: linear-gradient(180deg, #f4f8fb 0%, #ffffff 55%, #f3f9f6 100%);
+}
+
+.student-project-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 26px;
+  border: 1px solid rgba(35, 70, 105, 0.18);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 16px 34px rgba(20, 42, 64, 0.08);
+}
+
+.student-project-hero h2 {
+  max-width: 780px;
+  margin-bottom: 10px;
+}
+
+.student-project-hero p:not(.section-kicker) {
+  max-width: 820px;
+  margin: 0;
+  color: var(--muted);
+}
+
+.student-project-year {
+  display: grid;
+  min-width: 132px;
+  min-height: 104px;
+  place-content: center;
+  text-align: center;
+  border-radius: 8px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #174d70, #167766);
+}
+
+.student-project-year span {
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.student-project-year strong {
+  font-size: 1.9rem;
+}
+
+.student-project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.student-project-card {
+  position: relative;
+  display: flex;
+  min-height: 260px;
+  flex-direction: column;
+  padding: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(27, 55, 82, 0.16);
+  border-top: 5px solid var(--project-accent, #176d65);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 14px 30px rgba(20, 42, 64, 0.08);
+}
+
+.student-project-card.epidemiology { --project-accent: #17806f; }
+.student-project-card.spatial { --project-accent: #235e91; }
+.student-project-card.machine-learning { --project-accent: #bd7b12; }
+
+.student-project-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.student-project-number {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--project-accent);
+}
+
+.student-project-type {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #314353;
+  background: #edf2f5;
+}
+
+.student-project-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.3rem;
+}
+
+.student-project-card p {
+  margin: 0 0 24px;
+  color: var(--muted);
+}
+
+.student-project-card a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  margin-top: auto;
+  padding: 10px 15px;
+  border-radius: 7px;
+  font-weight: 850;
+  color: #ffffff;
+  background: var(--project-accent);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.student-project-card a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(20, 42, 64, 0.16);
+}
+
+@media (max-width: 960px) {
+  .evaluation-hub-grid,
+  .student-project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .student-project-hero {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .student-project-year {
+    min-width: 0;
+    min-height: 82px;
+  }
+}
