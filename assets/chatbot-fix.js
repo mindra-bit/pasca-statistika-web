@@ -136,13 +136,19 @@ buildLocalAnswer = function buildSafeLocalAnswer(question) {
 if (!workspacePanelIds.includes("evaluasi-project-mahasiswa-2026")) {
   workspacePanelIds.push("evaluasi-project-mahasiswa-2026");
 }
+if (!workspacePanelIds.includes("output-project-mahasiswa-2026")) {
+  workspacePanelIds.push("output-project-mahasiswa-2026");
+}
 if (!evaluationPanelIds.includes("evaluasi-project-mahasiswa-2026")) {
   evaluationPanelIds.push("evaluasi-project-mahasiswa-2026");
+}
+if (!evaluationPanelIds.includes("output-project-mahasiswa-2026")) {
+  evaluationPanelIds.push("output-project-mahasiswa-2026");
 }
 
 Object.assign(I18N.id, {
   workspaceProjectEvaluation: "Evaluasi Project Mahasiswa 2026",
-  evaluationHubText: "Evaluasi perkuliahan, Evaluasi PBM-Dosen, dan Evaluasi Project Mahasiswa ditempatkan dalam satu pintu akses agar mudah ditemukan.",
+  evaluationHubText: "Evaluasi akademik dan galeri output project mahasiswa ditempatkan dalam satu pintu akses agar mudah ditemukan.",
   evaluationHubProjectText: "Form evaluasi project Epidemiologi, Analisis Spasial, dan Pembelajaran Mesin",
   projectEvalKicker: "Evaluasi Project Mahasiswa",
   projectEvalTitle: "Form evaluasi project mata kuliah 2026.",
@@ -155,12 +161,26 @@ Object.assign(I18N.id, {
   projectEvalSpatialText: "Evaluasi paper dan project mahasiswa pada mata kuliah Analisis Spasial.",
   projectEvalMachineLearning: "Pembelajaran Mesin",
   projectEvalMachineLearningText: "Evaluasi makalah dan project mahasiswa pada mata kuliah Pembelajaran Mesin.",
-  projectEvalOpen: "Buka Form Evaluasi"
+  projectEvalOpen: "Buka Form Evaluasi",
+  workspaceProjectOutput: "Output Project Mahasiswa 2026",
+  evaluationHubOutputText: "Galeri 37 Shiny Apps dan makalah mahasiswa dari tiga mata kuliah",
+  projectOutputKicker: "Output Project Mahasiswa",
+  projectOutputTitle: "Galeri karya mahasiswa 2026.",
+  projectOutputText: "Jelajahi aplikasi interaktif Shiny dan makalah RPubs dari mata kuliah Analisis Spasial, Epidemiologi, dan Pembelajaran Mesin.",
+  projectOutputWorks: "Karya unik",
+  projectOutputPapers: "Makalah RPubs",
+  projectOutputItems: "karya",
+  projectOutputApps: "aplikasi interaktif",
+  projectOutputCourse: "Mata Kuliah",
+  projectOutputRpubsTitle: "Makalah RPubs",
+  projectOutputPapersShort: "makalah",
+  projectOutputOpen: "Buka karya",
+  projectOutputNote: "Tautan identik ditampilkan satu kali agar daftar tetap ringkas dan mudah ditelusuri."
 });
 
 Object.assign(I18N.en, {
   workspaceProjectEvaluation: "Student Project Evaluation 2026",
-  evaluationHubText: "Course delivery evaluation, PBM-Lecturer Evaluation, and Student Project Evaluation are grouped in one access point for easier navigation.",
+  evaluationHubText: "Academic evaluations and the student project output gallery are grouped in one access point for easier navigation.",
   evaluationHubProjectText: "Project evaluation forms for Epidemiology, Spatial Analysis, and Machine Learning",
   projectEvalKicker: "Student Project Evaluation",
   projectEvalTitle: "2026 course project evaluation forms.",
@@ -173,11 +193,39 @@ Object.assign(I18N.en, {
   projectEvalSpatialText: "Student paper and project evaluation for the Spatial Analysis course.",
   projectEvalMachineLearning: "Machine Learning",
   projectEvalMachineLearningText: "Student paper and project evaluation for the Machine Learning course.",
-  projectEvalOpen: "Open Evaluation Form"
+  projectEvalOpen: "Open Evaluation Form",
+  workspaceProjectOutput: "Student Project Outputs 2026",
+  evaluationHubOutputText: "A gallery of 37 student Shiny Apps and papers from three courses",
+  projectOutputKicker: "Student Project Outputs",
+  projectOutputTitle: "2026 student work gallery.",
+  projectOutputText: "Explore interactive Shiny applications and RPubs papers from Spatial Analysis, Epidemiology, and Machine Learning.",
+  projectOutputWorks: "Unique works",
+  projectOutputPapers: "RPubs papers",
+  projectOutputItems: "works",
+  projectOutputApps: "interactive apps",
+  projectOutputCourse: "Course",
+  projectOutputRpubsTitle: "RPubs Papers",
+  projectOutputPapersShort: "papers",
+  projectOutputOpen: "Open work",
+  projectOutputNote: "Identical links are displayed once to keep the gallery concise and easy to browse."
 });
 
 applyLanguage();
 
-if (decodeURIComponent(window.location.hash.replace(/^#/, "")) === "evaluasi-project-mahasiswa-2026") {
-  setActiveWorkspacePanel("evaluasi-project-mahasiswa-2026", true, "s2");
+document.querySelectorAll("[data-project-output-target]").forEach((button) => {
+  if (button.dataset.projectOutputBound === "true") return;
+  button.dataset.projectOutputBound = "true";
+  button.addEventListener("click", () => {
+    const target = document.getElementById(button.dataset.projectOutputTarget || "");
+    if (!target) return;
+    document.querySelectorAll("[data-project-output-target]").forEach((item) => {
+      item.classList.toggle("active", item === button);
+    });
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+});
+
+const projectPanelHash = decodeURIComponent(window.location.hash.replace(/^#/, ""));
+if (["evaluasi-project-mahasiswa-2026", "output-project-mahasiswa-2026"].includes(projectPanelHash)) {
+  setActiveWorkspacePanel(projectPanelHash, true, "s2");
 }
