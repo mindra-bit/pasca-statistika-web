@@ -139,6 +139,9 @@ if (!workspacePanelIds.includes("evaluasi-project-mahasiswa-2026")) {
 if (!workspacePanelIds.includes("output-project-mahasiswa-2026")) {
   workspacePanelIds.push("output-project-mahasiswa-2026");
 }
+if (!workspacePanelIds.includes("sharing-session-alumni")) {
+  workspacePanelIds.push("sharing-session-alumni");
+}
 if (!evaluationPanelIds.includes("evaluasi-project-mahasiswa-2026")) {
   evaluationPanelIds.push("evaluasi-project-mahasiswa-2026");
 }
@@ -147,6 +150,26 @@ if (!evaluationPanelIds.includes("output-project-mahasiswa-2026")) {
 }
 
 Object.assign(I18N.id, {
+  workspaceAlumniSharing: "Sharing Session Alumni",
+  alumniSharingKicker: "Sharing Session Alumni",
+  alumniSharingTitle: "Pengalaman alumni menjadi ruang belajar bersama.",
+  alumniSharingText: "Rangkaian sesi yang mempertemukan mahasiswa dengan alumni untuk membahas keahlian statistik, pengembangan karier, riset, dan pengalaman profesional.",
+  alumniSharingSpeakers: "Narasumber",
+  alumniSharingPeriod: "Periode kegiatan",
+  alumniSharingTopics: "Topik utama",
+  alumniSharingFeatured: "Alumni Berprestasi",
+  alumniSharingTalk: "Ngobrol Bareng Alumni",
+  alumniSharingInspiration: "Inspirasi Alumni",
+  alumniSharingSeminar: "Seminar Series Alumni",
+  alumniSharingDate: "Tanggal",
+  alumniSharingTime: "Waktu",
+  alumniSharingFormat: "Format",
+  alumniSharingFocus: "Fokus",
+  alumniSharingClassroom: "Kelas tatap muka",
+  alumniSharingNaimaText: "Sesi ini memperkenalkan dasar text analysis dalam data science, mulai dari pengolahan teks hingga pemanfaatannya untuk menghasilkan insight berbasis data.",
+  alumniSharingYogaText: "Percakapan alumni tentang membangun karier, memanfaatkan AI, dan menerjemahkan kompetensi statistika terapan menjadi peluang profesional setelah lulus.",
+  alumniSharingDilaText: "Sesi inspiratif mengenai perjalanan akademik dan profesional alumni, termasuk strategi menyiapkan riset yang mampu menembus publikasi bereputasi Q1.",
+  alumniSharingAgusText: "Seminar ini membahas model simultan spasial untuk menganalisis keterkaitan antarwilayah dan penerapannya pada persoalan statistik nyata.",
   workspaceProjectEvaluation: "Evaluasi Project Mahasiswa 2026",
   evaluationHubText: "Evaluasi akademik dan galeri output project mahasiswa ditempatkan dalam satu pintu akses agar mudah ditemukan.",
   evaluationHubProjectText: "Form evaluasi project Epidemiologi, Analisis Spasial, dan Pembelajaran Mesin",
@@ -179,6 +202,26 @@ Object.assign(I18N.id, {
 });
 
 Object.assign(I18N.en, {
+  workspaceAlumniSharing: "Alumni Sharing Sessions",
+  alumniSharingKicker: "Alumni Sharing Sessions",
+  alumniSharingTitle: "Alumni experience becomes a shared learning space.",
+  alumniSharingText: "A series connecting students with alumni to explore statistical expertise, career development, research, and professional experience.",
+  alumniSharingSpeakers: "Speakers",
+  alumniSharingPeriod: "Activity period",
+  alumniSharingTopics: "Main topics",
+  alumniSharingFeatured: "Outstanding Alumna",
+  alumniSharingTalk: "Alumni Conversation",
+  alumniSharingInspiration: "Alumni Inspiration",
+  alumniSharingSeminar: "Alumni Seminar Series",
+  alumniSharingDate: "Date",
+  alumniSharingTime: "Time",
+  alumniSharingFormat: "Format",
+  alumniSharingFocus: "Focus",
+  alumniSharingClassroom: "In-person class",
+  alumniSharingNaimaText: "This session introduces the foundations of text analysis in data science, from processing text to turning it into data-driven insight.",
+  alumniSharingYogaText: "An alumni conversation on building a career, using AI, and translating applied statistics competencies into professional opportunities after graduation.",
+  alumniSharingDilaText: "An inspiring discussion about the speaker's academic and professional journey, including strategies for developing research suitable for a reputable Q1 publication.",
+  alumniSharingAgusText: "A seminar on simultaneous spatial models for analyzing relationships across regions and applying them to real statistical problems.",
   workspaceProjectEvaluation: "Student Project Evaluation 2026",
   evaluationHubText: "Academic evaluations and the student project output gallery are grouped in one access point for easier navigation.",
   evaluationHubProjectText: "Project evaluation forms for Epidemiology, Spatial Analysis, and Machine Learning",
@@ -226,6 +269,6 @@ document.querySelectorAll("[data-project-output-target]").forEach((button) => {
 });
 
 const projectPanelHash = decodeURIComponent(window.location.hash.replace(/^#/, ""));
-if (["evaluasi-project-mahasiswa-2026", "output-project-mahasiswa-2026"].includes(projectPanelHash)) {
+if (["evaluasi-project-mahasiswa-2026", "output-project-mahasiswa-2026", "sharing-session-alumni"].includes(projectPanelHash)) {
   setActiveWorkspacePanel(projectPanelHash, true, "s2");
 }
