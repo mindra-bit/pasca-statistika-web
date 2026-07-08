@@ -142,9 +142,6 @@ if (!workspacePanelIds.includes("output-project-mahasiswa-2026")) {
 if (!workspacePanelIds.includes("sharing-session-alumni")) {
   workspacePanelIds.push("sharing-session-alumni");
 }
-if (!workspacePanelIds.includes("tesis-online")) {
-  workspacePanelIds.push("tesis-online");
-}
 if (!evaluationPanelIds.includes("evaluasi-project-mahasiswa-2026")) {
   evaluationPanelIds.push("evaluasi-project-mahasiswa-2026");
 }

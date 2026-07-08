@@ -399,7 +399,6 @@ const workspacePanelIds = [
   "materi",
   "panduan-tesis",
   "panduan-akademik",
-  "tesis-online",
   "evaluasi",
   "evaluasi-perkuliahan",
   "evaluasi-pbm",
@@ -422,8 +421,7 @@ const curriculumPanelIds = [
   "rps",
   "materi",
   "panduan-tesis",
-  "panduan-akademik",
-  "tesis-online"
+  "panduan-akademik"
 ];
 const evaluationPanelIds = [
   "evaluasi",
