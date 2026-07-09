@@ -241,6 +241,7 @@ const FALLBACK_KNOWLEDGE = [
 
 const STOPWORDS = new Set("yang dan untuk dengan pada dalam sebagai dari ke di ini itu adalah atau serta oleh agar akan dapat karena maka jika sudah telah juga yaitu bagi antara menjadi memiliki secara program studi magister statistika terapan unpad fmipa universitas padjadjaran kurikulum dokumen tahun prodi pertanyaan jawaban jawab chatbot chatboot luar s2 apa saja berapa".split(" "));
 const GENERIC_QUERY_TERMS = new Set("silabus sylabus rps materi referensi deskripsi bahan kajian topik perkuliahan mata kuliah matakuliah course".split(" "));
+const THESIS_ONLINE_URL = "https://script.google.com/macros/s/AKfycbwW6WI3A8VNTg9sAsmncazNXyXj63MawuzJBOhbS4J4FCsO9vH0NCLkHyWLq_zN8Un7/exec";
 
 let knowledge = FALLBACK_KNOWLEDGE;
 let syllabus = [];
@@ -3532,7 +3533,31 @@ function buildAcademicGuideAnswer(question) {
   };
 }
 
+function buildThesisOnlineAnswer(question) {
+  const text = normalize(question);
+  if (!/tesis online|online thesis|thesis online/.test(text)) return null;
+
+  const title = currentLang === "en" ? "Online Thesis" : "Tesis Online";
+  const answer = currentLang === "en"
+    ? [
+        "Online Thesis is available through the official application link.",
+        `Link: ${THESIS_ONLINE_URL}`
+      ].join("\n")
+    : [
+        "Tesis Online tersedia melalui link aplikasi berikut.",
+        `Link: ${THESIS_ONLINE_URL}`
+      ].join("\n");
+
+  return {
+    answer,
+    sources: [{ title, url: THESIS_ONLINE_URL }],
+    mode: "Local knowledge base"
+  };
+}
+
 function buildLocalAnswer(question) {
+  const directThesisOnline = buildThesisOnlineAnswer(question);
+  if (directThesisOnline) return directThesisOnline;
   const directScholarship = buildScholarshipAnswer(question);
   if (directScholarship) return directScholarship;
   const directLamsama = buildLamsamaAnswer(question);

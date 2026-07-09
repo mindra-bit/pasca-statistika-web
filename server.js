@@ -76,6 +76,7 @@ const s3Site = fs.existsSync(s3SitePath)
   : { program: {}, vision: "", missions: [], objectives: [], graduateProfiles: [], cpl: [], documents: [], rps: { total: 0, groups: [], documents: [] } };
 const stopwords = new Set("yang dan untuk dengan pada dalam sebagai dari ke di ini itu adalah atau serta oleh agar akan dapat karena maka jika sudah telah juga yaitu bagi antara menjadi memiliki secara program studi magister statistika terapan unpad fmipa universitas padjadjaran kurikulum dokumen tahun prodi pertanyaan jawaban jawab chatbot chatboot luar s2 apa saja berapa".split(" "));
 const genericQueryTerms = new Set("silabus sylabus rps materi referensi deskripsi bahan kajian topik perkuliahan mata kuliah matakuliah course".split(" "));
+const thesisOnlineUrl = "https://script.google.com/macros/s/AKfycbwW6WI3A8VNTg9sAsmncazNXyXj63MawuzJBOhbS4J4FCsO9vH0NCLkHyWLq_zN8Un7/exec";
 
 const facts = {
   sks: {
@@ -1525,7 +1526,31 @@ function academicGuideAnswer(question, language = "id") {
   };
 }
 
+function thesisOnlineAnswer(question, language = "id") {
+  const text = normalize(question);
+  if (!/tesis online|online thesis|thesis online/.test(text)) return null;
+
+  const title = language === "en" ? "Online Thesis" : "Tesis Online";
+  const answer = language === "en"
+    ? [
+        "Online Thesis is available through the official application link.",
+        `Link: ${thesisOnlineUrl}`
+      ].join("\n")
+    : [
+        "Tesis Online tersedia melalui link aplikasi berikut.",
+        `Link: ${thesisOnlineUrl}`
+      ].join("\n");
+
+  return {
+    answer,
+    sources: [{ title, url: thesisOnlineUrl }],
+    mode: "Knowledge base server"
+  };
+}
+
 function localAnswer(question, language = "id") {
+  const directThesisOnline = thesisOnlineAnswer(question, language);
+  if (directThesisOnline) return directThesisOnline;
   const directScholarship = scholarshipAnswer(question, language);
   if (directScholarship) return directScholarship;
   const directLamsama = lamsamaAnswer(question, language);
@@ -1712,7 +1737,8 @@ app.post("/api/chat", async (req, res) => {
   const language = req.body?.language === "en" ? "en" : "id";
   if (!question) return res.status(400).json({ error: "Pertanyaan tidak boleh kosong." });
 
-  const indexedDirectAnswer = scholarshipAnswer(question, language)
+  const indexedDirectAnswer = thesisOnlineAnswer(question, language)
+    || scholarshipAnswer(question, language)
     || lamsamaAnswer(question, language)
     || pkmAnswer(question, language)
     || academicGuideAnswer(question, language);
