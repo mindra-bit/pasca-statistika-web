@@ -216,6 +216,31 @@
   line-height: 1.62;
 }
 
+.student-achievement-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 34px;
+  margin-top: 14px;
+  border: 1px solid rgba(14, 107, 88, 0.28);
+  border-radius: 6px;
+  padding: 7px 11px;
+  color: #0b5367;
+  background: #f2faf7;
+  font-size: 0.8rem;
+  font-weight: 950;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.student-achievement-link:hover {
+  border-color: #0e6b58;
+  background: #e8f6f1;
+  transform: translateY(-1px);
+}
+
 .student-achievement-tags {
   display: flex;
   flex-wrap: wrap;
