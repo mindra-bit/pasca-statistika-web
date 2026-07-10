@@ -8417,6 +8417,15 @@ tbody tr:hover td {
   color: #fff;
 }
 
+.thesis-online-guide-card {
+  background: linear-gradient(135deg, #fff8e5 0%, #ffffff 58%, #e8f6f3 100%);
+  border-color: rgba(245, 184, 46, 0.55);
+}
+
+.thesis-online-guide-card::before {
+  background: linear-gradient(90deg, var(--gold), var(--green));
+}
+
 .thesis-online-section {
   background: #eef4f7;
 }

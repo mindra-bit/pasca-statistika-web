@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Panduan Tesis Online - S2 Statistika Terapan FMIPA UNPAD</title>
+  <meta name="description" content="Panduan bilingual penggunaan Sistem Tesis Online untuk Kaprodi, dosen pembimbing, dosen penguji, dan mahasiswa S2 Statistika Terapan FMIPA UNPAD." />
+  <style>
+    :root {
+      --ink: #0b1f35;
+      --navy: #0b2742;
+      --teal: #0f766e;
+      --gold: #f5b82e;
+      --red: #c8263e;
+      --paper: #ffffff;
+      --soft: #f6f8fb;
+      --line: #dbe5f1;
+      --muted: #62748a;
+      --shadow: 0 22px 55px rgba(11, 31, 53, .13);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--soft);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; line-height: 1.62; }
+    a { color: inherit; }
+    .guide-shell { max-width: 1140px; margin: 0 auto; padding: 26px 18px 58px; }
+    .guide-hero {
+      display: grid;
+      grid-template-columns: 78px minmax(0, 1fr);
+      gap: 18px;
+      align-items: center;
+      color: #fff;
+      background:
+        radial-gradient(circle at right top, rgba(245, 184, 46, .36), transparent 34%),
+        linear-gradient(135deg, #071a33 0%, #0f766e 100%);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .guide-logo {
+      width: 78px;
+      height: 78px;
+      object-fit: contain;
+      padding: 8px;
+      border-radius: 20px;
+      background: #fff;
+      box-shadow: 0 15px 28px rgba(0, 0, 0, .22);
+    }
+    .kicker {
+      display: inline-flex;
+      width: fit-content;
+      margin: 0 0 8px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .14);
+      border: 1px solid rgba(255, 255, 255, .28);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    h1 { margin: 0; font-size: clamp(28px, 5vw, 46px); line-height: 1.05; letter-spacing: 0; }
+    .guide-hero p { max-width: 820px; margin: 10px 0 0; color: #e6f2ff; font-size: 16px; }
+    .guide-actions, .lang-switch { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+    .button, .lang-switch button {
+      border: 0;
+      border-radius: 14px;
+      padding: 11px 14px;
+      font-weight: 900;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .button.primary { background: linear-gradient(135deg, var(--gold), #ffe08a); color: #111827; }
+    .button.dark { background: #071a33; color: #fff; }
+    .button.ghost { background: rgba(255, 255, 255, .12); color: #fff; border: 1px solid rgba(255, 255, 255, .28); }
+    .lang-switch button { background: #fff; color: var(--navy); border: 1px solid var(--line); }
+    .lang-switch button.active { background: var(--navy); color: #fff; }
+    .toc {
+      margin: 18px 0;
+      padding: 18px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 14px 36px rgba(11, 31, 53, .08);
+    }
+    .toc h2 { margin: 0 0 12px; font-size: 18px; }
+    .toc-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+    .toc-grid a {
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #f9fbfd;
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 850;
+      font-size: 13px;
+    }
+    .toc-grid a:hover { border-color: var(--gold); background: #fff8e5; }
+    .guide-lang { display: none; }
+    .guide-lang.active { display: grid; gap: 16px; }
+    .panel {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-left: 6px solid var(--gold);
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: 0 14px 36px rgba(11, 31, 53, .06);
+      scroll-margin-top: 18px;
+    }
+    .panel h2 { margin: 0 0 12px; color: var(--navy); line-height: 1.2; }
+    .panel h3 { margin: 16px 0 8px; color: #153b5e; }
+    .note, .warn {
+      margin: 14px 0;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border-left: 5px solid var(--gold);
+      background: #fff8e5;
+    }
+    .warn { border-left-color: var(--red); background: #fff0f3; }
+    .process {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 8px;
+      margin: 14px 0;
+    }
+    .process span {
+      display: grid;
+      align-content: center;
+      min-height: 72px;
+      padding: 10px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #f8fbff, #eef7f4);
+      border: 1px solid var(--line);
+      color: var(--navy);
+      font-weight: 900;
+      text-align: center;
+      font-size: 13px;
+    }
+    .step-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .step-card {
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: #fbfdff;
+    }
+    .step-card b { display: block; margin-bottom: 5px; color: var(--navy); }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0 0; font-size: 14px; }
+    th, td { border: 1px solid var(--line); padding: 10px; text-align: left; vertical-align: top; }
+    th { background: var(--navy); color: #fff; }
+    code { padding: 2px 6px; border: 1px solid var(--line); border-radius: 8px; background: #f1f5f9; }
+    .footer-note { margin-top: 22px; text-align: center; color: var(--muted); font-size: 13px; }
+    @media (max-width: 900px) {
+      .guide-hero { grid-template-columns: 1fr; }
+      .toc-grid, .process, .step-grid { grid-template-columns: 1fr; }
+      .guide-shell { padding: 14px 10px 44px; }
+      .panel { padding: 16px; }
+      table { display: block; overflow-x: auto; white-space: nowrap; }
+    }
+    @media print {
+      body { background: #fff; }
+      .guide-shell { max-width: none; padding: 0; }
+      .guide-hero, .toc, .panel { box-shadow: none; }
+      .guide-actions, .lang-switch { display: none; }
+      .guide-lang { display: block; }
+      .guide-lang:not(.active) { display: none; }
+      .panel { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="guide-shell">
+    <header class="guide-hero">
+      <img class="guide-logo" src="assets/logo-unpad.png" alt="Logo Universitas Padjadjaran" />
+      <div>
+        <p class="kicker" data-label="kicker">Panduan Akademik Digital</p>
+        <h1 data-label="title">Panduan Sistem Tesis Online</h1>
+        <p data-label="subtitle">Panduan penggunaan untuk Kaprodi, dosen pembimbing, dosen penguji, dan mahasiswa S2 Statistika Terapan FMIPA Universitas Padjadjaran.</p>
+        <div class="lang-switch" role="group" aria-label="Pilihan bahasa">
+          <button class="active" type="button" data-set-lang="id">Bahasa Indonesia</button>
+          <button type="button" data-set-lang="en">English</button>
+        </div>
+        <div class="guide-actions">
+          <a class="button primary" href="https://script.google.com/a/macros/unpad.ac.id/s/AKfycbxm1xzT4DWyfYu9BoGXtnfW-B7weQvElReHhiexiqyFZ7EyAcaQq6j7g-JMEmmPLl4q-A/exec" target="_blank" rel="noopener" data-label="openApp">Buka Tesis Online</a>
+          <button class="button dark" type="button" onclick="window.print()" data-label="print">Cetak / Simpan PDF</button>
+          <a class="button ghost" href="index.html#kurikulum" data-label="back">Kembali ke Website</a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="toc" aria-label="Daftar isi">
+      <h2 data-label="tocTitle">Daftar Isi</h2>
+      <div class="toc-grid">
+        <a href="#overview" data-label="tocOverview">Pendahuluan</a>
+        <a href="#access" data-label="tocAccess">Hak Akses</a>
+        <a href="#program-head" data-label="tocHead">Kaprodi</a>
+        <a href="#supervisor" data-label="tocSupervisor">Pembimbing</a>
+        <a href="#examiner" data-label="tocExaminer">Penguji</a>
+        <a href="#student" data-label="tocStudent">Mahasiswa</a>
+        <a href="#print-email" data-label="tocPrint">Cetak &amp; Email</a>
+        <a href="#data-standard" data-label="tocData">Standar Data</a>
+        <a href="#troubleshooting" data-label="tocTrouble">Troubleshooting</a>
+        <a href="#checklist" data-label="tocChecklist">Checklist</a>
+      </div>
+    </nav>
+
+    <main class="guide-lang active" data-guide-lang="id">
+      <section class="panel" id="overview">
+        <h2>1. Pendahuluan</h2>
+        <p><b>Sistem Tesis Online</b> digunakan untuk mengelola proses tesis mahasiswa S2 Statistika Terapan FMIPA Universitas Padjadjaran secara terdokumentasi, mulai dari pengajuan judul, pembimbingan, penjadwalan SUR/SKR/SAM, revisi, dokumen, publikasi, penilaian, sampai pengiriman laporan lengkap.</p>
+        <p class="note"><b>Prinsip penggunaan:</b> setiap aktivitas akademik harus memiliki jejak data yang jelas: nama mahasiswa, tahap tesis, tanggal kegiatan, pihak yang terlibat, catatan akademik, tindak lanjut, dan status penyelesaian.</p>
+        <div class="process" aria-label="Peta proses tesis">
+          <span>Judul &amp; Pembimbing</span><span>Log Book Awal</span><span>SUR Proposal</span><span>SKR Kemajuan</span><span>SAM Sidang Akhir</span><span>Rekap &amp; Publikasi</span>
+        </div>
+      </section>
+
+      <section class="panel" id="access">
+        <h2>2. Hak Akses Pengguna</h2>
+        <table>
+          <tr><th>Akun</th><th>Data yang Dapat Dilihat</th><th>Aksi Utama</th><th>Batasan</th></tr>
+          <tr><td><b>Kaprodi</b></td><td>Seluruh mahasiswa, dosen, jadwal, log book, nilai, revisi, dokumen, dan publikasi.</td><td>Kelola master data, penugasan penguji, jadwal, monitoring, cetak, dan kirim laporan lengkap.</td><td>Entri nilai hanya jika email Kaprodi tercatat sebagai penilai mahasiswa.</td></tr>
+          <tr><td><b>Dosen Pembimbing</b></td><td>Mahasiswa yang dibimbing sebagai Ketua atau Anggota Pembimbing.</td><td>Memeriksa log book, memberi catatan, validasi bimbingan, dan mengisi nilai sesuai tahap.</td><td>Tidak mengubah master mahasiswa dan tidak melihat mahasiswa di luar penugasannya.</td></tr>
+          <tr><td><b>Dosen Penguji</b></td><td>Mahasiswa yang diuji sebagai Penguji 1 atau Penguji 2.</td><td>Melihat dokumen, memberi revisi, dan mengisi nilai sesuai rubrik.</td><td>Tidak mengubah log book bimbingan dan master mahasiswa.</td></tr>
+          <tr><td><b>Mahasiswa</b></td><td>Data dirinya sendiri.</td><td>Mengisi judul, log book, dokumen, publikasi, tindak lanjut revisi, dan memantau nilai.</td><td>Tidak melihat data mahasiswa lain dan tidak mengisi nilai.</td></tr>
+        </table>
+      </section>
+
+      <section class="panel" id="program-head">
+        <h2>3. Panduan Kaprodi</h2>
+        <p>Akun Kaprodi adalah pusat kendali sistem. Kaprodi memastikan data master benar, tim pembimbing dan penguji lengkap, jadwal tersimpan, dan laporan progress dapat dikirim ke semua pihak terkait.</p>
+        <div class="step-grid">
+          <div class="step-card"><b>1. Cek Data Mahasiswa</b><span>Pastikan NPM, nama, email mahasiswa, status tesis, Ketua Pembimbing, Anggota Pembimbing, Penguji 1, dan Penguji 2 sudah benar.</span></div>
+          <div class="step-card"><b>2. Tetapkan Penguji</b><span>Pilih mahasiswa, lalu pilih Penguji 1 dan Penguji 2 dari database dosen. Nama dan email penguji otomatis masuk ke data mahasiswa.</span></div>
+          <div class="step-card"><b>3. Atur Jadwal</b><span>Pilih tahap SUR/SKR/SAM, isi tanggal, jam, mode, ruang atau tautan, ketua sidang, dan catatan.</span></div>
+          <div class="step-card"><b>4. Monitor Progress</b><span>Cek log book, revisi, dokumen, publikasi, dan rekap nilai untuk memastikan mahasiswa siap ke tahap berikutnya.</span></div>
+          <div class="step-card"><b>5. Cetak &amp; Email</b><span>Pilih satu mahasiswa, lalu gunakan preview, download PDF, atau kirim email. Sistem membuat satu file PDF lengkap.</span></div>
+          <div class="step-card"><b>6. Audit Data</b><span>Jika data tidak tampil, gunakan tombol refresh dan cek database Apps Script dengan fungsi diagnostik.</span></div>
+        </div>
+      </section>
+
+      <section class="panel" id="supervisor">
+        <h2>4. Panduan Dosen Pembimbing</h2>
+        <p>Dosen Pembimbing terdiri dari Ketua Pembimbing dan Anggota Pembimbing. Keduanya dapat melihat mahasiswa bimbingannya, memeriksa log book, memberi catatan akademik, memvalidasi bimbingan, dan mengisi nilai bila tahap penilaian berjalan.</p>
+        <table>
+          <tr><th>Menu</th><th>Yang Dilakukan Pembimbing</th><th>Catatan Praktis</th></tr>
+          <tr><td>Data Mahasiswa</td><td>Melihat mahasiswa bimbingan dan posisi sebagai Ketua atau Anggota Pembimbing.</td><td>Jika mahasiswa tidak muncul, cek email dosen di master mahasiswa.</td></tr>
+          <tr><td>Judul Tesis</td><td>Melihat riwayat judul dan memberi koreksi judul sebagai riwayat baru.</td><td>Judul terbaru menjadi acuan menu lain.</td></tr>
+          <tr><td>Log Book</td><td>Memeriksa agenda, masukan, tindak lanjut, dan target selesai; lalu validasi atau minta perbaikan.</td><td>Validasi diberikan setelah catatan mahasiswa cukup jelas.</td></tr>
+          <tr><td>Revisi</td><td>Memberikan revisi akademik dan memantau status penyelesaian.</td><td>Gunakan uraian revisi yang spesifik dan terukur.</td></tr>
+          <tr><td>Entri Nilai</td><td>Mengisi rubrik SUR, SKR, atau SAM sesuai jadwal dan peran penilai.</td><td>Simpan nilai setelah seluruh komponen rubrik terisi.</td></tr>
+          <tr><td>Dokumen &amp; Publikasi</td><td>Memeriksa naskah, slide, bukti submit, dan status publikasi.</td><td>Pastikan tautan Google Drive dapat dibuka dosen terkait.</td></tr>
+        </table>
+      </section>
+
+      <section class="panel" id="examiner">
+        <h2>5. Panduan Dosen Penguji</h2>
+        <p>Dosen Penguji terdiri dari Penguji 1 dan Penguji 2. Peran utamanya adalah memeriksa dokumen akademik, memberi revisi, dan mengisi nilai sesuai rubrik pada tahap SUR, SKR, atau SAM.</p>
+        <div class="process" aria-label="Alur dosen penguji">
+          <span>Pilih Mahasiswa</span><span>Cek Dokumen</span><span>Baca Naskah</span><span>Beri Revisi</span><span>Isi Nilai</span><span>Cek Rekap</span>
+        </div>
+        <p class="note"><b>Catatan:</b> dosen penguji hanya melihat mahasiswa sesuai email yang tercatat sebagai Penguji 1 atau Penguji 2.</p>
+      </section>
+
+      <section class="panel" id="student">
+        <h2>6. Panduan Akun Mahasiswa</h2>
+        <p>Akun mahasiswa digunakan untuk mendokumentasikan aktivitas tesis pribadi. Mahasiswa wajib menjaga data log book, dokumen, publikasi, dan revisi tetap mutakhir.</p>
+        <table>
+          <tr><th>Menu</th><th>Kewajiban Mahasiswa</th><th>Standar Isian yang Baik</th></tr>
+          <tr><td>Judul Tesis</td><td>Mengisi judul awal dan revisi judul pada PRA-SUR, SUR, SKR, atau SAM.</td><td>Judul jelas, spesifik, memuat objek/metode/konteks bila relevan.</td></tr>
+          <tr><td>Log Book</td><td>Mengisi setiap aktivitas bimbingan.</td><td>Tulis agenda, masukan dosen, tindak lanjut, dan target selesai secara rinci.</td></tr>
+          <tr><td>Dokumen</td><td>Mengunggah tautan proposal, naskah SKR, tesis final, slide, dan bukti pendukung.</td><td>Gunakan link Drive yang bisa diakses pembimbing, penguji, dan Kaprodi.</td></tr>
+          <tr><td>Revisi</td><td>Memantau dan menyelesaikan revisi dari pembimbing, penguji, atau Kaprodi.</td><td>Ubah status setelah revisi dikerjakan dan isi bukti URL jika tersedia.</td></tr>
+          <tr><td>Publikasi</td><td>Mengisi status artikel tesis.</td><td>Lengkapi judul artikel, nama jurnal, peringkat, status, tanggal submit, dan bukti URL.</td></tr>
+          <tr><td>Nilai</td><td>Melihat rekap nilai yang sudah masuk.</td><td>Mahasiswa tidak mengisi atau mengubah nilai.</td></tr>
+        </table>
+      </section>
+
+      <section class="panel" id="print-email">
+        <h2>7. Panduan Menu Cetak &amp; Email</h2>
+        <p>Menu ini memiliki dua mode. <b>Kaprodi</b> membuat satu laporan lengkap gabungan untuk satu mahasiswa. <b>Mahasiswa</b> membuat dokumen terpisah: Logbook, Rekap Nilai, atau Revisi.</p>
+        <table>
+          <tr><th>Akun</th><th>Selector</th><th>Tombol</th><th>Fungsi</th></tr>
+          <tr><td>Kaprodi</td><td>Pilih mahasiswa.</td><td>Preview Laporan Lengkap, Download PDF, Kirim Email Satu File PDF</td><td>Membuat laporan lengkap berisi log book, rekap nilai, nilai per dosen, dan hasil revisi.</td></tr>
+          <tr><td>Mahasiswa</td><td>Pilih jenis dokumen: Logbook, Rekap Nilai, atau Revisi; pilih tahap bila diperlukan.</td><td>Preview, Download PDF, Kirim Email</td><td>Membuat dokumen terpisah sebagai PDF untuk arsip atau pengiriman.</td></tr>
+        </table>
+      </section>
+
+      <section class="panel" id="data-standard">
+        <h2>8. Standar Data Minimal</h2>
+        <table>
+          <tr><th>Data</th><th>Wajib Diisi</th><th>Dampak Jika Kosong</th></tr>
+          <tr><td>Mahasiswa</td><td>NPM, nama, email mahasiswa.</td><td>Mahasiswa tidak muncul pada selector dan akses mahasiswa gagal.</td></tr>
+          <tr><td>Pembimbing</td><td>Nama dan email Ketua/Anggota Pembimbing.</td><td>Dosen tidak melihat mahasiswa bimbingannya dan email laporan tidak lengkap.</td></tr>
+          <tr><td>Penguji</td><td>Nama dan email Penguji 1/Penguji 2.</td><td>Dosen penguji tidak bisa mengisi nilai atau menerima laporan.</td></tr>
+          <tr><td>Jadwal</td><td>Tahap, tanggal, jam, mode, ruang/link.</td><td>Progress SUR/SKR/SAM sulit dipantau.</td></tr>
+          <tr><td>Nilai</td><td>Skor rubrik dan catatan penilai.</td><td>Rekap nilai belum final.</td></tr>
+          <tr><td>Publikasi</td><td>Judul artikel, jurnal, status, bukti URL.</td><td>Kesiapan SAM/yudisium tidak terdokumentasi.</td></tr>
+        </table>
+      </section>
+
+      <section class="panel" id="troubleshooting">
+        <h2>9. Troubleshooting Cepat</h2>
+        <table>
+          <tr><th>Masalah</th><th>Kemungkinan Penyebab</th><th>Solusi</th></tr>
+          <tr><td>Nama mahasiswa tidak muncul</td><td>Data mahasiswa kosong, akses role tidak sesuai, atau Code.gs dan Index.html tidak satu paket.</td><td>Jalankan <code>CEK_DATABASE_YANG_DIBACA()</code>, cek email Kaprodi, lalu deploy ulang versi terbaru.</td></tr>
+          <tr><td>Dosen tidak melihat mahasiswa</td><td>Email dosen di master berbeda dengan email login.</td><td>Samakan email pada Data Mahasiswa dan Dosen.</td></tr>
+          <tr><td>Mahasiswa tidak bisa login</td><td>Email/NPM tidak cocok dengan master mahasiswa.</td><td>Perbaiki email mahasiswa atau gunakan login manual email + NPM.</td></tr>
+          <tr><td>PDF tidak terkirim</td><td>Alamat email kosong atau Apps Script belum diberi izin kirim email.</td><td>Lengkapi email penerima dan jalankan ulang setelah otorisasi.</td></tr>
+        </table>
+      </section>
+
+      <section class="panel" id="checklist">
+        <h2>10. Checklist Operasional</h2>
+        <table>
+          <tr><th>Peran</th><th>Checklist Harian/Mingguan</th></tr>
+          <tr><td>Kaprodi</td><td>Cek mahasiswa aktif, jadwal terdekat, revisi terbuka, nilai belum lengkap, publikasi belum submit, dan kirim laporan progress bila diperlukan.</td></tr>
+          <tr><td>Pembimbing</td><td>Validasi log book, beri catatan akademik, cek dokumen, pantau revisi, dan isi nilai sesuai jadwal.</td></tr>
+          <tr><td>Penguji</td><td>Periksa dokumen sebelum seminar/sidang, catat revisi, dan isi nilai setelah kegiatan.</td></tr>
+          <tr><td>Mahasiswa</td><td>Perbarui log book, unggah dokumen terbaru, selesaikan revisi, dan lengkapi status publikasi.</td></tr>
+        </table>
+      </section>
+    </main>
+
+    <main class="guide-lang" data-guide-lang="en">
+      <section class="panel">
+        <h2>1. Overview</h2>
+        <p>The <b>Online Thesis System</b> manages the Applied Statistics Master's thesis process in a documented workflow, from title submission, supervision, SUR/SKR/SAM scheduling, revisions, documents, publication records, assessment, to complete report delivery.</p>
+        <p class="note"><b>Operating principle:</b> every academic activity should leave a clear data trail: student name, thesis stage, activity date, people involved, academic notes, follow-up actions, and completion status.</p>
+        <div class="process" aria-label="Thesis process map">
+          <span>Title &amp; Supervisors</span><span>Initial Log Book</span><span>SUR Proposal</span><span>SKR Progress</span><span>SAM Final Defense</span><span>Recap &amp; Publication</span>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>2. User Access Rights</h2>
+        <table>
+          <tr><th>Account</th><th>Visible Data</th><th>Main Actions</th><th>Limitations</th></tr>
+          <tr><td><b>Head of Program</b></td><td>All students, lecturers, schedules, log books, scores, revisions, documents, and publications.</td><td>Manage master data, examiner assignments, schedules, monitoring, printing, and full report delivery.</td><td>Score entry is available only when the Head of Program email is listed as an assessor for the student.</td></tr>
+          <tr><td><b>Supervisor</b></td><td>Students assigned as supervised students, either under the Main Supervisor or Co-Supervisor role.</td><td>Review log books, add notes, validate supervision, and enter scores by stage.</td><td>Cannot modify student master data and cannot view unrelated students.</td></tr>
+          <tr><td><b>Examiner</b></td><td>Students assigned to the lecturer as Examiner 1 or Examiner 2.</td><td>Review documents, add revisions, and enter rubric-based scores.</td><td>Cannot modify supervision log books or student master data.</td></tr>
+          <tr><td><b>Student</b></td><td>Only the student's own records.</td><td>Enter title, log book, documents, publication status, revision follow-up, and view scores.</td><td>Cannot view other students and cannot enter scores.</td></tr>
+        </table>
+      </section>
+
+      <section class="panel">
+        <h2>3. Head of Program Guide</h2>
+        <p>The Head of Program account controls the system workflow. It ensures that master data, supervisor/examiner teams, schedules, progress records, and reports are complete and accurate.</p>
+        <div class="step-grid">
+          <div class="step-card"><b>1. Check Student Data</b><span>Verify student ID, name, email, thesis status, Main Supervisor, Co-Supervisor, Examiner 1, and Examiner 2.</span></div>
+          <div class="step-card"><b>2. Assign Examiners</b><span>Select a student, then choose Examiner 1 and Examiner 2 from the lecturer database. Names and emails are written to the student data.</span></div>
+          <div class="step-card"><b>3. Set Schedule</b><span>Select SUR/SKR/SAM, then fill in date, time, mode, room or meeting link, session chair, and notes.</span></div>
+          <div class="step-card"><b>4. Monitor Progress</b><span>Check log books, revisions, documents, publications, and score recaps to confirm readiness for the next stage.</span></div>
+          <div class="step-card"><b>5. Print &amp; Email</b><span>Select one student, then use preview, download PDF, or send email. The system generates a complete PDF report.</span></div>
+          <div class="step-card"><b>6. Audit Data</b><span>If data is missing, use refresh and check the Apps Script database with the diagnostic function.</span></div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>4. Supervisor Guide</h2>
+        <p>Supervisors include the Main Supervisor and Co-Supervisor. Both can view their assigned students, review log books, provide academic notes, validate supervision, and enter scores when the assessment stage is open.</p>
+        <table>
+          <tr><th>Menu</th><th>Supervisor Action</th><th>Practical Note</th></tr>
+          <tr><td>Student Data</td><td>View supervised students and the assigned supervisor role.</td><td>If a student is missing, check the lecturer email in the student master data.</td></tr>
+          <tr><td>Thesis Title</td><td>Review title history and provide corrected titles as new records.</td><td>The latest title becomes the reference for other menus.</td></tr>
+          <tr><td>Log Book</td><td>Review agenda, feedback, follow-up, and completion target; then validate or request improvement.</td><td>Validate after the student's note is clear enough.</td></tr>
+          <tr><td>Revision</td><td>Add academic revisions and monitor completion status.</td><td>Use specific and measurable revision notes.</td></tr>
+          <tr><td>Score Entry</td><td>Enter SUR, SKR, or SAM rubric scores according to the schedule and assessor role.</td><td>Save scores only after all rubric components are filled.</td></tr>
+          <tr><td>Documents &amp; Publications</td><td>Review manuscripts, slides, submission evidence, and publication status.</td><td>Make sure Google Drive links are accessible to the relevant lecturers.</td></tr>
+        </table>
+      </section>
+
+      <section class="panel">
+        <h2>5. Examiner Guide</h2>
+        <p>Examiners consist of Examiner 1 and Examiner 2. Their main role is to review academic documents, provide revision notes, and enter rubric-based scores for SUR, SKR, or SAM.</p>
+        <div class="process" aria-label="Examiner workflow">
+          <span>Select Student</span><span>Check Documents</span><span>Read Manuscript</span><span>Add Revisions</span><span>Enter Scores</span><span>Check Recap</span>
+        </div>
+        <p class="note"><b>Note:</b> examiners only see students linked to their email as Examiner 1 or Examiner 2.</p>
+      </section>
+
+      <section class="panel">
+        <h2>6. Student Account Guide</h2>
+        <p>The student account documents personal thesis activities. Students should keep log books, documents, publications, and revision updates current.</p>
+        <table>
+          <tr><th>Menu</th><th>Student Responsibility</th><th>Good Entry Standard</th></tr>
+          <tr><td>Thesis Title</td><td>Enter initial and revised titles for PRA-SUR, SUR, SKR, or SAM.</td><td>The title should be clear, specific, and include object/method/context when relevant.</td></tr>
+          <tr><td>Log Book</td><td>Record every supervision activity.</td><td>Write agenda, lecturer feedback, follow-up actions, and completion targets clearly.</td></tr>
+          <tr><td>Documents</td><td>Upload links to proposal, SKR manuscript, final thesis, slides, and supporting evidence.</td><td>Use Drive links accessible to supervisors, examiners, and Head of Program.</td></tr>
+          <tr><td>Revision</td><td>Monitor and complete revisions from supervisors, examiners, or Head of Program.</td><td>Update status after completion and add evidence URL when available.</td></tr>
+          <tr><td>Publication</td><td>Enter thesis article status.</td><td>Complete article title, journal name, ranking, status, submission date, and evidence URL.</td></tr>
+          <tr><td>Scores</td><td>View the score recap that has been submitted.</td><td>Students cannot enter or change scores.</td></tr>
+        </table>
+      </section>
+
+      <section class="panel">
+        <h2>7. Print &amp; Email Menu</h2>
+        <p>This menu has two modes. The <b>Head of Program</b> creates one complete combined report for a student. <b>Students</b> create separate documents: Logbook, Score Recap, or Revisions.</p>
+        <table>
+          <tr><th>Account</th><th>Selector</th><th>Buttons</th><th>Function</th></tr>
+          <tr><td>Head of Program</td><td>Select a student.</td><td>Preview Complete Report, Download PDF, Send One PDF by Email</td><td>Creates a complete report containing log book, score recap, lecturer scores, and revision results.</td></tr>
+          <tr><td>Student</td><td>Select document type: Logbook, Score Recap, or Revision; select stage when needed.</td><td>Preview, Download PDF, Send Email</td><td>Creates separate PDF documents for records or delivery.</td></tr>
+        </table>
+      </section>
+
+      <section class="panel">
+        <h2>8. Minimum Data Standard</h2>
+        <table>
+          <tr><th>Data</th><th>Required Fields</th><th>Impact If Empty</th></tr>
+          <tr><td>Student</td><td>Student ID, name, student email.</td><td>The student may not appear in selectors and student access may fail.</td></tr>
+          <tr><td>Supervisors</td><td>Main/Co-Supervisor names and emails.</td><td>Lecturers may not see supervised students and report emails may be incomplete.</td></tr>
+          <tr><td>Examiners</td><td>Examiner 1 and Examiner 2 names and emails.</td><td>Examiners may not be able to enter scores or receive reports.</td></tr>
+          <tr><td>Schedule</td><td>Stage, date, time, mode, room/link.</td><td>SUR/SKR/SAM progress is difficult to monitor.</td></tr>
+          <tr><td>Scores</td><td>Rubric score and assessor notes.</td><td>The score recap is not final.</td></tr>
+          <tr><td>Publication</td><td>Article title, journal, status, evidence URL.</td><td>SAM/yudisium readiness is not documented.</td></tr>
+        </table>
+      </section>
+
+      <section class="panel">
+        <h2>9. Quick Troubleshooting</h2>
+        <table>
+          <tr><th>Problem</th><th>Possible Cause</th><th>Solution</th></tr>
+          <tr><td>Student name does not appear</td><td>Student data is empty, role access is mismatched, or Code.gs and Index.html are from different packages.</td><td>Run <code>CEK_DATABASE_YANG_DIBACA()</code>, check Head of Program email, then redeploy the latest version.</td></tr>
+          <tr><td>Lecturer cannot see students</td><td>Lecturer email in the master data differs from the login email.</td><td>Synchronize emails in Student Data and Lecturer Data.</td></tr>
+          <tr><td>Student cannot log in</td><td>Email/student ID does not match the student master data.</td><td>Correct the student email or use manual login with email + student ID.</td></tr>
+          <tr><td>PDF is not sent</td><td>Recipient email is empty or Apps Script has not been authorized to send email.</td><td>Complete recipient emails and rerun after authorization.</td></tr>
+        </table>
+      </section>
+
+      <section class="panel">
+        <h2>10. Operational Checklist</h2>
+        <table>
+          <tr><th>Role</th><th>Daily/Weekly Checklist</th></tr>
+          <tr><td>Head of Program</td><td>Check active students, upcoming schedules, open revisions, incomplete scores, unpublished submissions, and send progress reports when needed.</td></tr>
+          <tr><td>Supervisor</td><td>Validate log books, provide academic notes, review documents, monitor revisions, and enter scores according to schedule.</td></tr>
+          <tr><td>Examiner</td><td>Review documents before seminars/defense, record revisions, and enter scores after the session.</td></tr>
+          <tr><td>Student</td><td>Update log book, upload latest documents, complete revisions, and update publication status.</td></tr>
+        </table>
+      </section>
+    </main>
+
+    <p class="footer-note">Panduan ini dibuat sebagai halaman terpisah agar akses Sistem Tesis Online tetap ringan dan mudah dibuka.</p>
+  </div>
+
+  <script>
+    const labels = {
+      id: {
+        kicker: "Panduan Akademik Digital",
+        title: "Panduan Sistem Tesis Online",
+        subtitle: "Panduan penggunaan untuk Kaprodi, dosen pembimbing, dosen penguji, dan mahasiswa S2 Statistika Terapan FMIPA Universitas Padjadjaran.",
+        openApp: "Buka Tesis Online",
+        print: "Cetak / Simpan PDF",
+        back: "Kembali ke Website",
+        tocTitle: "Daftar Isi",
+        tocOverview: "Pendahuluan",
+        tocAccess: "Hak Akses",
+        tocHead: "Kaprodi",
+        tocSupervisor: "Pembimbing",
+        tocExaminer: "Penguji",
+        tocStudent: "Mahasiswa",
+        tocPrint: "Cetak & Email",
+        tocData: "Standar Data",
+        tocTrouble: "Troubleshooting",
+        tocChecklist: "Checklist"
+      },
+      en: {
+        kicker: "Digital Academic Guide",
+        title: "Online Thesis System Guide",
+        subtitle: "A usage guide for the Head of Program, supervisors, examiners, and students of the Applied Statistics Master's Program, FMIPA Universitas Padjadjaran.",
+        openApp: "Open Online Thesis",
+        print: "Print / Save PDF",
+        back: "Back to Website",
+        tocTitle: "Contents",
+        tocOverview: "Overview",
+        tocAccess: "Access Rights",
+        tocHead: "Program Head",
+        tocSupervisor: "Supervisors",
+        tocExaminer: "Examiners",
+        tocStudent: "Students",
+        tocPrint: "Print & Email",
+        tocData: "Data Standard",
+        tocTrouble: "Troubleshooting",
+        tocChecklist: "Checklist"
+      }
+    };
+
+    function setGuideLanguage(lang) {
+      const dictionary = labels[lang] || labels.id;
+      document.documentElement.lang = lang;
+      document.querySelectorAll("[data-label]").forEach((node) => {
+        const key = node.dataset.label;
+        if (dictionary[key]) node.textContent = dictionary[key];
+      });
+      document.querySelectorAll("[data-guide-lang]").forEach((node) => {
+        node.classList.toggle("active", node.dataset.guideLang === lang);
+      });
+      document.querySelectorAll("[data-set-lang]").forEach((button) => {
+        const active = button.dataset.setLang === lang;
+        button.classList.toggle("active", active);
+        button.setAttribute("aria-pressed", String(active));
+      });
+      try { localStorage.setItem("tesisGuideLang", lang); } catch (error) {}
+    }
+
+    document.querySelectorAll("[data-set-lang]").forEach((button) => {
+      button.addEventListener("click", () => setGuideLanguage(button.dataset.setLang));
+    });
+
+    const initial = new URLSearchParams(location.search).get("lang")
+      || localStorage.getItem("tesisGuideLang")
+      || document.documentElement.lang
+      || "id";
+    setGuideLanguage(initial === "en" ? "en" : "id");
+  </script>
+</body>
+</html>
