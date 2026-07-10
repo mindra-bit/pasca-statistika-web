@@ -241,7 +241,7 @@ const FALLBACK_KNOWLEDGE = [
 
 const STOPWORDS = new Set("yang dan untuk dengan pada dalam sebagai dari ke di ini itu adalah atau serta oleh agar akan dapat karena maka jika sudah telah juga yaitu bagi antara menjadi memiliki secara program studi magister statistika terapan unpad fmipa universitas padjadjaran kurikulum dokumen tahun prodi pertanyaan jawaban jawab chatbot chatboot luar s2 apa saja berapa".split(" "));
 const GENERIC_QUERY_TERMS = new Set("silabus sylabus rps materi referensi deskripsi bahan kajian topik perkuliahan mata kuliah matakuliah course".split(" "));
-const THESIS_ONLINE_URL = "https://script.google.com/a/macros/unpad.ac.id/s/AKfycbxm1xzT4DWyfYu9BoGXtnfW-B7weQvElReHhiexiqyFZ7EyAcaQq6j7g-JMEmmPLl4q-A/exec";
+const THESIS_ONLINE_URL = "https://script.google.com/a/macros/unpad.ac.id/s/AKfycbwW6WI3A8VNTg9sAsmncazNXyXj63MawuzJBOhbS4J4FCsO9vH0NCLkHyWLq_zN8Un7/exec";
 const THESIS_ONLINE_GUIDE_URL = "panduan-tesis-online.html";
 
 let knowledge = FALLBACK_KNOWLEDGE;
