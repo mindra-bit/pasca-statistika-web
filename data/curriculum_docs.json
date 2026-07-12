@@ -1,6 +1,6 @@
 {
   "source": "Dokumen Kurikulum",
-  "generatedAt": "2026-06-14T08:24:44.516Z",
+  "generatedAt": "2026-07-12T13:42:25.186Z",
   "total": 4,
   "documents": [
     {
@@ -46,18 +46,19 @@
       "source": "Dokumen Kurikulum"
     },
     {
-      "id": "kurikulum-2026",
-      "period": "2026",
-      "title": "Kurikulum 2026",
-      "titleId": "Kurikulum 2026",
-      "titleEn": "Curriculum 2026",
-      "description": "Dokumen kurikulum OBE 2026 yang menjadi rujukan utama struktur studi, mata kuliah, CPL, bahan kajian, dan skema penyelesaian.",
-      "descriptionId": "Dokumen kurikulum OBE 2026 yang menjadi rujukan utama struktur studi, mata kuliah, CPL, bahan kajian, dan skema penyelesaian.",
-      "descriptionEn": "The 2026 OBE curriculum document, the main reference for study structure, courses, learning outcomes, knowledge areas, and completion schemes.",
+      "id": "kurikulum-2025-revisi",
+      "period": "2025 Revisi",
+      "title": "Kurikulum OBE 2025 Edisi Revisi",
+      "titleId": "Kurikulum OBE 2025 Edisi Revisi",
+      "titleEn": "2025 OBE Curriculum, Revised Edition",
+      "description": "Dokumen Kurikulum OBE 2025 Edisi Revisi yang menjadi rujukan utama struktur studi, mata kuliah, CPL, bahan kajian, RPL, dan skema penyelesaian.",
+      "descriptionId": "Dokumen Kurikulum OBE 2025 Edisi Revisi yang menjadi rujukan utama struktur studi, mata kuliah, CPL, bahan kajian, RPL, dan skema penyelesaian.",
+      "descriptionEn": "The 2025 OBE Curriculum Revised Edition, the main reference for study structure, courses, learning outcomes, knowledge areas, RPL, and completion schemes.",
       "file": "Kurikulum 2026.pdf",
       "href": "Kurikulum%202026.pdf",
-      "sizeKb": 4611,
-      "source": "Dokumen Kurikulum"
+      "sizeKb": 2135,
+      "source": "Dokumen Kurikulum",
+      "htmlHref": "kurikulum_obe_2025_edisi_revisi_web/index.html"
     }
   ]
 }

@@ -34,12 +34,13 @@ const sourceFiles = [
     descriptionEn: "The 2025 curriculum document, representing the transition toward stronger outcome-based curriculum design."
   },
   {
-    period: "2026",
+    period: "2025 Revisi",
     file: "Kurikulum 2026.pdf",
-    titleId: "Kurikulum 2026",
-    titleEn: "Curriculum 2026",
-    descriptionId: "Dokumen kurikulum OBE 2026 yang menjadi rujukan utama struktur studi, mata kuliah, CPL, bahan kajian, dan skema penyelesaian.",
-    descriptionEn: "The 2026 OBE curriculum document, the main reference for study structure, courses, learning outcomes, knowledge areas, and completion schemes."
+    htmlFile: "kurikulum_obe_2025_edisi_revisi_web/index.html",
+    titleId: "Kurikulum OBE 2025 Edisi Revisi",
+    titleEn: "2025 OBE Curriculum, Revised Edition",
+    descriptionId: "Dokumen Kurikulum OBE 2025 Edisi Revisi yang menjadi rujukan utama struktur studi, mata kuliah, CPL, bahan kajian, RPL, dan skema penyelesaian.",
+    descriptionEn: "The 2025 OBE Curriculum Revised Edition, the main reference for study structure, courses, learning outcomes, knowledge areas, RPL, and completion schemes."
   }
 ];
 
@@ -61,7 +62,7 @@ const documents = sourceFiles.map((item) => {
   }
   const stat = fs.statSync(fullPath);
   const href = encodeHref(path.relative(rootDir, fullPath));
-  return {
+  const document = {
     id: `kurikulum-${slugify(item.period)}`,
     period: item.period,
     title: item.titleId,
@@ -75,6 +76,14 @@ const documents = sourceFiles.map((item) => {
     sizeKb: Math.round(stat.size / 1024),
     source: "Dokumen Kurikulum"
   };
+  if (item.htmlFile) {
+    const htmlPath = path.join(rootDir, item.htmlFile);
+    if (!fs.existsSync(htmlPath)) {
+      throw new Error(`File HTML kurikulum tidak ditemukan: ${htmlPath}`);
+    }
+    document.htmlHref = encodeHref(path.relative(rootDir, htmlPath));
+  }
+  return document;
 });
 
 const manifest = {
@@ -94,7 +103,7 @@ if (fs.existsSync(chunksPath)) {
     title: doc.title,
     sourceTitle: doc.title,
     sourceUrl: doc.href,
-    text: `${doc.title} atau ${doc.titleEn} tersedia sebagai dokumen PDF. Periode: ${doc.period}. Link: ${doc.href}. File: ${doc.file}. Ukuran: ${doc.sizeKb} KB. ${doc.descriptionId} ${doc.descriptionEn}`
+    text: `${doc.title} atau ${doc.titleEn} tersedia sebagai dokumen PDF${doc.htmlHref ? " dan versi web HTML" : ""}. Periode: ${doc.period}. Link PDF: ${doc.href}.${doc.htmlHref ? ` Link web: ${doc.htmlHref}.` : ""} File: ${doc.file}. Ukuran: ${doc.sizeKb} KB. ${doc.descriptionId} ${doc.descriptionEn}`
   }));
   fs.writeFileSync(chunksPath, `${JSON.stringify([...retained, ...curriculumChunks], null, 2)}\n`);
 }

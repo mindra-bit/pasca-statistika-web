@@ -3631,34 +3631,6 @@
     "text": "RPS Teori Risiko tersedia sebagai dokumen Rencana Pembelajaran Semester atau RPS 2026. Mata kuliah Teori Risiko termasuk kelompok Pilihan, 3 SKS, kode 140720-UND202522013. Link PDF RPS: %40RPS%202026/RPS%20OBE%202026%20Matakuliah%20Pilihan/Teori%20Risiko/RPS%20Teori%20Risiko.pdf. Dokumen Rencana Pembelajaran Semester untuk mata kuliah Teori Risiko pada Kurikulum OBE 2026. Semester Learning Plan document for Teori Risiko in the 2026 OBE curriculum."
   },
   {
-    "id": "curriculum-doc-kurikulum-2020-2022",
-    "title": "Kurikulum 2020-2022",
-    "sourceTitle": "Kurikulum 2020-2022",
-    "sourceUrl": "Kurikulum%202020-2022.pdf",
-    "text": "Kurikulum 2020-2022 atau Curriculum 2020-2022 tersedia sebagai dokumen PDF. Periode: 2020-2022. Link: Kurikulum%202020-2022.pdf. File: Kurikulum 2020-2022.pdf. Ukuran: 15164 KB. Dokumen kurikulum periode 2020-2022 sebagai arsip akademik dan rujukan historis program studi. Curriculum document for the 2020-2022 period, provided as an academic archive and historical program reference."
-  },
-  {
-    "id": "curriculum-doc-kurikulum-2023-2024",
-    "title": "Kurikulum 2023-2024",
-    "sourceTitle": "Kurikulum 2023-2024",
-    "sourceUrl": "Kurikulum%202023-2024.pdf",
-    "text": "Kurikulum 2023-2024 atau Curriculum 2023-2024 tersedia sebagai dokumen PDF. Periode: 2023-2024. Link: Kurikulum%202023-2024.pdf. File: Kurikulum 2023-2024.pdf. Ukuran: 9142 KB. Dokumen kurikulum periode 2023-2024 untuk melihat struktur akademik dan perkembangan kurikulum sebelum pembaruan berikutnya. Curriculum document for the 2023-2024 period, useful for reviewing academic structure and curriculum development before later updates."
-  },
-  {
-    "id": "curriculum-doc-kurikulum-2025",
-    "title": "Kurikulum 2025",
-    "sourceTitle": "Kurikulum 2025",
-    "sourceUrl": "Kurikulum%202025.pdf",
-    "text": "Kurikulum 2025 atau Curriculum 2025 tersedia sebagai dokumen PDF. Periode: 2025. Link: Kurikulum%202025.pdf. File: Kurikulum 2025.pdf. Ukuran: 10614 KB. Dokumen kurikulum 2025 sebagai transisi menuju penguatan kurikulum berbasis capaian pembelajaran. The 2025 curriculum document, representing the transition toward stronger outcome-based curriculum design."
-  },
-  {
-    "id": "curriculum-doc-kurikulum-2026",
-    "title": "Kurikulum 2026",
-    "sourceTitle": "Kurikulum 2026",
-    "sourceUrl": "Kurikulum%202026.pdf",
-    "text": "Kurikulum 2026 atau Curriculum 2026 tersedia sebagai dokumen PDF. Periode: 2026. Link: Kurikulum%202026.pdf. File: Kurikulum 2026.pdf. Ukuran: 4611 KB. Dokumen kurikulum OBE 2026 yang menjadi rujukan utama struktur studi, mata kuliah, CPL, bahan kajian, dan skema penyelesaian. The 2026 OBE curriculum document, the main reference for study structure, courses, learning outcomes, knowledge areas, and completion schemes."
-  },
-  {
     "id": "s3-overview",
     "title": "Web S3 Statistika",
     "sourceTitle": "Kurikulum S3 Statistika",
@@ -4124,5 +4096,61 @@
     "sourceTitle": "Dokumen Akademik S2",
     "sourceUrl": "%40SOP/DOKUMEN%20AKADEMIK%20S2.pdf",
     "text": "Panduan Akademik S2 Statistika Terapan tersedia dalam folder @SOP dengan nama file DOKUMEN AKADEMIK S2.pdf. Dokumen ini menjadi rujukan cepat untuk ketentuan akademik dan SOP penyelenggaraan Program S2 Statistika Terapan. Dokumen PDF berisi 54 halaman dengan ukuran sekitar 9.7 MB. Link: %40SOP/DOKUMEN%20AKADEMIK%20S2.pdf"
+  },
+  {
+    "id": "curriculum-doc-kurikulum-2020-2022",
+    "title": "Kurikulum 2020-2022",
+    "sourceTitle": "Kurikulum 2020-2022",
+    "sourceUrl": "Kurikulum%202020-2022.pdf",
+    "text": "Kurikulum 2020-2022 atau Curriculum 2020-2022 tersedia sebagai dokumen PDF. Periode: 2020-2022. Link PDF: Kurikulum%202020-2022.pdf. File: Kurikulum 2020-2022.pdf. Ukuran: 15164 KB. Dokumen kurikulum periode 2020-2022 sebagai arsip akademik dan rujukan historis program studi. Curriculum document for the 2020-2022 period, provided as an academic archive and historical program reference."
+  },
+  {
+    "id": "curriculum-doc-kurikulum-2023-2024",
+    "title": "Kurikulum 2023-2024",
+    "sourceTitle": "Kurikulum 2023-2024",
+    "sourceUrl": "Kurikulum%202023-2024.pdf",
+    "text": "Kurikulum 2023-2024 atau Curriculum 2023-2024 tersedia sebagai dokumen PDF. Periode: 2023-2024. Link PDF: Kurikulum%202023-2024.pdf. File: Kurikulum 2023-2024.pdf. Ukuran: 9142 KB. Dokumen kurikulum periode 2023-2024 untuk melihat struktur akademik dan perkembangan kurikulum sebelum pembaruan berikutnya. Curriculum document for the 2023-2024 period, useful for reviewing academic structure and curriculum development before later updates."
+  },
+  {
+    "id": "curriculum-doc-kurikulum-2025",
+    "title": "Kurikulum 2025",
+    "sourceTitle": "Kurikulum 2025",
+    "sourceUrl": "Kurikulum%202025.pdf",
+    "text": "Kurikulum 2025 atau Curriculum 2025 tersedia sebagai dokumen PDF. Periode: 2025. Link PDF: Kurikulum%202025.pdf. File: Kurikulum 2025.pdf. Ukuran: 10614 KB. Dokumen kurikulum 2025 sebagai transisi menuju penguatan kurikulum berbasis capaian pembelajaran. The 2025 curriculum document, representing the transition toward stronger outcome-based curriculum design."
+  },
+  {
+    "id": "curriculum-doc-kurikulum-2025-revisi",
+    "title": "Kurikulum OBE 2025 Edisi Revisi",
+    "sourceTitle": "Kurikulum OBE 2025 Edisi Revisi",
+    "sourceUrl": "Kurikulum%202026.pdf",
+    "text": "Kurikulum OBE 2025 Edisi Revisi atau 2025 OBE Curriculum, Revised Edition tersedia sebagai dokumen PDF dan versi web HTML. Periode: 2025 Revisi. Link PDF: Kurikulum%202026.pdf. Link web: kurikulum_obe_2025_edisi_revisi_web/index.html. File: Kurikulum 2026.pdf. Ukuran: 2135 KB. Dokumen Kurikulum OBE 2025 Edisi Revisi yang menjadi rujukan utama struktur studi, mata kuliah, CPL, bahan kajian, RPL, dan skema penyelesaian. The 2025 OBE Curriculum Revised Edition, the main reference for study structure, courses, learning outcomes, knowledge areas, RPL, and completion schemes."
+  },
+  {
+    "id": "education-guide-html-s2",
+    "title": "Pedoman Pendidikan S2 Statistika Terapan versi web",
+    "sourceTitle": "Buku Pedoman Akademik S2 Statistika Terapan",
+    "sourceUrl": "%40Pedoman%20Pendidikan/Buku%20Pedoman%20Akademik%20S2%20Statistika%20Terapan.html",
+    "text": "Pedoman Pendidikan S2 Statistika Terapan tersedia dalam versi HTML di folder @Pedoman Pendidikan. Dokumen ini menjadi rujukan pendidikan dan administrasi akademik program. Link HTML: %40Pedoman%20Pendidikan/Buku%20Pedoman%20Akademik%20S2%20Statistika%20Terapan.html"
+  },
+  {
+    "id": "education-guide-pdf-s2",
+    "title": "Buku Pedoman Akademik S2 Statistika Terapan",
+    "sourceTitle": "Buku Pedoman Akademik S2 Statistika Terapan 2026",
+    "sourceUrl": "%40Pedoman%20Pendidikan/Buku%20Pedoman%20Akademik%20S2%20Statistika%20Terapan%202026.pdf",
+    "text": "Buku Pedoman Akademik S2 Statistika Terapan tersedia dalam format PDF di folder @Pedoman Pendidikan. Dokumen PDF berukuran sekitar 28.2 MB dan menjadi arsip resmi pedoman pendidikan program. Link PDF: %40Pedoman%20Pendidikan/Buku%20Pedoman%20Akademik%20S2%20Statistika%20Terapan%202026.pdf"
+  },
+  {
+    "id": "ai-guide-rector-regulation-2025",
+    "title": "Peraturan Rektor No. 8 Tahun 2025 tentang penggunaan AI generatif",
+    "sourceTitle": "Salinan Peraturan Rektor No. 8 Tahun 2025",
+    "sourceUrl": "%40Panduan%20Penggunaan%20AI/Salinan%20Peraturan%20Rektor%20No.%208%20Tahun%202025%20Tentang%20Penggunaan%20Kecerdasan%20Buatan%20Generatif%20Dalam%20Kegiatan%20Pembelajaran%20di%20Lingkungan%20Unpad.pdf",
+    "text": "Peraturan Rektor No. 8 Tahun 2025 mengatur penggunaan kecerdasan buatan generatif dalam kegiatan pembelajaran di lingkungan Universitas Padjadjaran. Dokumen tersedia dalam folder @Panduan Penggunaan AI. Link PDF: %40Panduan%20Penggunaan%20AI/Salinan%20Peraturan%20Rektor%20No.%208%20Tahun%202025%20Tentang%20Penggunaan%20Kecerdasan%20Buatan%20Generatif%20Dalam%20Kegiatan%20Pembelajaran%20di%20Lingkungan%20Unpad.pdf"
+  },
+  {
+    "id": "ai-guide-higher-education-book",
+    "title": "Buku Panduan Penggunaan AI Perguruan Tinggi",
+    "sourceTitle": "Buku Panduan Penggunaan AI Perguruan Tinggi",
+    "sourceUrl": "%40Panduan%20Penggunaan%20AI/Buku%20Panduan%20Penggunaan%20AI%20Perguruan%20Tinggi.pdf",
+    "text": "Buku Panduan Penggunaan AI Perguruan Tinggi berisi rujukan praktis pemanfaatan AI generatif dalam pembelajaran, penulisan, asesmen, dan etika akademik pendidikan tinggi. Dokumen tersedia dalam folder @Panduan Penggunaan AI. Link PDF: %40Panduan%20Penggunaan%20AI/Buku%20Panduan%20Penggunaan%20AI%20Perguruan%20Tinggi.pdf"
   }
 ]
