@@ -158,16 +158,16 @@ const INSPIRATION_VOICES = [
 
 const FACTS = {
   sks: {
-    answer: "Berdasarkan dokumen Kurikulum OBE 2026, beban studi S2 Statistika Terapan adalah 42 SKS. Jalur berbasis kuliah terdiri atas 21 SKS mata kuliah wajib, 9 SKS mata kuliah pilihan, dan 12 SKS tesis: Seminar Usulan Riset 2 SKS, Seminar Kemajuan Riset 4 SKS, dan Sidang Akhir Magister 6 SKS.",
-    sources: [{ page: 6, title: "Struktur SKS 2026" }, { page: 19, title: "Struktur berbasis kuliah" }]
+    answer: "Berdasarkan dokumen Kurikulum OBE 2025 Edisi Revisi, beban studi S2 Statistika Terapan adalah 42 SKS. Jalur berbasis kuliah terdiri atas 21 SKS mata kuliah wajib, 9 SKS mata kuliah pilihan, dan 12 SKS tesis: Seminar Usulan Riset 2 SKS, Seminar Kemajuan Riset 4 SKS, dan Sidang Akhir Magister 6 SKS.",
+    sources: [{ page: 6, title: "Struktur SKS 2025 Revisi" }, { page: 19, title: "Struktur berbasis kuliah" }]
   },
   jalur: {
-    answer: "Kurikulum OBE 2026 memuat tiga skema penyelesaian: program berbasis kuliah, program berbasis riset, dan jalur Rekognisi Pembelajaran Lampau (RPL). Jalur berbasis kuliah menempuh 42 SKS dengan 21 SKS wajib, 9 SKS pilihan, dan 12 SKS tesis. Jalur berbasis riset menempuh 42 SKS dengan 12 SKS wajib, 9 SKS keterampilan, 9 SKS publikasi, dan 12 SKS tesis. Jalur RPL memungkinkan rekognisi capaian pembelajaran untuk mata kuliah tertentu sesuai tabel RPL.",
+    answer: "Kurikulum OBE 2025 Edisi Revisi memuat tiga skema penyelesaian: program berbasis kuliah, program berbasis riset, dan jalur Rekognisi Pembelajaran Lampau (RPL). Jalur berbasis kuliah menempuh 42 SKS dengan 21 SKS wajib, 9 SKS pilihan, dan 12 SKS tesis. Jalur berbasis riset menempuh 42 SKS dengan 12 SKS wajib, 9 SKS keterampilan, 9 SKS publikasi, dan 12 SKS tesis. Jalur RPL memungkinkan rekognisi capaian pembelajaran untuk mata kuliah tertentu sesuai tabel RPL.",
     sources: [{ page: 19, title: "Berbasis kuliah" }, { page: 21, title: "Berbasis riset" }, { page: 23, title: "RPL" }]
   },
   rpl: {
-    answer: "Kurikulum OBE 2026 memuat jalur Rekognisi Pembelajaran Lampau (RPL). Calon mahasiswa melalui jalur RPL dapat mengajukan rekognisi atas capaian pembelajaran dari pendidikan formal sebelumnya, pembelajaran nonformal dan informal, atau pengalaman kerja. Mata kuliah yang dapat direkognisi mengikuti kolom RPL pada tabel Kurikulum 2026; mata kuliah tesis dan fondasi tertentu tetap ditempuh melalui prodi.",
-    sources: [{ page: 23, title: "RPL Kurikulum 2026" }]
+    answer: "Kurikulum OBE 2025 Edisi Revisi memuat jalur Rekognisi Pembelajaran Lampau (RPL). Calon mahasiswa melalui jalur RPL dapat mengajukan rekognisi atas capaian pembelajaran dari pendidikan formal sebelumnya, pembelajaran nonformal dan informal, atau pengalaman kerja. Mata kuliah yang dapat direkognisi mengikuti kolom RPL pada tabel Kurikulum OBE 2025 Edisi Revisi; mata kuliah tesis dan fondasi tertentu tetap ditempuh melalui prodi.",
+    sources: [{ page: 23, title: "RPL Kurikulum 2025 Revisi" }]
   },
   visi: {
     answer: "Visi Prodi Magister Statistika Terapan adalah menjadi pusat pendidikan Magister Statistika yang unggul dalam pendidikan dan riset, diakui secara internasional, serta memberikan dampak nyata bagi masyarakat, khususnya dalam bidang statistika bisnis dan industri, statistika sosial, aktuaria, biostatistika, dan sains data.",
@@ -190,12 +190,12 @@ const FACTS = {
     sources: [{ page: 8, title: "CPL 2026" }]
   },
   bahanKajian: {
-    answer: "Bahan kajian Kurikulum OBE 2026 meliputi BK1 Statistika Teoritis dan Parametrik, BK2 Statistika Komputasi dan Nonparametrik, BK3 Statistika Terapan Bisnis dan Industri, BK4 Statistika Terapan Sosial, BK5 Statistika Terapan Aktuaria, BK6 Statistika Terapan Biostatistika, BK7 Statistika Terapan Sains Data, dan BK8 Penelitian dan Publikasi.",
-    sources: [{ page: 12, title: "Bahan kajian 2026" }]
+    answer: "Bahan kajian Kurikulum OBE 2025 Edisi Revisi meliputi BK1 Statistika Teoritis dan Parametrik, BK2 Statistika Komputasi dan Nonparametrik, BK3 Statistika Terapan Bisnis dan Industri, BK4 Statistika Terapan Sosial, BK5 Statistika Terapan Aktuaria, BK6 Statistika Terapan Biostatistika, BK7 Statistika Terapan Sains Data, dan BK8 Penelitian dan Publikasi.",
+    sources: [{ page: 12, title: "Bahan kajian 2025 Revisi" }]
   },
   mataKuliah: {
-    answer: "Daftar mata kuliah Kurikulum 2026 antara lain Statistika Inferensial, Komputasi Statistik dan Optimasi, Analisis Multivariat Tingkat Lanjut, Analisis Regresi Tingkat Lanjut, Proses Stokastik Tingkat Lanjut, Analisis Deret Waktu Tingkat Lanjut, Tinjauan Literatur Sistematis, Asistensi Perkuliahan, Statistika Nonparametrik dan Pemodelan Fleksibel, Penambangan Data dan Kecerdasan Buatan, Analisis Spasial, Pembelajaran Mesin, Analisis Citra, Analisis Teks, Basis Data, Sampling Survey, SUR, SKR, Publikasi, dan Sidang Akhir Magister.",
-    sources: [{ page: 14, title: "Daftar mata kuliah 2026" }]
+    answer: "Daftar mata kuliah Kurikulum OBE 2025 Edisi Revisi antara lain Statistika Inferensial, Komputasi Statistik dan Optimasi, Analisis Multivariat Tingkat Lanjut, Analisis Regresi Tingkat Lanjut, Proses Stokastik Tingkat Lanjut, Analisis Deret Waktu Tingkat Lanjut, Tinjauan Literatur Sistematis, Asistensi Perkuliahan, Statistika Nonparametrik dan Pemodelan Fleksibel, Penambangan Data dan Kecerdasan Buatan, Analisis Spasial, Pembelajaran Mesin, Analisis Citra, Analisis Teks, Basis Data, Sampling Survey, SUR, SKR, Publikasi, dan Sidang Akhir Magister.",
+    sources: [{ page: 14, title: "Daftar mata kuliah 2025 Revisi" }]
   },
   sejarah: {
     answer: "Program Magister Statistika Terapan FMIPA Unpad dibuka mengacu pada SK Dikti No. 117/D/T/2007 tertanggal 18 Januari 2007 dan perpanjangan izin dengan SK Rektor Universitas Padjadjaran No.6626/D/T/K-N/2011.",
@@ -594,7 +594,7 @@ const I18N = {
     pillDataScience: "Sains Data",
     visionMissionKicker: "Visi dan Misi",
     visionMissionTitle: "Arah pengembangan Program Magister Statistika Terapan.",
-    visionMissionText: "Visi dan misi program studi dirangkum dari dokumen Kurikulum OBE 2026 sebagai dasar penyelenggaraan pendidikan, riset, kerja sama, dan publikasi ilmiah.",
+    visionMissionText: "Visi dan misi program studi dirangkum dari dokumen Kurikulum OBE 2025 Edisi Revisi sebagai dasar penyelenggaraan pendidikan, riset, kerja sama, dan publikasi ilmiah.",
     visionLabel: "Visi",
     visionTitle: "Menjadi pusat pendidikan Magister Statistika yang unggul.",
     visionText: "Menjadi pusat pendidikan Magister Statistika yang unggul dalam pendidikan dan riset, diakui secara internasional, serta memberikan dampak nyata bagi masyarakat, khususnya dalam bidang statistika bisnis dan industri, statistika sosial, aktuaria, biostatistika, dan sains data.",
@@ -605,7 +605,7 @@ const I18N = {
     mission3: "Mengembangkan kerja sama nasional dan internasional untuk memperkuat pendidikan, riset, dan jejaring akademik.",
     mission4: "Mendorong publikasi ilmiah bereputasi sebagai kontribusi program studi pada pengembangan keilmuan.",
     visionSourceTitle: "Sumber",
-    visionSourceText: "Dokumen Kurikulum OBE 2026 Program Magister Statistika Terapan.",
+    visionSourceText: "Dokumen Kurikulum OBE 2025 Edisi Revisi Program Magister Statistika Terapan.",
     curriculumKicker: "Struktur Kurikulum",
     curriculumTitle: "Struktur 42 SKS dengan jalur kuliah, riset, dan RPL.",
     curriculumText: "Kurikulum OBE 2025 Edisi Revisi dirancang untuk memperkuat penguasaan teori, kemampuan analitik, kompetensi riset, rekognisi pembelajaran, dan publikasi ilmiah.",
@@ -967,7 +967,7 @@ const I18N = {
     testimonialPlay: "Putar video",
     testimonialUnsupported: "Browser Anda tidak mendukung pemutar video HTML5.",
     coursesKicker: "Mata Kuliah",
-    coursesTitle: "Daftar mata kuliah Kurikulum 2026",
+    coursesTitle: "Daftar mata kuliah Kurikulum OBE 2025 Edisi Revisi",
     coursesSearchLabel: "Cari mata kuliah",
     coursesSearchPlaceholder: "Machine learning, spasial, survival...",
     filterAll: "Semua",
@@ -988,7 +988,7 @@ const I18N = {
     materialsShown: "materi tampil",
     materialsAsk: "Tanyakan materi ke chatbot",
     syllabusKicker: "Silabus",
-    syllabusTitle: "Silabus mata kuliah dari Kurikulum 2026",
+    syllabusTitle: "Silabus mata kuliah dari Kurikulum OBE 2025 Edisi Revisi",
     syllabusText: "Setiap entri memuat deskripsi, bahan kajian, dan referensi yang diekstrak dari dokumen kurikulum resmi.",
     syllabusSearchLabel: "Cari silabus",
     syllabusSearchPlaceholder: "Pembelajaran Mesin, Basis Data, SUR...",
@@ -1060,7 +1060,7 @@ const I18N = {
     metricUnavailable: "Lihat dashboard",
     chatKicker: "Chatbot Akademik",
     chatTitle: "Tanya Kurikulum S2 Statistika Terapan",
-    chatText: "Jawaban chatbot ditambatkan pada ekstraksi dokumen Kurikulum OBE 2026, dokumen kurikulum 2020-2026, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM-Dosen, panduan akademik, panduan tesis, silabus mata kuliah, PDF RPS, katalog materi HTML, data lulusan, tracer study, LAMSAMA, Program Pengabdian, Special Moment, dan ringkasan administratif dari SMUP Program Magister.",
+    chatText: "Jawaban chatbot ditambatkan pada ekstraksi dokumen Kurikulum OBE 2025 Edisi Revisi, dokumen kurikulum 2020-2025 Revisi, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM-Dosen, panduan akademik, panduan tesis, silabus mata kuliah, PDF RPS, katalog materi HTML, data lulusan, tracer study, LAMSAMA, Program Pengabdian, Special Moment, dan ringkasan administratif dari SMUP Program Magister.",
     knowledgePieces: "potongan pengetahuan terindeks",
     assistantName: "Asisten Prodi",
     loadingKnowledge: "Memuat knowledge base",
@@ -1076,11 +1076,11 @@ const I18N = {
     promptThesisFlow: "SUR SKR SAM",
     promptAlumni: "Tesis lulusan",
     promptTracer: "Tracer 2026",
-    promptCurriculumDocs: "Dokumen 2026",
+    promptCurriculumDocs: "Dokumen 2025 Revisi",
     promptLectureEvaluation: "Evaluasi Perkuliahan",
     promptPbmEvaluation: "Evaluasi PBM-Dosen",
-    welcomeText: "Silakan ajukan pertanyaan tentang kurikulum 2026, dokumen kurikulum 2020-2026, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM-Dosen, jalur studi, SKS, CPL, panduan akademik, panduan tesis, SUR, SKR, SAM, silabus, PDF RPS, materi kuliah HTML, tracer study, kepuasan pengguna lulusan, LAMSAMA, Program Pengabdian, Special Moment, tesis lulusan, biaya, pendaftaran, dan profil lulusan S2 Statistika Terapan.",
-    welcomeSources: "Sumber utama: Kurikulum OBE 2026, dokumen kurikulum, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM-Dosen, panduan akademik, panduan tesis, data lulusan, tracer study, kepuasan pengguna lulusan, LAMSAMA, Program Pengabdian, Special Moment, RPS 2026, dan katalog materi kuliah",
+    welcomeText: "Silakan ajukan pertanyaan tentang Kurikulum OBE 2025 Edisi Revisi, dokumen kurikulum 2020-2025 Revisi, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM-Dosen, jalur studi, SKS, CPL, panduan akademik, panduan tesis, SUR, SKR, SAM, silabus, PDF RPS, materi kuliah HTML, tracer study, kepuasan pengguna lulusan, LAMSAMA, Program Pengabdian, Special Moment, tesis lulusan, biaya, pendaftaran, dan profil lulusan S2 Statistika Terapan.",
+    welcomeSources: "Sumber utama: Kurikulum OBE 2025 Edisi Revisi, dokumen kurikulum, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM-Dosen, panduan akademik, panduan tesis, data lulusan, tracer study, kepuasan pengguna lulusan, LAMSAMA, Program Pengabdian, Special Moment, RPS 2026, dan katalog materi kuliah",
     questionLabel: "Pertanyaan",
     questionPlaceholder: "Tulis pertanyaan...",
     send: "Kirim",
@@ -1770,7 +1770,7 @@ const I18N = {
     metricUnavailable: "View dashboard",
     chatKicker: "Academic Chatbot",
     chatTitle: "Ask About the Applied Statistics Master's Curriculum",
-    chatText: "The chatbot answers are grounded in the 2026 OBE curriculum extraction, 2020-2026 curriculum documents, course delivery evaluations, PBM-Lecturer Evaluation, academic guides, thesis guides, course syllabi, RPS PDFs, HTML learning material catalog, graduate data, tracer studies, LAMSAMA, community engagement reports, Special Moment gallery, and administrative summaries from SMUP.",
+    chatText: "The chatbot answers are grounded in the revised 2025 OBE curriculum extraction, 2020-2025 revised curriculum documents, course delivery evaluations, PBM-Lecturer Evaluation, academic guides, thesis guides, course syllabi, RPS PDFs, HTML learning material catalog, graduate data, tracer studies, LAMSAMA, community engagement reports, Special Moment gallery, and administrative summaries from SMUP.",
     knowledgePieces: "indexed knowledge chunks",
     assistantName: "Program Assistant",
     loadingKnowledge: "Loading knowledge base",
@@ -1786,11 +1786,11 @@ const I18N = {
     promptThesisFlow: "SUR SKR SAM",
     promptAlumni: "Graduate theses",
     promptTracer: "Tracer 2026",
-    promptCurriculumDocs: "2026 Document",
+    promptCurriculumDocs: "2025 Revised Document",
     promptLectureEvaluation: "Course Evaluation",
     promptPbmEvaluation: "PBM-Lecturer Evaluation",
-    welcomeText: "Ask about the 2026 curriculum, 2020-2026 curriculum documents, course delivery evaluations, PBM-Lecturer Evaluation, study pathways, credits, learning outcomes, academic guides, thesis guides, SUR, SKR, SAM, syllabi, RPS PDFs, HTML learning materials, tracer studies, graduate user satisfaction reports, LAMSAMA, community engagement reports, Special Moment gallery, graduate theses, fees, admissions, and graduate profiles.",
-    welcomeSources: "Main sources: 2026 OBE Curriculum, curriculum documents, course delivery evaluations, PBM-Lecturer Evaluation, academic guides, thesis guides, graduate data, tracer studies, graduate user satisfaction reports, LAMSAMA, community engagement reports, Special Moment gallery, RPS 2026, and learning material catalog",
+    welcomeText: "Ask about the revised 2025 OBE curriculum, 2020-2025 revised curriculum documents, course delivery evaluations, PBM-Lecturer Evaluation, study pathways, credits, learning outcomes, academic guides, thesis guides, SUR, SKR, SAM, syllabi, RPS PDFs, HTML learning materials, tracer studies, graduate user satisfaction reports, LAMSAMA, community engagement reports, Special Moment gallery, graduate theses, fees, admissions, and graduate profiles.",
+    welcomeSources: "Main sources: revised 2025 OBE Curriculum, curriculum documents, course delivery evaluations, PBM-Lecturer Evaluation, academic guides, thesis guides, graduate data, tracer studies, graduate user satisfaction reports, LAMSAMA, community engagement reports, Special Moment gallery, RPS 2026, and learning material catalog",
     questionLabel: "Question",
     questionPlaceholder: "Type a question...",
     send: "Send",
@@ -2614,7 +2614,7 @@ function buildCapabilityAnswer(question) {
   const answer = currentLang === "en"
     ? [
       "I can answer questions using the website knowledge base, including:",
-      "1. 2026 curriculum, credits, study pathways, RPL, CPL, and graduate profiles.",
+      "1. Revised 2025 OBE curriculum, credits, study pathways, RPL, CPL, and graduate profiles.",
       "2. Course syllabi, RPS/course plan PDFs, topics, references, and HTML learning materials.",
       "3. Academic guides, thesis guides, SUR, SKR, and Master's Final Defense.",
       "4. S3 Statistics information: vision, mission, objectives, graduate profiles, CPL, academic documents, and doctoral RPS files.",
@@ -2626,7 +2626,7 @@ function buildCapabilityAnswer(question) {
     ].join("\n")
     : [
       "Saya bisa menjawab pertanyaan berdasarkan knowledge base website, terutama:",
-      "1. Kurikulum 2026, SKS, jalur studi, RPL, CPL, dan profil lulusan.",
+      "1. Kurikulum OBE 2025 Edisi Revisi, SKS, jalur studi, RPL, CPL, dan profil lulusan.",
       "2. Silabus mata kuliah, PDF RPS, bahan kajian, referensi, dan materi HTML.",
       "3. Panduan akademik, panduan tesis, SUR, SKR, dan Sidang Akhir Magister.",
       "4. Informasi S3 Statistika: visi, misi, tujuan, profil lulusan, CPL, dokumen akademik, dan RPS doktoral.",
@@ -2653,7 +2653,7 @@ function buildSyllabusAnswer(question, hits) {
   if (!entry) return null;
 
   const wantsReferences = /referensi|daftar pustaka/.test(text) && !/silabus|rps|bahan kajian|materi|topik/.test(text);
-  const sources = [{ title: `Silabus ${entry.title} (Kurikulum 2026, Bagian 2.8)` }];
+  const sources = [{ title: `Silabus ${entry.title} (Kurikulum OBE 2025 Edisi Revisi, Bagian 2.8)` }];
 
   if (wantsReferences) {
     return {
