@@ -2335,6 +2335,10 @@ p {
   font-weight: 900;
   text-decoration: none;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .scholarship-note button {
@@ -2575,6 +2579,7 @@ p {
 }
 
 .lamsama-context button,
+.lamsama-accreditation-cta,
 .lamsama-card-actions a,
 .lamsama-card-actions button {
   min-height: 40px;
@@ -2591,6 +2596,26 @@ p {
 .lamsama-context button {
   color: #fff;
   background: var(--green);
+}
+
+.lamsama-accreditation-cta {
+  position: relative;
+  isolation: isolate;
+  color: #fff;
+  border-color: transparent;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0) 34%),
+    linear-gradient(125deg, #0b4ea2 0%, #f5c542 38%, #f97316 66%, #c81e3a 100%);
+  box-shadow: 0 14px 28px rgba(200, 30, 58, 0.22);
+}
+
+.lamsama-accreditation-cta::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  z-index: -1;
+  border-radius: 5px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0));
 }
 
 .lamsama-grid {
@@ -2724,7 +2749,8 @@ p {
 
 .lamsama-card-actions a:hover,
 .lamsama-card-actions button:hover,
-.lamsama-context button:hover {
+.lamsama-context button:hover,
+.lamsama-accreditation-cta:hover {
   filter: brightness(1.04);
 }
 
@@ -8270,6 +8296,7 @@ tbody tr:hover td {
   }
 
   .lamsama-context button,
+  .lamsama-accreditation-cta,
   .pkm-context button,
   .scholarship-note button {
     width: 100%;
