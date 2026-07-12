@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <base target="_top">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Persiapan Akreditasi 2027</title>
+  <style>
+    :root {
+      --blue: #0b4ea2;
+      --navy: #06213f;
+      --gold: #f5c542;
+      --orange: #f97316;
+      --red: #c81e3a;
+      --ink: #102033;
+      --muted: #64748b;
+      --paper: #ffffff;
+      --line: #dbe4f0;
+      --soft: #f6f8fb;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 12%, rgba(245, 197, 66, 0.25), transparent 28%),
+        radial-gradient(circle at 86% 18%, rgba(200, 30, 58, 0.18), transparent 30%),
+        linear-gradient(135deg, #f7fbff 0%, #fffaf0 46%, #fff5f5 100%);
+    }
+
+    .shell {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 34px 0;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+      gap: 26px;
+      align-items: stretch;
+      min-height: 520px;
+      border: 1px solid rgba(11, 78, 162, 0.14);
+      border-radius: 24px;
+      background:
+        linear-gradient(135deg, rgba(11, 78, 162, 0.97), rgba(6, 85, 117, 0.95) 44%, rgba(249, 115, 22, 0.88) 100%);
+      box-shadow: 0 24px 70px rgba(15, 23, 42, 0.18);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.10), transparent 38%),
+        radial-gradient(circle at 76% 18%, rgba(245, 197, 66, 0.28), transparent 22%),
+        radial-gradient(circle at 88% 78%, rgba(200, 30, 58, 0.30), transparent 24%);
+      pointer-events: none;
+    }
+
+    .hero-copy,
+    .login-card,
+    .dashboard {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 34px;
+      padding: 42px;
+      color: #fff;
+    }
+
+    .kicker {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 14px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff7d6;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 720px;
+      margin: 0;
+      font-size: clamp(34px, 6vw, 68px);
+      line-height: 0.95;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 660px;
+      margin: 20px 0 0;
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hero-pills span {
+      border-radius: 999px;
+      padding: 9px 12px;
+      background: rgba(255, 255, 255, 0.14);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .login-wrap {
+      display: flex;
+      align-items: center;
+      padding: 24px 24px 24px 0;
+    }
+
+    .login-card {
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.34);
+      border-radius: 18px;
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.93);
+      box-shadow: 0 20px 50px rgba(8, 21, 42, 0.20);
+      backdrop-filter: blur(14px);
+    }
+
+    .login-card h2,
+    .dashboard h2 {
+      margin: 0 0 8px;
+      font-size: 26px;
+      line-height: 1.15;
+    }
+
+    .login-card p,
+    .dashboard p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .field {
+      display: grid;
+      gap: 7px;
+      margin-top: 16px;
+    }
+
+    label {
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    input {
+      width: 100%;
+      min-height: 48px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 14px;
+      color: var(--ink);
+      font: inherit;
+      font-weight: 700;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 4px rgba(11, 78, 162, 0.12);
+    }
+
+    .password-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+    }
+
+    button,
+    .button {
+      min-height: 48px;
+      border: 0;
+      border-radius: 12px;
+      padding: 12px 16px;
+      color: #fff;
+      background: linear-gradient(125deg, var(--blue), var(--gold) 42%, var(--orange) 68%, var(--red));
+      font: inherit;
+      font-weight: 950;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 14px 24px rgba(200, 30, 58, 0.22);
+    }
+
+    button.secondary {
+      color: var(--blue);
+      background: #eef6ff;
+      box-shadow: none;
+    }
+
+    button:disabled {
+      cursor: wait;
+      opacity: 0.68;
+    }
+
+    .submit {
+      width: 100%;
+      margin-top: 18px;
+    }
+
+    .message {
+      min-height: 22px;
+      margin-top: 14px;
+      color: var(--red);
+      font-size: 13px;
+      font-weight: 850;
+      line-height: 1.45;
+    }
+
+    .message.ok {
+      color: #047857;
+    }
+
+    .security-note {
+      margin-top: 16px;
+      border-radius: 14px;
+      padding: 13px;
+      background: #fff7df;
+      color: #6f4d00;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.5;
+    }
+
+    .dashboard {
+      display: none;
+      border-radius: 24px;
+      margin-top: 24px;
+      padding: 28px;
+      background: var(--paper);
+      box-shadow: 0 18px 46px rgba(15, 23, 42, 0.10);
+      border: 1px solid rgba(11, 78, 162, 0.12);
+    }
+
+    body.authenticated .dashboard {
+      display: block;
+    }
+
+    body.authenticated .hero {
+      min-height: 320px;
+    }
+
+    body.authenticated .login-wrap {
+      display: none;
+    }
+
+    .dashboard-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .account-chip {
+      border-radius: 999px;
+      padding: 9px 12px;
+      background: #eef6ff;
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 950;
+      white-space: nowrap;
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .dash-card {
+      min-height: 180px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      background: linear-gradient(180deg, #fff, #f8fbff);
+    }
+
+    .dash-card strong {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--ink);
+      font-size: 18px;
+      line-height: 1.25;
+    }
+
+    .dash-card p {
+      font-size: 13px;
+    }
+
+    .dash-card.blue {
+      border-top: 5px solid var(--blue);
+    }
+
+    .dash-card.gold {
+      border-top: 5px solid var(--gold);
+    }
+
+    .dash-card.orange {
+      border-top: 5px solid var(--orange);
+    }
+
+    .dash-card.red {
+      border-top: 5px solid var(--red);
+    }
+
+    .protected-slot {
+      margin-top: 20px;
+      border: 1px dashed rgba(11, 78, 162, 0.35);
+      border-radius: 18px;
+      padding: 18px;
+      background: #f8fbff;
+    }
+
+    .protected-slot strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy,
+      .login-wrap {
+        padding: 26px;
+      }
+
+      .login-wrap {
+        padding-top: 0;
+      }
+
+      .dashboard-head {
+        flex-direction: column;
+      }
+
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="hero" aria-labelledby="pageTitle">
+      <div class="hero-copy">
+        <div>
+          <p class="kicker">LAMSAMA 2027</p>
+          <h1 id="pageTitle">Persiapan Akreditasi 2027</h1>
+          <p class="lead">Akses internal untuk koordinasi dokumen, monitoring mutu, tindak lanjut asesmen, dan kesiapan akreditasi Program S2 Statistika Terapan FMIPA Universitas Padjadjaran.</p>
+        </div>
+        <div class="hero-pills">
+          <span>Dokumen Mutu</span>
+          <span>LKPS dan LED</span>
+          <span>Monitoring</span>
+          <span>Visitasi</span>
+        </div>
+      </div>
+
+      <div class="login-wrap">
+        <form class="login-card" id="loginForm">
+          <h2>Masuk Admin</h2>
+          <p>Gunakan email Kaprodi dan password akses khusus yang telah ditentukan.</p>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="username" placeholder="email@unpad.ac.id" required>
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="password-row">
+              <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Password akses" required>
+              <button class="secondary" type="button" id="togglePassword">Lihat</button>
+            </div>
+          </div>
+
+          <button class="submit" type="submit" id="loginButton">Masuk</button>
+          <div class="message" id="message" role="status" aria-live="polite"></div>
+          <div class="security-note">Password tidak disimpan di halaman ini. Validasi dilakukan di server Apps Script menggunakan hash yang tersimpan di Script Properties.</div>
+        </form>
+      </div>
+    </section>
+
+    <section class="dashboard" id="dashboard" aria-labelledby="dashboardTitle">
+      <div class="dashboard-head">
+        <div>
+          <p class="kicker" style="color:#0b4ea2;border-color:#dbeafe;background:#eef6ff;">Dashboard Internal</p>
+          <h2 id="dashboardTitle">Ruang Kerja Akreditasi</h2>
+          <p>Gunakan area ini untuk menempatkan konten utama Persiapan Akreditasi 2027 setelah proses login berhasil.</p>
+        </div>
+        <span class="account-chip" id="accountChip">-</span>
+      </div>
+
+      <div class="dashboard-grid" id="dashboardGrid"></div>
+
+      <div class="protected-slot">
+        <strong>Area konten terlindungi</strong>
+        <p>Jika aplikasi Persiapan Akreditasi 2027 sudah memiliki tabel, menu, atau dashboard lama, pindahkan konten tersebut ke area ini agar hanya tampil setelah login berhasil.</p>
+      </div>
+
+      <div class="actions">
+        <button type="button" id="refreshDashboard">Muat ulang dashboard</button>
+        <button class="secondary" type="button" id="logoutButton">Keluar</button>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const TOKEN_KEY = "akreditasi2027Token";
+    const loginForm = document.getElementById("loginForm");
+    const loginButton = document.getElementById("loginButton");
+    const message = document.getElementById("message");
+    const dashboardGrid = document.getElementById("dashboardGrid");
+    const accountChip = document.getElementById("accountChip");
+    const password = document.getElementById("password");
+    const togglePassword = document.getElementById("togglePassword");
+    const logoutButton = document.getElementById("logoutButton");
+    const refreshDashboard = document.getElementById("refreshDashboard");
+
+    function setMessage(text, ok) {
+      message.textContent = text || "";
+      message.classList.toggle("ok", Boolean(ok));
+    }
+
+    function setLoading(isLoading) {
+      loginButton.disabled = isLoading;
+      loginButton.textContent = isLoading ? "Memeriksa..." : "Masuk";
+    }
+
+    function getToken() {
+      return localStorage.getItem(TOKEN_KEY) || "";
+    }
+
+    function saveToken(token) {
+      localStorage.setItem(TOKEN_KEY, token);
+    }
+
+    function clearToken() {
+      localStorage.removeItem(TOKEN_KEY);
+    }
+
+    function showDashboard(session) {
+      document.body.classList.add("authenticated");
+      accountChip.textContent = session.email || "Admin";
+      loadDashboard();
+    }
+
+    function showLogin() {
+      document.body.classList.remove("authenticated");
+      dashboardGrid.innerHTML = "";
+    }
+
+    function loadDashboard() {
+      const token = getToken();
+      dashboardGrid.innerHTML = "";
+      google.script.run
+        .withSuccessHandler(function(response) {
+          if (!response || !response.ok) {
+            clearToken();
+            showLogin();
+            return;
+          }
+
+          dashboardGrid.innerHTML = response.cards.map(function(card) {
+            return [
+              '<article class="dash-card ' + escapeHtml(card.tone || "") + '">',
+              '<strong>' + escapeHtml(card.title) + '</strong>',
+              '<p>' + escapeHtml(card.text) + '</p>',
+              '</article>'
+            ].join("");
+          }).join("");
+        })
+        .withFailureHandler(function(error) {
+          clearToken();
+          showLogin();
+          setMessage(error && error.message ? error.message : "Sesi tidak valid. Silakan login ulang.", false);
+        })
+        .getAkreditasi2027Dashboard(token);
+    }
+
+    function escapeHtml(value) {
+      return String(value || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    loginForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+      setLoading(true);
+      setMessage("", false);
+
+      const payload = {
+        email: loginForm.email.value,
+        password: loginForm.password.value
+      };
+
+      google.script.run
+        .withSuccessHandler(function(response) {
+          setLoading(false);
+          if (!response || !response.ok) {
+            setMessage(response && response.message ? response.message : "Login gagal.", false);
+            return;
+          }
+
+          saveToken(response.token);
+          loginForm.reset();
+          setMessage("Login berhasil.", true);
+          showDashboard(response);
+        })
+        .withFailureHandler(function(error) {
+          setLoading(false);
+          setMessage(error && error.message ? error.message : "Login gagal.", false);
+        })
+        .loginAkreditasi2027(payload);
+    });
+
+    togglePassword.addEventListener("click", function() {
+      const isPassword = password.type === "password";
+      password.type = isPassword ? "text" : "password";
+      togglePassword.textContent = isPassword ? "Tutup" : "Lihat";
+    });
+
+    logoutButton.addEventListener("click", function() {
+      const token = getToken();
+      clearToken();
+      google.script.run.logoutAkreditasi2027(token);
+      showLogin();
+      setMessage("Anda sudah keluar.", true);
+    });
+
+    refreshDashboard.addEventListener("click", loadDashboard);
+
+    (function init() {
+      const token = getToken();
+      if (!token) return;
+
+      google.script.run
+        .withSuccessHandler(function(response) {
+          if (response && response.ok) {
+            showDashboard(response);
+          } else {
+            clearToken();
+          }
+        })
+        .withFailureHandler(function() {
+          clearToken();
+        })
+        .checkSessionAkreditasi2027(token);
+    })();
+  </script>
+</body>
+</html>
