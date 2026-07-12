@@ -4092,10 +4092,10 @@
   },
   {
     "id": "academic-guide-s2",
-    "title": "Panduan Akademik S2 Statistika Terapan",
-    "sourceTitle": "Dokumen Akademik S2",
+    "title": "Pedoman Akademik 2022-2025 S2 Statistika Terapan",
+    "sourceTitle": "Pedoman Akademik 2022-2025",
     "sourceUrl": "%40SOP/DOKUMEN%20AKADEMIK%20S2.pdf",
-    "text": "Panduan Akademik S2 Statistika Terapan tersedia dalam folder @SOP dengan nama file DOKUMEN AKADEMIK S2.pdf. Dokumen ini menjadi rujukan cepat untuk ketentuan akademik dan SOP penyelenggaraan Program S2 Statistika Terapan. Dokumen PDF berisi 54 halaman dengan ukuran sekitar 9.7 MB. Link: %40SOP/DOKUMEN%20AKADEMIK%20S2.pdf"
+    "text": "Pedoman Akademik 2022-2025 S2 Statistika Terapan tersedia dalam folder @SOP dengan nama file DOKUMEN AKADEMIK S2.pdf. Dokumen ini menjadi rujukan cepat untuk ketentuan akademik dan SOP penyelenggaraan Program S2 Statistika Terapan pada periode 2022-2025. Dokumen PDF berisi 54 halaman dengan ukuran sekitar 9.7 MB. Link: %40SOP/DOKUMEN%20AKADEMIK%20S2.pdf"
   },
   {
     "id": "curriculum-doc-kurikulum-2020-2022",
@@ -4127,17 +4127,24 @@
   },
   {
     "id": "education-guide-html-s2",
-    "title": "Pedoman Pendidikan S2 Statistika Terapan versi web",
-    "sourceTitle": "Buku Pedoman Akademik S2 Statistika Terapan",
+    "title": "Pedoman Pendidikan 2026-2030 S2 Statistika Terapan versi web",
+    "sourceTitle": "Pedoman Pendidikan 2026-2030 S2 Statistika Terapan",
     "sourceUrl": "%40Pedoman%20Pendidikan/Buku%20Pedoman%20Akademik%20S2%20Statistika%20Terapan.html",
-    "text": "Pedoman Pendidikan S2 Statistika Terapan tersedia dalam versi HTML di folder @Pedoman Pendidikan. Dokumen ini menjadi rujukan pendidikan dan administrasi akademik program. Link HTML: %40Pedoman%20Pendidikan/Buku%20Pedoman%20Akademik%20S2%20Statistika%20Terapan.html"
+    "text": "Pedoman Pendidikan 2026-2030 S2 Statistika Terapan tersedia dalam versi HTML di folder @Pedoman Pendidikan. Dokumen ini menjadi rujukan pendidikan dan administrasi akademik program untuk periode 2026-2030. Link HTML: %40Pedoman%20Pendidikan/Buku%20Pedoman%20Akademik%20S2%20Statistika%20Terapan.html"
   },
   {
     "id": "education-guide-pdf-s2",
-    "title": "Buku Pedoman Akademik S2 Statistika Terapan",
-    "sourceTitle": "Buku Pedoman Akademik S2 Statistika Terapan 2026",
+    "title": "Pedoman Pendidikan 2026-2030 S2 Statistika Terapan PDF",
+    "sourceTitle": "Pedoman Pendidikan 2026-2030 S2 Statistika Terapan",
     "sourceUrl": "%40Pedoman%20Pendidikan/Buku%20Pedoman%20Akademik%20S2%20Statistika%20Terapan%202026.pdf",
-    "text": "Buku Pedoman Akademik S2 Statistika Terapan tersedia dalam format PDF di folder @Pedoman Pendidikan. Dokumen PDF berukuran sekitar 28.2 MB dan menjadi arsip resmi pedoman pendidikan program. Link PDF: %40Pedoman%20Pendidikan/Buku%20Pedoman%20Akademik%20S2%20Statistika%20Terapan%202026.pdf"
+    "text": "Pedoman Pendidikan 2026-2030 S2 Statistika Terapan tersedia dalam format PDF di folder @Pedoman Pendidikan. Dokumen PDF berukuran sekitar 28.2 MB dan menjadi arsip resmi pedoman pendidikan program untuk periode 2026-2030. Link PDF: %40Pedoman%20Pendidikan/Buku%20Pedoman%20Akademik%20S2%20Statistika%20Terapan%202026.pdf"
+  },
+  {
+    "id": "online-thesis-guide-s2",
+    "title": "Pedoman Tesis Online",
+    "sourceTitle": "Pedoman Tesis Online S2 Statistika Terapan",
+    "sourceUrl": "panduan-tesis-online.html",
+    "text": "Pedoman Tesis Online tersedia sebagai halaman HTML dua bahasa untuk membantu kaprodi, dosen pembimbing atau penguji, dan mahasiswa menggunakan sistem Tesis Online. Link pedoman: panduan-tesis-online.html. Link aplikasi Tesis Online: https://script.google.com/a/macros/unpad.ac.id/s/AKfycbwW6WI3A8VNTg9sAsmncazNXyXj63MawuzJBOhbS4J4FCsO9vH0NCLkHyWLq_zN8Un7/exec"
   },
   {
     "id": "ai-guide-rector-regulation-2025",

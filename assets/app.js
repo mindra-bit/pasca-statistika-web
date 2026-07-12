@@ -242,6 +242,7 @@ const FALLBACK_KNOWLEDGE = [
 const STOPWORDS = new Set("yang dan untuk dengan pada dalam sebagai dari ke di ini itu adalah atau serta oleh agar akan dapat karena maka jika sudah telah juga yaitu bagi antara menjadi memiliki secara program studi magister statistika terapan unpad fmipa universitas padjadjaran kurikulum dokumen tahun prodi pertanyaan jawaban jawab chatbot chatboot luar s2 apa saja berapa siapa kapan bagaimana dimana mengapa saat sekarang".split(" "));
 const GENERIC_QUERY_TERMS = new Set("silabus sylabus rps materi referensi deskripsi bahan kajian topik perkuliahan mata kuliah matakuliah course".split(" "));
 const THESIS_ONLINE_URL = "https://script.google.com/a/macros/unpad.ac.id/s/AKfycbwW6WI3A8VNTg9sAsmncazNXyXj63MawuzJBOhbS4J4FCsO9vH0NCLkHyWLq_zN8Un7/exec";
+const THESIS_ONLINE_GUIDE_URL = "panduan-tesis-online.html";
 
 let knowledge = FALLBACK_KNOWLEDGE;
 let syllabus = [];
@@ -399,7 +400,6 @@ const workspacePanelIds = [
   "rps",
   "materi",
   "panduan-tesis",
-  "panduan-akademik",
   "pedoman-pendidikan",
   "panduan-ai",
   "evaluasi",
@@ -428,7 +428,6 @@ const curriculumPanelIds = [
   "rps",
   "materi",
   "panduan-tesis",
-  "panduan-akademik",
   "pedoman-pendidikan",
   "panduan-ai"
 ];
@@ -505,6 +504,7 @@ const I18N = {
     workspaceEducationGuide: "Pedoman Pendidikan",
     workspaceAiGuide: "Panduan Penggunaan AI",
     workspaceThesisOnline: "Tesis Online",
+    workspaceThesisOnlineGuide: "Pedoman Tesis Online",
     workspaceBackHome: "Kembali ke Tampilan Awal",
     workspaceEvaluation: "Evaluasi",
     workspaceLectureEvaluation: "Evaluasi Perkuliahan",
@@ -620,10 +620,11 @@ const I18N = {
     curriculumHubRpsText: "Dokumen RPS wajib dan pilihan",
     curriculumHubMaterialsText: "Materi HTML, ringkasan, dan kontrak",
     curriculumHubThesisText: "Penulisan dan pelaksanaan tesis",
-    curriculumHubAcademicGuideText: "SOP dan dokumen akademik S2",
-    curriculumHubEducationGuideText: "Pedoman pendidikan dalam format HTML dan PDF",
+    curriculumHubAcademicGuideText: "Pedoman Akademik 2022-2025",
+    curriculumHubEducationGuideText: "Pedoman Akademik 2022-2025 dan Pedoman Pendidikan 2026-2030",
     curriculumHubAiGuideText: "Panduan dan peraturan penggunaan AI generatif",
     curriculumHubThesisOnlineText: "Log book, dokumen, jadwal, dan penilaian SUR-SKR-SAM",
+    curriculumHubThesisOnlineGuideText: "Panduan penggunaan sistem Tesis Online dua bahasa",
     curriculumInfographicKicker: "Kurikulum OBE",
     curriculumInfographicTitle: "Kurikulum OBE 2025 Edisi Revisi",
     curriculumInfographicText: "Ringkasan visual struktur 42 SKS, jalur kuliah dan riset, bidang keahlian, profil lulusan, CPL, RPL, serta komponen pembelajaran.",
@@ -1088,20 +1089,25 @@ const I18N = {
     backTop: "Kembali ke atas",
     openPdf: "Buka PDF",
     openHtml: "Buka HTML",
+    openGuide: "Buka Pedoman",
+    openThesisOnline: "Buka Tesis Online",
     openReport: "Buka laporan",
     openMaterial: "Buka Materi",
     openSummary: "Buka Ringkasan",
     openContract: "Buka Kontrak",
     askChatbot: "Tanya chatbot",
     educationGuideKicker: "Pedoman Pendidikan",
-    educationGuideTitle: "Pedoman pendidikan Program S2 Statistika Terapan.",
-    educationGuideText: "Pedoman pendidikan ditempatkan dalam format HTML dan PDF agar mudah dibaca langsung di browser maupun diunduh sebagai dokumen resmi.",
-    educationGuideCountLabel: "file pedoman",
+    educationGuideTitle: "Pedoman pendidikan dan akademik Program S2 Statistika Terapan.",
+    educationGuideText: "Pedoman Akademik 2022-2025 dan Pedoman Pendidikan 2026-2030 ditempatkan dalam satu blok agar rujukan akademik lama dan terbaru mudah ditemukan.",
+    educationGuideCountLabel: "dokumen pedoman",
     educationGuideAsk: "Tanyakan pedoman ke chatbot",
-    educationGuideHtmlTitle: "Pedoman Pendidikan versi web",
-    educationGuideHtmlText: "Versi HTML untuk membaca pedoman pendidikan secara cepat dan nyaman langsung dari website.",
-    educationGuidePdfTitle: "Buku Pedoman Akademik S2 Statistika Terapan",
-    educationGuidePdfText: "Dokumen PDF pedoman pendidikan sebagai arsip resmi dan rujukan administrasi akademik.",
+    educationGuideAcademicTitle: "Pedoman Akademik 2022-2025",
+    educationGuideAcademicText: "Rujukan akademik periode 2022-2025 dari folder @SOP untuk ketentuan akademik dan administrasi Program S2 Statistika Terapan.",
+    educationGuideEducationTitle: "Pedoman Pendidikan 2026-2030",
+    educationGuideEducationText: "Pedoman pendidikan terbaru disediakan dalam versi HTML untuk dibaca langsung dan PDF sebagai arsip resmi.",
+    educationGuideThesisOnlineTitle: "Pedoman Tesis Online",
+    educationGuideThesisOnlineText: "Panduan penggunaan sistem Tesis Online untuk kaprodi, dosen pembimbing/penguji, dan mahasiswa.",
+    bilingualGuideLabel: "ID + EN",
     aiGuideKicker: "Panduan Penggunaan AI",
     aiGuideTitle: "Rujukan penggunaan AI generatif dalam pembelajaran.",
     aiGuideText: "Blok ini menghimpun panduan dan regulasi penggunaan AI generatif agar pemanfaatannya tetap etis, transparan, dan selaras dengan ketentuan akademik.",
@@ -1215,6 +1221,7 @@ const I18N = {
     workspaceEducationGuide: "Education Guide",
     workspaceAiGuide: "AI Usage Guide",
     workspaceThesisOnline: "Online Thesis",
+    workspaceThesisOnlineGuide: "Online Thesis Guide",
     workspaceBackHome: "Back to Opening View",
     workspaceEvaluation: "Evaluation",
     workspaceLectureEvaluation: "Course Evaluation",
@@ -1330,10 +1337,11 @@ const I18N = {
     curriculumHubRpsText: "Required and elective RPS documents",
     curriculumHubMaterialsText: "HTML materials, summaries, and contracts",
     curriculumHubThesisText: "Thesis writing and implementation",
-    curriculumHubAcademicGuideText: "S2 academic SOP and documents",
-    curriculumHubEducationGuideText: "Education guide in HTML and PDF formats",
+    curriculumHubAcademicGuideText: "Academic Guide 2022-2025",
+    curriculumHubEducationGuideText: "Academic Guide 2022-2025 and Education Guide 2026-2030",
     curriculumHubAiGuideText: "Guides and regulations for generative AI use",
     curriculumHubThesisOnlineText: "Log book, documents, schedules, and SUR-SKR-SAM assessment",
+    curriculumHubThesisOnlineGuideText: "Bilingual guide for using the Online Thesis system",
     curriculumInfographicKicker: "OBE Curriculum",
     curriculumInfographicTitle: "2025 OBE Curriculum, Revised Edition",
     curriculumInfographicText: "A visual summary of the 42-credit structure, coursework and research pathways, areas of expertise, graduate profiles, learning outcomes, RPL, and learning components.",
@@ -1798,20 +1806,25 @@ const I18N = {
     backTop: "Back to top",
     openPdf: "Open PDF",
     openHtml: "Open HTML",
+    openGuide: "Open Guide",
+    openThesisOnline: "Open Online Thesis",
     openReport: "Open report",
     openMaterial: "Open Material",
     openSummary: "Open Summary",
     openContract: "Open Contract",
     askChatbot: "Ask chatbot",
     educationGuideKicker: "Education Guide",
-    educationGuideTitle: "Education guide for the Applied Statistics Master's Program.",
-    educationGuideText: "The education guide is provided in HTML and PDF formats so it can be read comfortably in the browser or downloaded as an official document.",
-    educationGuideCountLabel: "guide files",
+    educationGuideTitle: "Education and academic guides for the Applied Statistics Master's Program.",
+    educationGuideText: "The 2022-2025 Academic Guide and the 2026-2030 Education Guide are grouped together so older and newest academic references are easy to find.",
+    educationGuideCountLabel: "guide documents",
     educationGuideAsk: "Ask the chatbot about the guide",
-    educationGuideHtmlTitle: "Education Guide web version",
-    educationGuideHtmlText: "An HTML version for quick and comfortable reading directly from the website.",
-    educationGuidePdfTitle: "Applied Statistics Master's Academic Guidebook",
-    educationGuidePdfText: "The PDF education guide as an official archive and academic administration reference.",
+    educationGuideAcademicTitle: "Academic Guide 2022-2025",
+    educationGuideAcademicText: "The 2022-2025 academic reference from the @SOP folder for regulations and academic administration of the Applied Statistics Master's Program.",
+    educationGuideEducationTitle: "Education Guide 2026-2030",
+    educationGuideEducationText: "The newest education guide is available as an HTML page for direct reading and as a PDF official archive.",
+    educationGuideThesisOnlineTitle: "Online Thesis Guide",
+    educationGuideThesisOnlineText: "A usage guide for the Online Thesis system for the head of program, supervisors/examiners, and students.",
+    bilingualGuideLabel: "ID + EN",
     aiGuideKicker: "AI Usage Guide",
     aiGuideTitle: "References for generative AI use in learning.",
     aiGuideText: "This block collects guides and regulations for generative AI use so that its adoption remains ethical, transparent, and aligned with academic rules.",
@@ -1920,12 +1933,16 @@ function t(key) {
   return I18N[currentLang]?.[key] || I18N.id[key] || key;
 }
 
+function normalizeWorkspacePanelId(id) {
+  return id === "panduan-akademik" ? "pedoman-pendidikan" : id;
+}
+
 function groupLabel(value) {
   return GROUP_LABELS[currentLang]?.[value] || GROUP_LABELS.id[value] || value || "";
 }
 
 function activeWorkspaceIdFromHash() {
-  const id = decodeURIComponent(location.hash.replace(/^#/, ""));
+  const id = normalizeWorkspacePanelId(decodeURIComponent(location.hash.replace(/^#/, "")));
   return workspacePanelIds.includes(id) ? id : "kalender-akademik";
 }
 
@@ -1969,7 +1986,8 @@ function setActiveWorkspacePanel(
   programOverride = "",
   panelScrollTarget = ""
 ) {
-  const activeId = workspacePanelIds.includes(panelId) ? panelId : "kalender-akademik";
+  const requestedId = normalizeWorkspacePanelId(panelId);
+  const activeId = workspacePanelIds.includes(requestedId) ? requestedId : "kalender-akademik";
   const nextProgram = programOverride || workspaceProgramForPanel(activeId);
   const nextPanelScrollTarget = panelScrollTarget || (activeId === "web-s3" ? "s3-overview" : "");
   setWorkspaceProgram(nextProgram);
@@ -3778,28 +3796,32 @@ function buildScholarshipAnswer(question) {
 
 function buildAcademicGuideAnswer(question) {
   const text = normalize(question);
-  if (!/panduan akademik|dokumen akademik|sop akademik|academic guide|academic document|academic sop/.test(text)) return null;
+  if (!/pedoman pendidikan|panduan akademik|dokumen akademik|pedoman akademik|sop akademik|education guide|academic guide|academic document|academic sop/.test(text)) return null;
 
-  const href = "%40SOP/DOKUMEN%20AKADEMIK%20S2.pdf";
+  const academicHref = "%40SOP/DOKUMEN%20AKADEMIK%20S2.pdf";
+  const educationHtmlHref = "%40Pedoman%20Pendidikan/Buku%20Pedoman%20Akademik%20S2%20Statistika%20Terapan.html";
+  const educationPdfHref = "%40Pedoman%20Pendidikan/Buku%20Pedoman%20Akademik%20S2%20Statistika%20Terapan%202026.pdf";
   const answer = currentLang === "en"
     ? [
-        "The S2 Academic Guide is available as a PDF document.",
-        "Document: S2 Academic Document.",
-        "Pages: 54 pages.",
-        "File size: 9.7 MB.",
-        `PDF: ${href}`
+        "The Education Guide block contains the main S2 academic guide documents.",
+        `Academic Guide 2022-2025 (PDF): ${academicHref}`,
+        `Education Guide 2026-2030 (HTML): ${educationHtmlHref}`,
+        `Education Guide 2026-2030 (PDF): ${educationPdfHref}`
       ].join("\n")
     : [
-        "Panduan Akademik S2 tersedia sebagai dokumen PDF.",
-        "Dokumen: Dokumen Akademik S2.",
-        "Jumlah halaman: 54 halaman.",
-        "Ukuran file: 9.7 MB.",
-        `PDF: ${href}`
+        "Blok Pedoman Pendidikan memuat dokumen pedoman akademik utama S2.",
+        `Pedoman Akademik 2022-2025 (PDF): ${academicHref}`,
+        `Pedoman Pendidikan 2026-2030 (HTML): ${educationHtmlHref}`,
+        `Pedoman Pendidikan 2026-2030 (PDF): ${educationPdfHref}`
       ].join("\n");
 
   return {
     answer,
-    sources: [{ title: currentLang === "en" ? "S2 Academic Document" : "Dokumen Akademik S2", url: href }],
+    sources: [
+      { title: currentLang === "en" ? "Academic Guide 2022-2025" : "Pedoman Akademik 2022-2025", url: academicHref },
+      { title: currentLang === "en" ? "Education Guide 2026-2030" : "Pedoman Pendidikan 2026-2030", url: educationHtmlHref },
+      { title: currentLang === "en" ? "Education Guide 2026-2030 PDF" : "Pedoman Pendidikan 2026-2030 PDF", url: educationPdfHref }
+    ],
     mode: "Local knowledge base"
   };
 }
@@ -3812,16 +3834,21 @@ function buildThesisOnlineAnswer(question) {
   const answer = currentLang === "en"
     ? [
         "Online Thesis is available through the official application link.",
-        `Link: ${THESIS_ONLINE_URL}`
+        `Application: ${THESIS_ONLINE_URL}`,
+        `Guide: ${THESIS_ONLINE_GUIDE_URL}`
       ].join("\n")
     : [
         "Tesis Online tersedia melalui link aplikasi berikut.",
-        `Link: ${THESIS_ONLINE_URL}`
+        `Aplikasi: ${THESIS_ONLINE_URL}`,
+        `Pedoman: ${THESIS_ONLINE_GUIDE_URL}`
       ].join("\n");
 
   return {
     answer,
-    sources: [{ title, url: THESIS_ONLINE_URL }],
+    sources: [
+      { title, url: THESIS_ONLINE_URL },
+      { title: currentLang === "en" ? "Online Thesis Guide" : "Pedoman Tesis Online", url: THESIS_ONLINE_GUIDE_URL }
+    ],
     mode: "Local knowledge base"
   };
 }
@@ -5871,7 +5898,7 @@ document.querySelectorAll("[data-project-output-target]").forEach((button) => {
 });
 
 window.addEventListener("hashchange", () => {
-  const id = decodeURIComponent(location.hash.replace(/^#/, ""));
+  const id = normalizeWorkspacePanelId(decodeURIComponent(location.hash.replace(/^#/, "")));
   if (workspacePanelIds.includes(id)) {
     const pending = pendingWorkspaceSelection?.target === id ? pendingWorkspaceSelection : null;
     pendingWorkspaceSelection = null;
