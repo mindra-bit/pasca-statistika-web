@@ -1848,14 +1848,13 @@ p {
   grid-template-columns: minmax(360px, 1.12fr) minmax(320px, 0.88fr);
   gap: 18px;
   align-items: start;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .curriculum-infographic-card {
   display: grid;
   gap: 14px;
   align-content: start;
-  grid-row: span 2;
   border: 1px solid rgba(20, 61, 93, 0.18);
   border-radius: 8px;
   padding: 16px;
@@ -1940,14 +1939,16 @@ p {
 
 .academic-calendar-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 14px;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.34fr);
+  gap: 16px;
   align-items: stretch;
-  margin-bottom: 0;
+  margin-bottom: 18px;
   border: 1px solid rgba(221, 210, 193, 0.86);
   border-radius: 8px;
   padding: 18px;
-  background: rgba(255, 255, 255, 0.92);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(255, 249, 233, 0.94)),
+    rgba(255, 255, 255, 0.92);
   box-shadow: 0 16px 34px rgba(23, 23, 23, 0.08);
 }
 
@@ -2095,7 +2096,7 @@ p {
 .academic-semester-card {
   display: grid;
   gap: 9px;
-  min-height: 108px;
+  min-height: 100%;
   align-content: end;
   border-radius: 8px;
   padding: 16px;
