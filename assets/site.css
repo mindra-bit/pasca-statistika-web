@@ -5607,6 +5607,111 @@ tbody tr:hover td {
   transform: translateY(-1px);
 }
 
+.stakeholder-survey-section {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 250, 248, 0.96)),
+    var(--surface);
+}
+
+.stakeholder-survey-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.36fr);
+  gap: 22px;
+  align-items: stretch;
+  overflow: hidden;
+  border: 1px solid rgba(20, 61, 93, 0.16);
+  border-radius: 8px;
+  padding: 26px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(244, 252, 247, 0.96) 54%, rgba(255, 248, 226, 0.92)),
+    var(--paper);
+  box-shadow: 0 18px 42px rgba(20, 61, 93, 0.12);
+}
+
+.stakeholder-survey-copy {
+  display: grid;
+  gap: 12px;
+  align-content: center;
+}
+
+.stakeholder-survey-copy h2 {
+  max-width: 820px;
+  margin: 0;
+  color: var(--blue);
+  font-size: clamp(26px, 3vw, 42px);
+  line-height: 1.06;
+}
+
+.stakeholder-survey-copy p:not(.section-kicker) {
+  max-width: 760px;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.stakeholder-survey-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.stakeholder-survey-tags span {
+  border: 1px solid rgba(20, 61, 93, 0.14);
+  border-radius: 999px;
+  padding: 8px 11px;
+  color: var(--blue);
+  background: #fff;
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.stakeholder-survey-action {
+  display: grid;
+  gap: 14px;
+  align-content: center;
+  justify-items: stretch;
+  border-radius: 8px;
+  padding: 20px;
+  color: #fff;
+  background:
+    linear-gradient(145deg, rgba(20, 61, 93, 0.98), rgba(14, 107, 88, 0.96) 64%, rgba(242, 169, 0, 0.9) 135%),
+    var(--green);
+}
+
+.stakeholder-survey-action span {
+  width: max-content;
+  border-radius: 6px;
+  padding: 7px 10px;
+  color: #211600;
+  background: linear-gradient(135deg, var(--gold), #fff1bb);
+  font-size: 12px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.stakeholder-survey-action a {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  padding: 12px 16px;
+  color: var(--blue);
+  background: #fff;
+  font-size: 14px;
+  font-weight: 950;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
+}
+
+.stakeholder-survey-action a:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.02);
+}
+
 .tracer-subsection {
   display: grid;
   gap: 14px;
@@ -8079,6 +8184,7 @@ tbody tr:hover td {
   .academic-front-grid,
   .academic-calendar-hero,
   .accreditation-video-panel,
+  .stakeholder-survey-card,
   .curriculum-infographic-card,
   .scholarship-hero,
   .lamsama-hero,
