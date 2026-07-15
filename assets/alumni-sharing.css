@@ -111,7 +111,8 @@
 }
 
 .alumni-sharing-portrait-naima,
-.alumni-sharing-portrait-dila {
+.alumni-sharing-portrait-dila,
+.alumni-sharing-portrait-leivina {
   background-color: #e7e1d6;
 }
 
@@ -123,6 +124,12 @@
   background-color: #dce9e5;
 }
 
+.alumni-sharing-portrait-leivina {
+  background:
+    linear-gradient(160deg, rgba(255, 246, 238, 0.96), rgba(239, 226, 218, 0.94) 55%, rgba(221, 234, 229, 0.9)),
+    #efe2da;
+}
+
 .alumni-sharing-portrait img {
   position: relative;
   z-index: 1;
@@ -130,6 +137,11 @@
   height: 100%;
   object-fit: contain;
   object-position: center bottom;
+}
+
+.alumni-sharing-portrait-leivina img {
+  object-fit: cover;
+  object-position: center top;
 }
 
 .alumni-sharing-portrait > span {
@@ -257,6 +269,12 @@
 
   .alumni-sharing-portrait img {
     width: min(74%, 330px);
+  }
+
+  .alumni-sharing-portrait-leivina img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .alumni-sharing-card-copy {
