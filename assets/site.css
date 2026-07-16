@@ -5713,6 +5713,147 @@ tbody tr:hover td {
   filter: brightness(1.02);
 }
 
+.stakeholder-dashboard-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(380px, 1.18fr);
+  gap: 22px;
+  align-items: stretch;
+  margin-top: 22px;
+  border: 1px solid rgba(20, 61, 93, 0.16);
+  border-radius: 8px;
+  padding: 24px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(244, 250, 248, 0.97) 52%, rgba(255, 247, 222, 0.94)),
+    var(--paper);
+  box-shadow: 0 18px 42px rgba(20, 61, 93, 0.12);
+}
+
+.stakeholder-dashboard-copy {
+  display: grid;
+  gap: 14px;
+  align-content: center;
+}
+
+.stakeholder-dashboard-copy h3 {
+  margin: 0;
+  color: var(--blue);
+  font-size: clamp(24px, 2.5vw, 36px);
+  line-height: 1.08;
+}
+
+.stakeholder-dashboard-copy p:not(.section-kicker) {
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+
+.stakeholder-dashboard-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.stakeholder-dashboard-metrics span {
+  min-width: 0;
+  border: 1px solid rgba(20, 61, 93, 0.12);
+  border-radius: 8px;
+  padding: 13px;
+  background: #fff;
+}
+
+.stakeholder-dashboard-metrics strong {
+  display: block;
+  color: var(--blue);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.stakeholder-dashboard-metrics small {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.stakeholder-dashboard-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.stakeholder-dashboard-actions a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  padding: 11px 15px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--blue), var(--green));
+  font-weight: 950;
+  text-decoration: none;
+  box-shadow: 0 12px 24px rgba(20, 61, 93, 0.16);
+}
+
+.stakeholder-dashboard-actions a:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+}
+
+.stakeholder-dashboard-preview {
+  overflow: hidden;
+  min-height: 520px;
+  border: 1px solid rgba(20, 61, 93, 0.16);
+  border-radius: 8px;
+  background: #0f2740;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.stakeholder-dashboard-frame-head {
+  display: flex;
+  min-height: 40px;
+  align-items: center;
+  gap: 7px;
+  padding: 0 14px;
+  color: #eaf2f7;
+  background: linear-gradient(90deg, #0e2946, var(--blue));
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.stakeholder-dashboard-frame-head span {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--gold);
+  opacity: 0.95;
+}
+
+.stakeholder-dashboard-frame-head span:nth-child(2) {
+  background: #16a085;
+}
+
+.stakeholder-dashboard-frame-head span:nth-child(3) {
+  background: #c9142c;
+}
+
+.stakeholder-dashboard-frame-head strong {
+  margin-left: 5px;
+}
+
+.stakeholder-dashboard-preview iframe {
+  display: block;
+  width: 100%;
+  height: 520px;
+  border: 0;
+  background: #fff;
+}
+
 .tracer-subsection {
   display: grid;
   gap: 14px;
@@ -8186,6 +8327,7 @@ tbody tr:hover td {
   .academic-calendar-hero,
   .accreditation-video-panel,
   .stakeholder-survey-card,
+  .stakeholder-dashboard-panel,
   .curriculum-infographic-card,
   .scholarship-hero,
   .lamsama-hero,
@@ -8211,6 +8353,12 @@ tbody tr:hover td {
 
   .viewer-actions {
     justify-content: flex-start;
+  }
+
+  .stakeholder-dashboard-preview,
+  .stakeholder-dashboard-preview iframe {
+    min-height: 480px;
+    height: 480px;
   }
 
   .path-grid,
@@ -8266,6 +8414,20 @@ tbody tr:hover td {
 @media (max-width: 680px) {
   .container {
     width: min(100% - 28px, 1440px);
+  }
+
+  .stakeholder-dashboard-panel {
+    padding: 18px;
+  }
+
+  .stakeholder-dashboard-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .stakeholder-dashboard-preview,
+  .stakeholder-dashboard-preview iframe {
+    min-height: 420px;
+    height: 420px;
   }
 
   .workspace-layout {
