@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Dashboard Hasil Survei Stakeholder • 29 Responden</title>
+<title>Dashboard Hasil Survei Stakeholder • 31 Responden</title>
 <style>
 html,body{margin:0;height:100%;font-family:Inter,system-ui,sans-serif;background:#f4f7fb}#status{position:fixed;z-index:20;right:16px;top:16px;background:#12355b;color:#fff;padding:10px 14px;border-radius:999px;font-weight:800;box-shadow:0 8px 24px rgba(0,0,0,.18)}iframe{border:0;width:100%;height:100vh;display:block}
 </style>
 </head>
 <body>
-<div id="status">29 responden • data diperbarui 18 Juli 2026</div>
-<iframe id="legacy" src="stakeholder-survey-dashboard-26-backup.html?v=20260718-29-native" title="Dashboard stakeholder survey 29 responden"></iframe>
+<div id="status">31 responden • data diperbarui 19 Juli 2026</div>
+<iframe id="legacy" src="stakeholder-survey-dashboard-26-backup.html?v=20260719-31-native" title="Dashboard stakeholder survey 31 responden"></iframe>
 <script>
 const additions=[
 {name:'Titi Purwandari',institution:'Padjadjaran University',position:'Lecturer',expertise:'Multivariate Statistics',type:'Higher Education Institution',experience:'More than 20 years',ai:'4',competencies:'Causal inference; AI ethics, data governance, and responsible AI',topics:'Artificial Intelligence for Data Analysis; Causal AI and Decision Analytics; AI Applications in Health, Business, Government, or Industry',balance:'Stronger emphasis on industry-based projects',work:'3',practice:'4',ethics:'4',course:'Inferential statistics for AI',graduate:'Uncertainty quantification',suggestions:''},
@@ -21,17 +21,17 @@ function esc(s){return String(s||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&l
 function card(r){return `<article class="card person" data-added="20260718"><div class="person-head"><div><h3>${esc(r.name)}</h3><p>${esc(r.position)} · ${esc(r.institution)}</p></div><span class="pill">NEW</span></div><div class="person-body"><p><b>Jenis institusi:</b> ${esc(r.type)}</p><p><b>Bidang:</b> ${esc(r.expertise)}</p><p><b>Pengalaman:</b> ${esc(r.experience)}</p><p><b>Kompetensi:</b> ${esc(r.competencies)}</p><p><b>Topik/mata kuliah:</b> ${esc(r.topics)}</p><p><b>Keseimbangan kurikulum:</b> ${esc(r.balance)}</p><p><b>Usulan baru:</b> ${esc(r.course)||'-'}</p><p><b>Kompetensi lulusan:</b> ${esc(r.graduate)||'-'}</p><p><b>Saran umum:</b> ${esc(r.suggestions)||'-'}</p><p><b>Penilaian:</b> AI ${esc(r.ai)} · Dunia kerja ${esc(r.work)} · Praktik ${esc(r.practice)} · Etika AI ${esc(r.ethics)}</p></div></article>`}
 function voice(r){const txt=r.suggestions||r.graduate||r.course; if(!txt)return'';return `<article class="card quote-card"><div class="quote-mark">“</div><span class="quote-tag">Responden baru</span><blockquote>${esc(txt)}</blockquote><cite><b>${esc(r.name)}</b> · ${esc(r.institution)}</cite></article>`}
 function patch(){
- additions.length=0; // Responses 27–29 are now included in the source dashboard data.
+ additions.length=0; // Responses 27–31 are now included in the source dashboard data.
  const f=document.getElementById('legacy'); const d=f.contentDocument; if(!d)return;
- d.title='Dashboard Hasil Survei Stakeholder • 29 Responden';
- d.querySelectorAll('.hero-grid-stats .mini b,.kpi-value,.donut').forEach(el=>{if((el.textContent||'').trim()==='26')el.textContent='29';if(el.getAttribute&&el.getAttribute('data-total')==='26')el.setAttribute('data-total','29')});
+ d.title='Dashboard Hasil Survei Stakeholder • 31 Responden';
+ d.querySelectorAll('.hero-grid-stats .mini b,.kpi-value,.donut').forEach(el=>{if((el.textContent||'').trim()==='26')el.textContent='31';if(el.getAttribute&&el.getAttribute('data-total')==='26')el.setAttribute('data-total','31')});
  const grid=d.getElementById('respondentGrid'); if(grid&&!grid.querySelector('[data-added="20260718"]'))grid.insertAdjacentHTML('beforeend',additions.map(card).join(''));
  const rail=d.getElementById('voicesRail'); if(rail&&!rail.querySelector('[data-added="20260718"]'))rail.insertAdjacentHTML('beforeend',additions.map(voice).join(''));
- const rc=d.getElementById('resultCount'); if(rc)rc.textContent='Menampilkan 29 dari 29 responden';
- const vc=d.getElementById('voicesCount'); if(vc)vc.textContent='29 suara stakeholder';
- d.querySelectorAll('*').forEach(el=>{if(el.childNodes.length===1&&el.firstChild.nodeType===3){const t=el.textContent.trim();if(t==='26 responden')el.textContent='29 responden';}});
- try{const p=parent.document;const sec=p.getElementById('stakeholder-survey');if(sec){const vals=sec.querySelectorAll('.stakeholder-dashboard-metrics strong');if(vals[0])vals[0].textContent='29';if(vals[1])vals[1].textContent='4.62/5';if(vals[2])vals[2].textContent='4.45/5';}}catch(e){}
- document.getElementById('status').textContent='29 responden • pembaruan berhasil';
+ const rc=d.getElementById('resultCount'); if(rc)rc.textContent='Menampilkan 31 dari 31 responden';
+ const vc=d.getElementById('voicesCount'); if(vc)vc.textContent='31 suara stakeholder';
+ d.querySelectorAll('*').forEach(el=>{if(el.childNodes.length===1&&el.firstChild.nodeType===3){const t=el.textContent.trim();if(t==='26 responden')el.textContent='31 responden';}});
+ try{const p=parent.document;const sec=p.getElementById('stakeholder-survey');if(sec){const vals=sec.querySelectorAll('.stakeholder-dashboard-metrics strong');if(vals[0])vals[0].textContent='31';if(vals[1])vals[1].textContent='4.61/5';if(vals[2])vals[2].textContent='4.45/5';}}catch(e){}
+ document.getElementById('status').textContent='31 responden • pembaruan berhasil';
 }
 document.getElementById('legacy').addEventListener('load',()=>setTimeout(patch,300));
 </script>
