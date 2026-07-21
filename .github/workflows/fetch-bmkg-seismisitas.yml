@@ -1,0 +1,271 @@
+name: Fetch BMKG Seismisitas Data
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/fetch-bmkg-seismisitas.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  fetch-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check requests xlsxwriter
+
+      - name: Download and build XLSX
+        shell: bash
+        run: |
+          python - <<'PY'
+          from __future__ import annotations
+
+          import csv
+          import json
+          import math
+          import os
+          import time
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          import requests
+          import xlsxwriter
+          from requests.adapters import HTTPAdapter
+          from urllib3.util.retry import Retry
+
+          QUERY_URL = (
+              'https://kspservices.big.go.id/satupeta/rest/services/PUBLIK/'
+              'SUMBER_DAYA_ALAM_DAN_LINGKUNGAN/MapServer/60/query'
+          )
+          LAYER_URL = QUERY_URL.rsplit('/query', 1)[0]
+          ORIGINAL_ITEM_URL = (
+              'https://gis.bmkg.go.id/arcgis/home/item.html'
+              '?id=f111cf10571945c280bd38a7620a433b#data'
+          )
+          FIELDS = [
+              'objectid', 'tanggal', 'waktu', 'bujur', 'lintang',
+              'kedalaman', 'magnitudo', 'kelaskedalaman'
+          ]
+          OUTPUT_DIR = Path('output')
+          OUTPUT_DIR.mkdir(exist_ok=True)
+          XLSX_PATH = OUTPUT_DIR / 'Seismisitas_Gempabumi_Indonesia_2009_2022_BMKG.xlsx'
+          CSV_PATH = OUTPUT_DIR / 'Seismisitas_Gempabumi_Indonesia_2009_2022_BMKG.csv'
+          SUMMARY_PATH = OUTPUT_DIR / 'ringkasan_ekstraksi.json'
+
+          retry = Retry(
+              total=8,
+              connect=8,
+              read=8,
+              status=8,
+              backoff_factor=1.2,
+              status_forcelist=(429, 500, 502, 503, 504),
+              allowed_methods=frozenset({'GET'}),
+              raise_on_status=False,
+          )
+          session = requests.Session()
+          session.mount('https://', HTTPAdapter(max_retries=retry))
+          session.headers.update({
+              'User-Agent': 'Mozilla/5.0 (compatible; BMKG-data-export/1.0)',
+              'Accept': 'application/json,text/plain,*/*',
+          })
+
+          def get_json(params: dict, timeout: int = 120) -> dict:
+              last_error = None
+              for attempt in range(1, 9):
+                  try:
+                      response = session.get(QUERY_URL, params=params, timeout=timeout)
+                      response.raise_for_status()
+                      payload = response.json()
+                      if 'error' in payload:
+                          raise RuntimeError(json.dumps(payload['error'], ensure_ascii=False))
+                      return payload
+                  except Exception as exc:
+                      last_error = exc
+                      if attempt == 8:
+                          break
+                      time.sleep(min(20, 1.5 ** attempt))
+              raise RuntimeError(f'Gagal mengambil data: {last_error}')
+
+          print('Mengambil seluruh object ID...')
+          ids_payload = get_json({
+              'where': '1=1',
+              'returnIdsOnly': 'true',
+              'f': 'json',
+          })
+          object_ids = sorted(set(ids_payload.get('objectIds') or []))
+          if not object_ids:
+              raise RuntimeError('Server tidak mengembalikan objectIds.')
+
+          print(f'Jumlah object ID: {len(object_ids):,}')
+          rows_by_id: dict[int, list] = {}
+          chunk_size = 800
+          chunks = math.ceil(len(object_ids) / chunk_size)
+
+          for idx in range(chunks):
+              batch_ids = object_ids[idx * chunk_size:(idx + 1) * chunk_size]
+              payload = get_json({
+                  'objectIds': ','.join(map(str, batch_ids)),
+                  'outFields': ','.join(FIELDS),
+                  'returnGeometry': 'false',
+                  'orderByFields': 'objectid ASC',
+                  'f': 'json',
+              })
+              for feature in payload.get('features', []):
+                  attrs = feature.get('attributes') or {}
+                  oid = attrs.get('objectid')
+                  if oid is not None:
+                      rows_by_id[int(oid)] = [attrs.get(field) for field in FIELDS]
+              if idx == 0 or (idx + 1) % 10 == 0 or idx + 1 == chunks:
+                  print(f'Batch {idx + 1}/{chunks}: {len(rows_by_id):,} baris terkumpul')
+
+          missing = [oid for oid in object_ids if oid not in rows_by_id]
+          if missing:
+              print(f'Mengulang {len(missing):,} ID yang belum terambil...')
+              for start in range(0, len(missing), 200):
+                  batch_ids = missing[start:start + 200]
+                  payload = get_json({
+                      'objectIds': ','.join(map(str, batch_ids)),
+                      'outFields': ','.join(FIELDS),
+                      'returnGeometry': 'false',
+                      'f': 'json',
+                  })
+                  for feature in payload.get('features', []):
+                      attrs = feature.get('attributes') or {}
+                      oid = attrs.get('objectid')
+                      if oid is not None:
+                          rows_by_id[int(oid)] = [attrs.get(field) for field in FIELDS]
+
+          ordered_rows = [rows_by_id[oid] for oid in object_ids if oid in rows_by_id]
+          remaining_missing = [oid for oid in object_ids if oid not in rows_by_id]
+          if remaining_missing:
+              raise RuntimeError(
+                  f'Masih ada {len(remaining_missing)} baris hilang; contoh ID: '
+                  f'{remaining_missing[:20]}'
+              )
+
+          print('Menulis CSV...')
+          with CSV_PATH.open('w', newline='', encoding='utf-8-sig') as handle:
+              writer = csv.writer(handle)
+              writer.writerow(FIELDS)
+              writer.writerows(ordered_rows)
+
+          print('Menulis XLSX...')
+          workbook = xlsxwriter.Workbook(XLSX_PATH, {'constant_memory': True})
+          workbook.set_properties({
+              'title': 'Seismisitas Gempabumi Indonesia 2009-2022',
+              'subject': 'Data titik episenter hasil relokasi BMKG',
+              'author': 'BMKG; diekstrak dari layanan Satu Peta BIG',
+              'comments': 'Dibuat otomatis dari Feature Layer publik.',
+          })
+
+          ws = workbook.add_worksheet('Data Gempa')
+          meta = workbook.add_worksheet('Metadata')
+
+          header_fmt = workbook.add_format({
+              'bold': True,
+              'font_color': '#FFFFFF',
+              'bg_color': '#166534',
+              'border': 1,
+              'align': 'center',
+              'valign': 'vcenter',
+          })
+          text_fmt = workbook.add_format({'border': 1})
+          integer_fmt = workbook.add_format({'border': 1, 'num_format': '0'})
+          decimal_fmt = workbook.add_format({'border': 1, 'num_format': '0.0000'})
+          depth_mag_fmt = workbook.add_format({'border': 1, 'num_format': '0.0'})
+          url_fmt = workbook.add_format({'font_color': '#0563C1', 'underline': 1})
+          meta_label_fmt = workbook.add_format({
+              'bold': True, 'font_color': '#FFFFFF', 'bg_color': '#1E3A8A', 'border': 1
+          })
+          meta_value_fmt = workbook.add_format({'border': 1, 'text_wrap': True, 'valign': 'top'})
+
+          for col, field in enumerate(FIELDS):
+              ws.write(0, col, field, header_fmt)
+
+          for row_idx, values in enumerate(ordered_rows, start=1):
+              for col_idx, value in enumerate(values):
+                  if value is None:
+                      ws.write_blank(row_idx, col_idx, None, text_fmt)
+                  elif col_idx == 0:
+                      ws.write_number(row_idx, col_idx, int(value), integer_fmt)
+                  elif col_idx in (3, 4):
+                      ws.write_number(row_idx, col_idx, float(value), decimal_fmt)
+                  elif col_idx in (5, 6):
+                      ws.write_number(row_idx, col_idx, float(value), depth_mag_fmt)
+                  else:
+                      ws.write(row_idx, col_idx, value, text_fmt)
+
+          last_row = len(ordered_rows)
+          ws.freeze_panes(1, 0)
+          ws.autofilter(0, 0, last_row, len(FIELDS) - 1)
+          ws.set_row(0, 24)
+          ws.set_column(0, 0, 12)
+          ws.set_column(1, 2, 16)
+          ws.set_column(3, 4, 14)
+          ws.set_column(5, 6, 13)
+          ws.set_column(7, 7, 20)
+
+          retrieved_at = datetime.now(timezone.utc).isoformat()
+          metadata_rows = [
+              ('Judul data', 'Seismisitas Gempabumi Indonesia 2009-2022'),
+              ('Jumlah baris', len(ordered_rows)),
+              ('Jumlah kolom', len(FIELDS)),
+              ('Waktu ekstraksi (UTC)', retrieved_at),
+              ('Sumber item BMKG', ORIGINAL_ITEM_URL),
+              ('Sumber Feature Layer BIG', LAYER_URL),
+              ('Endpoint kueri', QUERY_URL),
+              ('Metode ekstraksi', 'Object ID batching; seluruh ID diverifikasi tanpa kehilangan baris'),
+              ('Sistem koordinat', 'EPSG:4326 / WGS 84'),
+              ('Catatan', 'Data merupakan titik episenter hasil relokasi hypoDD/teletomoDD dari analisis BMKG.'),
+          ]
+          meta.write(0, 0, 'Elemen', meta_label_fmt)
+          meta.write(0, 1, 'Nilai', meta_label_fmt)
+          for r, (label, value) in enumerate(metadata_rows, start=1):
+              meta.write(r, 0, label, meta_value_fmt)
+              if isinstance(value, str) and value.startswith('http'):
+                  meta.write_url(r, 1, value, url_fmt, value)
+              else:
+                  meta.write(r, 1, value, meta_value_fmt)
+          meta.freeze_panes(1, 0)
+          meta.set_column(0, 0, 28)
+          meta.set_column(1, 1, 100)
+
+          workbook.close()
+
+          summary = {
+              'row_count': len(ordered_rows),
+              'field_count': len(FIELDS),
+              'fields': FIELDS,
+              'min_objectid': object_ids[0],
+              'max_objectid': object_ids[-1],
+              'missing_count': 0,
+              'retrieved_at_utc': retrieved_at,
+              'xlsx_file': XLSX_PATH.name,
+              'csv_file': CSV_PATH.name,
+              'xlsx_size_bytes': XLSX_PATH.stat().st_size,
+              'csv_size_bytes': CSV_PATH.stat().st_size,
+              'source_layer': LAYER_URL,
+              'original_bmkg_item': ORIGINAL_ITEM_URL,
+          }
+          SUMMARY_PATH.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding='utf-8')
+          print(json.dumps(summary, ensure_ascii=False, indent=2))
+          PY
+
+      - name: Upload data files
+        uses: actions/upload-artifact@v4
+        with:
+          name: bmkg-seismisitas-2009-2022
+          path: output/
+          if-no-files-found: error
+          retention-days: 7
