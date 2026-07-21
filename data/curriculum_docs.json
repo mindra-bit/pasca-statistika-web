@@ -1,7 +1,7 @@
 {
-  "source": "Dokumen Kurikulum",
-  "generatedAt": "2026-07-12T13:42:25.186Z",
-  "total": 4,
+  "source": "Dokumen Kurikulum dan Naskah Akademik",
+  "generatedAt": "2026-07-21T11:05:00.000Z",
+  "total": 5,
   "documents": [
     {
       "id": "kurikulum-2020-2022",
@@ -51,14 +51,28 @@
       "title": "Kurikulum OBE 2025 Edisi Revisi",
       "titleId": "Kurikulum OBE 2025 Edisi Revisi",
       "titleEn": "2025 OBE Curriculum, Revised Edition",
-      "description": "Dokumen Kurikulum OBE 2025 Edisi Revisi yang menjadi rujukan utama struktur studi, mata kuliah, CPL, bahan kajian, RPL, dan skema penyelesaian.",
-      "descriptionId": "Dokumen Kurikulum OBE 2025 Edisi Revisi yang menjadi rujukan utama struktur studi, mata kuliah, CPL, bahan kajian, RPL, dan skema penyelesaian.",
-      "descriptionEn": "The 2025 OBE Curriculum Revised Edition, the main reference for study structure, courses, learning outcomes, knowledge areas, RPL, and completion schemes.",
+      "description": "Dokumen Kurikulum OBE 2025 Edisi Revisi dengan penguatan statistika kesehatan, sains data, dan kecerdasan artifisial yang bertanggung jawab.",
+      "descriptionId": "Dokumen Kurikulum OBE 2025 Edisi Revisi dengan penguatan statistika kesehatan, sains data, dan kecerdasan artifisial yang bertanggung jawab.",
+      "descriptionEn": "The revised 2025 OBE curriculum, strengthened through health statistics, data science, and responsible artificial intelligence.",
       "file": "Kurikulum 2026.pdf",
       "href": "Kurikulum%202026.pdf",
-      "sizeKb": 2135,
+      "sizeKb": 2195,
       "source": "Dokumen Kurikulum",
       "htmlHref": "kurikulum_obe_2025_edisi_revisi_web/index.html"
+    },
+    {
+      "id": "naskah-akademik-kurikulum-2025-revisi",
+      "period": "2025 Revisi",
+      "title": "Naskah Akademik Kurikulum 2025 Revisi",
+      "titleId": "Naskah Akademik Kurikulum 2025 Revisi",
+      "titleEn": "Academic Paper for the Revised 2025 Curriculum",
+      "description": "Naskah akademik yang menjelaskan landasan, evaluasi, argumentasi perubahan 54 menjadi 42 SKS, kekhasan statistika kesehatan dan sains data-AI, studi banding, serta strategi implementasi kurikulum.",
+      "descriptionId": "Naskah akademik yang menjelaskan landasan, evaluasi, argumentasi perubahan 54 menjadi 42 SKS, kekhasan statistika kesehatan dan sains data-AI, studi banding, serta strategi implementasi kurikulum.",
+      "descriptionEn": "The academic paper describing the rationale, evaluation, transition from 54 to 42 credits, health statistics and data science-AI distinctiveness, benchmarking, and curriculum implementation strategy.",
+      "file": "Naskah Akademik Kurikulum 2025 Revisi.pdf",
+      "href": "Naskah%20Akademik%20Kurikulum%202025%20Revisi.pdf",
+      "sizeKb": 1263,
+      "source": "Naskah Akademik"
     }
   ]
 }
