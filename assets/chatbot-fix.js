@@ -198,7 +198,23 @@ Object.assign(I18N.id, {
   projectOutputRpubsTitle: "Makalah RPubs",
   projectOutputPapersShort: "makalah",
   projectOutputOpen: "Buka karya",
-  projectOutputNote: "Tautan identik ditampilkan satu kali agar daftar tetap ringkas dan mudah ditelusuri."
+  projectOutputNote: "Tautan identik ditampilkan satu kali agar daftar tetap ringkas dan mudah ditelusuri.",
+  workspacePmb: "PMB 2026",
+  pmbKicker: "Penerimaan Mahasiswa Baru",
+  pmbTitle: "PMB S2 Statistika Terapan Angkatan 2026",
+  pmbText: "Dokumentasi proses penerimaan melalui jalur Mahasiswa Berprestasi, Fast Track, Reguler, KNB, dan Kerja Sama. Wawancara dilaksanakan dalam tiga sesi dengan total 49 calon mahasiswa.",
+  pmbOpen: "Buka Halaman PMB",
+  pmbReport: "Laporan dan Dokumentasi Wawancara",
+  pmbApplicants: "calon mahasiswa",
+  pmbSessions: "sesi wawancara",
+  pmbPathways: "jalur penerimaan",
+  pmbRooms: "room paralel sesi 3",
+  pmbSession1: "Sesi 1",
+  pmbSession2: "Sesi 2",
+  pmbSession3: "Sesi 3",
+  pmbSession1Text: "Tahap awal wawancara calon mahasiswa sesuai jadwal seleksi.",
+  pmbSession2Text: "Pelaksanaan lanjutan untuk mengakomodasi peserta pada periode berikutnya.",
+  pmbSession3Text: "Sesi terbesar: 42 peserta dalam tujuh room paralel dengan 14 dosen pewawancara."
 });
 
 Object.assign(I18N.en, {
@@ -250,8 +266,138 @@ Object.assign(I18N.en, {
   projectOutputRpubsTitle: "RPubs Papers",
   projectOutputPapersShort: "papers",
   projectOutputOpen: "Open work",
-  projectOutputNote: "Identical links are displayed once to keep the gallery concise and easy to browse."
+  projectOutputNote: "Identical links are displayed once to keep the gallery concise and easy to browse.",
+  workspacePmb: "Admissions 2026",
+  pmbKicker: "Student Admissions",
+  pmbTitle: "Applied Statistics Master's Admissions 2026",
+  pmbText: "Admissions documentation covering Achievement, Fast Track, Regular, KNB, and Partnership pathways. Interviews were held in three sessions for 49 applicants.",
+  pmbOpen: "Open Admissions Page",
+  pmbReport: "Interview Report and Documentation",
+  pmbApplicants: "applicants",
+  pmbSessions: "interview sessions",
+  pmbPathways: "admission pathways",
+  pmbRooms: "parallel rooms in session 3",
+  pmbSession1: "Session 1",
+  pmbSession2: "Session 2",
+  pmbSession3: "Session 3",
+  pmbSession1Text: "Initial applicant interview stage according to the admissions schedule.",
+  pmbSession2Text: "A follow-up session accommodating applicants in the next admissions period.",
+  pmbSession3Text: "The largest session: 42 applicants across seven parallel rooms with 14 interviewers."
 });
+
+function injectPmbProfileBlock() {
+  if (!workspacePanelIds.includes("pmb")) workspacePanelIds.push("pmb");
+
+  if (!document.getElementById("pmb-profile-dynamic-style")) {
+    const style = document.createElement("style");
+    style.id = "pmb-profile-dynamic-style";
+    style.textContent = `
+      .pmb-profile-section{background:linear-gradient(180deg,#f3f8fa 0%,#fff 100%)}
+      .pmb-profile-shell{display:grid;gap:24px}
+      .pmb-profile-hero{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);gap:26px;align-items:stretch;padding:34px;border-radius:28px;color:#fff;background:linear-gradient(135deg,#0b2940 0%,#164e68 58%,#087f6a 100%);box-shadow:0 22px 46px rgba(14,54,76,.16)}
+      .pmb-profile-hero:before{content:"";position:absolute;width:360px;height:360px;border:1px solid rgba(255,255,255,.17);border-radius:50%;right:-120px;top:-150px;box-shadow:0 0 0 58px rgba(255,255,255,.045),0 0 0 120px rgba(255,255,255,.025)}
+      .pmb-profile-copy,.pmb-profile-summary{position:relative;z-index:1}
+      .pmb-profile-kicker{display:inline-flex;margin-bottom:12px;padding:7px 11px;border-radius:999px;color:#173246;background:#ffca55;font-size:.78rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+      .pmb-profile-copy h2{max-width:780px;margin:0 0 12px;color:#fff;font-size:clamp(2rem,4vw,3.65rem);line-height:1.03}
+      .pmb-profile-copy p{max-width:790px;margin:0;color:#dcecf1;font-size:1.05rem}
+      .pmb-profile-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+      .pmb-profile-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:11px 16px;border-radius:11px;font-weight:850;text-decoration:none;background:#ffb22e;color:#13232e}
+      .pmb-profile-actions a.secondary{border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.10);color:#fff}
+      .pmb-profile-summary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-content:center}
+      .pmb-profile-stat{min-height:118px;padding:19px;border:1px solid rgba(255,255,255,.18);border-radius:18px;background:rgba(255,255,255,.09);backdrop-filter:blur(8px)}
+      .pmb-profile-stat strong{display:block;color:#fff;font-size:2.35rem;line-height:1}
+      .pmb-profile-stat span{display:block;margin-top:8px;color:#d8e8ee;font-size:.9rem}
+      .pmb-session-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+      .pmb-session-card{position:relative;overflow:hidden;padding:23px;border:1px solid #d9e6ea;border-radius:20px;background:#fff;box-shadow:0 13px 30px rgba(21,54,72,.07)}
+      .pmb-session-card:after{content:"";position:absolute;width:90px;height:90px;right:-32px;bottom:-34px;border-radius:50%;background:#53c7c2;opacity:.13}
+      .pmb-session-card b{display:grid;width:40px;height:40px;place-items:center;border-radius:50%;background:#143d5d;color:#fff}
+      .pmb-session-card h3{margin:14px 0 4px;color:#143d5d}
+      .pmb-session-card time{color:#087f6a;font-weight:850}
+      .pmb-session-card p{margin:9px 0 0;color:#61747f}
+      .pmb-pathway-strip{display:flex;flex-wrap:wrap;gap:9px}
+      .pmb-pathway-strip span{padding:8px 12px;border:1px solid #d8e5e9;border-radius:999px;background:#fff;color:#24485f;font-size:.9rem;font-weight:750}
+      .pmb-profile-spotlight{margin:28px 0;padding:24px;border-radius:20px;background:linear-gradient(110deg,#eef7f6,#fff8e8);border:1px solid #d9e6e5;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center}
+      .pmb-profile-spotlight h3{margin:.2rem 0 .4rem;color:#143d5d}
+      .pmb-profile-spotlight p{margin:0;color:#5a6f7a}
+      .pmb-profile-spotlight a{padding:11px 15px;border-radius:10px;background:#087f6a;color:#fff;font-weight:800;text-decoration:none;white-space:nowrap}
+      @media(max-width:920px){.pmb-profile-hero{grid-template-columns:1fr}.pmb-session-grid{grid-template-columns:1fr}.pmb-profile-spotlight{grid-template-columns:1fr}}
+      @media(max-width:560px){.pmb-profile-hero{padding:25px;border-radius:22px}.pmb-profile-summary{grid-template-columns:1fr 1fr}.pmb-profile-stat{min-height:105px;padding:15px}}
+    `;
+    document.head.appendChild(style);
+  }
+
+  const menu = document.querySelector(".workspace-menu-s2");
+  if (menu && !menu.querySelector('[data-workspace-target="pmb"]')) {
+    const profileLink = menu.querySelector('[data-workspace-target="program-profile"]');
+    const link = document.createElement("a");
+    link.href = "#pmb";
+    link.dataset.programSelect = "s2";
+    link.dataset.workspaceTarget = "pmb";
+    link.dataset.i18n = "workspacePmb";
+    link.textContent = I18N[currentLang]?.workspacePmb || "PMB 2026";
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      history.replaceState(null, "", "#pmb");
+      setActiveWorkspacePanel("pmb", true, "s2");
+    });
+    profileLink?.insertAdjacentElement("afterend", link);
+  }
+
+  if (!document.getElementById("pmb")) {
+    const beasiswa = document.getElementById("beasiswa");
+    if (beasiswa) {
+      const section = document.createElement("section");
+      section.className = "section pmb-profile-section";
+      section.id = "pmb";
+      section.innerHTML = `
+        <div class="container pmb-profile-shell">
+          <div class="pmb-profile-hero">
+            <div class="pmb-profile-copy">
+              <span class="pmb-profile-kicker" data-i18n="pmbKicker">Penerimaan Mahasiswa Baru</span>
+              <h2 data-i18n="pmbTitle">PMB S2 Statistika Terapan Angkatan 2026</h2>
+              <p data-i18n="pmbText">Dokumentasi proses penerimaan melalui jalur Mahasiswa Berprestasi, Fast Track, Reguler, KNB, dan Kerja Sama. Wawancara dilaksanakan dalam tiga sesi dengan total 49 calon mahasiswa.</p>
+              <div class="pmb-profile-actions">
+                <a href="pmb/" data-i18n="pmbOpen">Buka Halaman PMB</a>
+                <a class="secondary" href="pmb/wawancara-calon-mahasiswa-2026/" data-i18n="pmbReport">Laporan dan Dokumentasi Wawancara</a>
+              </div>
+            </div>
+            <div class="pmb-profile-summary" aria-label="Ringkasan PMB 2026">
+              <div class="pmb-profile-stat"><strong>49</strong><span data-i18n="pmbApplicants">calon mahasiswa</span></div>
+              <div class="pmb-profile-stat"><strong>3</strong><span data-i18n="pmbSessions">sesi wawancara</span></div>
+              <div class="pmb-profile-stat"><strong>5</strong><span data-i18n="pmbPathways">jalur penerimaan</span></div>
+              <div class="pmb-profile-stat"><strong>7</strong><span data-i18n="pmbRooms">room paralel sesi 3</span></div>
+            </div>
+          </div>
+          <div class="pmb-session-grid">
+            <article class="pmb-session-card"><b>1</b><h3 data-i18n="pmbSession1">Sesi 1</h3><time datetime="2026-04-15">15 April 2026</time><p data-i18n="pmbSession1Text">Tahap awal wawancara calon mahasiswa sesuai jadwal seleksi.</p></article>
+            <article class="pmb-session-card"><b>2</b><h3 data-i18n="pmbSession2">Sesi 2</h3><time datetime="2026-06-03">Rabu, 3 Juni 2026</time><p data-i18n="pmbSession2Text">Pelaksanaan lanjutan untuk mengakomodasi peserta pada periode berikutnya.</p></article>
+            <article class="pmb-session-card"><b>3</b><h3 data-i18n="pmbSession3">Sesi 3</h3><time datetime="2026-07-22">Rabu, 22 Juli 2026</time><p data-i18n="pmbSession3Text">Sesi terbesar: 42 peserta dalam tujuh room paralel dengan 14 dosen pewawancara.</p></article>
+          </div>
+          <div class="pmb-pathway-strip" aria-label="Jalur penerimaan PMB 2026"><span>Mahasiswa Berprestasi</span><span>Fast Track</span><span>Reguler</span><span>KNB</span><span>Kerja Sama</span></div>
+        </div>
+      `;
+      beasiswa.insertAdjacentElement("beforebegin", section);
+    }
+  }
+
+  const profilePanel = document.querySelector("#program-profile .program-profile-panel");
+  if (profilePanel && !profilePanel.querySelector(".pmb-profile-spotlight")) {
+    const spotlight = document.createElement("div");
+    spotlight.className = "pmb-profile-spotlight";
+    spotlight.innerHTML = `<div><span class="section-kicker" data-i18n="pmbKicker">Penerimaan Mahasiswa Baru</span><h3 data-i18n="pmbTitle">PMB S2 Statistika Terapan Angkatan 2026</h3><p data-i18n="pmbText">Dokumentasi proses penerimaan melalui jalur Mahasiswa Berprestasi, Fast Track, Reguler, KNB, dan Kerja Sama. Wawancara dilaksanakan dalam tiga sesi dengan total 49 calon mahasiswa.</p></div><a href="#pmb" data-i18n="pmbOpen">Buka Halaman PMB</a>`;
+    const hero = profilePanel.querySelector(".program-profile-hero");
+    hero?.insertAdjacentElement("afterend", spotlight);
+    spotlight.querySelector("a")?.addEventListener("click", (event) => {
+      event.preventDefault();
+      history.replaceState(null, "", "#pmb");
+      setActiveWorkspacePanel("pmb", true, "s2");
+    });
+  }
+
+  applyLanguage();
+}
+
+injectPmbProfileBlock();
 
 applyLanguage();
 
@@ -269,6 +415,6 @@ document.querySelectorAll("[data-project-output-target]").forEach((button) => {
 });
 
 const projectPanelHash = decodeURIComponent(window.location.hash.replace(/^#/, ""));
-if (["evaluasi-project-mahasiswa-2026", "output-project-mahasiswa-2026", "sharing-session-alumni"].includes(projectPanelHash)) {
+if (["evaluasi-project-mahasiswa-2026", "output-project-mahasiswa-2026", "sharing-session-alumni", "pmb"].includes(projectPanelHash)) {
   setActiveWorkspacePanel(projectPanelHash, true, "s2");
 }
