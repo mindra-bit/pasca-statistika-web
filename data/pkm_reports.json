@@ -1,5 +1,5 @@
 {
-  "total": 1,
+  "total": 2,
   "reports": [
     {
       "id": "pkm-ganjil-2025-2026",
@@ -15,6 +15,21 @@
       "pages": 42,
       "sizeKb": 26764,
       "href": "%40PKM/LAPORAN%20KEGIATAN%20-%20GANJIL%202025%3A2026.pdf"
+    },
+    {
+      "id": "pkm-geospasial-diskominfo-bandung-2026",
+      "titleId": "Analisis Geospasial dalam Kebijakan Publik - Diskominfo Kabupaten Bandung",
+      "titleEn": "Geospatial Analysis for Public Policy - Bandung Regency Communication and Informatics Office",
+      "descriptionId": "Laporan pembinaan pengelolaan dan pemanfaatan data geospasial berbasis SIMASDA Kabupaten Bandung dan dashboard R Shiny GeoAnalitik. Kegiatan dihadiri aparatur pemerintah daerah, mahasiswa, dan alumni S1 Statistika serta S2 Statistika Terapan FMIPA UNPAD.",
+      "descriptionEn": "A report on geospatial data management and utilization using Bandung Regency SIMASDA data and the R Shiny GeoAnalitik dashboard, attended by local government officers, students, and alumni of the undergraduate Statistics and master's Applied Statistics programs at FMIPA UNPAD.",
+      "period": "Ganjil 2026/2027",
+      "periodEn": "Odd Semester 2026/2027",
+      "focusId": "Analisis geospasial, statistika spasial, dashboard kebijakan, dan kolaborasi pemerintah-akademik",
+      "focusEn": "Geospatial analysis, spatial statistics, policy dashboards, and government-academic collaboration",
+      "format": "HTML / PDF",
+      "pages": 6,
+      "sizeKb": 327,
+      "href": "%40PKM/geospasial-diskominfo-2026/index.html"
     }
   ]
 }
