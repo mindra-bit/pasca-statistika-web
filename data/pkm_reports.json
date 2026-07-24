@@ -1,5 +1,5 @@
 {
-  "total": 2,
+  "total": 3,
   "reports": [
     {
       "id": "pkm-ganjil-2025-2026",
@@ -30,6 +30,21 @@
       "pages": 1,
       "sizeKb": 4,
       "href": "pengabdian/geospasial-diskominfo-2026/index.html"
+    },
+    {
+      "id": "pkm-visitasi-dinkes-jabar-2026",
+      "titleId": "Kunjungan dan Visitasi Mahasiswa Magang di Dinas Kesehatan Provinsi Jawa Barat",
+      "titleEn": "Internship Student Visit and Academic Monitoring at the West Java Provincial Health Office",
+      "descriptionId": "Laporan kunjungan dan visitasi mahasiswa magang S1 Statistika dan mahasiswa Fast Track S2 Statistika Terapan FMIPA Universitas Padjadjaran untuk memantau progres magang dan penelitian serta mengidentifikasi potensi kolaborasi pengelolaan data kesehatan.",
+      "descriptionEn": "A report on the visit and academic monitoring of undergraduate Statistics interns and Applied Statistics fast-track master's students, covering internship and research progress as well as potential collaboration in health data management.",
+      "period": "Ganjil 2026/2027",
+      "periodEn": "Odd Semester 2026/2027",
+      "focusId": "Visitasi magang, penelitian mahasiswa, statistika kesehatan, sains data, dan potensi kolaborasi",
+      "focusEn": "Internship monitoring, student research, health statistics, data science, and potential collaboration",
+      "format": "HTML",
+      "pages": 1,
+      "sizeKb": 17,
+      "href": "pengabdian/visitasi-dinkes-jabar-2026/index.html"
     }
   ]
 }
