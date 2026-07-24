@@ -42,9 +42,8 @@
     .status-note{border-left:5px solid var(--green);padding:18px 22px;background:#eef8f3;border-radius:0 14px 14px 0;color:#23553f}
     .photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:22px}
     .photo-card{margin:0;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 14px 34px rgba(28,58,78,.08)}
-    .photo-card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#102f46}
+    .photo-card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#eaf1f5}
     .photo-card figcaption{padding:16px 18px;color:var(--muted);font-size:.95rem}
-    .footnote{font-size:.9rem;color:var(--muted)}
     footer{background:var(--navy);color:#fff;padding:32px 0}
     footer p{margin:.25rem 0;color:#dce8ef}
     @media(max-width:820px){.grid,.metrics,.photo-grid{grid-template-columns:1fr}.hero{min-height:82vh}table{font-size:.9rem}th,td{padding:9px}}
@@ -214,11 +213,11 @@
         <p>Dua foto berikut merupakan dokumentasi pelaksanaan visitasi dan diskusi di Kantor Dinas Kesehatan Provinsi Jawa Barat.</p>
         <div class="photo-grid">
           <figure class="photo-card">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='451'%3E%3Crect width='100%25' height='100%25' fill='%23102f46'/%3E%3C/svg%3E" data-photo-parts="foto1-part1.txt,foto1-part2.txt,foto1-part3.txt,foto1-part4.txt" alt="Diskusi perkembangan kegiatan magang dan penelitian mahasiswa di Dinas Kesehatan Provinsi Jawa Barat" loading="lazy">
+            <img src="foto-visitasi-dinkes-1.svg?v=20260724-2" onerror="this.onerror=null;this.src='foto-visitasi-dinkes-1-web.svg?v=20260724-2'" alt="Diskusi perkembangan kegiatan magang dan penelitian mahasiswa di Dinas Kesehatan Provinsi Jawa Barat" loading="eager">
             <figcaption><strong>Gambar 1.</strong> Diskusi mengenai perkembangan kegiatan magang dan penelitian mahasiswa bersama pembimbing lapangan di Dinas Kesehatan Provinsi Jawa Barat.</figcaption>
           </figure>
           <figure class="photo-card">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='451'%3E%3Crect width='100%25' height='100%25' fill='%23102f46'/%3E%3C/svg%3E" data-photo-parts="foto2-part1.txt,foto2-part2.txt,foto2-part3.txt,foto2-part4.txt" alt="Dokumentasi kunjungan mahasiswa dan pihak terkait di Dinas Kesehatan Provinsi Jawa Barat" loading="lazy">
+            <img src="foto-visitasi-dinkes-2.svg?v=20260724-2" onerror="this.onerror=null;this.src='foto-visitasi-dinkes-2-web.svg?v=20260724-2'" alt="Dokumentasi kunjungan mahasiswa dan pihak terkait di Dinas Kesehatan Provinsi Jawa Barat" loading="eager">
             <figcaption><strong>Gambar 2.</strong> Dokumentasi kunjungan dan pembahasan potensi kolaborasi antara Dinas Kesehatan Provinsi Jawa Barat dan Departemen Statistika FMIPA Universitas Padjadjaran.</figcaption>
           </figure>
         </div>
@@ -240,18 +239,5 @@
       <p>Dokumentasi Program Pengabdian Semester Ganjil 2026/2027.</p>
     </div>
   </footer>
-
-  <script>
-    (async()=>{
-      const images=[...document.querySelectorAll('[data-photo-parts]')];
-      await Promise.all(images.map(async img=>{
-        try{
-          const parts=img.dataset.photoParts.split(',');
-          const texts=await Promise.all(parts.map(async path=>{const r=await fetch(path,{cache:'force-cache'});if(!r.ok)throw new Error(path);return (await r.text()).trim();}));
-          img.src='data:image/webp;base64,'+texts.join('');
-        }catch(error){img.alt+=' (foto belum dapat dimuat)';}
-      }));
-    })();
-  </script>
 </body>
 </html>
