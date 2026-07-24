@@ -1,0 +1,73 @@
+name: Decode PMB photos
+
+on:
+  push:
+    paths:
+      - ".github/workflows/decode-pmb-photos.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  decode-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Decode original PMB photographs
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="pmb/wawancara-calon-mahasiswa-2026"
+          source_dir="$base/photo-data"
+          output_dir="$base/photos-hq"
+          mkdir -p "$output_dir"
+
+          for number in 01 02 03 04 05 06; do
+            source_file="$source_dir/dokumentasi-${number}.b64.txt"
+            output_file="$output_dir/dokumentasi-${number}.jpg"
+            test -s "$source_file"
+            tr -d '\r\n\t ' < "$source_file" | base64 --decode > "$output_file"
+            test -s "$output_file"
+            head_hex="$(od -An -tx1 -N2 "$output_file" | tr -d ' \n')"
+            test "$head_hex" = "ffd8"
+            echo "Decoded $output_file ($(wc -c < "$output_file") bytes)"
+          done
+
+      - name: Point gallery to original-resolution photographs
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path("pmb/wawancara-calon-mahasiswa-2026/index.html")
+          text = path.read_text(encoding="utf-8")
+          text = text.replace("photos/dokumentasi-", "photos-hq/dokumentasi-")
+          text = text.replace("20260724-4", "20260724-5")
+          text = text.replace("Versi galeri: 2026-07-24.4", "Versi galeri: 2026-07-24.5")
+          text = text.replace(
+              ".gallery img{display:block;width:100%;height:260px;object-fit:cover;background:#eaf0f2}",
+              ".gallery img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#101820}"
+          )
+          text = text.replace(
+              "Foto kini disajikan langsung sebagai berkas JPG agar dapat dimuat stabil oleh GitHub Pages.",
+              "Dokumentasi ditampilkan dari berkas JPG sumber dengan rasio asli 16:9 agar foto tetap tajam dan tidak diperbesar secara berlebihan."
+          )
+          path.write_text(text, encoding="utf-8")
+          PY
+
+      - name: Commit decoded photographs
+        shell: bash
+        run: |
+          if git diff --quiet && [ -z "$(git status --porcelain)" ]; then
+            echo "No changes required"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pmb/wawancara-calon-mahasiswa-2026/index.html pmb/wawancara-calon-mahasiswa-2026/photos-hq
+          git commit -m "Gunakan foto sumber resolusi asli untuk galeri PMB"
+          git push origin HEAD:main
