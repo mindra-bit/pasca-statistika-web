@@ -1,0 +1,46 @@
+name: Assemble Naskah Akademik
+
+on:
+  push:
+    paths:
+      - ".upload/naskah/**"
+      - ".github/workflows/assemble-naskah-akademik.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Assemble HTML and DOCX
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dokumen-kurikulum
+
+          cat .upload/naskah/htmlgz.part* | base64 --decode | gzip --decompress > dokumen-kurikulum/naskah-akademik-perubahan-kurikulum-obe-2023-ke-2025.html
+          cat .upload/naskah/docx.part* | base64 --decode > dokumen-kurikulum/Naskah_Akademik_Perubahan_Kurikulum_OBE_2023_menjadi_OBE_2025.docx
+          cp .upload/naskah/index.html index.html
+
+          echo "5334b085e61ebf0e5e91dd78a4ac0c67ef8e32b3344d48f374832329af2bdec4  dokumen-kurikulum/naskah-akademik-perubahan-kurikulum-obe-2023-ke-2025.html" | sha256sum --check
+          echo "0d8351232241d872850a85e1c464b2f936a94ea03256711901c4ddb3791c511a  dokumen-kurikulum/Naskah_Akademik_Perubahan_Kurikulum_OBE_2023_menjadi_OBE_2025.docx" | sha256sum --check
+          echo "ae4ea39943fabcddf772285dd34dafc4d52554b4bb24cc5df4cf20f833d212cf  index.html" | sha256sum --check
+          unzip -t dokumen-kurikulum/Naskah_Akademik_Perubahan_Kurikulum_OBE_2023_menjadi_OBE_2025.docx
+
+          rm -rf .upload/naskah
+
+      - name: Commit assembled documents
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Tambahkan Naskah Akademik Perubahan Kurikulum OBE 2023-2025" || exit 0
+          git push
