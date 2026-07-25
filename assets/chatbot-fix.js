@@ -125,7 +125,7 @@
 
     if (!document.querySelector('script[data-renstra-2026]')) {
       const renstraScript = document.createElement("script");
-      renstraScript.src = "assets/renstra-2026.js?v=renstra-vision-20260725";
+      renstraScript.src = "assets/renstra-2026.js?v=renstra-vision-white-small-v2-20260725";
       renstraScript.async = false;
       renstraScript.dataset.renstra2026 = "true";
       document.body.appendChild(renstraScript);
@@ -134,9 +134,37 @@
     if (!document.querySelector('link[data-renstra-vision-fix]')) {
       const renstraVisionStyle = document.createElement("link");
       renstraVisionStyle.rel = "stylesheet";
-      renstraVisionStyle.href = "assets/renstra-vision-fix.css?v=renstra-vision-20260725";
+      renstraVisionStyle.href = "assets/renstra-vision-fix.css?v=renstra-vision-white-small-v2-20260725";
       renstraVisionStyle.dataset.renstraVisionFix = "true";
       document.head.appendChild(renstraVisionStyle);
+    }
+
+    const enforceRenstraVisionStyle = () => {
+      const vision = document.querySelector('#renstra-program-studi [data-renstra-view="direction"] .renstra-vision');
+      if (!vision) return false;
+      const label = vision.querySelector("small");
+      const paragraph = vision.querySelector("p");
+      if (label) {
+        label.style.setProperty("color", "#fff", "important");
+        label.style.setProperty("-webkit-text-fill-color", "#fff", "important");
+        label.style.setProperty("font-size", ".72rem", "important");
+      }
+      if (paragraph) {
+        paragraph.style.setProperty("color", "#fff", "important");
+        paragraph.style.setProperty("-webkit-text-fill-color", "#fff", "important");
+        paragraph.style.setProperty("font-size", "clamp(.95rem, 1.1vw, 1.1rem)", "important");
+        paragraph.style.setProperty("font-weight", "500", "important");
+        paragraph.style.setProperty("line-height", "1.62", "important");
+      }
+      return Boolean(paragraph);
+    };
+
+    if (!enforceRenstraVisionStyle()) {
+      const observer = new MutationObserver(() => {
+        if (enforceRenstraVisionStyle()) observer.disconnect();
+      });
+      observer.observe(document.body, { childList: true, subtree: true });
+      window.setTimeout(() => observer.disconnect(), 15000);
     }
   });
 
