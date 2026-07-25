@@ -125,10 +125,18 @@
 
     if (!document.querySelector('script[data-renstra-2026]')) {
       const renstraScript = document.createElement("script");
-      renstraScript.src = "assets/renstra-2026.js?v=renstra-20260725";
+      renstraScript.src = "assets/renstra-2026.js?v=renstra-vision-20260725";
       renstraScript.async = false;
       renstraScript.dataset.renstra2026 = "true";
       document.body.appendChild(renstraScript);
+    }
+
+    if (!document.querySelector('link[data-renstra-vision-fix]')) {
+      const renstraVisionStyle = document.createElement("link");
+      renstraVisionStyle.rel = "stylesheet";
+      renstraVisionStyle.href = "assets/renstra-vision-fix.css?v=renstra-vision-20260725";
+      renstraVisionStyle.dataset.renstraVisionFix = "true";
+      document.head.appendChild(renstraVisionStyle);
     }
   });
 
