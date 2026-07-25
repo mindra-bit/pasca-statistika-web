@@ -10,7 +10,7 @@
 <script>
 (async()=>{
   try{
-    const response=await fetch('index-base.html?v=diskusi-tesis-20260725',{cache:'no-store'});
+    const response=await fetch('index-base.html?v=pbm-2024-kurikulum-20260725',{cache:'no-store'});
     if(!response.ok) throw new Error('Gagal memuat halaman utama');
     let html=await response.text();
     const marker='<a class="curriculum-hub-card thesis-online-guide-hub-card" href="panduan-tesis-online.html" target="_blank" rel="noopener">';
