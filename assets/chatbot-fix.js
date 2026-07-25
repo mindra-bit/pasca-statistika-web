@@ -1,9 +1,56 @@
 (() => {
+  function ensureDiskusiTesisMenu() {
+    if (document.querySelector(".diskusi-tesis-hub-card")) return true;
+
+    const thesisOnlineCard = document.querySelector(".thesis-online-hub-card");
+    if (!thesisOnlineCard) return false;
+
+    const card = document.createElement("a");
+    card.className = "curriculum-hub-card diskusi-tesis-hub-card";
+    card.href = "laporan-diskusi-tesis-ai.html";
+    card.target = "_blank";
+    card.rel = "noopener";
+    card.setAttribute("aria-label", "Buka laporan dan video Diskusi Tesis");
+    card.innerHTML = `
+      <span>Diskusi Tesis</span>
+      <small>Laporan HTML, materi kegiatan, dan video dokumentasi tesis</small>
+    `;
+
+    thesisOnlineCard.insertAdjacentElement("afterend", card);
+    return true;
+  }
+
+  function activateDiskusiTesisMenu() {
+    if (ensureDiskusiTesisMenu()) return;
+
+    let attempts = 0;
+    const timer = window.setInterval(() => {
+      attempts += 1;
+      if (ensureDiskusiTesisMenu() || attempts >= 30) {
+        window.clearInterval(timer);
+      }
+    }, 400);
+
+    const observer = new MutationObserver(() => {
+      if (ensureDiskusiTesisMenu()) observer.disconnect();
+    });
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+    window.setTimeout(() => observer.disconnect(), 15000);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", activateDiskusiTesisMenu, { once: true });
+  } else {
+    activateDiskusiTesisMenu();
+  }
+
   const baseScript = document.createElement("script");
-  baseScript.src = "assets/chatbot-fix-base.js?v=pmb-2026-hierarchy-20260725";
+  baseScript.src = "assets/chatbot-fix-base.js?v=pmb-2026-hierarchy-diskusi-tesis-20260725";
   baseScript.async = false;
 
   baseScript.addEventListener("load", () => {
+    ensureDiskusiTesisMenu();
+
     Object.assign(I18N.id, {
       workspacePmb: "PMB",
       pmbKicker: "Penerimaan Mahasiswa Baru",
@@ -122,6 +169,7 @@
     }
 
     applyLanguage();
+    ensureDiskusiTesisMenu();
 
     if (!document.querySelector('script[data-renstra-2026]')) {
       const renstraScript = document.createElement("script");
@@ -170,6 +218,7 @@
 
   baseScript.addEventListener("error", () => {
     console.error("Gagal memuat skrip dasar chatbot dan komponen website.");
+    activateDiskusiTesisMenu();
   });
 
   document.head.appendChild(baseScript);
