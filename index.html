@@ -10,13 +10,31 @@
 <script>
 (async()=>{
   try{
-    const response=await fetch('index-base.html?v=pbm-2024-kurikulum-20260725',{cache:'no-store'});
+    const response=await fetch('index-base.html?v=naskah-akademik-kurikulum-20260725',{cache:'no-store'});
     if(!response.ok) throw new Error('Gagal memuat halaman utama');
     let html=await response.text();
-    const marker='<a class="curriculum-hub-card thesis-online-guide-hub-card" href="panduan-tesis-online.html" target="_blank" rel="noopener">';
-    const cards='<a class="curriculum-hub-card pbm-2024-hub-card" href="dokumen-pbm-2024.html"><span>Dokumen PBM 2024</span><small>Arsip per semester dan mata kuliah dalam HTML</small></a><a class="curriculum-hub-card diskusi-tesis-hub-card" href="laporan-diskusi-tesis-ai.html" target="_blank" rel="noopener"><span>Diskusi Tesis</span><small>Laporan HTML, materi kegiatan, dan video dokumentasi tesis</small></a>';
-    if(!html.includes('pbm-2024-hub-card')&&html.includes(marker)) html=html.replace(marker,cards+marker);
-    html=html.replace('assets/chatbot-fix.js?v=tesis-online-single-20260707','assets/chatbot-fix.js?v=diskusi-tesis-20260725');
+
+    const guideMarker='<a class="curriculum-hub-card thesis-online-guide-hub-card" href="panduan-tesis-online.html" target="_blank" rel="noopener">';
+    const existingCards='<a class="curriculum-hub-card pbm-2024-hub-card" href="dokumen-pbm-2024.html"><span>Dokumen PBM 2024</span><small>289 dokumen per semester dan mata kuliah dalam HTML</small></a><a class="curriculum-hub-card diskusi-tesis-hub-card" href="laporan-diskusi-tesis-ai.html" target="_blank" rel="noopener"><span>Diskusi Tesis</span><small>Laporan HTML, materi kegiatan, dan video dokumentasi tesis</small></a>';
+    if(!html.includes('pbm-2024-hub-card')&&html.includes(guideMarker)) html=html.replace(guideMarker,existingCards+guideMarker);
+
+    const academicHubCard='<a class="curriculum-hub-card naskah-akademik-hub-card" href="dokumen-kurikulum/naskah-akademik-perubahan-kurikulum-obe-2023-ke-2025.html" target="_blank" rel="noopener"><span>Naskah Akademik Perubahan Kurikulum</span><small>OBE 2023 menjadi OBE 2025 · HTML dan DOCX</small></a>';
+    if(!html.includes('naskah-akademik-hub-card')&&html.includes(guideMarker)) html=html.replace(guideMarker,academicHubCard+guideMarker);
+
+    const academicStyles=`<style>
+      .naskah-akademik-hub-card{background:linear-gradient(135deg,#0c2f55,#1d618e)!important;color:#fff!important;border-color:#0c2f55!important}.naskah-akademik-hub-card span,.naskah-akademik-hub-card small{color:#fff!important}.naskah-akademik-hub-card small{opacity:.84}
+      .curriculum-featured-doc{margin:22px 0 28px;padding:1px;border-radius:22px;background:linear-gradient(135deg,#0c2f55,#c99a2e);box-shadow:0 18px 48px rgba(12,47,85,.16)}.curriculum-featured-doc-inner{background:#fff;border-radius:21px;padding:clamp(20px,4vw,34px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}.curriculum-featured-doc .doc-badge{display:inline-flex;width:max-content;padding:7px 11px;border-radius:999px;background:#eaf2f8;color:#0c2f55;font-weight:800;font-size:.78rem;letter-spacing:.05em}.curriculum-featured-doc h3{margin:10px 0 8px;color:#0c2f55;font-size:clamp(1.25rem,2.4vw,1.75rem);line-height:1.25}.curriculum-featured-doc p{margin:0;color:#526274;max-width:850px}.curriculum-featured-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}.curriculum-featured-actions a{display:inline-flex;align-items:center;justify-content:center;padding:11px 15px;border-radius:999px;text-decoration:none;font-weight:800;white-space:nowrap}.curriculum-featured-actions .open-html{background:#0c2f55;color:#fff}.curriculum-featured-actions .download-docx{background:#c99a2e;color:#172338}@media(max-width:760px){.curriculum-featured-doc-inner{grid-template-columns:1fr}.curriculum-featured-actions{justify-content:flex-start}}
+    </style>`;
+    if(!html.includes('.curriculum-featured-doc{')) html=html.replace('</head>',academicStyles+'</head>');
+
+    html=html.replace('Empat PDF kurikulum ditempatkan sebagai rujukan resmi dan arsip akademik yang dapat dibuka langsung dari website.','Lima dokumen kurikulum ditempatkan sebagai rujukan resmi dan arsip akademik yang dapat dibuka langsung dari website, termasuk Naskah Akademik Perubahan Kurikulum OBE 2023 menjadi Kurikulum OBE 2025.');
+    html=html.replace('<strong id="curriculumDocCount">4</strong>','<strong id="curriculumDocCount">5</strong>');
+
+    const docGrid='<div class="curriculum-doc-grid" id="curriculumDocRows" aria-live="polite"></div>';
+    const featured=`<article class="curriculum-featured-doc" aria-labelledby="naskah-akademik-title"><div class="curriculum-featured-doc-inner"><div><span class="doc-badge">HTML + DOCX · 23 MEI 2025</span><h3 id="naskah-akademik-title">Naskah Akademik Perubahan Kurikulum OBE 2023 menjadi Kurikulum OBE 2025</h3><p>Dokumen akademik, yuridis, dan operasional yang memuat evaluasi Kurikulum OBE 2023, dasar perubahan menjadi 54 SKS, penguatan Sains Data, serta tahapan tesis SUR–SKR–SAM.</p></div><div class="curriculum-featured-actions"><a class="open-html" href="dokumen-kurikulum/naskah-akademik-perubahan-kurikulum-obe-2023-ke-2025.html" target="_blank" rel="noopener">Baca HTML</a><a class="download-docx" href="dokumen-kurikulum/Naskah_Akademik_Perubahan_Kurikulum_OBE_2023_menjadi_OBE_2025.docx" download>Unduh DOCX</a></div></div></article>`;
+    if(!html.includes('curriculum-featured-doc')&&html.includes(docGrid)) html=html.replace(docGrid,featured+docGrid);
+
+    html=html.replace(/assets\/chatbot-fix\.js\?v=[^"']+/,'assets/chatbot-fix.js?v=naskah-akademik-kurikulum-20260725');
     document.open();document.write(html);document.close();
   }catch(error){document.body.innerHTML='<main style="max-width:760px;margin:80px auto;padding:24px"><h1>Portal belum dapat dimuat</h1><p>'+error.message+'</p><p><a href="index-base.html">Buka halaman utama</a></p></main>'}
 })();
