@@ -14,8 +14,8 @@
     if(!response.ok) throw new Error('Gagal memuat halaman utama');
     let html=await response.text();
     const marker='<a class="curriculum-hub-card thesis-online-guide-hub-card" href="panduan-tesis-online.html" target="_blank" rel="noopener">';
-    const card='<a class="curriculum-hub-card diskusi-tesis-hub-card" href="laporan-diskusi-tesis-ai.html" target="_blank" rel="noopener"><span>Diskusi Tesis</span><small>Laporan HTML, materi kegiatan, dan video dokumentasi tesis</small></a>';
-    if(!html.includes('diskusi-tesis-hub-card')&&html.includes(marker)) html=html.replace(marker,card+marker);
+    const cards='<a class="curriculum-hub-card pbm-2024-hub-card" href="dokumen-pbm-2024.html"><span>Dokumen PBM 2024</span><small>Arsip per semester dan mata kuliah dalam HTML</small></a><a class="curriculum-hub-card diskusi-tesis-hub-card" href="laporan-diskusi-tesis-ai.html" target="_blank" rel="noopener"><span>Diskusi Tesis</span><small>Laporan HTML, materi kegiatan, dan video dokumentasi tesis</small></a>';
+    if(!html.includes('pbm-2024-hub-card')&&html.includes(marker)) html=html.replace(marker,cards+marker);
     html=html.replace('assets/chatbot-fix.js?v=tesis-online-single-20260707','assets/chatbot-fix.js?v=diskusi-tesis-20260725');
     document.open();document.write(html);document.close();
   }catch(error){document.body.innerHTML='<main style="max-width:760px;margin:80px auto;padding:24px"><h1>Portal belum dapat dimuat</h1><p>'+error.message+'</p><p><a href="index-base.html">Buka halaman utama</a></p></main>'}
