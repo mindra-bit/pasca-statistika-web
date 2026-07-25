@@ -122,6 +122,14 @@
     }
 
     applyLanguage();
+
+    if (!document.querySelector('script[data-renstra-2026]')) {
+      const renstraScript = document.createElement("script");
+      renstraScript.src = "assets/renstra-2026.js?v=renstra-20260725";
+      renstraScript.async = false;
+      renstraScript.dataset.renstra2026 = "true";
+      document.body.appendChild(renstraScript);
+    }
   });
 
   baseScript.addEventListener("error", () => {
