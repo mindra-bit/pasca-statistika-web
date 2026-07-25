@@ -59,6 +59,7 @@ for (const semesterName of (await readdir(sourceRoot, { withFileTypes: true }))
 
 const totalFiles = semesters.flatMap((semester) => semester.courses).reduce((sum, course) => sum + course.files.length, 0);
 const totalBytes = semesters.flatMap((semester) => semester.courses).reduce((sum, course) => sum + course.bytes, 0);
+const releaseBase = "https://github.com/mindra-bit/pasca-statistika-web/releases/download/pbm-2024";
 const courseMarkup = semesters.map((semester, semesterIndex) => `
   <section class="semester-panel" id="${slugify(semester.name)}" data-semester-panel ${semesterIndex ? "hidden" : ""}>
     <div class="semester-heading">
@@ -72,6 +73,9 @@ const courseMarkup = semesters.map((semester, semesterIndex) => `
             <span><strong>${escapeHtml(course.name)}</strong><small>${course.files.length} dokumen · ${formatSize(course.bytes)}</small></span>
             <span class="chevron" aria-hidden="true">⌄</span>
           </summary>
+          <div class="course-actions">
+            <a href="${releaseBase}/${course.slug}.zip">Unduh paket mata kuliah (.zip)</a>
+          </div>
           <ol class="document-list">
             ${course.files.map((file) => `
               <li data-document data-search="${escapeHtml(`${course.name} ${file.relative} ${file.ext}`.toLowerCase())}">
@@ -102,7 +106,7 @@ const html = `<!doctype html>
 </head>
 <body>
   <header class="topbar"><div class="topbar-inner"><a class="brand" href="index.html#kurikulum">S2 Statistika Terapan · Unpad</a><a class="back" href="index.html#kurikulum">← Kembali ke Kurikulum</a></div></header>
-  <section class="hero"><div class="hero-inner"><p class="eyebrow">Kurikulum · Arsip pembelajaran</p><h1>Dokumen PBM 2024</h1><p class="hero-copy">Indeks lengkap dokumen perkuliahan angkatan 2024, disusun per semester dan mata kuliah. Buka mata kuliah untuk melihat seluruh daftar dokumennya.</p><div class="stats"><span class="stat">${totalFiles} dokumen</span><span class="stat">${semesters.length} semester</span><span class="stat">${semesters.flatMap((s) => s.courses).length} mata kuliah</span><span class="stat">${formatSize(totalBytes)} total arsip</span></div></div></section>
+  <section class="hero"><div class="hero-inner"><p class="eyebrow">Kurikulum · Arsip pembelajaran</p><h1>Dokumen PBM 2024</h1><p class="hero-copy">Indeks lengkap dokumen perkuliahan angkatan 2024, disusun per semester dan mata kuliah. Buka mata kuliah untuk melihat seluruh isi atau mengunduh paketnya.</p><div class="stats"><span class="stat">${totalFiles} dokumen</span><span class="stat">${semesters.length} semester</span><span class="stat">${semesters.flatMap((s) => s.courses).length} mata kuliah</span><span class="stat">${formatSize(totalBytes)} total arsip</span></div></div></section>
   <main>
     <div class="toolbar"><label><span style="position:absolute;clip:rect(0 0 0 0)">Cari dokumen</span><input class="search" id="search" type="search" placeholder="Cari nama dokumen, mata kuliah, atau tipe file…" autocomplete="off"></label><div class="tabs" role="tablist">${semesters.map((semester, index) => `<button class="tab" role="tab" aria-selected="${index === 0}" data-tab="${slugify(semester.name)}">${escapeHtml(semester.name)}</button>`).join("")}</div></div>
     ${courseMarkup}
