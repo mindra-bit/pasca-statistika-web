@@ -1,2 +1,18 @@
-.renstra-vision small{color:#fff!important;font-size:.75rem!important;font-weight:850!important;opacity:.9}
-.renstra-vision p{max-width:1040px;color:#fff!important;font-size:clamp(1.02rem,1.55vw,1.35rem)!important;font-weight:650!important;line-height:1.55!important}
+#renstra-program-studi [data-renstra-view="direction"] .renstra-vision small{
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+  font-size:.72rem!important;
+  font-weight:800!important;
+  opacity:.92;
+}
+
+#renstra-program-studi [data-renstra-view="direction"] .renstra-vision p{
+  max-width:1040px;
+  margin:0!important;
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+  font-size:clamp(.95rem,1.1vw,1.1rem)!important;
+  font-weight:500!important;
+  line-height:1.62!important;
+  text-shadow:0 1px 1px rgba(0,0,0,.12);
+}
