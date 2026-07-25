@@ -2,7 +2,7 @@
   "source": "LAMSAMA",
   "organization": "Lembaga Akreditasi Mandiri Sains Alam dan Ilmu Formal",
   "assessmentDate": "25-26 November 2022",
-  "generatedAt": "2026-06-23T07:44:09.681Z",
+  "generatedAt": "2026-07-25T10:00:00+07:00",
   "total": 4,
   "years": [
     2022,
@@ -34,19 +34,19 @@
       "sizeKb": 436
     },
     {
-      "id": "lamsama-2025",
-      "year": 2025,
-      "sequence": 3,
-      "title": "Laporan Tahunan Akreditasi LAMSAMA 2025",
-      "titleId": "Laporan Tahunan Akreditasi LAMSAMA 2025",
-      "titleEn": "LAMSAMA Annual Accreditation Report 2025",
-      "descriptionId": "Laporan tahun ke-3 pemantauan mutu dan tindak lanjut akreditasi Program S2 Statistika Terapan FMIPA Universitas Padjadjaran.",
-      "descriptionEn": "Year 3 quality monitoring and accreditation follow-up report for the Applied Statistics Master's Program, FMIPA Universitas Padjadjaran.",
-      "file": "Tahun 2025.pdf",
-      "href": "%40Laporan%20Tahunan%20Lamsama/Tahun%202025.pdf",
+      "id": "lamsama-2023",
+      "year": 2023,
+      "sequence": 1,
+      "title": "Laporan Tahunan Akreditasi LAMSAMA 2023",
+      "titleId": "Laporan Tahunan Akreditasi LAMSAMA 2023",
+      "titleEn": "LAMSAMA Annual Accreditation Report 2023",
+      "descriptionId": "Laporan tahun ke-1 pemantauan mutu dan tindak lanjut akreditasi Program S2 Statistika Terapan FMIPA Universitas Padjadjaran.",
+      "descriptionEn": "Year 1 quality monitoring and accreditation follow-up report for the Applied Statistics Master's Program, FMIPA Universitas Padjadjaran.",
+      "file": "Tahun 2023.pdf",
+      "href": "%40Laporan%20Tahunan%20Lamsama/Tahun%202023.pdf",
       "format": "PDF",
-      "pages": 15,
-      "sizeKb": 483
+      "pages": 13,
+      "sizeKb": 474
     },
     {
       "id": "lamsama-2024",
@@ -64,19 +64,19 @@
       "sizeKb": 475
     },
     {
-      "id": "lamsama-2023",
-      "year": 2023,
-      "sequence": 1,
-      "title": "Laporan Tahunan Akreditasi LAMSAMA 2023",
-      "titleId": "Laporan Tahunan Akreditasi LAMSAMA 2023",
-      "titleEn": "LAMSAMA Annual Accreditation Report 2023",
-      "descriptionId": "Laporan tahun ke-1 pemantauan mutu dan tindak lanjut akreditasi Program S2 Statistika Terapan FMIPA Universitas Padjadjaran.",
-      "descriptionEn": "Year 1 quality monitoring and accreditation follow-up report for the Applied Statistics Master's Program, FMIPA Universitas Padjadjaran.",
-      "file": "Tahun 2023.pdf",
-      "href": "%40Laporan%20Tahunan%20Lamsama/Tahun%202023.pdf",
+      "id": "lamsama-2025",
+      "year": 2025,
+      "sequence": 3,
+      "title": "Laporan Tahunan Akreditasi LAMSAMA 2025",
+      "titleId": "Laporan Tahunan Akreditasi LAMSAMA 2025",
+      "titleEn": "LAMSAMA Annual Accreditation Report 2025",
+      "descriptionId": "Laporan tahun ke-3 pemantauan mutu dan tindak lanjut akreditasi Program S2 Statistika Terapan FMIPA Universitas Padjadjaran.",
+      "descriptionEn": "Year 3 quality monitoring and accreditation follow-up report for the Applied Statistics Master's Program, FMIPA Universitas Padjadjaran.",
+      "file": "Tahun 2025.pdf",
+      "href": "%40Laporan%20Tahunan%20Lamsama/Tahun%202025.pdf",
       "format": "PDF",
-      "pages": 13,
-      "sizeKb": 474
+      "pages": 15,
+      "sizeKb": 483
     }
   ]
 }
