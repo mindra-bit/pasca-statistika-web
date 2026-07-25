@@ -32,7 +32,7 @@
 
     const docGrid='<div class="curriculum-doc-grid" id="curriculumDocRows" aria-live="polite"></div>';
     const featured=`<article class="curriculum-featured-doc" aria-labelledby="naskah-akademik-title"><div class="curriculum-featured-doc-inner"><div><span class="doc-badge">HTML + DOCX · 23 MEI 2025</span><h3 id="naskah-akademik-title">Naskah Akademik Perubahan Kurikulum OBE 2023 menjadi Kurikulum OBE 2025</h3><p>Dokumen akademik, yuridis, dan operasional yang memuat evaluasi Kurikulum OBE 2023, dasar perubahan menjadi 54 SKS, penguatan Sains Data, serta tahapan tesis SUR–SKR–SAM.</p></div><div class="curriculum-featured-actions"><a class="open-html" href="dokumen-kurikulum/naskah-akademik-perubahan-kurikulum-obe-2023-ke-2025.html" target="_blank" rel="noopener">Baca HTML</a><a class="download-docx" href="dokumen-kurikulum/Naskah_Akademik_Perubahan_Kurikulum_OBE_2023_menjadi_OBE_2025.docx" download>Unduh DOCX</a></div></div></article>`;
-    if(!html.includes('curriculum-featured-doc')&&html.includes(docGrid)) html=html.replace(docGrid,featured+docGrid);
+    if(!html.includes('id="naskah-akademik-title"')&&html.includes(docGrid)) html=html.replace(docGrid,featured+docGrid);
 
     html=html.replace(/assets\/chatbot-fix\.js\?v=[^"']+/,'assets/chatbot-fix.js?v=naskah-akademik-kurikulum-20260725');
     document.open();document.write(html);document.close();
