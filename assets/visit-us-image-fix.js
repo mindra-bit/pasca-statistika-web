@@ -4,14 +4,17 @@
   const fixVisitUsImage=()=>{
     const section=document.getElementById('visit-us');
     if(!section)return;
-    const image=section.querySelector('img');
+    const image=section.querySelector('.vu-photo, img');
     if(!image)return;
-    image.src='assets/visit-us-building.svg?v=20260726-fixed';
+    image.src='assets/departemen-statistika-fmipa-unpad.jpg?v=20260726-final-jpg-v3';
     image.removeAttribute('srcset');
+    image.loading='eager';
+    image.decoding='async';
     image.style.display='block';
     image.style.width='100%';
-    image.style.height='100%';
+    image.style.height='210px';
     image.style.objectFit='cover';
+    image.style.objectPosition='center center';
   };
 
   const ethicsSectionMarkup=()=>`<section class="section ethics-academic-section" id="${ethicsId}" aria-labelledby="ethics-academic-title">
