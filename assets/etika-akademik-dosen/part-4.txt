@@ -1,0 +1,122 @@
+9" stroke-width="2" marker-end="url(#arr)"/>
+<g font-size="15" font-weight="700"><rect x="30" y="260" width="170" height="75" rx="13" fill="#eef7f5" stroke="#17745b"/><text x="115" y="291" fill="#17745b">ETIK DOSEN</text><text x="115" y="314" fill="#536676" font-size="11" font-weight="400">Senat Fakultas / SA</text>
+<rect x="265" y="260" width="170" height="75" rx="13" fill="#eef3f8" stroke="#0f3f68"/><text x="350" y="289" fill="#0f3f68">INTEGRITAS</text><text x="350" y="310" fill="#0f3f68">ILMIAH</text><text x="350" y="327" fill="#536676" font-size="10" font-weight="400">Tim/SA sesuai aturan</text>
+<rect x="485" y="260" width="170" height="75" rx="13" fill="#fff6e5" stroke="#e3a329"/><text x="570" y="291" fill="#8a5d00">KEKERASAN</text><text x="570" y="314" fill="#536676" font-size="11" font-weight="400">Satgas PPK</text>
+<rect x="720" y="260" width="170" height="75" rx="13" fill="#fff0f0" stroke="#9b2c2c"/><text x="805" y="291" fill="#9b2c2c">DISIPLIN</text><text x="805" y="314" fill="#536676" font-size="11" font-weight="400">Atasan/Tim/PyB</text></g>
+<path d="M115 335 V390 H805 V335 M350 335 V390 M570 335 V390" fill="none" stroke="#617789" stroke-width="2"/>
+<rect x="260" y="390" width="400" height="75" rx="15" fill="#fff" stroke="#97a9b7" stroke-width="2"/><text x="460" y="418" fill="#082b4c" font-size="17" font-weight="700">PEMERIKSAAN BERBASIS BUKTI</text><text x="460" y="441" fill="#536676" font-size="11">hak didengar • ahli • autentikasi • kronologi • analisis konteks</text>
+<path d="M460 465 V505" stroke="#617789" stroke-width="3" marker-end="url(#arr)"/>
+<rect x="140" y="510" width="260" height="75" rx="15" fill="#eef7f5" stroke="#17745b"/><text x="270" y="540" fill="#17745b" font-size="16" font-weight="700">TIDAK TERBUKTI</text><text x="270" y="562" fill="#536676" font-size="11">pemulihan nama baik • penutupan terdokumentasi</text>
+<rect x="520" y="510" width="260" height="75" rx="15" fill="#fff6e5" stroke="#e3a329"/><text x="650" y="540" fill="#8a5d00" font-size="16" font-weight="700">TERBUKTI</text><text x="650" y="562" fill="#536676" font-size="11">sanksi proporsional • koreksi • pemulihan • pencegahan ulang</text>
+<path d="M460 505 H270 V510 M460 505 H650 V510" fill="none" stroke="#617789" stroke-width="2" marker-end="url(#arr)"/>
+</g></svg>
+<figcaption>Gambar 2. Triase tidak menggantikan kewenangan organ; fungsinya mengarahkan laporan, menjaga keselamatan, dan mengoordinasikan perkara yang beririsan.</figcaption>
+</figure>
+<h3>6.4 Standar Bukti dan Dokumentasi</h3>
+<ul>
+<li>Setiap bukti dicatat sumber, tanggal perolehan, pihak yang menyerahkan, dan integritas berkasnya.</li>
+<li>Bukti digital dipertahankan dalam format asli bila memungkinkan; salinan, metadata, dan konteks percakapan dicatat.</li>
+<li>Skor perangkat lunak, hasil AI-detector, atau analisis statistik diperlakukan sebagai indikator yang memerlukan interpretasi ahli.</li>
+<li>Kesimpulan harus menjelaskan fakta yang dianggap terbukti, aturan yang diterapkan, analisis, dan alasan proporsionalitas rekomendasi.</li>
+<li>Dokumen kasus dibatasi aksesnya berdasarkan kebutuhan tugas dan disimpan sesuai jadwal retensi.</li>
+</ul>
+<h3>6.5 Konflik Kepentingan Pemeriksa</h3>
+<p>Anggota pemeriksa wajib mengungkap hubungan pembimbingan, kolaborasi, persaingan, hubungan keluarga, sengketa, kepentingan finansial, atau hubungan lain yang dapat memengaruhi independensi. Penggantian anggota tidak harus menunggu terbuktinya bias; persepsi konflik yang wajar dapat cukup untuk menjaga legitimasi proses.</p>
+<h3>6.6 Sanksi, Tindakan Korektif, dan Pemulihan</h3>
+<p>Sanksi harus mempertimbangkan keseriusan, kesengajaan, dampak, keuntungan yang diperoleh, posisi pelaku, kerentanan pihak terdampak, pengulangan, kerja sama dalam pemeriksaan, dan tindakan korektif. Selain sanksi, respons dapat mencakup koreksi publikasi, perbaikan nilai, pengalihan pembimbing, pelatihan wajib, pembatasan kewenangan, pengembalian dana, perlindungan korban, atau pemulihan nama baik pihak yang tidak terbukti.</p>
+</section>
+
+<section class="page" id="bab7">
+<span class="kicker">BAB VII</span><h2>Strategi Implementasi dan Evaluasi</h2>
+<h3>7.1 Model Implementasi Tiga Lapis</h3>
+<div class="grid-3">
+<div class="card"><div class="number">A</div><h4>Lapisan Individu</h4><p>Kompetensi etik, deklarasi, dokumentasi keputusan, penggunaan AI, dan tanggung jawab profesional.</p></div>
+<div class="card"><div class="number">B</div><h4>Lapisan Unit Akademik</h4><p>Sosialisasi semesteran, SOP pembimbingan, register konflik, mediasi awal, dan audit proses.</p></div>
+<div class="card"><div class="number">C</div><h4>Lapisan Universitas</h4><p>Portal terintegrasi, triase, koordinasi organ, pelatihan pemeriksa, data agregat, dan evaluasi kebijakan.</p></div>
+</div>
+<h3>7.2 Tahapan Pelaksanaan</h3>
+<div class="table-wrap"><table><thead><tr><th>Tahap</th><th>Waktu</th><th>Keluaran Utama</th><th>Penanggung Jawab Fungsional</th></tr></thead><tbody>
+<tr><td>Persiapan</td><td>0–3 bulan</td><td>Pemetaan SOP, pembentukan tim harmonisasi, inventaris kanal, rancangan formulir standar.</td><td>Rektorat, SA, fakultas, SDM, Satgas PPK, unit hukum.</td></tr>
+<tr><td>Standardisasi</td><td>4–6 bulan</td><td>Pedoman triase, charter pembimbingan, deklarasi konflik, checklist AI, standar bukti.</td><td>Unit hukum/akademik dengan organ berwenang.</td></tr>
+<tr><td>Implementasi awal</td><td>7–12 bulan</td><td>Portal informasi, pelatihan, sosialisasi semesteran, pilot pada beberapa fakultas.</td><td>Fakultas/program studi dan unit universitas.</td></tr>
+<tr><td>Evaluasi dan perluasan</td><td>13–24 bulan</td><td>Audit kepatuhan, survei budaya, revisi SOP, perluasan sistem.</td><td>SPM/audit internal dan organ terkait.</td></tr>
+</tbody></table></div>
+<h3>7.3 Indikator Kinerja</h3>
+<div class="table-wrap"><table><thead><tr><th>Dimensi</th><th>Indikator</th><th>Catatan Interpretasi</th></tr></thead><tbody>
+<tr><td>Pencegahan</td><td>Persentase unit melakukan sosialisasi semesteran; persentase dosen mengikuti pelatihan; penggunaan charter pembimbingan.</td><td>Tinggi menunjukkan kapasitas pencegahan, bukan otomatis rendahnya risiko.</td></tr>
+<tr><td>Transparansi</td><td>Ketersediaan pedoman, kanal, SLA, formulir, dan informasi hak para pihak.</td><td>Ukur kemudahan akses dan keterpahaman, bukan sekadar keberadaan dokumen.</td></tr>
+<tr><td>Ketepatan proses</td><td>Waktu triase, waktu pemeriksaan, proporsi konflik pemeriksa yang dimitigasi, kelengkapan dokumentasi.</td><td>Waktu cepat tidak boleh mengorbankan kecermatan.</td></tr>
+<tr><td>Keadilan dan perlindungan</td><td>Akses pendampingan, kejadian pembalasan, kepuasan prosedural, pelaksanaan pemulihan.</td><td>Data disajikan agregat untuk melindungi kerahasiaan.</td></tr>
+<tr><td>Integritas ilmiah</td><td>Kesepakatan kepengarangan, DMP, repositori kode/data sesuai izin, koreksi publikasi.</td><td>Fokus pada kualitas proses riset.</td></tr>
+<tr><td>Budaya</td><td>Survei keberanian melapor, pemahaman aturan, persepsi keteladanan, dan keamanan psikologis.</td><td>Survei anonim dan dianalisis lintas kelompok secara hati-hati.</td></tr>
+</tbody></table></div>
+<h3>7.4 Risiko Implementasi dan Mitigasi</h3>
+<div class="table-wrap"><table><thead><tr><th>Risiko</th><th>Dampak</th><th>Mitigasi</th></tr></thead><tbody>
+<tr><td>Etika dipersepsikan sebagai alat menghukum</td><td>Rendahnya konsultasi dan pelaporan dini.</td><td>Tekankan pendidikan, konsultasi rahasia, dan tindakan korektif proporsional.</td></tr>
+<tr><td>Overlapping authority</td><td>Forum shopping, konflik putusan, atau keterlambatan.</td><td>Protokol rujukan, <em>lead process</em>, dan rapat koordinasi terbatas.</td></tr>
+<tr><td>Kerahasiaan berlebihan</td><td>Rumor dan ketidakpercayaan.</td><td>Publikasikan proses dan data agregat tanpa membuka identitas.</td></tr>
+<tr><td>Keterbatasan kompetensi pemeriksa</td><td>Analisis bukti yang tidak memadai.</td><td>Pelatihan, panel ahli, dan daftar ahli lintas disiplin.</td></tr>
+<tr><td>Teknologi dijadikan hakim</td><td>False positive/false negative dan ketidakadilan.</td><td>Human review, transparansi alat, validasi, dan hak menguji bukti.</td></tr>
+<tr><td>Pembalasan informal</td><td>Korban/pelapor kehilangan peluang akademik.</td><td>Monitoring pascalaporan, larangan pembalasan, dan jalur eskalasi.</td></tr>
+</tbody></table></div>
+<h3>7.5 Paket Dokumen Operasional yang Direkomendasikan</h3>
+<ol>
+<li>Pedoman ringkas etika akademik dosen (10–15 halaman).</li>
+<li>SOP triase dan rujukan perkara.</li>
+<li>Charter pembimbingan tesis/disertasi dan riset mahasiswa.</li>
+<li>Formulir kontribusi dan kepengarangan.</li>
+<li>Formulir deklarasi dan mitigasi konflik kepentingan.</li>
+<li>Pedoman penggunaan AI generatif dalam pendidikan, penelitian, review, dan administrasi akademik.</li>
+<li>Checklist integritas data dan reproduksibilitas.</li>
+<li>Standar dokumentasi pemeriksaan dan perlindungan bukti digital.</li>
+<li>Pedoman pemulihan nama baik, koreksi akademik, dan pencegahan pembalasan.</li>
+<li>Dashboard indikator agregat untuk evaluasi tahunan.</li>
+</ol>
+</section>
+
+<section class="page" id="bab8">
+<span class="kicker">BAB VIII</span><h2>Penutup</h2>
+<h3>8.1 Kesimpulan</h3>
+<p>Universitas Padjadjaran telah memiliki fondasi regulasi yang kuat untuk membangun etika akademik dosen. Kode etik universitas memberi kerangka nilai; kode etik dosen dan pedomannya mengatur perilaku profesional; peraturan integritas akademik mengatur karya ilmiah; peraturan pencegahan kekerasan memberikan mekanisme perlindungan khusus; dan peraturan disiplin menghubungkan pelanggaran dengan tanggung jawab kepegawaian.</p>
+<p>Kebutuhan berikutnya adalah integrasi implementasi. Sistem yang efektif harus mampu mencegah pelanggaran, menjelaskan standar perilaku, mengarahkan laporan ke organ yang tepat, menjaga independensi pemeriksaan, melindungi korban dan pelapor, memberi kesempatan pembelaan, menjatuhkan respons proporsional, dan melaksanakan pemulihan. Dalam konteks AI dan kerja akademik digital, transparansi, validasi, perlindungan data, dan akuntabilitas manusia perlu menjadi standar minimum.</p>
+<h3>8.2 Rekomendasi</h3>
+<ol>
+<li>Menetapkan program penguatan etika akademik dosen sebagai agenda institusional lintas organ dan lintas unit.</li>
+<li>Menyusun pedoman implementasi terpadu yang tidak mengubah kewenangan normatif organ, tetapi menjelaskan triase, rujukan, koordinasi, dan dokumentasi.</li>
+<li>Menerapkan pencegahan berbasis proses: charter pembimbingan, kesepakatan kepengarangan, deklarasi konflik kepentingan, DMP, dan checklist AI.</li>
+<li>Meningkatkan kapasitas pemeriksa dan pimpinan unit melalui pelatihan berbasis kasus, bukti digital, integritas publikasi, relasi kuasa, dan trauma-informed handling.</li>
+<li>Melakukan evaluasi tahunan berbasis indikator pencegahan, keadilan prosedural, ketepatan waktu, pemulihan, dan budaya akademik.</li>
+</ol>
+<div class="callout"><strong>Pesan akhir.</strong> Budaya akademik yang berintegritas tidak dibangun oleh ketakutan terhadap sanksi, melainkan oleh kejelasan standar, keteladanan, keberanian mengoreksi kesalahan, dan proses yang dipercaya adil.</div>
+<div class="footer-note">Dokumen ini merupakan sintesis akademik. Dalam penerapan pada kasus konkret, gunakan naskah resmi peraturan yang berlaku, konsultasikan kepada organ/unit berwenang, dan perhatikan kemungkinan perubahan peraturan setelah tanggal penyusunan.</div>
+</section>
+
+<section class="page" id="referensi">
+<span class="kicker">Sumber Primer dan Pendukung</span><h2>Daftar Referensi</h2>
+<ol class="ref-list">
+<li id="r1"><strong>Universitas Padjadjaran.</strong> Peraturan Senat Akademik Universitas Padjadjaran Nomor 1 Tahun 2023 tentang Kode Etik Dosen Universitas Padjadjaran. <a href="https://jdih.unpad.ac.id/dokumen/peraturan-senat-akademik-universitas-padjadjaran-nomor-1-tahun-2023-tentang-kode-etik-dosen-universitas-padjadjaran" target="_blank" rel="noopener">JDIH Unpad</a> — <a href="https://jdih.unpad.ac.id/storage/dokumen/2025/peraturan/Peraturan%20SA%20Unpad%20No.%201%20Tahun%202023%20tentang%20Kode%20Etik%20Dosen%20Unpad.pdf" target="_blank" rel="noopener">PDF</a>.<span class="meta">Status pada JDIH: berlaku; ditetapkan 26 Juli 2023; mencabut Peraturan SA Nomor 5 Tahun 2017.</span></li>
+<li id="r2"><strong>Universitas Padjadjaran.</strong> Peraturan Rektor Universitas Padjadjaran Nomor 14 Tahun 2024 tentang Pedoman Kode Etik Dosen. <a href="https://jdih.unpad.ac.id/dokumen/peraturan-rektor-universitas-padjadjaran-nomor-14-tahun-2024-tentang-pedoman-kode-etik-dosen" target="_blank" rel="noopener">JDIH Unpad</a> — <a href="https://jdih.unpad.ac.id/storage/dokumen/2024/peraturan/Salinan%20Peraturan%20Rektor%20No.%2014%20Tahun%202024%20tentang%20Pedoman%20Kode%20Etik%20Dosen.pdf" target="_blank" rel="noopener">PDF</a>.<span class="meta">Status pada JDIH: berlaku; ditetapkan 7 Juni 2024.</span></li>
+<li id="r3"><strong>Universitas Padjadjaran.</strong> Peraturan Rektor Universitas Padjadjaran Nomor 32 Tahun 2024 tentang Integritas Akademik dalam Menghasilkan Karya Ilmiah. <a href="https://jdih.unpad.ac.id/dokumen/peraturan-rektor-universitas-padjadjaran-nomor-32-tahun-2024-tentang-integritas-akademik-dalam-menghasilkan-karya-ilmiah" target="_blank" rel="noopener">Indeks JDIH Unpad</a> — <a href="https://jdih.unpad.ac.id/storage/dokumen/2024/peraturan/Salinan%20Peraturan%20Rektor%20No.%2032%20Tahun%202024%20Integritas%20Akademik%20Dalam%20Menghasilkan%20Karya%20Ilmiah.pdf" target="_blank" rel="noopener">PDF</a>.<span class="meta">Mengimplementasikan Permendikbudristek Nomor 39 Tahun 2021.</span></li>
+<li id="r4"><strong>Universitas Padjadjaran.</strong> Peraturan Rektor Universitas Padjadjaran Nomor 31 Tahun 2025 tentang Penegakan Disiplin Dosen dan Tenaga Kependidikan di Lingkungan Universitas Padjadjaran. <a href="https://jdih.unpad.ac.id/dokumen/peraturan-rektor-universitas-padjadjaran-nomor-31-tahun-2025-tentang-penegakan-disiplin-dosen-dan-tenaga-kependidikan-di-lingkungan-universitas-padjadjaran" target="_blank" rel="noopener">JDIH Unpad</a>.<span class="meta">Status pada JDIH: berlaku; ditetapkan 4 Juli 2025.</span></li>
+<li id="r5"><strong>Universitas Padjadjaran.</strong> Peraturan Rektor Universitas Padjadjaran Nomor 39 Tahun 2025 tentang Pencegahan dan Penanganan Kekerasan di Lingkungan Universitas Padjadjaran. <a href="https://jdih.unpad.ac.id/dokumen/peraturan-rektor-universitas-padjadjaran-nomor-39-tahun-2025-tentang-pencegahan-dan-penanganan-kekerasan-di-lingkungan-universitas-padjadjaran" target="_blank" rel="noopener">JDIH Unpad</a>.<span class="meta">Status pada JDIH: berlaku; ditetapkan 29 Juli 2025; mencabut Peraturan Rektor Nomor 41 Tahun 2021 beserta perubahannya.</span></li>
+<li id="r6"><strong>Universitas Padjadjaran.</strong> Peraturan Majelis Wali Amanat Universitas Padjadjaran Nomor 2 Tahun 2020 tentang Kode Etik Universitas Padjadjaran. <a href="https://jdih.unpad.ac.id/dokumen/peraturan-majelis-wali-amanat-universitas-padjadjaran-nomor-2-tahun-2020-tentang-kode-etik-universitas-padjadjaran" target="_blank" rel="noopener">JDIH Unpad</a>.<span class="meta">Status pada JDIH: berlaku; ditetapkan 3 November 2020.</span></li>
+<li id="r7"><strong>Republik Indonesia.</strong> Undang-Undang Nomor 12 Tahun 2012 tentang Pendidikan Tinggi. <a href="https://peraturan.bpk.go.id/Details/39063/uu-no-12-tahun-2012" target="_blank" rel="noopener">Database Peraturan BPK</a>.</li>
+<li id="r8"><strong>Republik Indonesia.</strong> Undang-Undang Nomor 14 Tahun 2005 tentang Guru dan Dosen. <a href="https://peraturan.bpk.go.id/Details/40266/uuno-14-tahun-2005" target="_blank" rel="noopener">Database Peraturan BPK</a>.</li>
+<li id="r9"><strong>Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi.</strong> Peraturan Menteri Nomor 39 Tahun 2021 tentang Integritas Akademik dalam Menghasilkan Karya Ilmiah. <a href="https://lldikti4.kemdiktisaintek.go.id/2025/06/peraturan-integritas-akademik-di-perguruan-tinggi/" target="_blank" rel="noopener">LLDIKTI Wilayah IV</a>.</li>
+<li id="r10"><strong>Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi.</strong> Peraturan Menteri Nomor 55 Tahun 2024 tentang Pencegahan dan Penanganan Kekerasan di Lingkungan Perguruan Tinggi. <a href="https://peraturan.bpk.go.id/Details/305767/permendikbudriset-no-55-tahun-2024" target="_blank" rel="noopener">Database Peraturan BPK</a>.</li>
+<li id="r11"><strong>Republik Indonesia.</strong> Peraturan Pemerintah Nomor 94 Tahun 2021 tentang Disiplin Pegawai Negeri Sipil. <a href="https://peraturan.bpk.go.id/Details/177031/pp-no-94-tahun-2021" target="_blank" rel="noopener">Database Peraturan BPK</a>.</li>
+<li id="r12"><strong>Republik Indonesia.</strong> Peraturan Pemerintah Nomor 51 Tahun 2015 tentang Statuta Universitas Padjadjaran. <a href="https://peraturan.bpk.go.id/Details/5622/pp-no-51-tahun-2015" target="_blank" rel="noopener">Database Peraturan BPK</a>.</li>
+</ol>
+<h3>Catatan Sitasi</h3>
+<p>Referensi di atas dipilih terutama dari JDIH Universitas Padjadjaran dan basis peraturan resmi. Tautan diperiksa pada 26 Juli 2026. Apabila tautan PDF berubah, gunakan halaman metadata JDIH dan cari berdasarkan nomor serta tahun peraturan.</p>
+</section>
+</main>
+</div>
+<script>
+const links=[...document.querySelectorAll('.sidebar a')];
+const sections=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));}})},{rootMargin:'-20% 0px -70% 0px'});
+sections.forEach(s=>obs.observe(s));
+</script>
+</body>
+</html>
