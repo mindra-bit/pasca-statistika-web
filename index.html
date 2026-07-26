@@ -10,7 +10,7 @@
 <script>
 (async()=>{
   try{
-    const response=await fetch('index-base.html?v=naskah-akademik-html-20260726',{cache:'no-store'});
+    const response=await fetch('index-base.html?v=naskah-akademik-2020-obe-2023-20260726',{cache:'no-store'});
     if(!response.ok) throw new Error('Gagal memuat halaman utama');
     let html=await response.text();
 
@@ -19,19 +19,20 @@
     if(!html.includes('pbm-2024-hub-card')&&html.includes(guideMarker)) html=html.replace(guideMarker,existingCards+guideMarker);
 
     const academicStyles=`<style>
-      .curriculum-featured-stack{display:grid;gap:18px;margin:22px 0 28px}.curriculum-featured-doc{margin:0;padding:1px;border-radius:22px;background:linear-gradient(135deg,#0c2f55,#c99a2e);box-shadow:0 18px 48px rgba(12,47,85,.16)}.curriculum-featured-doc-inner{background:#fff;border-radius:21px;padding:clamp(20px,4vw,34px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}.curriculum-featured-doc .doc-badge{display:inline-flex;width:max-content;max-width:100%;padding:7px 11px;border-radius:999px;background:#eaf2f8;color:#0c2f55;font-weight:800;font-size:.78rem;letter-spacing:.05em}.curriculum-featured-doc h3{margin:10px 0 8px;color:#0c2f55;font-size:clamp(1.25rem,2.4vw,1.75rem);line-height:1.25}.curriculum-featured-doc p{margin:0;color:#526274;max-width:850px}.curriculum-featured-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}.curriculum-featured-actions a,.curriculum-featured-actions button{display:inline-flex;align-items:center;justify-content:center;padding:11px 15px;border-radius:999px;text-decoration:none;font:inherit;font-weight:800;white-space:nowrap;cursor:pointer}.curriculum-featured-actions .open-pdf{background:#c99a2e;color:#172338;border:1px solid #c99a2e}.curriculum-featured-actions .open-html{background:#0c2f55;color:#fff;border:1px solid #0c2f55}.curriculum-featured-actions .ask-chatbot{background:#fff;color:#0c2f55;border:1px solid #b7c7d5}.curriculum-featured-doc.revised{background:linear-gradient(135deg,#0c2f55,#1b806b)}.curriculum-featured-doc.revised .doc-badge{background:#e4f5ef;color:#11624f}@media(max-width:760px){.curriculum-featured-doc-inner{grid-template-columns:1fr}.curriculum-featured-actions{justify-content:flex-start}.curriculum-featured-actions a,.curriculum-featured-actions button{flex:1 1 145px}}
+      .curriculum-featured-stack{display:grid;gap:18px;margin:22px 0 28px}.curriculum-featured-doc{margin:0;padding:1px;border-radius:22px;background:linear-gradient(135deg,#0c2f55,#c99a2e);box-shadow:0 18px 48px rgba(12,47,85,.16)}.curriculum-featured-doc-inner{background:#fff;border-radius:21px;padding:clamp(20px,4vw,34px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}.curriculum-featured-doc .doc-badge{display:inline-flex;width:max-content;max-width:100%;padding:7px 11px;border-radius:999px;background:#eaf2f8;color:#0c2f55;font-weight:800;font-size:.78rem;letter-spacing:.05em}.curriculum-featured-doc h3{margin:10px 0 8px;color:#0c2f55;font-size:clamp(1.25rem,2.4vw,1.75rem);line-height:1.25}.curriculum-featured-doc p{margin:0;color:#526274;max-width:850px}.curriculum-featured-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}.curriculum-featured-actions a,.curriculum-featured-actions button{display:inline-flex;align-items:center;justify-content:center;padding:11px 15px;border-radius:999px;text-decoration:none;font:inherit;font-weight:800;white-space:nowrap;cursor:pointer}.curriculum-featured-actions .open-pdf{background:#c99a2e;color:#172338;border:1px solid #c99a2e}.curriculum-featured-actions .open-html{background:#0c2f55;color:#fff;border:1px solid #0c2f55}.curriculum-featured-actions .ask-chatbot{background:#fff;color:#0c2f55;border:1px solid #b7c7d5}.curriculum-featured-doc.historical{background:linear-gradient(135deg,#063f34,#c99a2e)}.curriculum-featured-doc.historical .doc-badge{background:#e6f4ef;color:#075343}.curriculum-featured-doc.revised{background:linear-gradient(135deg,#0c2f55,#1b806b)}.curriculum-featured-doc.revised .doc-badge{background:#e4f5ef;color:#11624f}@media(max-width:760px){.curriculum-featured-doc-inner{grid-template-columns:1fr}.curriculum-featured-actions{justify-content:flex-start}.curriculum-featured-actions a,.curriculum-featured-actions button{flex:1 1 145px}}
     </style>`;
     if(!html.includes('.curriculum-featured-stack{')) html=html.replace('</head>',academicStyles+'</head>');
 
-    html=html.replace('Empat PDF kurikulum ditempatkan sebagai rujukan resmi dan arsip akademik yang dapat dibuka langsung dari website.','Enam dokumen kurikulum ditempatkan sebagai rujukan resmi dan arsip akademik yang dapat dibuka langsung dari website, termasuk dua naskah akademik dalam tampilan unggulan.');
-    html=html.replace('<strong id="curriculumDocCount">4</strong>','<strong id="curriculumDocCount">6</strong>');
+    html=html.replace('Empat PDF kurikulum ditempatkan sebagai rujukan resmi dan arsip akademik yang dapat dibuka langsung dari website.','Tujuh dokumen kurikulum ditempatkan sebagai rujukan resmi dan arsip akademik yang dapat dibuka langsung dari website, termasuk tiga naskah akademik dalam tampilan unggulan.');
+    html=html.replace('<strong id="curriculumDocCount">4</strong>','<strong id="curriculumDocCount">7</strong>');
 
     const docGrid='<div class="curriculum-doc-grid" id="curriculumDocRows" aria-live="polite"></div>';
     const featuredStack=`<div class="curriculum-featured-stack" aria-label="Naskah akademik unggulan">
+      <article class="curriculum-featured-doc historical" aria-labelledby="naskah-akademik-2023-title"><div class="curriculum-featured-doc-inner"><div><span class="doc-badge">HTML + PDF · JUNI 2023</span><h3 id="naskah-akademik-2023-title">Naskah Akademik Perubahan Kurikulum 2020 menjadi Kurikulum OBE 2023</h3><p>Dokumen yang memuat evaluasi Kurikulum 2020, landasan OBE, profil dan CPL, analisis perubahan mata kuliah, strategi asesmen, serta rencana implementasi dan penjaminan mutu.</p></div><div class="curriculum-featured-actions"><a class="open-html" href="dokumen-kurikulum/Naskah_Akademik_Perubahan_Kurikulum_2020_menjadi_OBE_2023.html">Buka HTML</a><a class="open-pdf" href="dokumen-kurikulum/Naskah_Akademik_Perubahan_Kurikulum_2020_menjadi_OBE_2023.pdf" target="_blank" rel="noopener">Buka PDF</a></div></div></article>
       <article class="curriculum-featured-doc" aria-labelledby="naskah-akademik-title"><div class="curriculum-featured-doc-inner"><div><span class="doc-badge">PDF · 23 MEI 2025</span><h3 id="naskah-akademik-title">Naskah Akademik Perubahan Kurikulum OBE 2023 menjadi Kurikulum OBE 2025</h3><p>Dokumen akademik, yuridis, dan operasional yang memuat evaluasi Kurikulum OBE 2023, dasar perubahan menjadi 54 SKS, penguatan Sains Data, serta tahapan tesis SUR–SKR–SAM.</p></div><div class="curriculum-featured-actions"><a class="open-pdf" href="dokumen-kurikulum/Naskah_Akademik_Perubahan_Kurikulum_OBE_2023_menjadi_OBE_2025.pdf" target="_blank" rel="noopener">Buka PDF</a></div></div></article>
       <article class="curriculum-featured-doc revised" aria-labelledby="naskah-akademik-revisi-title"><div class="curriculum-featured-doc-inner"><div><span class="doc-badge">PDF · 2025 REVISI</span><h3 id="naskah-akademik-revisi-title">Naskah Akademik Kurikulum 2025 Revisi</h3><p>Naskah akademik yang menjelaskan landasan, evaluasi, argumentasi perubahan 54 menjadi 42 SKS, kekhasan statistika kesehatan dan sains data–AI, studi banding, serta strategi implementasi kurikulum.</p></div><div class="curriculum-featured-actions"><a class="open-pdf" href="Naskah%20Akademik%20Kurikulum%202025%20Revisi.pdf" target="_blank" rel="noopener">Buka PDF</a><a class="open-html" href="naskah-akademik-kurikulum-2025-revisi.html">Buka HTML</a><button class="ask-chatbot" type="button" data-featured-curriculum-q="Buka dokumen Naskah Akademik Kurikulum 2025 Revisi">Tanya chatbot</button></div></div></article>
     </div>`;
-    if(!html.includes('id="naskah-akademik-title"')&&html.includes(docGrid)) html=html.replace(docGrid,featuredStack+docGrid);
+    if(!html.includes('id="naskah-akademik-2023-title"')&&html.includes(docGrid)) html=html.replace(docGrid,featuredStack+docGrid);
 
     const enhancementScript=`<script>
       window.addEventListener('load',()=>{
@@ -40,11 +41,11 @@
           if(grid){
             [...grid.querySelectorAll('.curriculum-doc-card')].forEach(card=>{
               const title=card.querySelector('h3')?.textContent.trim();
-              if(title==='Naskah Akademik Kurikulum 2025 Revisi'||title==='Academic Paper for the Revised 2025 Curriculum') card.remove();
+              if(title==='Naskah Akademik Perubahan Kurikulum 2020 menjadi Kurikulum OBE 2023'||title==='Naskah Akademik Kurikulum 2025 Revisi'||title==='Academic Paper for the Revised 2025 Curriculum') card.remove();
             });
           }
           const count=document.getElementById('curriculumDocCount');
-          if(count) count.textContent='6';
+          if(count) count.textContent='7';
         };
         enhance();
         const grid=document.getElementById('curriculumDocRows');
@@ -66,7 +67,7 @@
       });
     <\/script>`;
     html=html.replace('</body>',enhancementScript+'</body>');
-    html=html.replace(/assets\/chatbot-fix\.js\?v=[^"']+/,'assets/chatbot-fix.js?v=naskah-akademik-html-20260726');
+    html=html.replace(/assets\/chatbot-fix\.js\?v=[^"']+/,'assets/chatbot-fix.js?v=naskah-akademik-2020-obe-2023-20260726');
     document.open();document.write(html);document.close();
   }catch(error){document.body.innerHTML='<main style="max-width:760px;margin:80px auto;padding:24px"><h1>Portal belum dapat dimuat</h1><p>'+error.message+'</p><p><a href="index-base.html">Buka halaman utama</a></p></main>'}
 })();
