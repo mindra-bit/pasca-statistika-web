@@ -2680,3 +2680,37 @@ Akhirnya, mahasiswa perlu diingatkan bahwa analisis spasial adalah proses belaja
 
 Selamat mengajar, mengeksplorasi, dan memetakan pengetahuan. ☕
 Tuntas.
+
+<!-- BEGIN ADOPSI AI RPS 2026 -->
+
+## Penyelarasan Materi dengan RPS Revisi AI 2026
+
+Materi **Analisis Spasial** ini telah diselaraskan dengan RPS Revisi AI 2026. Rumusan CPL
+program studi tetap dan tidak diubah. Generative AI maupun agentic AI hanya
+digunakan sebagai alat bantu untuk mempercepat ketercapaian CPMK dan Sub-CPMK;
+penalaran statistika, keputusan metodologis, dan tanggung jawab akademik tetap
+berada pada mahasiswa.
+
+### Integrasi AI kontekstual
+
+- GeoAI dan spatial machine learning: spatial features, graph-based learning, remote sensing, serta integrasi data raster, titik, dan area.
+- Spatial cross-validation, domain shift, uncertainty mapping, modifiable areal unit problem, ecological bias, dan privasi geospasial.
+- Proyek pemetaan risiko berbasis data nyata dengan peta ketidakpastian, dokumentasi sumber data, dan evaluasi dampak keputusan.
+
+### Protokol penggunaan AI
+
+1. Nyatakan alat, tujuan penggunaan, dan bagian pekerjaan yang dibantu AI.
+2. Simpan prompt log ringkas, sumber, versi kode/notebook, dan perubahan yang dilakukan.
+3. Verifikasi keluaran terhadap asumsi metode, sumber primer, hasil numerik,
+   diagnostik, ketidakpastian, robustness, bias/fairness, privasi, dan konteks.
+4. Jangan memasukkan data pribadi, rahasia, soal asesmen tertutup, atau
+   kredensial ke layanan AI yang tidak disetujui.
+5. Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil secara mandiri.
+
+### Bukti asesmen
+
+Penilaian berfokus pada ketepatan metode, validasi dan ketidakpastian,
+reproducibility, interpretasi, komunikasi, serta transparansi penggunaan AI.
+Keluaran AI tanpa verifikasi bukan bukti ketercapaian CPMK.
+
+<!-- END ADOPSI AI RPS 2026 -->

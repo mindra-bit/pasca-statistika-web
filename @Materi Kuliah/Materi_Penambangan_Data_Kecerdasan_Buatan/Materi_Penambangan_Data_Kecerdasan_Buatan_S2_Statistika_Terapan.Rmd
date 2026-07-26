@@ -3219,3 +3219,37 @@ Catatan pengayaan ini memperluas topik UAS, Portofolio Proyek, Etika, dan Komuni
 Dari sisi praktikum, pengayaan ini dapat diterjemahkan menjadi latihan kecil. Mahasiswa dapat membuat satu dataset ringkas, melakukan praproses minimal, mencoba pendekatan project reporting, dashboard design, model card, ethical review, lalu menulis interpretasi tidak lebih dari dua paragraf. Batasan panjang ini memaksa mahasiswa memilih pesan utama. Kemampuan meringkas sangat penting karena pengguna hasil analisis jarang memiliki waktu membaca seluruh output model. Namun ringkasan tidak boleh menghilangkan detail penting seperti skema validasi, metrik, dan keterbatasan data. Dengan cara ini, mahasiswa belajar bahwa komunikasi data adalah proses seleksi informasi yang bertanggung jawab, bukan sekadar memindahkan semua output ke laporan.
 
 Pada tahap evaluasi, dosen dapat menanyakan tiga hal. Pertama, apakah metode yang dipilih benar-benar sesuai dengan struktur data? Kedua, apakah kesimpulan mahasiswa didukung oleh bukti output yang cukup? Ketiga, apakah mahasiswa mampu menjelaskan risiko jika hasil digunakan di luar konteks data? Pertanyaan ini menjaga agar pembelajaran UAS, Portofolio Proyek, Etika, dan Komunikasi Hasil tetap berada pada level C4 sampai C6, sesuai semangat RPS: menganalisis, mengevaluasi, dan mencipta. Rujukan seperti [@provost2013data; @kelleher2020fundamentals; @kuhn2013applied] dapat digunakan untuk memperkuat argumen konseptual dan metodologis.
+
+<!-- BEGIN ADOPSI AI RPS 2026 -->
+
+## Penyelarasan Materi dengan RPS Revisi AI 2026
+
+Materi **Penambangan Data dan Kecerdasan Buatan** ini telah diselaraskan dengan RPS Revisi AI 2026. Rumusan CPL
+program studi tetap dan tidak diubah. Generative AI maupun agentic AI hanya
+digunakan sebagai alat bantu untuk mempercepat ketercapaian CPMK dan Sub-CPMK;
+penalaran statistika, keputusan metodologis, dan tanggung jawab akademik tetap
+berada pada mahasiswa.
+
+### Integrasi AI kontekstual
+
+- Statistical learning, ensemble methods, deep learning, generative AI, dan large language model pada tingkat pengantar-aplikatif yang relevan dengan statistika terapan.
+- Responsible AI: fairness, privacy, explainability, robustness, keamanan, human oversight, model risk, data governance, dan impact assessment.
+- MLOps dan reproducibility: experiment tracking, versioning data/model, monitoring drift, model card, dan audit trail.
+
+### Protokol penggunaan AI
+
+1. Nyatakan alat, tujuan penggunaan, dan bagian pekerjaan yang dibantu AI.
+2. Simpan prompt log ringkas, sumber, versi kode/notebook, dan perubahan yang dilakukan.
+3. Verifikasi keluaran terhadap asumsi metode, sumber primer, hasil numerik,
+   diagnostik, ketidakpastian, robustness, bias/fairness, privasi, dan konteks.
+4. Jangan memasukkan data pribadi, rahasia, soal asesmen tertutup, atau
+   kredensial ke layanan AI yang tidak disetujui.
+5. Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil secara mandiri.
+
+### Bukti asesmen
+
+Penilaian berfokus pada ketepatan metode, validasi dan ketidakpastian,
+reproducibility, interpretasi, komunikasi, serta transparansi penggunaan AI.
+Keluaran AI tanpa verifikasi bukan bukti ketercapaian CPMK.
+
+<!-- END ADOPSI AI RPS 2026 -->

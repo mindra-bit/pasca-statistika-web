@@ -3917,3 +3917,37 @@ Pada skenario **Transisi kategori risiko kredit**, persoalan utama adalah bahwa 
 Pertanyaan diskusi pertama adalah apakah asumsi model masuk akal. Jika laju kejadian berubah menurut jam, maka proses Poisson homogen mungkin terlalu sederhana. Jika status masa depan dipengaruhi oleh sejarah panjang, maka rantai Markov orde satu mungkin perlu diperluas. Jika waktu pelayanan tidak eksponensial, model M/M/1 bisa menjadi baseline tetapi bukan model akhir. Diskusi ini melatih mahasiswa membedakan model sebagai titik awal dan model sebagai representasi final.
 
 Pertanyaan diskusi kedua adalah bagaimana hasil akan dikomunikasikan. Untuk kasus ini, mahasiswa perlu membuat satu tabel ringkasan parameter, satu grafik lintasan atau distribusi, dan satu paragraf rekomendasi. Rekomendasi harus menyebutkan konsekuensi praktis: mengurangi waktu tunggu, menurunkan risiko, mengalokasikan server, atau mengevaluasi kebijakan. Dengan demikian, proses stokastik menjadi alat argumentasi keputusan, bukan sekadar latihan matematis.
+
+<!-- BEGIN ADOPSI AI RPS 2026 -->
+
+## Penyelarasan Materi dengan RPS Revisi AI 2026
+
+Materi **Proses Stokastik Tingkat Lanjut** ini telah diselaraskan dengan RPS Revisi AI 2026. Rumusan CPL
+program studi tetap dan tidak diubah. Generative AI maupun agentic AI hanya
+digunakan sebagai alat bantu untuk mempercepat ketercapaian CPMK dan Sub-CPMK;
+penalaran statistika, keputusan metodologis, dan tanggung jawab akademik tetap
+berada pada mahasiswa.
+
+### Integrasi AI kontekstual
+
+- Simulasi proses stokastik skala besar dan estimasi parameter berbasis likelihood atau Bayesian menggunakan R/Python.
+- Pengenalan state-space model, hidden Markov model, dan penggunaan surrogate model atau machine learning untuk aproksimasi proses yang mahal secara komputasi.
+- Asesmen studi kasus antrian, reliability, kejadian ekstrem, atau event process dengan validasi simulasi, analisis sensitivitas, dan dokumentasi reproducible.
+
+### Protokol penggunaan AI
+
+1. Nyatakan alat, tujuan penggunaan, dan bagian pekerjaan yang dibantu AI.
+2. Simpan prompt log ringkas, sumber, versi kode/notebook, dan perubahan yang dilakukan.
+3. Verifikasi keluaran terhadap asumsi metode, sumber primer, hasil numerik,
+   diagnostik, ketidakpastian, robustness, bias/fairness, privasi, dan konteks.
+4. Jangan memasukkan data pribadi, rahasia, soal asesmen tertutup, atau
+   kredensial ke layanan AI yang tidak disetujui.
+5. Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil secara mandiri.
+
+### Bukti asesmen
+
+Penilaian berfokus pada ketepatan metode, validasi dan ketidakpastian,
+reproducibility, interpretasi, komunikasi, serta transparansi penggunaan AI.
+Keluaran AI tanpa verifikasi bukan bukti ketercapaian CPMK.
+
+<!-- END ADOPSI AI RPS 2026 -->

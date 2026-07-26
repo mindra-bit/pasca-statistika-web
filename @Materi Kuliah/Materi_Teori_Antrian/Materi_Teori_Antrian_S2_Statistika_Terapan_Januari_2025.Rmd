@@ -2884,3 +2884,37 @@ Dari sisi pelayanan, variasi durasi layanan perlu dianalisis secara eksplisit. L
 Dalam laporan, mahasiswa sebaiknya menyajikan narasi yang menghubungkan statistik dengan keputusan. Misalnya, ketika model menunjukkan utilisasi 0,92, tuliskan bahwa server bekerja sangat dekat dengan kapasitas maksimum sehingga variasi kecil pada kedatangan dapat menyebabkan antrean panjang. Ketika skenario penambahan satu server menurunkan waktu tunggu tetapi utilisasi menjadi terlalu rendah, diskusikan trade-off biaya dan mutu layanan. Ketika simulasi menghasilkan interval kepercayaan yang lebar, jelaskan bahwa jumlah replikasi atau ukuran data input perlu ditambah. Narasi seperti ini menunjukkan kematangan analitis.
 
 Akhirnya, pengayaan ini menekankan etika rekomendasi. Keputusan mengurangi antrean bukan hanya masalah efisiensi. Dalam layanan kesehatan, pendidikan, transportasi, atau administrasi publik, waktu tunggu berkaitan dengan hak akses, kenyamanan, dan kepercayaan masyarakat. Oleh sebab itu, rekomendasi berbasis teori antrian harus mempertimbangkan dampak terhadap kelompok rentan, keadilan prioritas, dan kelayakan implementasi. Angka adalah bukti; keputusan tetap membutuhkan pertimbangan manusiawi.
+
+<!-- BEGIN ADOPSI AI RPS 2026 -->
+
+## Penyelarasan Materi dengan RPS Revisi AI 2026
+
+Materi **Teori Antrian** ini telah diselaraskan dengan RPS Revisi AI 2026. Rumusan CPL
+program studi tetap dan tidak diubah. Generative AI maupun agentic AI hanya
+digunakan sebagai alat bantu untuk mempercepat ketercapaian CPMK dan Sub-CPMK;
+penalaran statistika, keputusan metodologis, dan tanggung jawab akademik tetap
+berada pada mahasiswa.
+
+### Integrasi AI kontekstual
+
+- Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan.
+- Pengenalan reinforcement learning atau learning-based control untuk sistem antrian, disertai pembanding kebijakan analitik.
+- Studi kasus layanan kesehatan, transportasi, atau industri dengan analisis sensitivitas, biaya, fairness layanan, dan robustness.
+
+### Protokol penggunaan AI
+
+1. Nyatakan alat, tujuan penggunaan, dan bagian pekerjaan yang dibantu AI.
+2. Simpan prompt log ringkas, sumber, versi kode/notebook, dan perubahan yang dilakukan.
+3. Verifikasi keluaran terhadap asumsi metode, sumber primer, hasil numerik,
+   diagnostik, ketidakpastian, robustness, bias/fairness, privasi, dan konteks.
+4. Jangan memasukkan data pribadi, rahasia, soal asesmen tertutup, atau
+   kredensial ke layanan AI yang tidak disetujui.
+5. Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil secara mandiri.
+
+### Bukti asesmen
+
+Penilaian berfokus pada ketepatan metode, validasi dan ketidakpastian,
+reproducibility, interpretasi, komunikasi, serta transparansi penggunaan AI.
+Keluaran AI tanpa verifikasi bukan bukti ketercapaian CPMK.
+
+<!-- END ADOPSI AI RPS 2026 -->

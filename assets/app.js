@@ -1002,8 +1002,8 @@ const I18N = {
     tableCredits: "SKS",
     tableGroup: "Kelompok",
     materialsKicker: "Materi Kuliah",
-    materialsTitle: "Materi, ringkasan, dan kontrak perkuliahan",
-    materialsText: "Setiap mata kuliah dilengkapi materi HTML, ringkasan presentasi, dan kontrak perkuliahan yang dapat dibuka langsung dari satu katalog.",
+    materialsTitle: "Materi RPS Revisi AI 2026",
+    materialsText: "Materi HTML, ringkasan presentasi, dan kontrak perkuliahan telah diselaraskan dengan RPS baru. CPL tetap; AI digunakan secara bertanggung jawab untuk mempercepat ketercapaian CPMK dan Sub-CPMK.",
     materialsSearchLabel: "Cari materi",
     materialsSearchPlaceholder: "Spasial, aktuaria, regresi, epidemiologi...",
     materialsShown: "materi tampil",
@@ -1737,8 +1737,8 @@ const I18N = {
     tableCredits: "Credits",
     tableGroup: "Group",
     materialsKicker: "Learning Materials",
-    materialsTitle: "Course materials, summaries, and learning contracts",
-    materialsText: "Each course includes HTML material, a presentation summary, and a learning contract available from one catalog.",
+    materialsTitle: "2026 AI-Revised RPS Learning Materials",
+    materialsText: "HTML materials, presentation summaries, and learning contracts have been aligned with the revised RPS. The program learning outcomes remain unchanged; responsible AI accelerates the attainment of course and sub-course learning outcomes.",
     materialsSearchLabel: "Search materials",
     materialsSearchPlaceholder: "Spatial, actuarial, regression, epidemiology...",
     materialsShown: "materials shown",
@@ -4468,6 +4468,7 @@ function renderMaterials() {
           <span>${escapeHTML(formatFileSize(material.sizeKb))}</span>
         </div>
         <h3>${escapeHTML(material.title)}</h3>
+        ${material.aiAdoption ? `<p class="material-ai-status">${escapeHTML(currentLang === "en" ? "AI-aligned · Program learning outcomes unchanged" : "Selaras AI · CPL tetap")}</p>` : ""}
         <p class="syllabus-code">${escapeHTML(material.file || t("fileHtml"))}</p>
         <p>${escapeHTML(t("folder"))}: ${escapeHTML(material.folder || material.source || "@Materi Kuliah")}</p>
         <div class="material-actions">

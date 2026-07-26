@@ -1,0 +1,377 @@
+[
+  {
+    "folder": "Materi_ADW_Tingkat_Lanjut",
+    "course": "Analisis Deret Waktu Tingkat Lanjut",
+    "rps": "/Users/mindra/Library/CloudStorage/GoogleDrive-mindra@unpad.ac.id/My Drive/@DOKUMEN S2/@AMI/RPS 2025/RPS OBE 2025 Matakuliah Wajib/Analisis Deret Waktu Tingkat Lanjut/RPS Analisis Deret Waktu Tingkat Lanjut.docx",
+    "rmd": [
+      "Materi_ADWTL_S2_Statistika_Terapan_Jan2025.Rmd"
+    ],
+    "html": "Materi_ADWTL_S2_Statistika_Terapan_Jan2025.html",
+    "contract": "Kontrak_Perkuliahan_ADWTL_S2_Statistika_Terapan.docx",
+    "aiFocus": [
+      "Perbandingan ARIMA/ARFIMA/VAR/GSTAR dengan gradient boosting, recurrent neural network, transformer, dan model hibrida untuk deret waktu.",
+      "Rolling-origin evaluation, probabilistic forecasting, interval prediction, calibration, deteksi concept drift, dan interpretabilitas temporal.",
+      "Proyek peramalan data nyata yang menilai bukan hanya akurasi, tetapi juga stabilitas, ketidakpastian, biaya kesalahan, dan relevansi keputusan."
+    ]
+  },
+  {
+    "folder": "Materi_Aktuaria_1",
+    "course": "Matematika Aktuaria 1",
+    "rps": "/Users/mindra/Library/CloudStorage/GoogleDrive-mindra@unpad.ac.id/My Drive/@DOKUMEN S2/@AMI/RPS 2025/RPS OBE 2025 Matakuliah Pilihan/Matematika Aktuaria 1/RPS Matematika Aktuaria 1.docx",
+    "rmd": [
+      "Materi_Pembelajaran_Matematika_Aktuaria_1.Rmd"
+    ],
+    "html": "Materi_Pembelajaran_Matematika_Aktuaria_1.html",
+    "contract": "Kontrak_Perkuliahan_Aktuaria_1_S2_Statistika_Terapan.docx",
+    "aiFocus": [
+      "Predictive analytics untuk mortalitas, lapse, underwriting, dan klaim sebagai pengayaan model aktuaria klasik.",
+      "Fairness dalam pricing dan underwriting, interpretabilitas, data privacy, model governance, serta risiko diskriminasi proxy.",
+      "Asesmen kasus aktuaria yang membandingkan metode tradisional dan AI berdasarkan akurasi, uncertainty, fairness, dan kelayakan bisnis."
+    ]
+  },
+  {
+    "folder": "Materi_Analisis_Image",
+    "course": "Analisis Image",
+    "rps": "/Users/mindra/Library/CloudStorage/GoogleDrive-mindra@unpad.ac.id/My Drive/@DOKUMEN S2/@AMI/RPS 2025/RPS OBE 2025 Matakuliah Pilihan/Analisis Image/RPS Analisis Image.docx",
+    "rmd": [
+      "Materi_Analisis_Image_fixed.Rmd"
+    ],
+    "html": "Materi_Analisis_Image_fixed.html",
+    "contract": "Kontrak_Perkuliahan_Analisis_Image_S2_Statistika_Terapan.docx",
+    "aiFocus": [
+      "Convolutional neural network, transfer learning, vision transformer, segmentation, detection, dan multimodal image analysis sebagai pengayaan.",
+      "Data augmentation, class imbalance, spatial leakage, external validation, explainability citra, uncertainty, dan robustness terhadap domain shift.",
+      "Etika citra: privasi, consent, bias representasi, keamanan, serta pembatasan penggunaan pada konteks medis, biometrik, atau pengawasan."
+    ]
+  },
+  {
+    "folder": "Materi_Analisis_Multilevel_dan_Longitudinal",
+    "course": "Analisis Multilevel dan Longitudinal",
+    "rps": "/Users/mindra/Library/CloudStorage/GoogleDrive-mindra@unpad.ac.id/My Drive/@DOKUMEN S2/@AMI/RPS 2025/RPS OBE 2025 Matakuliah Pilihan/Analisis Multilevel dan Logitudinal/RPS Analisis Multilevel dan Longitudinal.docx",
+    "rmd": [
+      "Materi_Analisis_Multilevel_dan_Longitudinal.Rmd"
+    ],
+    "html": "Materi_Analisis_Multilevel_dan_Longitudinal.html",
+    "contract": "Kontrak_Perkuliahan_Analisis_Multilevel_dan_Longitudinal_S2_Statistika_Terapan.docx",
+    "aiFocus": [
+      "Hierarchical machine learning, mixed-effects trees/boosting, dynamic prediction, dan integrasi model multilevel dengan Bayesian computation.",
+      "Missing data, informative dropout, time-varying confounding, causal longitudinal analysis, dan evaluasi heterogenitas efek.",
+      "Asesmen proyek longitudinal atau multilevel yang melaporkan validasi lintas kelompok/waktu, uncertainty, dan fairness antarsubpopulasi."
+    ]
+  },
+  {
+    "folder": "Materi_Analisis_Multivariat_Tingkat_Lanjut",
+    "course": "Analisis Multivariat Tingkat Lanjut",
+    "rps": "/Users/mindra/Library/CloudStorage/GoogleDrive-mindra@unpad.ac.id/My Drive/@DOKUMEN S2/@AMI/RPS 2025/RPS OBE 2025 Matakuliah Wajib/Analisis Multivariat Tingkat Lanjut/RPS Analisis Multivariat Tingkat Lanjut.docx",
+    "rmd": [
+      "Materi_Analisis_Multivariat_Tingkat_Lanjut_S2StatTerapan_Unpad.Rmd"
+    ],
+    "html": "Materi_Analisis_Multivariat_Tingkat_Lanjut_S2StatTerapan_Unpad.html",
+    "contract": "Kontrak_Perkuliahan_Analisis_Multivariat_Tingkat_Lanjut_S2_Statistika_Terapan.docx",
+    "aiFocus": [
+      "Perbandingan PCA, analisis faktor, diskriminan, dan clustering dengan autoencoder, embedding, serta metode manifold learning.",
+      "Validasi cluster dan klasifikasi dengan resampling, penanganan high-dimensional data, interpretabilitas representasi, serta deteksi bias antarkelompok.",
+      "Proyek segmentasi atau klasifikasi multivariat menggunakan data nyata, disertai visualisasi, analisis ketidakpastian, dan argumentasi pemilihan model."
+    ]
+  },
+  {
+    "folder": "Materi_Analisis_Regresi_Tingkat_Lanjut",
+    "course": "Analisis Regresi Tingkat Lanjut",
+    "rps": "/Users/mindra/Library/CloudStorage/GoogleDrive-mindra@unpad.ac.id/My Drive/@DOKUMEN S2/@AMI/RPS 2025/RPS OBE 2025 Matakuliah Wajib/Analisis Regresi Tingkat Lanjut/RPS Analisis Regresi Tingkat Lanjut.docx",
+    "rmd": [
+      "Materi_Analisis_Regresi_Tingkat_Lanjut_S2_Statistika_Terapan.Rmd"
+    ],
+    "html": "Materi_Analisis_Regresi_Tingkat_Lanjut_S2_Statistika_Terapan.html",
+    "contract": "Kontrak_Perkuliahan_Analisis_Regresi_Tingkat_Lanjut_S2_Statistika_Terapan.docx",
+    "aiFocus": [
+      "Perbandingan regresi klasik, penalized regression, tree-based model, boosting, dan neural network berdasarkan tujuan inferensi atau prediksi.",
+      "Validasi silang, kalibrasi, model selection bias, interpretabilitas global/lokal, serta keterbatasan penggunaan feature importance dan SHAP untuk klaim kausal.",
+      "Proyek data nyata dengan model card ringkas yang memuat tujuan, data, asumsi, validasi, uncertainty, fairness, dan batas penggunaan model."
+    ]
+  },
+  {
+    "folder": "Materi_Analisis_Spasial",
+    "course": "Analisis Spasial",
+    "rps": "/Users/mindra/Library/CloudStorage/GoogleDrive-mindra@unpad.ac.id/My Drive/@DOKUMEN S2/@AMI/RPS 2025/RPS OBE 2025 Matakuliah Pilihan/Analisis Spasial/RPS Analisis Spasial.docx",
+    "rmd": [
+      "Materi_Analisis_Spasial.Rmd"
+    ],
+    "html": "Materi_Analisis_Spasial.html",
+    "contract": "Kontrak_Perkuliahan_Analisis_Spasial_S2_Statistika_Terapan.docx",
+    "aiFocus": [
+      "GeoAI dan spatial machine learning: spatial features, graph-based learning, remote sensing, serta integrasi data raster, titik, dan area.",
+      "Spatial cross-validation, domain shift, uncertainty mapping, modifiable areal unit problem, ecological bias, dan privasi geospasial.",
+      "Proyek pemetaan risiko berbasis data nyata dengan peta ketidakpastian, dokumentasi sumber data, dan evaluasi dampak keputusan."
+    ]
+  },
+  {
+    "folder": "Materi_Analisis_Survival",
+    "course": "Analisis Survival",
+    "rps": "/Users/mindra/Library/CloudStorage/GoogleDrive-mindra@unpad.ac.id/My Drive/@DOKUMEN S2/@AMI/RPS 2025/RPS OBE 2025 Matakuliah Pilihan/Analisis Survival/RPS Analisis Survival.docx",
+    "rmd": [
+      "Materi_Analisis_Survival_S2_Statistika_Terapan_Jan2025.Rmd"
+    ],
+    "html": "Materi_Analisis_Survival_S2_Statistika_Terapan_Jan2025.html",
+    "contract": "Kontrak_Perkuliahan_Analisis_Survival_S2_Statistika_Terapan.docx",
+    "aiFocus": [
+      "Random survival forest, boosting, neural survival model, competing risks, multi-state, dan dynamic prediction sebagai pengayaan.",
+      "Time-dependent discrimination, calibration, Brier score, external validation, transportability, dan fairness prediksi risiko.",
+      "Proyek kesehatan/industri dengan penanganan censoring yang benar, analisis ketidakpastian, dan pembatasan penggunaan klinis atau operasional."
+    ]
+  },
+  {
+    "folder": "Materi_Analisis_Teks",
+    "course": "Analisis Teks",
+    "rps": "/Users/mindra/Library/CloudStorage/GoogleDrive-mindra@unpad.ac.id/My Drive/@DOKUMEN S2/@AMI/RPS 2025/RPS OBE 2025 Matakuliah Pilihan/Analisis Teks/RPS Analisis Teks.docx",
+    "rmd": [
+      "Materi_Analisis_Teks_S2_Statistika_Terapan.Rmd"
+    ],
+    "html": "Materi_Analisis_Teks_S2_Statistika_Terapan.html",
+    "contract": "Kontrak_Perkuliahan_Analisis_Teks_S2_Statistika_Terapan.docx",
+    "aiFocus": [
+      "Embedding, transformer, topic modeling modern, text classification, retrieval-augmented generation, dan evaluasi large language model.",
+      "Hallucination, prompt sensitivity, bias bahasa, data leakage, copyright, privacy, factuality, dan human evaluation.",
+      "Proyek korpus nyata yang memuat baseline statistik, benchmark, error analysis, disclosure penggunaan GenAI, dan dokumentasi dataset/model."
+    ]
+  },
+  {
+    "folder": "Materi_Basis_Data",
+    "course": "Basis data",
+    "rps": "/Users/mindra/Library/CloudStorage/GoogleDrive-mindra@unpad.ac.id/My Drive/@DOKUMEN S2/@AMI/RPS 2025/RPS OBE 2025 Matakuliah Pilihan/Basis data/RPS Basis data.docx",
+    "rmd": [
+      "Materi_Pembelajaran_Basis_Data_S2_Statistika_Terapan_UNPAD_Jan2025.Rmd"
+    ],
+    "html": "Materi_Pembelajaran_Basis_Data_S2_Statistika_Terapan_UNPAD_Jan2025.html",
+    "contract": "Kontrak_Perkuliahan_Basis_Data_S2_Statistika_Terapan.docx",
+    "aiFocus": [
+      "Pipeline ETL/ELT, data warehouse/lakehouse, streaming, API, cloud, dan pengantar vector database untuk aplikasi AI.",
+      "Data quality, metadata, lineage, provenance, versioning, access control, privacy, keamanan, dan audit log.",
+      "Proyek membangun data product yang terdokumentasi dengan data dictionary/datasheet, uji kualitas otomatis, dan kontrol penggunaan data sensitif."
+    ]
+  },
+  {
+    "folder": "Materi_Desain_Eksperimen",
+    "course": "Desain Eksperimen",
+    "rps": "/Users/mindra/Library/CloudStorage/GoogleDrive-mindra@unpad.ac.id/My Drive/@DOKUMEN S2/@AMI/RPS 2025/RPS OBE 2025 Matakuliah Pilihan/Desain Eksperimen/RPS Desain Eksperimen.docx",
+    "rmd": [
+      "Materi_Desain_Eksperimen_S2_Statistika_Terapan_UNPAD.Rmd"
+    ],
+    "html": "Materi_Desain_Eksperimen_S2_Statistika_Terapan_UNPAD.html",
+    "contract": "Kontrak_Perkuliahan_Desain_Eksperimen_S2_Statistika_Terapan.docx",
+    "aiFocus": [
+      "A/B testing, sequential experiment, adaptive design, bandit sebagai pengayaan, serta randomization inference.",
+      "Heterogeneous treatment effect, causal forest, optimasi desain dengan komputasi, dan pengendalian multiplicity.",
+      "Proyek eksperimen nyata atau simulasi yang memuat preregistration, power analysis, ethical safeguards, dan pelaporan reproducible."
+    ]
+  },
+  {
+    "folder": "Materi_Epidemiologi",
+    "course": "Epidemiologi",
+    "rps": "/Users/mindra/Library/CloudStorage/GoogleDrive-mindra@unpad.ac.id/My Drive/@DOKUMEN S2/@AMI/RPS 2025/RPS OBE 2025 Matakuliah Pilihan/Epidemiologi/RPS Epidemiologi.docx",
+    "rmd": [
+      "Materi_Pembelajaran_Epidemiologi_S2_Statistika_Terapan.Rmd"
+    ],
+    "html": "Materi_Pembelajaran_Epidemiologi_S2_Statistika_Terapan.html",
+    "contract": "Kontrak_Perkuliahan_Epidemiologi_S2_Statistika_Terapan.docx",
+    "aiFocus": [
+      "AI untuk surveillance, outbreak detection, risk prediction, phenotyping, dan integrasi data kesehatan multisisumber.",
+      "Causal inference, confounding, target trial emulation, transportability, calibration, subgroup fairness, dan bias data kesehatan.",
+      "Proyek berbasis data kesehatan yang memuat data governance, perlindungan privasi, interpretasi klinis/kebijakan, dan komunikasi risiko."
+    ]
+  },
+  {
+    "folder": "Materi_Komputasi_Statistik_dan_Optimasi",
+    "course": "Komputasi Statistik dan Optimasi",
+    "rps": "/Users/mindra/Library/CloudStorage/GoogleDrive-mindra@unpad.ac.id/My Drive/@DOKUMEN S2/@AMI/RPS 2025/RPS OBE 2025 Matakuliah Wajib/Komputasi Statistik dan Optimasi/RPS Komputasi Statistik dan Optimasi.docx",
+    "rmd": [
+      "Materi_Komputasi_Statistik_dan_Optimasi_S2_Unpad.Rmd"
+    ],
+    "html": "Materi_Komputasi_Statistik_dan_Optimasi_S2_Unpad.html",
+    "contract": "Kontrak_Perkuliahan_Komputasi_Statistik_dan_Optimasi_S2_Statistika_Terapan.docx",
+    "aiFocus": [
+      "Workflow R/Python yang reproducible: version control, notebook, manajemen dependensi, pengujian fungsi, profiling, parallel computing, dan dokumentasi kode.",
+      "Optimasi untuk machine learning dan AI: regularisasi, stochastic gradient, constrained optimization, hyperparameter tuning, serta evaluasi stabilitas algoritma.",
+      "Asesmen berbasis proyek: mahasiswa membangun pipeline komputasi end-to-end, melaporkan kompleksitas, penggunaan sumber daya, robustness, dan keterulangan hasil."
+    ]
+  },
+  {
+    "folder": "Materi_Matematika_Aktuaria_2",
+    "course": "Matematika Aktuaria 2",
+    "rps": "/Users/mindra/Library/CloudStorage/GoogleDrive-mindra@unpad.ac.id/My Drive/@DOKUMEN S2/@AMI/RPS 2025/RPS OBE 2025 Matakuliah Pilihan/Matematika Aktuaria 2/RPS Matematika Aktuaria 2.docx",
+    "rmd": [
+      "Materi_Matematika_Aktuaria_2_RPS_OBE_2025.Rmd"
+    ],
+    "html": "Materi_Matematika_Aktuaria_2_RPS_OBE_2025.html",
+    "contract": "Kontrak_Perkuliahan_Matematika_Aktuaria_2_S2_Statistika_Terapan.docx",
+    "aiFocus": [
+      "Machine learning untuk reserving, fraud detection, severity-frequency modeling, dan portfolio segmentation.",
+      "Model risk, stress testing, explainability, monitoring drift, dan tata kelola penggunaan model dalam keputusan aktuaria.",
+      "Proyek data nyata/sintetik yang menghasilkan model card, laporan validasi, dan rekomendasi keputusan yang mempertimbangkan fairness."
+    ]
+  },
+  {
+    "folder": "Materi_Matematika_Keuangan",
+    "course": "Matematika Keuangan",
+    "rps": "/Users/mindra/Library/CloudStorage/GoogleDrive-mindra@unpad.ac.id/My Drive/@DOKUMEN S2/@AMI/RPS 2025/RPS OBE 2025 Matakuliah Pilihan/Matematika Keuangan/RPS Matematika Keuangan.docx",
+    "rmd": [
+      "Materi_Matematika_Keuangan_S2_Statistika_Terapan_UNPAD.Rmd"
+    ],
+    "html": "Materi_Matematika_Keuangan_S2_Statistika_Terapan_UNPAD.html",
+    "contract": "Kontrak_Perkuliahan_Matematika_Keuangan_S2_Statistika_Terapan.docx",
+    "aiFocus": [
+      "AI untuk forecasting, pricing, portfolio analytics, dan deteksi anomali dengan pembanding model matematis/statistik.",
+      "Stress testing, backtesting, uncertainty, model risk management, interpretabilitas, dan konsekuensi keputusan finansial.",
+      "Studi kasus menggunakan data pasar nyata dengan dokumentasi asumsi, keterbatasan, dan risiko penggunaan otomatisasi."
+    ]
+  },
+  {
+    "folder": "Materi_Model_Linear_Generalisasi",
+    "course": "Model Linear Generalisasi",
+    "rps": "/Users/mindra/Library/CloudStorage/GoogleDrive-mindra@unpad.ac.id/My Drive/@DOKUMEN S2/@AMI/RPS 2025/RPS OBE 2025 Matakuliah Pilihan/Model Linear Generalisasi/RPS Model Linear Generalisasi.docx",
+    "rmd": [
+      "Model_Linear_Generalisasi_Materi.Rmd"
+    ],
+    "html": "Model_Linear_Generalisasi_Materi.html",
+    "contract": "Kontrak_Perkuliahan_Model_Linear_Generalisasi_S2_Statistika_Terapan.docx",
+    "aiFocus": [
+      "Perbandingan GLM/GLMM dengan GAM, boosting, dan model machine learning untuk respons nonnormal.",
+      "Kalibrasi, deviance, overdispersion, zero inflation, regularisasi, uncertainty, dan interpretabilitas parameter serta prediksi.",
+      "Proyek data nyata yang mengharuskan baseline statistika, model alternatif AI, validasi, dan justifikasi kompleksitas model."
+    ]
+  },
+  {
+    "folder": "Materi_Pembelajaran_Mesin",
+    "course": "Pembelajaran Mesin",
+    "rps": "/Users/mindra/Library/CloudStorage/GoogleDrive-mindra@unpad.ac.id/My Drive/@DOKUMEN S2/@AMI/RPS 2025/RPS OBE 2025 Matakuliah Pilihan/Pembelajaran Mesin/RPS Pembelajaran Mesin.docx",
+    "rmd": [
+      "Materi_Pembelajaran_Mesin_S2_Statistika_Terapan_UNPAD.Rmd"
+    ],
+    "html": "Materi_Pembelajaran_Mesin_S2_Statistika_Terapan_UNPAD.html",
+    "contract": "Kontrak_Perkuliahan_Pembelajaran_Mesin_S2_Statistika_Terapan.docx",
+    "aiFocus": [
+      "Supervised, unsupervised, ensemble, deep learning, representation learning, dan pengantar generative AI sesuai relevansi masalah statistika terapan.",
+      "Uncertainty-aware machine learning, calibration, domain shift, causal ML, explainability, fairness, privacy-preserving learning, dan robustness.",
+      "MLOps, versioning, experiment tracking, monitoring, reproducibility, model card, dan audit model."
+    ]
+  },
+  {
+    "folder": "Materi_Penambangan_Data_Kecerdasan_Buatan",
+    "course": "Penambangan Data dan Kecerdasan Buatan",
+    "rps": "/Users/mindra/Library/CloudStorage/GoogleDrive-mindra@unpad.ac.id/My Drive/@DOKUMEN S2/@AMI/RPS 2025/RPS OBE 2025 Matakuliah Wajib/Penambangan Data dan Kecerdasan Buatan/RPS Penambangan Data dan Kecerdasan Buatan.docx",
+    "rmd": [
+      "Materi_Penambangan_Data_Kecerdasan_Buatan_S2_Statistika_Terapan.Rmd"
+    ],
+    "html": "Materi_Penambangan_Data_Kecerdasan_Buatan_S2_Statistika_Terapan.html",
+    "contract": "Kontrak_Perkuliahan_Penambangan_Data_Kecerdasan_Buatan_S2_Statistika_Terapan.docx",
+    "aiFocus": [
+      "Statistical learning, ensemble methods, deep learning, generative AI, dan large language model pada tingkat pengantar-aplikatif yang relevan dengan statistika terapan.",
+      "Responsible AI: fairness, privacy, explainability, robustness, keamanan, human oversight, model risk, data governance, dan impact assessment.",
+      "MLOps dan reproducibility: experiment tracking, versioning data/model, monitoring drift, model card, dan audit trail."
+    ]
+  },
+  {
+    "folder": "Materi_Proses_Stokastik_Tingkat_Lanjut",
+    "course": "Proses Stokastik Tingkat Lanjut",
+    "rps": "/Users/mindra/Library/CloudStorage/GoogleDrive-mindra@unpad.ac.id/My Drive/@DOKUMEN S2/@AMI/RPS 2025/RPS OBE 2025 Matakuliah Wajib/Proses Stokastik Tingkat Lanjut/RPS Proses Stokastik Tingkat Lanjut.docx",
+    "rmd": [
+      "Materi_Proses_Stokastik_Tingkat_Lanjut_S2StatTerapan_UNPAD_2025.Rmd"
+    ],
+    "html": "Materi_Proses_Stokastik_Tingkat_Lanjut_S2StatTerapan_UNPAD_2025.html",
+    "contract": "Kontrak_Perkuliahan_Proses_Stokastik_Tingkat_Lanjut_S2_Statistika_Terapan.docx",
+    "aiFocus": [
+      "Simulasi proses stokastik skala besar dan estimasi parameter berbasis likelihood atau Bayesian menggunakan R/Python.",
+      "Pengenalan state-space model, hidden Markov model, dan penggunaan surrogate model atau machine learning untuk aproksimasi proses yang mahal secara komputasi.",
+      "Asesmen studi kasus antrian, reliability, kejadian ekstrem, atau event process dengan validasi simulasi, analisis sensitivitas, dan dokumentasi reproducible."
+    ]
+  },
+  {
+    "folder": "Materi_Sampling_Survey",
+    "course": "Sampling Survey",
+    "rps": "/Users/mindra/Library/CloudStorage/GoogleDrive-mindra@unpad.ac.id/My Drive/@DOKUMEN S2/@AMI/RPS 2025/RPS OBE 2025 Matakuliah Pilihan/Sampling Survey/RPS Sampling Survey.docx",
+    "rmd": [
+      "Materi_Pembelajaran_Sampling_Survey_S2_Statistika_Terapan.Rmd"
+    ],
+    "html": "Materi_Pembelajaran_Sampling_Survey_S2_Statistika_Terapan.html",
+    "contract": "Kontrak_Perkuliahan_Sampling_Survey_S2_Statistika_Terapan.docx",
+    "aiFocus": [
+      "Machine learning untuk nonresponse adjustment, propensity modeling, imputation, prediksi berbasis auxiliary data, dan adaptive survey design sebagai pengayaan metode survei.",
+      "Pemanfaatan paradata, data linkage, web/sensor data, dan integrasi sumber data dengan evaluasi coverage error, measurement error, privasi, fairness, dan kualitas data.",
+      "Proyek survei nyata yang membandingkan pendekatan design-based, model-assisted/model-based, dan AI, disertai estimasi ketidakpastian, dokumentasi reproducible, dan komunikasi kepada pengguna."
+    ]
+  },
+  {
+    "folder": "Materi_SEM",
+    "course": "Pemodelan Persamaan Struktural",
+    "rps": "/Users/mindra/Library/CloudStorage/GoogleDrive-mindra@unpad.ac.id/My Drive/@DOKUMEN S2/@AMI/RPS 2025/RPS OBE 2025 Matakuliah Pilihan/Model Persamaan Struktural/RPS Pemodelan Persamaan Struktural.docx",
+    "rmd": [
+      "Materi_Pemodelan_Persamaan_Struktural_SEM_S2_Statistika_Terapan.Rmd"
+    ],
+    "html": "Materi_Pemodelan_Persamaan_Struktural_SEM_S2_Statistika_Terapan.html",
+    "contract": "Kontrak_Perkuliahan_SEM_S2_Statistika_Terapan.docx",
+    "aiFocus": [
+      "Perbandingan covariance-based SEM, PLS-SEM, Bayesian SEM, causal graph, dan causal discovery berbantuan komputasi.",
+      "Evaluasi measurement invariance, model misspecification, sensitivity analysis, predictive assessment, dan interpretabilitas konstruk laten.",
+      "Proyek lintas domain dengan preregistrasi model, pelaporan alternatif model, dan pembatasan klaim kausal secara eksplisit."
+    ]
+  },
+  {
+    "folder": "Materi_Statistika_Inferensial",
+    "course": "Statistik Inferensial",
+    "rps": "/Users/mindra/Library/CloudStorage/GoogleDrive-mindra@unpad.ac.id/My Drive/@DOKUMEN S2/@AMI/RPS 2025/RPS OBE 2025 Matakuliah Wajib/Statistika Inferensial/RPS Statistik Inferensial.docx",
+    "rmd": [
+      "Materi_Statistika_Inferensial_S2_Unpad.Rmd"
+    ],
+    "html": "Materi_Statistika_Inferensial_S2_Unpad.html",
+    "contract": "Kontrak_Perkuliahan_Statistika_Inferensial_S2_Statistika_Terapan.docx",
+    "aiFocus": [
+      "Inferensi untuk model prediktif dan AI: ketidakpastian parameter dan prediksi, kalibrasi, interval prediksi, serta conformal prediction sebagai pengayaan.",
+      "Evaluasi bias, robustness, misspecification, dan validitas eksternal model; perbandingan inferensi frequentist, likelihood, Bayesian, dan pendekatan berbasis resampling.",
+      "Proyek data nyata yang membandingkan akurasi prediksi dengan kualitas inferensi, interpretabilitas, dan konsekuensi keputusan; penggunaan AI wajib diverifikasi secara statistik dan didokumentasikan."
+    ]
+  },
+  {
+    "folder": "Materi_Statistika_Nonparametrik_Pemodelan_Fleksibel",
+    "course": "Statistika Nonparametrik dan Pemodelan Fleksibel",
+    "rps": "/Users/mindra/Library/CloudStorage/GoogleDrive-mindra@unpad.ac.id/My Drive/@DOKUMEN S2/@AMI/RPS 2025/RPS OBE 2025 Matakuliah Wajib/Statistika Nonparametrik dan Pemodelan Fleksibel/RPS Statistika Nonparametrik dan Pemodelan Fleksibel.docx",
+    "rmd": [
+      "Materi_Statistika_Nonparametrik_Pemodelan_Fleksibel.Rmd"
+    ],
+    "html": "Materi_Statistika_Nonparametrik_Pemodelan_Fleksibel.html",
+    "contract": "Kontrak_Perkuliahan_Statistika_Nonparametrik_Pemodelan_Fleksibel_S2_Statistika_Terapan.docx",
+    "aiFocus": [
+      "Hubungan kernel, spline, LOESS, GAM, quantile regression, dan ensemble learning sebagai spektrum pemodelan fleksibel.",
+      "Pemilihan smoothing/complexity, resampling, uncertainty band, robustness terhadap outlier, dan interpretabilitas fungsi nonlinier.",
+      "Proyek data nyata yang membandingkan fleksibilitas, generalisasi, interpretabilitas, dan fairness beberapa model."
+    ]
+  },
+  {
+    "folder": "Materi_Teori_Antrian",
+    "course": "Teori Antrian",
+    "rps": "/Users/mindra/Library/CloudStorage/GoogleDrive-mindra@unpad.ac.id/My Drive/@DOKUMEN S2/@AMI/RPS 2025/RPS OBE 2025 Matakuliah Pilihan/Teori Antrian/RPS Teori Antrian.docx",
+    "rmd": [
+      "Materi_Teori_Antrian_S2_Statistika_Terapan_Januari_2025.Rmd"
+    ],
+    "html": "Materi_Teori_Antrian_S2_Statistika_Terapan_Januari_2025.html",
+    "contract": "Kontrak_Perkuliahan_Teori_Antrian_S2_Statistika_Terapan.docx",
+    "aiFocus": [
+      "Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan.",
+      "Pengenalan reinforcement learning atau learning-based control untuk sistem antrian, disertai pembanding kebijakan analitik.",
+      "Studi kasus layanan kesehatan, transportasi, atau industri dengan analisis sensitivitas, biaya, fairness layanan, dan robustness."
+    ]
+  },
+  {
+    "folder": "Materi_Teori_Risiko",
+    "course": "Teori Risiko",
+    "rps": "/Users/mindra/Library/CloudStorage/GoogleDrive-mindra@unpad.ac.id/My Drive/@DOKUMEN S2/@AMI/RPS 2025/RPS OBE 2025 Matakuliah Pilihan/Teori Risiko/RPS Teori Risiko.docx",
+    "rmd": [
+      "Teori_Risiko_Materi_Pembelajaran_S2_Statistika_Terapan.Rmd"
+    ],
+    "html": "Teori_Risiko_Materi_Pembelajaran_S2_Statistika_Terapan.html",
+    "contract": "Kontrak_Perkuliahan_Teori_Risiko_S2_Statistika_Terapan.docx",
+    "aiFocus": [
+      "AI untuk risk scoring, anomaly detection, early warning, dan kombinasi model dengan extreme value atau heavy-tail models.",
+      "Stress testing, scenario analysis, adversarial robustness, model uncertainty, dan risiko sistemik dari otomatisasi keputusan.",
+      "Asesmen studi kasus menghasilkan risk dashboard, dokumentasi asumsi, dan rekomendasi mitigasi yang dapat dipertanggungjawabkan."
+    ]
+  }
+]

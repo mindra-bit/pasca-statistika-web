@@ -130,7 +130,11 @@ const materials = htmlFiles.map((filePath, index) => {
     contractFile: path.basename(contractPath),
     contractHref: encodeRelativeHref(contractPath),
     contractSizeKb: Math.round(contractStat.size / 1024),
-    source: materialsDirName
+    source: materialsDirName,
+    revision: "RPS Revisi AI 2026",
+    aiAdoption: true,
+    aiRole: "Akselerator ketercapaian CPMK/Sub-CPMK; CPL tetap",
+    updatedAt: "2026-07-27"
   };
 });
 
@@ -140,6 +144,8 @@ const manifest = {
   generatedAt: new Date().toISOString(),
   total: materials.length,
   categories,
+  revision: "RPS Revisi AI 2026",
+  policy: "CPL tetap; AI mempercepat ketercapaian CPMK/Sub-CPMK",
   materials
 };
 
@@ -153,7 +159,7 @@ if (fs.existsSync(chunksPath)) {
     title: material.title,
     sourceTitle: `Materi HTML ${material.title}`,
     sourceUrl: material.viewerHref,
-    text: `Materi ${material.title} tersedia pada folder ${material.folder}. Link materi HTML: ${material.viewerHref}. Link file HTML asli: ${material.href}. Link ringkasan PPTX: ${material.summaryHref}. Link kontrak perkuliahan DOCX: ${material.contractHref}. Kategori: ${material.category}. File HTML: ${material.file} (${material.sizeKb} KB). File ringkasan: ${material.summaryFile} (${material.summarySizeKb} KB). File kontrak: ${material.contractFile} (${material.contractSizeKb} KB).`
+    text: `Materi ${material.title} tersedia pada folder ${material.folder} dan telah diselaraskan dengan RPS Revisi AI 2026. Rumusan CPL tetap; AI berperan sebagai akselerator ketercapaian CPMK/Sub-CPMK. Link materi HTML: ${material.viewerHref}. Link file HTML asli: ${material.href}. Link ringkasan PPTX: ${material.summaryHref}. Link kontrak perkuliahan DOCX: ${material.contractHref}. Kategori: ${material.category}. File HTML: ${material.file} (${material.sizeKb} KB). File ringkasan: ${material.summaryFile} (${material.summarySizeKb} KB). File kontrak: ${material.contractFile} (${material.contractSizeKb} KB).`
   }));
   fs.writeFileSync(chunksPath, `${JSON.stringify([...retained, ...materialChunks], null, 2)}\n`);
 }
