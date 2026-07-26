@@ -65,30 +65,44 @@
 
   const runtimeScript = `<script id="program-profile-health-ai-runtime">
     window.addEventListener('load',()=>{
+      const getProfileLanguage=()=>{
+        try{return localStorage.getItem('s2-statistika-language')==='en'?'en':'id'}catch(error){return 'id'}
+      };
       const syncProfileLanguage=()=>{
-        let lang='id';
-        try{lang=localStorage.getItem('s2-statistika-language')==='en'?'en':'id'}catch(error){}
+        const lang=getProfileLanguage();
         document.querySelectorAll('[data-profile-lang]').forEach(element=>{element.hidden=element.dataset.profileLang!==lang});
         const captionId=document.querySelector('[data-profile-caption-id]');
         const captionEn=document.querySelector('[data-profile-caption-en]');
         if(captionId) captionId.hidden=lang==='en';
         if(captionEn) captionEn.hidden=lang!=='en';
+        const pmbLink=document.querySelector('.workspace-menu-s2 [data-workspace-target="pmb"]');
+        if(pmbLink) pmbLink.textContent=lang==='en'?'Admissions':'PMB';
+      };
+      const ensurePmbMainMenu=()=>{
+        const menu=document.querySelector('.workspace-menu-s2');
+        if(!menu) return false;
+        let link=menu.querySelector('[data-workspace-target="pmb"],a[href="#pmb"]');
+        if(!link){
+          link=document.createElement('a');
+          link.href='#pmb';
+          link.dataset.programSelect='s2';
+          link.dataset.workspaceTarget='pmb';
+          link.dataset.i18n='workspacePmb';
+          link.textContent=getProfileLanguage()==='en'?'Admissions':'PMB';
+          const profileLink=menu.querySelector('[data-workspace-target="program-profile"]');
+          if(profileLink) profileLink.insertAdjacentElement('afterend',link); else menu.prepend(link);
+        }
+        return true;
       };
       const removePmbFromProfile=()=>{
-        document.querySelectorAll('.workspace-menu-s2 a,.program-profile-menu a,.profile-menu a').forEach(link=>{
-          const href=(link.getAttribute('href')||'').trim().toLowerCase();
-          const target=(link.dataset.workspaceTarget||'').trim().toLowerCase();
-          const key=(link.dataset.i18n||'').trim().toLowerCase();
-          const label=(link.textContent||'').trim().toLowerCase();
-          if(href==='#pmb'||target==='pmb'||key.includes('pmb')||label==='pmb'||label==='penerimaan mahasiswa baru') link.remove();
-        });
         document.querySelectorAll('#program-profile .pmb-profile-spotlight').forEach(element=>element.remove());
       };
       syncProfileLanguage();
+      ensurePmbMainMenu();
       removePmbFromProfile();
-      document.querySelectorAll('.language-switch [data-lang]').forEach(button=>button.addEventListener('click',()=>{setTimeout(syncProfileLanguage,0);setTimeout(syncProfileLanguage,120)}));
+      document.querySelectorAll('.language-switch [data-lang]').forEach(button=>button.addEventListener('click',()=>{setTimeout(()=>{syncProfileLanguage();ensurePmbMainMenu()},0);setTimeout(()=>{syncProfileLanguage();ensurePmbMainMenu()},120)}));
       const sidebar=document.querySelector('.workspace-sidebar');
-      if(sidebar) new MutationObserver(removePmbFromProfile).observe(sidebar,{childList:true,subtree:true});
+      if(sidebar) new MutationObserver(()=>{ensurePmbMainMenu();syncProfileLanguage()}).observe(sidebar,{childList:true,subtree:true});
       const profile=document.getElementById('program-profile');
       if(profile) new MutationObserver(removePmbFromProfile).observe(profile,{childList:true,subtree:true});
     });
