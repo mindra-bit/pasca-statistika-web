@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Naskah Akademik Perubahan Kurikulum 2020 menjadi Kurikulum OBE 2023</title>
+<meta name="description" content="Naskah Akademik Perubahan Kurikulum 2020 menjadi Kurikulum OBE 2023 Program Studi Magister Statistika Terapan FMIPA Universitas Padjadjaran.">
+<meta name="theme-color" content="#073f34">
+<style>
+:root{--green:#073f34;--green2:#0b5b4a;--gold:#c89b2c;--gold2:#ead28b;--ink:#1c2933;--muted:#607080;--paper:#fff;--line:#d9e3e1;--soft:#eff6f4;--shadow:0 18px 52px rgba(7,63,52,.13)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;background:linear-gradient(180deg,#e7f0ed 0,#f8faf9 420px,#eef4f2 100%);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.72}a{color:var(--green2)}a:hover{color:var(--green)}
+.portal-bar{position:sticky;top:0;z-index:40;background:rgba(7,63,52,.97);backdrop-filter:blur(12px);box-shadow:0 7px 25px rgba(0,0,0,.18)}.portal-inner{max-width:1380px;margin:auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px}.portal-brand{color:#fff;text-decoration:none;font-weight:850;letter-spacing:.01em}.portal-brand small{display:block;color:#d6e7e1;font-weight:500}.portal-actions{display:flex;gap:10px;flex-wrap:wrap}.portal-actions a,.portal-actions button{display:inline-flex;align-items:center;justify-content:center;padding:9px 14px;border-radius:999px;text-decoration:none;font:inherit;font-weight:800;font-size:.9rem;cursor:pointer}.portal-actions .ghost{color:#fff;border:1px solid rgba(255,255,255,.38);background:transparent}.portal-actions .gold{background:var(--gold);color:#17261f;border:1px solid var(--gold)}
+.page-shell{max-width:1380px;margin:32px auto 80px;padding:0 24px;display:grid;grid-template-columns:minmax(250px,310px) minmax(0,1fr);gap:28px;align-items:start}.toc-shell{position:sticky;top:84px;max-height:calc(100vh - 108px);overflow:auto;background:rgba(255,255,255,.96);border:1px solid var(--line);border-radius:19px;padding:18px;box-shadow:var(--shadow)}.toc-title{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:0 0 12px;color:var(--green);font-size:1.1rem;font-weight:900}.toc-toggle{display:none;border:0;background:var(--soft);color:var(--green);border-radius:9px;padding:7px 10px;font-weight:800}#TOC{font-size:.86rem}#TOC ul{list-style:none;padding-left:0;margin:0}#TOC ul ul{padding-left:13px;border-left:2px solid #e3ece9;margin:5px 0 9px}#TOC li{margin:4px 0}#TOC a{text-decoration:none;color:#40596a;display:block;padding:4px 7px;border-radius:7px;line-height:1.42}#TOC a:hover,#TOC a.active{background:#e9f3f0;color:var(--green);font-weight:750}
+.document{min-width:0}.hero{display:grid;grid-template-columns:minmax(280px,450px) minmax(0,1fr);gap:28px;align-items:center;background:linear-gradient(145deg,#fff,#f7fbfa);border:1px solid var(--line);border-radius:25px;padding:clamp(18px,3.5vw,34px);box-shadow:var(--shadow);margin-bottom:24px}.hero-cover{background:var(--green);padding:9px;border-radius:15px;box-shadow:0 14px 34px rgba(7,63,52,.22)}.hero-cover img{display:block;width:100%;height:auto;border-radius:9px}.web-cover{position:relative;min-height:700px;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(circle at 85% 12%,rgba(200,155,44,.13),transparent 24%),linear-gradient(145deg,#fff 0 72%,#073f34 72% 100%);border:1px solid #d7bc66!important;color:var(--green);padding:48px 34px!important;text-align:center}.web-cover:before{content:"";position:absolute;inset:14px;border:1px solid rgba(200,155,44,.72);pointer-events:none}.web-cover:after{content:"";position:absolute;left:-18%;right:-18%;bottom:70px;height:210px;border-top:13px solid var(--gold);border-radius:50%;transform:rotate(-7deg);background:linear-gradient(180deg,transparent 0 52%,rgba(7,63,52,.08) 52%)}.cover-emblem{position:relative;z-index:1;width:104px;height:104px;border-radius:30% 30% 38% 38%;display:grid;place-items:center;background:linear-gradient(145deg,#f7c849,#d99d12);border:4px solid #111;color:#111;font-family:Georgia,serif;font-weight:900;letter-spacing:.04em;margin-bottom:18px}.cover-university{position:relative;z-index:1;font-family:Georgia,"Times New Roman",serif;font-size:1.25rem;letter-spacing:.18em;line-height:1.28}.cover-rule{position:relative;z-index:1;width:180px;height:2px;background:var(--gold);margin:24px 0}.cover-main{position:relative;z-index:1;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.45rem,4.7vw,4.4rem);line-height:1.03;letter-spacing:.05em;text-shadow:0 2px 3px rgba(0,0,0,.08)}.cover-sub{position:relative;z-index:1;font-family:Georgia,"Times New Roman",serif;color:#7c5a12;font-size:1.35rem;font-weight:700;line-height:1.36;margin:27px 0}.cover-program{position:relative;z-index:1;font-family:Georgia,"Times New Roman",serif;font-size:1.15rem;font-weight:700;line-height:1.45}.cover-program small{font-size:.92rem;font-weight:600}.cover-date{position:relative;z-index:1;margin-top:22px;font-family:Georgia,"Times New Roman",serif;font-size:1.1rem;font-weight:700}.hero-cover.web-cover{box-shadow:0 14px 34px rgba(7,63,52,.22);border-radius:15px}.hero-cover.web-cover>*{max-width:100%}.hero-copy .eyebrow{display:inline-flex;padding:7px 11px;border-radius:999px;background:#edf5f2;color:var(--green);font-weight:850;font-size:.78rem;letter-spacing:.08em}.hero-copy h1{font-family:Georgia,"Times New Roman",serif;color:var(--green);font-size:clamp(2rem,4vw,3.35rem);line-height:1.14;margin:15px 0}.hero-copy p{color:#536777;margin:.7rem 0}.hero-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:20px}.hero-meta div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px}.hero-meta span{display:block;color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.07em}.hero-meta strong{display:block;color:var(--green);margin-top:3px}
+.document-content{background:var(--paper);border:1px solid var(--line);border-radius:25px;padding:clamp(24px,5vw,58px);box-shadow:var(--shadow)}.front-heading,.chapter-title{font-family:Georgia,"Times New Roman",serif;color:var(--green);line-height:1.23}.front-heading{margin:3rem 0 1.25rem;padding:14px 18px;background:linear-gradient(90deg,var(--green),var(--green2));color:#fff;border-radius:12px;font-size:clamp(1.35rem,2.4vw,1.75rem);text-align:center}.front-heading:first-child{margin-top:0}.chapter-title{font-size:clamp(1.75rem,3vw,2.35rem);margin:3.2rem 0 1.4rem;border-left:7px solid var(--gold);padding-left:16px}.chapter-title:first-of-type{margin-top:0}h2{color:var(--green);font-size:1.42rem;margin-top:2.1rem;line-height:1.3}h3{color:#23594d;font-size:1.17rem;margin-top:1.6rem}p{text-align:justify;margin:.82rem 0}li{text-align:justify;margin:.35rem 0}.document-content>p:first-child{margin-top:0}
+.table-wrap{overflow-x:auto;margin:18px 0 28px;border:1px solid var(--line);border-radius:12px;background:#fff}table{border-collapse:collapse;width:100%;min-width:680px;font-size:.91rem}caption{caption-side:top;font-weight:850;color:var(--green);padding:12px;text-align:left}th,td{border:1px solid #ccd9d5;padding:9px 10px;vertical-align:top}th{background:var(--green);color:#fff;text-align:center}tbody tr:nth-child(even){background:#f4f8f7}.document-content img{max-width:100%;height:auto}.note{margin:22px 0;padding:14px 16px;border-left:5px solid var(--gold);background:#fff9e8;border-radius:9px;color:#5c4a24}.back-top{position:fixed;right:20px;bottom:20px;background:var(--green);color:#fff!important;text-decoration:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;box-shadow:0 10px 25px rgba(7,63,52,.3);font-weight:900}footer{max-width:1380px;margin:0 auto 48px;padding:0 24px;color:#526b65;text-align:center}
+@media(max-width:1050px){.page-shell{grid-template-columns:1fr}.toc-shell{position:relative;top:auto;max-height:none}.toc-title{margin-bottom:0}.toc-toggle{display:inline-flex}#TOC{display:none;margin-top:14px}.toc-shell.open #TOC{display:block}.hero{grid-template-columns:minmax(250px,360px) 1fr}}
+@media(max-width:760px){.portal-inner{align-items:flex-start;flex-direction:column}.portal-actions{width:100%}.portal-actions a,.portal-actions button{flex:1 1 130px}.page-shell{padding:0 12px;margin-top:17px}.hero{grid-template-columns:1fr}.hero-cover{max-width:480px;margin:auto}.hero-meta{grid-template-columns:1fr}.document-content{padding:23px 17px}p,li{text-align:left}.chapter-title{font-size:1.65rem}.back-top{right:12px;bottom:12px}}
+@media print{.portal-bar,.toc-shell,.back-top,footer,.hero-meta,.note{display:none!important}.page-shell{display:block;margin:0;padding:0}.hero,.document-content{box-shadow:none;border:0;padding:0}.hero{display:block;page-break-after:always}.hero-copy{display:none}.hero-cover{background:none;padding:0;box-shadow:none}.document-content{font-size:11pt}.chapter-title{page-break-before:always}.table-wrap{overflow:visible;border:0}table{min-width:0;font-size:9pt}}
+</style>
+</head>
+<body id="top">
+<header class="portal-bar"><div class="portal-inner">
+<a class="portal-brand" href="../index.html#dokumen-kurikulum">Pasca Sarjana Statistika FMIPA UNPAD<small>Dokumen Kurikulum</small></a>
+<nav class="portal-actions" aria-label="Aksi dokumen">
+<a class="ghost" href="../index.html#dokumen-kurikulum">Kembali ke Portal</a>
+<a class="gold" href="Naskah_Akademik_Perubahan_Kurikulum_2020_menjadi_OBE_2023.pdf" target="_blank" rel="noopener">Buka PDF</a>
+<button class="ghost" type="button" onclick="window.print()">Cetak HTML</button>
+</nav></div></header>
+<div class="page-shell">
+<aside class="toc-shell" aria-label="Daftar isi dokumen"><div class="toc-title"><span>Daftar Isi</span><button class="toc-toggle" type="button" aria-expanded="false">Buka</button></div><nav id="TOC" role="doc-toc">
+<ul><li><a href="#tim-penyusun" id="toc-tim-penyusun">TIM PENYUSUN</a></li><li><a href="#lembar-pengesahan" id="toc-lembar-pengesahan">LEMBAR PENGESAHAN</a></li><li><a href="#kata-pengantar" id="toc-kata-pengantar">KATA PENGANTAR</a></li><li><a href="#ringkasan-eksekutif" id="toc-ringkasan-eksekutif">RINGKASAN EKSEKUTIF</a></li><li><a href="#daftar-singkatan" id="toc-daftar-singkatan">DAFTAR SINGKATAN</a></li><li><a href="#bab-i-pendahuluan" id="toc-bab-i-pendahuluan">BAB I PENDAHULUAN</a><ul><li><a href="#latar-belakang" id="toc-latar-belakang">1.1 Latar Belakang</a></li><li><a href="#konteks-perubahan-pendidikan-tinggi" id="toc-konteks-perubahan-pendidikan-tinggi">1.2 Konteks Perubahan Pendidikan Tinggi</a></li><li><a href="#urgensi-perubahan-kurikulum" id="toc-urgensi-perubahan-kurikulum">1.3 Urgensi Perubahan Kurikulum</a></li><li><a href="#tujuan-dan-manfaat" id="toc-tujuan-dan-manfaat">1.4 Tujuan dan Manfaat</a></li><li><a href="#metode-penyusunan-dan-sumber-data" id="toc-metode-penyusunan-dan-sumber-data">1.5 Metode Penyusunan dan Sumber Data</a></li></ul></li><li><a href="#bab-ii-landasan-pengembangan-kurikulum" id="toc-bab-ii-landasan-pengembangan-kurikulum">BAB II LANDASAN PENGEMBANGAN KURIKULUM</a><ul><li><a href="#landasan-filosofis" id="toc-landasan-filosofis">2.1 Landasan Filosofis</a></li><li><a href="#landasan-sosiologis" id="toc-landasan-sosiologis">2.2 Landasan Sosiologis</a></li><li><a href="#landasan-psikopedagogis" id="toc-landasan-psikopedagogis">2.3 Landasan Psikopedagogis</a></li><li><a href="#landasan-keilmuan" id="toc-landasan-keilmuan">2.4 Landasan Keilmuan</a></li><li><a href="#landasan-yuridis" id="toc-landasan-yuridis">2.5 Landasan Yuridis</a></li></ul></li><li><a href="#bab-iii-evaluasi-kurikulum-2020" id="toc-bab-iii-evaluasi-kurikulum-2020">BAB III EVALUASI KURIKULUM 2020</a><ul><li><a href="#karakteristik-kurikulum-2020" id="toc-karakteristik-kurikulum-2020">3.1 Karakteristik Kurikulum 2020</a></li><li><a href="#hasil-asesmen-eksternal-dan-lamsama" id="toc-hasil-asesmen-eksternal-dan-lamsama">3.2 Hasil Asesmen Eksternal dan LAMSAMA</a></li><li><a href="#hasil-tracer-study-alumni" id="toc-hasil-tracer-study-alumni">3.3 Hasil Tracer Study Alumni</a></li><li><a href="#survei-kepuasan-pengguna-lulusan" id="toc-survei-kepuasan-pengguna-lulusan">3.4 Survei Kepuasan Pengguna Lulusan</a></li><li><a href="#evaluasi-internal-pbm-dan-benchmarking" id="toc-evaluasi-internal-pbm-dan-benchmarking">3.5 Evaluasi Internal PBM dan Benchmarking</a></li><li><a href="#diagnosis-kesenjangan" id="toc-diagnosis-kesenjangan">3.6 Diagnosis Kesenjangan</a></li></ul></li><li><a href="#bab-iv-desain-kurikulum-obe-2023" id="toc-bab-iv-desain-kurikulum-obe-2023">BAB IV DESAIN KURIKULUM OBE 2023</a><ul><li><a href="#profil-lulusan" id="toc-profil-lulusan">4.1 Profil Lulusan</a></li><li><a href="#capaian-pembelajaran-lulusan" id="toc-capaian-pembelajaran-lulusan">4.2 Capaian Pembelajaran Lulusan</a></li><li><a href="#bahan-kajian" id="toc-bahan-kajian">4.3 Bahan Kajian</a></li><li><a href="#prinsip-konstruksi-kurikulum" id="toc-prinsip-konstruksi-kurikulum">4.4 Prinsip Konstruksi Kurikulum</a></li></ul></li><li><a href="#bab-v-analisis-perubahan-kurikulum" id="toc-bab-v-analisis-perubahan-kurikulum">BAB V ANALISIS PERUBAHAN KURIKULUM</a><ul><li><a href="#perubahan-nomenklatur-dan-penajaman-level" id="toc-perubahan-nomenklatur-dan-penajaman-level">5.1 Perubahan Nomenklatur dan Penajaman Level</a></li><li><a href="#struktur-mata-kuliah-obe-2023" id="toc-struktur-mata-kuliah-obe-2023">5.2 Struktur Mata Kuliah OBE 2023</a></li><li><a href="#perubahan-arsitektur-cpl" id="toc-perubahan-arsitektur-cpl">5.3 Perubahan Arsitektur CPL</a></li><li><a href="#matriks-ringkas-perubahan" id="toc-matriks-ringkas-perubahan">5.4 Matriks Ringkas Perubahan</a></li></ul></li><li><a href="#bab-vi-strategi-pembelajaran-dan-asesmen-obe" id="toc-bab-vi-strategi-pembelajaran-dan-asesmen-obe">BAB VI STRATEGI PEMBELAJARAN DAN ASESMEN OBE</a><ul><li><a href="#constructive-alignment" id="toc-constructive-alignment">6.1 Constructive Alignment</a></li><li><a href="#strategi-pembelajaran" id="toc-strategi-pembelajaran">6.2 Strategi Pembelajaran</a></li><li><a href="#sistem-asesmen" id="toc-sistem-asesmen">6.3 Sistem Asesmen</a></li><li><a href="#pengukuran-ketercapaian-cpl" id="toc-pengukuran-ketercapaian-cpl">6.4 Pengukuran Ketercapaian CPL</a></li></ul></li><li><a href="#bab-vii-implementasi-penjaminan-mutu-dan-evaluasi" id="toc-bab-vii-implementasi-penjaminan-mutu-dan-evaluasi">BAB VII IMPLEMENTASI, PENJAMINAN MUTU, DAN EVALUASI</a><ul><li><a href="#tahapan-implementasi" id="toc-tahapan-implementasi">7.1 Tahapan Implementasi</a></li><li><a href="#peran-pemangku-kepentingan" id="toc-peran-pemangku-kepentingan">7.2 Peran Pemangku Kepentingan</a></li><li><a href="#risiko-dan-mitigasi" id="toc-risiko-dan-mitigasi">7.3 Risiko dan Mitigasi</a></li></ul></li><li><a href="#bab-viii-penutup-dan-rekomendasi" id="toc-bab-viii-penutup-dan-rekomendasi">BAB VIII PENUTUP DAN REKOMENDASI</a><ul><li><a href="#rekomendasi" id="toc-rekomendasi">8.1 Rekomendasi</a></li></ul></li><li><a href="#daftar-pustaka-dan-dokumen-sumber" id="toc-daftar-pustaka-dan-dokumen-sumber">DAFTAR PUSTAKA DAN DOKUMEN SUMBER</a></li><li><a href="#lampiran-1.-matriks-cpl-dan-bahan-kajian" id="toc-lampiran-1.-matriks-cpl-dan-bahan-kajian">LAMPIRAN 1. MATRIKS CPL DAN BAHAN KAJIAN</a></li><li><a href="#lampiran-2.-pemetaan-mata-kuliah-terhadap-cpl" id="toc-lampiran-2.-pemetaan-mata-kuliah-terhadap-cpl">LAMPIRAN 2. PEMETAAN MATA KULIAH TERHADAP CPL</a></li><li><a href="#lampiran-3.-rencana-tindak-lanjut-implementasi" id="toc-lampiran-3.-rencana-tindak-lanjut-implementasi">LAMPIRAN 3. RENCANA TINDAK LANJUT IMPLEMENTASI</a></li></ul></nav></aside>
+<main class="document">
+<section class="hero" aria-labelledby="document-title">
+<div class="hero-cover web-cover" role="img" aria-label="Cover Naskah Akademik Perubahan Kurikulum 2020 menjadi Kurikulum OBE 2023"><div class="cover-emblem">UNPAD</div><div class="cover-university">UNIVERSITAS<br>PADJADJARAN</div><div class="cover-rule"></div><div class="cover-main">NASKAH<br>AKADEMIK</div><div class="cover-sub">Perubahan Kurikulum 2020<br>menjadi Kurikulum OBE 2023</div><div class="cover-program">Program Studi S2 Statistika Terapan<br><small>Fakultas Matematika dan Ilmu Pengetahuan Alam<br>Universitas Padjadjaran</small></div><div class="cover-date">Bulan Juni 2023</div></div>
+<div class="hero-copy"><span class="eyebrow">NASKAH AKADEMIK · JUNI 2023</span><h1 id="document-title">Perubahan Kurikulum 2020 menjadi Kurikulum OBE 2023</h1><p>Program Studi Magister (S2) Statistika Terapan, Fakultas Matematika dan Ilmu Pengetahuan Alam, Universitas Padjadjaran.</p><p>Versi HTML ini menyajikan isi dokumen secara responsif, mudah ditelusuri, dan tetap dilengkapi tautan ke PDF resmi.</p>
+<div class="hero-meta"><div><span>Program Studi</span><strong>S2 Statistika Terapan</strong></div><div><span>Waktu Penyusunan</span><strong>Juni 2023</strong></div><div><span>Pendekatan</span><strong>Outcome-Based Education</strong></div><div><span>Dokumen</span><strong>25 halaman PDF</strong></div></div></div>
+</section>
+<article class="document-content"><h1 class="front-heading" id="tim-penyusun">TIM PENYUSUN</h1>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 9%"/>
+<col style="width: 90%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>No.</strong></th>
+<th><strong>Nama</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Dr. I Gede Nyoman Mindra Jaya, M.Si.</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Yudhie Andriyana, M.Sc., Ph.D.</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Dr. Bertho Tantular, M.Si.</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Dr. Anindya Aprilianti Pravitasari, M.Si.</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Dr. Irlandia Ginanjar, M.Si.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Dokumen ini disusun berdasarkan evaluasi Kurikulum 2020, dokumen Kurikulum OBE 2023, rekomendasi asesmen eksternal, tracer study alumni, survei kepuasan pengguna lulusan, evaluasi internal pembelajaran, benchmarking, dan ketentuan pendidikan tinggi yang berlaku pada saat penyusunan.</p>
+<h1 class="front-heading" id="lembar-pengesahan">LEMBAR PENGESAHAN</h1>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 31%"/>
+<col style="width: 68%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Keterangan</strong></th>
+<th><strong>Isi</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Judul</td>
+<td>Naskah Akademik Perubahan Kurikulum 2020 menjadi Kurikulum OBE 2023</td>
+</tr>
+<tr class="even">
+<td>Program Studi</td>
+<td>Magister (S2) Statistika Terapan</td>
+</tr>
+<tr class="odd">
+<td>Fakultas</td>
+<td>Matematika dan Ilmu Pengetahuan Alam</td>
+</tr>
+<tr class="even">
+<td>Perguruan Tinggi</td>
+<td>Universitas Padjadjaran</td>
+</tr>
+<tr class="odd">
+<td>Waktu Penyusunan</td>
+<td>Juni 2023</td>
+</tr>
+</tbody>
+</table></div>
+<p>Naskah akademik ini menjadi dasar argumentatif, akademik, dan institusional bagi penetapan serta implementasi Kurikulum OBE 2023 pada Program Studi Magister Statistika Terapan FMIPA Universitas Padjadjaran.</p>
+<p>Jatinangor, Juni 2023</p>
+<p><strong>Ketua Tim Penyusun</strong></p>
+<p>Dr. I Gede Nyoman Mindra Jaya, M.Si.</p>
+<p><strong>Kepala Departemen Statistika</strong></p>
+<p>Dr. Irlandia Ginanjar, M.Si.</p>
+<p><strong>Dekan FMIPA Universitas Padjadjaran</strong></p>
+<p>........................................................</p>
+<h1 class="front-heading" id="kata-pengantar">KATA PENGANTAR</h1>
+<p>Puji syukur ke hadirat Tuhan Yang Maha Esa atas rahmat dan karunia-Nya sehingga Naskah Akademik Perubahan Kurikulum 2020 menjadi Kurikulum OBE 2023 Program Studi Magister Statistika Terapan FMIPA Universitas Padjadjaran dapat diselesaikan.</p>
+<p>Penyusunan dokumen ini merupakan bagian dari siklus penjaminan mutu akademik. Perubahan kurikulum tidak semata-mata berupa penggantian nama mata kuliah, melainkan penataan kembali keterkaitan antara profil lulusan, tujuan program studi, Capaian Pembelajaran Lulusan (CPL), bahan kajian, mata kuliah, strategi pembelajaran, dan asesmen. Penataan tersebut diarahkan agar karakter jenjang magister tampak melalui kedalaman analisis, kemampuan pengembangan metode, kompetensi riset, komputasi statistika, dan penyelesaian masalah nyata.</p>
+<p>Kami menyampaikan terima kasih kepada asesor LAMSAMA, pimpinan fakultas dan departemen, dosen, mahasiswa, alumni, pengguna lulusan, mitra, serta seluruh pemangku kepentingan yang telah memberikan masukan. Semoga dokumen ini menjadi landasan yang sahih dan operasional bagi implementasi, pemantauan, evaluasi, dan penyempurnaan berkelanjutan Kurikulum OBE 2023.</p>
+<p>Bandung, Juni 2023<br>Tim Penyusun</p>
+<h1 class="front-heading" id="ringkasan-eksekutif">RINGKASAN EKSEKUTIF</h1>
+<p>Naskah akademik ini mendokumentasikan rasional, bukti, proses, dan arah perubahan Kurikulum 2020 menjadi Kurikulum OBE 2023. Perubahan didorong oleh kebutuhan untuk memperjelas distingsi jenjang magister terhadap jenjang sarjana, memperkuat kedalaman dan kompleksitas materi, serta menempatkan capaian lulusan sebagai titik awal perancangan kurikulum.</p>
+<p>Bukti institusional menunjukkan perlunya penguatan relevansi kurikulum. Tracer study 2021/2022 mencakup 71 respons alumni dan menunjukkan bahwa 88,7% responden telah bekerja sebelum lulus. Temuan ini menegaskan karakter mahasiswa dan alumni yang kuat sebagai pembelajar profesional, sehingga kurikulum perlu menyediakan pembelajaran yang fleksibel tetapi tetap menuntut kemampuan analitis, riset, komputasi, komunikasi, dan pemecahan masalah tingkat lanjut. Survei kepuasan pengguna menilai 51 lulusan pada periode T-4 sampai TS-2 dan menjadi dasar kualitatif untuk mempertahankan kekuatan pada etika, keahlian statistika, teknologi informasi, komunikasi, kerja sama, dan pengembangan diri.</p>
+<p>Perubahan utama meliputi: perumusan CPL yang lebih ringkas dan integratif; pengelompokan bahan kajian; penguatan pemetaan CPL-bahan kajian-mata kuliah; penegasan nama mata kuliah tingkat lanjut; penambahan orientasi komputasi, optimasi, data mining dan kecerdasan artifisial; serta penerapan asesmen berbasis bukti ketercapaian CPL. Implementasi dilakukan melalui RPS berbasis CPMK, asesmen langsung dan tidak langsung, rubrik, portofolio, proyek, seminar riset, tesis, dan evaluasi periodik.</p>
+<h1 class="front-heading" id="daftar-singkatan">DAFTAR SINGKATAN</h1>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 21%"/>
+<col style="width: 78%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Singkatan</strong></th>
+<th><strong>Kepanjangan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CPL</td>
+<td>Capaian Pembelajaran Lulusan</td>
+</tr>
+<tr class="even">
+<td>CPMK</td>
+<td>Capaian Pembelajaran Mata Kuliah</td>
+</tr>
+<tr class="odd">
+<td>OBE</td>
+<td>Outcome-Based Education</td>
+</tr>
+<tr class="even">
+<td>KKNI</td>
+<td>Kerangka Kualifikasi Nasional Indonesia</td>
+</tr>
+<tr class="odd">
+<td>SN-Dikti</td>
+<td>Standar Nasional Pendidikan Tinggi</td>
+</tr>
+<tr class="even">
+<td>LAMSAMA</td>
+<td>Lembaga Akreditasi Mandiri Sains Alam dan Ilmu Formal</td>
+</tr>
+<tr class="odd">
+<td>RPS</td>
+<td>Rencana Pembelajaran Semester</td>
+</tr>
+<tr class="even">
+<td>PBM</td>
+<td>Proses Belajar Mengajar</td>
+</tr>
+<tr class="odd">
+<td>FGD</td>
+<td>Focus Group Discussion</td>
+</tr>
+<tr class="even">
+<td>FORSTAT</td>
+<td>Forum Pendidikan Tinggi Statistika</td>
+</tr>
+</tbody>
+</table></div>
+<h1 class="chapter-title" id="bab-i-pendahuluan">BAB I PENDAHULUAN</h1>
+<h2 id="latar-belakang">1.1 Latar Belakang</h2>
+<p>Kurikulum merupakan instrumen utama untuk menerjemahkan visi keilmuan program studi ke dalam pengalaman belajar mahasiswa. Pada jenjang magister, kurikulum harus memastikan bahwa lulusan tidak hanya mampu menerapkan teknik yang telah tersedia, tetapi juga mampu mengevaluasi, memilih, mengembangkan, dan mengomunikasikan metode statistika untuk penyelesaian masalah kompleks.</p>
+<p>Kurikulum 2020 telah menyediakan fondasi pendidikan statistika terapan melalui kompetensi sikap, keterampilan umum, pengetahuan, dan keterampilan khusus. Namun, evaluasi menunjukkan perlunya penyempurnaan agar diferensiasi jenjang magister lebih eksplisit, hubungan antarunsur kurikulum lebih terukur, dan perkembangan komputasi serta sains data terakomodasi secara lebih kuat.</p>
+<h2 id="konteks-perubahan-pendidikan-tinggi">1.2 Konteks Perubahan Pendidikan Tinggi</h2>
+<p>Perubahan lanskap pendidikan tinggi ditandai oleh meningkatnya penggunaan data berukuran besar dan kompleks, integrasi statistika dengan komputasi, kebutuhan pengambilan keputusan berbasis bukti, serta tuntutan akuntabilitas hasil pendidikan. Dalam konteks tersebut, pendekatan OBE relevan karena memulai desain dari kemampuan akhir lulusan dan menurunkannya ke dalam pengalaman belajar serta asesmen yang dapat diverifikasi.</p>
+<h2 id="urgensi-perubahan-kurikulum">1.3 Urgensi Perubahan Kurikulum</h2>
+<ul>
+<li>Menegaskan kedalaman, keluasan, kompleksitas, dan kebaruan pembelajaran pada jenjang magister.</li>
+<li>Membedakan nomenklatur dan substansi mata kuliah magister dari mata kuliah sarjana.</li>
+<li>Mengintegrasikan profil lulusan, tujuan program studi, CPL, bahan kajian, mata kuliah, pembelajaran, dan asesmen.</li>
+<li>Memperkuat kompetensi komputasi statistika, optimasi, data mining, kecerdasan artifisial, dan analisis data modern.</li>
+<li>Menyediakan mekanisme pengukuran ketercapaian CPL dan perbaikan berkelanjutan yang terdokumentasi.</li>
+</ul>
+<h2 id="tujuan-dan-manfaat">1.4 Tujuan dan Manfaat</h2>
+<ol>
+<li>Menyediakan dasar akademik bagi perubahan Kurikulum 2020 menjadi Kurikulum OBE 2023.</li>
+<li>Mendokumentasikan bukti evaluasi internal dan eksternal yang mendasari perubahan.</li>
+<li>Menjelaskan konstruksi kurikulum baru dan keterkaitan antarunsurnya.</li>
+<li>Menjadi acuan implementasi, monitoring, evaluasi, dan peningkatan mutu berkelanjutan.</li>
+</ol>
+<h2 id="metode-penyusunan-dan-sumber-data">1.5 Metode Penyusunan dan Sumber Data</h2>
+<p>Penyusunan dilakukan melalui analisis dokumen, komparasi kurikulum, sintesis masukan pemangku kepentingan, telaah hasil tracer study dan survei pengguna, evaluasi PBM, serta benchmarking. Prinsip kehati-hatian diterapkan dengan tidak menambahkan angka atau rekomendasi yang tidak tersedia pada sumber.</p>
+<h1 class="chapter-title" id="bab-ii-landasan-pengembangan-kurikulum">BAB II LANDASAN PENGEMBANGAN KURIKULUM</h1>
+<h2 id="landasan-filosofis">2.1 Landasan Filosofis</h2>
+<p>Kurikulum dikembangkan untuk membentuk lulusan yang berintegritas, kritis, kreatif, bertanggung jawab, dan mampu menghasilkan nilai tambah melalui statistika. Pembelajaran menempatkan mahasiswa sebagai pembelajar dewasa yang aktif membangun pengetahuan melalui kajian teori, praktik komputasi, penelitian, dan refleksi profesional.</p>
+<h2 id="landasan-sosiologis">2.2 Landasan Sosiologis</h2>
+<p>Kebutuhan masyarakat terhadap statistika semakin luas pada sektor pemerintahan, bisnis dan industri, sosial, aktuaria, kesehatan, serta sains data. Kurikulum karena itu harus responsif terhadap masalah nyata dan tetap mempertahankan keteguhan metodologis.</p>
+<h2 id="landasan-psikopedagogis">2.3 Landasan Psikopedagogis</h2>
+<p>Pembelajaran jenjang magister menuntut pendekatan problem-based, project-based, case-based, research-based, dan collaborative learning. Mahasiswa harus memperoleh umpan balik formatif serta kesempatan menunjukkan capaian melalui bukti kerja autentik.</p>
+<h2 id="landasan-keilmuan">2.4 Landasan Keilmuan</h2>
+<p>Statistika terapan berkembang melalui interaksi antara teori inferensi, pemodelan, komputasi, desain pengumpulan data, interpretasi, dan komunikasi hasil. Kurikulum OBE 2023 menggabungkan statistika klasik dan modern serta lima ranah terapan utama.</p>
+<h2 id="landasan-yuridis">2.5 Landasan Yuridis</h2>
+<p>Pengembangan kurikulum merujuk pada ketentuan pendidikan tinggi, Standar Nasional Pendidikan Tinggi, KKNI Level 8, statuta dan peraturan Universitas Padjadjaran, serta keputusan Dekan FMIPA Nomor 014.a/UN6.D/Kep/FMIPA/2023 tentang pemberlakuan kurikulum berbasis capaian pembelajaran pada Program Studi S-2 Statistika Terapan.</p>
+<h1 class="chapter-title" id="bab-iii-evaluasi-kurikulum-2020">BAB III EVALUASI KURIKULUM 2020</h1>
+<h2 id="karakteristik-kurikulum-2020">3.1 Karakteristik Kurikulum 2020</h2>
+<p>Kurikulum 2020 menggunakan rumusan kompetensi yang dipisahkan menjadi sikap, keterampilan umum, pengetahuan, dan keterampilan khusus. Profil lulusan meliputi statistisi, analis data, konsultan statistik, akademisi, peneliti, dan data scientist. Struktur mata kuliah menyediakan fondasi teori dan pilihan bidang minat.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 11%"/>
+<col style="width: 19%"/>
+<col style="width: 52%"/>
+<col style="width: 16%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>No.</strong></th>
+<th><strong>Kode MK</strong></th>
+<th><strong>Mata Kuliah</strong></th>
+<th><strong>SKS</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>D20B.101</td>
+<td>Teori Statistika</td>
+<td>3 (3+0)</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>D20B.102</td>
+<td>Analisis Data Multivariat</td>
+<td>3 (2+1)</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>D20B.103</td>
+<td>Analisis Regresi</td>
+<td>3 (2+1)</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>D20B.104</td>
+<td>Proses Stokastik</td>
+<td>3 (3+0)</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>D20B.105</td>
+<td>Komputasi Statistik</td>
+<td>3 (1+2)</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>D20B.106</td>
+<td>Konsep-konsep dasar Statistik</td>
+<td>3 (2+1)</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="hasil-asesmen-eksternal-dan-lamsama">3.2 Hasil Asesmen Eksternal dan LAMSAMA</h2>
+<p>Masukan asesmen eksternal menekankan perlunya diferensiasi yang lebih tegas antara mata kuliah magister dan sarjana. Respons kurikuler tidak berhenti pada perubahan nama, tetapi mencakup penajaman CPMK, kedalaman bahan kajian, kompleksitas tugas, integrasi riset, dan asesmen yang menuntut sintesis serta pengembangan metode.</p>
+<h2 id="hasil-tracer-study-alumni">3.3 Hasil Tracer Study Alumni</h2>
+<p>Tracer study 2021/2022 memperoleh 71 respons. Sebanyak 88,7% responden menyatakan telah bekerja sebelum lulus Magister Statistika Terapan. Temuan tersebut menunjukkan pentingnya kurikulum yang relevan bagi profesional aktif, mampu menghubungkan teori dengan konteks pekerjaan, dan mendukung peningkatan kapasitas karier serta penelitian.</p>
+<h2 id="survei-kepuasan-pengguna-lulusan">3.4 Survei Kepuasan Pengguna Lulusan</h2>
+<p>Laporan kepuasan pengguna mencakup penilaian terhadap 51 lulusan pada periode T-4 sampai TS-2. Aspek yang dinilai meliputi etika, keahlian statistika, bahasa asing, teknologi informasi, komunikasi, kerja sama, dan pengembangan diri. Aspek-aspek ini dipertahankan dalam desain CPL dan diperkuat melalui tugas autentik, presentasi, proyek kelompok, serta penelitian tesis.</p>
+<h2 id="evaluasi-internal-pbm-dan-benchmarking">3.5 Evaluasi Internal PBM dan Benchmarking</h2>
+<p>Evaluasi internal menelaah kesesuaian CPL, CPMK, materi, metode pembelajaran, asesmen, distribusi mata kuliah, beban belajar, kompetensi dosen, dan pemanfaatan teknologi. Benchmarking digunakan untuk membandingkan struktur dan kedalaman program dengan program magister statistika atau bidang sejenis, termasuk Universitas Brawijaya dan perguruan tinggi lain.</p>
+<h2 id="diagnosis-kesenjangan">3.6 Diagnosis Kesenjangan</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 18%"/>
+<col style="width: 37%"/>
+<col style="width: 44%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Dimensi</strong></th>
+<th><strong>Kondisi yang Perlu Diperkuat</strong></th>
+<th><strong>Arah Perubahan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Distingsi jenjang</td>
+<td>Sebagian nama mata kuliah belum menegaskan level magister</td>
+<td>Penambahan frasa tingkat lanjut dan peningkatan kedalaman CPMK</td>
+</tr>
+<tr class="even">
+<td>Arsitektur OBE</td>
+<td>Hubungan CPL-mata kuliah belum sepenuhnya eksplisit</td>
+<td>Matriks CPL-bahan kajian-mata kuliah dan bobot kontribusi</td>
+</tr>
+<tr class="odd">
+<td>Komputasi</td>
+<td>Komputasi perlu diintegrasikan lebih sistematis</td>
+<td>Komputasi statistika dan optimasi; data mining dan AI</td>
+</tr>
+<tr class="even">
+<td>Asesmen</td>
+<td>Dominasi evaluasi berbasis mata kuliah</td>
+<td>Asesmen autentik dan agregasi bukti ketercapaian CPL</td>
+</tr>
+<tr class="odd">
+<td>Relevansi</td>
+<td>Perubahan kebutuhan sektor dan teknologi</td>
+<td>Penguatan bidang terapan, proyek, riset, dan komunikasi</td>
+</tr>
+</tbody>
+</table></div>
+<h1 class="chapter-title" id="bab-iv-desain-kurikulum-obe-2023">BAB IV DESAIN KURIKULUM OBE 2023</h1>
+<h2 id="profil-lulusan">4.1 Profil Lulusan</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 21%"/>
+<col style="width: 78%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Profil</strong></th>
+<th><strong>Deskripsi Ringkas</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Akademisi</td>
+<td>Mampu menjalankan pendidikan, penelitian, dan pengabdian berbasis statistika.</td>
+</tr>
+<tr class="even">
+<td>Peneliti</td>
+<td>Mampu merancang dan melaksanakan penelitian inovatif dalam statistika teoritis maupun terapan.</td>
+</tr>
+<tr class="odd">
+<td>Konsultan</td>
+<td>Mampu memberi layanan konsultasi dan solusi berbasis data kepada organisasi.</td>
+</tr>
+<tr class="even">
+<td>Praktisi</td>
+<td>Mampu bekerja profesional pada sektor yang membutuhkan analisis data dan pemodelan statistik.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="capaian-pembelajaran-lulusan">4.2 Capaian Pembelajaran Lulusan</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 12%"/>
+<col style="width: 87%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kode</strong></th>
+<th><strong>Deskripsi CPL</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CPL1</td>
+<td>Lulusan mampu menguasai dan mengembangkan konsep dasar statistika, menghasilkan inovasi, serta menyusun dan mempresentasikan karya ilmiah yang bermanfaat dan inovatif.</td>
+</tr>
+<tr class="even">
+<td>CPL2</td>
+<td>Lulusan mampu merancang, memilih, mengembangkan, dan mendesain ulang metode pengumpulan data secara efisien.</td>
+</tr>
+<tr class="odd">
+<td>CPL3</td>
+<td>Lulusan mampu mengelola dan menganalisis data serta menyelesaikan permasalahan nyata, khususnya di bidang bisnis industri, sosial, aktuaria, biostatistik, dan sains data, dengan menggunakan metode statistika melalui pendekatan interdisipliner atau multidisipliner.</td>
+</tr>
+<tr class="even">
+<td>CPL4</td>
+<td>Lulusan mampu mengembangkan algoritma komputasi dengan menggunakan software statistika untuk memecahkan masalah statistika yang kompleks, serta memastikan hasilnya dapat diakses dan dipahami dengan baik.</td>
+</tr>
+<tr class="odd">
+<td>CPL5</td>
+<td>Lulusan mampu berpikir logis, kritis, sistematis, dan inovatif secara mandiri dalam mengelola riset, serta diakui di tingkat nasional dan internasional dalam penerapan dan pengembangan ilmu pengetahuan dan teknologi yang berdampak positif bagi masyarakat.</td>
+</tr>
+<tr class="even">
+<td>CPL6</td>
+<td>Lulusan mampu mengembangkan jaringan kerja sama di tingkat nasional maupun internasional, serta menjalin komunikasi yang efektif dengan masyarakat dan pemangku kepentingan.</td>
+</tr>
+<tr class="odd">
+<td>CPL7</td>
+<td>Lulusan memiliki sikap yang mencerminkan ketakwaan, etika, integritas, kepedulian sosial dan lingkungan, serta kepemimpinan yang kuat dan inovatif.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="bahan-kajian">4.3 Bahan Kajian</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 13%"/>
+<col style="width: 86%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kode</strong></th>
+<th><strong>Bahan Kajian</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>BK1</td>
+<td>Statistika Teoritis dan Parametrik</td>
+</tr>
+<tr class="even">
+<td>BK2</td>
+<td>Statistika Komputasi dan Nonparametrik</td>
+</tr>
+<tr class="odd">
+<td>BK3</td>
+<td>Statistika Terapan Bisnis dan Industri</td>
+</tr>
+<tr class="even">
+<td>BK4</td>
+<td>Statistika Terapan Sosial</td>
+</tr>
+<tr class="odd">
+<td>BK5</td>
+<td>Statistika Terapan Aktuaria</td>
+</tr>
+<tr class="even">
+<td>BK6</td>
+<td>Statistika Terapan Biostatisti</td>
+</tr>
+<tr class="odd">
+<td>BK7</td>
+<td>Statistika Terapan Sains Data</td>
+</tr>
+<tr class="even">
+<td>BK8</td>
+<td>Penelitian dan Publikasi</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="prinsip-konstruksi-kurikulum">4.4 Prinsip Konstruksi Kurikulum</h2>
+<ul>
+<li>Constructive alignment antara CPL, CPMK, aktivitas belajar, dan asesmen.</li>
+<li>Kedalaman Level 8 KKNI melalui evaluasi, sintesis, pengembangan, dan validasi metode.</li>
+<li>Integrasi teori, komputasi, aplikasi, riset, etika, dan komunikasi.</li>
+<li>Fleksibilitas bidang minat tanpa kehilangan kompetensi inti program.</li>
+<li>Perbaikan berkelanjutan berbasis bukti langsung dan tidak langsung.</li>
+</ul>
+<h1 class="chapter-title" id="bab-v-analisis-perubahan-kurikulum">BAB V ANALISIS PERUBAHAN KURIKULUM</h1>
+<h2 id="perubahan-nomenklatur-dan-penajaman-level">5.1 Perubahan Nomenklatur dan Penajaman Level</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 14%"/>
+<col style="width: 27%"/>
+<col style="width: 29%"/>
+<col style="width: 28%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kode</strong></th>
+<th><strong>Kurikulum 2020</strong></th>
+<th><strong>Kurikulum OBE 2023</strong></th>
+<th><strong>Rasional</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>D20B.101</td>
+<td>Teori Statistika</td>
+<td>Statistik Inferential</td>
+<td>Penegasan level, keluasan, atau orientasi pembelajaran</td>
+</tr>
+<tr class="even">
+<td>D20B.102</td>
+<td>Analisis Data Multivariat</td>
+<td>Analisis Data Multivariat Tingkat Lanjut</td>
+<td>Penegasan level, keluasan, atau orientasi pembelajaran</td>
+</tr>
+<tr class="odd">
+<td>D20B.103</td>
+<td>Analisis Regresi</td>
+<td>Analisis Regresi Tingkat Lanjut</td>
+<td>Penegasan level, keluasan, atau orientasi pembelajaran</td>
+</tr>
+<tr class="even">
+<td>D20B.104</td>
+<td>Proses Stokastik</td>
+<td>Proses Stokastik Tingkat Lanjut</td>
+<td>Penegasan level, keluasan, atau orientasi pembelajaran</td>
+</tr>
+<tr class="odd">
+<td>D20B.105</td>
+<td>Komputasi Statistik</td>
+<td>Komputasi Statistik dan Optimasi</td>
+<td>Penegasan level, keluasan, atau orientasi pembelajaran</td>
+</tr>
+<tr class="even">
+<td>D20B.207</td>
+<td>Analisis Data Deret Waktu</td>
+<td>Teori Antrian</td>
+<td>Penegasan level, keluasan, atau orientasi pembelajaran</td>
+</tr>
+<tr class="odd">
+<td>D20B.209</td>
+<td>Analisis Data Kategori</td>
+<td>Analisis Data Kategori Tingkat Lanjut</td>
+<td>Penegasan level, keluasan, atau orientasi pembelajaran</td>
+</tr>
+<tr class="even">
+<td>D20B.210</td>
+<td>Statistika Non Parametrik</td>
+<td>Statistika Non Parametrik dan Flexible Modeling</td>
+<td>Penegasan level, keluasan, atau orientasi pembelajaran</td>
+</tr>
+<tr class="odd">
+<td>D20B.220</td>
+<td>Data Mining and Competitive Intellegence</td>
+<td>Data Mining and Artificial Intelligence</td>
+<td>Penegasan level, keluasan, atau orientasi pembelajaran</td>
+</tr>
+<tr class="even">
+<td>D20B.222</td>
+<td>Analisis Data Spasial</td>
+<td>Analisis Data Spasial Tingkat Lanjut</td>
+<td>Penegasan level, keluasan, atau orientasi pembelajaran</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="struktur-mata-kuliah-obe-2023">5.2 Struktur Mata Kuliah OBE 2023</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 6%"/>
+<col style="width: 14%"/>
+<col style="width: 36%"/>
+<col style="width: 31%"/>
+<col style="width: 10%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>No</strong></th>
+<th><strong>Kode MK</strong></th>
+<th><strong>Mata Kuliah</strong></th>
+<th><strong>Course</strong></th>
+<th><strong>SKS</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>D20B.101</td>
+<td>Statistik Inferential</td>
+<td>Inferential Statistics</td>
+<td>3 (3-0)</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>D20B.102</td>
+<td>Analisis Data Multivariat Tingkat Lanjut</td>
+<td>Advanced Multivariate Analysis</td>
+<td>3 (2-1)</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>D20B.103</td>
+<td>Analisis Regresi Tingkat Lanjut</td>
+<td>Advanced Regression Analysis</td>
+<td>3 (2-1)</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>D20B.104</td>
+<td>Proses Stokastik Tingkat Lanjut</td>
+<td>Advanced Stochastic Processes</td>
+<td>3 (3-0)</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>D20B.105</td>
+<td>Komputasi Statistik dan Optimasi</td>
+<td>Statistical Computing and Optimization</td>
+<td>3 (1-2)</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>D20B.107</td>
+<td>Analisis Data Deret Waktu Tingkat Lanjut</td>
+<td>Advanced Time Series Analysis</td>
+<td>3 (2-1)</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>D20B.206</td>
+<td>Structural Equation Modeling</td>
+<td>Structural Equation Modeling</td>
+<td>3 (2-1)</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>D20B.207</td>
+<td>Teori Antrian</td>
+<td>Queuing Theory</td>
+<td>3 (2-1)</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>D20B.208</td>
+<td>Sampling Survey</td>
+<td>Sampling Survey</td>
+<td>3 (2-1)</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>D20B.209</td>
+<td>Analisis Data Kategori Tingkat Lanjut</td>
+<td>Advanced Categorical Data Analysis</td>
+<td>3 (2-1)</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>D20B.210</td>
+<td>Statistika Non Parametrik dan Flexible Modeling</td>
+<td>Nonparametric Statistics and Flexible Modeling</td>
+<td>3 (2-1)</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>D20B.211</td>
+<td>Desain Eksperimen</td>
+<td>Experimental Design</td>
+<td>3 (2-1)</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>D20B.212</td>
+<td>Matematika Keuangan</td>
+<td>Financial Mathematics</td>
+<td>3 (2-1)</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>D20B.214</td>
+<td>Epidemiologi</td>
+<td>Epidemiology</td>
+<td>3 (2-1)</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>D20B.217</td>
+<td>Matematika Aktuaria 1</td>
+<td>Actuarial Mathematics 1</td>
+<td>3 (2-1)</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>D20B.218</td>
+<td>Matematika Aktuaria 2</td>
+<td>Actuarial Mathematics 2</td>
+<td>3 (2-1)</td>
+</tr>
+<tr class="odd">
+<td>17</td>
+<td>D20B.219</td>
+<td>Survival Analysis</td>
+<td>Survival Analysis</td>
+<td>3 (2-1)</td>
+</tr>
+<tr class="even">
+<td>18</td>
+<td>D20B.220</td>
+<td>Data Mining and Artificial Intelligence</td>
+<td>Data Mining and Artificial Intelligence</td>
+<td>3 (2-1)</td>
+</tr>
+<tr class="odd">
+<td>19</td>
+<td>D20B.221</td>
+<td>Teori Risiko</td>
+<td>Risk Theory</td>
+<td>3 (2-1)</td>
+</tr>
+<tr class="even">
+<td>20</td>
+<td>D20B.222</td>
+<td>Analisis Data Spasial Tingkat Lanjut</td>
+<td>Advanced Spatial Data Analysis</td>
+<td>3 (2-1)</td>
+</tr>
+<tr class="odd">
+<td>21</td>
+<td>D20B.223</td>
+<td>Machine Learning</td>
+<td>Machine Learning</td>
+<td>3 (2-1)</td>
+</tr>
+<tr class="even">
+<td>22</td>
+<td>D20B.224</td>
+<td>Image Processing</td>
+<td>Image Processing</td>
+<td>3 (2-1)</td>
+</tr>
+<tr class="odd">
+<td>23</td>
+<td>D20B.225</td>
+<td>Text Analytics</td>
+<td>Text Analytics</td>
+<td>3 (2-1)</td>
+</tr>
+<tr class="even">
+<td>24</td>
+<td>D20B.226</td>
+<td>Database</td>
+<td>Database</td>
+<td>3 (2-1)</td>
+</tr>
+<tr class="odd">
+<td>25</td>
+<td>D20B.321</td>
+<td>Seminar Usulan Riset</td>
+<td>Research Proposal Seminar (SUR)</td>
+<td>2 (1-1)</td>
+</tr>
+<tr class="even">
+<td>26</td>
+<td>D20B.322</td>
+<td>Tesis</td>
+<td>Master’s Thesis Defense</td>
+<td>6 (3-3)</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="perubahan-arsitektur-cpl">5.3 Perubahan Arsitektur CPL</h2>
+<p>Rumusan Kurikulum 2020 yang terfragmentasi menurut kategori SN-Dikti disintesiskan menjadi tujuh CPL program studi yang lebih mudah dipetakan, diukur, dan dikomunikasikan. Nilai-nilai sikap dan keterampilan umum tidak dihilangkan, tetapi diintegrasikan ke dalam rumusan CPL dan asesmen mata kuliah serta tesis.</p>
+<h2 id="matriks-ringkas-perubahan">5.4 Matriks Ringkas Perubahan</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 20%"/>
+<col style="width: 36%"/>
+<col style="width: 43%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Komponen</strong></th>
+<th><strong>Kurikulum 2020</strong></th>
+<th><strong>Kurikulum OBE 2023</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Profil lulusan</td>
+<td>Enam profil spesifik</td>
+<td>Empat profil integratif: akademisi, peneliti, konsultan, praktisi</td>
+</tr>
+<tr class="even">
+<td>CPL</td>
+<td>Terpisah: sikap, KU, pengetahuan, KK</td>
+<td>Tujuh CPL integratif dan bilingual</td>
+</tr>
+<tr class="odd">
+<td>Mata kuliah inti</td>
+<td>Nama umum</td>
+<td>Nama dan substansi menegaskan tingkat lanjut</td>
+</tr>
+<tr class="even">
+<td>Komputasi</td>
+<td>Komputasi Statistik</td>
+<td>Komputasi Statistik dan Optimasi</td>
+</tr>
+<tr class="odd">
+<td>Data modern</td>
+<td>Data Mining and Competitive Intelligence</td>
+<td>Data Mining dan Kecerdasan Artifisial</td>
+</tr>
+<tr class="even">
+<td>Pemetaan</td>
+<td>Kompetensi terhadap mata kuliah</td>
+<td>CPL-bahan kajian-mata kuliah dan bobot kontribusi</td>
+</tr>
+<tr class="odd">
+<td>Asesmen</td>
+<td>Berbasis hasil mata kuliah</td>
+<td>Berbasis bukti capaian dan agregasi CPL</td>
+</tr>
+</tbody>
+</table></div>
+<h1 class="chapter-title" id="bab-vi-strategi-pembelajaran-dan-asesmen-obe">BAB VI STRATEGI PEMBELAJARAN DAN ASESMEN OBE</h1>
+<h2 id="constructive-alignment">6.1 Constructive Alignment</h2>
+<p>Setiap mata kuliah harus memiliki CPMK yang diturunkan dari CPL yang dibebankan. Aktivitas pembelajaran dan asesmen kemudian dirancang untuk menghasilkan bukti bahwa CPMK telah dicapai. Hubungan ini dicantumkan dalam RPS dan dievaluasi setiap semester.</p>
+<h2 id="strategi-pembelajaran">6.2 Strategi Pembelajaran</h2>
+<ul>
+<li>Kuliah interaktif dan diskusi artikel untuk membangun fondasi konseptual.</li>
+<li>Praktikum komputasi untuk mereplikasi, membandingkan, dan mengembangkan analisis.</li>
+<li>Studi kasus untuk menghubungkan metode dengan konteks substantif.</li>
+<li>Project-based learning untuk menghasilkan produk analitik yang lengkap.</li>
+<li>Research-based learning melalui seminar usulan riset dan tesis.</li>
+</ul>
+<h2 id="sistem-asesmen">6.3 Sistem Asesmen</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 22%"/>
+<col style="width: 44%"/>
+<col style="width: 33%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Jenis Bukti</strong></th>
+<th><strong>Contoh</strong></th>
+<th><strong>CPL yang Umum Diukur</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ujian analitik</td>
+<td>Pembuktian, derivasi, evaluasi asumsi</td>
+<td>CPL1, CPL2, CPL5</td>
+</tr>
+<tr class="even">
+<td>Tugas komputasi</td>
+<td>Kode, reproduksibilitas, optimasi, simulasi</td>
+<td>CPL3, CPL4</td>
+</tr>
+<tr class="odd">
+<td>Proyek kasus</td>
+<td>Pemilihan metode, interpretasi, rekomendasi</td>
+<td>CPL2, CPL3, CPL6</td>
+</tr>
+<tr class="even">
+<td>Presentasi dan laporan</td>
+<td>Komunikasi ilmiah dan profesional</td>
+<td>CPL6, CPL7</td>
+</tr>
+<tr class="odd">
+<td>Proposal dan tesis</td>
+<td>Riset orisinal, validasi, etika, diseminasi</td>
+<td>Seluruh CPL</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="pengukuran-ketercapaian-cpl">6.4 Pengukuran Ketercapaian CPL</h2>
+<p>Nilai asesmen yang relevan dipetakan ke CPMK dan CPL menggunakan rubrik. Program studi mengagregasikan hasil pada tingkat mahasiswa, mata kuliah, angkatan, dan program. Hasil dibandingkan dengan target yang ditetapkan program studi dan ditindaklanjuti melalui rapat evaluasi.</p>
+<h1 class="chapter-title" id="bab-vii-implementasi-penjaminan-mutu-dan-evaluasi">BAB VII IMPLEMENTASI, PENJAMINAN MUTU, DAN EVALUASI</h1>
+<h2 id="tahapan-implementasi">7.1 Tahapan Implementasi</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 18%"/>
+<col style="width: 46%"/>
+<col style="width: 34%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Tahap</strong></th>
+<th><strong>Kegiatan Utama</strong></th>
+<th><strong>Luaran</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Persiapan</td>
+<td>Sosialisasi, pemutakhiran RPS, matriks CPL-CPMK, rubrik</td>
+<td>RPS dan perangkat asesmen</td>
+</tr>
+<tr class="even">
+<td>Pelaksanaan</td>
+<td>Pembelajaran, asesmen, moderasi, dokumentasi</td>
+<td>Bukti capaian mahasiswa</td>
+</tr>
+<tr class="odd">
+<td>Monitoring</td>
+<td>Analisis hasil mata kuliah dan umpan balik</td>
+<td>Laporan monitoring semester</td>
+</tr>
+<tr class="even">
+<td>Evaluasi tahunan</td>
+<td>Agregasi CPL, tracer, pengguna, PBM</td>
+<td>Laporan evaluasi kurikulum</td>
+</tr>
+<tr class="odd">
+<td>Tindak lanjut</td>
+<td>Perbaikan RPS, materi, asesmen, dan sumber daya</td>
+<td>Rencana perbaikan berkelanjutan</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="peran-pemangku-kepentingan">7.2 Peran Pemangku Kepentingan</h2>
+<ul>
+<li>Ketua program studi mengoordinasikan implementasi dan evaluasi CPL.</li>
+<li>Tim kurikulum menjaga konsistensi pemetaan dan instrumen asesmen.</li>
+<li>Dosen menyusun RPS, rubrik, dan bukti ketercapaian CPMK.</li>
+<li>Mahasiswa berpartisipasi aktif dalam pembelajaran, evaluasi, dan portofolio.</li>
+<li>Alumni dan pengguna memberikan umpan balik relevansi kompetensi.</li>
+<li>Unit penjaminan mutu melakukan audit dan memastikan tindak lanjut.</li>
+</ul>
+<h2 id="risiko-dan-mitigasi">7.3 Risiko dan Mitigasi</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 37%"/>
+<col style="width: 62%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Risiko</strong></th>
+<th><strong>Mitigasi</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>RPS belum konsisten</td>
+<td>Lokakarya dan telaah sejawat</td>
+</tr>
+<tr class="even">
+<td>Asesmen tidak menghasilkan bukti CPL</td>
+<td>Penetapan key assessment dan rubrik bersama</td>
+</tr>
+<tr class="odd">
+<td>Beban mahasiswa tidak seimbang</td>
+<td>Koordinasi tugas dan kalender asesmen</td>
+</tr>
+<tr class="even">
+<td>Kompetensi komputasi beragam</td>
+<td>Modul penguatan, tutorial, dan dukungan laboratorium</td>
+</tr>
+<tr class="odd">
+<td>Data evaluasi tidak lengkap</td>
+<td>Sistem dokumentasi terpusat dan penanggung jawab data</td>
+</tr>
+</tbody>
+</table></div>
+<h1 class="chapter-title" id="bab-viii-penutup-dan-rekomendasi">BAB VIII PENUTUP DAN REKOMENDASI</h1>
+<p>Perubahan Kurikulum 2020 menjadi Kurikulum OBE 2023 merupakan pembaruan substantif yang menata kembali keseluruhan arsitektur pendidikan Program Studi Magister Statistika Terapan. Perubahan menguatkan distingsi jenjang, relevansi keilmuan, integrasi komputasi, orientasi riset, dan akuntabilitas capaian.</p>
+<h2 id="rekomendasi">8.1 Rekomendasi</h2>
+<ol>
+<li>Menetapkan Kurikulum OBE 2023 sebagai pedoman akademik program studi.</li>
+<li>Memastikan seluruh RPS memuat pemetaan CPL-CPMK-asesmen dan rubrik.</li>
+<li>Melaksanakan pengukuran CPL setiap semester serta evaluasi komprehensif tahunan.</li>
+<li>Memperbarui bahan kajian dan perangkat lunak mengikuti perkembangan statistika dan sains data.</li>
+<li>Melibatkan pengguna, alumni, mahasiswa, mitra, dan asosiasi dalam tinjauan berkala.</li>
+<li>Mendokumentasikan setiap tindak lanjut sebagai bagian dari siklus peningkatan mutu.</li>
+</ol>
+<h1 class="chapter-title" id="daftar-pustaka-dan-dokumen-sumber">DAFTAR PUSTAKA DAN DOKUMEN SUMBER</h1>
+<p>Program Studi Magister Statistika Terapan FMIPA Universitas Padjadjaran. (2020). Pedoman Umum Penyelenggaraan Pendidikan Program Studi Magister Statistika Terapan Tahun Akademik 2020-2021.</p>
+<p>Program Studi Magister Statistika Terapan FMIPA Universitas Padjadjaran. (2023). Kurikulum 2023 Program Studi Magister Statistika Terapan.</p>
+<p>Dekan FMIPA Universitas Padjadjaran. (2023). Keputusan Nomor 014.a/UN6.D/Kep/FMIPA/2023 tentang Pemberlakuan Kurikulum Berbasis Capaian Pembelajaran pada Program Studi S-2 Statistika Terapan.</p>
+<p>Program Studi Magister Statistika Terapan FMIPA Universitas Padjadjaran. (2022). Tracer Study 2021/2022.</p>
+<p>Program Studi Magister Statistika Terapan FMIPA Universitas Padjadjaran. (2022). Laporan Kepuasan Pengguna Lulusan 2021/2022.</p>
+<p>Republik Indonesia. (2012). Undang-Undang Nomor 12 Tahun 2012 tentang Pendidikan Tinggi.</p>
+<p>Republik Indonesia. (2012). Peraturan Presiden Nomor 8 Tahun 2012 tentang Kerangka Kualifikasi Nasional Indonesia.</p>
+<p>Kementerian Pendidikan dan Kebudayaan Republik Indonesia. (2020). Peraturan Menteri Pendidikan dan Kebudayaan Nomor 3 Tahun 2020 tentang Standar Nasional Pendidikan Tinggi.</p>
+<h1 class="chapter-title" id="lampiran-1.-matriks-cpl-dan-bahan-kajian">LAMPIRAN 1. MATRIKS CPL DAN BAHAN KAJIAN</h1>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kode</strong></th>
+<th><strong>CPL1</strong></th>
+<th><strong>CPL2</strong></th>
+<th><strong>CPL3</strong></th>
+<th><strong>CPL4</strong></th>
+<th><strong>CPL5</strong></th>
+<th><strong>CPL6</strong></th>
+<th><strong>CPL7</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>BK1</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>BK2</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>BK3</td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>BK4</td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>BK5</td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>BK6</td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>BK7</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>BK8</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+</tbody>
+</table></div>
+<h1 class="chapter-title" id="lampiran-2.-pemetaan-mata-kuliah-terhadap-cpl">LAMPIRAN 2. PEMETAAN MATA KULIAH TERHADAP CPL</h1>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 9%"/>
+<col style="width: 9%"/>
+<col style="width: 9%"/>
+<col style="width: 9%"/>
+<col style="width: 9%"/>
+<col style="width: 9%"/>
+<col style="width: 9%"/>
+<col style="width: 9%"/>
+<col style="width: 9%"/>
+<col style="width: 9%"/>
+<col style="width: 9%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>No</strong></th>
+<th><strong>Kode MK</strong></th>
+<th><strong>Mata Kuliah</strong></th>
+<th><strong>SKS</strong></th>
+<th><strong>CPL1</strong></th>
+<th><strong>CPL2</strong></th>
+<th><strong>CPL3</strong></th>
+<th><strong>CPL4</strong></th>
+<th><strong>CPL5</strong></th>
+<th><strong>CPL6</strong></th>
+<th><strong>CPL7</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>D20B.101</td>
+<td>Statistik Inferential</td>
+<td>3 (3-0)</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>D20B.102</td>
+<td>Analisis Data Multivariat Tingkat Lanjut</td>
+<td>3 (2-1)</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>D20B.103</td>
+<td>Analisis Regresi Tingkat Lanjut</td>
+<td>3 (2-1)</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>D20B.104</td>
+<td>Proses Stokastik Tingkat Lanjut</td>
+<td>3 (3-0)</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>D20B.105</td>
+<td>Komputasi Statistik dan Optimasi</td>
+<td>3 (1-2)</td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>D20B.107</td>
+<td>Analisis Data Deret Waktu Tingkat Lanjut</td>
+<td>3 (2-1)</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>D20B.206</td>
+<td>Structural Equation Modeling</td>
+<td>3 (2-1)</td>
+<td></td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>D20B.207</td>
+<td>Teori Antrian</td>
+<td>3 (2-1)</td>
+<td></td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>D20B.208</td>
+<td>Sampling Survey</td>
+<td>3 (2-1)</td>
+<td></td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>D20B.209</td>
+<td>Analisis Data Kategori Tingkat Lanjut</td>
+<td>3 (2-1)</td>
+<td></td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>D20B.210</td>
+<td>Statistika Non Parametrik dan Flexible Modeling</td>
+<td>3 (2-1)</td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>D20B.211</td>
+<td>Desain Eksperimen</td>
+<td>3 (2-1)</td>
+<td></td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>D20B.212</td>
+<td>Matematika Keuangan</td>
+<td>3 (2-1)</td>
+<td></td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>D20B.214</td>
+<td>Epidemiologi</td>
+<td>3 (2-1)</td>
+<td></td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>D20B.217</td>
+<td>Matematika Aktuaria 1</td>
+<td>3 (2-1)</td>
+<td></td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>D20B.218</td>
+<td>Matematika Aktuaria 2</td>
+<td>3 (2-1)</td>
+<td></td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>17</td>
+<td>D20B.219</td>
+<td>Survival Analysis</td>
+<td>3 (2-1)</td>
+<td></td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>18</td>
+<td>D20B.220</td>
+<td>Data Mining and Artificial Intelligence</td>
+<td>3 (2-1)</td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>19</td>
+<td>D20B.221</td>
+<td>Teori Risiko</td>
+<td>3 (2-1)</td>
+<td></td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>20</td>
+<td>D20B.222</td>
+<td>Analisis Data Spasial Tingkat Lanjut</td>
+<td>3 (2-1)</td>
+<td></td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>21</td>
+<td>D20B.223</td>
+<td>Machine Learning</td>
+<td>3 (2-1)</td>
+<td></td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>22</td>
+<td>D20B.224</td>
+<td>Image Processing</td>
+<td>3 (2-1)</td>
+<td></td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>23</td>
+<td>D20B.225</td>
+<td>Text Analytics</td>
+<td>3 (2-1)</td>
+<td></td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>24</td>
+<td>D20B.226</td>
+<td>Database</td>
+<td>3 (2-1)</td>
+<td></td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>25</td>
+<td>D20B.321</td>
+<td>Seminar Usulan Riset</td>
+<td>3 (2-1)</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr class="even">
+<td>26</td>
+<td>D20B.322</td>
+<td>Tesis</td>
+<td>9 (3-6)</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+</tbody>
+</table></div>
+<h1 class="chapter-title" id="lampiran-3.-rencana-tindak-lanjut-implementasi">LAMPIRAN 3. RENCANA TINDAK LANJUT IMPLEMENTASI</h1>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 20%"/>
+<col style="width: 20%"/>
+<col style="width: 20%"/>
+<col style="width: 20%"/>
+<col style="width: 20%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>No.</strong></th>
+<th><strong>Kegiatan</strong></th>
+<th><strong>Penanggung Jawab</strong></th>
+<th><strong>Waktu</strong></th>
+<th><strong>Indikator</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Finalisasi RPS OBE</td>
+<td>KPS dan koordinator mata kuliah</td>
+<td>Sebelum semester berjalan</td>
+<td>Seluruh RPS tersedia</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Sosialisasi kurikulum</td>
+<td>Program studi</td>
+<td>Awal semester</td>
+<td>Dosen dan mahasiswa memahami struktur</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Pengumpulan bukti CPL</td>
+<td>Dosen pengampu</td>
+<td>Setiap semester</td>
+<td>Data key assessment lengkap</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Evaluasi ketercapaian CPL</td>
+<td>Tim kurikulum</td>
+<td>Akhir semester/tahun</td>
+<td>Laporan dan rekomendasi</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Tinjauan stakeholder</td>
+<td>Program studi</td>
+<td>Secara berkala</td>
+<td>Masukan terdokumentasi dan ditindaklanjuti</td>
+</tr>
+</tbody>
+</table></div>
+<div class="note"><strong>Catatan:</strong> PDF resmi tersedia melalui tombol <em>Buka PDF</em> pada bagian atas halaman.</div></article>
+</main></div>
+<a class="back-top" href="#top" aria-label="Kembali ke atas">↑</a>
+<footer>Program Studi Magister Statistika Terapan · FMIPA Universitas Padjadjaran · Juni 2023</footer>
+<script>
+const shell=document.querySelector('.toc-shell');const toggle=document.querySelector('.toc-toggle');toggle?.addEventListener('click',()=>{const open=shell.classList.toggle('open');toggle.textContent=open?'Tutup':'Buka';toggle.setAttribute('aria-expanded',open)});
+const links=[...document.querySelectorAll('#TOC a[href^="#"]')];const targets=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);if('IntersectionObserver'in window){const obs=new IntersectionObserver(entries=>{entries.filter(e=>e.isIntersecting).forEach(e=>{links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))})},{rootMargin:'-18% 0px -72% 0px'});targets.forEach(t=>obs.observe(t));}
+</script>
+</body></html>
