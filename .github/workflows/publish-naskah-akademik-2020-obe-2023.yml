@@ -1,0 +1,60 @@
+name: Publish Naskah Akademik 2020 ke OBE 2023
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .publish/naskah-akademik-2020-obe-2023.trigger
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build HTML and PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          TARGET_DIR="dokumen-kurikulum"
+          BASE_NAME="Naskah_Akademik_Perubahan_Kurikulum_2020_menjadi_OBE_2023"
+          STAGED_HTML=".publish/naskah-akademik-2020-obe-2023/html/part-000"
+
+          test -s "$STAGED_HTML"
+          mkdir -p "$TARGET_DIR"
+          cp "$STAGED_HTML" "$TARGET_DIR/$BASE_NAME.html"
+
+          CHROME="$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || command -v chromium-browser || true)"
+          test -n "$CHROME"
+
+          "$CHROME" \
+            --headless \
+            --no-sandbox \
+            --disable-gpu \
+            --disable-dev-shm-usage \
+            --no-pdf-header-footer \
+            --print-to-pdf="$PWD/$TARGET_DIR/$BASE_NAME.pdf" \
+            "file://$PWD/$TARGET_DIR/$BASE_NAME.html"
+
+          test -s "$TARGET_DIR/$BASE_NAME.html"
+          test -s "$TARGET_DIR/$BASE_NAME.pdf"
+          rm -rf .publish/naskah-akademik-2020-obe-2023/html
+
+      - name: Commit published files
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Tidak ada perubahan untuk dikomit."
+            exit 0
+          fi
+          git commit -m "Publikasikan HTML dan PDF naskah akademik 2020 ke OBE 2023"
+          git push
