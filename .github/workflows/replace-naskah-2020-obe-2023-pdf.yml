@@ -1,0 +1,42 @@
+name: Replace Naskah Akademik 2020 to OBE 2023 PDF
+
+on:
+  push:
+    paths:
+      - ".upload/naskah-2020-obe-2023-replacement/READY"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  replace:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Assemble and validate replacement PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          TARGET="dokumen-kurikulum/Naskah_Akademik_Perubahan_Kurikulum_2020_menjadi_OBE_2023.pdf"
+          TMP="${TARGET}.new"
+          cat .upload/naskah-2020-obe-2023-replacement/part* | base64 --decode | gzip --decompress > "$TMP"
+          echo "9c601eebf493bacfcd2a6faf1258877b9a21f4897080a542b017f457892a68e7  $TMP" | sha256sum --check
+          test "$(head -c 5 "$TMP")" = "%PDF-"
+          test "$(stat -c%s "$TMP")" -eq 671673
+          mv "$TMP" "$TARGET"
+          rm -rf .upload/naskah-2020-obe-2023-replacement
+          rm -f .github/workflows/replace-naskah-2020-obe-2023-pdf.yml
+
+      - name: Commit replacement PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Gunakan PDF unggahan terbaru untuk Naskah Akademik 2020 ke OBE 2023" || exit 0
+          git push
