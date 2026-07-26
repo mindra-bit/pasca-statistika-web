@@ -280,6 +280,7 @@ let serverApiReady = false;
 const COMMENT_INTEGRATION = {
   giscus: {
     repo: "mindra-bit/pasca-statistika-web",
+    organizationRepo: "statistika-unpad/pasca-statistika-web",
     repoId: "R_kgDOS0LQzg",
     category: "General",
     categoryId: "DIC_kwDOS0LQzs4C_B4p"
@@ -2308,12 +2309,15 @@ async function updateGoatCounterTotal() {
 function mountCommentIntegration() {
   const mount = document.getElementById("commentsMount");
   const config = COMMENT_INTEGRATION.giscus;
-  if (!mount || !config.repo || !config.repoId || !config.category || !config.categoryId) return;
+  const repo = window.location.hostname === "statistika-unpad.github.io"
+    ? config.organizationRepo
+    : config.repo;
+  if (!mount || !repo || !config.repoId || !config.category || !config.categoryId) return;
 
   mount.innerHTML = "";
   const script = document.createElement("script");
   script.src = "https://giscus.app/client.js";
-  script.dataset.repo = config.repo;
+  script.dataset.repo = repo;
   script.dataset.repoId = config.repoId;
   script.dataset.category = config.category;
   script.dataset.categoryId = config.categoryId;
