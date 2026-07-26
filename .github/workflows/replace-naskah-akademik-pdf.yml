@@ -3,6 +3,7 @@ name: Replace Naskah Akademik DOCX with PDF
 on:
   push:
     paths:
+      - ".upload/pdf-replace/**"
       - ".github/workflows/replace-naskah-akademik-pdf.yml"
   workflow_dispatch:
 
@@ -42,7 +43,7 @@ jobs:
           test "$(stat -c%s "$PDF")" -gt 100000
 
           rm -f "$DOCX"
-          rm -rf .upload/naskah-pdf
+          rm -rf .upload/naskah-pdf .upload/pdf-replace
 
       - name: Commit PDF replacement
         run: |
