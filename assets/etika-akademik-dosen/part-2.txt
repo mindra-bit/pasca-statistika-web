@@ -1,0 +1,93 @@
+#sh)"/><text x="450" y="48" fill="white" text-anchor="middle" font-size="20" font-family="Arial" font-weight="700">KEPERCAYAAN AKADEMIK</text><text x="450" y="70" fill="#f3c969" text-anchor="middle" font-size="13" font-family="Arial">Mutu • Keselamatan • Reputasi</text>
+<path d="M450 88 V128" stroke="#7a91a5" stroke-width="3"/>
+<g font-family="Arial" text-anchor="middle" filter="url(#sh)">
+<rect x="35" y="130" width="190" height="105" rx="14" fill="#eef7f5" stroke="#17745b"/><text x="130" y="164" fill="#17745b" font-size="17" font-weight="700">KODE ETIK</text><text x="130" y="190" fill="#334b5d" font-size="12">Perilaku profesional</text><text x="130" y="210" fill="#334b5d" font-size="12">dan relasi akademik</text>
+<rect x="250" y="130" width="190" height="105" rx="14" fill="#eef3f8" stroke="#0f3f68"/><text x="345" y="164" fill="#0f3f68" font-size="17" font-weight="700">INTEGRITAS ILMIAH</text><text x="345" y="190" fill="#334b5d" font-size="12">Data, publikasi,</text><text x="345" y="210" fill="#334b5d" font-size="12">kepengarangan</text>
+<rect x="465" y="130" width="190" height="105" rx="14" fill="#fff6e5" stroke="#e3a329"/><text x="560" y="164" fill="#8a5d00" font-size="17" font-weight="700">PERLINDUNGAN</text><text x="560" y="190" fill="#334b5d" font-size="12">Anti-kekerasan,</text><text x="560" y="210" fill="#334b5d" font-size="12">anti-perundungan</text>
+<rect x="680" y="130" width="185" height="105" rx="14" fill="#fff0f0" stroke="#9b2c2c"/><text x="772" y="164" fill="#9b2c2c" font-size="17" font-weight="700">DISIPLIN</text><text x="772" y="190" fill="#334b5d" font-size="12">Kewajiban, larangan,</text><text x="772" y="210" fill="#334b5d" font-size="12">dan sanksi pegawai</text>
+</g>
+<path d="M130 235 V285 H772 V235" fill="none" stroke="#7a91a5" stroke-width="2"/><path d="M345 235 V285 M560 235 V285" stroke="#7a91a5" stroke-width="2"/>
+<rect x="245" y="285" width="410" height="72" rx="16" fill="#fff" stroke="#97a9b7" stroke-width="2"/><text x="450" y="315" text-anchor="middle" font-size="18" font-family="Arial" font-weight="700" fill="#082b4c">TRIASE, KOORDINASI, DAN DUE PROCESS</text><text x="450" y="340" text-anchor="middle" font-size="12" font-family="Arial" fill="#536676">Kanal laporan • pemeriksaan objektif • perlindungan • pemulihan</text>
+</svg>
+<figcaption>Gambar 1. Arsitektur terpadu etika akademik dosen: empat rezim norma dengan satu kebutuhan koordinasi proses.</figcaption>
+</div>
+</section>
+
+<section class="page" id="bab1">
+<span class="kicker">BAB I</span><h2>Pendahuluan</h2>
+<h3>1.1 Latar Belakang</h3>
+<p>Perguruan tinggi adalah komunitas ilmiah yang bekerja berdasarkan kepercayaan. Mahasiswa mempercayakan proses belajarnya kepada dosen; masyarakat mempercayai kebenaran relatif hasil penelitian; mitra mempercayai objektivitas keahlian akademik; dan negara memberikan ruang kebebasan akademik agar ilmu pengetahuan berkembang secara bertanggung jawab. Ketika integritas, keadilan, atau keselamatan gagal dijaga, kerusakan yang timbul tidak berhenti pada individu, tetapi dapat memengaruhi legitimasi institusi dan kredibilitas ilmu pengetahuan.</p>
+<p>Undang-Undang Nomor 12 Tahun 2012 menempatkan kebebasan akademik, kebebasan mimbar akademik, dan otonomi keilmuan sebagai unsur penting pendidikan tinggi. Kebebasan tersebut merupakan tanggung jawab pribadi sivitas akademika dan harus dijalankan secara bertanggung jawab melalui Tridharma.<sup class="ref"><a href="#r7">7</a></sup> Konsekuensinya, etika tidak boleh diposisikan sebagai pembatas kebebasan ilmiah, melainkan sebagai syarat legitimasi kebebasan tersebut.</p>
+<p>Perubahan praktik akademik menambah kompleksitas risiko. Kolaborasi riset yang melibatkan banyak pihak menimbulkan persoalan pembagian kontribusi dan kepengarangan. Data digital meningkatkan risiko pelanggaran privasi dan manipulasi. AI generatif mempermudah eksplorasi ide dan penulisan, tetapi juga menimbulkan risiko bias, halusinasi, ketidakjelasan sumber, pelanggaran kerahasiaan, dan kaburnya akuntabilitas. Di sisi lain, relasi dosen–mahasiswa yang secara struktural tidak setara dapat melahirkan penyalahgunaan kewenangan, eksploitasi kerja akademik, intimidasi, diskriminasi, atau kekerasan.</p>
+<p>Unpad telah merespons tantangan tersebut melalui serangkaian peraturan. Peraturan Senat Akademik Nomor 1 Tahun 2023 mengikat dosen secara individual dalam penyelenggaraan kegiatan akademik dan memuat etika penelitian, publikasi, serta penggunaan AI secara bertanggung jawab.<sup class="ref"><a href="#r1">1</a></sup> Peraturan Rektor Nomor 14 Tahun 2024 menerjemahkan norma kode etik ke dalam pedoman yang lebih operasional.<sup class="ref"><a href="#r2">2</a></sup> Peraturan Rektor Nomor 32 Tahun 2024 membangun sistem pencegahan, pembinaan, pemeriksaan, dan sanksi atas pelanggaran integritas karya ilmiah.<sup class="ref"><a href="#r3">3</a></sup> Peraturan Rektor Nomor 39 Tahun 2025 mengatur pencegahan dan penanganan berbagai bentuk kekerasan dengan Satgas PPK sebagai organ khusus.<sup class="ref"><a href="#r5">5</a></sup> Sementara itu, Peraturan Rektor Nomor 31 Tahun 2025 menyediakan kerangka penegakan disiplin dosen dan tenaga kependidikan.<sup class="ref"><a href="#r4">4</a></sup></p>
+<div class="callout"><strong>Kebutuhan kebijakan.</strong> Kelengkapan regulasi perlu ditopang oleh konsistensi implementasi, kejelasan batas kewenangan, koordinasi perkara yang beririsan, serta instrumen pencegahan yang mudah digunakan pada tingkat program studi, departemen, fakultas, dan universitas.</div>
+<h3>1.2 Identifikasi Masalah</h3>
+<ol>
+<li>Bagaimana membangun konsepsi etika akademik dosen yang mengintegrasikan kebebasan akademik, profesionalisme, integritas ilmiah, relasi kuasa, keselamatan, dan disiplin?</li>
+<li>Bagaimana hubungan, persinggungan, dan pembagian kewenangan antara regulasi kode etik, integritas karya ilmiah, penanganan kekerasan, serta disiplin kepegawaian?</li>
+<li>Apa kesenjangan implementasi yang berpotensi muncul pada tingkat unit akademik?</li>
+<li>Instrumen apa yang diperlukan agar pencegahan, pelaporan, pemeriksaan, sanksi, dan pemulihan dapat dilaksanakan secara adil, konsisten, dan terukur?</li>
+</ol>
+<h3>1.3 Tujuan dan Kegunaan</h3>
+<p>Naskah ini bertujuan menyusun landasan akademik bagi penguatan implementasi etika dosen di Unpad. Kegunaannya adalah: (a) menjadi bahan harmonisasi SOP dan pedoman unit; (b) membantu sosialisasi kepada dosen dan pengelola; (c) menjadi dasar penyusunan instrumen pencegahan; (d) membantu triase laporan; serta (e) menyediakan kerangka monitoring dan evaluasi.</p>
+<h3>1.4 Metode Penyusunan</h3>
+<p>Penyusunan menggunakan pendekatan yuridis-normatif dengan menelaah hierarki dan substansi peraturan; pendekatan konseptual melalui kajian integritas akademik, etika profesi, dan relasi kuasa; serta pendekatan tata kelola risiko dengan memetakan sumber risiko, kontrol pencegahan, mekanisme respons, dan indikator hasil. Sumber primer adalah dokumen resmi JDIH Unpad dan basis peraturan pemerintah. Analisis bersifat sintesis dan tidak menggantikan interpretasi resmi organ yang berwenang.</p>
+</section>
+
+<section class="page" id="bab2">
+<span class="kicker">BAB II</span><h2>Kajian Teoretis dan Praktik Empiris</h2>
+<h3>2.1 Etika Akademik sebagai Infrastruktur Kepercayaan</h3>
+<p>Etika akademik dapat dipahami sebagai sistem nilai, kewajiban, prosedur, dan kebiasaan institusional yang memastikan kegiatan akademik berlangsung jujur, adil, bertanggung jawab, aman, dan dapat dipertanggungjawabkan. Konsep ini lebih luas daripada integritas publikasi. Ia mencakup cara dosen mengajar, menilai, membimbing, mengelola data, berkolaborasi, menggunakan sumber daya, menjalankan jabatan, serta memperlakukan mahasiswa dan kolega.</p>
+<p>Secara teoretis, etika akademik memiliki empat fungsi. Pertama, fungsi <strong>epistemik</strong>, yakni menjaga reliabilitas pengetahuan. Kedua, fungsi <strong>pedagogik</strong>, yakni menjamin proses belajar yang adil dan mendidik. Ketiga, fungsi <strong>relasional</strong>, yakni mencegah eksploitasi dalam relasi yang tidak setara. Keempat, fungsi <strong>institusional</strong>, yakni menjaga legitimasi dan kepercayaan publik.</p>
+<h3>2.2 Prinsip Dasar</h3>
+<div class="grid-2">
+<div class="card"><h4>Kejujuran dan keterlacakan</h4><p>Data, metode, sumber, kontribusi, keterbatasan, serta penggunaan alat bantu harus disampaikan secara benar dan dapat ditelusuri.</p></div>
+<div class="card"><h4>Keadilan dan non-diskriminasi</h4><p>Penilaian, akses kesempatan, pembagian beban, dan pengakuan kontribusi harus berdasarkan kriteria akademik yang relevan.</p></div>
+<div class="card"><h4>Tanggung jawab dan akuntabilitas</h4><p>Dosen tetap bertanggung jawab atas keputusan dan keluaran akademik, termasuk ketika menggunakan AI, asisten, atau pihak ketiga.</p></div>
+<div class="card"><h4>Kepedulian dan tidak merugikan</h4><p>Kegiatan akademik harus mencegah bahaya, eksploitasi, pelanggaran privasi, tekanan yang tidak wajar, dan kerugian terhadap subjek atau mahasiswa.</p></div>
+<div class="card"><h4>Otonomi dan persetujuan</h4><p>Partisipasi penelitian, pemanfaatan data, dan kontribusi karya perlu menghormati keputusan individu dan persetujuan yang bebas dari tekanan.</p></div>
+<div class="card"><h4>Keberanian etis</h4><p>Warga akademik perlu berani mengungkap kekeliruan, konflik kepentingan, dan pelanggaran melalui jalur yang aman dan bertanggung jawab.</p></div>
+</div>
+<h3>2.3 Kebebasan Akademik yang Bertanggung Jawab</h3>
+<p>Kebebasan akademik melindungi eksplorasi ilmiah, kritik, perbedaan pandangan, dan pengembangan pengetahuan. Namun, perlindungan tersebut tidak mencakup fabrikasi, manipulasi, diskriminasi, intimidasi, atau penyalahgunaan kewenangan. Pembedaan ini penting agar penegakan etika tidak berubah menjadi sensor akademik, dan agar klaim kebebasan akademik tidak dipakai untuk menormalisasi perilaku yang merugikan.</p>
+<h3>2.4 Relasi Kuasa Dosen–Mahasiswa</h3>
+<p>Dosen memiliki kewenangan formal atas penilaian, rekomendasi, akses data, peluang riset, publikasi, dan kelulusan. Ketimpangan tersebut bukan pelanggaran pada dirinya sendiri, tetapi menciptakan kewajiban kehati-hatian yang lebih tinggi. Persetujuan mahasiswa dapat kehilangan sifat sukarela ketika diberikan di bawah ancaman nilai, kelulusan, akses proyek, atau rekomendasi. Karena itu, pedoman etika perlu menilai bukan hanya tindakan eksplisit, tetapi juga konteks relasi kuasa dan kemungkinan pembalasan.</p>
+<h3>2.5 Integritas Penelitian dan Publikasi</h3>
+<p>Integritas penelitian mencakup keseluruhan siklus pengetahuan: perumusan masalah, desain, etik penelitian, pengumpulan data, analisis, penyimpanan, pelaporan, publikasi, dan koreksi. Peraturan Unpad mengidentifikasi fabrikasi, falsifikasi, plagiat, kepengarangan tidak sah, konflik kepentingan, dan pengajuan jamak sebagai jenis pelanggaran utama.<sup class="ref"><a href="#r3">3</a></sup> Dari sudut tata kelola, pencegahan perlu dilakukan sebelum manuskrip dikirim, misalnya melalui rencana pengelolaan data, log analisis, kesepakatan penulis, dan pemeriksaan reproduksibilitas.</p>
+<h3>2.6 Kecerdasan Artifisial dalam Kegiatan Akademik</h3>
+<p>Peraturan Senat Akademik Nomor 1 Tahun 2023 telah memasukkan prinsip penggunaan AI secara bertanggung jawab. Substansinya menekankan perhatian terhadap bias dan informasi keliru, penjelasan proses pengambilan kesimpulan, keterbatasan reproduksibilitas dan validasi, serta akuntabilitas atas dampak penggunaan AI.<sup class="ref"><a href="#r1">1</a></sup> Dalam implementasi, prinsip tersebut dapat diterjemahkan ke dalam empat kontrol:</p>
+<ol>
+<li><strong>Transparansi:</strong> mengungkap jenis dan fungsi AI ketika kontribusinya material.</li>
+<li><strong>Validasi:</strong> memeriksa fakta, sitasi, rumus, kode, dan interpretasi secara independen.</li>
+<li><strong>Perlindungan data:</strong> tidak memasukkan data rahasia, data pribadi, naskah review, atau dokumen institusi ke sistem yang tidak disetujui.</li>
+<li><strong>Akuntabilitas manusia:</strong> dosen/penulis tetap menjadi pihak yang bertanggung jawab dan AI tidak dapat diposisikan sebagai pengarang yang memikul tanggung jawab.</li>
+</ol>
+<div class="callout warning"><strong>Prinsip praktis:</strong> AI boleh mempercepat pekerjaan akademik, tetapi tidak boleh menghapus jejak pertanggungjawaban. “Dibuat oleh mesin” bukan pembelaan akademik.</div>
+<h3>2.7 Praktik Pencegahan yang Baik</h3>
+<p>Praktik institusional yang efektif umumnya menggabungkan pendidikan, desain proses, dan penegakan. Pendidikan tanpa sistem dapat menjadi seremonial; penegakan tanpa pendidikan dapat terasa represif; sedangkan teknologi deteksi tanpa penilaian manusia dapat menghasilkan keputusan yang keliru. Oleh karena itu, desain kebijakan perlu berorientasi pada <em>prevention by design</em>: membuat perilaku yang benar menjadi mudah, terdokumentasi, dan dapat diaudit.</p>
+</section>
+
+<section class="page" id="bab3">
+<span class="kicker">BAB III</span><h2>Evaluasi dan Analisis Peraturan Terkait</h2>
+<h3>3.1 Peta Regulasi</h3>
+<div class="table-wrap"><table>
+<thead><tr><th>Instrumen</th><th>Fungsi Utama</th><th>Subjek/Ruang Lingkup</th><th>Implikasi Implementasi</th></tr></thead>
+<tbody>
+<tr><td>UU 12/2012 tentang Pendidikan Tinggi</td><td>Landasan kebebasan akademik, Tridharma, dan budaya akademik.</td><td>Sivitas akademika dan penyelenggara perguruan tinggi.</td><td>Etika harus menjaga kebebasan akademik sekaligus tanggung jawab pribadi.</td></tr>
+<tr><td>UU 14/2005 tentang Guru dan Dosen</td><td>Profesionalitas, tugas, hak, dan kewajiban dosen.</td><td>Dosen sebagai pendidik profesional dan ilmuwan.</td><td>Kode etik berhubungan langsung dengan standar profesi dan keteladanan.</td></tr>
+<tr><td>Permendikbudristek 39/2021</td><td>Standar nasional integritas akademik karya ilmiah.</td><td>Mahasiswa, dosen, pimpinan perguruan tinggi.</td><td>Perguruan tinggi wajib memiliki pengaturan dan proses penegakan internal.</td></tr>
+<tr><td>Permendikbudristek 55/2024</td><td>Pencegahan dan penanganan kekerasan di perguruan tinggi.</td><td>Warga kampus, pimpinan, dan mitra.</td><td>Kasus kekerasan memerlukan jalur khusus yang berorientasi pada perlindungan korban.</td></tr>
+<tr><td>PP 94/2021</td><td>Kewajiban, larangan, hukuman, dan upaya administratif PNS.</td><td>Dosen yang berstatus PNS.</td><td>Pelanggaran etik tertentu dapat sekaligus menjadi pelanggaran disiplin.</td></tr>
+<tr><td>Peraturan MWA Unpad 2/2020</td><td>Payung kode etik Universitas Padjadjaran.</td><td>Warga dan penyelenggara kegiatan Unpad.</td><td>Menjadi kerangka nilai umum bagi peraturan yang lebih spesifik.</td></tr>
+<tr><td>Peraturan SA Unpad 1/2023</td><td>Norma inti kode etik dosen.</td><td>Seluruh dosen Unpad dalam kegiatan akademik.</td><td>Mengatur nilai, etika penelitian/publikasi, AI, pelaporan, sanksi, dan pemulihan nama baik.</td></tr>
+<tr><td>Peraturan Rektor Unpad 14/2024</td><td>Pedoman operasional kode etik dosen.</td><td>Hak, kewajiban, dan perilaku dosen.</td><td>Menjadi acuan konkret pengajaran, riset, relasi profesional, dan konflik kepentingan.</td></tr>
+<tr><td>Peraturan Rektor Unpad 32/2024</td><td>Integritas akademik dalam karya ilmiah.</td><td>Dosen dan mahasiswa.</td><td>Mewajibkan pencegahan berkala, proses pemeriksaan, dan sanksi berdasarkan tingkat pelanggaran.</td></tr>
+<tr><td>Peraturan Rektor Unpad 31/2025</td><td>Penegakan disiplin dosen dan tenaga kependidikan.</td><td>Dosen PNS dan non-PNS serta tenaga kependidikan sesuai cakupan peraturan.</td><td>Menyediakan mekanisme kepegawaian bagi pelanggaran kewajiban/larangan.</td></tr>
+<tr><td>Peraturan Rektor Unpad 39/2025</td><td>Pencegahan dan penanganan kekerasan.</td><td>Mahasiswa, dosen, tenaga kependidikan, warga kampus, dan pihak terkait.</td><td>Menetapkan bentuk kekerasan, Satgas PPK, pemeriksaan, perlindungan, pemulihan, dan tindak lanjut.</td></tr>
+</tbody></table></div>
+<h3>3.2 Analisis Peraturan Senat Akademik Nomor 1 Tahun 2023</h3>
+<p>Peraturan ini merupakan norma utama yang secara khusus mengikat dosen dalam kegiatan akademik. Ia menggantikan peraturan tahun 2017 dan memperluas relevansi kode etik terhadap perkembangan teknologi dan sosial. Regulasi mengatur pelaporan melalui Dekan atau Rektor, penanganan oleh komisi etik pada Senat Fakultas atau Senat Akademik, sanksi berdasarkan rekomendasi senat, mekanisme keberatan, serta pemulihan nama baik apabila dugaan tidak terbukti.<sup class="ref"><a href="#r1">1</a></sup></p>
+<p>Kekuatan utama peraturan ini adalah keterhubungan antara norma substansi dan <em>due process</em>. Pedoman penyelesaian kasus menekankan praduga tidak bersalah, kerahasiaan identitas pengadu, kesempatan pembelaan lisan dan tertulis, analisis bukti objektif, serta dokumentasi proses. Norma ini penting untuk mencegah dua ekstrem: pembiaran pelanggaran dan penghukuman berdasarkan rumor.</p>
+<h3>3.3 Analisis Peraturan Rektor Nomor 14 Tahun 2024</h3>
+<p>Pedoman ini mengoperasionalkan kode etik dosen dengan menempatkan dosen sebagai teladan, pendidik, peneliti, pembimbing, kolega, dan pejabat akademik. Materinya mencakup hak untuk mengembangkan keilmuan, kewajiban menjunjung kejujuran intelektual, larangan menerbitkan informasi rahasia, kewajiban melakukan penelitian sesuai etika, dan penghindaran berbagai bentuk pelanggaran publikasi.<sup class="ref"><a href="#r2">2</a></sup></p>
+<p>Secara implementatif, pedoman perlu diterjemahkan ke dalam daftar periksa yang dapat digunakan sebelum pengambilan keputusan. Misalnya: apakah terdapat konflik kepentingan; apakah penilaian menggunakan kriteria yang telah diumumkan; apakah kontribusi mahasiswa telah diakui; apakah data pribadi terlindungi; 
