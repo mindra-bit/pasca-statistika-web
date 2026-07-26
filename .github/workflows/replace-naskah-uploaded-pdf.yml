@@ -1,0 +1,42 @@
+name: Replace Uploaded Naskah Akademik PDF
+
+on:
+  push:
+    paths:
+      - ".upload/naskah-replacement/READY"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  replace:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Assemble and validate replacement PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          TARGET="dokumen-kurikulum/Naskah_Akademik_Perubahan_Kurikulum_OBE_2023_menjadi_OBE_2025.pdf"
+          TMP="${TARGET}.new"
+          cat .upload/naskah-replacement/part* | base64 --decode | gzip --decompress > "$TMP"
+          echo "d219f2c91aa790b7389dee2fd5c4db169cd1560ff3deb68100dd8d26cc2fefe5  $TMP" | sha256sum --check
+          test "$(head -c 5 "$TMP")" = "%PDF-"
+          test "$(stat -c%s "$TMP")" -eq 865256
+          mv "$TMP" "$TARGET"
+          rm -rf .upload/naskah-replacement
+          rm -f .github/workflows/replace-naskah-uploaded-pdf.yml
+
+      - name: Commit replacement PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Ganti PDF Naskah Akademik dengan versi terbaru" || exit 0
+          git push
