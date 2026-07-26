@@ -1,6 +1,6 @@
 (()=>{
   const MAP_QUERY='Departemen Statistika FMIPA Universitas Padjadjaran';
-  const PHOTO='assets/visit-us-building.svg?v=20260726-photo-final';
+  const PHOTO='assets/departemen-statistika-fmipa-unpad.jpg?v=20260726-jpg-final';
   const mapUrl='https://www.google.com/maps?q='+encodeURIComponent(MAP_QUERY)+'&output=embed';
   const directionUrl='https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(MAP_QUERY);
 
@@ -44,7 +44,7 @@
   section.innerHTML=`<div class="vu-wrap">
     <header class="vu-head"><p class="vu-kicker" data-vu="kicker"></p><h2 data-vu="title"></h2><p class="vu-lead" data-vu="lead"></p></header>
     <div class="vu-main">
-      <article class="vu-card"><img class="vu-photo" src="${PHOTO}" alt="" loading="lazy" decoding="async"><div class="vu-info"><h3 data-vu="name"></h3><p class="vu-address"><strong data-vu="addressLabel"></strong><span data-vu="address"></span></p><div class="vu-actions"><a class="vu-btn vu-btn-primary" href="${directionUrl}" target="_blank" rel="noopener" data-vu="route"></a><a class="vu-btn vu-btn-secondary" href="https://statistics.unpad.ac.id" target="_blank" rel="noopener" data-vu="website"></a></div></div></article>
+      <article class="vu-card"><img class="vu-photo" src="${PHOTO}" alt="" loading="eager" decoding="async"><div class="vu-info"><h3 data-vu="name"></h3><p class="vu-address"><strong data-vu="addressLabel"></strong><span data-vu="address"></span></p><div class="vu-actions"><a class="vu-btn vu-btn-primary" href="${directionUrl}" target="_blank" rel="noopener" data-vu="route"></a><a class="vu-btn vu-btn-secondary" href="https://statistics.unpad.ac.id" target="_blank" rel="noopener" data-vu="website"></a></div></div></article>
       <div class="vu-map"><iframe src="${mapUrl}" title="Google Maps — Departemen Statistika FMIPA Unpad" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
     <div class="vu-mini"><article><h3 data-vu="accessTitle"></h3><p data-vu="accessText"></p></article><article><h3 data-vu="transportTitle"></h3><p data-vu="transportText"></p></article><article><h3 data-vu="academicTitle"></h3><p data-vu="academicText"></p></article></div>
