@@ -1,0 +1,53 @@
+name: Replace Naskah Akademik DOCX with PDF
+
+on:
+  push:
+    paths:
+      - ".github/workflows/replace-naskah-akademik-pdf.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  convert:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install document tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libreoffice-writer ghostscript fonts-liberation fonts-dejavu-core
+
+      - name: Convert DOCX to web PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          DOCX="dokumen-kurikulum/Naskah_Akademik_Perubahan_Kurikulum_OBE_2023_menjadi_OBE_2025.docx"
+          PDF="dokumen-kurikulum/Naskah_Akademik_Perubahan_Kurikulum_OBE_2023_menjadi_OBE_2025.pdf"
+          TMP="dokumen-kurikulum/Naskah_Akademik_Perubahan_Kurikulum_OBE_2023_menjadi_OBE_2025.optimized.pdf"
+
+          test -f "$DOCX"
+          libreoffice --headless --convert-to pdf --outdir dokumen-kurikulum "$DOCX"
+          test -f "$PDF"
+
+          gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dPDFSETTINGS=/ebook \
+            -dNOPAUSE -dQUIET -dBATCH -sOutputFile="$TMP" "$PDF"
+          mv "$TMP" "$PDF"
+
+          test "$(head -c 5 "$PDF")" = "%PDF-"
+          test "$(stat -c%s "$PDF")" -gt 100000
+
+          rm -f "$DOCX"
+          rm -rf .upload/naskah-pdf
+
+      - name: Commit PDF replacement
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Ganti DOCX Naskah Akademik dengan PDF" || exit 0
+          git push
