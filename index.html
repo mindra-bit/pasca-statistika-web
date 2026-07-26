@@ -5,14 +5,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Pasca Sarjana Statistika FMIPA UNPAD</title>
 <style>html,body{margin:0;min-height:100%;font-family:system-ui,sans-serif;background:#f7fafc}.loading{display:grid;min-height:100vh;place-items:center;color:#143d5d;font-weight:700}</style>
+<script src="assets/program-profile-enhancement.js?v=20260726"></script>
 </head>
 <body><div class="loading">Memuat portal akademik…</div>
 <script>
 (async()=>{
   try{
-    const response=await fetch('index-base.html?v=naskah-akademik-2020-obe-2023-20260726',{cache:'no-store'});
+    const response=await fetch('index-base.html?v=program-profile-health-ai-20260726',{cache:'no-store'});
     if(!response.ok) throw new Error('Gagal memuat halaman utama');
     let html=await response.text();
+    if(window.applyProgramProfileEnhancement) html=window.applyProgramProfileEnhancement(html);
 
     const guideMarker='<a class="curriculum-hub-card thesis-online-guide-hub-card" href="panduan-tesis-online.html" target="_blank" rel="noopener">';
     const existingCards='<a class="curriculum-hub-card pbm-2024-hub-card" href="dokumen-pbm-2024.html"><span>Dokumen PBM 2024</span><small>289 dokumen per semester dan mata kuliah dalam HTML</small></a><a class="curriculum-hub-card diskusi-tesis-hub-card" href="laporan-diskusi-tesis-ai.html" target="_blank" rel="noopener"><span>Diskusi Tesis</span><small>Laporan HTML, materi kegiatan, dan video dokumentasi tesis</small></a>';
@@ -67,7 +69,7 @@
       });
     <\/script>`;
     html=html.replace('</body>',enhancementScript+'</body>');
-    html=html.replace(/assets\/chatbot-fix\.js\?v=[^"']+/,'assets/chatbot-fix.js?v=naskah-akademik-2020-obe-2023-20260726');
+    html=html.replace(/assets\/chatbot-fix\.js\?v=[^"']+/,'assets/chatbot-fix.js?v=program-profile-health-ai-20260726');
     document.open();document.write(html);document.close();
   }catch(error){document.body.innerHTML='<main style="max-width:760px;margin:80px auto;padding:24px"><h1>Portal belum dapat dimuat</h1><p>'+error.message+'</p><p><a href="index-base.html">Buka halaman utama</a></p></main>'}
 })();
