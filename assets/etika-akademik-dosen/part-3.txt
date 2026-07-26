@@ -1,0 +1,128 @@
+dan apakah pekerjaan di luar institusi mengganggu tugas utama atau memerlukan izin.</p>
+<h3>3.4 Analisis Peraturan Rektor Nomor 32 Tahun 2024</h3>
+<p>Peraturan ini menyusun siklus penegakan integritas mulai dari pencegahan, pembinaan, penanggulangan, klasifikasi pelanggaran, kelembagaan, prosedur, hingga sanksi. Pimpinan unit kerja diwajibkan melakukan pencegahan kepada sivitas akademika setidaknya satu kali setiap semester. Nilai yang ditekankan meliputi kejujuran, kepercayaan, keadilan, kehormatan, tanggung jawab, dan keteguhan hati.<sup class="ref"><a href="#r3">3</a></sup></p>
+<p>Jenis pelanggaran meliputi fabrikasi, falsifikasi, plagiat, kepengarangan tidak sah, konflik kepentingan, dan pengajuan jamak. Tingkat pelanggaran dikategorikan ringan, sedang, atau berat sebagai dasar rekomendasi sanksi. Pemeriksaan dilakukan dengan prinsip keadilan, kejujuran, kecermatan, keseimbangan, dan transparansi.</p>
+<div class="callout danger"><strong>Catatan harmonisasi.</strong> Deteksi kemiripan bukan putusan plagiarisme. Persentase kemiripan harus dianalisis bersama konteks sumber, bentuk penggunaan, pengakuan sitasi, substansi, pola kesengajaan, dan dampaknya. Sistem otomatis adalah alat bantu bukti, bukan pengganti penilaian akademik.</div>
+<h3>3.5 Analisis Peraturan Rektor Nomor 39 Tahun 2025</h3>
+<p>Peraturan ini memperluas fokus dari kekerasan seksual menjadi berbagai bentuk kekerasan: fisik, psikis, perundungan, kekerasan seksual, diskriminasi dan intoleransi, kebijakan yang mengandung kekerasan, serta bentuk lainnya. Kekerasan dapat dilakukan secara fisik, verbal, nonverbal, maupun melalui teknologi informasi.<sup class="ref"><a href="#r5">5</a></sup></p>
+<p>Regulasi menempatkan Satgas PPK sebagai bagian universitas yang melaksanakan pencegahan dan penanganan. Prinsipnya meliputi nondiskriminasi, kepentingan terbaik bagi korban, keadilan dan kesetaraan gender, aksesibilitas disabilitas, akuntabilitas, independensi, kehati-hatian, konsistensi, jaminan ketidakberulangan, dan keberlanjutan pendidikan mahasiswa. Laporan ditindaklanjuti melalui penelaahan materi, identifikasi bentuk kekerasan, kronologi, bukti, dan kebutuhan perlindungan/pemulihan.</p>
+<h3>3.6 Analisis Peraturan Rektor Nomor 31 Tahun 2025</h3>
+<p>Peraturan disiplin mengharuskan dosen dan tenaga kependidikan menaati statuta, peraturan internal, dan peraturan perundang-undangan. Kewajiban mencakup pelaksanaan tugas dengan kejujuran dan tanggung jawab, keteladanan, penolakan pemberian yang berkaitan dengan tugas, dan pelaksanaan Tridharma. Larangannya mencakup penyalahgunaan wewenang, konflik kepentingan, pungutan, penerimaan hadiah terkait jabatan, plagiarisme, penyalahgunaan posisi dominan terhadap mahasiswa, permintaan imbalan dalam pembimbingan/penilaian, serta kekerasan seksual dan perundungan.<sup class="ref"><a href="#r4">4</a></sup></p>
+<p>Regulasi ini menunjukkan bahwa pelanggaran akademik dapat memiliki konsekuensi kepegawaian. Namun, proses etik dan proses disiplin memiliki tujuan, organ, dan standar prosedural yang berbeda. Koordinasi diperlukan agar bukti tidak diproses secara kontradiktif, hak para pihak tetap terlindungi, dan tidak terjadi duplikasi sanksi tanpa dasar yang jelas.</p>
+<h3>3.7 Persinggungan dan Potensi Kesenjangan</h3>
+<div class="table-wrap"><table><thead><tr><th>Isu</th><th>Risiko</th><th>Kebutuhan Penguatan</th></tr></thead><tbody>
+<tr><td>Multi-rezim perkara</td><td>Satu laporan diarahkan ke kanal yang keliru atau diproses berulang tanpa koordinasi.</td><td>Triase awal, protokol rujukan, dan penetapan <em>lead process</em>.</td></tr>
+<tr><td>Standar bukti</td><td>Keputusan hanya berdasar tangkapan layar, skor kemiripan, atau rumor.</td><td>Pedoman preservasi bukti, autentikasi, konteks, dan pendapat ahli.</td></tr>
+<tr><td>Konflik kepentingan pemeriksa</td><td>Ketidakpercayaan terhadap independensi proses.</td><td>Deklarasi konflik, mekanisme penggantian anggota, dan dokumentasi alasan.</td></tr>
+<tr><td>Kepengarangan mahasiswa</td><td>Kontribusi mahasiswa hilang, atau nama dicantumkan tanpa persetujuan.</td><td>Kesepakatan kontribusi sejak awal dan pembaruan berkala.</td></tr>
+<tr><td>AI generatif</td><td>Kesalahan fakta, sitasi fiktif, kebocoran data, dan kaburnya akuntabilitas.</td><td>Pedoman penggunaan, disclosure, validasi, dan daftar data yang dilarang diunggah.</td></tr>
+<tr><td>Pemulihan</td><td>Kasus selesai secara administratif tetapi dampak reputasi/akademik berlanjut.</td><td>Rencana pemulihan terukur dan evaluasi pascaputusan.</td></tr>
+</tbody></table></div>
+</section>
+
+<section class="page" id="bab4">
+<span class="kicker">BAB IV</span><h2>Landasan Filosofis, Sosiologis, dan Yuridis</h2>
+<h3>4.1 Landasan Filosofis</h3>
+<p>Etika akademik berakar pada martabat manusia dan pencarian kebenaran. Ilmu pengetahuan tidak dapat berkembang secara bermakna apabila manusia diperlakukan sekadar sebagai instrumen, data dimanipulasi demi hasil yang diinginkan, atau kewenangan akademik digunakan untuk kepentingan pribadi. Nilai kejujuran, keadilan, tanggung jawab, otonomi, kemanfaatan, dan tidak merugikan menjadi dasar moral bagi kegiatan Tridharma.</p>
+<p>Kebebasan akademik memperoleh legitimasi ketika dijalankan dengan tanggung jawab. Kebebasan tanpa integritas berpotensi menjadi kesewenang-wenangan; sebaliknya, penegakan etika tanpa perlindungan kebebasan dapat menekan kritik ilmiah. Karena itu, desain kebijakan harus menjaga keseimbangan antara otonomi ilmiah dan akuntabilitas.</p>
+<h3>4.2 Landasan Sosiologis</h3>
+<p>Ekosistem perguruan tinggi mengalami perubahan cepat. Interaksi dosen–mahasiswa berlangsung melalui kelas fisik, platform digital, pesan instan, sistem pembelajaran, laboratorium, proyek eksternal, dan media sosial. Batas antara ruang akademik dan nonakademik menjadi lebih cair. Peraturan Unpad tentang kekerasan karena itu mencakup tindakan di dalam dan di luar kampus yang terkait Tridharma serta tindakan melalui teknologi informasi.</p>
+<p>Tekanan produktivitas, kompetisi hibah, tuntutan reputasi, dan kolaborasi internasional dapat menciptakan insentif yang tidak sehat apabila tidak diimbangi kontrol integritas. Pada saat yang sama, meningkatnya literasi hak mahasiswa menuntut transparansi penilaian, pengakuan kontribusi, keamanan data, dan kanal pengaduan yang dapat dipercaya. Secara sosiologis, budaya etika tidak cukup dibangun melalui sanksi; ia memerlukan keteladanan pimpinan, diskusi kasus, desain proses, dan perlindungan terhadap pelapor yang bertindak dengan itikad baik.</p>
+<h3>4.3 Landasan Yuridis</h3>
+<p>Landasan yuridis penguatan implementasi etika dosen tersusun secara berlapis. Pada tingkat nasional, Undang-Undang Pendidikan Tinggi dan Undang-Undang Guru dan Dosen mengatur misi, kebebasan, profesionalitas, serta tanggung jawab dosen. Permendikbudristek Nomor 39 Tahun 2021 mewajibkan perguruan tinggi mengatur integritas akademik karya ilmiah. Permendikbudristek Nomor 55 Tahun 2024 menyediakan kerangka pencegahan dan penanganan kekerasan. PP Nomor 94 Tahun 2021 berlaku bagi PNS dalam aspek disiplin.</p>
+<p>Pada tingkat Unpad, Peraturan MWA Nomor 2 Tahun 2020 menjadi payung kode etik universitas. Norma khusus dosen ditetapkan melalui Peraturan Senat Akademik Nomor 1 Tahun 2023 dan dioperasionalkan melalui Peraturan Rektor Nomor 14 Tahun 2024. Integritas karya ilmiah diatur dalam Peraturan Rektor Nomor 32 Tahun 2024, disiplin melalui Peraturan Rektor Nomor 31 Tahun 2025, serta pencegahan dan penanganan kekerasan melalui Peraturan Rektor Nomor 39 Tahun 2025.</p>
+<div class="quote">Penguatan yang diperlukan bukan membuat norma baru sebanyak-banyaknya, melainkan memastikan norma yang sudah ada hadir dalam keputusan harian, prosedur yang konsisten, dan budaya akademik yang berani menjaga kebenaran.</div>
+</section>
+
+<section class="page" id="bab5">
+<span class="kicker">BAB V</span><h2>Jangkauan, Arah Pengaturan, dan Ruang Lingkup Materi</h2>
+<h3>5.1 Sasaran Penguatan</h3>
+<p>Penguatan implementasi ditujukan kepada seluruh dosen Unpad, pimpinan akademik, pengelola program studi/departemen/fakultas, komisi etik senat, unit pengelola penelitian dan publikasi, pengelola SDM, Satgas PPK, serta unit layanan pengaduan. Mahasiswa dan mitra perlu dilibatkan sebagai pihak yang menerima layanan akademik, berkolaborasi dalam penelitian, atau berinteraksi dalam pelaksanaan Tridharma.</p>
+<h3>5.2 Arah Pengaturan</h3>
+<p>Arah kebijakan adalah membangun sistem yang bersifat <strong>preventif, transparan, terkoordinasi, proporsional, berorientasi pemulihan, dan berbasis bukti</strong>. Sistem harus memudahkan dosen mengetahui standar yang diharapkan, memudahkan pelapor mengakses kanal yang tepat, dan memudahkan organ pemeriksa menjaga due process.</p>
+<h3>5.3 Materi Muatan Prioritas</h3>
+<h4>A. Etika Pendidikan dan Penilaian</h4>
+<ul>
+<li>Rencana pembelajaran, kriteria penilaian, tenggat, dan mekanisme keberatan disampaikan secara jelas.</li>
+<li>Penilaian didasarkan pada capaian pembelajaran dan bukti kinerja, bukan kedekatan, identitas, pandangan pribadi, atau faktor yang tidak relevan.</li>
+<li>Nilai diberikan tepat waktu dan dokumentasi penilaian disimpan sesuai ketentuan.</li>
+<li>Umpan balik disampaikan secara profesional, tidak merendahkan, dan proporsional.</li>
+<li>Akomodasi yang layak dan aksesibilitas diterapkan sesuai kebutuhan dan ketentuan.</li>
+</ul>
+<h4>B. Etika Pembimbingan dan Supervisi</h4>
+<ul>
+<li>Ekspektasi komunikasi, frekuensi pertemuan, pembagian tugas, dan standar kemajuan disepakati pada awal pembimbingan.</li>
+<li>Dosen tidak meminta imbalan, pekerjaan pribadi, atau layanan yang tidak berhubungan dengan proses akademik.</li>
+<li>Kontribusi mahasiswa pada data, analisis, kode, penulisan, dan gagasan didokumentasikan untuk penentuan kepengarangan.</li>
+<li>Relasi romantis/seksual dengan mahasiswa yang berada dalam pengajaran, pembimbingan, supervisi, atau evaluasi langsung harus dicegah karena konflik kepentingan dan ketimpangan kuasa.</li>
+<li>Pemindahan pembimbing atau mediator tersedia ketika hubungan pembimbingan tidak dapat dilanjutkan secara sehat.</li>
+</ul>
+<h4>C. Etika Penelitian dan Data</h4>
+<ul>
+<li>Penelitian yang melibatkan manusia, hewan, data sensitif, atau risiko khusus memperoleh persetujuan etik/izin yang diperlukan.</li>
+<li>Data dikumpulkan, diubah, dianalisis, dan disimpan dengan jejak audit yang memadai.</li>
+<li>Perubahan data dan pengecualian observasi memiliki alasan metodologis yang terdokumentasi.</li>
+<li>Kerahasiaan, privasi, hak akses, retensi, dan pemusnahan data diatur dalam rencana pengelolaan data.</li>
+<li>Keterbatasan metode dan ketidakpastian hasil dilaporkan secara jujur.</li>
+</ul>
+<h4>D. Etika Publikasi dan Kepengarangan</h4>
+<ul>
+<li>Daftar penulis merefleksikan kontribusi substantif dan seluruh penulis menyetujui versi final.</li>
+<li><em>Gift authorship</em>, <em>ghost authorship</em>, dan penghilangan kontributor dilarang.</li>
+<li>Konflik kepentingan finansial, profesional, atau personal diungkapkan.</li>
+<li>Pengajuan jamak dan publikasi berulang yang menyesatkan dicegah.</li>
+<li>Koreksi, ralat, atau pencabutan dilakukan ketika terdapat kesalahan material.</li>
+</ul>
+<h4>E. Penggunaan AI dan Teknologi Digital</h4>
+<div class="table-wrap"><table><thead><tr><th>Area</th><th>Standar Minimum</th><th>Bukti Kepatuhan</th></tr></thead><tbody>
+<tr><td>Transparansi penggunaan</td><td>Ungkapkan penggunaan AI yang berpengaruh material pada ide, teks, kode, analisis, gambar, atau keputusan.</td><td>Pernyataan penggunaan AI pada naskah/log proyek.</td></tr>
+<tr><td>Validasi</td><td>Periksa sumber, fakta, sitasi, kode, perhitungan, bias, dan kesimpulan.</td><td>Checklist validasi dan catatan koreksi.</td></tr>
+<tr><td>Data dan kerahasiaan</td><td>Jangan unggah data pribadi/rahasia, naskah review, atau dokumen internal ke layanan yang tidak disetujui.</td><td>Klasifikasi data dan daftar platform yang diizinkan.</td></tr>
+<tr><td>Akuntabilitas</td><td>Manusia tetap bertanggung jawab atas keluaran dan keputusan.</td><td>Nama penanggung jawab dan persetujuan final.</td></tr>
+<tr><td>Penilaian mahasiswa</td><td>Aturan penggunaan AI dijelaskan per mata kuliah/tugas dan diterapkan konsisten.</td><td>RPS, rubrik, dan instruksi tugas.</td></tr>
+</tbody></table></div>
+<h4>F. Konflik Kepentingan, Gratifikasi, dan Sumber Daya</h4>
+<ul>
+<li>Konflik kepentingan diungkapkan sebelum pengambilan keputusan, penilaian, seleksi, review, atau pengadaan.</li>
+<li>Dosen mengundurkan diri dari keputusan ketika independensi tidak dapat dijaga.</li>
+<li>Pemberian atau imbalan yang terkait dengan pembimbingan, penilaian, jabatan, atau akses layanan ditolak dan dilaporkan sesuai ketentuan.</li>
+<li>Fasilitas, nama, logo, data, dan sumber daya Unpad digunakan sesuai kewenangan dan tujuan institusi.</li>
+</ul>
+<h4>G. Relasi Profesional dan Lingkungan Tanpa Kekerasan</h4>
+<ul>
+<li>Intimidasi, penghinaan, pengucilan, perundungan, diskriminasi, intoleransi, pelecehan, dan kekerasan tidak dapat dibenarkan sebagai metode pendidikan.</li>
+<li>Kritik akademik harus berfokus pada argumen, metode, atau bukti, bukan menyerang martabat individu.</li>
+<li>Pembalasan terhadap pelapor, saksi, korban, atau pihak yang membantu pemeriksaan dilarang.</li>
+<li>Korban dan saksi memperoleh akses pendampingan, perlindungan, dan pemulihan melalui mekanisme yang berlaku.</li>
+</ul>
+<h3>5.4 Instrumen Pencegahan</h3>
+<div class="grid-2">
+<div class="card"><h4>1. Pakta Etika Tahunan</h4><p>Pernyataan pemahaman kode etik, konflik kepentingan, perlindungan data, dan kanal pelaporan.</p></div>
+<div class="card"><h4>2. Charter Pembimbingan</h4><p>Kesepakatan ekspektasi, jadwal umpan balik, kontribusi, data, dan penyelesaian sengketa.</p></div>
+<div class="card"><h4>3. Formulir Kepengarangan</h4><p>Catatan kontribusi, persetujuan urutan penulis, dan pembaruan pada setiap tonggak penelitian.</p></div>
+<div class="card"><h4>4. Checklist AI</h4><p>Disclosure, validasi, klasifikasi data, hak cipta, dan akuntabilitas sebelum publikasi atau penilaian.</p></div>
+<div class="card"><h4>5. Register Konflik Kepentingan</h4><p>Deklarasi dan mitigasi untuk seleksi, review, penilaian, pengadaan, dan kerja sama.</p></div>
+<div class="card"><h4>6. Pelatihan Berbasis Kasus</h4><p>Skenario nyata lintas disiplin untuk melatih penilaian etis, bukan hanya menghafal pasal.</p></div>
+</div>
+</section>
+
+<section class="page" id="bab6">
+<span class="kicker">BAB VI</span><h2>Tata Kelola Penanganan Kasus</h2>
+<h3>6.1 Prinsip Proses</h3>
+<p>Penanganan dugaan pelanggaran harus melindungi kepentingan akademik dan hak semua pihak. Prinsip minimum meliputi legalitas, kompetensi organ, praduga tidak bersalah, kerahasiaan yang proporsional, larangan pembalasan, kesempatan membela diri, independensi, pemeriksaan bukti objektif, ketepatan waktu, dokumentasi, proporsionalitas sanksi, dan pemulihan.</p>
+<h3>6.2 Matriks Triase</h3>
+<div class="table-wrap"><table><thead><tr><th>Karakter Utama Laporan</th><th>Jalur Utama</th><th>Organ/Unit yang Relevan</th><th>Catatan Koordinasi</th></tr></thead><tbody>
+<tr><td>Pelanggaran perilaku dosen dalam pengajaran, pembimbingan, relasi profesional, penggunaan kewenangan.</td><td>Kode etik dosen.</td><td>Dekan/Rektor; Komisi Etika, Hukum, dan Tata Kelola Senat Fakultas/SA sesuai tingkat.</td><td>Rujuk ke Satgas PPK jika terdapat unsur kekerasan; rujuk ke disiplin jika ada pelanggaran kepegawaian.</td></tr>
+<tr><td>Fabrikasi, falsifikasi, plagiat, kepengarangan tidak sah, konflik kepentingan karya ilmiah, pengajuan jamak.</td><td>Integritas akademik karya ilmiah.</td><td>Rektor/Dekan dan tim yang dibentuk Senat Akademik sesuai peraturan.</td><td>Perlu ahli bidang/metodologi; tindakan kepegawaian dapat mengikuti hasil pemeriksaan.</td></tr>
+<tr><td>Kekerasan fisik/psikis, perundungan, kekerasan seksual, diskriminasi, intoleransi, atau kebijakan yang mengandung kekerasan.</td><td>Pencegahan dan penanganan kekerasan.</td><td>Satgas PPK dan Rektor sesuai kewenangan.</td><td>Utamakan keselamatan, pendampingan, perlindungan, dan pemulihan; etik/disiplin dapat diproses terkoordinasi.</td></tr>
+<tr><td>Pelanggaran kewajiban/larangan pegawai, penyalahgunaan jabatan, hadiah, ketidakhadiran, tindakan yang berdampak pada unit/lembaga/negara.</td><td>Disiplin kepegawaian.</td><td>Atasan langsung, tim pemeriksa, PPK/PyB sesuai status dan kewenangan.</td><td>Untuk dosen PNS perhatikan PP 94/2021; norma etik akademik tetap dapat relevan.</td></tr>
+</tbody></table></div>
+<h3>6.3 Bagan Alur Penanganan Terpadu</h3>
+<figure class="figure">
+<svg class="svg-full" viewBox="0 0 920 620" role="img" aria-label="Alur triase dan penanganan kasus etika akademik">
+<defs><marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#617789"/></marker></defs>
+<g font-family="Arial" text-anchor="middle">
+<rect x="315" y="18" width="290" height="62" rx="15" fill="#082b4c"/><text x="460" y="46" fill="white" font-size="18" font-weight="700">LAPORAN / INFORMASI AWAL</text><text x="460" y="66" fill="#f3c969" font-size="11">kanal resmi • bukti awal • kebutuhan mendesak</text>
+<path d="M460 80 V122" stroke="#617789" stroke-width="3" marker-end="url(#arr)"/>
+<rect x="315" y="125" width="290" height="72" rx="15" fill="#eef3f8" stroke="#0f3f68" stroke-width="2"/><text x="460" y="154" fill="#082b4c" font-size="18" font-weight="700">TRIASE AWAL</text><text x="460" y="176" fill="#536676" font-size="12">keselamatan • jenis dugaan • kewenangan • konflik kepentingan</text>
+<path d="M460 197 V238 M460 218 H115 V255 M460 218 H350 V255 M460 218 H570 V255 M460 218 H805 V255" fill="none" stroke="#61778
