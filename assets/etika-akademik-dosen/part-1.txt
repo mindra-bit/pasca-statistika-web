@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Naskah Akademik Penguatan dan Implementasi Etika Akademik Dosen di Lingkungan Universitas Padjadjaran">
+<title>Naskah Akademik Etika Akademik Dosen Unpad</title>
+<style>
+:root{
+  --navy:#082b4c; --navy2:#0f3f68; --gold:#e3a329; --gold2:#f3c969;
+  --green:#17745b; --teal:#2a9d8f; --ink:#18212b; --muted:#607080;
+  --paper:#fff; --soft:#f4f7fa; --line:#d9e1e8; --danger:#9b2c2c;
+  --shadow:0 18px 50px rgba(8,43,76,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#e9eef3;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.72}
+a{color:#0d5c91;text-decoration:none} a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:20;background:rgba(8,43,76,.96);backdrop-filter:blur(8px);color:white;border-bottom:3px solid var(--gold)}
+.topbar-inner{max-width:1240px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 20px;gap:14px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
+.brand-mark{width:38px;height:38px;display:grid;place-items:center;flex:0 0 auto}.brand-logo{width:38px;height:38px;object-fit:contain;display:block;filter:drop-shadow(0 3px 8px rgba(0,0,0,.18))}
+.actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid rgba(255,255,255,.38);background:transparent;color:white;padding:8px 12px;border-radius:9px;cursor:pointer;font-weight:700}.btn:hover{background:rgba(255,255,255,.12)}
+.layout{max-width:1240px;margin:26px auto;display:grid;grid-template-columns:270px minmax(0,1fr);gap:24px;padding:0 18px}
+.sidebar{position:sticky;top:78px;align-self:start;background:white;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow);max-height:calc(100vh - 100px);overflow:auto}
+.sidebar h3{margin:0 0 12px;color:var(--navy);font-size:15px;text-transform:uppercase;letter-spacing:.08em}
+.sidebar a{display:block;padding:7px 9px;border-radius:8px;color:#304455;font-size:13.5px}.sidebar a:hover,.sidebar a.active{background:#eaf3f7;color:var(--navy);text-decoration:none;font-weight:700}
+.document{background:var(--paper);box-shadow:var(--shadow);border-radius:18px;overflow:hidden}
+.page{max-width:900px;margin:auto;padding:68px 72px;border-bottom:1px solid #edf1f4}
+.cover{max-width:none;min-height:1040px;padding:0;position:relative;overflow:hidden;background:linear-gradient(155deg,#061f38 0%,#0d3d66 58%,#176b68 100%);color:white;display:grid;grid-template-rows:auto 1fr auto}
+.cover:before{content:"";position:absolute;width:620px;height:620px;border-radius:50%;border:110px solid rgba(255,255,255,.04);right:-190px;top:-180px}.cover:after{content:"";position:absolute;width:430px;height:430px;border-radius:50%;background:radial-gradient(circle,rgba(227,163,41,.23),transparent 65%);left:-170px;bottom:-120px}
+.cover-head{position:relative;z-index:2;padding:54px 70px;display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid rgba(255,255,255,.15)}
+.cover-label{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:#f5d78f}.cover-date{text-align:right;font-size:13px;color:#d9e8f2}
+.cover-main{position:relative;z-index:2;padding:70px;display:grid;grid-template-columns:1.25fr .75fr;gap:45px;align-items:center}
+.cover h1{font-family:Georgia,"Times New Roman",serif;font-size:54px;line-height:1.1;margin:0 0 24px;letter-spacing:-1px}.cover h1 span{color:#f3c969}.cover-sub{font-size:20px;max-width:680px;color:#d9e8f2}.cover-note{margin-top:28px;border-left:4px solid var(--gold);padding:12px 16px;background:rgba(255,255,255,.07);border-radius:0 10px 10px 0;font-size:14px;max-width:650px}
+.cover-art{width:100%;max-width:300px;justify-self:end;object-fit:contain;filter:drop-shadow(0 22px 28px rgba(0,0,0,.28))}.cover-logo-shell{display:grid;place-items:center;justify-self:end;width:min(100%,340px);aspect-ratio:1;border-radius:50%;padding:24px;background:radial-gradient(circle,rgba(255,255,255,.13),rgba(255,255,255,.03) 68%,transparent 70%);border:1px solid rgba(255,255,255,.14)}
+.cover-foot{position:relative;z-index:2;padding:25px 70px 46px;display:flex;justify-content:space-between;align-items:end;color:#d9e8f2}.cover-foot strong{color:white}
+.kicker{display:inline-block;font-size:12px;text-transform:uppercase;letter-spacing:.15em;color:var(--green);font-weight:900;margin-bottom:10px}
+h1,h2,h3,h4{color:var(--navy);line-height:1.25} h2{font-family:Georgia,"Times New Roman",serif;font-size:31px;margin:0 0 20px;padding-bottom:12px;border-bottom:2px solid var(--gold)} h3{font-size:21px;margin-top:32px} h4{font-size:17px;margin-top:26px}
+p{margin:0 0 16px;text-align:justify}.lead{font-size:18px;color:#34495b}.small{font-size:13px;color:var(--muted)}
+.callout{margin:24px 0;padding:20px 22px;border-radius:13px;background:#eef7f5;border-left:5px solid var(--green)}.callout.warning{background:#fff7e8;border-left-color:var(--gold)}.callout.danger{background:#fff0f0;border-left-color:var(--danger)}
+.quote{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:18px;padding:22px 28px;margin:25px 0;background:#f7f9fb;border-left:4px solid var(--navy2);color:#334b5d}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{border:1px solid var(--line);border-radius:14px;padding:19px;background:white}.card h3,.card h4{margin-top:0}.card p{text-align:left}.number{width:38px;height:38px;border-radius:50%;display:block;text-align:center;line-height:38px;background:var(--navy);color:white;font-weight:900;margin-bottom:10px}.pill{display:inline-block;border-radius:999px;padding:5px 10px;font-size:12px;font-weight:800;background:#e9f5f2;color:var(--green);margin:2px}
+ul,ol{padding-left:24px} li{margin-bottom:8px}
+.table-wrap{overflow:auto;margin:23px 0;border:1px solid var(--line);border-radius:12px}table{border-collapse:collapse;width:100%;font-size:14px}th{background:var(--navy);color:white;text-align:left;padding:12px;vertical-align:top}td{padding:12px;border-top:1px solid var(--line);vertical-align:top}tr:nth-child(even) td{background:#f8fafc}
+.figure{margin:30px 0;padding:22px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,#fff,#f8fbfd)}.figure figcaption{font-size:13px;color:var(--muted);text-align:center;margin-top:12px}.svg-full{width:100%;height:auto;display:block}
+.ref{font-size:12px;vertical-align:super;font-weight:800}.ref-list li{margin-bottom:14px}.ref-list .meta{display:block;font-size:12px;color:var(--muted)}
+.toc-list{columns:2;column-gap:42px}.toc-list a{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dotted #b8c5cf;padding:8px 0;break-inside:avoid}.toc-list a span:first-child{font-weight:650}.toc-list a span:last-child{color:var(--muted)}
+.signature{margin-top:50px;display:grid;grid-template-columns:1fr 1fr;gap:80px}.sigbox{padding-top:70px;border-bottom:1px solid #8795a1;text-align:center;color:#52616f}
+.footer-note{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:15px;margin-top:30px}
+.no-break{break-inside:avoid}.page-break{break-before:page}
+@media(max-width:950px){.layout{grid-template-columns:1fr}.sidebar{display:none}.page{padding:44px 28px}.cover-main{grid-template-columns:1fr}.cover-logo-shell{justify-self:start;max-width:270px}.cover-art{max-width:240px}.cover h1{font-size:40px}.grid-2,.grid-3{grid-template-columns:1fr}.toc-list{columns:1}.cover-head,.cover-main,.cover-foot{padding-left:34px;padding-right:34px}}
+@media print{
+  @page{size:A4;margin:18mm 17mm 18mm 17mm}
+  @page cover{size:A4;margin:0}
+  body{background:white;font-size:10.5pt}.topbar,.sidebar{display:none!important}.layout{display:block;max-width:none;margin:0;padding:0}.document{box-shadow:none;border-radius:0}.page{max-width:none;padding:0;border:0;break-after:page}.page:not(.cover){padding:0}
+  .cover{page:cover;display:block;position:relative;width:210mm;height:297mm;min-height:0;overflow:hidden;break-after:page;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .cover-head{position:absolute;left:0;right:0;top:0;height:34mm;padding:16mm 18mm 8mm;display:flex}
+  .cover-main{position:absolute;left:0;right:0;top:34mm;bottom:34mm;padding:15mm 18mm;display:block}
+  .cover-main>div:first-child{width:72%}.cover h1{font-size:29pt;line-height:1.08;margin-bottom:8mm}.cover-sub{font-size:13.5pt;line-height:1.5}.cover-note{font-size:9.5pt;margin-top:7mm}.cover-logo-shell{position:absolute;right:-8mm;top:50mm;width:76mm;height:76mm;padding:6mm;border-radius:50%;opacity:.88}.cover-art{position:static;width:100%;max-width:none;opacity:1}
+  .cover-foot{position:absolute;left:0;right:0;bottom:0;height:34mm;padding:7mm 18mm 10mm;display:flex;font-size:8.5pt}.cover-date{font-size:9pt}
+  .page h2{font-size:20pt}.page h3{font-size:14pt}.table-wrap{overflow:visible}.table-wrap table{font-size:8.6pt}a{color:inherit;text-decoration:none}.callout,.card,.figure,th{-webkit-print-color-adjust:exact;print-color-adjust:exact}.no-print{display:none!important}
+}
+</style>
+</head>
+<body>
+<header class="topbar no-print">
+  <div class="topbar-inner">
+    <div class="brand"><div class="brand-mark"><img class="brand-logo" src="assets/logo-unpad.png" alt="Logo Universitas Padjadjaran"></div><div>Naskah Akademik Etika Dosen Unpad</div></div>
+    <div class="actions"><button class="btn" onclick="window.print()">Cetak / Simpan PDF</button><button class="btn" onclick="document.documentElement.scrollTo({top:0,behavior:'smooth'})">Ke Sampul</button></div>
+  </div>
+</header>
+<div class="layout">
+<aside class="sidebar no-print">
+  <h3>Navigasi Dokumen</h3>
+  <a href="#ringkasan">Ringkasan Eksekutif</a>
+  <a href="#pengantar">Kata Pengantar</a>
+  <a href="#daftar-isi">Daftar Isi</a>
+  <a href="#bab1">BAB I Pendahuluan</a>
+  <a href="#bab2">BAB II Kajian Teoretis</a>
+  <a href="#bab3">BAB III Evaluasi Regulasi</a>
+  <a href="#bab4">BAB IV Landasan</a>
+  <a href="#bab5">BAB V Arah Pengaturan</a>
+  <a href="#bab6">BAB VI Tata Kelola Kasus</a>
+  <a href="#bab7">BAB VII Implementasi</a>
+  <a href="#bab8">BAB VIII Penutup</a>
+  <a href="#referensi">Referensi</a>
+</aside>
+<main class="document">
+<section class="page cover" id="sampul">
+  <div class="cover-head">
+    <div><div class="cover-label">Dokumen Kajian Kebijakan Akademik</div><div style="margin-top:8px;font-weight:700">Universitas Padjadjaran</div></div>
+    <div class="cover-date">Jatinangor–Bandung<br>26 Juli 2026</div>
+  </div>
+  <div class="cover-main">
+    <div>
+      <h1>Naskah Akademik<br><span>Penguatan dan Implementasi Etika Akademik Dosen</span></h1>
+      <div class="cover-sub">Telaah terpadu atas kode etik dosen, integritas karya ilmiah, pencegahan kekerasan, dan disiplin kepegawaian di lingkungan Universitas Padjadjaran.</div>
+      <div class="cover-note"><strong>Status dokumen:</strong> kajian akademik dan rekomendasi implementasi. Dokumen ini bukan peraturan baru, bukan keputusan pejabat berwenang, dan bukan pendapat hukum yang mengikat.</div>
+    </div>
+    <div class="cover-logo-shell"><img class="cover-art" src="assets/logo-unpad.png" alt="Logo Universitas Padjadjaran"></div>
+  </div>
+  <div class="cover-foot"><div><strong>Fokus:</strong><br>Kode Etik • Integritas Ilmiah • AI Bertanggung Jawab • Relasi Dosen–Mahasiswa</div><div style="text-align:right"><strong>Versi 1.0</strong><br>HTML mandiri dan siap cetak A4</div></div>
+</section>
+
+<section class="page" id="ringkasan">
+<span class="kicker">Ikhtisar Kebijakan</span><h2>Ringkasan Eksekutif</h2>
+<p class="lead">Etika akademik dosen merupakan infrastruktur kepercayaan yang menopang mutu pendidikan, kredibilitas penelitian, keselamatan warga kampus, dan reputasi institusi. Di Universitas Padjadjaran, norma tersebut telah tersebar dalam beberapa rezim pengaturan yang saling melengkapi: kode etik universitas, kode etik dosen, pedoman operasional kode etik, integritas karya ilmiah, pencegahan dan penanganan kekerasan, serta disiplin kepegawaian.</p>
+<p>Naskah akademik ini menyatukan kerangka tersebut ke dalam satu arsitektur implementasi. Landasan utamanya adalah Peraturan MWA Unpad Nomor 2 Tahun 2020; Peraturan Senat Akademik Unpad Nomor 1 Tahun 2023; Peraturan Rektor Unpad Nomor 14 Tahun 2024; Peraturan Rektor Unpad Nomor 32 Tahun 2024; Peraturan Rektor Unpad Nomor 31 Tahun 2025; dan Peraturan Rektor Unpad Nomor 39 Tahun 2025. Kerangka internal itu diletakkan dalam konteks Undang-Undang Pendidikan Tinggi, Undang-Undang Guru dan Dosen, regulasi integritas akademik nasional, regulasi pencegahan kekerasan di perguruan tinggi, serta disiplin PNS.<sup class="ref"><a href="#r1">1</a></sup><sup class="ref"><a href="#r2">2</a></sup><sup class="ref"><a href="#r3">3</a></sup></p>
+<div class="grid-3 no-break">
+  <div class="card"><div class="number">1</div><h4>Norma substantif</h4><p>Kewajiban moral-profesional dalam pendidikan, pembimbingan, penelitian, publikasi, pengabdian, dan penggunaan kewenangan akademik.</p></div>
+  <div class="card"><div class="number">2</div><h4>Perlindungan proses</h4><p>Praduga tidak bersalah, pembuktian objektif, hak membela diri, kerahasiaan pelapor, pemulihan nama baik, dan mekanisme keberatan.</p></div>
+  <div class="card"><div class="number">3</div><h4>Pencegahan sistemik</h4><p>Edukasi berkala, deklarasi konflik kepentingan, kesepakatan kepengarangan, tata kelola AI, kanal pengaduan, dan audit kepatuhan.</p></div>
+</div>
+<div class="callout warning"><strong>Temuan pokok.</strong> Tantangan utama bukan kekurangan norma, melainkan risiko fragmentasi implementasi: kasus yang sama dapat mengandung unsur etik, integritas ilmiah, kekerasan, dan disiplin sekaligus. Karena itu, dibutuhkan mekanisme triase perkara, koordinasi antarlembaga, dan standar dokumentasi yang seragam.</div>
+<h3>Rekomendasi prioritas</h3>
+<ol>
+<li>Membentuk <em>single academic integrity gateway</em> sebagai pintu informasi dan triase, tanpa menghapus kewenangan organ yang telah ditetapkan peraturan.</li>
+<li>Mewajibkan sosialisasi etika dan integritas sekurang-kurangnya setiap semester pada tingkat fakultas/program studi, sejalan dengan norma pencegahan dalam Peraturan Rektor Nomor 32 Tahun 2024.</li>
+<li>Menerapkan formulir deklarasi konflik kepentingan, kesepakatan kepengarangan, penggunaan data mahasiswa, dan penggunaan AI generatif.</li>
+<li>Menyusun standar hubungan pembimbing–mahasiswa, termasuk komunikasi, umpan balik, pembagian kontribusi, keamanan data, dan larangan penyalahgunaan relasi kuasa.</li>
+<li>Mengembangkan indikator kepatuhan yang mengukur pencegahan, keadilan proses, ketepatan waktu, dan tindak lanjut pemulihan—bukan sekadar jumlah sanksi.</li>
+</ol>
+</section>
+
+<section class="page" id="pengantar">
+<span class="kicker">Prakata</span><h2>Kata Pengantar</h2>
+<p>Perkembangan ekosistem akademik digital, kolaborasi lintas disiplin, tekanan produktivitas publikasi, pemanfaatan kecerdasan artifisial, serta meningkatnya kesadaran terhadap relasi kuasa di perguruan tinggi menjadikan etika akademik bukan lagi sekadar himpunan larangan. Etika akademik harus hadir sebagai tata kelola yang mampu membimbing keputusan sehari-hari, melindungi warga kampus, menjamin kebebasan akademik yang bertanggung jawab, dan memulihkan kepercayaan ketika terjadi sengketa.</p>
+<p>Universitas Padjadjaran telah memiliki perangkat regulasi yang relatif komprehensif. Naskah ini disusun untuk mempertemukan norma-norma tersebut dalam satu kerangka analisis dan implementasi. Fokusnya bukan menggantikan peraturan, melainkan membantu unit akademik memahami hubungan antardokumen, mengidentifikasi area risiko, dan merumuskan perangkat operasional yang konsisten.</p>
+<p>Penyusunan dilakukan dengan pendekatan yuridis-normatif, konseptual, dan tata kelola risiko. Semua uraian substantif diparafrasekan dari sumber resmi dan ditempatkan sebagai bahan kajian. Apabila terdapat perbedaan penafsiran, naskah resmi peraturan dan keputusan organ berwenang tetap menjadi rujukan utama.</p>
+<div class="signature"><div><div class="sigbox">Tim Penyusun/Kajian</div></div><div><div class="sigbox">Jatinangor, Juli 2026</div></div></div>
+</section>
+
+<section class="page" id="daftar-isi">
+<span class="kicker">Struktur Dokumen</span><h2>Daftar Isi</h2>
+<div class="toc-list">
+<a href="#ringkasan"><span>Ringkasan Eksekutif</span><span>i</span></a>
+<a href="#pengantar"><span>Kata Pengantar</span><span>ii</span></a>
+<a href="#bab1"><span>BAB I Pendahuluan</span><span>1</span></a>
+<a href="#bab2"><span>BAB II Kajian Teoretis dan Praktik</span><span>5</span></a>
+<a href="#bab3"><span>BAB III Evaluasi dan Analisis Regulasi</span><span>10</span></a>
+<a href="#bab4"><span>BAB IV Landasan Filosofis, Sosiologis, Yuridis</span><span>17</span></a>
+<a href="#bab5"><span>BAB V Jangkauan dan Arah Pengaturan</span><span>21</span></a>
+<a href="#bab6"><span>BAB VI Tata Kelola Penanganan Kasus</span><span>28</span></a>
+<a href="#bab7"><span>BAB VII Strategi Implementasi</span><span>34</span></a>
+<a href="#bab8"><span>BAB VIII Penutup</span><span>40</span></a>
+<a href="#referensi"><span>Daftar Referensi</span><span>42</span></a>
+</div>
+<div class="figure">
+<svg class="svg-full" viewBox="0 0 900 390" role="img" aria-label="Arsitektur etika akademik dosen">
+<defs><filter id="sh"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-opacity=".12"/></filter></defs>
+<rect x="310" y="18" width="280" height="70" rx="18" fill="#082b4c" filter="url(
