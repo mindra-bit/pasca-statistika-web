@@ -59,7 +59,7 @@ for (const semesterName of (await readdir(sourceRoot, { withFileTypes: true }))
 
 const totalFiles = semesters.flatMap((semester) => semester.courses).reduce((sum, course) => sum + course.files.length, 0);
 const totalBytes = semesters.flatMap((semester) => semester.courses).reduce((sum, course) => sum + course.bytes, 0);
-const releaseBase = "https://github.com/mindra-bit/pasca-statistika-web/releases/download/pbm-2024";
+const releaseBase = "https://github.com/statistika-unpad/pasca-statistika-web/releases/download/pbm-2024";
 const courseMarkup = semesters.map((semester, semesterIndex) => `
   <section class="semester-panel" id="${slugify(semester.name)}" data-semester-panel ${semesterIndex ? "hidden" : ""}>
     <div class="semester-heading">

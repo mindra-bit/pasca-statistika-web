@@ -279,8 +279,8 @@ let serverApiReady = false;
 
 const COMMENT_INTEGRATION = {
   giscus: {
-    repo: "mindra-bit/pasca-statistika-web",
-    organizationRepo: "statistika-unpad/pasca-statistika-web",
+    repo: "statistika-unpad/pasca-statistika-web",
+    legacyRepo: "mindra-bit/pasca-statistika-web",
     repoId: "R_kgDOS0LQzg",
     category: "General",
     categoryId: "DIC_kwDOS0LQzs4C_B4p"
@@ -2309,8 +2309,8 @@ async function updateGoatCounterTotal() {
 function mountCommentIntegration() {
   const mount = document.getElementById("commentsMount");
   const config = COMMENT_INTEGRATION.giscus;
-  const repo = window.location.hostname === "statistika-unpad.github.io"
-    ? config.organizationRepo
+  const repo = window.location.hostname === "mindra-bit.github.io"
+    ? config.legacyRepo
     : config.repo;
   if (!mount || !repo || !config.repoId || !config.category || !config.categoryId) return;
 
