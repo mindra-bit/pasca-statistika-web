@@ -3128,273 +3128,178 @@ serta komunikasi hasil secara ilmiah.</p>
 </div>
 <!-- END UNPAD MATERIAL ENHANCEMENT -->
 <style>
-html, body {
-  background: linear-gradient(135deg, #f8fbfd 0%, #fffdf8 48%, #f3f6ee 100%) !important;
-  color: #172033 !important;
+:root{
+--brown-900:#3a2414; --brown-800:#5a351b; --brown-700:#7a4a24;
+--brown-600:#9c6434; --brown-500:#b77b42; --brown-300:#e9cfae;
+--brown-200:#f4dfc4; --brown-100:#fff3e3; --cream:#fffaf1;
+--ink:#1d120b; --gold:#d6a14a; --green:#6d7d46;
 }
-body {
-  font-family: "Segoe UI", Arial, sans-serif !important;
-  font-size: 17px !important;
-  line-height: 1.72 !important;
-  margin: 0 !important;
-  overflow-x: hidden !important;
+html, body { scroll-behavior:smooth; }
+body{
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+color:var(--ink);
+background:linear-gradient(135deg,#fff9ed 0%, #f4dfc4 32%, #e5bd88 62%, #9c6434 100%);
+background-attachment:fixed;
+line-height:1.68;
+font-size:16px;
 }
-.main-container {
-  max-width: 1180px !important;
-  margin-top: 18px !important;
-  margin-bottom: 38px !important;
-  padding: 34px 46px 54px !important;
-  background: rgba(255, 253, 248, 0.98) !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  box-shadow: 0 18px 42px rgba(23, 57, 92, 0.12) !important;
-  overflow-x: hidden !important;
+body::before{
+content:""; position:fixed; inset:0; pointer-events:none;
+background:radial-gradient(circle at 85% 8%, rgba(255,255,255,.62), transparent 28%),
+radial-gradient(circle at 8% 92%, rgba(72,41,20,.12), transparent 35%);
+z-index:-1;
 }
-h1, h2, h3, h4 {
-  color: #17395c !important;
-  font-weight: 800 !important;
-  letter-spacing: 0 !important;
-  line-height: 1.24 !important;
+#TOC{
+position:fixed; top:18px; left:18px; bottom:18px; width:310px; overflow:auto;
+padding:22px 20px; border-radius:28px;
+background:rgba(255,250,241,.95); border:1px solid rgba(122,74,36,.28);
+box-shadow:0 18px 45px rgba(58,36,20,.25); backdrop-filter:blur(8px);
 }
-h1.title {
-  color: #17395c !important;
-  -webkit-text-fill-color: #17395c !important;
-  background: none !important;
-  border-bottom: 4px solid #f2a51a !important;
-  padding-bottom: 14px !important;
+#TOC::before{
+content:"Daftar Isi"; display:block; font-weight:900; font-size:1.25rem; color:var(--brown-900);
+margin-bottom:10px; padding-bottom:10px; border-bottom:2px solid var(--brown-300);
 }
-h2 {
-  margin-top: 46px !important;
-  padding: 12px 18px !important;
-  border-left: 8px solid #f2a51a !important;
-  border-radius: 8px !important;
-  background: linear-gradient(90deg, #eef8f6, #fff8e7) !important;
+#TOC ul{ list-style:none; padding-left:0; }
+#TOC ul ul{ padding-left:14px; border-left:2px solid var(--brown-200); }
+#TOC a{ color:var(--brown-800); text-decoration:none; font-weight:650; }
+#TOC a:hover{ color:#111; text-decoration:underline; }
+body > .container-fluid, body > .main-container, body > div:not(#TOC){
+max-width:1040px; margin-left:365px; margin-right:38px;
 }
-.unpad-cover h2 {
-  color: #111827 !important;
-  -webkit-text-fill-color: #111827 !important;
-  background: #fffdf8 !important;
-  border-left: 8px solid #f2a51a !important;
-  border-bottom: 0 !important;
+.main-container{ background:rgba(255,250,241,.96); border-radius:34px; padding:36px 46px; box-shadow:0 24px 70px rgba(58,36,20,.28); }
+h1,h2,h3,h4{ color:var(--brown-900); line-height:1.22; font-weight:850; }
+h1{ font-size:2.2rem; border-bottom:4px solid var(--brown-300); padding-bottom:14px; margin-top:2.5rem; }
+h2{ font-size:1.75rem; margin-top:2.2rem; background:linear-gradient(90deg,#7a4a24,#d6a14a); -webkit-background-clip:text; background-clip:text; color:transparent; }
+h3{ font-size:1.33rem; margin-top:1.8rem; }
+h4{ font-size:1.08rem; margin-top:1.5rem; }
+a{ color:#7a4a24; }
+table{ width:100%; border-collapse:collapse; margin:1rem 0 1.5rem; font-size:.94rem; }
+th{ background:linear-gradient(90deg,#5a351b,#9c6434); color:white; padding:10px; }
+td{ background:#fffaf1; border:1px solid #e5c89f; padding:9px; vertical-align:top; }
+blockquote{ border-left:6px solid var(--brown-500); background:#fff5e8; padding:14px 20px; border-radius:0 18px 18px 0; }
+pre, code{ color:#111 !important; }
+pre{
+background:#f4dfc4 !important; border:1px solid #c99d68; border-radius:18px; padding:18px;
+box-shadow:inset 0 0 0 1px rgba(255,255,255,.45); overflow:auto;
 }
-h3 {
-  margin-top: 30px !important;
+code{ background:#f7e8d5; border-radius:6px; padding:2px 5px; }
+.mathbox, .formula-box{
+background:linear-gradient(135deg,#fff3e3,#f4dfc4); color:#111; border:2px solid #d8b27c;
+border-radius:22px; padding:18px 20px; margin:18px 0; box-shadow:0 10px 28px rgba(90,53,27,.15);
 }
-a {
-  color: #0b5c86 !important;
+.note, .casebox, .examplebox, .rpsbox, .warningbox, .activitybox{
+border-radius:24px; padding:18px 20px; margin:18px 0; border:1px solid rgba(122,74,36,.28);
+box-shadow:0 12px 32px rgba(58,36,20,.14);
 }
-img, svg {
-  max-width: 100% !important;
-  height: auto !important;
+.note{ background:#fffaf1; }
+.casebox{ background:linear-gradient(135deg,#fff7ec,#ecd2b0); }
+.examplebox{ background:linear-gradient(135deg,#fff2df,#f6d8af); }
+.rpsbox{ background:linear-gradient(135deg,#f7e0c2,#fff9ed); border-left:9px solid var(--brown-700); }
+.warningbox{ background:linear-gradient(135deg,#fff4e4,#ead7b9); border-left:9px solid #9c6434; }
+.activitybox{ background:linear-gradient(135deg,#fffaf1,#f1d9b8); border-left:9px solid #6d7d46; }
+.hero{
+background:linear-gradient(135deg,#3a2414 0%,#7a4a24 45%,#d6a14a 100%); color:white;
+border-radius:34px; padding:38px; box-shadow:0 22px 62px rgba(58,36,20,.35); margin-bottom:28px;
 }
-table {
-  width: 100% !important;
-  border-collapse: collapse !important;
-  margin: 18px 0 26px !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-}
-.s2-table-scroll {
-  width: 100% !important;
-  max-width: 100% !important;
-  overflow-x: auto !important;
-  margin: 18px 0 26px !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-}
-.s2-table-scroll table {
-  min-width: 680px !important;
-  margin: 0 !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-}
-th {
-  background: #17395c !important;
-  color: #ffffff !important;
-  padding: 10px 12px !important;
-}
-td {
-  background: #fffdf8 !important;
-  border: 1px solid #d7e2ea !important;
-  padding: 10px 12px !important;
-  vertical-align: top !important;
-}
-.main-container p, .main-container li, td, th {
-  overflow-wrap: anywhere !important;
-}
-pre {
-  overflow: auto !important;
-  padding: 16px !important;
-  background: #eef5f8 !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  color: #111827 !important;
-}
-code {
-  background: #eef5f8 !important;
-  border-radius: 6px !important;
-  color: #111827 !important;
-  padding: 2px 5px !important;
-}
-span.math.display, .math.display, .MathJax_Display, .MathJax, mjx-container {
-  display: block !important;
-  max-width: 100% !important;
-  overflow-x: auto !important;
-  overflow-y: hidden !important;
-}
-blockquote {
-  margin: 22px 0 !important;
-  padding: 16px 20px !important;
-  background: #fff8e7 !important;
-  border-left: 8px solid #0f766e !important;
-  border-radius: 0 8px 8px 0 !important;
-}
-#TOC, .tocify {
-  background: #ffffff !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  box-shadow: 0 12px 28px rgba(23, 57, 92, 0.10) !important;
-}
-.tocify {
-  max-height: calc(100vh - 40px) !important;
-}
-.tocify .active, #TOC .active {
-  background: linear-gradient(90deg, #17395c, #0f766e) !important;
-  color: #ffffff !important;
-  border-radius: 6px !important;
-}
-#TOC a, .tocify a {
-  color: #17395c !important;
-  text-decoration: none !important;
-}
-#TOC a:hover, .tocify a:hover {
-  color: #0f766e !important;
-  text-decoration: underline !important;
-}
-.hero, .rps-box, .rpsbox, .info-card, .card,
-.callout, .note, .casebox, .case-box, .examplebox, .exercise-box,
-.learning-box, .activitybox, .activity, .practice-box, .praktik-box,
-.praktikum, .tujuan, .interpretasi, .refleksi, .warning, .warningbox,
-.warning-box, .tip, .idea-box, .mathbox, .formula-box, .rumus-box,
-.contoh-box, .rubric-box {
-  margin: 22px 0 !important;
-  padding: 20px 24px !important;
-  background: #fffdf8 !important;
-  border: 1px solid #d7e2ea !important;
-  border-left: 8px solid #0f766e !important;
-  border-radius: 8px !important;
-  box-shadow: 0 10px 24px rgba(23, 57, 92, 0.10) !important;
-  color: #172033 !important;
-}
-.hero {
-  background: linear-gradient(135deg, #17395c 0%, #0f766e 62%, #f2a51a 100%) !important;
-  color: #ffffff !important;
-  border-left: 0 !important;
-}
-.hero h1, .hero h2, .hero h3, .hero h4, .hero p, .hero strong {
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-}
-.warning, .warningbox, .warning-box {
-  border-left-color: #b45309 !important;
-  background: #fff8e7 !important;
-}
-.rps-box, .rpsbox, .rubric-box {
-  border-left-color: #f2a51a !important;
-  background: linear-gradient(135deg, #fffdf8, #fff8e7) !important;
-}
-.mathbox, .formula-box, .rumus-box {
-  border-left-color: #17395c !important;
-  background: #eef5f8 !important;
-}
-.badge {
-  display: inline-block !important;
-  padding: 4px 10px !important;
-  border-radius: 999px !important;
-  background: #17395c !important;
-  color: #ffffff !important;
-  font-weight: 700 !important;
-  font-size: 0.85em !important;
-}
-.grid-2, .grid-3 {
-  display: grid !important;
-  gap: 18px !important;
-}
-.grid-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-}
-.grid-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-}
-hr {
-  border: 0 !important;
-  height: 2px !important;
-  background: linear-gradient(90deg, transparent, #d7e2ea, transparent) !important;
-  margin: 34px 0 !important;
-}
-@media (max-width: 980px) {
-  #TOC, .tocify {
-    position: relative !important;
-    width: auto !important;
-    max-height: 360px !important;
-    margin: 12px !important;
-  }
-  .main-container {
-    margin: 12px !important;
-    padding: 24px !important;
-  }
-  .grid-2, .grid-3 {
-    grid-template-columns: 1fr !important;
-  }
+.hero h1{ color:white; border-bottom:1px solid rgba(255,255,255,.35); margin-top:0; }
+.hero .badge{ display:inline-block; background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.32); padding:8px 12px; border-radius:999px; margin:4px 6px 4px 0; font-weight:700; }
+.grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.grid-3{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.card{ background:#fffaf1; border:1px solid #e6c79c; border-radius:24px; padding:20px; box-shadow:0 10px 26px rgba(58,36,20,.12); }
+.small{ font-size:.92rem; }
+.center{ text-align:center; }
+.caption{ font-size:.9rem; color:#5a351b; text-align:center; margin-top:-8px; }
+svg{ max-width:100%; height:auto; }
+@media(max-width:980px){
+#TOC{ position:relative; width:auto; top:auto; left:auto; bottom:auto; margin:12px; }
+body > .container-fluid, body > .main-container, body > div:not(#TOC){ margin-left:12px; margin-right:12px; }
+.main-container{ padding:24px; }
+.grid-2,.grid-3{ grid-template-columns:1fr; }
 }
 </style>
-<script>
-window.MathJax = {
-  tex: {
-    inlineMath: [["\\(", "\\)"], ["$", "$"]],
-    displayMath: [["\\[", "\\]"], ["$$", "$$"]],
-    processEscapes: true,
-    processEnvironments: true,
-    tags: "ams"
-  },
-  options: {
-    skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"],
-    ignoreHtmlClass: "tex2jax_ignore"
-  },
-  chtml: {
-    fontURL: "../../assets/vendor/mathjax/output/chtml/fonts/woff-v2"
-  },
-  startup: {
-    typeset: true
-  }
-};
-
-(function () {
-  var script = document.createElement("script");
-  script.src = "../../assets/vendor/mathjax/tex-mml-chtml.js";
-  script.async = true;
-  script.onerror = function () {
-    var fallback = document.createElement("script");
-    fallback.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
-    fallback.async = true;
-    document.head.appendChild(fallback);
-  };
-  document.head.appendChild(script);
-})();
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll("table").forEach(function (table) {
-    if (table.parentElement && table.parentElement.classList.contains("s2-table-scroll")) return;
-    var wrapper = document.createElement("div");
-    wrapper.className = "s2-table-scroll";
-    table.parentNode.insertBefore(wrapper, table);
-    wrapper.appendChild(table);
-  });
-});
-</script>
-<div id="statistika-inferensial" class="section level1 hero" number="1">
+<div class="hero">
+<!-- BEGIN AI-INLINE-STYLE-2026 -->
+<style>
+.ai-inline {
+margin: 1rem 0 1.35rem;
+padding: 1rem 1.1rem;
+border: 1px solid #bfd9d5;
+border-left: 7px solid #0f766e;
+border-radius: 8px;
+background: linear-gradient(135deg, #eff9f7, #fffaf0);
+}
+.ai-inline--agentic { border-left-color: #17395c; background: linear-gradient(135deg, #eef5fb, #f5faf8); }
+.ai-inline--assessment { border-left-color: #a35d00; background: #fff8e8; }
+.ai-inline h3, .ai-inline h4 { margin-top: 0; color: #17395c; }
+.ai-inline p:last-child, .ai-inline ul:last-child { margin-bottom: 0; }
+.ai-inline__label {
+display: inline-block; margin-bottom: .45rem; padding: .2rem .55rem;
+border-radius: 999px; background: #17395c; color: white;
+font-size: .78rem; font-weight: 800;
+}
+.ai-inline table { width: 100%; margin: .6rem 0; background: white; }
+</style>
+<!-- END AI-INLINE-STYLE-2026 -->
+<div id="statistika-inferensial" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Statistika
 Inferensial</h1>
+<!-- BEGIN AI-INLINE:04d70c5310ad -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 1</span>
+<h3>
+Generative dan Agentic AI untuk Statistika Inferensial
+</h3>
+<p><strong>Arah RPS.</strong> Inferensi untuk model prediktif dan AI:
+ketidakpastian parameter dan prediksi, kalibrasi, interval prediksi,
+serta conformal prediction sebagai pengayaan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Evaluasi Sebuah Penaksiran.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk mengurai notasi dan menawarkan langkah derivasi
+alternatif tanpa menggantikan pembuktian mahasiswa.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter; agen wajib berhenti pada checkpoint
+dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas,
+satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><strong>Materi Pembelajaran Komprehensif untuk S2 Statistika Terapan
 FMIPA Universitas Padjadjaran</strong><br />
 <strong>Dosen Pengampu/Penulis RPS:</strong> Yudhie Andriyana, M.Sc.,
@@ -3405,6 +3310,7 @@ SKS | <strong>Semester:</strong> 1</p>
 <p><span class="badge">Inferensi Statistik</span> <span class="badge">Penaksiran Parameter</span> <span class="badge">Pengujian
 Hipotesis</span> <span class="badge">Likelihood</span> <span class="badge">Bayesian</span> <span class="badge">Komputasi
 Statistik</span></p>
+</div>
 </div>
 <div class="rpsbox">
 <p><strong>Orientasi modul.</strong> Modul ini disusun sebagai bahan
@@ -3459,6 +3365,63 @@ keputusan.
 <div id="peta-mata-kuliah-berdasarkan-rps" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Peta Mata Kuliah
 Berdasarkan RPS</h1>
+<!-- BEGIN AI-INLINE:dd80fd552722 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 2</span>
+<h3>
+Generative dan Agentic AI untuk Peta Mata Kuliah Berdasarkan RPS
+</h3>
+<p><strong>Arah RPS.</strong> Evaluasi bias, robustness,
+misspecification, dan validitas eksternal model; perbandingan inferensi
+frequentist, likelihood, Bayesian, dan pendekatan berbasis
+resampling.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Optimalisasi Sebuah Penaksiran.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk merumuskan alternatif penjelasan, contoh, dan
+hipotesis awal.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara
+bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik,
+dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti
+kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="grid-2">
 <div class="card">
 <p><strong>Capaian Pembelajaran Mata Kuliah (CPMK)</strong></p>
@@ -3559,6 +3522,63 @@ bahasa substantif.</p>
 <div id="bab-1.-fondasi-statistika-inferensial" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Bab 1. Fondasi
 Statistika Inferensial</h1>
+<!-- BEGIN AI-INLINE:85072cc075fc -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 1</span>
+<h3>
+Generative dan Agentic AI untuk Fondasi Statistika Inferensial
+</h3>
+<p><strong>Arah RPS.</strong> Inferensi untuk model prediktif dan AI:
+ketidakpastian parameter dan prediksi, kalibrasi, interval prediksi,
+serta conformal prediction sebagai pengayaan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Evaluasi Sebuah Penaksiran.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk mengurai notasi dan menawarkan langkah derivasi
+alternatif tanpa menggantikan pembuktian mahasiswa.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter; agen wajib berhenti pada checkpoint
+dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas,
+satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rpsbox">
 <p><strong>Keterkaitan dengan RPS</strong><br />
 Konsep dasar statistika inferensial dan hubungan antara populasi,
@@ -4160,6 +4180,24 @@ berbeda.</p>
 <div id="latihan-konseptual" class="section level2" number="3.8">
 <h2><span class="header-section-number">3.8</span> 1.8 Latihan
 konseptual</h2>
+<!-- BEGIN AI-INLINE:87e825c23e6f -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada 1.8 Latihan konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Fondasi Statistika Inferensial.
+</p>
+<p>
+Minta AI menjelaskan <strong>Fondasi Statistika Inferensial</strong>
+melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa
+kemudian membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Topik <strong>Latihan konseptual</strong> dalam bab <strong>Fondasi
 Statistika Inferensial</strong> harus dibaca sebagai bagian dari rantai
 inferensi yang lebih luas. Pada kasus survei kepuasan mahasiswa S2
@@ -4288,6 +4326,63 @@ ketidakpastian kepada pembaca non-statistik.</p>
 <div id="bab-2.-evaluasi-sebuah-penaksiran" class="section level1" number="4">
 <h1><span class="header-section-number">4</span> Bab 2. Evaluasi Sebuah
 Penaksiran</h1>
+<!-- BEGIN AI-INLINE:00ba188bbeb7 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 2</span>
+<h3>
+Generative dan Agentic AI untuk Evaluasi Sebuah Penaksiran
+</h3>
+<p><strong>Arah RPS.</strong> Evaluasi bias, robustness,
+misspecification, dan validitas eksternal model; perbandingan inferensi
+frequentist, likelihood, Bayesian, dan pendekatan berbasis
+resampling.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Optimalisasi Sebuah Penaksiran.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk merumuskan alternatif penjelasan, contoh, dan
+hipotesis awal.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara
+bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik,
+dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti
+kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rpsbox">
 <p><strong>Keterkaitan dengan RPS</strong><br />
 Evaluasi estimator melalui bias, variansi, MSE, konsistensi, efisiensi,
@@ -5011,6 +5106,65 @@ kepada pembaca non-statistik.</p>
 <div id="bab-3.-optimalisasi-sebuah-penaksiran" class="section level1" number="5">
 <h1><span class="header-section-number">5</span> Bab 3. Optimalisasi
 Sebuah Penaksiran</h1>
+<!-- BEGIN AI-INLINE:a76fbd74f15d -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 3</span>
+<h3>
+Generative dan Agentic AI untuk Optimalisasi Sebuah Penaksiran
+</h3>
+<p><strong>Arah RPS.</strong> Proyek data nyata yang membandingkan
+akurasi prediksi dengan kualitas inferensi, interpretabilitas, dan
+konsekuensi keputusan; penggunaan AI wajib diverifikasi secara statistik
+dan didokumentasikan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Pengaruh Desain Pengumpulan Data
+terhadap Inferensi Statistik.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk mengurai notasi dan menawarkan langkah derivasi
+alternatif tanpa menggantikan pembuktian mahasiswa.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter; agen wajib berhenti pada checkpoint
+dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas,
+satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rpsbox">
 <p><strong>Keterkaitan dengan RPS</strong><br />
 Optimalisasi estimator dengan mempertimbangkan trade-off bias-variansi,
@@ -5736,6 +5890,65 @@ ketidakpastian kepada pembaca non-statistik.</p>
 <div id="bab-4.-desain-pengumpulan-data-dan-validitas-inferensi" class="section level1" number="6">
 <h1><span class="header-section-number">6</span> Bab 4. Desain
 Pengumpulan Data dan Validitas Inferensi</h1>
+<!-- BEGIN AI-INLINE:03330e348351 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 4</span>
+<h3>
+Generative dan Agentic AI untuk Desain Pengumpulan Data dan Validitas
+Inferensi
+</h3>
+<p><strong>Arah RPS.</strong> Inferensi untuk model prediktif dan AI:
+ketidakpastian parameter dan prediksi, kalibrasi, interval prediksi,
+serta conformal prediction sebagai pengayaan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Pengaruh Desain Pengumpulan Data
+terhadap Inferensi Statistik.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk mengurai notasi dan menawarkan langkah derivasi
+alternatif tanpa menggantikan pembuktian mahasiswa.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter; agen wajib berhenti pada checkpoint
+dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas,
+satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rpsbox">
 <p><strong>Keterkaitan dengan RPS</strong><br />
 Pengaruh desain sampling, eksperimen, nonresponse, measurement error,
@@ -6453,6 +6666,63 @@ mengomunikasikan ketidakpastian kepada pembaca non-statistik.</p>
 <div id="bab-5.-metode-metode-penaksiran" class="section level1" number="7">
 <h1><span class="header-section-number">7</span> Bab 5. Metode-Metode
 Penaksiran</h1>
+<!-- BEGIN AI-INLINE:7fe52d0821b9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 5</span>
+<h3>
+Generative dan Agentic AI untuk Metode-Metode Penaksiran
+</h3>
+<p><strong>Arah RPS.</strong> Evaluasi bias, robustness,
+misspecification, dan validitas eksternal model; perbandingan inferensi
+frequentist, likelihood, Bayesian, dan pendekatan berbasis
+resampling.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK2 melalui fokus: Metode-Metode Penaksiran.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk merumuskan alternatif penjelasan, contoh, dan
+hipotesis awal.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara
+bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik,
+dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti
+kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rpsbox">
 <p><strong>Keterkaitan dengan RPS</strong><br />
 Metode penaksiran klasik dan modern, mencakup method of moments, maximum
@@ -7173,6 +7443,63 @@ kepada pembaca non-statistik.</p>
 <div id="bab-6.-penaksiran-interval" class="section level1" number="8">
 <h1><span class="header-section-number">8</span> Bab 6. Penaksiran
 Interval</h1>
+<!-- BEGIN AI-INLINE:866ba70e64f8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 6</span>
+<h3>
+Generative dan Agentic AI untuk Penaksiran Interval
+</h3>
+<p><strong>Arah RPS.</strong> Proyek data nyata yang membandingkan
+akurasi prediksi dengan kualitas inferensi, interpretabilitas, dan
+konsekuensi keputusan; penggunaan AI wajib diverifikasi secara statistik
+dan didokumentasikan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK2 melalui fokus: Penaksiran Interval.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk merumuskan alternatif penjelasan, contoh, dan
+hipotesis awal.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara
+bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik,
+dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti
+kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rpsbox">
 <p><strong>Keterkaitan dengan RPS</strong><br />
 Konsep dan konstruksi interval kepercayaan, interval prediksi, interval
@@ -7903,6 +8230,64 @@ kepada pembaca non-statistik.</p>
 <div id="bab-7.-pengujian-hipotesis-sederhana-dan-komposit" class="section level1" number="9">
 <h1><span class="header-section-number">9</span> Bab 7. Pengujian
 Hipotesis Sederhana dan Komposit</h1>
+<!-- BEGIN AI-INLINE:21fb1b223caf -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 7</span>
+<h3>
+Generative dan Agentic AI untuk Pengujian Hipotesis Sederhana dan
+Komposit
+</h3>
+<p><strong>Arah RPS.</strong> Inferensi untuk model prediktif dan AI:
+ketidakpastian parameter dan prediksi, kalibrasi, interval prediksi,
+serta conformal prediction sebagai pengayaan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK2 melalui fokus: Pengujian Hipotesis Sederhana dan
+Komposit.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk merumuskan alternatif penjelasan, contoh, dan
+hipotesis awal.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara
+bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik,
+dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti
+kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rpsbox">
 <p><strong>Keterkaitan dengan RPS</strong><br />
 Pengujian hipotesis sederhana-komposit, p-value, power, Neyman-Pearson,
@@ -8621,6 +9006,63 @@ mengomunikasikan ketidakpastian kepada pembaca non-statistik.</p>
 <div id="bab-8.-penaksiran-dan-pengujian-pada-model-lanjut" class="section level1" number="10">
 <h1><span class="header-section-number">10</span> Bab 8. Penaksiran dan
 Pengujian pada Model Lanjut</h1>
+<!-- BEGIN AI-INLINE:2db124f2cbdb -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 8</span>
+<h3>
+Generative dan Agentic AI untuk Penaksiran dan Pengujian pada Model
+Lanjut
+</h3>
+<p><strong>Arah RPS.</strong> Penggunaan AI hanya sesuai instruksi
+dosen; seluruh bantuan harus diungkapkan dan hasil diverifikasi.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1–2 melalui fokus: Ujian Tengah Semester.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rpsbox">
 <p><strong>Keterkaitan dengan RPS</strong><br />
 Penerapan penaksiran dan pengujian pada model linear, GLM, model
@@ -9341,6 +9783,65 @@ mengomunikasikan ketidakpastian kepada pembaca non-statistik.</p>
 <div id="bab-9.-pendekatan-likelihood-dalam-inferensi" class="section level1" number="11">
 <h1><span class="header-section-number">11</span> Bab 9. Pendekatan
 Likelihood dalam Inferensi</h1>
+<!-- BEGIN AI-INLINE:88fd80463c04 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 9</span>
+<h3>
+Generative dan Agentic AI untuk Pendekatan Likelihood dalam Inferensi
+</h3>
+<p><strong>Arah RPS.</strong> Evaluasi bias, robustness,
+misspecification, dan validitas eksternal model; perbandingan inferensi
+frequentist, likelihood, Bayesian, dan pendekatan berbasis
+resampling.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Penaksiran dan Pengujian pada Model
+Lanjut.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rpsbox">
 <p><strong>Keterkaitan dengan RPS</strong><br />
 Pendekatan likelihood untuk penaksiran, pengujian, pemilihan model,
@@ -10088,6 +10589,66 @@ ketidakpastian kepada pembaca non-statistik.</p>
 <div id="bab-10.-pendekatan-bayesian-dalam-penaksiran-dan-pengujian" class="section level1" number="12">
 <h1><span class="header-section-number">12</span> Bab 10. Pendekatan
 Bayesian dalam Penaksiran dan Pengujian</h1>
+<!-- BEGIN AI-INLINE:8d5ee7b67118 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 10</span>
+<h3>
+Generative dan Agentic AI untuk Pendekatan Bayesian dalam Penaksiran dan
+Pengujian
+</h3>
+<p><strong>Arah RPS.</strong> Proyek data nyata yang membandingkan
+akurasi prediksi dengan kualitas inferensi, interpretabilitas, dan
+konsekuensi keputusan; penggunaan AI wajib diverifikasi secara statistik
+dan didokumentasikan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Penaksiran dan Pengujian pada Model
+Lanjut.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rpsbox">
 <p><strong>Keterkaitan dengan RPS</strong><br />
 Inferensi Bayesian melalui prior, likelihood, posterior, credible
@@ -10613,6 +11174,27 @@ pengumpulan datanya berbeda.</p>
 <div id="mcmc-dan-komputasi-posterior" class="section level2" number="12.7">
 <h2><span class="header-section-number">12.7</span> 10.7 MCMC dan
 komputasi posterior</h2>
+<!-- BEGIN AI-INLINE:2f6df3f97eac -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada 10.7 MCMC dan komputasi posterior
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 10: Pendekatan Bayesian dalam
+Penaksiran dan Pengujian.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Topik <strong>MCMC dan komputasi posterior</strong> dalam bab
 <strong>Pendekatan Bayesian dalam Penaksiran dan Pengujian</strong>
 harus dibaca sebagai bagian dari rantai inferensi yang lebih luas. Pada
@@ -10828,6 +11410,65 @@ mengomunikasikan ketidakpastian kepada pembaca non-statistik.</p>
 <div id="bab-11.-evaluasi-robustness-dan-efisiensi-estimator" class="section level1" number="13">
 <h1><span class="header-section-number">13</span> Bab 11. Evaluasi
 Robustness dan Efisiensi Estimator</h1>
+<!-- BEGIN AI-INLINE:b9be3a92cdc0 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 11</span>
+<h3>
+Generative dan Agentic AI untuk Evaluasi Robustness dan Efisiensi
+Estimator
+</h3>
+<p><strong>Arah RPS.</strong> Inferensi untuk model prediktif dan AI:
+ketidakpastian parameter dan prediksi, kalibrasi, interval prediksi,
+serta conformal prediction sebagai pengayaan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Pendekatan Likelihood dan Bayesian
+pada Penaksiran dan Pengujian.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk mengurai notasi dan menawarkan langkah derivasi
+alternatif tanpa menggantikan pembuktian mahasiswa.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter; agen wajib berhenti pada checkpoint
+dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas,
+satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rpsbox">
 <p><strong>Keterkaitan dengan RPS</strong><br />
 Robustness terhadap outlier dan pelanggaran asumsi, influence function,
@@ -11539,6 +12180,64 @@ mengomunikasikan ketidakpastian kepada pembaca non-statistik.</p>
 <div id="bab-12.-pengujian-hipotesis-lanjut" class="section level1" number="14">
 <h1><span class="header-section-number">14</span> Bab 12. Pengujian
 Hipotesis Lanjut</h1>
+<!-- BEGIN AI-INLINE:aa1883e46901 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 12</span>
+<h3>
+Generative dan Agentic AI untuk Pengujian Hipotesis Lanjut
+</h3>
+<p><strong>Arah RPS.</strong> Evaluasi bias, robustness,
+misspecification, dan validitas eksternal model; perbandingan inferensi
+frequentist, likelihood, Bayesian, dan pendekatan berbasis
+resampling.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Evaluasi Robustness dan Efisiensi
+Estimator.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk merumuskan alternatif penjelasan, contoh, dan
+hipotesis awal.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara
+bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik,
+dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti
+kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rpsbox">
 <p><strong>Keterkaitan dengan RPS</strong><br />
 Pengujian lanjutan mencakup multiple testing, permutation test,
@@ -12262,6 +12961,65 @@ kepada pembaca non-statistik.</p>
 <div id="bab-13.-aplikasi-komputasi-dalam-inferensi-statistik" class="section level1" number="15">
 <h1><span class="header-section-number">15</span> Bab 13. Aplikasi
 Komputasi dalam Inferensi Statistik</h1>
+<!-- BEGIN AI-INLINE:40204e1d544c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 13</span>
+<h3>
+Generative dan Agentic AI untuk Aplikasi Komputasi dalam Inferensi
+Statistik
+</h3>
+<p><strong>Arah RPS.</strong> Proyek data nyata yang membandingkan
+akurasi prediksi dengan kualitas inferensi, interpretabilitas, dan
+konsekuensi keputusan; penggunaan AI wajib diverifikasi secara statistik
+dan didokumentasikan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK4 melalui fokus: Pengujian Hipotesis Lanjut.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rpsbox">
 <p><strong>Keterkaitan dengan RPS</strong><br />
 Implementasi komputasi statistik menggunakan simulasi Monte Carlo,
@@ -12693,6 +13451,28 @@ berbeda.</p>
 <div id="validasi-model-secara-komputasional" class="section level2" number="15.6">
 <h2><span class="header-section-number">15.6</span> 13.6 Validasi model
 secara komputasional</h2>
+<!-- BEGIN AI-INLINE:003997488865 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada 13.6 Validasi model secara komputasional
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 13: Aplikasi Komputasi dalam
+Inferensi Statistik.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Topik <strong>Validasi model secara komputasional</strong> dalam bab
 <strong>Aplikasi Komputasi dalam Inferensi Statistik</strong> harus
 dibaca sebagai bagian dari rantai inferensi yang lebih luas. Pada kasus
@@ -12853,6 +13633,28 @@ berbeda.</p>
 <div id="latihan-komputasi" class="section level2" number="15.8">
 <h2><span class="header-section-number">15.8</span> 13.8 Latihan
 komputasi</h2>
+<!-- BEGIN AI-INLINE:31c526d5bfe8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada 13.8 Latihan komputasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 13: Aplikasi Komputasi dalam
+Inferensi Statistik.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Topik <strong>Latihan komputasi</strong> dalam bab <strong>Aplikasi
 Komputasi dalam Inferensi Statistik</strong> harus dibaca sebagai bagian
 dari rantai inferensi yang lebih luas. Pada kasus pembuatan laporan R
@@ -12983,6 +13785,63 @@ mengomunikasikan ketidakpastian kepada pembaca non-statistik.</p>
 <div id="bab-14.-studi-kasus-terintegrasi" class="section level1" number="16">
 <h1><span class="header-section-number">16</span> Bab 14. Studi Kasus
 Terintegrasi</h1>
+<!-- BEGIN AI-INLINE:fd75a0477993 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 14</span>
+<h3>
+Generative dan Agentic AI untuk Studi Kasus Terintegrasi
+</h3>
+<p><strong>Arah RPS.</strong> Inferensi untuk model prediktif dan AI:
+ketidakpastian parameter dan prediksi, kalibrasi, interval prediksi,
+serta conformal prediction sebagai pengayaan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK4 melalui fokus: Pengujian Hipotesis Lanjut.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rpsbox">
 <p><strong>Keterkaitan dengan RPS</strong><br />
 Integrasi konsep estimasi, pengujian, desain data, likelihood, Bayesian,
@@ -13010,6 +13869,29 @@ biostatistik, industri, dan sains data.</p>
 <div id="kasus-biostatistik" class="section level2" number="16.1">
 <h2><span class="header-section-number">16.1</span> 14.1 Kasus
 biostatistik</h2>
+<!-- BEGIN AI-INLINE:f47e99a50e81 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada 14.1 Kasus biostatistik
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Studi Kasus Terintegrasi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Inferensi untuk model
+prediktif dan AI: ketidakpastian parameter dan prediksi, kalibrasi,
+interval prediksi, serta conformal prediction sebagai pengayaan.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Topik <strong>Kasus biostatistik</strong> dalam bab <strong>Studi
 Kasus Terintegrasi</strong> harus dibaca sebagai bagian dari rantai
 inferensi yang lebih luas. Pada kasus analisis data kesehatan, sosial,
@@ -13091,6 +13973,29 @@ berubah apabila desain pengumpulan datanya berbeda.</p>
 <div id="kasus-industri" class="section level2" number="16.2">
 <h2><span class="header-section-number">16.2</span> 14.2 Kasus
 industri</h2>
+<!-- BEGIN AI-INLINE:da8acb43f593 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada 14.2 Kasus industri
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Studi Kasus Terintegrasi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Inferensi untuk model
+prediktif dan AI: ketidakpastian parameter dan prediksi, kalibrasi,
+interval prediksi, serta conformal prediction sebagai pengayaan.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Topik <strong>Kasus industri</strong> dalam bab <strong>Studi Kasus
 Terintegrasi</strong> harus dibaca sebagai bagian dari rantai inferensi
 yang lebih luas. Pada kasus analisis data kesehatan, sosial, industri,
@@ -13171,6 +14076,29 @@ berubah apabila desain pengumpulan datanya berbeda.</p>
 <div id="kasus-sosial" class="section level2" number="16.3">
 <h2><span class="header-section-number">16.3</span> 14.3 Kasus
 sosial</h2>
+<!-- BEGIN AI-INLINE:655d59a69a84 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada 14.3 Kasus sosial
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Studi Kasus Terintegrasi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Inferensi untuk model
+prediktif dan AI: ketidakpastian parameter dan prediksi, kalibrasi,
+interval prediksi, serta conformal prediction sebagai pengayaan.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Topik <strong>Kasus sosial</strong> dalam bab <strong>Studi Kasus
 Terintegrasi</strong> harus dibaca sebagai bagian dari rantai inferensi
 yang lebih luas. Pada kasus analisis data kesehatan, sosial, industri,
@@ -13251,6 +14179,29 @@ berubah apabila desain pengumpulan datanya berbeda.</p>
 <div id="kasus-aktuaria" class="section level2" number="16.4">
 <h2><span class="header-section-number">16.4</span> 14.4 Kasus
 aktuaria</h2>
+<!-- BEGIN AI-INLINE:2107481a6292 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada 14.4 Kasus aktuaria
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Studi Kasus Terintegrasi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Inferensi untuk model
+prediktif dan AI: ketidakpastian parameter dan prediksi, kalibrasi,
+interval prediksi, serta conformal prediction sebagai pengayaan.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Topik <strong>Kasus aktuaria</strong> dalam bab <strong>Studi Kasus
 Terintegrasi</strong> harus dibaca sebagai bagian dari rantai inferensi
 yang lebih luas. Pada kasus analisis data kesehatan, sosial, industri,
@@ -13331,6 +14282,29 @@ berubah apabila desain pengumpulan datanya berbeda.</p>
 <div id="kasus-sains-data" class="section level2" number="16.5">
 <h2><span class="header-section-number">16.5</span> 14.5 Kasus sains
 data</h2>
+<!-- BEGIN AI-INLINE:b7d7872492ae -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada 14.5 Kasus sains data
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Studi Kasus Terintegrasi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Inferensi untuk model
+prediktif dan AI: ketidakpastian parameter dan prediksi, kalibrasi,
+interval prediksi, serta conformal prediction sebagai pengayaan.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Topik <strong>Kasus sains data</strong> dalam bab <strong>Studi Kasus
 Terintegrasi</strong> harus dibaca sebagai bagian dari rantai inferensi
 yang lebih luas. Pada kasus analisis data kesehatan, sosial, industri,
@@ -13574,6 +14548,29 @@ berubah apabila desain pengumpulan datanya berbeda.</p>
 <div id="latihan-studi-kasus" class="section level2" number="16.8">
 <h2><span class="header-section-number">16.8</span> 14.8 Latihan studi
 kasus</h2>
+<!-- BEGIN AI-INLINE:85b0169227fb -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada 14.8 Latihan studi kasus
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Studi Kasus Terintegrasi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Inferensi untuk model
+prediktif dan AI: ketidakpastian parameter dan prediksi, kalibrasi,
+interval prediksi, serta conformal prediction sebagai pengayaan.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Topik <strong>Latihan studi kasus</strong> dalam bab <strong>Studi
 Kasus Terintegrasi</strong> harus dibaca sebagai bagian dari rantai
 inferensi yang lebih luas. Pada kasus analisis data kesehatan, sosial,
@@ -13704,6 +14701,66 @@ kepada pembaca non-statistik.</p>
 <div id="bab-15.-panduan-proyek-akhir-dan-penyusunan-ebook" class="section level1" number="17">
 <h1><span class="header-section-number">17</span> Bab 15. Panduan Proyek
 Akhir dan Penyusunan Ebook</h1>
+<!-- BEGIN AI-INLINE:dce7220b388e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 15</span>
+<h3>
+Generative dan Agentic AI untuk Panduan Proyek Akhir dan Penyusunan
+Ebook
+</h3>
+<p><strong>Arah RPS.</strong> Evaluasi bias, robustness,
+misspecification, dan validitas eksternal model; perbandingan inferensi
+frequentist, likelihood, Bayesian, dan pendekatan berbasis
+resampling.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK4 melalui fokus: Aplikasi Komputasi dalam Inferensi
+Statistik.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rpsbox">
 <p><strong>Keterkaitan dengan RPS</strong><br />
 Panduan proyek akhir berupa ebook Statistika Inferensial yang membahas
@@ -13731,6 +14788,31 @@ biostatistik, industri, dan sains data.</p>
 <div id="tema-proyek" class="section level2" number="17.1">
 <h2><span class="header-section-number">17.1</span> 15.1 Tema
 proyek</h2>
+<!-- BEGIN AI-INLINE:bd1f4ba8e8f1 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada 15.1 Tema proyek
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 15: Panduan Proyek Akhir dan
+Penyusunan Ebook.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Evaluasi bias,
+robustness, misspecification, dan validitas eksternal model;
+perbandingan inferensi frequentist, likelihood, Bayesian, dan pendekatan
+berbasis resampling. Generative AI dapat menghasilkan beberapa skenario
+pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap
+hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Topik <strong>Tema proyek</strong> dalam bab <strong>Panduan Proyek
 Akhir dan Penyusunan Ebook</strong> harus dibaca sebagai bagian dari
 rantai inferensi yang lebih luas. Pada kasus proyek kelompok mahasiswa
@@ -13810,6 +14892,31 @@ dapat berubah apabila desain pengumpulan datanya berbeda.</p>
 <div id="struktur-laporan" class="section level2" number="17.2">
 <h2><span class="header-section-number">17.2</span> 15.2 Struktur
 laporan</h2>
+<!-- BEGIN AI-INLINE:b6b6da658a36 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada 15.2 Struktur laporan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 15: Panduan Proyek Akhir dan
+Penyusunan Ebook.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Evaluasi bias,
+robustness, misspecification, dan validitas eksternal model;
+perbandingan inferensi frequentist, likelihood, Bayesian, dan pendekatan
+berbasis resampling. Generative AI dapat menghasilkan beberapa skenario
+pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap
+hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Topik <strong>Struktur laporan</strong> dalam bab <strong>Panduan
 Proyek Akhir dan Penyusunan Ebook</strong> harus dibaca sebagai bagian
 dari rantai inferensi yang lebih luas. Pada kasus proyek kelompok
@@ -13970,6 +15077,28 @@ dapat berubah apabila desain pengumpulan datanya berbeda.</p>
 <div id="kriteria-kualitas-komputasi" class="section level2" number="17.4">
 <h2><span class="header-section-number">17.4</span> 15.4 Kriteria
 kualitas komputasi</h2>
+<!-- BEGIN AI-INLINE:b1f1cb286f9e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada 15.4 Kriteria kualitas komputasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 15: Panduan Proyek Akhir dan
+Penyusunan Ebook.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Topik <strong>Kriteria kualitas komputasi</strong> dalam bab
 <strong>Panduan Proyek Akhir dan Penyusunan Ebook</strong> harus dibaca
 sebagai bagian dari rantai inferensi yang lebih luas. Pada kasus proyek
@@ -14289,6 +15418,31 @@ dapat berubah apabila desain pengumpulan datanya berbeda.</p>
 <div id="latihan-perancangan-proyek" class="section level2" number="17.8">
 <h2><span class="header-section-number">17.8</span> 15.8 Latihan
 perancangan proyek</h2>
+<!-- BEGIN AI-INLINE:58a671d2a3dd -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada 15.8 Latihan perancangan proyek
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 15: Panduan Proyek Akhir dan
+Penyusunan Ebook.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Evaluasi bias,
+robustness, misspecification, dan validitas eksternal model;
+perbandingan inferensi frequentist, likelihood, Bayesian, dan pendekatan
+berbasis resampling. Generative AI dapat menghasilkan beberapa skenario
+pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap
+hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Topik <strong>Latihan perancangan proyek</strong> dalam bab
 <strong>Panduan Proyek Akhir dan Penyusunan Ebook</strong> harus dibaca
 sebagai bagian dari rantai inferensi yang lebih luas. Pada kasus proyek
@@ -14505,6 +15659,28 @@ dan bandingkan Bonferroni dengan false discovery rate.</li>
 <div id="a.5-soal-bayesian-dan-komputasi" class="section level2" number="18.5">
 <h2><span class="header-section-number">18.5</span> A.5 Soal Bayesian
 dan komputasi</h2>
+<!-- BEGIN AI-INLINE:9199778342eb -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada A.5 Soal Bayesian dan komputasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 15: Panduan Proyek Akhir dan
+Penyusunan Ebook.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Gunakan model Beta-Binomial untuk mengestimasi proporsi kejadian.
 Tunjukkan pengaruh prior terhadap posterior ketika ukuran sampel kecil
@@ -14653,6 +15829,78 @@ desain sampling kompleks dibanding simple random sampling.</p>
 <h1><span class="header-section-number">23</span> Referensi</h1>
 <p>Daftar pustaka dihasilkan dari berkas BibTeX
 <code>references_statistika_inferensial.bib</code>.</p>
+<!-- BEGIN ADOPSI AI RPS 2026 -->
+<div id="penyelarasan-materi-dengan-rps-revisi-ai-2026" class="section level2" number="23.1">
+<h2><span class="header-section-number">23.1</span> Penyelarasan Materi
+dengan RPS Revisi AI 2026</h2>
+<p>Materi <strong>Statistik Inferensial</strong> ini telah diselaraskan
+dengan RPS Revisi AI 2026. Rumusan CPL program studi tetap dan tidak
+diubah. Generative AI maupun agentic AI hanya digunakan sebagai alat
+bantu untuk mempercepat ketercapaian CPMK dan Sub-CPMK; penalaran
+statistika, keputusan metodologis, dan tanggung jawab akademik tetap
+berada pada mahasiswa.</p>
+<div id="integrasi-ai-kontekstual" class="section level3" number="23.1.1">
+<h3><span class="header-section-number">23.1.1</span> Integrasi AI
+kontekstual</h3>
+<ul>
+<li>Inferensi untuk model prediktif dan AI: ketidakpastian parameter dan
+prediksi, kalibrasi, interval prediksi, serta conformal prediction
+sebagai pengayaan.</li>
+<li>Evaluasi bias, robustness, misspecification, dan validitas eksternal
+model; perbandingan inferensi frequentist, likelihood, Bayesian, dan
+pendekatan berbasis resampling.</li>
+<li>Proyek data nyata yang membandingkan akurasi prediksi dengan
+kualitas inferensi, interpretabilitas, dan konsekuensi keputusan;
+penggunaan AI wajib diverifikasi secara statistik dan
+didokumentasikan.</li>
+</ul>
+</div>
+<div id="protokol-penggunaan-ai" class="section level3" number="23.1.2">
+<h3><span class="header-section-number">23.1.2</span> Protokol
+penggunaan AI</h3>
+<ol style="list-style-type: decimal">
+<li>Nyatakan alat, tujuan penggunaan, dan bagian pekerjaan yang dibantu
+AI.</li>
+<li>Simpan prompt log ringkas, sumber, versi kode/notebook, dan
+perubahan yang dilakukan.</li>
+<li>Verifikasi keluaran terhadap asumsi metode, sumber primer, hasil
+numerik, diagnostik, ketidakpastian, robustness, bias/fairness, privasi,
+dan konteks.</li>
+<li>Jangan memasukkan data pribadi, rahasia, soal asesmen tertutup, atau
+kredensial ke layanan AI yang tidak disetujui.</li>
+<li>Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil
+secara mandiri.</li>
+</ol>
+</div>
+<div id="bukti-asesmen" class="section level3" number="23.1.3">
+<h3><span class="header-section-number">23.1.3</span> Bukti asesmen</h3>
+<!-- BEGIN AI-INLINE:c23c94c64fe3 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Bukti asesmen
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 15: Panduan Proyek Akhir dan
+Penyusunan Ebook.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
+<p>Penilaian berfokus pada ketepatan metode, validasi dan
+ketidakpastian, reproducibility, interpretasi, komunikasi, serta
+transparansi penggunaan AI. Keluaran AI tanpa verifikasi bukan bukti
+ketercapaian CPMK.</p>
+<!-- END ADOPSI AI RPS 2026 -->
 <div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
 <div id="ref-agresti2015" class="csl-entry">
 Agresti, Alan. 2015. <em>Foundations of Linear and Generalized Linear
@@ -14737,31 +15985,14 @@ Statistical Inference</em>. Springer.
 </div>
 </div>
 </div>
+</div>
+</div>
 
 
 
 </div>
 </div>
 
-
-
-
-
-<!-- BEGIN ADOPSI AI RPS 2026 -->
-<section id="penyelarasan-rps-ai-2026" style="margin:2rem 0;padding:1.5rem;border-left:8px solid #f2a51a;background:#eef5f8;border-radius:8px">
-  <h2>Penyelarasan Materi dengan RPS Revisi AI 2026</h2>
-  <p>Materi <strong>Statistik Inferensial</strong> ini mempertahankan rumusan CPL yang berlaku. AI ditempatkan sebagai alat bantu untuk mempercepat ketercapaian CPMK dan Sub-CPMK, bukan sebagai CPL baru atau pengganti penalaran statistika.</p>
-  <h3>Integrasi AI kontekstual</h3><ul><li>Inferensi untuk model prediktif dan AI: ketidakpastian parameter dan prediksi, kalibrasi, interval prediksi, serta conformal prediction sebagai pengayaan.</li><li>Evaluasi bias, robustness, misspecification, dan validitas eksternal model; perbandingan inferensi frequentist, likelihood, Bayesian, dan pendekatan berbasis resampling.</li><li>Proyek data nyata yang membandingkan akurasi prediksi dengan kualitas inferensi, interpretabilitas, dan konsekuensi keputusan; penggunaan AI wajib diverifikasi secara statistik dan didokumentasikan.</li></ul>
-  <h3>Protokol penggunaan AI</h3>
-  <ol>
-    <li>Ungkapkan alat, tujuan, prompt log ringkas, sumber, dan perubahan yang dilakukan.</li>
-    <li>Verifikasi asumsi, kode, hasil numerik, diagnostik, ketidakpastian, robustness, bias/fairness, privasi, dan konteks.</li>
-    <li>Jangan mengunggah data pribadi, rahasia, asesmen tertutup, atau kredensial ke layanan yang tidak disetujui.</li>
-    <li>Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil secara mandiri.</li>
-  </ol>
-  <p><strong>Bukti asesmen:</strong> ketepatan metode, validasi, reproducibility, interpretasi, komunikasi, dan transparansi penggunaan AI. Keluaran AI tanpa verifikasi bukan bukti ketercapaian CPMK.</p>
-</section>
-<!-- END ADOPSI AI RPS 2026 -->
 </div>
 
 <script>
@@ -14826,6 +16057,16 @@ $(document).ready(function ()  {
     // tocify
     var toc = $("#TOC").tocify(options).data("toc-tocify");
 });
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
 </script>
 
 </body>

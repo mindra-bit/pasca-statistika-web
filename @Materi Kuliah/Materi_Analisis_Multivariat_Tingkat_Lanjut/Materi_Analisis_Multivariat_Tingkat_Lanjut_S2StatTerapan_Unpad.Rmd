@@ -147,7 +147,6 @@ table {
 </style>
 <!-- END UNPAD MATERIAL STYLE -->
 
-
 <!-- BEGIN UNPAD MATERIAL ENHANCEMENT -->
 
 ```{r setup-unpad-render, include=FALSE}
@@ -164,7 +163,6 @@ knitr::opts_chunk$set(
 )
 set.seed(2025)
 ```
-
 
 <div class="unpad-cover">
 <div class="unpad-cover__brand">
@@ -210,6 +208,30 @@ Semester: <strong>1</strong> | Bobot: <strong>3 SKS (T = 2; P = 1)</strong> | Ta
 Nuansa visual: <strong>colorful coklat degradasi</strong> dengan kotak rumus coklat muda dan tulisan hitam agar nyaman dibaca.
 </div>
 
+
+<!-- BEGIN AI-INLINE-STYLE-2026 -->
+<style>
+.ai-inline {
+  margin: 1rem 0 1.35rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid #bfd9d5;
+  border-left: 7px solid #0f766e;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #eff9f7, #fffaf0);
+}
+.ai-inline--agentic { border-left-color: #17395c; background: linear-gradient(135deg, #eef5fb, #f5faf8); }
+.ai-inline--assessment { border-left-color: #a35d00; background: #fff8e8; }
+.ai-inline h3, .ai-inline h4 { margin-top: 0; color: #17395c; }
+.ai-inline p:last-child, .ai-inline ul:last-child { margin-bottom: 0; }
+.ai-inline__label {
+  display: inline-block; margin-bottom: .45rem; padding: .2rem .55rem;
+  border-radius: 999px; background: #17395c; color: white;
+  font-size: .78rem; font-weight: 800;
+}
+.ai-inline table { width: 100%; margin: .6rem 0; background: white; }
+</style>
+<!-- END AI-INLINE-STYLE-2026 -->
+
 # Prakata
 
 Materi ini disusun sebagai bahan ajar komprehensif untuk mata kuliah **Analisis Multivariat Tingkat Lanjut** pada Program Studi **S2 Statistika Terapan FMIPA Universitas Padjadjaran**. Arah penyusunan mengikuti RPS-OBE mata kuliah, terutama capaian pembelajaran yang menekankan kemampuan menganalisis konsep dasar, asumsi, distribusi multivariat, uji vektor rata-rata, desain sampling, regresi multivariat, PCA, analisis faktor, diskriminan, clustering, korespondensi, biplot, serta kemampuan menyusun laporan ilmiah dan visualisasi hasil analisis. Dengan demikian, materi ini tidak hanya berbentuk ringkasan teori, tetapi juga mengintegrasikan alur berpikir metodologis, contoh kasus, formula matematis, algoritma kerja, interpretasi output, dan contoh implementasi R.
@@ -246,8 +268,30 @@ install.packages(c("tidyverse", "MASS", "psych", "MVN", "Hotelling", "FactoMineR
 4. Setelah memperoleh output, tuliskan interpretasi dalam bahasa substantif.
 5. Untuk tugas akhir, pilih dataset nyata dan gunakan alur laporan yang disediakan pada bab akhir.
 
-
 # Bab 1. Orientasi Analisis Multivariat dan Karakteristik Data
+
+<!-- BEGIN AI-INLINE:9f62607f2725 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 1</span>
+<h3>Generative dan Agentic AI untuk Orientasi Analisis Multivariat dan Karakteristik Data</h3>
+
+**Arah RPS.** Perbandingan PCA, analisis faktor, diskriminan, dan clustering dengan autoencoder, embedding, serta metode manifold learning.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK1 melalui fokus: Konsep Dasar Analisis Multivariat dan Distribusi Multivariat. |
+| Generative AI | Digunakan untuk menyusun data dictionary, mendeteksi potensi masalah kualitas data, dan mengusulkan aturan pemeriksaan. |
+| Agentic AI | Dapat memprofilkan data, menjalankan validasi skema, menandai missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa asal-usul data, unit observasi, coverage, kebocoran data, privasi, dan keputusan pembersihan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 <span class="badge-brown">Pertemuan 1</span> <span class="badge-brown">SubCPMK1</span>
 
@@ -271,6 +315,16 @@ Setelah mempelajari bab ini, mahasiswa diharapkan mampu:
 
 ## Konsep Inti
 
+<!-- BEGIN AI-INLINE:f3aa064fcbb0 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Orientasi Analisis Multivariat dan Karakteristik Data.</p>
+<p>Minta AI menjelaskan **Orientasi Analisis Multivariat dan Karakteristik Data** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Orientasi Analisis Multivariat dan Karakteristik Data merupakan bagian penting dari analisis multivariat tingkat lanjut karena berhubungan langsung dengan konsep dasar data multivariat, tipe variabel, matriks data, korelasi, kovarians, dan logika analisis simultan. Pada level magister, mahasiswa diharapkan tidak hanya mampu menjalankan prosedur komputasi, tetapi juga memahami struktur data, asumsi, keterbatasan, dan konsekuensi interpretasi. Pembelajaran topik ini perlu dimulai dengan pengertian bahwa setiap observasi multivariat adalah satu vektor informasi. Ketika vektor tersebut dianalisis, perhatian utama bukan hanya nilai tiap variabel, melainkan pola bersama antarvariabel. Perspektif ini membedakan analisis multivariat dari kumpulan analisis univariat yang dilakukan secara terpisah.
 
 Dalam praktik, matriks data sering menjadi pintu masuk untuk memahami data. Namun, penggunaan metode tersebut perlu didukung oleh pemahaman tentang kualitas pengukuran, desain pengambilan sampel, ukuran sampel, dan tujuan analisis. Jika tujuan analisis adalah eksplorasi, fokusnya dapat diarahkan pada struktur pola, visualisasi, dan reduksi dimensi. Jika tujuan analisis adalah inferensi, perhatian perlu diberikan pada asumsi distribusi, hipotesis, dan kontrol kesalahan. Jika tujuan analisis adalah prediksi atau klasifikasi, validasi model menjadi bagian yang tidak boleh ditinggalkan.
@@ -292,6 +346,16 @@ Vektor rata-rata sampel adalah $\bar{\mathbf{x}}=(\bar{x}_1,\ldots,\bar{x}_p)'$,
 </div>
 
 ## Narasi Pengayaan Teoretis dan Terapan
+
+<!-- BEGIN AI-INLINE:883985c8956b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Narasi Pengayaan Teoretis dan Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Orientasi Analisis Multivariat dan Karakteristik Data.</p>
+<p>Minta AI menjelaskan **Orientasi Analisis Multivariat dan Karakteristik Data** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam konteks Orientasi Analisis Multivariat dan Karakteristik Data, aspek keterkaitan antara tujuan penelitian dan pilihan metode menjadi penting karena data multivariat hampir selalu membawa informasi yang saling bergantung. Ketika beberapa variabel diamati pada unit yang sama, perubahan pada satu variabel sering tidak berdiri sendiri, melainkan terkait dengan perubahan variabel lain. Oleh sebab itu, analisis yang hanya memotong data menjadi analisis univariat dapat kehilangan struktur utama yang justru menjadi alasan mengapa data dikumpulkan secara multivariat. Pada aplikasi pemasaran dan perilaku pelanggan, misalnya, indikator layanan, perilaku, risiko, dan capaian sering bergerak bersama sehingga kesimpulan perlu mempertimbangkan korelasi, variasi bersama, serta kemungkinan adanya dimensi laten. Prinsip ini sejalan dengan penekanan literatur klasik bahwa kekuatan analisis multivariat terletak pada pembacaan serentak terhadap vektor observasi, bukan pada penjumlahan mekanis dari banyak uji tunggal [@johnson2019; @rencher2012; @tabachnick2019].
 
@@ -355,6 +419,16 @@ Berikut adalah algoritma kerja yang dapat digunakan mahasiswa ketika menerapkan 
 
 ## Contoh Implementasi R
 
+<!-- BEGIN AI-INLINE:b2a20cfe2015 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Contoh Implementasi R</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Orientasi Analisis Multivariat dan Karakteristik Data.</p>
+<p>Agen dapat memprofilkan data, menjalankan validasi skema, menandai missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** asal-usul data, unit observasi, coverage, kebocoran data, privasi, dan keputusan pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 ```{r orientasi-data, eval=FALSE}
 # Contoh data multivariat sederhana menggunakan data iris
 X <- iris[, 1:4]
@@ -409,6 +483,29 @@ Bab ini menegaskan bahwa **Orientasi Analisis Multivariat dan Karakteristik Data
 
 # Bab 2. Distribusi Normal Multivariat dan Pemeriksaan Asumsi
 
+<!-- BEGIN AI-INLINE:ea2375d5e6f1 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 2</span>
+<h3>Generative dan Agentic AI untuk Distribusi Normal Multivariat dan Pemeriksaan Asumsi</h3>
+
+**Arah RPS.** Validasi cluster dan klasifikasi dengan resampling, penanganan high-dimensional data, interpretabilitas representasi, serta deteksi bias antarkelompok.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK1 melalui fokus: Konsep Dasar Analisis Multivariat dan Distribusi Multivariat. |
+| Generative AI | Digunakan untuk merumuskan alternatif penjelasan, contoh, dan hipotesis awal. |
+| Agentic AI | Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <span class="badge-brown">Pertemuan 1--2</span> <span class="badge-brown">SubCPMK1</span>
 
 <div class="concept-box"><strong>Fokus bab:</strong> distribusi normal multivariat, ellipsoid probabilitas, normalitas marginal, normalitas multivariat, outlier multivariat, dan diagnostik asumsi. Topik ini merujuk pada bahan kajian RPS dan dikembangkan dengan rujukan utama [@mardia1979; @anderson2003; @johnson2019].</div>
@@ -431,6 +528,16 @@ Setelah mempelajari bab ini, mahasiswa diharapkan mampu:
 
 ## Konsep Inti
 
+<!-- BEGIN AI-INLINE:32f3d35836ad -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 2: Distribusi Normal Multivariat dan Pemeriksaan Asumsi.</p>
+<p>Minta AI menjelaskan **Distribusi Normal Multivariat dan Pemeriksaan Asumsi** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Distribusi Normal Multivariat dan Pemeriksaan Asumsi merupakan bagian penting dari analisis multivariat tingkat lanjut karena berhubungan langsung dengan distribusi normal multivariat, ellipsoid probabilitas, normalitas marginal, normalitas multivariat, outlier multivariat, dan diagnostik asumsi. Pada level magister, mahasiswa diharapkan tidak hanya mampu menjalankan prosedur komputasi, tetapi juga memahami struktur data, asumsi, keterbatasan, dan konsekuensi interpretasi. Pembelajaran topik ini perlu dimulai dengan pengertian bahwa setiap observasi multivariat adalah satu vektor informasi. Ketika vektor tersebut dianalisis, perhatian utama bukan hanya nilai tiap variabel, melainkan pola bersama antarvariabel. Perspektif ini membedakan analisis multivariat dari kumpulan analisis univariat yang dilakukan secara terpisah.
 
 Dalam praktik, fungsi densitas normal multivariat sering menjadi pintu masuk untuk memahami data. Namun, penggunaan metode tersebut perlu didukung oleh pemahaman tentang kualitas pengukuran, desain pengambilan sampel, ukuran sampel, dan tujuan analisis. Jika tujuan analisis adalah eksplorasi, fokusnya dapat diarahkan pada struktur pola, visualisasi, dan reduksi dimensi. Jika tujuan analisis adalah inferensi, perhatian perlu diberikan pada asumsi distribusi, hipotesis, dan kontrol kesalahan. Jika tujuan analisis adalah prediksi atau klasifikasi, validasi model menjadi bagian yang tidak boleh ditinggalkan.
@@ -448,6 +555,16 @@ D_i^2=(\mathbf{x}_i-\bar{\mathbf{x}})'\mathbf{S}^{-1}(\mathbf{x}_i-\bar{\mathbf{
 </div>
 
 ## Narasi Pengayaan Teoretis dan Terapan
+
+<!-- BEGIN AI-INLINE:c4e736a7f5e2 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Narasi Pengayaan Teoretis dan Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 2: Distribusi Normal Multivariat dan Pemeriksaan Asumsi.</p>
+<p>Minta AI menjelaskan **Distribusi Normal Multivariat dan Pemeriksaan Asumsi** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam konteks Distribusi Normal Multivariat dan Pemeriksaan Asumsi, aspek keterkaitan antara tujuan penelitian dan pilihan metode menjadi penting karena data multivariat hampir selalu membawa informasi yang saling bergantung. Ketika beberapa variabel diamati pada unit yang sama, perubahan pada satu variabel sering tidak berdiri sendiri, melainkan terkait dengan perubahan variabel lain. Oleh sebab itu, analisis yang hanya memotong data menjadi analisis univariat dapat kehilangan struktur utama yang justru menjadi alasan mengapa data dikumpulkan secara multivariat. Pada aplikasi pendidikan tinggi, misalnya, indikator layanan, perilaku, risiko, dan capaian sering bergerak bersama sehingga kesimpulan perlu mempertimbangkan korelasi, variasi bersama, serta kemungkinan adanya dimensi laten. Prinsip ini sejalan dengan penekanan literatur klasik bahwa kekuatan analisis multivariat terletak pada pembacaan serentak terhadap vektor observasi, bukan pada penjumlahan mekanis dari banyak uji tunggal [@mardia1979; @anderson2003; @johnson2019].
 
@@ -511,6 +628,16 @@ Berikut adalah algoritma kerja yang dapat digunakan mahasiswa ketika menerapkan 
 
 ## Contoh Implementasi R
 
+<!-- BEGIN AI-INLINE:d584597232df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Contoh Implementasi R</h4>
+<p><strong>Konteks:</strong> Pertemuan 2: Distribusi Normal Multivariat dan Pemeriksaan Asumsi.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 ```{r normalitas-multivariat, eval=FALSE}
 X <- as.matrix(iris[, 1:4])
 xbar <- colMeans(X)
@@ -570,6 +697,29 @@ Bab ini menegaskan bahwa **Distribusi Normal Multivariat dan Pemeriksaan Asumsi*
 
 # Bab 3. Uji Vektor Rata-rata: Hotelling T² dan Generalisasi
 
+<!-- BEGIN AI-INLINE:61f7f009b6f1 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 3</span>
+<h3>Generative dan Agentic AI untuk Uji Vektor Rata-rata: Hotelling T² dan Generalisasi</h3>
+
+**Arah RPS.** Proyek segmentasi atau klasifikasi multivariat menggunakan data nyata, disertai visualisasi, analisis ketidakpastian, dan argumentasi pemilihan model.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK1 melalui fokus: Uji Vektor Rata-rata (Hotelling’s T² dan generalisasi). |
+| Generative AI | Digunakan untuk merumuskan alternatif penjelasan, contoh, dan hipotesis awal. |
+| Agentic AI | Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <span class="badge-brown">Pertemuan 2</span> <span class="badge-brown">SubCPMK1</span>
 
 <div class="concept-box"><strong>Fokus bab:</strong> pengujian hipotesis terhadap vektor rata-rata, Hotelling T² satu sampel, dua sampel, interval simultan, dan hubungan dengan MANOVA. Topik ini merujuk pada bahan kajian RPS dan dikembangkan dengan rujukan utama [@johnson2019; @anderson2003; @rencher2012].</div>
@@ -592,6 +742,16 @@ Setelah mempelajari bab ini, mahasiswa diharapkan mampu:
 
 ## Konsep Inti
 
+<!-- BEGIN AI-INLINE:b889600fbd88 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 3: Uji Vektor Rata-rata: Hotelling T² dan Generalisasi.</p>
+<p>Minta AI menjelaskan **Uji Vektor Rata-rata: Hotelling T² dan Generalisasi** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Uji Vektor Rata-rata: Hotelling T² dan Generalisasi merupakan bagian penting dari analisis multivariat tingkat lanjut karena berhubungan langsung dengan pengujian hipotesis terhadap vektor rata-rata, Hotelling T² satu sampel, dua sampel, interval simultan, dan hubungan dengan MANOVA. Pada level magister, mahasiswa diharapkan tidak hanya mampu menjalankan prosedur komputasi, tetapi juga memahami struktur data, asumsi, keterbatasan, dan konsekuensi interpretasi. Pembelajaran topik ini perlu dimulai dengan pengertian bahwa setiap observasi multivariat adalah satu vektor informasi. Ketika vektor tersebut dianalisis, perhatian utama bukan hanya nilai tiap variabel, melainkan pola bersama antarvariabel. Perspektif ini membedakan analisis multivariat dari kumpulan analisis univariat yang dilakukan secara terpisah.
 
 Dalam praktik, Hotelling T² satu sampel sering menjadi pintu masuk untuk memahami data. Namun, penggunaan metode tersebut perlu didukung oleh pemahaman tentang kualitas pengukuran, desain pengambilan sampel, ukuran sampel, dan tujuan analisis. Jika tujuan analisis adalah eksplorasi, fokusnya dapat diarahkan pada struktur pola, visualisasi, dan reduksi dimensi. Jika tujuan analisis adalah inferensi, perhatian perlu diberikan pada asumsi distribusi, hipotesis, dan kontrol kesalahan. Jika tujuan analisis adalah prediksi atau klasifikasi, validasi model menjadi bagian yang tidak boleh ditinggalkan.
@@ -608,6 +768,16 @@ F=\frac{n-p}{p(n-1)}T^2 \sim F_{p,n-p}.
 </div>
 
 ## Narasi Pengayaan Teoretis dan Terapan
+
+<!-- BEGIN AI-INLINE:9a957ea0f4ca -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Narasi Pengayaan Teoretis dan Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 3: Uji Vektor Rata-rata: Hotelling T² dan Generalisasi.</p>
+<p>Minta AI menjelaskan **Uji Vektor Rata-rata: Hotelling T² dan Generalisasi** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam konteks Uji Vektor Rata-rata: Hotelling T² dan Generalisasi, aspek keterkaitan antara tujuan penelitian dan pilihan metode menjadi penting karena data multivariat hampir selalu membawa informasi yang saling bergantung. Ketika beberapa variabel diamati pada unit yang sama, perubahan pada satu variabel sering tidak berdiri sendiri, melainkan terkait dengan perubahan variabel lain. Oleh sebab itu, analisis yang hanya memotong data menjadi analisis univariat dapat kehilangan struktur utama yang justru menjadi alasan mengapa data dikumpulkan secara multivariat. Pada aplikasi biostatistik, misalnya, indikator layanan, perilaku, risiko, dan capaian sering bergerak bersama sehingga kesimpulan perlu mempertimbangkan korelasi, variasi bersama, serta kemungkinan adanya dimensi laten. Prinsip ini sejalan dengan penekanan literatur klasik bahwa kekuatan analisis multivariat terletak pada pembacaan serentak terhadap vektor observasi, bukan pada penjumlahan mekanis dari banyak uji tunggal [@johnson2019; @anderson2003; @rencher2012].
 
@@ -671,6 +841,16 @@ Berikut adalah algoritma kerja yang dapat digunakan mahasiswa ketika menerapkan 
 
 ## Contoh Implementasi R
 
+<!-- BEGIN AI-INLINE:61a09d79dd8c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Contoh Implementasi R</h4>
+<p><strong>Konteks:</strong> Pertemuan 3: Uji Vektor Rata-rata: Hotelling T² dan Generalisasi.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 ```{r hotelling-manual, eval=FALSE}
 X <- as.matrix(iris[iris$Species == "setosa", 1:4])
 n <- nrow(X); p <- ncol(X)
@@ -723,6 +903,29 @@ Bab ini menegaskan bahwa **Uji Vektor Rata-rata: Hotelling T² dan Generalisasi*
 
 # Bab 4. Sampling Multivariat dan Desain Eksperimen
 
+<!-- BEGIN AI-INLINE:3006ba6f6245 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 4</span>
+<h3>Generative dan Agentic AI untuk Sampling Multivariat dan Desain Eksperimen</h3>
+
+**Arah RPS.** Perbandingan PCA, analisis faktor, diskriminan, dan clustering dengan autoencoder, embedding, serta metode manifold learning.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK1 melalui fokus: Analisis Regresi Multivariat dengan Respon Ganda. |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <span class="badge-brown">Pertemuan 3</span> <span class="badge-brown">SubCPMK2</span>
 
 <div class="concept-box"><strong>Fokus bab:</strong> prosedur sampling untuk data multivariat, rancangan eksperimen dengan banyak respons, bias seleksi, representativitas, ukuran sampel, dan evaluasi desain. Topik ini merujuk pada bahan kajian RPS dan dikembangkan dengan rujukan utama [@hair2019; @rencher2012; @tabachnick2019].</div>
@@ -745,6 +948,16 @@ Setelah mempelajari bab ini, mahasiswa diharapkan mampu:
 
 ## Konsep Inti
 
+<!-- BEGIN AI-INLINE:ec2290d3f82d -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 4: Sampling Multivariat dan Desain Eksperimen.</p>
+<p>Minta AI menjelaskan **Sampling Multivariat dan Desain Eksperimen** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Sampling Multivariat dan Desain Eksperimen merupakan bagian penting dari analisis multivariat tingkat lanjut karena berhubungan langsung dengan prosedur sampling untuk data multivariat, rancangan eksperimen dengan banyak respons, bias seleksi, representativitas, ukuran sampel, dan evaluasi desain. Pada level magister, mahasiswa diharapkan tidak hanya mampu menjalankan prosedur komputasi, tetapi juga memahami struktur data, asumsi, keterbatasan, dan konsekuensi interpretasi. Pembelajaran topik ini perlu dimulai dengan pengertian bahwa setiap observasi multivariat adalah satu vektor informasi. Ketika vektor tersebut dianalisis, perhatian utama bukan hanya nilai tiap variabel, melainkan pola bersama antarvariabel. Perspektif ini membedakan analisis multivariat dari kumpulan analisis univariat yang dilakukan secara terpisah.
 
 Dalam praktik, simple random sampling sering menjadi pintu masuk untuk memahami data. Namun, penggunaan metode tersebut perlu didukung oleh pemahaman tentang kualitas pengukuran, desain pengambilan sampel, ukuran sampel, dan tujuan analisis. Jika tujuan analisis adalah eksplorasi, fokusnya dapat diarahkan pada struktur pola, visualisasi, dan reduksi dimensi. Jika tujuan analisis adalah inferensi, perhatian perlu diberikan pada asumsi distribusi, hipotesis, dan kontrol kesalahan. Jika tujuan analisis adalah prediksi atau klasifikasi, validasi model menjadi bagian yang tidak boleh ditinggalkan.
@@ -758,6 +971,16 @@ Pada kasus multivariat, $S_h$ dapat diganti dengan ukuran keragaman komposit, mi
 </div>
 
 ## Narasi Pengayaan Teoretis dan Terapan
+
+<!-- BEGIN AI-INLINE:eebe20fb6ec3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Narasi Pengayaan Teoretis dan Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 4: Sampling Multivariat dan Desain Eksperimen.</p>
+<p>Minta AI menjelaskan **Sampling Multivariat dan Desain Eksperimen** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam konteks Sampling Multivariat dan Desain Eksperimen, aspek keterkaitan antara tujuan penelitian dan pilihan metode menjadi penting karena data multivariat hampir selalu membawa informasi yang saling bergantung. Ketika beberapa variabel diamati pada unit yang sama, perubahan pada satu variabel sering tidak berdiri sendiri, melainkan terkait dengan perubahan variabel lain. Oleh sebab itu, analisis yang hanya memotong data menjadi analisis univariat dapat kehilangan struktur utama yang justru menjadi alasan mengapa data dikumpulkan secara multivariat. Pada aplikasi aktuaria dan risiko, misalnya, indikator layanan, perilaku, risiko, dan capaian sering bergerak bersama sehingga kesimpulan perlu mempertimbangkan korelasi, variasi bersama, serta kemungkinan adanya dimensi laten. Prinsip ini sejalan dengan penekanan literatur klasik bahwa kekuatan analisis multivariat terletak pada pembacaan serentak terhadap vektor observasi, bukan pada penjumlahan mekanis dari banyak uji tunggal [@hair2019; @rencher2012; @tabachnick2019].
 
@@ -821,6 +1044,16 @@ Berikut adalah algoritma kerja yang dapat digunakan mahasiswa ketika menerapkan 
 
 ## Contoh Implementasi R
 
+<!-- BEGIN AI-INLINE:ebbcb2942d98 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Contoh Implementasi R</h4>
+<p><strong>Konteks:</strong> Pertemuan 4: Sampling Multivariat dan Desain Eksperimen.</p>
+<p>Agen dapat memprofilkan data, menjalankan validasi skema, menandai missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** asal-usul data, unit observasi, coverage, kebocoran data, privasi, dan keputusan pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 ```{r sampling-simulasi, eval=FALSE}
 set.seed(2025)
 pop <- data.frame(
@@ -882,6 +1115,29 @@ Bab ini menegaskan bahwa **Sampling Multivariat dan Desain Eksperimen** harus di
 
 # Bab 5. Regresi Multivariat dengan Respon Ganda
 
+<!-- BEGIN AI-INLINE:e357ff135761 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 5</span>
+<h3>Generative dan Agentic AI untuk Regresi Multivariat dengan Respon Ganda</h3>
+
+**Arah RPS.** Validasi cluster dan klasifikasi dengan resampling, penanganan high-dimensional data, interpretabilitas representasi, serta deteksi bias antarkelompok.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK2 melalui fokus: Analisis Regresi Multivariat dengan Respon Ganda. |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <span class="badge-brown">Pertemuan 4</span> <span class="badge-brown">SubCPMK3</span>
 
 <div class="concept-box"><strong>Fokus bab:</strong> model regresi multivariat, respon ganda, matriks koefisien, error covariance, uji simultan, dan interpretasi hubungan prediktor dengan banyak respons. Topik ini merujuk pada bahan kajian RPS dan dikembangkan dengan rujukan utama [@johnson2019; @rencher2012; @anderson2003].</div>
@@ -904,6 +1160,16 @@ Setelah mempelajari bab ini, mahasiswa diharapkan mampu:
 
 ## Konsep Inti
 
+<!-- BEGIN AI-INLINE:fd2d724f3463 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 5: Regresi Multivariat dengan Respon Ganda.</p>
+<p>Minta AI menjelaskan **Regresi Multivariat dengan Respon Ganda** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Regresi Multivariat dengan Respon Ganda merupakan bagian penting dari analisis multivariat tingkat lanjut karena berhubungan langsung dengan model regresi multivariat, respon ganda, matriks koefisien, error covariance, uji simultan, dan interpretasi hubungan prediktor dengan banyak respons. Pada level magister, mahasiswa diharapkan tidak hanya mampu menjalankan prosedur komputasi, tetapi juga memahami struktur data, asumsi, keterbatasan, dan konsekuensi interpretasi. Pembelajaran topik ini perlu dimulai dengan pengertian bahwa setiap observasi multivariat adalah satu vektor informasi. Ketika vektor tersebut dianalisis, perhatian utama bukan hanya nilai tiap variabel, melainkan pola bersama antarvariabel. Perspektif ini membedakan analisis multivariat dari kumpulan analisis univariat yang dilakukan secara terpisah.
 
 Dalam praktik, multivariate multiple regression sering menjadi pintu masuk untuk memahami data. Namun, penggunaan metode tersebut perlu didukung oleh pemahaman tentang kualitas pengukuran, desain pengambilan sampel, ukuran sampel, dan tujuan analisis. Jika tujuan analisis adalah eksplorasi, fokusnya dapat diarahkan pada struktur pola, visualisasi, dan reduksi dimensi. Jika tujuan analisis adalah inferensi, perhatian perlu diberikan pada asumsi distribusi, hipotesis, dan kontrol kesalahan. Jika tujuan analisis adalah prediksi atau klasifikasi, validasi model menjadi bagian yang tidak boleh ditinggalkan.
@@ -920,6 +1186,16 @@ dengan penduga kuadrat terkecil
 </div>
 
 ## Narasi Pengayaan Teoretis dan Terapan
+
+<!-- BEGIN AI-INLINE:3024c8fcf97b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Narasi Pengayaan Teoretis dan Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 5: Regresi Multivariat dengan Respon Ganda.</p>
+<p>Minta AI menjelaskan **Regresi Multivariat dengan Respon Ganda** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam konteks Regresi Multivariat dengan Respon Ganda, aspek keterkaitan antara tujuan penelitian dan pilihan metode menjadi penting karena data multivariat hampir selalu membawa informasi yang saling bergantung. Ketika beberapa variabel diamati pada unit yang sama, perubahan pada satu variabel sering tidak berdiri sendiri, melainkan terkait dengan perubahan variabel lain. Oleh sebab itu, analisis yang hanya memotong data menjadi analisis univariat dapat kehilangan struktur utama yang justru menjadi alasan mengapa data dikumpulkan secara multivariat. Pada aplikasi sains data sosial, misalnya, indikator layanan, perilaku, risiko, dan capaian sering bergerak bersama sehingga kesimpulan perlu mempertimbangkan korelasi, variasi bersama, serta kemungkinan adanya dimensi laten. Prinsip ini sejalan dengan penekanan literatur klasik bahwa kekuatan analisis multivariat terletak pada pembacaan serentak terhadap vektor observasi, bukan pada penjumlahan mekanis dari banyak uji tunggal [@johnson2019; @rencher2012; @anderson2003].
 
@@ -983,6 +1259,16 @@ Berikut adalah algoritma kerja yang dapat digunakan mahasiswa ketika menerapkan 
 
 ## Contoh Implementasi R
 
+<!-- BEGIN AI-INLINE:a9dce5dc531e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Contoh Implementasi R</h4>
+<p><strong>Konteks:</strong> Pertemuan 5: Regresi Multivariat dengan Respon Ganda.</p>
+<p>Agen dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 ```{r regresi-multivariat, eval=FALSE}
 # Contoh regresi multivariat: dua respons pada data iris
 fit_mv <- lm(cbind(Sepal.Length, Sepal.Width) ~ Petal.Length + Petal.Width + Species, data = iris)
@@ -1034,6 +1320,29 @@ Bab ini menegaskan bahwa **Regresi Multivariat dengan Respon Ganda** harus dipah
 
 # Bab 6. Principal Component Analysis (PCA)
 
+<!-- BEGIN AI-INLINE:9a7c2d73540e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 6</span>
+<h3>Generative dan Agentic AI untuk Principal Component Analysis (PCA)</h3>
+
+**Arah RPS.** Proyek segmentasi atau klasifikasi multivariat menggunakan data nyata, disertai visualisasi, analisis ketidakpastian, dan argumentasi pemilihan model.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK2 melalui fokus: Analisis Regresi Multivariat dengan Respon Ganda. |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <span class="badge-brown">Pertemuan 5</span> <span class="badge-brown">SubCPMK3</span>
 
 <div class="concept-box"><strong>Fokus bab:</strong> reduksi dimensi, eigenvalue, eigenvector, skor komponen utama, proporsi ragam, scree plot, biplot PCA, dan interpretasi loading. Topik ini merujuk pada bahan kajian RPS dan dikembangkan dengan rujukan utama [@jolliffe2002; @jolliffe2016; @johnson2019].</div>
@@ -1058,6 +1367,16 @@ Setelah mempelajari bab ini, mahasiswa diharapkan mampu:
 
 ## Konsep Inti
 
+<!-- BEGIN AI-INLINE:31e1ae81f0a8 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 6: Principal Component Analysis (PCA).</p>
+<p>Minta AI menjelaskan **Principal Component Analysis (PCA)** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Principal Component Analysis (PCA) merupakan bagian penting dari analisis multivariat tingkat lanjut karena berhubungan langsung dengan reduksi dimensi, eigenvalue, eigenvector, skor komponen utama, proporsi ragam, scree plot, biplot PCA, dan interpretasi loading. Pada level magister, mahasiswa diharapkan tidak hanya mampu menjalankan prosedur komputasi, tetapi juga memahami struktur data, asumsi, keterbatasan, dan konsekuensi interpretasi. Pembelajaran topik ini perlu dimulai dengan pengertian bahwa setiap observasi multivariat adalah satu vektor informasi. Ketika vektor tersebut dianalisis, perhatian utama bukan hanya nilai tiap variabel, melainkan pola bersama antarvariabel. Perspektif ini membedakan analisis multivariat dari kumpulan analisis univariat yang dilakukan secara terpisah.
 
 Dalam praktik, eigen decomposition sering menjadi pintu masuk untuk memahami data. Namun, penggunaan metode tersebut perlu didukung oleh pemahaman tentang kualitas pengukuran, desain pengambilan sampel, ukuran sampel, dan tujuan analisis. Jika tujuan analisis adalah eksplorasi, fokusnya dapat diarahkan pada struktur pola, visualisasi, dan reduksi dimensi. Jika tujuan analisis adalah inferensi, perhatian perlu diberikan pada asumsi distribusi, hipotesis, dan kontrol kesalahan. Jika tujuan analisis adalah prediksi atau klasifikasi, validasi model menjadi bagian yang tidak boleh ditinggalkan.
@@ -1074,6 +1393,16 @@ yang memaksimumkan ragam dengan syarat $\mathbf{a}_j'\mathbf{a}_j=1$ dan ortogon
 </div>
 
 ## Narasi Pengayaan Teoretis dan Terapan
+
+<!-- BEGIN AI-INLINE:310c6ee93e8a -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Narasi Pengayaan Teoretis dan Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 6: Principal Component Analysis (PCA).</p>
+<p>Minta AI menjelaskan **Principal Component Analysis (PCA)** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam konteks Principal Component Analysis (PCA), aspek keterkaitan antara tujuan penelitian dan pilihan metode menjadi penting karena data multivariat hampir selalu membawa informasi yang saling bergantung. Ketika beberapa variabel diamati pada unit yang sama, perubahan pada satu variabel sering tidak berdiri sendiri, melainkan terkait dengan perubahan variabel lain. Oleh sebab itu, analisis yang hanya memotong data menjadi analisis univariat dapat kehilangan struktur utama yang justru menjadi alasan mengapa data dikumpulkan secara multivariat. Pada aplikasi survei rumah tangga, misalnya, indikator layanan, perilaku, risiko, dan capaian sering bergerak bersama sehingga kesimpulan perlu mempertimbangkan korelasi, variasi bersama, serta kemungkinan adanya dimensi laten. Prinsip ini sejalan dengan penekanan literatur klasik bahwa kekuatan analisis multivariat terletak pada pembacaan serentak terhadap vektor observasi, bukan pada penjumlahan mekanis dari banyak uji tunggal [@jolliffe2002; @jolliffe2016; @johnson2019].
 
@@ -1137,6 +1466,16 @@ Berikut adalah algoritma kerja yang dapat digunakan mahasiswa ketika menerapkan 
 
 ## Contoh Implementasi R
 
+<!-- BEGIN AI-INLINE:c42cf8a00804 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Contoh Implementasi R</h4>
+<p><strong>Konteks:</strong> Pertemuan 6: Principal Component Analysis (PCA).</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 ```{r pca-usarrests, eval=FALSE}
 X <- USArrests
 pca <- prcomp(X, center = TRUE, scale. = TRUE)
@@ -1187,6 +1526,29 @@ Bab ini menegaskan bahwa **Principal Component Analysis (PCA)** harus dipahami s
 
 # Bab 7. Analisis Faktor Eksploratori (Exploratory Factor Analysis)
 
+<!-- BEGIN AI-INLINE:baf0c16bb059 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 7</span>
+<h3>Generative dan Agentic AI untuk Analisis Faktor Eksploratori (Exploratory Factor Analysis)</h3>
+
+**Arah RPS.** Perbandingan PCA, analisis faktor, diskriminan, dan clustering dengan autoencoder, embedding, serta metode manifold learning.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK2 melalui fokus: Analisis Komponen Utama (Principal Component Analysis/PCA) dan Analisis Faktor. |
+| Generative AI | Digunakan untuk merumuskan alternatif penjelasan, contoh, dan hipotesis awal. |
+| Agentic AI | Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <span class="badge-brown">Pertemuan 6</span> <span class="badge-brown">SubCPMK3</span>
 
 <div class="concept-box"><strong>Fokus bab:</strong> model faktor laten, communality, uniqueness, loading faktor, rotasi, interpretasi konstruk, dan validasi struktur faktor. Topik ini merujuk pada bahan kajian RPS dan dikembangkan dengan rujukan utama [@lawley1971; @hair2019; @tabachnick2019].</div>
@@ -1209,6 +1571,16 @@ Setelah mempelajari bab ini, mahasiswa diharapkan mampu:
 
 ## Konsep Inti
 
+<!-- BEGIN AI-INLINE:c87ab51cdebb -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 7: Analisis Faktor Eksploratori (Exploratory Factor Analysis).</p>
+<p>Minta AI menjelaskan **Analisis Faktor Eksploratori (Exploratory Factor Analysis)** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Analisis Faktor Eksploratori (Exploratory Factor Analysis) merupakan bagian penting dari analisis multivariat tingkat lanjut karena berhubungan langsung dengan model faktor laten, communality, uniqueness, loading faktor, rotasi, interpretasi konstruk, dan validasi struktur faktor. Pada level magister, mahasiswa diharapkan tidak hanya mampu menjalankan prosedur komputasi, tetapi juga memahami struktur data, asumsi, keterbatasan, dan konsekuensi interpretasi. Pembelajaran topik ini perlu dimulai dengan pengertian bahwa setiap observasi multivariat adalah satu vektor informasi. Ketika vektor tersebut dianalisis, perhatian utama bukan hanya nilai tiap variabel, melainkan pola bersama antarvariabel. Perspektif ini membedakan analisis multivariat dari kumpulan analisis univariat yang dilakukan secara terpisah.
 
 Dalam praktik, factor loading sering menjadi pintu masuk untuk memahami data. Namun, penggunaan metode tersebut perlu didukung oleh pemahaman tentang kualitas pengukuran, desain pengambilan sampel, ukuran sampel, dan tujuan analisis. Jika tujuan analisis adalah eksplorasi, fokusnya dapat diarahkan pada struktur pola, visualisasi, dan reduksi dimensi. Jika tujuan analisis adalah inferensi, perhatian perlu diberikan pada asumsi distribusi, hipotesis, dan kontrol kesalahan. Jika tujuan analisis adalah prediksi atau klasifikasi, validasi model menjadi bagian yang tidak boleh ditinggalkan.
@@ -1226,6 +1598,16 @@ Elemen diagonal $\boldsymbol{\Psi}$ merepresentasikan uniqueness, sedangkan $\bo
 </div>
 
 ## Narasi Pengayaan Teoretis dan Terapan
+
+<!-- BEGIN AI-INLINE:c56688067fa3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Narasi Pengayaan Teoretis dan Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 7: Analisis Faktor Eksploratori (Exploratory Factor Analysis).</p>
+<p>Minta AI menjelaskan **Analisis Faktor Eksploratori (Exploratory Factor Analysis)** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam konteks Analisis Faktor Eksploratori (Exploratory Factor Analysis), aspek keterkaitan antara tujuan penelitian dan pilihan metode menjadi penting karena data multivariat hampir selalu membawa informasi yang saling bergantung. Ketika beberapa variabel diamati pada unit yang sama, perubahan pada satu variabel sering tidak berdiri sendiri, melainkan terkait dengan perubahan variabel lain. Oleh sebab itu, analisis yang hanya memotong data menjadi analisis univariat dapat kehilangan struktur utama yang justru menjadi alasan mengapa data dikumpulkan secara multivariat. Pada aplikasi kualitas layanan publik, misalnya, indikator layanan, perilaku, risiko, dan capaian sering bergerak bersama sehingga kesimpulan perlu mempertimbangkan korelasi, variasi bersama, serta kemungkinan adanya dimensi laten. Prinsip ini sejalan dengan penekanan literatur klasik bahwa kekuatan analisis multivariat terletak pada pembacaan serentak terhadap vektor observasi, bukan pada penjumlahan mekanis dari banyak uji tunggal [@lawley1971; @hair2019; @tabachnick2019].
 
@@ -1289,6 +1671,16 @@ Berikut adalah algoritma kerja yang dapat digunakan mahasiswa ketika menerapkan 
 
 ## Contoh Implementasi R
 
+<!-- BEGIN AI-INLINE:54394d6a563a -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Contoh Implementasi R</h4>
+<p><strong>Konteks:</strong> Pertemuan 7: Analisis Faktor Eksploratori (Exploratory Factor Analysis).</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 ```{r factor-analysis, eval=FALSE}
 # Contoh factanal memakai data built-in Harman74.cor
 fa_data <- cov2cor(Harman74.cor$cov)
@@ -1336,6 +1728,29 @@ Bab ini menegaskan bahwa **Analisis Faktor Eksploratori (Exploratory Factor Anal
 
 # Bab 8. Integrasi PCA/FA dengan Regresi Multivariat
 
+<!-- BEGIN AI-INLINE:eb9b191a7f08 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 8</span>
+<h3>Generative dan Agentic AI untuk Integrasi PCA/FA dengan Regresi Multivariat</h3>
+
+**Arah RPS.** Penggunaan AI hanya sesuai instruksi dosen; seluruh bantuan harus diungkapkan dan hasil diverifikasi.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK1–2 melalui fokus: Ujian Tengah Semester. |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <span class="badge-brown">Pertemuan 7 dan Review UTS</span> <span class="badge-brown">SubCPMK3</span>
 
 <div class="concept-box"><strong>Fokus bab:</strong> menggabungkan reduksi dimensi dengan model prediktif, mengurangi multikolinearitas, membuat indeks komposit, dan membandingkan model sebelum dan sesudah reduksi dimensi. Topik ini merujuk pada bahan kajian RPS dan dikembangkan dengan rujukan utama [@hair2019; @jolliffe2002; @rencher2012].</div>
@@ -1358,6 +1773,16 @@ Setelah mempelajari bab ini, mahasiswa diharapkan mampu:
 
 ## Konsep Inti
 
+<!-- BEGIN AI-INLINE:dad78fa57c75 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 8: Integrasi PCA/FA dengan Regresi Multivariat.</p>
+<p>Minta AI menjelaskan **Integrasi PCA/FA dengan Regresi Multivariat** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Integrasi PCA/FA dengan Regresi Multivariat merupakan bagian penting dari analisis multivariat tingkat lanjut karena berhubungan langsung dengan menggabungkan reduksi dimensi dengan model prediktif, mengurangi multikolinearitas, membuat indeks komposit, dan membandingkan model sebelum dan sesudah reduksi dimensi. Pada level magister, mahasiswa diharapkan tidak hanya mampu menjalankan prosedur komputasi, tetapi juga memahami struktur data, asumsi, keterbatasan, dan konsekuensi interpretasi. Pembelajaran topik ini perlu dimulai dengan pengertian bahwa setiap observasi multivariat adalah satu vektor informasi. Ketika vektor tersebut dianalisis, perhatian utama bukan hanya nilai tiap variabel, melainkan pola bersama antarvariabel. Perspektif ini membedakan analisis multivariat dari kumpulan analisis univariat yang dilakukan secara terpisah.
 
 Dalam praktik, principal component regression sering menjadi pintu masuk untuk memahami data. Namun, penggunaan metode tersebut perlu didukung oleh pemahaman tentang kualitas pengukuran, desain pengambilan sampel, ukuran sampel, dan tujuan analisis. Jika tujuan analisis adalah eksplorasi, fokusnya dapat diarahkan pada struktur pola, visualisasi, dan reduksi dimensi. Jika tujuan analisis adalah inferensi, perhatian perlu diberikan pada asumsi distribusi, hipotesis, dan kontrol kesalahan. Jika tujuan analisis adalah prediksi atau klasifikasi, validasi model menjadi bagian yang tidak boleh ditinggalkan.
@@ -1371,6 +1796,16 @@ di mana $\mathbf{A}_r$ berisi $r$ eigenvector pertama. Tujuannya bukan sekadar m
 </div>
 
 ## Narasi Pengayaan Teoretis dan Terapan
+
+<!-- BEGIN AI-INLINE:b1ca0cf5d3e1 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Narasi Pengayaan Teoretis dan Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 8: Integrasi PCA/FA dengan Regresi Multivariat.</p>
+<p>Minta AI menjelaskan **Integrasi PCA/FA dengan Regresi Multivariat** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam konteks Integrasi PCA/FA dengan Regresi Multivariat, aspek keterkaitan antara tujuan penelitian dan pilihan metode menjadi penting karena data multivariat hampir selalu membawa informasi yang saling bergantung. Ketika beberapa variabel diamati pada unit yang sama, perubahan pada satu variabel sering tidak berdiri sendiri, melainkan terkait dengan perubahan variabel lain. Oleh sebab itu, analisis yang hanya memotong data menjadi analisis univariat dapat kehilangan struktur utama yang justru menjadi alasan mengapa data dikumpulkan secara multivariat. Pada aplikasi kesehatan masyarakat, misalnya, indikator layanan, perilaku, risiko, dan capaian sering bergerak bersama sehingga kesimpulan perlu mempertimbangkan korelasi, variasi bersama, serta kemungkinan adanya dimensi laten. Prinsip ini sejalan dengan penekanan literatur klasik bahwa kekuatan analisis multivariat terletak pada pembacaan serentak terhadap vektor observasi, bukan pada penjumlahan mekanis dari banyak uji tunggal [@hair2019; @jolliffe2002; @rencher2012].
 
@@ -1434,6 +1869,16 @@ Berikut adalah algoritma kerja yang dapat digunakan mahasiswa ketika menerapkan 
 
 ## Contoh Implementasi R
 
+<!-- BEGIN AI-INLINE:119c4b7cb396 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Contoh Implementasi R</h4>
+<p><strong>Konteks:</strong> Pertemuan 8: Integrasi PCA/FA dengan Regresi Multivariat.</p>
+<p>Agen dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 ```{r pca-regresi, eval=FALSE}
 set.seed(2025)
 dat <- iris
@@ -1488,6 +1933,29 @@ Bab ini menegaskan bahwa **Integrasi PCA/FA dengan Regresi Multivariat** harus d
 
 # Bab 9. Analisis Diskriminan Linear (LDA)
 
+<!-- BEGIN AI-INLINE:a5b0bb9e7165 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 9</span>
+<h3>Generative dan Agentic AI untuk Analisis Diskriminan Linear (LDA)</h3>
+
+**Arah RPS.** Validasi cluster dan klasifikasi dengan resampling, penanganan high-dimensional data, interpretabilitas representasi, serta deteksi bias antarkelompok.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3 melalui fokus: Analisis Diskriminan dan Klasifikasi Multivariat. |
+| Generative AI | Digunakan untuk merumuskan alternatif penjelasan, contoh, dan hipotesis awal. |
+| Agentic AI | Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <span class="badge-brown">Pertemuan 9</span> <span class="badge-brown">SubCPMK3</span>
 
 <div class="concept-box"><strong>Fokus bab:</strong> klasifikasi berbasis kombinasi linear, asumsi kovarians homogen, fungsi diskriminan, posterior probability, confusion matrix, dan validasi akurasi. Topik ini merujuk pada bahan kajian RPS dan dikembangkan dengan rujukan utama [@fisher1936; @hastie2009; @johnson2019].</div>
@@ -1510,6 +1978,16 @@ Setelah mempelajari bab ini, mahasiswa diharapkan mampu:
 
 ## Konsep Inti
 
+<!-- BEGIN AI-INLINE:d35068ffd55a -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 9: Analisis Diskriminan Linear (LDA).</p>
+<p>Minta AI menjelaskan **Analisis Diskriminan Linear (LDA)** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Analisis Diskriminan Linear (LDA) merupakan bagian penting dari analisis multivariat tingkat lanjut karena berhubungan langsung dengan klasifikasi berbasis kombinasi linear, asumsi kovarians homogen, fungsi diskriminan, posterior probability, confusion matrix, dan validasi akurasi. Pada level magister, mahasiswa diharapkan tidak hanya mampu menjalankan prosedur komputasi, tetapi juga memahami struktur data, asumsi, keterbatasan, dan konsekuensi interpretasi. Pembelajaran topik ini perlu dimulai dengan pengertian bahwa setiap observasi multivariat adalah satu vektor informasi. Ketika vektor tersebut dianalisis, perhatian utama bukan hanya nilai tiap variabel, melainkan pola bersama antarvariabel. Perspektif ini membedakan analisis multivariat dari kumpulan analisis univariat yang dilakukan secara terpisah.
 
 Dalam praktik, linear discriminant function sering menjadi pintu masuk untuk memahami data. Namun, penggunaan metode tersebut perlu didukung oleh pemahaman tentang kualitas pengukuran, desain pengambilan sampel, ukuran sampel, dan tujuan analisis. Jika tujuan analisis adalah eksplorasi, fokusnya dapat diarahkan pada struktur pola, visualisasi, dan reduksi dimensi. Jika tujuan analisis adalah inferensi, perhatian perlu diberikan pada asumsi distribusi, hipotesis, dan kontrol kesalahan. Jika tujuan analisis adalah prediksi atau klasifikasi, validasi model menjadi bagian yang tidak boleh ditinggalkan.
@@ -1523,6 +2001,16 @@ Objek diklasifikasikan ke kelompok dengan nilai $\delta_k(\mathbf{x})$ terbesar.
 </div>
 
 ## Narasi Pengayaan Teoretis dan Terapan
+
+<!-- BEGIN AI-INLINE:6ad3a90661d0 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Narasi Pengayaan Teoretis dan Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 9: Analisis Diskriminan Linear (LDA).</p>
+<p>Minta AI menjelaskan **Analisis Diskriminan Linear (LDA)** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam konteks Analisis Diskriminan Linear (LDA), aspek keterkaitan antara tujuan penelitian dan pilihan metode menjadi penting karena data multivariat hampir selalu membawa informasi yang saling bergantung. Ketika beberapa variabel diamati pada unit yang sama, perubahan pada satu variabel sering tidak berdiri sendiri, melainkan terkait dengan perubahan variabel lain. Oleh sebab itu, analisis yang hanya memotong data menjadi analisis univariat dapat kehilangan struktur utama yang justru menjadi alasan mengapa data dikumpulkan secara multivariat. Pada aplikasi pemasaran dan perilaku pelanggan, misalnya, indikator layanan, perilaku, risiko, dan capaian sering bergerak bersama sehingga kesimpulan perlu mempertimbangkan korelasi, variasi bersama, serta kemungkinan adanya dimensi laten. Prinsip ini sejalan dengan penekanan literatur klasik bahwa kekuatan analisis multivariat terletak pada pembacaan serentak terhadap vektor observasi, bukan pada penjumlahan mekanis dari banyak uji tunggal [@fisher1936; @hastie2009; @johnson2019].
 
@@ -1586,6 +2074,16 @@ Berikut adalah algoritma kerja yang dapat digunakan mahasiswa ketika menerapkan 
 
 ## Contoh Implementasi R
 
+<!-- BEGIN AI-INLINE:5707509b6adb -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Contoh Implementasi R</h4>
+<p><strong>Konteks:</strong> Pertemuan 9: Analisis Diskriminan Linear (LDA).</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 ```{r lda-optional, eval=FALSE}
 # Memerlukan paket MASS
 library(MASS)
@@ -1635,6 +2133,29 @@ Bab ini menegaskan bahwa **Analisis Diskriminan Linear (LDA)** harus dipahami se
 
 # Bab 10. Diskriminan Nonlinear, QDA, dan Validasi Model
 
+<!-- BEGIN AI-INLINE:218c15574c21 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 10</span>
+<h3>Generative dan Agentic AI untuk Diskriminan Nonlinear, QDA, dan Validasi Model</h3>
+
+**Arah RPS.** Proyek segmentasi atau klasifikasi multivariat menggunakan data nyata, disertai visualisasi, analisis ketidakpastian, dan argumentasi pemilihan model.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3 melalui fokus: Analisis Diskriminan dan Klasifikasi Multivariat. |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <span class="badge-brown">Pertemuan 10</span> <span class="badge-brown">SubCPMK3</span>
 
 <div class="concept-box"><strong>Fokus bab:</strong> QDA, batas keputusan nonlinear, ketidakhomogenan kovarians, validasi klasifikasi, overfitting, resampling, dan evaluasi performa. Topik ini merujuk pada bahan kajian RPS dan dikembangkan dengan rujukan utama [@hastie2009; @johnson2019; @tabachnick2019].</div>
@@ -1657,6 +2178,16 @@ Setelah mempelajari bab ini, mahasiswa diharapkan mampu:
 
 ## Konsep Inti
 
+<!-- BEGIN AI-INLINE:0a43bc81c0be -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 10: Diskriminan Nonlinear, QDA, dan Validasi Model.</p>
+<p>Minta AI menjelaskan **Diskriminan Nonlinear, QDA, dan Validasi Model** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Diskriminan Nonlinear, QDA, dan Validasi Model merupakan bagian penting dari analisis multivariat tingkat lanjut karena berhubungan langsung dengan QDA, batas keputusan nonlinear, ketidakhomogenan kovarians, validasi klasifikasi, overfitting, resampling, dan evaluasi performa. Pada level magister, mahasiswa diharapkan tidak hanya mampu menjalankan prosedur komputasi, tetapi juga memahami struktur data, asumsi, keterbatasan, dan konsekuensi interpretasi. Pembelajaran topik ini perlu dimulai dengan pengertian bahwa setiap observasi multivariat adalah satu vektor informasi. Ketika vektor tersebut dianalisis, perhatian utama bukan hanya nilai tiap variabel, melainkan pola bersama antarvariabel. Perspektif ini membedakan analisis multivariat dari kumpulan analisis univariat yang dilakukan secara terpisah.
 
 Dalam praktik, quadratic discriminant analysis sering menjadi pintu masuk untuk memahami data. Namun, penggunaan metode tersebut perlu didukung oleh pemahaman tentang kualitas pengukuran, desain pengambilan sampel, ukuran sampel, dan tujuan analisis. Jika tujuan analisis adalah eksplorasi, fokusnya dapat diarahkan pada struktur pola, visualisasi, dan reduksi dimensi. Jika tujuan analisis adalah inferensi, perhatian perlu diberikan pada asumsi distribusi, hipotesis, dan kontrol kesalahan. Jika tujuan analisis adalah prediksi atau klasifikasi, validasi model menjadi bagian yang tidak boleh ditinggalkan.
@@ -1670,6 +2201,16 @@ Karena $\boldsymbol{\Sigma}_k$ berbeda antar kelompok, batas keputusan dapat ber
 </div>
 
 ## Narasi Pengayaan Teoretis dan Terapan
+
+<!-- BEGIN AI-INLINE:b0cc61ed5e5f -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Narasi Pengayaan Teoretis dan Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 10: Diskriminan Nonlinear, QDA, dan Validasi Model.</p>
+<p>Minta AI menjelaskan **Diskriminan Nonlinear, QDA, dan Validasi Model** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam konteks Diskriminan Nonlinear, QDA, dan Validasi Model, aspek keterkaitan antara tujuan penelitian dan pilihan metode menjadi penting karena data multivariat hampir selalu membawa informasi yang saling bergantung. Ketika beberapa variabel diamati pada unit yang sama, perubahan pada satu variabel sering tidak berdiri sendiri, melainkan terkait dengan perubahan variabel lain. Oleh sebab itu, analisis yang hanya memotong data menjadi analisis univariat dapat kehilangan struktur utama yang justru menjadi alasan mengapa data dikumpulkan secara multivariat. Pada aplikasi pendidikan tinggi, misalnya, indikator layanan, perilaku, risiko, dan capaian sering bergerak bersama sehingga kesimpulan perlu mempertimbangkan korelasi, variasi bersama, serta kemungkinan adanya dimensi laten. Prinsip ini sejalan dengan penekanan literatur klasik bahwa kekuatan analisis multivariat terletak pada pembacaan serentak terhadap vektor observasi, bukan pada penjumlahan mekanis dari banyak uji tunggal [@hastie2009; @johnson2019; @tabachnick2019].
 
@@ -1733,6 +2274,16 @@ Berikut adalah algoritma kerja yang dapat digunakan mahasiswa ketika menerapkan 
 
 ## Contoh Implementasi R
 
+<!-- BEGIN AI-INLINE:046ff5e57e4b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Contoh Implementasi R</h4>
+<p><strong>Konteks:</strong> Pertemuan 10: Diskriminan Nonlinear, QDA, dan Validasi Model.</p>
+<p>Agen dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 ```{r validasi-klasifikasi, eval=FALSE}
 # Memerlukan paket MASS
 library(MASS)
@@ -1787,6 +2338,29 @@ Bab ini menegaskan bahwa **Diskriminan Nonlinear, QDA, dan Validasi Model** haru
 
 # Bab 11. Analisis Cluster: K-Means dan Hierarchical Clustering
 
+<!-- BEGIN AI-INLINE:3c06c8feb266 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 11</span>
+<h3>Generative dan Agentic AI untuk Analisis Cluster: K-Means dan Hierarchical Clustering</h3>
+
+**Arah RPS.** Perbandingan PCA, analisis faktor, diskriminan, dan clustering dengan autoencoder, embedding, serta metode manifold learning.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3 melalui fokus: Analisis Diskriminan dan Klasifikasi Multivariat. |
+| Generative AI | Digunakan untuk merumuskan alternatif penjelasan, contoh, dan hipotesis awal. |
+| Agentic AI | Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <span class="badge-brown">Pertemuan 11</span> <span class="badge-brown">SubCPMK3</span>
 
 <div class="concept-box"><strong>Fokus bab:</strong> pengelompokan objek tanpa label, ukuran jarak, standardisasi, metode linkage, pemilihan jumlah cluster, profil cluster, dan segmentasi data multivariat. Topik ini merujuk pada bahan kajian RPS dan dikembangkan dengan rujukan utama [@macqueen1967; @everitt2011; @hair2019].</div>
@@ -1809,6 +2383,16 @@ Setelah mempelajari bab ini, mahasiswa diharapkan mampu:
 
 ## Konsep Inti
 
+<!-- BEGIN AI-INLINE:8311ff2881c6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 11: Analisis Cluster: K-Means dan Hierarchical Clustering.</p>
+<p>Minta AI menjelaskan **Analisis Cluster: K-Means dan Hierarchical Clustering** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Analisis Cluster: K-Means dan Hierarchical Clustering merupakan bagian penting dari analisis multivariat tingkat lanjut karena berhubungan langsung dengan pengelompokan objek tanpa label, ukuran jarak, standardisasi, metode linkage, pemilihan jumlah cluster, profil cluster, dan segmentasi data multivariat. Pada level magister, mahasiswa diharapkan tidak hanya mampu menjalankan prosedur komputasi, tetapi juga memahami struktur data, asumsi, keterbatasan, dan konsekuensi interpretasi. Pembelajaran topik ini perlu dimulai dengan pengertian bahwa setiap observasi multivariat adalah satu vektor informasi. Ketika vektor tersebut dianalisis, perhatian utama bukan hanya nilai tiap variabel, melainkan pola bersama antarvariabel. Perspektif ini membedakan analisis multivariat dari kumpulan analisis univariat yang dilakukan secara terpisah.
 
 Dalam praktik, Euclidean distance sering menjadi pintu masuk untuk memahami data. Namun, penggunaan metode tersebut perlu didukung oleh pemahaman tentang kualitas pengukuran, desain pengambilan sampel, ukuran sampel, dan tujuan analisis. Jika tujuan analisis adalah eksplorasi, fokusnya dapat diarahkan pada struktur pola, visualisasi, dan reduksi dimensi. Jika tujuan analisis adalah inferensi, perhatian perlu diberikan pada asumsi distribusi, hipotesis, dan kontrol kesalahan. Jika tujuan analisis adalah prediksi atau klasifikasi, validasi model menjadi bagian yang tidak boleh ditinggalkan.
@@ -1822,6 +2406,16 @@ Dalam hierarchical clustering, jarak antarcluster dapat didefinisikan menggunaka
 </div>
 
 ## Narasi Pengayaan Teoretis dan Terapan
+
+<!-- BEGIN AI-INLINE:b2dc0c0c7eb5 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Narasi Pengayaan Teoretis dan Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 11: Analisis Cluster: K-Means dan Hierarchical Clustering.</p>
+<p>Minta AI menjelaskan **Analisis Cluster: K-Means dan Hierarchical Clustering** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam konteks Analisis Cluster: K-Means dan Hierarchical Clustering, aspek keterkaitan antara tujuan penelitian dan pilihan metode menjadi penting karena data multivariat hampir selalu membawa informasi yang saling bergantung. Ketika beberapa variabel diamati pada unit yang sama, perubahan pada satu variabel sering tidak berdiri sendiri, melainkan terkait dengan perubahan variabel lain. Oleh sebab itu, analisis yang hanya memotong data menjadi analisis univariat dapat kehilangan struktur utama yang justru menjadi alasan mengapa data dikumpulkan secara multivariat. Pada aplikasi biostatistik, misalnya, indikator layanan, perilaku, risiko, dan capaian sering bergerak bersama sehingga kesimpulan perlu mempertimbangkan korelasi, variasi bersama, serta kemungkinan adanya dimensi laten. Prinsip ini sejalan dengan penekanan literatur klasik bahwa kekuatan analisis multivariat terletak pada pembacaan serentak terhadap vektor observasi, bukan pada penjumlahan mekanis dari banyak uji tunggal [@macqueen1967; @everitt2011; @hair2019].
 
@@ -1885,6 +2479,16 @@ Berikut adalah algoritma kerja yang dapat digunakan mahasiswa ketika menerapkan 
 
 ## Contoh Implementasi R
 
+<!-- BEGIN AI-INLINE:38bc3f135a96 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Contoh Implementasi R</h4>
+<p><strong>Konteks:</strong> Pertemuan 11: Analisis Cluster: K-Means dan Hierarchical Clustering.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 ```{r clustering, eval=FALSE}
 X <- scale(USArrests)
 set.seed(2025)
@@ -1939,6 +2543,29 @@ Bab ini menegaskan bahwa **Analisis Cluster: K-Means dan Hierarchical Clustering
 
 # Bab 12. Integrasi Regresi, PCA/FA, Diskriminan, dan Cluster pada Studi Kasus
 
+<!-- BEGIN AI-INLINE:39a57871d40f -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 12</span>
+<h3>Generative dan Agentic AI untuk Integrasi Regresi, PCA/FA, Diskriminan, dan Cluster pada Studi Kasus</h3>
+
+**Arah RPS.** Validasi cluster dan klasifikasi dengan resampling, penanganan high-dimensional data, interpretabilitas representasi, serta deteksi bias antarkelompok.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3 melalui fokus: Analisis Cluster dan Segmentasi Data Multivariat. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <span class="badge-brown">Pertemuan 12</span> <span class="badge-brown">SubCPMK3</span>
 
 <div class="concept-box"><strong>Fokus bab:</strong> strategi analisis komprehensif, pemetaan tujuan penelitian ke metode, triangulasi hasil, stabilitas kesimpulan, dan komunikasi temuan pada studi kasus nyata. Topik ini merujuk pada bahan kajian RPS dan dikembangkan dengan rujukan utama [@hair2019; @rencher2012; @hastie2009].</div>
@@ -1961,6 +2588,16 @@ Setelah mempelajari bab ini, mahasiswa diharapkan mampu:
 
 ## Konsep Inti
 
+<!-- BEGIN AI-INLINE:4c93e648bf7a -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 12: Integrasi Regresi, PCA/FA, Diskriminan, dan Cluster pada Studi Kasus.</p>
+<p>Minta AI menjelaskan **Integrasi Regresi, PCA/FA, Diskriminan, dan Cluster pada Studi Kasus** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Integrasi Regresi, PCA/FA, Diskriminan, dan Cluster pada Studi Kasus merupakan bagian penting dari analisis multivariat tingkat lanjut karena berhubungan langsung dengan strategi analisis komprehensif, pemetaan tujuan penelitian ke metode, triangulasi hasil, stabilitas kesimpulan, dan komunikasi temuan pada studi kasus nyata. Pada level magister, mahasiswa diharapkan tidak hanya mampu menjalankan prosedur komputasi, tetapi juga memahami struktur data, asumsi, keterbatasan, dan konsekuensi interpretasi. Pembelajaran topik ini perlu dimulai dengan pengertian bahwa setiap observasi multivariat adalah satu vektor informasi. Ketika vektor tersebut dianalisis, perhatian utama bukan hanya nilai tiap variabel, melainkan pola bersama antarvariabel. Perspektif ini membedakan analisis multivariat dari kumpulan analisis univariat yang dilakukan secara terpisah.
 
 Dalam praktik, workflow integratif sering menjadi pintu masuk untuk memahami data. Namun, penggunaan metode tersebut perlu didukung oleh pemahaman tentang kualitas pengukuran, desain pengambilan sampel, ukuran sampel, dan tujuan analisis. Jika tujuan analisis adalah eksplorasi, fokusnya dapat diarahkan pada struktur pola, visualisasi, dan reduksi dimensi. Jika tujuan analisis adalah inferensi, perhatian perlu diberikan pada asumsi distribusi, hipotesis, dan kontrol kesalahan. Jika tujuan analisis adalah prediksi atau klasifikasi, validasi model menjadi bagian yang tidak boleh ditinggalkan.
@@ -1974,6 +2611,16 @@ Formula ini bukan rumus statistik formal, tetapi kerangka kerja agar metode tida
 </div>
 
 ## Narasi Pengayaan Teoretis dan Terapan
+
+<!-- BEGIN AI-INLINE:da41cf1f3fda -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Narasi Pengayaan Teoretis dan Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 12: Integrasi Regresi, PCA/FA, Diskriminan, dan Cluster pada Studi Kasus.</p>
+<p>Minta AI menjelaskan **Integrasi Regresi, PCA/FA, Diskriminan, dan Cluster pada Studi Kasus** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam konteks Integrasi Regresi, PCA/FA, Diskriminan, dan Cluster pada Studi Kasus, aspek keterkaitan antara tujuan penelitian dan pilihan metode menjadi penting karena data multivariat hampir selalu membawa informasi yang saling bergantung. Ketika beberapa variabel diamati pada unit yang sama, perubahan pada satu variabel sering tidak berdiri sendiri, melainkan terkait dengan perubahan variabel lain. Oleh sebab itu, analisis yang hanya memotong data menjadi analisis univariat dapat kehilangan struktur utama yang justru menjadi alasan mengapa data dikumpulkan secara multivariat. Pada aplikasi aktuaria dan risiko, misalnya, indikator layanan, perilaku, risiko, dan capaian sering bergerak bersama sehingga kesimpulan perlu mempertimbangkan korelasi, variasi bersama, serta kemungkinan adanya dimensi laten. Prinsip ini sejalan dengan penekanan literatur klasik bahwa kekuatan analisis multivariat terletak pada pembacaan serentak terhadap vektor observasi, bukan pada penjumlahan mekanis dari banyak uji tunggal [@hair2019; @rencher2012; @hastie2009].
 
@@ -2037,6 +2684,16 @@ Berikut adalah algoritma kerja yang dapat digunakan mahasiswa ketika menerapkan 
 
 ## Contoh Implementasi R
 
+<!-- BEGIN AI-INLINE:c74fc6f71754 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Contoh Implementasi R</h4>
+<p><strong>Konteks:</strong> Pertemuan 12: Integrasi Regresi, PCA/FA, Diskriminan, dan Cluster pada Studi Kasus.</p>
+<p>Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 ```{r workflow-integratif, eval=FALSE}
 # Contoh mini-workflow pada USArrests
 X <- scale(USArrests)
@@ -2092,6 +2749,29 @@ Bab ini menegaskan bahwa **Integrasi Regresi, PCA/FA, Diskriminan, dan Cluster p
 
 # Bab 13. Analisis Korespondensi Sederhana dan Berganda
 
+<!-- BEGIN AI-INLINE:a97c3cc9cb7a -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 13</span>
+<h3>Generative dan Agentic AI untuk Analisis Korespondensi Sederhana dan Berganda</h3>
+
+**Arah RPS.** Proyek segmentasi atau klasifikasi multivariat menggunakan data nyata, disertai visualisasi, analisis ketidakpastian, dan argumentasi pemilihan model.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK4 melalui fokus: Analisis Korespondensi dan Biplot. |
+| Generative AI | Digunakan untuk merumuskan alternatif penjelasan, contoh, dan hipotesis awal. |
+| Agentic AI | Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <span class="badge-brown">Pertemuan 13</span> <span class="badge-brown">SubCPMK4</span>
 
 <div class="concept-box"><strong>Fokus bab:</strong> analisis tabel kontingensi, profil baris, profil kolom, jarak chi-square, inertia, visualisasi asosiasi kategori, dan interpretasi peta korespondensi. Topik ini merujuk pada bahan kajian RPS dan dikembangkan dengan rujukan utama [@greenacre2017; @agresti2013; @hair2019].</div>
@@ -2114,6 +2794,16 @@ Setelah mempelajari bab ini, mahasiswa diharapkan mampu:
 
 ## Konsep Inti
 
+<!-- BEGIN AI-INLINE:7e3e5b238079 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 13: Analisis Korespondensi Sederhana dan Berganda.</p>
+<p>Minta AI menjelaskan **Analisis Korespondensi Sederhana dan Berganda** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Analisis Korespondensi Sederhana dan Berganda merupakan bagian penting dari analisis multivariat tingkat lanjut karena berhubungan langsung dengan analisis tabel kontingensi, profil baris, profil kolom, jarak chi-square, inertia, visualisasi asosiasi kategori, dan interpretasi peta korespondensi. Pada level magister, mahasiswa diharapkan tidak hanya mampu menjalankan prosedur komputasi, tetapi juga memahami struktur data, asumsi, keterbatasan, dan konsekuensi interpretasi. Pembelajaran topik ini perlu dimulai dengan pengertian bahwa setiap observasi multivariat adalah satu vektor informasi. Ketika vektor tersebut dianalisis, perhatian utama bukan hanya nilai tiap variabel, melainkan pola bersama antarvariabel. Perspektif ini membedakan analisis multivariat dari kumpulan analisis univariat yang dilakukan secara terpisah.
 
 Dalam praktik, row profile sering menjadi pintu masuk untuk memahami data. Namun, penggunaan metode tersebut perlu didukung oleh pemahaman tentang kualitas pengukuran, desain pengambilan sampel, ukuran sampel, dan tujuan analisis. Jika tujuan analisis adalah eksplorasi, fokusnya dapat diarahkan pada struktur pola, visualisasi, dan reduksi dimensi. Jika tujuan analisis adalah inferensi, perhatian perlu diberikan pada asumsi distribusi, hipotesis, dan kontrol kesalahan. Jika tujuan analisis adalah prediksi atau klasifikasi, validasi model menjadi bagian yang tidak boleh ditinggalkan.
@@ -2130,6 +2820,16 @@ Dengan massa baris $\mathbf{r}$ dan massa kolom $\mathbf{c}$, matriks yang diana
 </div>
 
 ## Narasi Pengayaan Teoretis dan Terapan
+
+<!-- BEGIN AI-INLINE:3e0fb28648e3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Narasi Pengayaan Teoretis dan Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 13: Analisis Korespondensi Sederhana dan Berganda.</p>
+<p>Minta AI menjelaskan **Analisis Korespondensi Sederhana dan Berganda** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam konteks Analisis Korespondensi Sederhana dan Berganda, aspek keterkaitan antara tujuan penelitian dan pilihan metode menjadi penting karena data multivariat hampir selalu membawa informasi yang saling bergantung. Ketika beberapa variabel diamati pada unit yang sama, perubahan pada satu variabel sering tidak berdiri sendiri, melainkan terkait dengan perubahan variabel lain. Oleh sebab itu, analisis yang hanya memotong data menjadi analisis univariat dapat kehilangan struktur utama yang justru menjadi alasan mengapa data dikumpulkan secara multivariat. Pada aplikasi sains data sosial, misalnya, indikator layanan, perilaku, risiko, dan capaian sering bergerak bersama sehingga kesimpulan perlu mempertimbangkan korelasi, variasi bersama, serta kemungkinan adanya dimensi laten. Prinsip ini sejalan dengan penekanan literatur klasik bahwa kekuatan analisis multivariat terletak pada pembacaan serentak terhadap vektor observasi, bukan pada penjumlahan mekanis dari banyak uji tunggal [@greenacre2017; @agresti2013; @hair2019].
 
@@ -2192,6 +2892,16 @@ Berikut adalah algoritma kerja yang dapat digunakan mahasiswa ketika menerapkan 
 8. Simpulkan temuan, keterbatasan, dan rekomendasi analisis lanjutan.
 
 ## Contoh Implementasi R
+
+<!-- BEGIN AI-INLINE:e7bc357a0d61 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Contoh Implementasi R</h4>
+<p><strong>Konteks:</strong> Pertemuan 13: Analisis Korespondensi Sederhana dan Berganda.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r correspondence-manual, eval=FALSE}
 # Contoh tabel kontingensi sederhana
@@ -2260,6 +2970,29 @@ Bab ini menegaskan bahwa **Analisis Korespondensi Sederhana dan Berganda** harus
 
 # Bab 14. Biplot dan Visualisasi Data Multivariat
 
+<!-- BEGIN AI-INLINE:12454252bf94 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 14</span>
+<h3>Generative dan Agentic AI untuk Biplot dan Visualisasi Data Multivariat</h3>
+
+**Arah RPS.** Perbandingan PCA, analisis faktor, diskriminan, dan clustering dengan autoencoder, embedding, serta metode manifold learning.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK4 melalui fokus: Analisis Korespondensi dan Biplot. |
+| Generative AI | Digunakan untuk menyusun data dictionary, mendeteksi potensi masalah kualitas data, dan mengusulkan aturan pemeriksaan. |
+| Agentic AI | Dapat memprofilkan data, menjalankan validasi skema, menandai missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa asal-usul data, unit observasi, coverage, kebocoran data, privasi, dan keputusan pembersihan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <span class="badge-brown">Pertemuan 14</span> <span class="badge-brown">SubCPMK4</span>
 
 <div class="concept-box"><strong>Fokus bab:</strong> representasi observasi dan variabel dalam ruang berdimensi rendah, interpretasi sudut vektor, panjang vektor, kedekatan titik, dan hubungan biplot dengan PCA. Topik ini merujuk pada bahan kajian RPS dan dikembangkan dengan rujukan utama [@gabriel1971; @jolliffe2002; @wickham2016].</div>
@@ -2282,6 +3015,16 @@ Setelah mempelajari bab ini, mahasiswa diharapkan mampu:
 
 ## Konsep Inti
 
+<!-- BEGIN AI-INLINE:dac0326b3756 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 14: Biplot dan Visualisasi Data Multivariat.</p>
+<p>Minta AI menjelaskan **Biplot dan Visualisasi Data Multivariat** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Biplot dan Visualisasi Data Multivariat merupakan bagian penting dari analisis multivariat tingkat lanjut karena berhubungan langsung dengan representasi observasi dan variabel dalam ruang berdimensi rendah, interpretasi sudut vektor, panjang vektor, kedekatan titik, dan hubungan biplot dengan PCA. Pada level magister, mahasiswa diharapkan tidak hanya mampu menjalankan prosedur komputasi, tetapi juga memahami struktur data, asumsi, keterbatasan, dan konsekuensi interpretasi. Pembelajaran topik ini perlu dimulai dengan pengertian bahwa setiap observasi multivariat adalah satu vektor informasi. Ketika vektor tersebut dianalisis, perhatian utama bukan hanya nilai tiap variabel, melainkan pola bersama antarvariabel. Perspektif ini membedakan analisis multivariat dari kumpulan analisis univariat yang dilakukan secara terpisah.
 
 Dalam praktik, matrix approximation sering menjadi pintu masuk untuk memahami data. Namun, penggunaan metode tersebut perlu didukung oleh pemahaman tentang kualitas pengukuran, desain pengambilan sampel, ukuran sampel, dan tujuan analisis. Jika tujuan analisis adalah eksplorasi, fokusnya dapat diarahkan pada struktur pola, visualisasi, dan reduksi dimensi. Jika tujuan analisis adalah inferensi, perhatian perlu diberikan pada asumsi distribusi, hipotesis, dan kontrol kesalahan. Jika tujuan analisis adalah prediksi atau klasifikasi, validasi model menjadi bagian yang tidak boleh ditinggalkan.
@@ -2295,6 +3038,16 @@ Koordinat observasi biasanya diperoleh dari skor, sedangkan koordinat variabel d
 </div>
 
 ## Narasi Pengayaan Teoretis dan Terapan
+
+<!-- BEGIN AI-INLINE:f17155bd75ab -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Narasi Pengayaan Teoretis dan Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 14: Biplot dan Visualisasi Data Multivariat.</p>
+<p>Minta AI menjelaskan **Biplot dan Visualisasi Data Multivariat** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam konteks Biplot dan Visualisasi Data Multivariat, aspek keterkaitan antara tujuan penelitian dan pilihan metode menjadi penting karena data multivariat hampir selalu membawa informasi yang saling bergantung. Ketika beberapa variabel diamati pada unit yang sama, perubahan pada satu variabel sering tidak berdiri sendiri, melainkan terkait dengan perubahan variabel lain. Oleh sebab itu, analisis yang hanya memotong data menjadi analisis univariat dapat kehilangan struktur utama yang justru menjadi alasan mengapa data dikumpulkan secara multivariat. Pada aplikasi survei rumah tangga, misalnya, indikator layanan, perilaku, risiko, dan capaian sering bergerak bersama sehingga kesimpulan perlu mempertimbangkan korelasi, variasi bersama, serta kemungkinan adanya dimensi laten. Prinsip ini sejalan dengan penekanan literatur klasik bahwa kekuatan analisis multivariat terletak pada pembacaan serentak terhadap vektor observasi, bukan pada penjumlahan mekanis dari banyak uji tunggal [@gabriel1971; @jolliffe2002; @wickham2016].
 
@@ -2358,6 +3111,16 @@ Berikut adalah algoritma kerja yang dapat digunakan mahasiswa ketika menerapkan 
 
 ## Contoh Implementasi R
 
+<!-- BEGIN AI-INLINE:1f2e1078c6fb -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Contoh Implementasi R</h4>
+<p><strong>Konteks:</strong> Pertemuan 14: Biplot dan Visualisasi Data Multivariat.</p>
+<p>Agen dapat memprofilkan data, menjalankan validasi skema, menandai missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** asal-usul data, unit observasi, coverage, kebocoran data, privasi, dan keputusan pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 ```{r biplot-basic, eval=FALSE}
 X <- USArrests
 pca <- prcomp(X, center = TRUE, scale. = TRUE)
@@ -2404,6 +3167,29 @@ Bab ini menegaskan bahwa **Biplot dan Visualisasi Data Multivariat** harus dipah
 
 # Bab 15. Penyusunan Laporan Ilmiah dan Reproducible Analysis
 
+<!-- BEGIN AI-INLINE:639dea340dbc -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 15</span>
+<h3>Generative dan Agentic AI untuk Penyusunan Laporan Ilmiah dan Reproducible Analysis</h3>
+
+**Arah RPS.** Validasi cluster dan klasifikasi dengan resampling, penanganan high-dimensional data, interpretabilitas representasi, serta deteksi bias antarkelompok.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK4 melalui fokus: Analisis Korespondensi dan Biplot. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <span class="badge-brown">Pertemuan 15</span> <span class="badge-brown">SubCPMK4</span>
 
 <div class="concept-box"><strong>Fokus bab:</strong> struktur laporan, argumentasi metode, transparansi kode, interpretasi tabel dan grafik, integritas akademik, serta penulisan kesimpulan berbasis bukti. Topik ini merujuk pada bahan kajian RPS dan dikembangkan dengan rujukan utama [@hair2019; @tabachnick2019; @wickham2016].</div>
@@ -2426,6 +3212,16 @@ Setelah mempelajari bab ini, mahasiswa diharapkan mampu:
 
 ## Konsep Inti
 
+<!-- BEGIN AI-INLINE:81801917e7a5 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 15: Penyusunan Laporan Ilmiah dan Reproducible Analysis.</p>
+<p>Minta AI menjelaskan **Penyusunan Laporan Ilmiah dan Reproducible Analysis** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Penyusunan Laporan Ilmiah dan Reproducible Analysis merupakan bagian penting dari analisis multivariat tingkat lanjut karena berhubungan langsung dengan struktur laporan, argumentasi metode, transparansi kode, interpretasi tabel dan grafik, integritas akademik, serta penulisan kesimpulan berbasis bukti. Pada level magister, mahasiswa diharapkan tidak hanya mampu menjalankan prosedur komputasi, tetapi juga memahami struktur data, asumsi, keterbatasan, dan konsekuensi interpretasi. Pembelajaran topik ini perlu dimulai dengan pengertian bahwa setiap observasi multivariat adalah satu vektor informasi. Ketika vektor tersebut dianalisis, perhatian utama bukan hanya nilai tiap variabel, melainkan pola bersama antarvariabel. Perspektif ini membedakan analisis multivariat dari kumpulan analisis univariat yang dilakukan secara terpisah.
 
 Dalam praktik, struktur IMRAD sering menjadi pintu masuk untuk memahami data. Namun, penggunaan metode tersebut perlu didukung oleh pemahaman tentang kualitas pengukuran, desain pengambilan sampel, ukuran sampel, dan tujuan analisis. Jika tujuan analisis adalah eksplorasi, fokusnya dapat diarahkan pada struktur pola, visualisasi, dan reduksi dimensi. Jika tujuan analisis adalah inferensi, perhatian perlu diberikan pada asumsi distribusi, hipotesis, dan kontrol kesalahan. Jika tujuan analisis adalah prediksi atau klasifikasi, validasi model menjadi bagian yang tidak boleh ditinggalkan.
@@ -2439,6 +3235,16 @@ Bagian yang paling sering lemah bukan rumus, melainkan hubungan logis antara per
 </div>
 
 ## Narasi Pengayaan Teoretis dan Terapan
+
+<!-- BEGIN AI-INLINE:b092a5e7180b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Narasi Pengayaan Teoretis dan Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 15: Penyusunan Laporan Ilmiah dan Reproducible Analysis.</p>
+<p>Minta AI menjelaskan **Penyusunan Laporan Ilmiah dan Reproducible Analysis** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam konteks Penyusunan Laporan Ilmiah dan Reproducible Analysis, aspek keterkaitan antara tujuan penelitian dan pilihan metode menjadi penting karena data multivariat hampir selalu membawa informasi yang saling bergantung. Ketika beberapa variabel diamati pada unit yang sama, perubahan pada satu variabel sering tidak berdiri sendiri, melainkan terkait dengan perubahan variabel lain. Oleh sebab itu, analisis yang hanya memotong data menjadi analisis univariat dapat kehilangan struktur utama yang justru menjadi alasan mengapa data dikumpulkan secara multivariat. Pada aplikasi kualitas layanan publik, misalnya, indikator layanan, perilaku, risiko, dan capaian sering bergerak bersama sehingga kesimpulan perlu mempertimbangkan korelasi, variasi bersama, serta kemungkinan adanya dimensi laten. Prinsip ini sejalan dengan penekanan literatur klasik bahwa kekuatan analisis multivariat terletak pada pembacaan serentak terhadap vektor observasi, bukan pada penjumlahan mekanis dari banyak uji tunggal [@hair2019; @tabachnick2019; @wickham2016].
 
@@ -2502,6 +3308,16 @@ Berikut adalah algoritma kerja yang dapat digunakan mahasiswa ketika menerapkan 
 
 ## Contoh Implementasi R
 
+<!-- BEGIN AI-INLINE:f4e07653459b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Contoh Implementasi R</h4>
+<p><strong>Konteks:</strong> Pertemuan 15: Penyusunan Laporan Ilmiah dan Reproducible Analysis.</p>
+<p>Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 ```{r template-tabel-ringkas, eval=FALSE}
 # Template ringkas tabel hasil yang dapat dimodifikasi mahasiswa
 hasil <- data.frame(
@@ -2553,6 +3369,29 @@ Bab ini menegaskan bahwa **Penyusunan Laporan Ilmiah dan Reproducible Analysis**
 
 # Bab 16. Proyek Akhir, Dashboard, Presentasi, dan UAS
 
+<!-- BEGIN AI-INLINE:2375cd2b41e4 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 16</span>
+<h3>Generative dan Agentic AI untuk Proyek Akhir, Dashboard, Presentasi, dan UAS</h3>
+
+**Arah RPS.** Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek akhir. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <span class="badge-brown">Pertemuan 16</span> <span class="badge-brown">SubCPMK4</span>
 
 <div class="concept-box"><strong>Fokus bab:</strong> sintesis seluruh metode dalam proyek akhir, rancangan dashboard analisis, presentasi ilmiah, rubrik penilaian, dan strategi menjawab pertanyaan penguji. Topik ini merujuk pada bahan kajian RPS dan dikembangkan dengan rujukan utama [@hair2019; @johnson2019; @greenacre2017].</div>
@@ -2575,6 +3414,16 @@ Setelah mempelajari bab ini, mahasiswa diharapkan mampu:
 
 ## Konsep Inti
 
+<!-- BEGIN AI-INLINE:cf08df0c5446 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Proyek Akhir, Dashboard, Presentasi, dan UAS.</p>
+<p>Minta AI menjelaskan **Proyek Akhir, Dashboard, Presentasi, dan UAS** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Proyek Akhir, Dashboard, Presentasi, dan UAS merupakan bagian penting dari analisis multivariat tingkat lanjut karena berhubungan langsung dengan sintesis seluruh metode dalam proyek akhir, rancangan dashboard analisis, presentasi ilmiah, rubrik penilaian, dan strategi menjawab pertanyaan penguji. Pada level magister, mahasiswa diharapkan tidak hanya mampu menjalankan prosedur komputasi, tetapi juga memahami struktur data, asumsi, keterbatasan, dan konsekuensi interpretasi. Pembelajaran topik ini perlu dimulai dengan pengertian bahwa setiap observasi multivariat adalah satu vektor informasi. Ketika vektor tersebut dianalisis, perhatian utama bukan hanya nilai tiap variabel, melainkan pola bersama antarvariabel. Perspektif ini membedakan analisis multivariat dari kumpulan analisis univariat yang dilakukan secara terpisah.
 
 Dalam praktik, project-based learning sering menjadi pintu masuk untuk memahami data. Namun, penggunaan metode tersebut perlu didukung oleh pemahaman tentang kualitas pengukuran, desain pengambilan sampel, ukuran sampel, dan tujuan analisis. Jika tujuan analisis adalah eksplorasi, fokusnya dapat diarahkan pada struktur pola, visualisasi, dan reduksi dimensi. Jika tujuan analisis adalah inferensi, perhatian perlu diberikan pada asumsi distribusi, hipotesis, dan kontrol kesalahan. Jika tujuan analisis adalah prediksi atau klasifikasi, validasi model menjadi bagian yang tidak boleh ditinggalkan.
@@ -2588,6 +3437,16 @@ Rumus ini bersifat pedagogik: proyek yang baik bukan yang memakai metode paling 
 </div>
 
 ## Narasi Pengayaan Teoretis dan Terapan
+
+<!-- BEGIN AI-INLINE:7de0f1f94d4a -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Narasi Pengayaan Teoretis dan Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Proyek Akhir, Dashboard, Presentasi, dan UAS.</p>
+<p>Minta AI menjelaskan **Proyek Akhir, Dashboard, Presentasi, dan UAS** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam konteks Proyek Akhir, Dashboard, Presentasi, dan UAS, aspek keterkaitan antara tujuan penelitian dan pilihan metode menjadi penting karena data multivariat hampir selalu membawa informasi yang saling bergantung. Ketika beberapa variabel diamati pada unit yang sama, perubahan pada satu variabel sering tidak berdiri sendiri, melainkan terkait dengan perubahan variabel lain. Oleh sebab itu, analisis yang hanya memotong data menjadi analisis univariat dapat kehilangan struktur utama yang justru menjadi alasan mengapa data dikumpulkan secara multivariat. Pada aplikasi kesehatan masyarakat, misalnya, indikator layanan, perilaku, risiko, dan capaian sering bergerak bersama sehingga kesimpulan perlu mempertimbangkan korelasi, variasi bersama, serta kemungkinan adanya dimensi laten. Prinsip ini sejalan dengan penekanan literatur klasik bahwa kekuatan analisis multivariat terletak pada pembacaan serentak terhadap vektor observasi, bukan pada penjumlahan mekanis dari banyak uji tunggal [@hair2019; @johnson2019; @greenacre2017].
 
@@ -2650,6 +3509,16 @@ Berikut adalah algoritma kerja yang dapat digunakan mahasiswa ketika menerapkan 
 8. Simpulkan temuan, keterbatasan, dan rekomendasi analisis lanjutan.
 
 ## Contoh Implementasi R
+
+<!-- BEGIN AI-INLINE:5a624c3c4abc -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Contoh Implementasi R</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Proyek Akhir, Dashboard, Presentasi, dan UAS.</p>
+<p>Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r shiny-skeleton, eval=FALSE}
 # Kerangka Shiny sederhana untuk dashboard analisis multivariat
@@ -2716,6 +3585,29 @@ Bab ini menegaskan bahwa **Proyek Akhir, Dashboard, Presentasi, dan UAS** harus 
 
 # Rancangan Evaluasi, Tugas, dan Rubrik Pembelajaran
 
+<!-- BEGIN AI-INLINE:0a9398faadaa -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 17</span>
+<h3>Generative dan Agentic AI untuk Rancangan Evaluasi, Tugas, dan Rubrik Pembelajaran</h3>
+
+**Arah RPS.** Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek akhir. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 Bagian ini membantu mahasiswa memahami hubungan antara capaian pembelajaran, aktivitas kelas, tugas, praktikum, proyek, UTS, dan UAS. Rancangan evaluasi dibuat agar selaras dengan karakter mata kuliah yang menekankan pemahaman teori, keterampilan komputasi, interpretasi, dan komunikasi ilmiah.
 
 ## Komponen Penilaian
@@ -2731,6 +3623,16 @@ Bagian ini membantu mahasiswa memahami hubungan antara capaian pembelajaran, akt
 
 ## Tugas 1: Eksplorasi Data, Normalitas, dan Hotelling T²
 
+<!-- BEGIN AI-INLINE:063d418b6516 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Tugas 1: Eksplorasi Data, Normalitas, dan Hotelling T²</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Rancangan Evaluasi, Tugas, dan Rubrik Pembelajaran.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class="practice-box">
 <strong>Tujuan:</strong> mahasiswa mampu mendeskripsikan data multivariat, mengevaluasi asumsi normalitas marginal dan multivariat, mendeteksi outlier multivariat, serta melakukan uji vektor rata-rata.
 </div>
@@ -2739,21 +3641,71 @@ Mahasiswa memilih dataset nyata dari bidang kesehatan, pendidikan, pemasaran, at
 
 ## Tugas 2: Evaluasi Sampling dan Desain Eksperimen
 
+<!-- BEGIN AI-INLINE:453af4788241 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Tugas 2: Evaluasi Sampling dan Desain Eksperimen</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Rancangan Evaluasi, Tugas, dan Rubrik Pembelajaran.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Mahasiswa membaca satu studi kasus atau artikel penelitian yang menggunakan data multivariat. Tugasnya adalah mengevaluasi teknik sampling, desain eksperimen atau desain observasional, potensi bias, serta usulan perbaikan desain. Mahasiswa perlu menjelaskan dampak rancangan ulang terhadap kualitas analisis multivariat. Fokus utama bukan pada menghitung rumus, tetapi pada argumentasi metodologis.
 
 ## Tugas 3: Regresi Multivariat, PCA, dan FA
+
+<!-- BEGIN AI-INLINE:0724115f30f3 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Tugas 3: Regresi Multivariat, PCA, dan FA</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Rancangan Evaluasi, Tugas, dan Rubrik Pembelajaran.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Mahasiswa mengambil dataset multivariat dan menerapkan regresi multivariat serta PCA atau FA. Laporan harus membandingkan analisis sebelum dan sesudah reduksi dimensi. Interpretasi perlu menjelaskan apakah PCA/FA membantu mengurangi kompleksitas, memperjelas struktur, atau justru menghilangkan informasi penting. Hasil harus disajikan dalam tabel dan grafik yang rapi.
 
 ## Tugas 4: Diskriminan dan Clustering
 
+<!-- BEGIN AI-INLINE:f518fb230b00 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Tugas 4: Diskriminan dan Clustering</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Rancangan Evaluasi, Tugas, dan Rubrik Pembelajaran.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Mahasiswa menggunakan dataset yang memiliki label kelompok atau dapat dibentuk kelompoknya. Lakukan LDA/QDA jika label kelompok tersedia, dan lakukan k-means atau hierarchical clustering untuk segmentasi. Bandingkan hasil klasifikasi dan clustering. Jelaskan apakah cluster yang terbentuk konsisten dengan label awal, atau justru memberi perspektif baru.
 
 ## Proyek Akhir: Korespondensi, Biplot, dan Laporan Ilmiah
 
+<!-- BEGIN AI-INLINE:608f38808a97 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Proyek Akhir: Korespondensi, Biplot, dan Laporan Ilmiah</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Rancangan Evaluasi, Tugas, dan Rubrik Pembelajaran.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Proyek akhir mengintegrasikan minimal tiga metode multivariat. Mahasiswa dapat membuat laporan ilmiah, mini ebook, atau dashboard analisis data. Struktur yang disarankan adalah pendahuluan, deskripsi data, metode, hasil, pembahasan, kesimpulan, keterbatasan, dan lampiran kode. Presentasi harus menonjolkan temuan utama, bukan sekadar menampilkan semua output.
 
 ## Rubrik Umum Proyek Akhir
+
+<!-- BEGIN AI-INLINE:2c1fd8198fe3 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Rubrik Umum Proyek Akhir</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Rancangan Evaluasi, Tugas, dan Rubrik Pembelajaran.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 | Dimensi | Sangat Baik | Perlu Perbaikan | Bobot |
 |---|---|---|---:|
@@ -2766,6 +3718,29 @@ Proyek akhir mengintegrasikan minimal tiga metode multivariat. Mahasiswa dapat m
 | Komunikasi | Laporan/presentasi sistematis dan meyakinkan | Narasi kurang runtut | 10% |
 
 # Template Laporan Ilmiah Mahasiswa
+
+<!-- BEGIN AI-INLINE:f7da9dd4eefe -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 18</span>
+<h3>Generative dan Agentic AI untuk Template Laporan Ilmiah Mahasiswa</h3>
+
+**Arah RPS.** Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek akhir. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 Mahasiswa dapat menggunakan kerangka berikut untuk menyusun laporan akhir.
 
@@ -2803,9 +3778,42 @@ Kesimpulan menjawab tujuan penelitian secara langsung. Kesimpulan bukan tempat m
 
 ## Lampiran Kode
 
+<!-- BEGIN AI-INLINE:ef7c8df6ff08 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Lampiran Kode</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Template Laporan Ilmiah Mahasiswa.</p>
+<p>Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Lampiran kode memuat script yang bersih, diberi komentar secukupnya, dan dapat dijalankan ulang. Kode sebaiknya disusun menjadi bagian: load data, preprocessing, eksplorasi, analisis utama, visualisasi, dan ekspor hasil.
 
 # Bank Studi Kasus
+
+<!-- BEGIN AI-INLINE:2558c2f4bdda -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 19</span>
+<h3>Generative dan Agentic AI untuk Bank Studi Kasus</h3>
+
+**Arah RPS.** Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek akhir. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 Berikut beberapa ide studi kasus yang relevan untuk mahasiswa S2 Statistika Terapan:
 
@@ -2974,6 +3982,16 @@ berada pada mahasiswa.
 5. Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil secara mandiri.
 
 ### Bukti asesmen
+
+<!-- BEGIN AI-INLINE:464af43458ef -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Bukti asesmen</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Bank Studi Kasus.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Penilaian berfokus pada ketepatan metode, validasi dan ketidakpastian,
 reproducibility, interpretasi, komunikasi, serta transparansi penggunaan AI.

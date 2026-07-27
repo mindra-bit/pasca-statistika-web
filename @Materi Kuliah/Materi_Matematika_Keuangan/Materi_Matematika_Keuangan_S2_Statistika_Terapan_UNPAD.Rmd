@@ -147,7 +147,6 @@ table {
 </style>
 <!-- END UNPAD MATERIAL STYLE -->
 
-
 <!-- BEGIN UNPAD MATERIAL ENHANCEMENT -->
 
 ```{r setup-unpad-render, include=FALSE}
@@ -164,7 +163,6 @@ knitr::opts_chunk$set(
 )
 set.seed(2025)
 ```
-
 
 <div class="unpad-cover">
 <div class="unpad-cover__brand">
@@ -209,6 +207,30 @@ Materi ini disusun sebagai bahan ajar komprehensif untuk mata kuliah **Matematik
 
 ![](matkeu_assets/risk_pipeline.png)
 
+
+<!-- BEGIN AI-INLINE-STYLE-2026 -->
+<style>
+.ai-inline {
+  margin: 1rem 0 1.35rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid #bfd9d5;
+  border-left: 7px solid #0f766e;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #eff9f7, #fffaf0);
+}
+.ai-inline--agentic { border-left-color: #17395c; background: linear-gradient(135deg, #eef5fb, #f5faf8); }
+.ai-inline--assessment { border-left-color: #a35d00; background: #fff8e8; }
+.ai-inline h3, .ai-inline h4 { margin-top: 0; color: #17395c; }
+.ai-inline p:last-child, .ai-inline ul:last-child { margin-bottom: 0; }
+.ai-inline__label {
+  display: inline-block; margin-bottom: .45rem; padding: .2rem .55rem;
+  border-radius: 999px; background: #17395c; color: white;
+  font-size: .78rem; font-weight: 800;
+}
+.ai-inline table { width: 100%; margin: .6rem 0; background: white; }
+</style>
+<!-- END AI-INLINE-STYLE-2026 -->
+
 # Prakata dan Orientasi Mata Kuliah
 
 ## Identitas mata kuliah
@@ -251,6 +273,29 @@ Bahan ajar ini dapat dibaca secara linear dari awal sampai akhir, tetapi juga da
 
 # Kontrak Pembelajaran, Aktivitas, dan Penilaian
 
+<!-- BEGIN AI-INLINE:d92a333b1a0f -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 1</span>
+<h3>Generative dan Agentic AI untuk Kontrak Pembelajaran, Aktivitas, dan Penilaian</h3>
+
+**Arah RPS.** AI untuk forecasting, pricing, portfolio analytics, dan deteksi anomali dengan pembanding model matematis/statistik.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK1 melalui fokus: Pendahuluan Matematika Keuangan; Pengertian dan ruang lingkup matematika keuangan; Definisi investasi dan pengelolaan investasi. |
+| Generative AI | Digunakan untuk merumuskan alternatif penjelasan, contoh, dan hipotesis awal. |
+| Agentic AI | Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 ## Prinsip pembelajaran
 
 Pembelajaran Matematika Keuangan dirancang sebagai kombinasi antara teori, praktikum, diskusi, penugasan mandiri, dan project. Pada pertemuan teori, dosen menekankan konsep, derivasi formula, logika model, dan interpretasi. Pada pertemuan praktikum, mahasiswa menerjemahkan konsep ke dalam kode R atau Python. Pada tugas dan project, mahasiswa mengolah data riil, membangun model, menyajikan hasil, dan mempertahankan keputusan analitiknya.
@@ -259,14 +304,46 @@ Dalam RPS, penilaian mencakup partisipasi, tugas, kuis, UTS, UAS, dan proyek. Su
 
 ## Format minimal laporan praktikum dan project
 
+<!-- BEGIN AI-INLINE:cc5c5f5c6075 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Format minimal laporan praktikum dan project</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Kontrak Pembelajaran, Aktivitas, dan Penilaian.</p>
+<p>Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Setiap laporan praktikum atau project sebaiknya memuat komponen berikut. Pertama, latar belakang kasus dan rumusan masalah. Kedua, deskripsi data, sumber data, periode observasi, dan penjelasan variabel. Ketiga, metode yang digunakan, termasuk asumsi dan alasan pemilihan metode. Keempat, hasil analisis dalam bentuk tabel, grafik, dan ringkasan numerik. Kelima, interpretasi hasil dari sudut pandang statistik dan keuangan. Keenam, kesimpulan, rekomendasi, keterbatasan, dan saran pengembangan. Ketujuh, lampiran kode program yang dapat direproduksi.
 
 <div class="callout-warning">
 **Prinsip reproducibility.** Project yang baik bukan hanya project yang menghasilkan angka bagus, tetapi project yang dapat dijalankan ulang oleh orang lain. Gunakan struktur folder yang rapi, tulis sumber data, simpan seed simulasi, beri komentar kode secukupnya, dan pastikan grafik serta tabel berasal dari data yang sama dengan yang dijelaskan di laporan.
 </div>
 
-
 # Pengantar Matematika Keuangan, Investasi, dan Pasar Keuangan
+
+<!-- BEGIN AI-INLINE:c48f39aed3a6 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 2</span>
+<h3>Generative dan Agentic AI untuk Pengantar Matematika Keuangan, Investasi, dan Pasar Keuangan</h3>
+
+**Arah RPS.** Stress testing, backtesting, uncertainty, model risk management, interpretabilitas, dan konsekuensi keputusan finansial.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK1 melalui fokus: Pasar keuangan dan instrumen keuangan; Tingkat bunga, premi risiko; Instrumen Investasi & Manajemen Risiko. |
+| Generative AI | Digunakan untuk mengurai notasi dan menawarkan langkah derivasi alternatif tanpa menggantikan pembuktian mahasiswa. |
+| Agentic AI | Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="callout-goal">
 **Tujuan bab.** Mahasiswa memahami ruang lingkup matematika keuangan, definisi investasi, fungsi pasar keuangan, serta hubungan antara tingkat bunga, premi risiko, dan keputusan investasi.
@@ -312,6 +389,16 @@ Pada level komputasi, formula harus diterjemahkan menjadi langkah yang dapat diu
 
 ## Contoh kasus terarah: pemilihan instrumen antara deposito, obligasi, saham, dan reksa dana untuk horizon investasi satu tahun
 
+<!-- BEGIN AI-INLINE:4534fb0bf8e9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terarah: pemilihan instrumen antara deposito, obligasi, saham, dan reksa dana untuk horizon investasi satu tahun</h4>
+<p><strong>Konteks:</strong> Pertemuan 2: Pengantar Matematika Keuangan, Investasi, dan Pasar Keuangan.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Stress testing, backtesting, uncertainty, model risk management, interpretabilitas, dan konsekuensi keputusan finansial. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan seorang analis pada institusi keuangan ingin menggunakan investasi dan pasar keuangan untuk membantu keputusan alokasi dana. Data yang tersedia berupa harga historis beberapa instrumen, informasi tingkat bunga bebas risiko, dan batasan kebijakan investasi. Tujuan analis bukan hanya menghitung angka, melainkan menyusun argumen yang dapat dipertanggungjawabkan: instrumen mana yang dipilih, risiko mana yang dominan, asumsi mana yang digunakan, hasil mana yang stabil, dan rekomendasi apa yang masuk akal.
 
 Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlier, perubahan denominasi, corporate action, serta konsistensi frekuensi data. Dalam data keuangan, kesalahan kecil pada data harga dapat menghasilkan return ekstrem yang bukan risiko pasar, melainkan risiko spreadsheet. Langkah kedua adalah menghitung ringkasan statistik: mean, median, standar deviasi, quantile, skewness, kurtosis, korelasi, dan grafik time series. Langkah ketiga adalah menerapkan model sesuai tujuan analisis. Langkah keempat adalah mengevaluasi kewajaran output model dan menulis interpretasi.
@@ -319,6 +406,16 @@ Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlie
 Pada laporan mahasiswa, contoh kasus sebaiknya tidak berhenti pada angka final. Misalnya, jika hasil menunjukkan bahwa suatu aset memiliki volatilitas tinggi, jelaskan apakah volatilitas itu konsisten dengan karakter aset tersebut. Jika hasil menunjukkan korelasi negatif antara dua aset, jelaskan implikasinya untuk diversifikasi. Jika hasil opsi menunjukkan harga model lebih rendah dari harga pasar, diskusikan kemungkinan adanya perbedaan volatilitas implisit, biaya transaksi, likuiditas, atau asumsi model.
 
 ## Implementasi awal di R
+
+<!-- BEGIN AI-INLINE:37eaf7a73975 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi awal di R</h4>
+<p><strong>Konteks:</strong> Pertemuan 2: Pengantar Matematika Keuangan, Investasi, dan Pasar Keuangan.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r bab01-investasi-dan-pasar-, eval=FALSE}
 # Kerangka sederhana nilai masa depan dan nilai sekarang
@@ -342,14 +439,46 @@ Dari sisi penulisan akademik, interpretasi yang baik memiliki tiga komponen: ang
 
 ## Latihan dan diskusi
 
+<!-- BEGIN AI-INLINE:aed321ac7b8f -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 2: Pengantar Matematika Keuangan, Investasi, dan Pasar Keuangan.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 1. Jelaskan perbedaan investasi dan spekulasi dari perspektif risiko, horizon, dan informasi.
 2. Hitung nilai masa depan Rp100 juta dengan bunga 6% selama 1, 3, dan 5 tahun.
 3. Diskusikan mengapa premi risiko dibutuhkan dalam pasar keuangan.
 
 Untuk diskusi kelas, mahasiswa dapat diminta membandingkan jawaban antar-kelompok. Perbedaan hasil bukan selalu berarti ada kelompok yang salah. Dalam analisis keuangan, hasil dapat berbeda karena pilihan periode data, frekuensi return, metode estimasi volatilitas, asumsi risk-free rate, atau batasan optimasi. Yang penting adalah setiap pilihan metodologis dijelaskan secara transparan dan konsisten.
 
-
 # Return, Risiko, Tingkat Bunga, dan Premi Risiko
+
+<!-- BEGIN AI-INLINE:9ee3dacf904a -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 3</span>
+<h3>Generative dan Agentic AI untuk Return, Risiko, Tingkat Bunga, dan Premi Risiko</h3>
+
+**Arah RPS.** Studi kasus menggunakan data pasar nyata dengan dokumentasi asumsi, keterbatasan, dan risiko penggunaan otomatisasi.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK1 melalui fokus: Jenis-jenis instrumen investasi (saham, obligasi, SBI, dsb.); Pengukuran dan pengelolaan risiko investasi; Value at Risk (VaR). |
+| Generative AI | Digunakan untuk mengurai notasi dan menawarkan langkah derivasi alternatif tanpa menggantikan pembuktian mahasiswa. |
+| Agentic AI | Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="callout-goal">
 **Tujuan bab.** Mahasiswa mampu menghitung return sederhana, log-return, volatilitas, annualization, dan premi risiko sebagai dasar analisis investasi.
@@ -399,6 +528,16 @@ Pada level komputasi, formula harus diterjemahkan menjadi langkah yang dapat diu
 
 ## Contoh kasus terarah: analisis return harian saham dan pembandingan dengan tingkat bunga bebas risiko
 
+<!-- BEGIN AI-INLINE:62c60aac8f22 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terarah: analisis return harian saham dan pembandingan dengan tingkat bunga bebas risiko</h4>
+<p><strong>Konteks:</strong> Pertemuan 3: Return, Risiko, Tingkat Bunga, dan Premi Risiko.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Studi kasus menggunakan data pasar nyata dengan dokumentasi asumsi, keterbatasan, dan risiko penggunaan otomatisasi. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan seorang analis pada institusi keuangan ingin menggunakan return dan risiko untuk membantu keputusan alokasi dana. Data yang tersedia berupa harga historis beberapa instrumen, informasi tingkat bunga bebas risiko, dan batasan kebijakan investasi. Tujuan analis bukan hanya menghitung angka, melainkan menyusun argumen yang dapat dipertanggungjawabkan: instrumen mana yang dipilih, risiko mana yang dominan, asumsi mana yang digunakan, hasil mana yang stabil, dan rekomendasi apa yang masuk akal.
 
 Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlier, perubahan denominasi, corporate action, serta konsistensi frekuensi data. Dalam data keuangan, kesalahan kecil pada data harga dapat menghasilkan return ekstrem yang bukan risiko pasar, melainkan risiko spreadsheet. Langkah kedua adalah menghitung ringkasan statistik: mean, median, standar deviasi, quantile, skewness, kurtosis, korelasi, dan grafik time series. Langkah ketiga adalah menerapkan model sesuai tujuan analisis. Langkah keempat adalah mengevaluasi kewajaran output model dan menulis interpretasi.
@@ -406,6 +545,16 @@ Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlie
 Pada laporan mahasiswa, contoh kasus sebaiknya tidak berhenti pada angka final. Misalnya, jika hasil menunjukkan bahwa suatu aset memiliki volatilitas tinggi, jelaskan apakah volatilitas itu konsisten dengan karakter aset tersebut. Jika hasil menunjukkan korelasi negatif antara dua aset, jelaskan implikasinya untuk diversifikasi. Jika hasil opsi menunjukkan harga model lebih rendah dari harga pasar, diskusikan kemungkinan adanya perbedaan volatilitas implisit, biaya transaksi, likuiditas, atau asumsi model.
 
 ## Implementasi awal di R
+
+<!-- BEGIN AI-INLINE:0d0a823e06e5 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi awal di R</h4>
+<p><strong>Konteks:</strong> Pertemuan 3: Return, Risiko, Tingkat Bunga, dan Premi Risiko.</p>
+<p>Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r bab02-return-dan-risiko, eval=FALSE}
 # Simulasi data harga dan perhitungan return
@@ -431,14 +580,46 @@ Dari sisi penulisan akademik, interpretasi yang baik memiliki tiga komponen: ang
 
 ## Latihan dan diskusi
 
+<!-- BEGIN AI-INLINE:96fba7d12d1a -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 3: Return, Risiko, Tingkat Bunga, dan Premi Risiko.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 1. Ambil data harga satu saham selama minimal satu tahun dan hitung return sederhana serta log-return.
 2. Jelaskan kapan log-return lebih nyaman digunakan dibanding return sederhana.
 3. Hitung volatilitas tahunan dari volatilitas harian dan jelaskan asumsi yang melekat.
 
 Untuk diskusi kelas, mahasiswa dapat diminta membandingkan jawaban antar-kelompok. Perbedaan hasil bukan selalu berarti ada kelompok yang salah. Dalam analisis keuangan, hasil dapat berbeda karena pilihan periode data, frekuensi return, metode estimasi volatilitas, asumsi risk-free rate, atau batasan optimasi. Yang penting adalah setiap pilihan metodologis dijelaskan secara transparan dan konsisten.
 
-
 # Instrumen Investasi: Saham, Obligasi, SBI, Reksa Dana, dan Derivatif
+
+<!-- BEGIN AI-INLINE:e357f355d7d6 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 4</span>
+<h3>Generative dan Agentic AI untuk Instrumen Investasi: Saham, Obligasi, SBI, Reksa Dana, dan Derivatif</h3>
+
+**Arah RPS.** AI untuk forecasting, pricing, portfolio analytics, dan deteksi anomali dengan pembanding model matematis/statistik.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK1 melalui fokus: Simulasi historis dan Monte Carlo untuk risiko; Analisis Portofolio dan Diversifikasi; Konsep risiko dan risk aversion; Utility function dan toleransi risiko. |
+| Generative AI | Digunakan untuk mengurai notasi dan menawarkan langkah derivasi alternatif tanpa menggantikan pembuktian mahasiswa. |
+| Agentic AI | Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="callout-goal">
 **Tujuan bab.** Mahasiswa mampu mengidentifikasi jenis instrumen keuangan, karakteristik risiko-return, likuiditas, horizon investasi, dan peran setiap instrumen dalam portofolio.
@@ -484,6 +665,16 @@ Pada level komputasi, formula harus diterjemahkan menjadi langkah yang dapat diu
 
 ## Contoh kasus terarah: karakterisasi empat instrumen untuk tugas analisis risiko investasi SubCPMK1
 
+<!-- BEGIN AI-INLINE:2277c9a01e5b -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Contoh kasus terarah: karakterisasi empat instrumen untuk tugas analisis risiko investasi SubCPMK1</h4>
+<p><strong>Konteks:</strong> Pertemuan 4: Instrumen Investasi: Saham, Obligasi, SBI, Reksa Dana, dan Derivatif.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan seorang analis pada institusi keuangan ingin menggunakan instrumen investasi untuk membantu keputusan alokasi dana. Data yang tersedia berupa harga historis beberapa instrumen, informasi tingkat bunga bebas risiko, dan batasan kebijakan investasi. Tujuan analis bukan hanya menghitung angka, melainkan menyusun argumen yang dapat dipertanggungjawabkan: instrumen mana yang dipilih, risiko mana yang dominan, asumsi mana yang digunakan, hasil mana yang stabil, dan rekomendasi apa yang masuk akal.
 
 Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlier, perubahan denominasi, corporate action, serta konsistensi frekuensi data. Dalam data keuangan, kesalahan kecil pada data harga dapat menghasilkan return ekstrem yang bukan risiko pasar, melainkan risiko spreadsheet. Langkah kedua adalah menghitung ringkasan statistik: mean, median, standar deviasi, quantile, skewness, kurtosis, korelasi, dan grafik time series. Langkah ketiga adalah menerapkan model sesuai tujuan analisis. Langkah keempat adalah mengevaluasi kewajaran output model dan menulis interpretasi.
@@ -491,6 +682,16 @@ Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlie
 Pada laporan mahasiswa, contoh kasus sebaiknya tidak berhenti pada angka final. Misalnya, jika hasil menunjukkan bahwa suatu aset memiliki volatilitas tinggi, jelaskan apakah volatilitas itu konsisten dengan karakter aset tersebut. Jika hasil menunjukkan korelasi negatif antara dua aset, jelaskan implikasinya untuk diversifikasi. Jika hasil opsi menunjukkan harga model lebih rendah dari harga pasar, diskusikan kemungkinan adanya perbedaan volatilitas implisit, biaya transaksi, likuiditas, atau asumsi model.
 
 ## Implementasi awal di R
+
+<!-- BEGIN AI-INLINE:1f8025810f1e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi awal di R</h4>
+<p><strong>Konteks:</strong> Pertemuan 4: Instrumen Investasi: Saham, Obligasi, SBI, Reksa Dana, dan Derivatif.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r bab03-instrumen-investasi, eval=FALSE}
 # Contoh harga obligasi sederhana
@@ -514,14 +715,46 @@ Dari sisi penulisan akademik, interpretasi yang baik memiliki tiga komponen: ang
 
 ## Latihan dan diskusi
 
+<!-- BEGIN AI-INLINE:790347b77dcb -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 4: Instrumen Investasi: Saham, Obligasi, SBI, Reksa Dana, dan Derivatif.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 1. Buat tabel perbandingan saham, obligasi, SBI, reksa dana, dan opsi.
 2. Jelaskan mengapa obligasi tetap memiliki risiko meskipun kuponnya tetap.
 3. Diskusikan peran derivatif sebagai alat hedging dan spekulasi.
 
 Untuk diskusi kelas, mahasiswa dapat diminta membandingkan jawaban antar-kelompok. Perbedaan hasil bukan selalu berarti ada kelompok yang salah. Dalam analisis keuangan, hasil dapat berbeda karena pilihan periode data, frekuensi return, metode estimasi volatilitas, asumsi risk-free rate, atau batasan optimasi. Yang penting adalah setiap pilihan metodologis dijelaskan secara transparan dan konsisten.
 
-
 # Manajemen Risiko Investasi dan Value at Risk
+
+<!-- BEGIN AI-INLINE:ea987394ac37 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 5</span>
+<h3>Generative dan Agentic AI untuk Manajemen Risiko Investasi dan Value at Risk</h3>
+
+**Arah RPS.** Stress testing, backtesting, uncertainty, model risk management, interpretabilitas, dan konsekuensi keputusan finansial.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK2 melalui fokus: Alokasi aset antara portofolio berisiko dan bebas risiko; Capital Market Line (CML); Diversifikasi dan risiko portofolio. |
+| Generative AI | Digunakan untuk mengurai notasi dan menawarkan langkah derivasi alternatif tanpa menggantikan pembuktian mahasiswa. |
+| Agentic AI | Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="callout-goal">
 **Tujuan bab.** Mahasiswa mampu memahami konsep kerugian portofolio, quantile loss, Value at Risk, tingkat keyakinan, horizon risiko, dan interpretasi hasil VaR.
@@ -567,6 +800,16 @@ Pada level komputasi, formula harus diterjemahkan menjadi langkah yang dapat diu
 
 ## Contoh kasus terarah: perhitungan VaR portofolio saham dengan tingkat keyakinan 95% dan 99%
 
+<!-- BEGIN AI-INLINE:59aa2675bd7f -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terarah: perhitungan VaR portofolio saham dengan tingkat keyakinan 95% dan 99%</h4>
+<p><strong>Konteks:</strong> Pertemuan 5: Manajemen Risiko Investasi dan Value at Risk.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Stress testing, backtesting, uncertainty, model risk management, interpretabilitas, dan konsekuensi keputusan finansial. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan seorang analis pada institusi keuangan ingin menggunakan Value at Risk untuk membantu keputusan alokasi dana. Data yang tersedia berupa harga historis beberapa instrumen, informasi tingkat bunga bebas risiko, dan batasan kebijakan investasi. Tujuan analis bukan hanya menghitung angka, melainkan menyusun argumen yang dapat dipertanggungjawabkan: instrumen mana yang dipilih, risiko mana yang dominan, asumsi mana yang digunakan, hasil mana yang stabil, dan rekomendasi apa yang masuk akal.
 
 Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlier, perubahan denominasi, corporate action, serta konsistensi frekuensi data. Dalam data keuangan, kesalahan kecil pada data harga dapat menghasilkan return ekstrem yang bukan risiko pasar, melainkan risiko spreadsheet. Langkah kedua adalah menghitung ringkasan statistik: mean, median, standar deviasi, quantile, skewness, kurtosis, korelasi, dan grafik time series. Langkah ketiga adalah menerapkan model sesuai tujuan analisis. Langkah keempat adalah mengevaluasi kewajaran output model dan menulis interpretasi.
@@ -574,6 +817,16 @@ Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlie
 Pada laporan mahasiswa, contoh kasus sebaiknya tidak berhenti pada angka final. Misalnya, jika hasil menunjukkan bahwa suatu aset memiliki volatilitas tinggi, jelaskan apakah volatilitas itu konsisten dengan karakter aset tersebut. Jika hasil menunjukkan korelasi negatif antara dua aset, jelaskan implikasinya untuk diversifikasi. Jika hasil opsi menunjukkan harga model lebih rendah dari harga pasar, diskusikan kemungkinan adanya perbedaan volatilitas implisit, biaya transaksi, likuiditas, atau asumsi model.
 
 ## Implementasi awal di R
+
+<!-- BEGIN AI-INLINE:9d92592b2c77 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi awal di R</h4>
+<p><strong>Konteks:</strong> Pertemuan 5: Manajemen Risiko Investasi dan Value at Risk.</p>
+<p>Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r bab04-value-at-risk, eval=FALSE}
 # VaR simulasi historis sederhana
@@ -598,14 +851,46 @@ Dari sisi penulisan akademik, interpretasi yang baik memiliki tiga komponen: ang
 
 ## Latihan dan diskusi
 
+<!-- BEGIN AI-INLINE:ed5e036e3387 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 5: Manajemen Risiko Investasi dan Value at Risk.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 1. Jelaskan mengapa VaR 99% biasanya lebih besar daripada VaR 95%.
 2. Hitung VaR historis dari data return harian satu aset.
 3. Tuliskan interpretasi VaR dalam bahasa yang dapat dipahami manajer non-statistik.
 
 Untuk diskusi kelas, mahasiswa dapat diminta membandingkan jawaban antar-kelompok. Perbedaan hasil bukan selalu berarti ada kelompok yang salah. Dalam analisis keuangan, hasil dapat berbeda karena pilihan periode data, frekuensi return, metode estimasi volatilitas, asumsi risk-free rate, atau batasan optimasi. Yang penting adalah setiap pilihan metodologis dijelaskan secara transparan dan konsisten.
 
-
 # Simulasi Historis dan Monte Carlo untuk Risiko Keuangan
+
+<!-- BEGIN AI-INLINE:be09dc34e241 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 6</span>
+<h3>Generative dan Agentic AI untuk Simulasi Historis dan Monte Carlo untuk Risiko Keuangan</h3>
+
+**Arah RPS.** Studi kasus menggunakan data pasar nyata dengan dokumentasi asumsi, keterbatasan, dan risiko penggunaan otomatisasi.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK2 melalui fokus: Portofolio dua aset berisiko; Model portofolio Markowitz; Alokasi aset dalam saham, obligasi, dan SBI. |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="callout-goal">
 **Tujuan bab.** Mahasiswa mampu membedakan simulasi historis dan Monte Carlo, menyusun skenario return, serta menghitung VaR dan ukuran risiko berbasis simulasi.
@@ -651,6 +936,16 @@ Pada level komputasi, formula harus diterjemahkan menjadi langkah yang dapat diu
 
 ## Contoh kasus terarah: estimasi risiko portofolio menggunakan 10.000 skenario Monte Carlo
 
+<!-- BEGIN AI-INLINE:3d01dede57ec -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terarah: estimasi risiko portofolio menggunakan 10.000 skenario Monte Carlo</h4>
+<p><strong>Konteks:</strong> Pertemuan 6: Simulasi Historis dan Monte Carlo untuk Risiko Keuangan.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Studi kasus menggunakan data pasar nyata dengan dokumentasi asumsi, keterbatasan, dan risiko penggunaan otomatisasi. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan seorang analis pada institusi keuangan ingin menggunakan simulasi risiko untuk membantu keputusan alokasi dana. Data yang tersedia berupa harga historis beberapa instrumen, informasi tingkat bunga bebas risiko, dan batasan kebijakan investasi. Tujuan analis bukan hanya menghitung angka, melainkan menyusun argumen yang dapat dipertanggungjawabkan: instrumen mana yang dipilih, risiko mana yang dominan, asumsi mana yang digunakan, hasil mana yang stabil, dan rekomendasi apa yang masuk akal.
 
 Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlier, perubahan denominasi, corporate action, serta konsistensi frekuensi data. Dalam data keuangan, kesalahan kecil pada data harga dapat menghasilkan return ekstrem yang bukan risiko pasar, melainkan risiko spreadsheet. Langkah kedua adalah menghitung ringkasan statistik: mean, median, standar deviasi, quantile, skewness, kurtosis, korelasi, dan grafik time series. Langkah ketiga adalah menerapkan model sesuai tujuan analisis. Langkah keempat adalah mengevaluasi kewajaran output model dan menulis interpretasi.
@@ -658,6 +953,16 @@ Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlie
 Pada laporan mahasiswa, contoh kasus sebaiknya tidak berhenti pada angka final. Misalnya, jika hasil menunjukkan bahwa suatu aset memiliki volatilitas tinggi, jelaskan apakah volatilitas itu konsisten dengan karakter aset tersebut. Jika hasil menunjukkan korelasi negatif antara dua aset, jelaskan implikasinya untuk diversifikasi. Jika hasil opsi menunjukkan harga model lebih rendah dari harga pasar, diskusikan kemungkinan adanya perbedaan volatilitas implisit, biaya transaksi, likuiditas, atau asumsi model.
 
 ## Implementasi awal di R
+
+<!-- BEGIN AI-INLINE:4ee4c9680cd8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi awal di R</h4>
+<p><strong>Konteks:</strong> Pertemuan 6: Simulasi Historis dan Monte Carlo untuk Risiko Keuangan.</p>
+<p>Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r bab05-simulasi-risiko, eval=FALSE}
 # Monte Carlo VaR untuk portofolio dua aset
@@ -687,14 +992,46 @@ Dari sisi penulisan akademik, interpretasi yang baik memiliki tiga komponen: ang
 
 ## Latihan dan diskusi
 
+<!-- BEGIN AI-INLINE:016aea0db02a -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 6: Simulasi Historis dan Monte Carlo untuk Risiko Keuangan.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 1. Bandingkan VaR historis dan VaR Monte Carlo pada data yang sama.
 2. Jelaskan perbedaan VaR dan Expected Shortfall.
 3. Lakukan simulasi dengan volatilitas dua kali lebih besar dan diskusikan dampaknya.
 
 Untuk diskusi kelas, mahasiswa dapat diminta membandingkan jawaban antar-kelompok. Perbedaan hasil bukan selalu berarti ada kelompok yang salah. Dalam analisis keuangan, hasil dapat berbeda karena pilihan periode data, frekuensi return, metode estimasi volatilitas, asumsi risk-free rate, atau batasan optimasi. Yang penting adalah setiap pilihan metodologis dijelaskan secara transparan dan konsisten.
 
-
 # Utility Function, Risk Aversion, dan Toleransi Risiko
+
+<!-- BEGIN AI-INLINE:8918f7a95f35 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 7</span>
+<h3>Generative dan Agentic AI untuk Utility Function, Risk Aversion, dan Toleransi Risiko</h3>
+
+**Arah RPS.** AI untuk forecasting, pricing, portfolio analytics, dan deteksi anomali dengan pembanding model matematis/statistik.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK2 melalui fokus: Optimalisasi portofolio dengan pembatasan aset bebas risiko; Teori dan Penilaian Opsi; Pengertian opsi (Eropa, Amerika), hak dan kewajiban. |
+| Generative AI | Digunakan untuk mengurai notasi dan menawarkan langkah derivasi alternatif tanpa menggantikan pembuktian mahasiswa. |
+| Agentic AI | Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="callout-goal">
 **Tujuan bab.** Mahasiswa memahami mengapa investor dengan data yang sama dapat memilih portofolio berbeda karena fungsi utilitas dan toleransi risiko yang berbeda.
@@ -740,6 +1077,16 @@ Pada level komputasi, formula harus diterjemahkan menjadi langkah yang dapat diu
 
 ## Contoh kasus terarah: pemilihan portofolio oleh investor konservatif, moderat, dan agresif
 
+<!-- BEGIN AI-INLINE:9f545b153587 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terarah: pemilihan portofolio oleh investor konservatif, moderat, dan agresif</h4>
+<p><strong>Konteks:</strong> Pertemuan 7: Utility Function, Risk Aversion, dan Toleransi Risiko.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: AI untuk forecasting, pricing, portfolio analytics, dan deteksi anomali dengan pembanding model matematis/statistik. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan seorang analis pada institusi keuangan ingin menggunakan preferensi risiko untuk membantu keputusan alokasi dana. Data yang tersedia berupa harga historis beberapa instrumen, informasi tingkat bunga bebas risiko, dan batasan kebijakan investasi. Tujuan analis bukan hanya menghitung angka, melainkan menyusun argumen yang dapat dipertanggungjawabkan: instrumen mana yang dipilih, risiko mana yang dominan, asumsi mana yang digunakan, hasil mana yang stabil, dan rekomendasi apa yang masuk akal.
 
 Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlier, perubahan denominasi, corporate action, serta konsistensi frekuensi data. Dalam data keuangan, kesalahan kecil pada data harga dapat menghasilkan return ekstrem yang bukan risiko pasar, melainkan risiko spreadsheet. Langkah kedua adalah menghitung ringkasan statistik: mean, median, standar deviasi, quantile, skewness, kurtosis, korelasi, dan grafik time series. Langkah ketiga adalah menerapkan model sesuai tujuan analisis. Langkah keempat adalah mengevaluasi kewajaran output model dan menulis interpretasi.
@@ -747,6 +1094,16 @@ Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlie
 Pada laporan mahasiswa, contoh kasus sebaiknya tidak berhenti pada angka final. Misalnya, jika hasil menunjukkan bahwa suatu aset memiliki volatilitas tinggi, jelaskan apakah volatilitas itu konsisten dengan karakter aset tersebut. Jika hasil menunjukkan korelasi negatif antara dua aset, jelaskan implikasinya untuk diversifikasi. Jika hasil opsi menunjukkan harga model lebih rendah dari harga pasar, diskusikan kemungkinan adanya perbedaan volatilitas implisit, biaya transaksi, likuiditas, atau asumsi model.
 
 ## Implementasi awal di R
+
+<!-- BEGIN AI-INLINE:39ea13d02c30 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi awal di R</h4>
+<p><strong>Konteks:</strong> Pertemuan 7: Utility Function, Risk Aversion, dan Toleransi Risiko.</p>
+<p>Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r bab06-preferensi-risiko, eval=FALSE}
 # Certainty equivalent untuk beberapa tingkat risk aversion
@@ -770,14 +1127,46 @@ Dari sisi penulisan akademik, interpretasi yang baik memiliki tiga komponen: ang
 
 ## Latihan dan diskusi
 
+<!-- BEGIN AI-INLINE:e42c586dd000 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 7: Utility Function, Risk Aversion, dan Toleransi Risiko.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 1. Jelaskan mengapa risk aversion tinggi menurunkan certainty equivalent.
 2. Buat grafik utility untuk tiga nilai A.
 3. Diskusikan apakah risk aversion dapat berubah sepanjang waktu.
 
 Untuk diskusi kelas, mahasiswa dapat diminta membandingkan jawaban antar-kelompok. Perbedaan hasil bukan selalu berarti ada kelompok yang salah. Dalam analisis keuangan, hasil dapat berbeda karena pilihan periode data, frekuensi return, metode estimasi volatilitas, asumsi risk-free rate, atau batasan optimasi. Yang penting adalah setiap pilihan metodologis dijelaskan secara transparan dan konsisten.
 
-
 # Diversifikasi dan Portofolio Dua Aset Berisiko
+
+<!-- BEGIN AI-INLINE:36798df97d1c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 8</span>
+<h3>Generative dan Agentic AI untuk Diversifikasi dan Portofolio Dua Aset Berisiko</h3>
+
+**Arah RPS.** Penggunaan AI hanya sesuai instruksi dosen; seluruh bantuan harus diungkapkan dan hasil diverifikasi.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK1–2 melalui fokus: Ujian Tengah Semester. |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="callout-goal">
 **Tujuan bab.** Mahasiswa mampu menghitung return dan risiko portofolio dua aset serta menjelaskan peran korelasi dalam menurunkan risiko.
@@ -823,6 +1212,16 @@ Pada level komputasi, formula harus diterjemahkan menjadi langkah yang dapat diu
 
 ## Contoh kasus terarah: kombinasi saham defensif dan saham siklikal dengan korelasi rendah
 
+<!-- BEGIN AI-INLINE:dac53a94dcfb -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terarah: kombinasi saham defensif dan saham siklikal dengan korelasi rendah</h4>
+<p><strong>Konteks:</strong> Pertemuan 8: Diversifikasi dan Portofolio Dua Aset Berisiko.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Penggunaan AI hanya sesuai instruksi dosen; seluruh bantuan harus diungkapkan dan hasil diverifikasi. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan seorang analis pada institusi keuangan ingin menggunakan diversifikasi portofolio untuk membantu keputusan alokasi dana. Data yang tersedia berupa harga historis beberapa instrumen, informasi tingkat bunga bebas risiko, dan batasan kebijakan investasi. Tujuan analis bukan hanya menghitung angka, melainkan menyusun argumen yang dapat dipertanggungjawabkan: instrumen mana yang dipilih, risiko mana yang dominan, asumsi mana yang digunakan, hasil mana yang stabil, dan rekomendasi apa yang masuk akal.
 
 Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlier, perubahan denominasi, corporate action, serta konsistensi frekuensi data. Dalam data keuangan, kesalahan kecil pada data harga dapat menghasilkan return ekstrem yang bukan risiko pasar, melainkan risiko spreadsheet. Langkah kedua adalah menghitung ringkasan statistik: mean, median, standar deviasi, quantile, skewness, kurtosis, korelasi, dan grafik time series. Langkah ketiga adalah menerapkan model sesuai tujuan analisis. Langkah keempat adalah mengevaluasi kewajaran output model dan menulis interpretasi.
@@ -830,6 +1229,16 @@ Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlie
 Pada laporan mahasiswa, contoh kasus sebaiknya tidak berhenti pada angka final. Misalnya, jika hasil menunjukkan bahwa suatu aset memiliki volatilitas tinggi, jelaskan apakah volatilitas itu konsisten dengan karakter aset tersebut. Jika hasil menunjukkan korelasi negatif antara dua aset, jelaskan implikasinya untuk diversifikasi. Jika hasil opsi menunjukkan harga model lebih rendah dari harga pasar, diskusikan kemungkinan adanya perbedaan volatilitas implisit, biaya transaksi, likuiditas, atau asumsi model.
 
 ## Implementasi awal di R
+
+<!-- BEGIN AI-INLINE:fd70d4a54764 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi awal di R</h4>
+<p><strong>Konteks:</strong> Pertemuan 8: Diversifikasi dan Portofolio Dua Aset Berisiko.</p>
+<p>Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r bab07-diversifikasi-portof, eval=FALSE}
 # Portofolio dua aset
@@ -854,14 +1263,46 @@ Dari sisi penulisan akademik, interpretasi yang baik memiliki tiga komponen: ang
 
 ## Latihan dan diskusi
 
+<!-- BEGIN AI-INLINE:f62b87cdf25a -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 8: Diversifikasi dan Portofolio Dua Aset Berisiko.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 1. Hitung risiko portofolio dua aset untuk korelasi -0.5, 0, 0.5, dan 1.
 2. Jelaskan mengapa korelasi satu membuat diversifikasi tidak efektif.
 3. Cari kombinasi bobot yang meminimalkan volatilitas portofolio dua aset.
 
 Untuk diskusi kelas, mahasiswa dapat diminta membandingkan jawaban antar-kelompok. Perbedaan hasil bukan selalu berarti ada kelompok yang salah. Dalam analisis keuangan, hasil dapat berbeda karena pilihan periode data, frekuensi return, metode estimasi volatilitas, asumsi risk-free rate, atau batasan optimasi. Yang penting adalah setiap pilihan metodologis dijelaskan secara transparan dan konsisten.
 
-
 # Model Portofolio Markowitz dan Efficient Frontier
+
+<!-- BEGIN AI-INLINE:cb2a14df0d08 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 9</span>
+<h3>Generative dan Agentic AI untuk Model Portofolio Markowitz dan Efficient Frontier</h3>
+
+**Arah RPS.** Stress testing, backtesting, uncertainty, model risk management, interpretabilitas, dan konsekuensi keputusan finansial.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3 melalui fokus: Nilai intrinsik opsi; Put-call parity; Strategi defensif dan spekulatif menggunakan opsi. |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="callout-goal">
 **Tujuan bab.** Mahasiswa mampu membangun model mean-variance, menentukan portofolio minimum variance, efficient frontier, dan portofolio optimal berdasarkan preferensi risiko.
@@ -907,6 +1348,16 @@ Pada level komputasi, formula harus diterjemahkan menjadi langkah yang dapat diu
 
 ## Contoh kasus terarah: mini project portofolio optimal empat instrumen investasi sesuai SubCPMK2
 
+<!-- BEGIN AI-INLINE:e072c2ce4268 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terarah: mini project portofolio optimal empat instrumen investasi sesuai SubCPMK2</h4>
+<p><strong>Konteks:</strong> Pertemuan 9: Model Portofolio Markowitz dan Efficient Frontier.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Stress testing, backtesting, uncertainty, model risk management, interpretabilitas, dan konsekuensi keputusan finansial. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan seorang analis pada institusi keuangan ingin menggunakan model Markowitz untuk membantu keputusan alokasi dana. Data yang tersedia berupa harga historis beberapa instrumen, informasi tingkat bunga bebas risiko, dan batasan kebijakan investasi. Tujuan analis bukan hanya menghitung angka, melainkan menyusun argumen yang dapat dipertanggungjawabkan: instrumen mana yang dipilih, risiko mana yang dominan, asumsi mana yang digunakan, hasil mana yang stabil, dan rekomendasi apa yang masuk akal.
 
 Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlier, perubahan denominasi, corporate action, serta konsistensi frekuensi data. Dalam data keuangan, kesalahan kecil pada data harga dapat menghasilkan return ekstrem yang bukan risiko pasar, melainkan risiko spreadsheet. Langkah kedua adalah menghitung ringkasan statistik: mean, median, standar deviasi, quantile, skewness, kurtosis, korelasi, dan grafik time series. Langkah ketiga adalah menerapkan model sesuai tujuan analisis. Langkah keempat adalah mengevaluasi kewajaran output model dan menulis interpretasi.
@@ -914,6 +1365,16 @@ Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlie
 Pada laporan mahasiswa, contoh kasus sebaiknya tidak berhenti pada angka final. Misalnya, jika hasil menunjukkan bahwa suatu aset memiliki volatilitas tinggi, jelaskan apakah volatilitas itu konsisten dengan karakter aset tersebut. Jika hasil menunjukkan korelasi negatif antara dua aset, jelaskan implikasinya untuk diversifikasi. Jika hasil opsi menunjukkan harga model lebih rendah dari harga pasar, diskusikan kemungkinan adanya perbedaan volatilitas implisit, biaya transaksi, likuiditas, atau asumsi model.
 
 ## Implementasi awal di R
+
+<!-- BEGIN AI-INLINE:0548daf12e9d -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi awal di R</h4>
+<p><strong>Konteks:</strong> Pertemuan 9: Model Portofolio Markowitz dan Efficient Frontier.</p>
+<p>Agen dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r bab08-model-markowitz, eval=FALSE}
 # Simulasi portofolio acak untuk efficient frontier
@@ -945,14 +1406,46 @@ Dari sisi penulisan akademik, interpretasi yang baik memiliki tiga komponen: ang
 
 ## Latihan dan diskusi
 
+<!-- BEGIN AI-INLINE:2763f8282cfc -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 9: Model Portofolio Markowitz dan Efficient Frontier.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 1. Bangun efficient frontier dari minimal empat aset.
 2. Bandingkan solusi tanpa short selling dan dengan short selling.
 3. Diskusikan sensitivitas bobot optimal terhadap estimasi mean return.
 
 Untuk diskusi kelas, mahasiswa dapat diminta membandingkan jawaban antar-kelompok. Perbedaan hasil bukan selalu berarti ada kelompok yang salah. Dalam analisis keuangan, hasil dapat berbeda karena pilihan periode data, frekuensi return, metode estimasi volatilitas, asumsi risk-free rate, atau batasan optimasi. Yang penting adalah setiap pilihan metodologis dijelaskan secara transparan dan konsisten.
 
-
 # Aset Bebas Risiko, Capital Allocation Line, dan Capital Market Line
+
+<!-- BEGIN AI-INLINE:2ab62585acfc -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 10</span>
+<h3>Generative dan Agentic AI untuk Aset Bebas Risiko, Capital Allocation Line, dan Capital Market Line</h3>
+
+**Arah RPS.** Studi kasus menggunakan data pasar nyata dengan dokumentasi asumsi, keterbatasan, dan risiko penggunaan otomatisasi.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3 melalui fokus: Faktor penentu harga opsi; Model Penentuan Harga Opsi; Perhitungan harga call/put dengan portofolio tanpa risiko. |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="callout-goal">
 **Tujuan bab.** Mahasiswa mampu menjelaskan kombinasi aset bebas risiko dengan portofolio berisiko, garis alokasi modal, dan makna portofolio tangency.
@@ -998,6 +1491,16 @@ Pada level komputasi, formula harus diterjemahkan menjadi langkah yang dapat diu
 
 ## Contoh kasus terarah: alokasi antara SBI sebagai proxy aset bebas risiko dan portofolio saham-obligasi
 
+<!-- BEGIN AI-INLINE:47ea231206ea -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terarah: alokasi antara SBI sebagai proxy aset bebas risiko dan portofolio saham-obligasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 10: Aset Bebas Risiko, Capital Allocation Line, dan Capital Market Line.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Studi kasus menggunakan data pasar nyata dengan dokumentasi asumsi, keterbatasan, dan risiko penggunaan otomatisasi. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan seorang analis pada institusi keuangan ingin menggunakan alokasi aset berisiko dan bebas risiko untuk membantu keputusan alokasi dana. Data yang tersedia berupa harga historis beberapa instrumen, informasi tingkat bunga bebas risiko, dan batasan kebijakan investasi. Tujuan analis bukan hanya menghitung angka, melainkan menyusun argumen yang dapat dipertanggungjawabkan: instrumen mana yang dipilih, risiko mana yang dominan, asumsi mana yang digunakan, hasil mana yang stabil, dan rekomendasi apa yang masuk akal.
 
 Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlier, perubahan denominasi, corporate action, serta konsistensi frekuensi data. Dalam data keuangan, kesalahan kecil pada data harga dapat menghasilkan return ekstrem yang bukan risiko pasar, melainkan risiko spreadsheet. Langkah kedua adalah menghitung ringkasan statistik: mean, median, standar deviasi, quantile, skewness, kurtosis, korelasi, dan grafik time series. Langkah ketiga adalah menerapkan model sesuai tujuan analisis. Langkah keempat adalah mengevaluasi kewajaran output model dan menulis interpretasi.
@@ -1005,6 +1508,16 @@ Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlie
 Pada laporan mahasiswa, contoh kasus sebaiknya tidak berhenti pada angka final. Misalnya, jika hasil menunjukkan bahwa suatu aset memiliki volatilitas tinggi, jelaskan apakah volatilitas itu konsisten dengan karakter aset tersebut. Jika hasil menunjukkan korelasi negatif antara dua aset, jelaskan implikasinya untuk diversifikasi. Jika hasil opsi menunjukkan harga model lebih rendah dari harga pasar, diskusikan kemungkinan adanya perbedaan volatilitas implisit, biaya transaksi, likuiditas, atau asumsi model.
 
 ## Implementasi awal di R
+
+<!-- BEGIN AI-INLINE:de8b3603cf21 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi awal di R</h4>
+<p><strong>Konteks:</strong> Pertemuan 10: Aset Bebas Risiko, Capital Allocation Line, dan Capital Market Line.</p>
+<p>Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r bab09-alokasi-aset-berisik, eval=FALSE}
 # Capital Allocation Line
@@ -1031,15 +1544,46 @@ Dari sisi penulisan akademik, interpretasi yang baik memiliki tiga komponen: ang
 
 ## Latihan dan diskusi
 
+<!-- BEGIN AI-INLINE:6e77c01632a7 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 10: Aset Bebas Risiko, Capital Allocation Line, dan Capital Market Line.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 1. Jelaskan arti y lebih besar dari 1 dalam capital allocation line.
 2. Hitung Sharpe ratio beberapa portofolio dan pilih yang tertinggi.
 3. Diskusikan kapan aset yang dianggap bebas risiko tetap memiliki risiko praktis.
 
 Untuk diskusi kelas, mahasiswa dapat diminta membandingkan jawaban antar-kelompok. Perbedaan hasil bukan selalu berarti ada kelompok yang salah. Dalam analisis keuangan, hasil dapat berbeda karena pilihan periode data, frekuensi return, metode estimasi volatilitas, asumsi risk-free rate, atau batasan optimasi. Yang penting adalah setiap pilihan metodologis dijelaskan secara transparan dan konsisten.
 
-
-
 # Galeri Ilustrasi Konsep
+
+<!-- BEGIN AI-INLINE:2ff9c0d124ca -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 11</span>
+<h3>Generative dan Agentic AI untuk Galeri Ilustrasi Konsep</h3>
+
+**Arah RPS.** AI untuk forecasting, pricing, portfolio analytics, dan deteksi anomali dengan pembanding model matematis/statistik.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3 melalui fokus: Penentuan harga call/put dalam risk-neutral world; Model Binomial Tree untuk opsi Eropa dan Amerika; Implementasi dan simulasi algoritma penentuan harga opsi. |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 ## Efficient frontier
 
@@ -1061,6 +1605,16 @@ Binomial Tree mengajarkan prinsip backward induction: mulai dari payoff pada jat
 
 ## Brownian motion dan jalur harga aset
 
+<!-- BEGIN AI-INLINE:6dfd742d08b4 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Brownian motion dan jalur harga aset</h4>
+<p><strong>Konteks:</strong> Pertemuan 11: Galeri Ilustrasi Konsep.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 ![](matkeu_assets/brownian_motion.png)
 
 Simulasi jalur harga aset menunjukkan bahwa model stokastik tidak menghasilkan satu masa depan, tetapi distribusi kemungkinan masa depan. Dalam riset harga opsi, cara berpikir distribusional ini jauh lebih penting daripada prediksi titik tunggal.
@@ -1071,8 +1625,30 @@ Simulasi jalur harga aset menunjukkan bahwa model stokastik tidak menghasilkan s
 
 Heatmap Black-Scholes memperlihatkan bagaimana harga call berubah terhadap harga aset awal dan volatilitas. Semakin tinggi harga aset awal dan volatilitas, semakin tinggi nilai call, dengan catatan parameter lain tetap.
 
-
 # Evaluasi Kinerja Portofolio dan Komunikasi Keputusan Investasi
+
+<!-- BEGIN AI-INLINE:7a9ea91f4e2c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 12</span>
+<h3>Generative dan Agentic AI untuk Evaluasi Kinerja Portofolio dan Komunikasi Keputusan Investasi</h3>
+
+**Arah RPS.** Stress testing, backtesting, uncertainty, model risk management, interpretabilitas, dan konsekuensi keputusan finansial.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3 melalui fokus: Proses Stokastik dalam Keuangan; Brownian motion dan random walk; Brownian motion dengan drift; Proses Ito dan Ito Lemma. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="callout-goal">
 **Tujuan bab.** Mahasiswa mampu mengevaluasi performa portofolio menggunakan return, volatilitas, Sharpe ratio, drawdown, serta narasi rekomendasi alokasi aset.
@@ -1118,6 +1694,16 @@ Pada level komputasi, formula harus diterjemahkan menjadi langkah yang dapat diu
 
 ## Contoh kasus terarah: presentasi portofolio dan alokasi aset pada pertemuan UTS
 
+<!-- BEGIN AI-INLINE:c39fa768dfbb -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terarah: presentasi portofolio dan alokasi aset pada pertemuan UTS</h4>
+<p><strong>Konteks:</strong> Pertemuan 12: Evaluasi Kinerja Portofolio dan Komunikasi Keputusan Investasi.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Stress testing, backtesting, uncertainty, model risk management, interpretabilitas, dan konsekuensi keputusan finansial. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan seorang analis pada institusi keuangan ingin menggunakan evaluasi portofolio untuk membantu keputusan alokasi dana. Data yang tersedia berupa harga historis beberapa instrumen, informasi tingkat bunga bebas risiko, dan batasan kebijakan investasi. Tujuan analis bukan hanya menghitung angka, melainkan menyusun argumen yang dapat dipertanggungjawabkan: instrumen mana yang dipilih, risiko mana yang dominan, asumsi mana yang digunakan, hasil mana yang stabil, dan rekomendasi apa yang masuk akal.
 
 Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlier, perubahan denominasi, corporate action, serta konsistensi frekuensi data. Dalam data keuangan, kesalahan kecil pada data harga dapat menghasilkan return ekstrem yang bukan risiko pasar, melainkan risiko spreadsheet. Langkah kedua adalah menghitung ringkasan statistik: mean, median, standar deviasi, quantile, skewness, kurtosis, korelasi, dan grafik time series. Langkah ketiga adalah menerapkan model sesuai tujuan analisis. Langkah keempat adalah mengevaluasi kewajaran output model dan menulis interpretasi.
@@ -1125,6 +1711,16 @@ Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlie
 Pada laporan mahasiswa, contoh kasus sebaiknya tidak berhenti pada angka final. Misalnya, jika hasil menunjukkan bahwa suatu aset memiliki volatilitas tinggi, jelaskan apakah volatilitas itu konsisten dengan karakter aset tersebut. Jika hasil menunjukkan korelasi negatif antara dua aset, jelaskan implikasinya untuk diversifikasi. Jika hasil opsi menunjukkan harga model lebih rendah dari harga pasar, diskusikan kemungkinan adanya perbedaan volatilitas implisit, biaya transaksi, likuiditas, atau asumsi model.
 
 ## Implementasi awal di R
+
+<!-- BEGIN AI-INLINE:43b9b85abcb5 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi awal di R</h4>
+<p><strong>Konteks:</strong> Pertemuan 12: Evaluasi Kinerja Portofolio dan Komunikasi Keputusan Investasi.</p>
+<p>Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r bab10-evaluasi-portofolio, eval=FALSE}
 # Fungsi maximum drawdown sederhana
@@ -1151,14 +1747,46 @@ Dari sisi penulisan akademik, interpretasi yang baik memiliki tiga komponen: ang
 
 ## Latihan dan diskusi
 
+<!-- BEGIN AI-INLINE:1009b301b9d6 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 12: Evaluasi Kinerja Portofolio dan Komunikasi Keputusan Investasi.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 1. Hitung Sharpe ratio, volatilitas, dan maximum drawdown untuk satu portofolio.
 2. Buat dashboard ringkas evaluasi portofolio.
 3. Tuliskan rekomendasi investasi maksimal 250 kata berdasarkan hasil analisis.
 
 Untuk diskusi kelas, mahasiswa dapat diminta membandingkan jawaban antar-kelompok. Perbedaan hasil bukan selalu berarti ada kelompok yang salah. Dalam analisis keuangan, hasil dapat berbeda karena pilihan periode data, frekuensi return, metode estimasi volatilitas, asumsi risk-free rate, atau batasan optimasi. Yang penting adalah setiap pilihan metodologis dijelaskan secara transparan dan konsisten.
 
-
 # Teori Opsi: Call, Put, Eropa, Amerika, Nilai Intrinsik, dan Payoff
+
+<!-- BEGIN AI-INLINE:f9acbe1e8832 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 13</span>
+<h3>Generative dan Agentic AI untuk Teori Opsi: Call, Put, Eropa, Amerika, Nilai Intrinsik, dan Payoff</h3>
+
+**Arah RPS.** Studi kasus menggunakan data pasar nyata dengan dokumentasi asumsi, keterbatasan, dan risiko penggunaan otomatisasi.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK4 melalui fokus: Pemodelan stokastik harga aset keuangan; Model Black-Scholes; Turunan rumus Black-Scholes untuk opsi Eropa (call dan put). |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="callout-goal">
 **Tujuan bab.** Mahasiswa mampu menjelaskan definisi opsi call dan put, perbedaan opsi Eropa dan Amerika, nilai intrinsik, nilai waktu, serta bentuk payoff.
@@ -1204,6 +1832,16 @@ Pada level komputasi, formula harus diterjemahkan menjadi langkah yang dapat diu
 
 ## Contoh kasus terarah: analisis payoff opsi pada saham dengan beberapa skenario harga jatuh tempo
 
+<!-- BEGIN AI-INLINE:daf565e36ce7 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terarah: analisis payoff opsi pada saham dengan beberapa skenario harga jatuh tempo</h4>
+<p><strong>Konteks:</strong> Pertemuan 13: Teori Opsi: Call, Put, Eropa, Amerika, Nilai Intrinsik, dan Payoff.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Studi kasus menggunakan data pasar nyata dengan dokumentasi asumsi, keterbatasan, dan risiko penggunaan otomatisasi. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan seorang analis pada institusi keuangan ingin menggunakan teori opsi untuk membantu keputusan alokasi dana. Data yang tersedia berupa harga historis beberapa instrumen, informasi tingkat bunga bebas risiko, dan batasan kebijakan investasi. Tujuan analis bukan hanya menghitung angka, melainkan menyusun argumen yang dapat dipertanggungjawabkan: instrumen mana yang dipilih, risiko mana yang dominan, asumsi mana yang digunakan, hasil mana yang stabil, dan rekomendasi apa yang masuk akal.
 
 Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlier, perubahan denominasi, corporate action, serta konsistensi frekuensi data. Dalam data keuangan, kesalahan kecil pada data harga dapat menghasilkan return ekstrem yang bukan risiko pasar, melainkan risiko spreadsheet. Langkah kedua adalah menghitung ringkasan statistik: mean, median, standar deviasi, quantile, skewness, kurtosis, korelasi, dan grafik time series. Langkah ketiga adalah menerapkan model sesuai tujuan analisis. Langkah keempat adalah mengevaluasi kewajaran output model dan menulis interpretasi.
@@ -1211,6 +1849,16 @@ Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlie
 Pada laporan mahasiswa, contoh kasus sebaiknya tidak berhenti pada angka final. Misalnya, jika hasil menunjukkan bahwa suatu aset memiliki volatilitas tinggi, jelaskan apakah volatilitas itu konsisten dengan karakter aset tersebut. Jika hasil menunjukkan korelasi negatif antara dua aset, jelaskan implikasinya untuk diversifikasi. Jika hasil opsi menunjukkan harga model lebih rendah dari harga pasar, diskusikan kemungkinan adanya perbedaan volatilitas implisit, biaya transaksi, likuiditas, atau asumsi model.
 
 ## Implementasi awal di R
+
+<!-- BEGIN AI-INLINE:03361eed274a -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi awal di R</h4>
+<p><strong>Konteks:</strong> Pertemuan 13: Teori Opsi: Call, Put, Eropa, Amerika, Nilai Intrinsik, dan Payoff.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r bab11-teori-opsi, eval=FALSE}
 # Payoff opsi call dan put
@@ -1237,14 +1885,46 @@ Dari sisi penulisan akademik, interpretasi yang baik memiliki tiga komponen: ang
 
 ## Latihan dan diskusi
 
+<!-- BEGIN AI-INLINE:32aa0b976d27 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 13: Teori Opsi: Call, Put, Eropa, Amerika, Nilai Intrinsik, dan Payoff.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 1. Gambarkan payoff call dan put untuk tiga nilai strike berbeda.
 2. Jelaskan perbedaan hak dan kewajiban pembeli opsi dan penjual opsi.
 3. Diskusikan mengapa opsi Amerika tidak lebih murah dari opsi Eropa yang sebanding.
 
 Untuk diskusi kelas, mahasiswa dapat diminta membandingkan jawaban antar-kelompok. Perbedaan hasil bukan selalu berarti ada kelompok yang salah. Dalam analisis keuangan, hasil dapat berbeda karena pilihan periode data, frekuensi return, metode estimasi volatilitas, asumsi risk-free rate, atau batasan optimasi. Yang penting adalah setiap pilihan metodologis dijelaskan secara transparan dan konsisten.
 
-
 # Put-Call Parity dan Strategi Defensif serta Spekulatif
+
+<!-- BEGIN AI-INLINE:fd509abe9b85 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 14</span>
+<h3>Generative dan Agentic AI untuk Put-Call Parity dan Strategi Defensif serta Spekulatif</h3>
+
+**Arah RPS.** AI untuk forecasting, pricing, portfolio analytics, dan deteksi anomali dengan pembanding model matematis/statistik.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK4 melalui fokus: Aplikasi dan evaluasi model Black-Scholes; Pengembangan model inovatif untuk harga opsi; Studi Kasus dan Inovasi dalam Matematika Keuangan. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="callout-goal">
 **Tujuan bab.** Mahasiswa mampu menggunakan put-call parity untuk memeriksa konsistensi harga opsi dan memahami strategi protective put, covered call, straddle, dan spread.
@@ -1290,6 +1970,16 @@ Pada level komputasi, formula harus diterjemahkan menjadi langkah yang dapat diu
 
 ## Contoh kasus terarah: menguji kemungkinan arbitrase dari harga call dan put yang diamati di pasar
 
+<!-- BEGIN AI-INLINE:746516c774fd -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terarah: menguji kemungkinan arbitrase dari harga call dan put yang diamati di pasar</h4>
+<p><strong>Konteks:</strong> Pertemuan 14: Put-Call Parity dan Strategi Defensif serta Spekulatif.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: AI untuk forecasting, pricing, portfolio analytics, dan deteksi anomali dengan pembanding model matematis/statistik. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan seorang analis pada institusi keuangan ingin menggunakan put-call parity dan strategi opsi untuk membantu keputusan alokasi dana. Data yang tersedia berupa harga historis beberapa instrumen, informasi tingkat bunga bebas risiko, dan batasan kebijakan investasi. Tujuan analis bukan hanya menghitung angka, melainkan menyusun argumen yang dapat dipertanggungjawabkan: instrumen mana yang dipilih, risiko mana yang dominan, asumsi mana yang digunakan, hasil mana yang stabil, dan rekomendasi apa yang masuk akal.
 
 Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlier, perubahan denominasi, corporate action, serta konsistensi frekuensi data. Dalam data keuangan, kesalahan kecil pada data harga dapat menghasilkan return ekstrem yang bukan risiko pasar, melainkan risiko spreadsheet. Langkah kedua adalah menghitung ringkasan statistik: mean, median, standar deviasi, quantile, skewness, kurtosis, korelasi, dan grafik time series. Langkah ketiga adalah menerapkan model sesuai tujuan analisis. Langkah keempat adalah mengevaluasi kewajaran output model dan menulis interpretasi.
@@ -1297,6 +1987,16 @@ Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlie
 Pada laporan mahasiswa, contoh kasus sebaiknya tidak berhenti pada angka final. Misalnya, jika hasil menunjukkan bahwa suatu aset memiliki volatilitas tinggi, jelaskan apakah volatilitas itu konsisten dengan karakter aset tersebut. Jika hasil menunjukkan korelasi negatif antara dua aset, jelaskan implikasinya untuk diversifikasi. Jika hasil opsi menunjukkan harga model lebih rendah dari harga pasar, diskusikan kemungkinan adanya perbedaan volatilitas implisit, biaya transaksi, likuiditas, atau asumsi model.
 
 ## Implementasi awal di R
+
+<!-- BEGIN AI-INLINE:12bb50a435ef -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi awal di R</h4>
+<p><strong>Konteks:</strong> Pertemuan 14: Put-Call Parity dan Strategi Defensif serta Spekulatif.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r bab12-put-call-parity-dan-, eval=FALSE}
 # Put-call parity check
@@ -1318,14 +2018,46 @@ Dari sisi penulisan akademik, interpretasi yang baik memiliki tiga komponen: ang
 
 ## Latihan dan diskusi
 
+<!-- BEGIN AI-INLINE:b1836ae05659 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 14: Put-Call Parity dan Strategi Defensif serta Spekulatif.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 1. Gunakan put-call parity untuk menghitung harga put implisit.
 2. Jelaskan protective put sebagai asuransi portofolio.
 3. Buat payoff diagram untuk straddle dan bull spread.
 
 Untuk diskusi kelas, mahasiswa dapat diminta membandingkan jawaban antar-kelompok. Perbedaan hasil bukan selalu berarti ada kelompok yang salah. Dalam analisis keuangan, hasil dapat berbeda karena pilihan periode data, frekuensi return, metode estimasi volatilitas, asumsi risk-free rate, atau batasan optimasi. Yang penting adalah setiap pilihan metodologis dijelaskan secara transparan dan konsisten.
 
-
 # Risk-Neutral Pricing dan Model Binomial Satu Periode
+
+<!-- BEGIN AI-INLINE:3dc691af1b19 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 15</span>
+<h3>Generative dan Agentic AI untuk Risk-Neutral Pricing dan Model Binomial Satu Periode</h3>
+
+**Arah RPS.** Stress testing, backtesting, uncertainty, model risk management, interpretabilitas, dan konsekuensi keputusan finansial.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK4 melalui fokus: Penerapan model-model matematika keuangan pada kasus nyata; Analisis kritis hasil simulasi dan interpretasi bisnis/industri; Mini project riset inovasi model keuangan. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="callout-goal">
 **Tujuan bab.** Mahasiswa mampu menurunkan harga opsi satu periode menggunakan portofolio replikasi dan probabilitas risk-neutral.
@@ -1371,6 +2103,16 @@ Pada level komputasi, formula harus diterjemahkan menjadi langkah yang dapat diu
 
 ## Contoh kasus terarah: penentuan harga call satu periode dengan dua kemungkinan harga naik dan turun
 
+<!-- BEGIN AI-INLINE:5aee292cd3c6 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terarah: penentuan harga call satu periode dengan dua kemungkinan harga naik dan turun</h4>
+<p><strong>Konteks:</strong> Pertemuan 15: Risk-Neutral Pricing dan Model Binomial Satu Periode.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Stress testing, backtesting, uncertainty, model risk management, interpretabilitas, dan konsekuensi keputusan finansial. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan seorang analis pada institusi keuangan ingin menggunakan risk-neutral pricing untuk membantu keputusan alokasi dana. Data yang tersedia berupa harga historis beberapa instrumen, informasi tingkat bunga bebas risiko, dan batasan kebijakan investasi. Tujuan analis bukan hanya menghitung angka, melainkan menyusun argumen yang dapat dipertanggungjawabkan: instrumen mana yang dipilih, risiko mana yang dominan, asumsi mana yang digunakan, hasil mana yang stabil, dan rekomendasi apa yang masuk akal.
 
 Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlier, perubahan denominasi, corporate action, serta konsistensi frekuensi data. Dalam data keuangan, kesalahan kecil pada data harga dapat menghasilkan return ekstrem yang bukan risiko pasar, melainkan risiko spreadsheet. Langkah kedua adalah menghitung ringkasan statistik: mean, median, standar deviasi, quantile, skewness, kurtosis, korelasi, dan grafik time series. Langkah ketiga adalah menerapkan model sesuai tujuan analisis. Langkah keempat adalah mengevaluasi kewajaran output model dan menulis interpretasi.
@@ -1378,6 +2120,16 @@ Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlie
 Pada laporan mahasiswa, contoh kasus sebaiknya tidak berhenti pada angka final. Misalnya, jika hasil menunjukkan bahwa suatu aset memiliki volatilitas tinggi, jelaskan apakah volatilitas itu konsisten dengan karakter aset tersebut. Jika hasil menunjukkan korelasi negatif antara dua aset, jelaskan implikasinya untuk diversifikasi. Jika hasil opsi menunjukkan harga model lebih rendah dari harga pasar, diskusikan kemungkinan adanya perbedaan volatilitas implisit, biaya transaksi, likuiditas, atau asumsi model.
 
 ## Implementasi awal di R
+
+<!-- BEGIN AI-INLINE:3b5c1075caa2 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi awal di R</h4>
+<p><strong>Konteks:</strong> Pertemuan 15: Risk-Neutral Pricing dan Model Binomial Satu Periode.</p>
+<p>Agen dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r bab13-risk-neutral-pricing, eval=FALSE}
 # Binomial satu periode
@@ -1401,14 +2153,46 @@ Dari sisi penulisan akademik, interpretasi yang baik memiliki tiga komponen: ang
 
 ## Latihan dan diskusi
 
+<!-- BEGIN AI-INLINE:ea160dcb5718 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 15: Risk-Neutral Pricing dan Model Binomial Satu Periode.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 1. Turunkan harga call satu periode dengan portofolio replikasi.
 2. Jelaskan mengapa probabilitas risk-neutral bukan probabilitas prediksi nyata.
 3. Periksa syarat tidak arbitrase untuk u, d, dan r.
 
 Untuk diskusi kelas, mahasiswa dapat diminta membandingkan jawaban antar-kelompok. Perbedaan hasil bukan selalu berarti ada kelompok yang salah. Dalam analisis keuangan, hasil dapat berbeda karena pilihan periode data, frekuensi return, metode estimasi volatilitas, asumsi risk-free rate, atau batasan optimasi. Yang penting adalah setiap pilihan metodologis dijelaskan secara transparan dan konsisten.
 
-
 # Algoritma Binomial Tree untuk Opsi Eropa
+
+<!-- BEGIN AI-INLINE:8d81394e4f32 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 16</span>
+<h3>Generative dan Agentic AI untuk Algoritma Binomial Tree untuk Opsi Eropa</h3>
+
+**Arah RPS.** Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek akhir. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="callout-goal">
 **Tujuan bab.** Mahasiswa mampu merancang algoritma multi-periode untuk menghitung harga opsi Eropa call dan put dengan backward induction.
@@ -1454,6 +2238,16 @@ Pada level komputasi, formula harus diterjemahkan menjadi langkah yang dapat diu
 
 ## Contoh kasus terarah: project algoritma harga opsi Eropa menggunakan R/Python sesuai SubCPMK3
 
+<!-- BEGIN AI-INLINE:f25c01e665b5 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terarah: project algoritma harga opsi Eropa menggunakan R/Python sesuai SubCPMK3</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Algoritma Binomial Tree untuk Opsi Eropa.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan seorang analis pada institusi keuangan ingin menggunakan Binomial Tree opsi Eropa untuk membantu keputusan alokasi dana. Data yang tersedia berupa harga historis beberapa instrumen, informasi tingkat bunga bebas risiko, dan batasan kebijakan investasi. Tujuan analis bukan hanya menghitung angka, melainkan menyusun argumen yang dapat dipertanggungjawabkan: instrumen mana yang dipilih, risiko mana yang dominan, asumsi mana yang digunakan, hasil mana yang stabil, dan rekomendasi apa yang masuk akal.
 
 Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlier, perubahan denominasi, corporate action, serta konsistensi frekuensi data. Dalam data keuangan, kesalahan kecil pada data harga dapat menghasilkan return ekstrem yang bukan risiko pasar, melainkan risiko spreadsheet. Langkah kedua adalah menghitung ringkasan statistik: mean, median, standar deviasi, quantile, skewness, kurtosis, korelasi, dan grafik time series. Langkah ketiga adalah menerapkan model sesuai tujuan analisis. Langkah keempat adalah mengevaluasi kewajaran output model dan menulis interpretasi.
@@ -1461,6 +2255,16 @@ Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlie
 Pada laporan mahasiswa, contoh kasus sebaiknya tidak berhenti pada angka final. Misalnya, jika hasil menunjukkan bahwa suatu aset memiliki volatilitas tinggi, jelaskan apakah volatilitas itu konsisten dengan karakter aset tersebut. Jika hasil menunjukkan korelasi negatif antara dua aset, jelaskan implikasinya untuk diversifikasi. Jika hasil opsi menunjukkan harga model lebih rendah dari harga pasar, diskusikan kemungkinan adanya perbedaan volatilitas implisit, biaya transaksi, likuiditas, atau asumsi model.
 
 ## Implementasi awal di R
+
+<!-- BEGIN AI-INLINE:075f35ddc57b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi awal di R</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Algoritma Binomial Tree untuk Opsi Eropa.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r bab14-binomial-tree-opsi-e, eval=FALSE}
 # Fungsi harga opsi Eropa dengan Binomial Tree
@@ -1493,14 +2297,46 @@ Dari sisi penulisan akademik, interpretasi yang baik memiliki tiga komponen: ang
 
 ## Latihan dan diskusi
 
+<!-- BEGIN AI-INLINE:49c79e1b674f -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Algoritma Binomial Tree untuk Opsi Eropa.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 1. Implementasikan fungsi Binomial Tree untuk call dan put Eropa.
 2. Bandingkan harga untuk N = 5, 25, 100, dan 500.
 3. Jelaskan mengapa harga cenderung konvergen ketika N bertambah.
 
 Untuk diskusi kelas, mahasiswa dapat diminta membandingkan jawaban antar-kelompok. Perbedaan hasil bukan selalu berarti ada kelompok yang salah. Dalam analisis keuangan, hasil dapat berbeda karena pilihan periode data, frekuensi return, metode estimasi volatilitas, asumsi risk-free rate, atau batasan optimasi. Yang penting adalah setiap pilihan metodologis dijelaskan secara transparan dan konsisten.
 
-
 # Opsi Amerika dan Keputusan Early Exercise
+
+<!-- BEGIN AI-INLINE:31df479b1584 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 17</span>
+<h3>Generative dan Agentic AI untuk Opsi Amerika dan Keputusan Early Exercise</h3>
+
+**Arah RPS.** Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek akhir. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="callout-goal">
 **Tujuan bab.** Mahasiswa mampu membedakan algoritma opsi Eropa dan Amerika serta mengimplementasikan keputusan exercise dini pada setiap node.
@@ -1546,6 +2382,16 @@ Pada level komputasi, formula harus diterjemahkan menjadi langkah yang dapat diu
 
 ## Contoh kasus terarah: membandingkan harga opsi put Amerika dan put Eropa
 
+<!-- BEGIN AI-INLINE:7c2d641efab4 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terarah: membandingkan harga opsi put Amerika dan put Eropa</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Opsi Amerika dan Keputusan Early Exercise.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan seorang analis pada institusi keuangan ingin menggunakan opsi Amerika untuk membantu keputusan alokasi dana. Data yang tersedia berupa harga historis beberapa instrumen, informasi tingkat bunga bebas risiko, dan batasan kebijakan investasi. Tujuan analis bukan hanya menghitung angka, melainkan menyusun argumen yang dapat dipertanggungjawabkan: instrumen mana yang dipilih, risiko mana yang dominan, asumsi mana yang digunakan, hasil mana yang stabil, dan rekomendasi apa yang masuk akal.
 
 Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlier, perubahan denominasi, corporate action, serta konsistensi frekuensi data. Dalam data keuangan, kesalahan kecil pada data harga dapat menghasilkan return ekstrem yang bukan risiko pasar, melainkan risiko spreadsheet. Langkah kedua adalah menghitung ringkasan statistik: mean, median, standar deviasi, quantile, skewness, kurtosis, korelasi, dan grafik time series. Langkah ketiga adalah menerapkan model sesuai tujuan analisis. Langkah keempat adalah mengevaluasi kewajaran output model dan menulis interpretasi.
@@ -1553,6 +2399,16 @@ Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlie
 Pada laporan mahasiswa, contoh kasus sebaiknya tidak berhenti pada angka final. Misalnya, jika hasil menunjukkan bahwa suatu aset memiliki volatilitas tinggi, jelaskan apakah volatilitas itu konsisten dengan karakter aset tersebut. Jika hasil menunjukkan korelasi negatif antara dua aset, jelaskan implikasinya untuk diversifikasi. Jika hasil opsi menunjukkan harga model lebih rendah dari harga pasar, diskusikan kemungkinan adanya perbedaan volatilitas implisit, biaya transaksi, likuiditas, atau asumsi model.
 
 ## Implementasi awal di R
+
+<!-- BEGIN AI-INLINE:075f35ddc57b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi awal di R</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Opsi Amerika dan Keputusan Early Exercise.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r bab15-opsi-amerika, eval=FALSE}
 # Fungsi opsi Amerika dengan Binomial Tree
@@ -1587,14 +2443,46 @@ Dari sisi penulisan akademik, interpretasi yang baik memiliki tiga komponen: ang
 
 ## Latihan dan diskusi
 
+<!-- BEGIN AI-INLINE:49c79e1b674f -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Opsi Amerika dan Keputusan Early Exercise.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 1. Bandingkan harga put Amerika dan put Eropa untuk parameter yang sama.
 2. Jelaskan kondisi ekonomi yang membuat early exercise masuk akal.
 3. Tambahkan output berupa node exercise pada algoritma Anda.
 
 Untuk diskusi kelas, mahasiswa dapat diminta membandingkan jawaban antar-kelompok. Perbedaan hasil bukan selalu berarti ada kelompok yang salah. Dalam analisis keuangan, hasil dapat berbeda karena pilihan periode data, frekuensi return, metode estimasi volatilitas, asumsi risk-free rate, atau batasan optimasi. Yang penting adalah setiap pilihan metodologis dijelaskan secara transparan dan konsisten.
 
-
 # Random Walk, Brownian Motion, dan Brownian Motion dengan Drift
+
+<!-- BEGIN AI-INLINE:8131f33eb42d -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 18</span>
+<h3>Generative dan Agentic AI untuk Random Walk, Brownian Motion, dan Brownian Motion dengan Drift</h3>
+
+**Arah RPS.** Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek akhir. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="callout-goal">
 **Tujuan bab.** Mahasiswa mampu memahami random walk sebagai pendekatan diskrit, Brownian motion sebagai limit kontinu, serta peran drift dan volatilitas dalam model harga aset.
@@ -1640,6 +2528,16 @@ Pada level komputasi, formula harus diterjemahkan menjadi langkah yang dapat diu
 
 ## Contoh kasus terarah: simulasi jalur harga aset berbasis geometric Brownian motion untuk project riset opsi
 
+<!-- BEGIN AI-INLINE:6fcf9da14c1b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Contoh kasus terarah: simulasi jalur harga aset berbasis geometric Brownian motion untuk project riset opsi</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Random Walk, Brownian Motion, dan Brownian Motion dengan Drift.</p>
+<p>Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan seorang analis pada institusi keuangan ingin menggunakan Brownian motion untuk membantu keputusan alokasi dana. Data yang tersedia berupa harga historis beberapa instrumen, informasi tingkat bunga bebas risiko, dan batasan kebijakan investasi. Tujuan analis bukan hanya menghitung angka, melainkan menyusun argumen yang dapat dipertanggungjawabkan: instrumen mana yang dipilih, risiko mana yang dominan, asumsi mana yang digunakan, hasil mana yang stabil, dan rekomendasi apa yang masuk akal.
 
 Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlier, perubahan denominasi, corporate action, serta konsistensi frekuensi data. Dalam data keuangan, kesalahan kecil pada data harga dapat menghasilkan return ekstrem yang bukan risiko pasar, melainkan risiko spreadsheet. Langkah kedua adalah menghitung ringkasan statistik: mean, median, standar deviasi, quantile, skewness, kurtosis, korelasi, dan grafik time series. Langkah ketiga adalah menerapkan model sesuai tujuan analisis. Langkah keempat adalah mengevaluasi kewajaran output model dan menulis interpretasi.
@@ -1647,6 +2545,16 @@ Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlie
 Pada laporan mahasiswa, contoh kasus sebaiknya tidak berhenti pada angka final. Misalnya, jika hasil menunjukkan bahwa suatu aset memiliki volatilitas tinggi, jelaskan apakah volatilitas itu konsisten dengan karakter aset tersebut. Jika hasil menunjukkan korelasi negatif antara dua aset, jelaskan implikasinya untuk diversifikasi. Jika hasil opsi menunjukkan harga model lebih rendah dari harga pasar, diskusikan kemungkinan adanya perbedaan volatilitas implisit, biaya transaksi, likuiditas, atau asumsi model.
 
 ## Implementasi awal di R
+
+<!-- BEGIN AI-INLINE:075f35ddc57b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi awal di R</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Random Walk, Brownian Motion, dan Brownian Motion dengan Drift.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r bab16-brownian-motion, eval=FALSE}
 # Simulasi Geometric Brownian Motion
@@ -1672,14 +2580,46 @@ Dari sisi penulisan akademik, interpretasi yang baik memiliki tiga komponen: ang
 
 ## Latihan dan diskusi
 
+<!-- BEGIN AI-INLINE:49c79e1b674f -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Random Walk, Brownian Motion, dan Brownian Motion dengan Drift.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 1. Simulasikan 100 jalur GBM dan tampilkan ringkasan harga akhir.
 2. Jelaskan perbedaan drift dan volatilitas.
 3. Diskusikan keterbatasan GBM untuk data keuangan riil.
 
 Untuk diskusi kelas, mahasiswa dapat diminta membandingkan jawaban antar-kelompok. Perbedaan hasil bukan selalu berarti ada kelompok yang salah. Dalam analisis keuangan, hasil dapat berbeda karena pilihan periode data, frekuensi return, metode estimasi volatilitas, asumsi risk-free rate, atau batasan optimasi. Yang penting adalah setiap pilihan metodologis dijelaskan secara transparan dan konsisten.
 
-
 # Proses Ito dan Ito Lemma dalam Keuangan
+
+<!-- BEGIN AI-INLINE:6eec7bee4356 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 19</span>
+<h3>Generative dan Agentic AI untuk Proses Ito dan Ito Lemma dalam Keuangan</h3>
+
+**Arah RPS.** Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek akhir. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="callout-goal">
 **Tujuan bab.** Mahasiswa memahami bentuk umum proses Ito, makna diferensial stokastik, dan penggunaan Ito Lemma untuk fungsi harga aset.
@@ -1725,6 +2665,16 @@ Pada level komputasi, formula harus diterjemahkan menjadi langkah yang dapat diu
 
 ## Contoh kasus terarah: menurunkan dinamika log harga aset dari GBM menggunakan Ito Lemma
 
+<!-- BEGIN AI-INLINE:958a66b9a08d -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terarah: menurunkan dinamika log harga aset dari GBM menggunakan Ito Lemma</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Proses Ito dan Ito Lemma dalam Keuangan.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan seorang analis pada institusi keuangan ingin menggunakan proses Ito untuk membantu keputusan alokasi dana. Data yang tersedia berupa harga historis beberapa instrumen, informasi tingkat bunga bebas risiko, dan batasan kebijakan investasi. Tujuan analis bukan hanya menghitung angka, melainkan menyusun argumen yang dapat dipertanggungjawabkan: instrumen mana yang dipilih, risiko mana yang dominan, asumsi mana yang digunakan, hasil mana yang stabil, dan rekomendasi apa yang masuk akal.
 
 Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlier, perubahan denominasi, corporate action, serta konsistensi frekuensi data. Dalam data keuangan, kesalahan kecil pada data harga dapat menghasilkan return ekstrem yang bukan risiko pasar, melainkan risiko spreadsheet. Langkah kedua adalah menghitung ringkasan statistik: mean, median, standar deviasi, quantile, skewness, kurtosis, korelasi, dan grafik time series. Langkah ketiga adalah menerapkan model sesuai tujuan analisis. Langkah keempat adalah mengevaluasi kewajaran output model dan menulis interpretasi.
@@ -1732,6 +2682,16 @@ Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlie
 Pada laporan mahasiswa, contoh kasus sebaiknya tidak berhenti pada angka final. Misalnya, jika hasil menunjukkan bahwa suatu aset memiliki volatilitas tinggi, jelaskan apakah volatilitas itu konsisten dengan karakter aset tersebut. Jika hasil menunjukkan korelasi negatif antara dua aset, jelaskan implikasinya untuk diversifikasi. Jika hasil opsi menunjukkan harga model lebih rendah dari harga pasar, diskusikan kemungkinan adanya perbedaan volatilitas implisit, biaya transaksi, likuiditas, atau asumsi model.
 
 ## Implementasi awal di R
+
+<!-- BEGIN AI-INLINE:075f35ddc57b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi awal di R</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Proses Ito dan Ito Lemma dalam Keuangan.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r bab17-proses-ito, eval=FALSE}
 # Verifikasi numerik konsep log-return GBM melalui simulasi
@@ -1755,14 +2715,46 @@ Dari sisi penulisan akademik, interpretasi yang baik memiliki tiga komponen: ang
 
 ## Latihan dan diskusi
 
+<!-- BEGIN AI-INLINE:49c79e1b674f -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Proses Ito dan Ito Lemma dalam Keuangan.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 1. Gunakan Ito Lemma untuk f(S)=log(S).
 2. Jelaskan mengapa term setengah varians muncul pada log harga GBM.
 3. Tuliskan perbedaan kalkulus biasa dan kalkulus Ito secara intuitif.
 
 Untuk diskusi kelas, mahasiswa dapat diminta membandingkan jawaban antar-kelompok. Perbedaan hasil bukan selalu berarti ada kelompok yang salah. Dalam analisis keuangan, hasil dapat berbeda karena pilihan periode data, frekuensi return, metode estimasi volatilitas, asumsi risk-free rate, atau batasan optimasi. Yang penting adalah setiap pilihan metodologis dijelaskan secara transparan dan konsisten.
 
-
 # Model Black-Scholes untuk Opsi Eropa
+
+<!-- BEGIN AI-INLINE:a46cc29de466 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 20</span>
+<h3>Generative dan Agentic AI untuk Model Black-Scholes untuk Opsi Eropa</h3>
+
+**Arah RPS.** Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek akhir. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="callout-goal">
 **Tujuan bab.** Mahasiswa mampu menerapkan rumus Black-Scholes untuk opsi Eropa call dan put, memahami parameter model, serta mengevaluasi kewajaran hasil.
@@ -1808,6 +2800,16 @@ Pada level komputasi, formula harus diterjemahkan menjadi langkah yang dapat diu
 
 ## Contoh kasus terarah: implementasi harga opsi Eropa call dan put berbasis data historis volatilitas
 
+<!-- BEGIN AI-INLINE:20a09df93552 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Contoh kasus terarah: implementasi harga opsi Eropa call dan put berbasis data historis volatilitas</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Model Black-Scholes untuk Opsi Eropa.</p>
+<p>Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan seorang analis pada institusi keuangan ingin menggunakan model Black-Scholes untuk membantu keputusan alokasi dana. Data yang tersedia berupa harga historis beberapa instrumen, informasi tingkat bunga bebas risiko, dan batasan kebijakan investasi. Tujuan analis bukan hanya menghitung angka, melainkan menyusun argumen yang dapat dipertanggungjawabkan: instrumen mana yang dipilih, risiko mana yang dominan, asumsi mana yang digunakan, hasil mana yang stabil, dan rekomendasi apa yang masuk akal.
 
 Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlier, perubahan denominasi, corporate action, serta konsistensi frekuensi data. Dalam data keuangan, kesalahan kecil pada data harga dapat menghasilkan return ekstrem yang bukan risiko pasar, melainkan risiko spreadsheet. Langkah kedua adalah menghitung ringkasan statistik: mean, median, standar deviasi, quantile, skewness, kurtosis, korelasi, dan grafik time series. Langkah ketiga adalah menerapkan model sesuai tujuan analisis. Langkah keempat adalah mengevaluasi kewajaran output model dan menulis interpretasi.
@@ -1815,6 +2817,16 @@ Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlie
 Pada laporan mahasiswa, contoh kasus sebaiknya tidak berhenti pada angka final. Misalnya, jika hasil menunjukkan bahwa suatu aset memiliki volatilitas tinggi, jelaskan apakah volatilitas itu konsisten dengan karakter aset tersebut. Jika hasil menunjukkan korelasi negatif antara dua aset, jelaskan implikasinya untuk diversifikasi. Jika hasil opsi menunjukkan harga model lebih rendah dari harga pasar, diskusikan kemungkinan adanya perbedaan volatilitas implisit, biaya transaksi, likuiditas, atau asumsi model.
 
 ## Implementasi awal di R
+
+<!-- BEGIN AI-INLINE:075f35ddc57b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi awal di R</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Model Black-Scholes untuk Opsi Eropa.</p>
+<p>Agen dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r bab18-model-black-scholes, eval=FALSE}
 # Rumus Black-Scholes untuk opsi Eropa
@@ -1843,14 +2855,46 @@ Dari sisi penulisan akademik, interpretasi yang baik memiliki tiga komponen: ang
 
 ## Latihan dan diskusi
 
+<!-- BEGIN AI-INLINE:49c79e1b674f -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Model Black-Scholes untuk Opsi Eropa.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 1. Hitung harga call dan put Black-Scholes untuk beberapa nilai volatilitas.
 2. Bandingkan harga Black-Scholes dengan Binomial Tree N besar.
 3. Diskusikan asumsi volatilitas konstan.
 
 Untuk diskusi kelas, mahasiswa dapat diminta membandingkan jawaban antar-kelompok. Perbedaan hasil bukan selalu berarti ada kelompok yang salah. Dalam analisis keuangan, hasil dapat berbeda karena pilihan periode data, frekuensi return, metode estimasi volatilitas, asumsi risk-free rate, atau batasan optimasi. Yang penting adalah setiap pilihan metodologis dijelaskan secara transparan dan konsisten.
 
-
 # Greeks, Sensitivitas Harga Opsi, dan Evaluasi Model
+
+<!-- BEGIN AI-INLINE:42d1cb65fb4e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 21</span>
+<h3>Generative dan Agentic AI untuk Greeks, Sensitivitas Harga Opsi, dan Evaluasi Model</h3>
+
+**Arah RPS.** Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek akhir. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="callout-goal">
 **Tujuan bab.** Mahasiswa mampu memahami delta, gamma, vega, theta, dan rho sebagai ukuran sensitivitas harga opsi terhadap parameter utama.
@@ -1896,6 +2940,16 @@ Pada level komputasi, formula harus diterjemahkan menjadi langkah yang dapat diu
 
 ## Contoh kasus terarah: menganalisis sensitivitas harga call terhadap perubahan volatilitas dan harga aset
 
+<!-- BEGIN AI-INLINE:266f1e769094 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terarah: menganalisis sensitivitas harga call terhadap perubahan volatilitas dan harga aset</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Greeks, Sensitivitas Harga Opsi, dan Evaluasi Model.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan seorang analis pada institusi keuangan ingin menggunakan Greeks opsi untuk membantu keputusan alokasi dana. Data yang tersedia berupa harga historis beberapa instrumen, informasi tingkat bunga bebas risiko, dan batasan kebijakan investasi. Tujuan analis bukan hanya menghitung angka, melainkan menyusun argumen yang dapat dipertanggungjawabkan: instrumen mana yang dipilih, risiko mana yang dominan, asumsi mana yang digunakan, hasil mana yang stabil, dan rekomendasi apa yang masuk akal.
 
 Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlier, perubahan denominasi, corporate action, serta konsistensi frekuensi data. Dalam data keuangan, kesalahan kecil pada data harga dapat menghasilkan return ekstrem yang bukan risiko pasar, melainkan risiko spreadsheet. Langkah kedua adalah menghitung ringkasan statistik: mean, median, standar deviasi, quantile, skewness, kurtosis, korelasi, dan grafik time series. Langkah ketiga adalah menerapkan model sesuai tujuan analisis. Langkah keempat adalah mengevaluasi kewajaran output model dan menulis interpretasi.
@@ -1903,6 +2957,16 @@ Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlie
 Pada laporan mahasiswa, contoh kasus sebaiknya tidak berhenti pada angka final. Misalnya, jika hasil menunjukkan bahwa suatu aset memiliki volatilitas tinggi, jelaskan apakah volatilitas itu konsisten dengan karakter aset tersebut. Jika hasil menunjukkan korelasi negatif antara dua aset, jelaskan implikasinya untuk diversifikasi. Jika hasil opsi menunjukkan harga model lebih rendah dari harga pasar, diskusikan kemungkinan adanya perbedaan volatilitas implisit, biaya transaksi, likuiditas, atau asumsi model.
 
 ## Implementasi awal di R
+
+<!-- BEGIN AI-INLINE:075f35ddc57b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi awal di R</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Greeks, Sensitivitas Harga Opsi, dan Evaluasi Model.</p>
+<p>Agen dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r bab19-greeks-opsi, eval=FALSE}
 # Delta, gamma, vega sederhana untuk call Eropa
@@ -1929,14 +2993,46 @@ Dari sisi penulisan akademik, interpretasi yang baik memiliki tiga komponen: ang
 
 ## Latihan dan diskusi
 
+<!-- BEGIN AI-INLINE:49c79e1b674f -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Greeks, Sensitivitas Harga Opsi, dan Evaluasi Model.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 1. Hitung delta call untuk S0 di bawah, sama, dan di atas K.
 2. Jelaskan mengapa vega tinggi ketika opsi at-the-money.
 3. Buat tabel sensitivitas harga opsi terhadap volatilitas.
 
 Untuk diskusi kelas, mahasiswa dapat diminta membandingkan jawaban antar-kelompok. Perbedaan hasil bukan selalu berarti ada kelompok yang salah. Dalam analisis keuangan, hasil dapat berbeda karena pilihan periode data, frekuensi return, metode estimasi volatilitas, asumsi risk-free rate, atau batasan optimasi. Yang penting adalah setiap pilihan metodologis dijelaskan secara transparan dan konsisten.
 
-
 # Studi Kasus Terintegrasi dan Inovasi Model Matematika Keuangan
+
+<!-- BEGIN AI-INLINE:d4920237bcc2 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 22</span>
+<h3>Generative dan Agentic AI untuk Studi Kasus Terintegrasi dan Inovasi Model Matematika Keuangan</h3>
+
+**Arah RPS.** Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek akhir. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="callout-goal">
 **Tujuan bab.** Mahasiswa mampu menyusun mini project riset, mengintegrasikan data, model, simulasi, evaluasi, dan rekomendasi inovatif dalam konteks keuangan nyata.
@@ -1982,6 +3078,16 @@ Pada level komputasi, formula harus diterjemahkan menjadi langkah yang dapat diu
 
 ## Contoh kasus terarah: UAS project akhir berupa aplikasi/simulasi matematika keuangan dan presentasi inovasi model
 
+<!-- BEGIN AI-INLINE:2476906b4e77 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terarah: UAS project akhir berupa aplikasi/simulasi matematika keuangan dan presentasi inovasi model</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Studi Kasus Terintegrasi dan Inovasi Model Matematika Keuangan.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan seorang analis pada institusi keuangan ingin menggunakan inovasi model keuangan untuk membantu keputusan alokasi dana. Data yang tersedia berupa harga historis beberapa instrumen, informasi tingkat bunga bebas risiko, dan batasan kebijakan investasi. Tujuan analis bukan hanya menghitung angka, melainkan menyusun argumen yang dapat dipertanggungjawabkan: instrumen mana yang dipilih, risiko mana yang dominan, asumsi mana yang digunakan, hasil mana yang stabil, dan rekomendasi apa yang masuk akal.
 
 Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlier, perubahan denominasi, corporate action, serta konsistensi frekuensi data. Dalam data keuangan, kesalahan kecil pada data harga dapat menghasilkan return ekstrem yang bukan risiko pasar, melainkan risiko spreadsheet. Langkah kedua adalah menghitung ringkasan statistik: mean, median, standar deviasi, quantile, skewness, kurtosis, korelasi, dan grafik time series. Langkah ketiga adalah menerapkan model sesuai tujuan analisis. Langkah keempat adalah mengevaluasi kewajaran output model dan menulis interpretasi.
@@ -1989,6 +3095,16 @@ Langkah pertama adalah melakukan pemeriksaan data. Periksa missing value, outlie
 Pada laporan mahasiswa, contoh kasus sebaiknya tidak berhenti pada angka final. Misalnya, jika hasil menunjukkan bahwa suatu aset memiliki volatilitas tinggi, jelaskan apakah volatilitas itu konsisten dengan karakter aset tersebut. Jika hasil menunjukkan korelasi negatif antara dua aset, jelaskan implikasinya untuk diversifikasi. Jika hasil opsi menunjukkan harga model lebih rendah dari harga pasar, diskusikan kemungkinan adanya perbedaan volatilitas implisit, biaya transaksi, likuiditas, atau asumsi model.
 
 ## Implementasi awal di R
+
+<!-- BEGIN AI-INLINE:075f35ddc57b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi awal di R</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Studi Kasus Terintegrasi dan Inovasi Model Matematika Keuangan.</p>
+<p>Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r bab20-inovasi-model-keuang, eval=FALSE}
 # Template struktur project: simpan sebagai R script atau R Markdown
@@ -2013,15 +3129,46 @@ Dari sisi penulisan akademik, interpretasi yang baik memiliki tiga komponen: ang
 
 ## Latihan dan diskusi
 
+<!-- BEGIN AI-INLINE:49c79e1b674f -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Studi Kasus Terintegrasi dan Inovasi Model Matematika Keuangan.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 1. Rancang satu project UAS dengan data riil dan jelaskan novelty sederhananya.
 2. Buat diagram alur reproducible analysis untuk project Anda.
 3. Tuliskan keterbatasan model dan rencana pengembangan lanjut.
 
 Untuk diskusi kelas, mahasiswa dapat diminta membandingkan jawaban antar-kelompok. Perbedaan hasil bukan selalu berarti ada kelompok yang salah. Dalam analisis keuangan, hasil dapat berbeda karena pilihan periode data, frekuensi return, metode estimasi volatilitas, asumsi risk-free rate, atau batasan optimasi. Yang penting adalah setiap pilihan metodologis dijelaskan secara transparan dan konsisten.
 
-
-
 # Rencana Pembelajaran 16 Pertemuan
+
+<!-- BEGIN AI-INLINE:75bcec5239a9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 23</span>
+<h3>Generative dan Agentic AI untuk Rencana Pembelajaran 16 Pertemuan</h3>
+
+**Arah RPS.** Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek akhir. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 Bagian ini menerjemahkan RPS menjadi alur pembelajaran mingguan. Setiap pertemuan memiliki fokus konsep, kegiatan sinkron, kegiatan asinkron, output praktikum, dan indikator keberhasilan. Rencana ini dapat langsung diadaptasi untuk LMS Live Unpad, modul praktikum, atau bahan briefing mahasiswa.
 
@@ -2123,6 +3270,16 @@ Bagian ini menerjemahkan RPS menjadi alur pembelajaran mingguan. Setiap pertemua
 
 ## Pertemuan 9: Teori Opsi dan Payoff
 
+<!-- BEGIN AI-INLINE:74c28a3f0936 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Pertemuan 9: Teori Opsi dan Payoff</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Rencana Pembelajaran 16 Pertemuan.</p>
+<p>Minta AI menjelaskan **Rencana Pembelajaran 16 Pertemuan** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 **Fokus materi:** call, put, opsi Eropa, opsi Amerika, nilai intrinsik. Pertemuan ini diarahkan untuk memastikan mahasiswa tidak hanya mengenali istilah, tetapi dapat menjelaskan hubungan antara konsep, data, model, dan keputusan. Dosen dapat membuka kelas dengan pertanyaan pemantik yang dekat dengan praktik, misalnya bagaimana seorang analis memilih instrumen investasi, bagaimana manajer risiko membatasi kerugian, atau bagaimana harga opsi dapat dihitung tanpa mengetahui harga masa depan secara pasti.
 
 **Kegiatan sinkron:** kuliah interaktif, diskusi singkat, demonstrasi perhitungan manual, dan pembacaan output komputasi. Pada sesi ini dosen sebaiknya menghindari pola ceramah penuh selama seluruh waktu. Setiap konsep utama dapat diikuti dengan pertanyaan kecil agar mahasiswa menjelaskan kembali makna formula. Bila kelas menggunakan data riil, dosen dapat memperlihatkan potongan data dan meminta mahasiswa mengidentifikasi variabel, satuan, frekuensi, serta risiko salah tafsir.
@@ -2217,11 +3374,42 @@ Bagian ini menerjemahkan RPS menjadi alur pembelajaran mingguan. Setiap pertemua
 
 **Indikator keberhasilan:** mahasiswa mampu menjelaskan konsep utama laporan akhir, presentasi, diskusi inovasi, menjalankan contoh komputasi sederhana, menginterpretasikan hasil numerik, dan menyebutkan minimal satu keterbatasan model atau data. Bila indikator ini tercapai, pertemuan berikutnya dapat bergerak ke level konstruksi model yang lebih kompleks.
 
-
-
 # Rencana Tugas Mahasiswa dan Rubrik Penilaian
 
+<!-- BEGIN AI-INLINE:47a2c7867b9b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 24</span>
+<h3>Generative dan Agentic AI untuk Rencana Tugas Mahasiswa dan Rubrik Penilaian</h3>
+
+**Arah RPS.** Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek akhir. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 ## Tugas SubCPMK1: Analisis instrumen dan risiko investasi
+
+<!-- BEGIN AI-INLINE:7091d48012e4 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Tugas SubCPMK1: Analisis instrumen dan risiko investasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Rencana Tugas Mahasiswa dan Rubrik Penilaian.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Mahasiswa diminta melakukan analisis instrumen keuangan dan pengukuran risiko portofolio berbasis data riil. Minimal terdapat empat komponen. Pertama, mahasiswa memilih instrumen investasi, misalnya saham, obligasi, reksa dana, atau proxy aset bebas risiko. Kedua, mahasiswa mengumpulkan data historis minimal satu tahun dan menjelaskan sumber data. Ketiga, mahasiswa menghitung Value at Risk dengan simulasi historis dan Monte Carlo. Keempat, mahasiswa menyusun laporan yang memuat metodologi, hasil, interpretasi, dan saran diversifikasi.
 
@@ -2234,6 +3422,16 @@ Mahasiswa diminta melakukan analisis instrumen keuangan dan pengukuran risiko po
 
 ## Tugas SubCPMK2: Model portofolio Markowitz
 
+<!-- BEGIN AI-INLINE:a3cf2b7c61b1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Tugas SubCPMK2: Model portofolio Markowitz</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Rencana Tugas Mahasiswa dan Rubrik Penilaian.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Mahasiswa membangun model portofolio optimal berbasis data return historis. Minimal empat instrumen digunakan agar kovarians dan diversifikasi dapat dianalisis dengan baik. Output utama adalah efficient frontier, portofolio minimum variance, portofolio dengan Sharpe ratio tinggi, serta rekomendasi bobot investasi. Mahasiswa juga harus menjelaskan bagaimana batasan bobot, aset bebas risiko, dan pembatasan short selling memengaruhi hasil.
 
 | Dimensi | Sangat memuaskan | Perlu perbaikan | Bobot |
@@ -2244,6 +3442,16 @@ Mahasiswa membangun model portofolio optimal berbasis data return historis. Mini
 | Laporan dan presentasi | Rapi, menarik, komunikatif | Kurang terstruktur | 20% |
 
 ## Tugas SubCPMK3: Algoritma harga opsi Binomial Tree
+
+<!-- BEGIN AI-INLINE:a196fa692473 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Tugas SubCPMK3: Algoritma harga opsi Binomial Tree</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Rencana Tugas Mahasiswa dan Rubrik Penilaian.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Mahasiswa merancang dan mengimplementasikan algoritma penentuan harga opsi call dan put, baik untuk opsi Eropa maupun Amerika. Laporan harus menjelaskan parameter input, struktur tree, prosedur backward induction, perbandingan opsi Eropa dan Amerika, serta interpretasi hasil. Kode harus dapat dijalankan ulang dan diberi komentar secukupnya.
 
@@ -2256,6 +3464,16 @@ Mahasiswa merancang dan mengimplementasikan algoritma penentuan harga opsi call 
 
 ## Tugas SubCPMK4: Riset model stokastik dan Black-Scholes
 
+<!-- BEGIN AI-INLINE:facbdf4f1908 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Tugas SubCPMK4: Riset model stokastik dan Black-Scholes</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Rencana Tugas Mahasiswa dan Rubrik Penilaian.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Mahasiswa menyusun riset terapan tentang simulasi Brownian motion, implementasi Black-Scholes, evaluasi model, dan inovasi sederhana. Inovasi dapat berupa pembandingan volatilitas historis dan volatilitas skenario, penerapan pada aset lokal, analisis sensitivitas Greeks, atau evaluasi kelemahan model pada periode volatilitas tinggi. Yang dinilai bukan “kerumitan kosmetik”, tetapi ketepatan konsep, kejernihan argumentasi, dan keterhubungan antara data, model, dan rekomendasi.
 
 | Dimensi | Sangat memuaskan | Perlu perbaikan | Bobot |
@@ -2264,8 +3482,6 @@ Mahasiswa menyusun riset terapan tentang simulasi Brownian motion, implementasi 
 | Simulasi dan implementasi | Simulasi akurat, kode berjalan, validasi jelas | Simulasi kurang tepat atau kode bermasalah | 30% |
 | Inovasi model | Orisinal, kritis, aplikatif | Inovasi umum atau tidak jelas | 30% |
 | Laporan dan presentasi | Argumentatif, rapi, visual menarik | Kurang rapi dan kurang komunikatif | 20% |
-
-
 
 # Lampiran Praktikum R: Template Analisis Lengkap
 
@@ -2388,11 +3604,19 @@ bs_all <- function(S0, K, r, sigma, T) {
 bs_all(100, 100, 0.05, 0.2, 1)
 ```
 
-
-
 # Bank Soal, Kuis, UTS, dan UAS
 
 ## Contoh kuis sebelum UTS
+
+<!-- BEGIN AI-INLINE:d6f38260cc08 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Contoh kuis sebelum UTS</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Rencana Tugas Mahasiswa dan Rubrik Penilaian.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 1. Jelaskan perbedaan return sederhana dan log-return. Berikan contoh situasi ketika log-return lebih nyaman digunakan.
 2. Sebuah portofolio memiliki return harian historis. Jelaskan langkah menghitung VaR 95% dengan simulasi historis.
@@ -2419,6 +3643,16 @@ Pertanyaan diskusi UTS:
 
 ## Contoh kuis sebelum UAS
 
+<!-- BEGIN AI-INLINE:ac8c5aaf2000 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Contoh kuis sebelum UAS</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Rencana Tugas Mahasiswa dan Rubrik Penilaian.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 1. Jelaskan perbedaan opsi call dan put.
 2. Jelaskan perbedaan opsi Eropa dan Amerika.
 3. Tuliskan payoff call dan put pada saat jatuh tempo.
@@ -2436,8 +3670,17 @@ Mahasiswa diminta menyusun project akhir tentang model stokastik harga opsi. Pro
 
 ## Rubrik umum presentasi
 
-Presentasi yang baik memiliki alur yang jelas: masalah, data, metode, hasil, interpretasi, keterbatasan, dan rekomendasi. Slide tidak boleh penuh teks. Grafik harus diberi judul dan satuan. Tabel harus disederhanakan. Kode tidak perlu ditampilkan panjang-panjang, kecuali ada bagian algoritma yang sangat penting. Mahasiswa harus siap menjawab pertanyaan tentang asumsi model, sumber data, alasan memilih metode, dan makna hasil.
+<!-- BEGIN AI-INLINE:6dd17fa199b0 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Rubrik umum presentasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Rencana Tugas Mahasiswa dan Rubrik Penilaian.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
 
+
+Presentasi yang baik memiliki alur yang jelas: masalah, data, metode, hasil, interpretasi, keterbatasan, dan rekomendasi. Slide tidak boleh penuh teks. Grafik harus diberi judul dan satuan. Tabel harus disederhanakan. Kode tidak perlu ditampilkan panjang-panjang, kecuali ada bagian algoritma yang sangat penting. Mahasiswa harus siap menjawab pertanyaan tentang asumsi model, sumber data, alasan memilih metode, dan makna hasil.
 
 # Glosarium Matematika Keuangan
 
@@ -2549,8 +3792,6 @@ Sensitivitas harga opsi terhadap perubahan volatilitas. Dalam laporan mahasiswa,
 
 Ukuran penyebaran return yang sering dipakai sebagai proksi risiko pasar. Dalam laporan mahasiswa, istilah ini sebaiknya tidak hanya didefinisikan, tetapi juga dikaitkan dengan contoh data, formula, dan keputusan analitik. Pemahaman istilah yang baik akan membuat interpretasi model lebih tajam dan mengurangi risiko penggunaan jargon tanpa makna.
 
-
-
 # Penutup: Dari Rumus ke Keputusan
 
 Matematika Keuangan pada level magister bukan kumpulan rumus yang berdiri sendiri. Ia adalah bahasa kuantitatif untuk memahami keputusan di bawah ketidakpastian. Mahasiswa yang menguasai mata kuliah ini diharapkan mampu membaca data pasar, menghitung return dan risiko, membangun portofolio optimal, merancang algoritma harga opsi, mensimulasikan proses stokastik, menerapkan Black-Scholes, dan menulis laporan yang dapat dipertanggungjawabkan secara akademik maupun praktis.
@@ -2561,8 +3802,30 @@ Bagi mahasiswa S2 Statistika Terapan, mata kuliah ini juga membuka ruang riset. 
 
 # Referensi
 
-
 # Pengayaan 1: Kedalaman Interpretasi VaR
+
+<!-- BEGIN AI-INLINE:b0d5392c9287 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 25</span>
+<h3>Generative dan Agentic AI untuk Pengayaan 1: Kedalaman Interpretasi VaR</h3>
+
+**Arah RPS.** Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek akhir. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 VaR sering disalahpahami sebagai kerugian maksimum absolut, padahal VaR adalah quantile distribusi kerugian. Interpretasi yang benar harus menyebut horizon, tingkat keyakinan, nilai portofolio, metode estimasi, dan periode data. Pada pengayaan ke-1.1, perhatian diarahkan pada hubungan antara konsep, asumsi, dan konsekuensi keputusan. Dalam praktik, analis tidak cukup mengatakan bahwa metode telah dijalankan. Analis perlu menjelaskan mengapa metode itu relevan, apa yang diasumsikan, apa yang dapat disimpulkan, dan apa yang tidak boleh disimpulkan. Kematangan analisis terlihat dari kemampuan membedakan hasil yang kuat dari hasil yang sensitif terhadap pilihan data atau parameter.
 
@@ -2636,8 +3899,30 @@ Sebagai contoh, ketika mahasiswa menggunakan data historis, periode data harus d
 
 Untuk laporan akademik, paragraf interpretasi sebaiknya menggunakan pola: temuan numerik, penjelasan statistik, makna keuangan, dan implikasi keputusan. Pola ini membuat laporan lebih mudah dinilai dan lebih mudah digunakan. Tanpa pola ini, laporan cenderung menjadi kumpulan output software. Output software memang penting, tetapi output software tidak bisa menggantikan nalar analis. Software menghitung, manusia menimbang; semoga manusia juga tidak lupa menyimpan file sebelum laptop minta restart.
 
-
 # Pengayaan 2: Sensitivitas Portofolio terhadap Estimasi Mean
+
+<!-- BEGIN AI-INLINE:f2c849587487 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 26</span>
+<h3>Generative dan Agentic AI untuk Pengayaan 2: Sensitivitas Portofolio terhadap Estimasi Mean</h3>
+
+**Arah RPS.** Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek akhir. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 Model Markowitz sangat sensitif terhadap estimasi mean return. Kesalahan kecil dalam mean dapat mengubah bobot optimal secara besar, sehingga analisis sensitivitas dan regularisasi menjadi penting. Pada pengayaan ke-2.1, perhatian diarahkan pada hubungan antara konsep, asumsi, dan konsekuensi keputusan. Dalam praktik, analis tidak cukup mengatakan bahwa metode telah dijalankan. Analis perlu menjelaskan mengapa metode itu relevan, apa yang diasumsikan, apa yang dapat disimpulkan, dan apa yang tidak boleh disimpulkan. Kematangan analisis terlihat dari kemampuan membedakan hasil yang kuat dari hasil yang sensitif terhadap pilihan data atau parameter.
 
@@ -2711,8 +3996,30 @@ Sebagai contoh, ketika mahasiswa menggunakan data historis, periode data harus d
 
 Untuk laporan akademik, paragraf interpretasi sebaiknya menggunakan pola: temuan numerik, penjelasan statistik, makna keuangan, dan implikasi keputusan. Pola ini membuat laporan lebih mudah dinilai dan lebih mudah digunakan. Tanpa pola ini, laporan cenderung menjadi kumpulan output software. Output software memang penting, tetapi output software tidak bisa menggantikan nalar analis. Software menghitung, manusia menimbang; semoga manusia juga tidak lupa menyimpan file sebelum laptop minta restart.
 
-
 # Pengayaan 3: Perbandingan Binomial Tree dan Black-Scholes
+
+<!-- BEGIN AI-INLINE:8fab58f39620 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 27</span>
+<h3>Generative dan Agentic AI untuk Pengayaan 3: Perbandingan Binomial Tree dan Black-Scholes</h3>
+
+**Arah RPS.** Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek akhir. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 Binomial Tree bersifat diskrit dan fleksibel untuk opsi Amerika, sedangkan Black-Scholes memberikan formula tertutup untuk opsi Eropa dengan asumsi kontinu. Keduanya saling melengkapi dalam pembelajaran. Pada pengayaan ke-3.1, perhatian diarahkan pada hubungan antara konsep, asumsi, dan konsekuensi keputusan. Dalam praktik, analis tidak cukup mengatakan bahwa metode telah dijalankan. Analis perlu menjelaskan mengapa metode itu relevan, apa yang diasumsikan, apa yang dapat disimpulkan, dan apa yang tidak boleh disimpulkan. Kematangan analisis terlihat dari kemampuan membedakan hasil yang kuat dari hasil yang sensitif terhadap pilihan data atau parameter.
 
@@ -2786,8 +4093,30 @@ Sebagai contoh, ketika mahasiswa menggunakan data historis, periode data harus d
 
 Untuk laporan akademik, paragraf interpretasi sebaiknya menggunakan pola: temuan numerik, penjelasan statistik, makna keuangan, dan implikasi keputusan. Pola ini membuat laporan lebih mudah dinilai dan lebih mudah digunakan. Tanpa pola ini, laporan cenderung menjadi kumpulan output software. Output software memang penting, tetapi output software tidak bisa menggantikan nalar analis. Software menghitung, manusia menimbang; semoga manusia juga tidak lupa menyimpan file sebelum laptop minta restart.
 
-
 # Pengayaan 4: Keterbatasan Volatilitas Konstan
+
+<!-- BEGIN AI-INLINE:ac419a9f2d06 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 28</span>
+<h3>Generative dan Agentic AI untuk Pengayaan 4: Keterbatasan Volatilitas Konstan</h3>
+
+**Arah RPS.** Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek akhir. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 Asumsi volatilitas konstan memudahkan derivasi, tetapi data pasar sering menunjukkan volatility clustering. Hal ini perlu dibahas saat mahasiswa mengevaluasi model harga opsi. Pada pengayaan ke-4.1, perhatian diarahkan pada hubungan antara konsep, asumsi, dan konsekuensi keputusan. Dalam praktik, analis tidak cukup mengatakan bahwa metode telah dijalankan. Analis perlu menjelaskan mengapa metode itu relevan, apa yang diasumsikan, apa yang dapat disimpulkan, dan apa yang tidak boleh disimpulkan. Kematangan analisis terlihat dari kemampuan membedakan hasil yang kuat dari hasil yang sensitif terhadap pilihan data atau parameter.
 
@@ -2861,8 +4190,30 @@ Sebagai contoh, ketika mahasiswa menggunakan data historis, periode data harus d
 
 Untuk laporan akademik, paragraf interpretasi sebaiknya menggunakan pola: temuan numerik, penjelasan statistik, makna keuangan, dan implikasi keputusan. Pola ini membuat laporan lebih mudah dinilai dan lebih mudah digunakan. Tanpa pola ini, laporan cenderung menjadi kumpulan output software. Output software memang penting, tetapi output software tidak bisa menggantikan nalar analis. Software menghitung, manusia menimbang; semoga manusia juga tidak lupa menyimpan file sebelum laptop minta restart.
 
-
 # Pengayaan 5: Reproducible Finance
+
+<!-- BEGIN AI-INLINE:b16bfdba2a30 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 29</span>
+<h3>Generative dan Agentic AI untuk Pengayaan 5: Reproducible Finance</h3>
+
+**Arah RPS.** Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek akhir. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 Analisis keuangan modern perlu dapat direproduksi. File data, kode, parameter, seed simulasi, dan output harus dikelola secara konsisten agar hasil dapat diperiksa ulang. Pada pengayaan ke-5.1, perhatian diarahkan pada hubungan antara konsep, asumsi, dan konsekuensi keputusan. Dalam praktik, analis tidak cukup mengatakan bahwa metode telah dijalankan. Analis perlu menjelaskan mengapa metode itu relevan, apa yang diasumsikan, apa yang dapat disimpulkan, dan apa yang tidak boleh disimpulkan. Kematangan analisis terlihat dari kemampuan membedakan hasil yang kuat dari hasil yang sensitif terhadap pilihan data atau parameter.
 
@@ -2936,8 +4287,30 @@ Sebagai contoh, ketika mahasiswa menggunakan data historis, periode data harus d
 
 Untuk laporan akademik, paragraf interpretasi sebaiknya menggunakan pola: temuan numerik, penjelasan statistik, makna keuangan, dan implikasi keputusan. Pola ini membuat laporan lebih mudah dinilai dan lebih mudah digunakan. Tanpa pola ini, laporan cenderung menjadi kumpulan output software. Output software memang penting, tetapi output software tidak bisa menggantikan nalar analis. Software menghitung, manusia menimbang; semoga manusia juga tidak lupa menyimpan file sebelum laptop minta restart.
 
-
 # Pengayaan 6: Komunikasi Hasil kepada Pengambil Keputusan
+
+<!-- BEGIN AI-INLINE:a416aef88a16 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 30</span>
+<h3>Generative dan Agentic AI untuk Pengayaan 6: Komunikasi Hasil kepada Pengambil Keputusan</h3>
+
+**Arah RPS.** Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek akhir. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 Hasil kuantitatif perlu diterjemahkan ke dalam rekomendasi yang jelas. Bahasa yang terlalu teknis tanpa interpretasi bisnis akan sulit digunakan oleh pengambil keputusan. Pada pengayaan ke-6.1, perhatian diarahkan pada hubungan antara konsep, asumsi, dan konsekuensi keputusan. Dalam praktik, analis tidak cukup mengatakan bahwa metode telah dijalankan. Analis perlu menjelaskan mengapa metode itu relevan, apa yang diasumsikan, apa yang dapat disimpulkan, dan apa yang tidak boleh disimpulkan. Kematangan analisis terlihat dari kemampuan membedakan hasil yang kuat dari hasil yang sensitif terhadap pilihan data atau parameter.
 
@@ -3038,6 +4411,16 @@ berada pada mahasiswa.
 5. Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil secara mandiri.
 
 ### Bukti asesmen
+
+<!-- BEGIN AI-INLINE:ada7221f1db8 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Bukti asesmen</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: Pengayaan 6: Komunikasi Hasil kepada Pengambil Keputusan.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Penilaian berfokus pada ketepatan metode, validasi dan ketidakpastian,
 reproducibility, interpretasi, komunikasi, serta transparansi penggunaan AI.

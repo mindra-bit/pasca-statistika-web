@@ -1,0 +1,177 @@
+[
+  {
+    "folder": "Materi_ADW_Tingkat_Lanjut",
+    "file": "Materi_ADWTL_S2_Statistika_Terapan_Jan2025.Rmd",
+    "meetings": 16,
+    "inlineBlocks": 146,
+    "rpsWeeks": 16
+  },
+  {
+    "folder": "Materi_Aktuaria_1",
+    "file": "Materi_Pembelajaran_Matematika_Aktuaria_1.Rmd",
+    "meetings": 16,
+    "inlineBlocks": 97,
+    "rpsWeeks": 16
+  },
+  {
+    "folder": "Materi_Analisis_Image",
+    "file": "Materi_Analisis_Image_fixed.Rmd",
+    "meetings": 0,
+    "inlineBlocks": 96,
+    "rpsWeeks": 16
+  },
+  {
+    "folder": "Materi_Analisis_Multilevel_dan_Longitudinal",
+    "file": "Materi_Analisis_Multilevel_dan_Longitudinal.Rmd",
+    "meetings": 16,
+    "inlineBlocks": 77,
+    "rpsWeeks": 16
+  },
+  {
+    "folder": "Materi_Analisis_Multivariat_Tingkat_Lanjut",
+    "file": "Materi_Analisis_Multivariat_Tingkat_Lanjut_S2StatTerapan_Unpad.Rmd",
+    "meetings": 0,
+    "inlineBlocks": 75,
+    "rpsWeeks": 16
+  },
+  {
+    "folder": "Materi_Analisis_Regresi_Tingkat_Lanjut",
+    "file": "Materi_Analisis_Regresi_Tingkat_Lanjut_S2_Statistika_Terapan.Rmd",
+    "meetings": 16,
+    "inlineBlocks": 184,
+    "rpsWeeks": 16
+  },
+  {
+    "folder": "Materi_Analisis_Spasial",
+    "file": "Materi_Analisis_Spasial.Rmd",
+    "meetings": 0,
+    "inlineBlocks": 115,
+    "rpsWeeks": 16
+  },
+  {
+    "folder": "Materi_Analisis_Survival",
+    "file": "Materi_Analisis_Survival_S2_Statistika_Terapan_Jan2025.Rmd",
+    "meetings": 18,
+    "inlineBlocks": 120,
+    "rpsWeeks": 16
+  },
+  {
+    "folder": "Materi_Analisis_Teks",
+    "file": "Materi_Analisis_Teks_S2_Statistika_Terapan.Rmd",
+    "meetings": 0,
+    "inlineBlocks": 92,
+    "rpsWeeks": 16
+  },
+  {
+    "folder": "Materi_Basis_Data",
+    "file": "Materi_Pembelajaran_Basis_Data_S2_Statistika_Terapan_UNPAD_Jan2025.Rmd",
+    "meetings": 16,
+    "inlineBlocks": 86,
+    "rpsWeeks": 16
+  },
+  {
+    "folder": "Materi_Desain_Eksperimen",
+    "file": "Materi_Desain_Eksperimen_S2_Statistika_Terapan_UNPAD.Rmd",
+    "meetings": 16,
+    "inlineBlocks": 68,
+    "rpsWeeks": 16
+  },
+  {
+    "folder": "Materi_Epidemiologi",
+    "file": "Materi_Pembelajaran_Epidemiologi_S2_Statistika_Terapan.Rmd",
+    "meetings": 16,
+    "inlineBlocks": 66,
+    "rpsWeeks": 16
+  },
+  {
+    "folder": "Materi_Komputasi_Statistik_dan_Optimasi",
+    "file": "Materi_Komputasi_Statistik_dan_Optimasi_S2_Unpad.Rmd",
+    "meetings": 0,
+    "inlineBlocks": 184,
+    "rpsWeeks": 16
+  },
+  {
+    "folder": "Materi_Matematika_Aktuaria_2",
+    "file": "Materi_Matematika_Aktuaria_2_RPS_OBE_2025.Rmd",
+    "meetings": 0,
+    "inlineBlocks": 78,
+    "rpsWeeks": 16
+  },
+  {
+    "folder": "Materi_Matematika_Keuangan",
+    "file": "Materi_Matematika_Keuangan_S2_Statistika_Terapan_UNPAD.Rmd",
+    "meetings": 0,
+    "inlineBlocks": 101,
+    "rpsWeeks": 16
+  },
+  {
+    "folder": "Materi_Model_Linear_Generalisasi",
+    "file": "Model_Linear_Generalisasi_Materi.Rmd",
+    "meetings": 16,
+    "inlineBlocks": 120,
+    "rpsWeeks": 16
+  },
+  {
+    "folder": "Materi_Pembelajaran_Mesin",
+    "file": "Materi_Pembelajaran_Mesin_S2_Statistika_Terapan_UNPAD.Rmd",
+    "meetings": 16,
+    "inlineBlocks": 102,
+    "rpsWeeks": 16
+  },
+  {
+    "folder": "Materi_Penambangan_Data_Kecerdasan_Buatan",
+    "file": "Materi_Penambangan_Data_Kecerdasan_Buatan_S2_Statistika_Terapan.Rmd",
+    "meetings": 16,
+    "inlineBlocks": 119,
+    "rpsWeeks": 16
+  },
+  {
+    "folder": "Materi_Proses_Stokastik_Tingkat_Lanjut",
+    "file": "Materi_Proses_Stokastik_Tingkat_Lanjut_S2StatTerapan_UNPAD_2025.Rmd",
+    "meetings": 0,
+    "inlineBlocks": 110,
+    "rpsWeeks": 16
+  },
+  {
+    "folder": "Materi_Sampling_Survey",
+    "file": "Materi_Pembelajaran_Sampling_Survey_S2_Statistika_Terapan.Rmd",
+    "meetings": 0,
+    "inlineBlocks": 78,
+    "rpsWeeks": 16
+  },
+  {
+    "folder": "Materi_SEM",
+    "file": "Materi_Pemodelan_Persamaan_Struktural_SEM_S2_Statistika_Terapan.Rmd",
+    "meetings": 16,
+    "inlineBlocks": 129,
+    "rpsWeeks": 16
+  },
+  {
+    "folder": "Materi_Statistika_Inferensial",
+    "file": "Materi_Statistika_Inferensial_S2_Unpad.Rmd",
+    "meetings": 0,
+    "inlineBlocks": 33,
+    "rpsWeeks": 16
+  },
+  {
+    "folder": "Materi_Statistika_Nonparametrik_Pemodelan_Fleksibel",
+    "file": "Materi_Statistika_Nonparametrik_Pemodelan_Fleksibel.Rmd",
+    "meetings": 16,
+    "inlineBlocks": 149,
+    "rpsWeeks": 16
+  },
+  {
+    "folder": "Materi_Teori_Antrian",
+    "file": "Materi_Teori_Antrian_S2_Statistika_Terapan_Januari_2025.Rmd",
+    "meetings": 0,
+    "inlineBlocks": 88,
+    "rpsWeeks": 16
+  },
+  {
+    "folder": "Materi_Teori_Risiko",
+    "file": "Teori_Risiko_Materi_Pembelajaran_S2_Statistika_Terapan.Rmd",
+    "meetings": 0,
+    "inlineBlocks": 109,
+    "rpsWeeks": 16
+  }
+]

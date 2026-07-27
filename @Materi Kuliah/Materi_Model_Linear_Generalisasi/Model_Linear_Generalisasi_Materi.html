@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="id" xml:lang="id">
+<html>
 
 <head>
 
@@ -3129,270 +3129,48 @@ serta komunikasi hasil secara ilmiah.</p>
 </div>
 <!-- END UNPAD MATERIAL ENHANCEMENT -->
 <style>
-html, body {
-  background: linear-gradient(135deg, #f8fbfd 0%, #fffdf8 48%, #f3f6ee 100%) !important;
-  color: #172033 !important;
+:root{
+--brown-900:#3b2416; --brown-800:#4e2f1d; --brown-700:#6b3f22;
+--brown-600:#8b5a2b; --brown-500:#a46a36; --brown-300:#d7b98f;
+--brown-200:#ead6bd; --brown-100:#f7eadc; --cream:#fff8ef;
+--gold:#f6b73c; --teal:#3d7b76; --ink:#20140d;
 }
-body {
-  font-family: "Segoe UI", Arial, sans-serif !important;
-  font-size: 17px !important;
-  line-height: 1.72 !important;
-  margin: 0 !important;
-  overflow-x: hidden !important;
-}
-.main-container {
-  max-width: 1180px !important;
-  margin-top: 18px !important;
-  margin-bottom: 38px !important;
-  padding: 34px 46px 54px !important;
-  background: rgba(255, 253, 248, 0.98) !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  box-shadow: 0 18px 42px rgba(23, 57, 92, 0.12) !important;
-  overflow-x: hidden !important;
-}
-h1, h2, h3, h4 {
-  color: #17395c !important;
-  font-weight: 800 !important;
-  letter-spacing: 0 !important;
-  line-height: 1.24 !important;
-}
-h1.title {
-  color: #17395c !important;
-  -webkit-text-fill-color: #17395c !important;
-  background: none !important;
-  border-bottom: 4px solid #f2a51a !important;
-  padding-bottom: 14px !important;
-}
-h2 {
-  margin-top: 46px !important;
-  padding: 12px 18px !important;
-  border-left: 8px solid #f2a51a !important;
-  border-radius: 8px !important;
-  background: linear-gradient(90deg, #eef8f6, #fff8e7) !important;
-}
-.unpad-cover h2 {
-  color: #111827 !important;
-  -webkit-text-fill-color: #111827 !important;
-  background: #fffdf8 !important;
-  border-left: 8px solid #f2a51a !important;
-  border-bottom: 0 !important;
-}
-h3 {
-  margin-top: 30px !important;
-}
-a {
-  color: #0b5c86 !important;
-}
-img, svg {
-  max-width: 100% !important;
-  height: auto !important;
-}
-table {
-  width: 100% !important;
-  border-collapse: collapse !important;
-  margin: 18px 0 26px !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-}
-.s2-table-scroll {
-  width: 100% !important;
-  max-width: 100% !important;
-  overflow-x: auto !important;
-  margin: 18px 0 26px !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-}
-.s2-table-scroll table {
-  min-width: 680px !important;
-  margin: 0 !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-}
-th {
-  background: #17395c !important;
-  color: #ffffff !important;
-  padding: 10px 12px !important;
-}
-td {
-  background: #fffdf8 !important;
-  border: 1px solid #d7e2ea !important;
-  padding: 10px 12px !important;
-  vertical-align: top !important;
-}
-.main-container p, .main-container li, td, th {
-  overflow-wrap: anywhere !important;
-}
-pre {
-  overflow: auto !important;
-  padding: 16px !important;
-  background: #eef5f8 !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  color: #111827 !important;
-}
-code {
-  background: #eef5f8 !important;
-  border-radius: 6px !important;
-  color: #111827 !important;
-  padding: 2px 5px !important;
-}
-span.math.display, .math.display, .MathJax_Display, .MathJax, mjx-container {
-  display: block !important;
-  max-width: 100% !important;
-  overflow-x: auto !important;
-  overflow-y: hidden !important;
-}
-blockquote {
-  margin: 22px 0 !important;
-  padding: 16px 20px !important;
-  background: #fff8e7 !important;
-  border-left: 8px solid #0f766e !important;
-  border-radius: 0 8px 8px 0 !important;
-}
-#TOC, .tocify {
-  background: #ffffff !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  box-shadow: 0 12px 28px rgba(23, 57, 92, 0.10) !important;
-}
-.tocify {
-  max-height: calc(100vh - 40px) !important;
-}
-.tocify .active, #TOC .active {
-  background: linear-gradient(90deg, #17395c, #0f766e) !important;
-  color: #ffffff !important;
-  border-radius: 6px !important;
-}
-#TOC a, .tocify a {
-  color: #17395c !important;
-  text-decoration: none !important;
-}
-#TOC a:hover, .tocify a:hover {
-  color: #0f766e !important;
-  text-decoration: underline !important;
-}
-.hero, .rps-box, .rpsbox, .info-card, .card,
-.callout, .note, .casebox, .case-box, .examplebox, .exercise-box,
-.learning-box, .activitybox, .activity, .practice-box, .praktik-box,
-.praktikum, .tujuan, .interpretasi, .refleksi, .warning, .warningbox,
-.warning-box, .tip, .idea-box, .mathbox, .formula-box, .rumus-box,
-.contoh-box, .rubric-box {
-  margin: 22px 0 !important;
-  padding: 20px 24px !important;
-  background: #fffdf8 !important;
-  border: 1px solid #d7e2ea !important;
-  border-left: 8px solid #0f766e !important;
-  border-radius: 8px !important;
-  box-shadow: 0 10px 24px rgba(23, 57, 92, 0.10) !important;
-  color: #172033 !important;
-}
-.hero {
-  background: linear-gradient(135deg, #17395c 0%, #0f766e 62%, #f2a51a 100%) !important;
-  color: #ffffff !important;
-  border-left: 0 !important;
-}
-.hero h1, .hero h2, .hero h3, .hero h4, .hero p, .hero strong {
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-}
-.warning, .warningbox, .warning-box {
-  border-left-color: #b45309 !important;
-  background: #fff8e7 !important;
-}
-.rps-box, .rpsbox, .rubric-box {
-  border-left-color: #f2a51a !important;
-  background: linear-gradient(135deg, #fffdf8, #fff8e7) !important;
-}
-.mathbox, .formula-box, .rumus-box {
-  border-left-color: #17395c !important;
-  background: #eef5f8 !important;
-}
-.badge {
-  display: inline-block !important;
-  padding: 4px 10px !important;
-  border-radius: 999px !important;
-  background: #17395c !important;
-  color: #ffffff !important;
-  font-weight: 700 !important;
-  font-size: 0.85em !important;
-}
-.grid-2, .grid-3 {
-  display: grid !important;
-  gap: 18px !important;
-}
-.grid-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-}
-.grid-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-}
-hr {
-  border: 0 !important;
-  height: 2px !important;
-  background: linear-gradient(90deg, transparent, #d7e2ea, transparent) !important;
-  margin: 34px 0 !important;
-}
-@media (max-width: 980px) {
-  #TOC, .tocify {
-    position: relative !important;
-    width: auto !important;
-    max-height: 360px !important;
-    margin: 12px !important;
-  }
-  .main-container {
-    margin: 12px !important;
-    padding: 24px !important;
-  }
-  .grid-2, .grid-3 {
-    grid-template-columns: 1fr !important;
-  }
-}
+html, body { background: linear-gradient(135deg, #fff8ef 0%, #f1ddc8 38%, #dfc0a0 100%); color: var(--ink); }
+body { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.72; font-size: 16px; }
+.main-container { max-width: 1180px !important; margin-left: 320px !important; margin-right: 42px !important; background: rgba(255, 248, 239, 0.97); padding: 34px 48px; border-radius: 26px; box-shadow: 0 22px 70px rgba(59,36,22,0.18); }
+#TOC { position: fixed; left: 18px; top: 18px; width: 270px; max-height: 94vh; overflow-y: auto; background: linear-gradient(180deg, #4e2f1d 0%, #7a4a26 58%, #b78044 100%); color: #fffdf8; padding: 20px; border-radius: 22px; box-shadow: 0 20px 48px rgba(59,36,22,.38); border: 1px solid rgba(255,255,255,.16); }
+#TOC a { color: #fff5df !important; text-decoration: none; font-weight: 600; }
+#TOC a:hover { color: #ffd77a !important; text-decoration: underline; }
+h1, h2, h3, h4 { color: var(--brown-900); font-weight: 800; letter-spacing: .2px; }
+h1.title { font-size: 2.6rem; background: linear-gradient(90deg, #3b2416, #9f652f, #cfa569); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+h1 { border-bottom: 4px solid var(--brown-300); padding-bottom: .35rem; margin-top: 2.4rem; }
+h2 { margin-top: 2rem; border-left: 9px solid var(--brown-500); padding: .62rem .9rem; background: linear-gradient(90deg, #f2ddc5, rgba(255,248,239,0)); border-radius: 12px; }
+h3 { color: var(--brown-800); margin-top: 1.65rem; }
+a { color: #79512b; font-weight: 650; }
+blockquote { border-left: 8px solid var(--brown-500); background: #fff2de; padding: 15px 20px; border-radius: 12px; color: #3c2718; }
+pre { background: #f6e4d0 !important; border: 1px solid #d3aa7d; border-left: 8px solid #a46a36; color: #111 !important; border-radius: 16px; padding: 18px; }
+code { background: #f8e6d2; color: #24140a; padding: .12rem .32rem; border-radius: 6px; }
+table { border-collapse: collapse; width: 100%; background: #fffaf1; margin: 1rem 0 1.25rem 0; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 22px rgba(76,46,28,.08); }
+th { background: linear-gradient(90deg, #5b3520, #9b6531); color: white; padding: 11px; }
+td { padding: 10px 12px; border-bottom: 1px solid #ead6bd; vertical-align: top; }
+tr:nth-child(even) td { background: #fff3e3; }
+.formula-box { background: #f5dfc6; color: #111; border: 2px solid #d4ac7b; border-left: 9px solid #8b5a2b; border-radius: 18px; padding: 16px 20px; margin: 18px 0; box-shadow: 0 10px 26px rgba(76,46,28,.10); }
+.formula-box .math { color: #111 !important; }
+.learning-card, .case-card, .warning-card, .assessment-card, .rps-card { border-radius: 20px; padding: 20px 23px; margin: 18px 0; box-shadow: 0 12px 30px rgba(76,46,28,.12); }
+.learning-card { background: linear-gradient(135deg, #fff4e5, #f0d0ab); border: 1px solid #d4ad83; }
+.case-card { background: linear-gradient(135deg, #fef9f0, #ecd6bd); border-left: 10px solid #6b3f22; }
+.warning-card { background: linear-gradient(135deg, #fff4cf, #f8d09a); border-left: 10px solid #b76e21; }
+.assessment-card { background: linear-gradient(135deg, #f3efe9, #dfc0a0); border-left: 10px solid #3d7b76; }
+.rps-card { background: linear-gradient(135deg, #4e2f1d, #8b5a2b); color: #fff8ef; }
+.rps-card h2, .rps-card h3, .rps-card strong { color: #fff8ef; }
+.badge { display:inline-block; background:#5b3520; color:#fff7e8; border-radius:999px; padding:.26rem .72rem; margin:.15rem; font-weight:700; font-size:.86rem; }
+.figure-panel { background: #fff8ef; border: 1px solid #dfc0a0; border-radius: 22px; padding: 18px; margin: 18px 0 24px 0; box-shadow: 0 10px 30px rgba(59,36,22,.10); }
+.caption { color:#6b3f22; font-size:.92rem; text-align:center; margin-top: .4rem; font-weight: 650; }
+.small-note { font-size:.93rem; color:#5c422e; }
+hr { border:0; height:2px; background:linear-gradient(90deg, transparent, #a46a36, transparent); margin: 2rem 0; }
+@media print { #TOC { position: static; width:auto; max-height:none; } .main-container { margin:0 !important; box-shadow:none; } }
+@media (max-width: 1050px) { #TOC { position: static; width:auto; max-height:none; margin: 12px; } .main-container { margin: 14px !important; padding: 24px; } }
 </style>
-<script>
-window.MathJax = {
-  tex: {
-    inlineMath: [["\\(", "\\)"], ["$", "$"]],
-    displayMath: [["\\[", "\\]"], ["$$", "$$"]],
-    processEscapes: true,
-    processEnvironments: true,
-    tags: "ams"
-  },
-  options: {
-    skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"],
-    ignoreHtmlClass: "tex2jax_ignore"
-  },
-  chtml: {
-    fontURL: "../../assets/vendor/mathjax/output/chtml/fonts/woff-v2"
-  },
-  startup: {
-    typeset: true
-  }
-};
-
-(function () {
-  var script = document.createElement("script");
-  script.src = "../../assets/vendor/mathjax/tex-mml-chtml.js";
-  script.async = true;
-  script.onerror = function () {
-    var fallback = document.createElement("script");
-    fallback.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
-    fallback.async = true;
-    document.head.appendChild(fallback);
-  };
-  document.head.appendChild(script);
-})();
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll("table").forEach(function (table) {
-    if (table.parentElement && table.parentElement.classList.contains("s2-table-scroll")) return;
-    var wrapper = document.createElement("div");
-    wrapper.className = "s2-table-scroll";
-    table.parentNode.insertBefore(wrapper, table);
-    wrapper.appendChild(table);
-  });
-});
-</script>
 <div class="rps-card">
 <h2>
 📘 Materi Pembelajaran S2 Statistika Terapan
@@ -3497,9 +3275,89 @@ Gambar 2. Peta keputusan praktis untuk memilih model GLM berdasarkan
 tipe respons.
 </div>
 </div>
+<!-- BEGIN AI-INLINE-STYLE-2026 -->
+<style>
+.ai-inline {
+margin: 1rem 0 1.35rem;
+padding: 1rem 1.1rem;
+border: 1px solid #bfd9d5;
+border-left: 7px solid #0f766e;
+border-radius: 8px;
+background: linear-gradient(135deg, #eff9f7, #fffaf0);
+}
+.ai-inline--agentic { border-left-color: #17395c; background: linear-gradient(135deg, #eef5fb, #f5faf8); }
+.ai-inline--assessment { border-left-color: #a35d00; background: #fff8e8; }
+.ai-inline h3, .ai-inline h4 { margin-top: 0; color: #17395c; }
+.ai-inline p:last-child, .ai-inline ul:last-child { margin-bottom: 0; }
+.ai-inline__label {
+display: inline-block; margin-bottom: .45rem; padding: .2rem .55rem;
+border-radius: 999px; background: #17395c; color: white;
+font-size: .78rem; font-weight: 800;
+}
+.ai-inline table { width: 100%; margin: .6rem 0; background: white; }
+</style>
+<!-- END AI-INLINE-STYLE-2026 -->
 <div id="petunjuk-penggunaan-materi" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Petunjuk Penggunaan
 Materi</h1>
+<!-- BEGIN AI-INLINE:f48bf542801a -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 1</span>
+<h3>
+Generative dan Agentic AI untuk Petunjuk Penggunaan Materi
+</h3>
+<p><strong>Arah RPS.</strong> Perbandingan GLM/GLMM dengan GAM,
+boosting, dan model machine learning untuk respons nonnormal.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Pendahuluan Model Linear
+Generalisasi; Konsep dasar Generalized Linear Models (GLM); Perbedaan
+model linear klasik dan GLM.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Materi ini dirancang sebagai <strong>bahan ajar HTML berbasis R
 Markdown</strong>. Mahasiswa dapat membaca bagian konseptual,
 menjalankan kode R, mengadaptasi studi kasus, dan menggunakan pertanyaan
@@ -3524,6 +3382,65 @@ dengan fungsi <code>glm()</code> bawaan R.</p>
 <div id="ringkasan-rps-dan-orientasi-obe" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Ringkasan RPS dan
 Orientasi OBE</h1>
+<!-- BEGIN AI-INLINE:76e7a916a364 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 2</span>
+<h3>
+Generative dan Agentic AI untuk Ringkasan RPS dan Orientasi OBE
+</h3>
+<p><strong>Arah RPS.</strong> Kalibrasi, deviance, overdispersion, zero
+inflation, regularisasi, uncertainty, dan interpretabilitas parameter
+serta prediksi.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Ruang lingkup aplikasi GLM di
+berbagai bidang; Karakteristik Data Kategori dan Cacah; Tipe data
+kategori (biner, multinomial, ordinal).</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>RPS menempatkan mata kuliah ini sebagai mata kuliah wajib semester 2
 dengan bobot 3 SKS. Kompetensi yang dibebankan pada mata kuliah meliputi
 kemampuan mengelola dan menganalisis data untuk permasalahan nyata,
@@ -3622,6 +3539,65 @@ mana yang boleh dipotong. 🙂</p>
 </div>
 <div id="notasi-umum-glm" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Notasi Umum GLM</h1>
+<!-- BEGIN AI-INLINE:d92a21117276 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 3</span>
+<h3>
+Generative dan Agentic AI untuk Notasi Umum GLM
+</h3>
+<p><strong>Arah RPS.</strong> Proyek data nyata yang mengharuskan
+baseline statistika, model alternatif AI, validasi, dan justifikasi
+kompleksitas model.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Tipe data cacah dan distribusinya;
+Eksplorasi dan analisis struktur data kategori; Distribusi Eksponensial
+dan Link Function.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian ini merangkum notasi yang digunakan secara konsisten di
 seluruh materi. Misalkan terdapat <span class="math inline">\(n\)</span>
 observasi independen atau diasumsikan independen bersyarat pada
@@ -3658,6 +3634,64 @@ multikolinearitas, kategori jarang, atau spesifikasi model.</p>
 <div id="pertemuan-1-pendahuluan-model-linear-generalisasi" class="section level1" number="4">
 <h1><span class="header-section-number">4</span> Pertemuan 1:
 Pendahuluan Model Linear Generalisasi</h1>
+<!-- BEGIN AI-INLINE:e20f17ad3de6 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 1</span>
+<h3>
+Generative dan Agentic AI untuk Pendahuluan Model Linear Generalisasi
+</h3>
+<p><strong>Arah RPS.</strong> Perbandingan GLM/GLMM dengan GAM,
+boosting, dan model machine learning untuk respons nonnormal.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Pendahuluan Model Linear
+Generalisasi; Konsep dasar Generalized Linear Models (GLM); Perbedaan
+model linear klasik dan GLM.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">SubCPMK1</span> <span class="badge">Fokus:
 perbedaan model linear klasik dan GLM</span></p>
 <div class="learning-card">
@@ -3671,6 +3705,26 @@ tetapi juga substantif.</p>
 <div id="orientasi-konseptual" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:c018f9ff744f -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Pendahuluan Model Linear
+Generalisasi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Pendahuluan Model Linear
+Generalisasi</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian ini membahas perbedaan model linear klasik dan GLM sebagai
 elemen penting dalam mata kuliah Model Linear Generalisasi. Dalam GLM,
 pertanyaan pertama bukan “pakai regresi apa?” melainkan “bagaimana
@@ -3707,6 +3761,25 @@ diagnostik, ke interpretasi, dan akhirnya ke rekomendasi.</p>
 </div>
 <div id="rumus-inti" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> Rumus Inti</h2>
+<!-- BEGIN AI-INLINE:a99d3b7413ea -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Pendahuluan Model Linear
+Generalisasi.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Pendahuluan Model Linear Generalisasi</strong>, lalu periksa
+setiap langkah secara manual, uji kasus batas, dan cocokkan dengan
+rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p>$$</p>
 <p>g(_i)=_i=_0+<em>1x</em>{i1}++<em>px</em>{ip}</p>
@@ -3774,6 +3847,30 @@ keputusan model secara akademik dan profesional.</p>
 <div id="studi-kasus-terapan" class="section level2" number="4.4">
 <h2><span class="header-section-number">4.4</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:c0ba97d76c49 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Pendahuluan Model Linear
+Generalisasi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Perbandingan GLM/GLMM
+dengan GAM, boosting, dan model machine learning untuk respons
+nonnormal. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-card">
 <p><strong>Kasus:</strong> risiko kelulusan mahasiswa berdasarkan latar
 belakang akademik, jumlah klaim asuransi, dan banyaknya kasus penyakit.
@@ -3813,6 +3910,29 @@ model yang tahu wilayah kompetensinya sendiri.</p>
 <div id="implementasi-awal-dengan-r" class="section level2" number="4.5">
 <h2><span class="header-section-number">4.5</span> Implementasi Awal
 dengan R</h2>
+<!-- BEGIN AI-INLINE:035a5a02426d -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi Awal dengan R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Pendahuluan Model Linear
+Generalisasi.
+</p>
+<p>
+Agen dapat memasang kandidat model, menjalankan diagnostik,
+membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau
+konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+spesifikasi model, data leakage, konvergensi, residual, kalibrasi,
+ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut menunjukkan bentuk dasar analisis yang dapat
 dikembangkan sesuai konteks data. Kode sengaja dibuat ringkas agar
 mahasiswa melihat alur utamanya. Pada proyek nyata, setiap langkah harus
@@ -3851,6 +3971,29 @@ bicara, biasanya penting. 😄</p>
 <div id="diagnostik-dan-evaluasi" class="section level2" number="4.6">
 <h2><span class="header-section-number">4.6</span> Diagnostik dan
 Evaluasi</h2>
+<!-- BEGIN AI-INLINE:6bc49d017899 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Diagnostik dan Evaluasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Pendahuluan Model Linear
+Generalisasi.
+</p>
+<p>
+Agen dapat memasang kandidat model, menjalankan diagnostik,
+membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau
+konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+spesifikasi model, data leakage, konvergensi, residual, kalibrasi,
+ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Evaluasi model pada bagian ini sebaiknya dilakukan melalui beberapa
 indikator. Pertama, nilai deviance residual membantu melihat observasi
 yang tidak dijelaskan dengan baik oleh model. Kedua, leverage dan ukuran
@@ -3917,6 +4060,66 @@ atau model pembanding diubah?</li>
 <div id="pertemuan-2-karakteristik-data-kategori-biner-multinomial-dan-ordinal" class="section level1" number="5">
 <h1><span class="header-section-number">5</span> Pertemuan 2:
 Karakteristik Data Kategori: Biner, Multinomial, dan Ordinal</h1>
+<!-- BEGIN AI-INLINE:585ac06aafde -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 2</span>
+<h3>
+Generative dan Agentic AI untuk Karakteristik Data Kategori: Biner,
+Multinomial, dan Ordinal
+</h3>
+<p><strong>Arah RPS.</strong> Kalibrasi, deviance, overdispersion, zero
+inflation, regularisasi, uncertainty, dan interpretabilitas parameter
+serta prediksi.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Ruang lingkup aplikasi GLM di
+berbagai bidang; Karakteristik Data Kategori dan Cacah; Tipe data
+kategori (biner, multinomial, ordinal).</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">SubCPMK1</span> <span class="badge">Fokus:
 struktur level kategori dan konsekuensi inferensinya</span></p>
 <div class="learning-card">
@@ -3930,6 +4133,26 @@ tidak hanya mekanis tetapi juga substantif.</p>
 <div id="orientasi-konseptual-1" class="section level2" number="5.1">
 <h2><span class="header-section-number">5.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:e2686af8855d -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Karakteristik Data Kategori:
+Biner, Multinomial, dan Ordinal.
+</p>
+<p>
+Minta AI menjelaskan <strong>Karakteristik Data Kategori: Biner,
+Multinomial, dan Ordinal</strong> melalui definisi, analogi, contoh, dan
+contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian ini membahas struktur level kategori dan konsekuensi
 inferensinya sebagai elemen penting dalam mata kuliah Model Linear
 Generalisasi. Dalam GLM, pertanyaan pertama bukan “pakai regresi apa?”
@@ -3969,6 +4192,26 @@ akhirnya ke rekomendasi.</p>
 </div>
 <div id="rumus-inti-1" class="section level2" number="5.2">
 <h2><span class="header-section-number">5.2</span> Rumus Inti</h2>
+<!-- BEGIN AI-INLINE:9840b81d4f9e -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Karakteristik Data Kategori:
+Biner, Multinomial, dan Ordinal.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Karakteristik Data Kategori: Biner, Multinomial, dan
+Ordinal</strong>, lalu periksa setiap langkah secara manual, uji kasus
+batas, dan cocokkan dengan rujukan primer. AI tidak boleh menjadi
+satu-satunya sumber rumus atau pembuktian; kesetaraan simbolik wajib
+dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p>$$</p>
 <p><em>i=P(Y_i=1X_i),</em>{ij}=P(Y_i=jX_i)</p>
@@ -4036,6 +4279,30 @@ keputusan model secara akademik dan profesional.</p>
 <div id="studi-kasus-terapan-1" class="section level2" number="5.4">
 <h2><span class="header-section-number">5.4</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:7b95abf489a5 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Karakteristik Data Kategori:
+Biner, Multinomial, dan Ordinal.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Kalibrasi, deviance,
+overdispersion, zero inflation, regularisasi, uncertainty, dan
+interpretabilitas parameter serta prediksi. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-card">
 <p><strong>Kasus:</strong> kepuasan layanan publik, status penyakit,
 pilihan moda transportasi, dan tingkat keparahan gejala. Misalkan
@@ -4075,6 +4342,28 @@ model yang tahu wilayah kompetensinya sendiri.</p>
 <div id="implementasi-awal-dengan-r-1" class="section level2" number="5.5">
 <h2><span class="header-section-number">5.5</span> Implementasi Awal
 dengan R</h2>
+<!-- BEGIN AI-INLINE:93adc222cb96 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi Awal dengan R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Karakteristik Data Kategori:
+Biner, Multinomial, dan Ordinal.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut menunjukkan bentuk dasar analisis yang dapat
 dikembangkan sesuai konteks data. Kode sengaja dibuat ringkas agar
 mahasiswa melihat alur utamanya. Pada proyek nyata, setiap langkah harus
@@ -4113,6 +4402,28 @@ bicara, biasanya penting. 😄</p>
 <div id="diagnostik-dan-evaluasi-1" class="section level2" number="5.6">
 <h2><span class="header-section-number">5.6</span> Diagnostik dan
 Evaluasi</h2>
+<!-- BEGIN AI-INLINE:0923096df814 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Diagnostik dan Evaluasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Karakteristik Data Kategori:
+Biner, Multinomial, dan Ordinal.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Evaluasi model pada bagian ini sebaiknya dilakukan melalui beberapa
 indikator. Pertama, nilai deviance residual membantu melihat observasi
 yang tidak dijelaskan dengan baik oleh model. Kedua, leverage dan ukuran
@@ -4178,6 +4489,65 @@ atau model pembanding diubah?</li>
 <div id="pertemuan-3-data-cacah-laju-dan-eksposur" class="section level1" number="6">
 <h1><span class="header-section-number">6</span> Pertemuan 3: Data
 Cacah, Laju, dan Eksposur</h1>
+<!-- BEGIN AI-INLINE:6744c33e89dc -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 3</span>
+<h3>
+Generative dan Agentic AI untuk Data Cacah, Laju, dan Eksposur
+</h3>
+<p><strong>Arah RPS.</strong> Proyek data nyata yang mengharuskan
+baseline statistika, model alternatif AI, validasi, dan justifikasi
+kompleksitas model.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Tipe data cacah dan distribusinya;
+Eksplorasi dan analisis struktur data kategori; Distribusi Eksponensial
+dan Link Function.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menyusun data dictionary, mendeteksi potensi masalah
+kualitas data, dan mengusulkan aturan pemeriksaan.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa asal-usul data, unit observasi, coverage,
+kebocoran data, privasi, dan keputusan pembersihan; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">SubCPMK1</span> <span class="badge">Fokus:
 perbedaan count, rate, exposure, dan intensitas kejadian</span></p>
 <div class="learning-card">
@@ -4191,6 +4561,24 @@ yang tidak hanya mekanis tetapi juga substantif.</p>
 <div id="orientasi-konseptual-2" class="section level2" number="6.1">
 <h2><span class="header-section-number">6.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:205e97c313f7 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 3: Data Cacah, Laju, dan Eksposur.
+</p>
+<p>
+Minta AI menjelaskan <strong>Data Cacah, Laju, dan Eksposur</strong>
+melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa
+kemudian membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian ini membahas perbedaan count, rate, exposure, dan intensitas
 kejadian sebagai elemen penting dalam mata kuliah Model Linear
 Generalisasi. Dalam GLM, pertanyaan pertama bukan “pakai regresi apa?”
@@ -4227,6 +4615,24 @@ akhirnya ke rekomendasi.</p>
 </div>
 <div id="rumus-inti-2" class="section level2" number="6.2">
 <h2><span class="header-section-number">6.2</span> Rumus Inti</h2>
+<!-- BEGIN AI-INLINE:0b9b27ff3fcf -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 3: Data Cacah, Laju, dan Eksposur.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Data Cacah, Laju, dan Eksposur</strong>, lalu periksa setiap
+langkah secara manual, uji kasus batas, dan cocokkan dengan rujukan
+primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p>$$</p>
 <p>(_i)=_i+(E_i)</p>
@@ -4294,6 +4700,29 @@ keputusan model secara akademik dan profesional.</p>
 <div id="studi-kasus-terapan-2" class="section level2" number="6.4">
 <h2><span class="header-section-number">6.4</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:c585dfba3853 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 3: Data Cacah, Laju, dan Eksposur.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Proyek data nyata yang
+mengharuskan baseline statistika, model alternatif AI, validasi, dan
+justifikasi kompleksitas model. Generative AI dapat menghasilkan
+beberapa skenario pemangku kepentingan dan draf narasi yang kemudian
+diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel,
+grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-card">
 <p><strong>Kasus:</strong> jumlah klaim asuransi, kasus DBD per
 kabupaten, cacat produksi, kunjungan pasien, dan jumlah publikasi.
@@ -4333,6 +4762,27 @@ model yang tahu wilayah kompetensinya sendiri.</p>
 <div id="implementasi-awal-dengan-r-2" class="section level2" number="6.5">
 <h2><span class="header-section-number">6.5</span> Implementasi Awal
 dengan R</h2>
+<!-- BEGIN AI-INLINE:70f94f108b61 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi Awal dengan R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 3: Data Cacah, Laju, dan Eksposur.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut menunjukkan bentuk dasar analisis yang dapat
 dikembangkan sesuai konteks data. Kode sengaja dibuat ringkas agar
 mahasiswa melihat alur utamanya. Pada proyek nyata, setiap langkah harus
@@ -4371,6 +4821,27 @@ bicara, biasanya penting. 😄</p>
 <div id="diagnostik-dan-evaluasi-2" class="section level2" number="6.6">
 <h2><span class="header-section-number">6.6</span> Diagnostik dan
 Evaluasi</h2>
+<!-- BEGIN AI-INLINE:93d0eed40314 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Diagnostik dan Evaluasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 3: Data Cacah, Laju, dan Eksposur.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Evaluasi model pada bagian ini sebaiknya dilakukan melalui beberapa
 indikator. Pertama, nilai deviance residual membantu melihat observasi
 yang tidak dijelaskan dengan baik oleh model. Kedua, leverage dan ukuran
@@ -4436,6 +4907,64 @@ atau model pembanding diubah?</li>
 <div id="pertemuan-4-keluarga-distribusi-eksponensial-dan-fungsi-link" class="section level1" number="7">
 <h1><span class="header-section-number">7</span> Pertemuan 4: Keluarga
 Distribusi Eksponensial dan Fungsi Link</h1>
+<!-- BEGIN AI-INLINE:822e848d803a -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 4</span>
+<h3>
+Generative dan Agentic AI untuk Keluarga Distribusi Eksponensial dan
+Fungsi Link
+</h3>
+<p><strong>Arah RPS.</strong> Perbandingan GLM/GLMM dengan GAM,
+boosting, dan model machine learning untuk respons nonnormal.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Keluarga distribusi eksponensial;
+Fungsi link pada GLM (logit, probit, log, dll).</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">SubCPMK1</span> <span class="badge">Fokus:
 struktur teoretis yang menyatukan GLM</span></p>
 <div class="learning-card">
@@ -4449,6 +4978,25 @@ tetapi juga substantif.</p>
 <div id="orientasi-konseptual-3" class="section level2" number="7.1">
 <h2><span class="header-section-number">7.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:8f8f6f4d9ead -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 4: Keluarga Distribusi Eksponensial
+dan Fungsi Link.
+</p>
+<p>
+Minta AI menjelaskan <strong>Keluarga Distribusi Eksponensial dan Fungsi
+Link</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian ini membahas struktur teoretis yang menyatukan GLM sebagai
 elemen penting dalam mata kuliah Model Linear Generalisasi. Dalam GLM,
 pertanyaan pertama bukan “pakai regresi apa?” melainkan “bagaimana
@@ -4484,6 +5032,25 @@ model, ke diagnostik, ke interpretasi, dan akhirnya ke rekomendasi.</p>
 </div>
 <div id="rumus-inti-3" class="section level2" number="7.2">
 <h2><span class="header-section-number">7.2</span> Rumus Inti</h2>
+<!-- BEGIN AI-INLINE:1cc070d09580 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 4: Keluarga Distribusi Eksponensial
+dan Fungsi Link.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Keluarga Distribusi Eksponensial dan Fungsi Link</strong>, lalu
+periksa setiap langkah secara manual, uji kasus batas, dan cocokkan
+dengan rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus
+atau pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p>$$</p>
 <p>f(y;,)={+c(y,)}</p>
@@ -4551,6 +5118,30 @@ keputusan model secara akademik dan profesional.</p>
 <div id="studi-kasus-terapan-3" class="section level2" number="7.4">
 <h2><span class="header-section-number">7.4</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:bbb9253cb206 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 4: Keluarga Distribusi Eksponensial
+dan Fungsi Link.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Perbandingan GLM/GLMM
+dengan GAM, boosting, dan model machine learning untuk respons
+nonnormal. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-card">
 <p><strong>Kasus:</strong> pemilihan link untuk peluang gagal bayar,
 laju kecelakaan, biaya klaim, dan waktu tunggu. Misalkan seorang
@@ -4590,6 +5181,27 @@ model yang tahu wilayah kompetensinya sendiri.</p>
 <div id="implementasi-awal-dengan-r-3" class="section level2" number="7.5">
 <h2><span class="header-section-number">7.5</span> Implementasi Awal
 dengan R</h2>
+<!-- BEGIN AI-INLINE:9bdaf533534c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi Awal dengan R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 4: Keluarga Distribusi Eksponensial
+dan Fungsi Link.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut menunjukkan bentuk dasar analisis yang dapat
 dikembangkan sesuai konteks data. Kode sengaja dibuat ringkas agar
 mahasiswa melihat alur utamanya. Pada proyek nyata, setiap langkah harus
@@ -4628,6 +5240,27 @@ bicara, biasanya penting. 😄</p>
 <div id="diagnostik-dan-evaluasi-3" class="section level2" number="7.6">
 <h2><span class="header-section-number">7.6</span> Diagnostik dan
 Evaluasi</h2>
+<!-- BEGIN AI-INLINE:1fc6bb28e2b1 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Diagnostik dan Evaluasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 4: Keluarga Distribusi Eksponensial
+dan Fungsi Link.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Evaluasi model pada bagian ini sebaiknya dilakukan melalui beberapa
 indikator. Pertama, nilai deviance residual membantu melihat observasi
 yang tidak dijelaskan dengan baik oleh model. Kedua, leverage dan ukuran
@@ -4694,6 +5327,65 @@ atau model pembanding diubah?</li>
 <div id="pertemuan-5-analisis-tabel-kontingensi-dua-arah" class="section level1" number="8">
 <h1><span class="header-section-number">8</span> Pertemuan 5: Analisis
 Tabel Kontingensi Dua Arah</h1>
+<!-- BEGIN AI-INLINE:3c6871e23664 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 5</span>
+<h3>
+Generative dan Agentic AI untuk Analisis Tabel Kontingensi Dua Arah
+</h3>
+<p><strong>Arah RPS.</strong> Kalibrasi, deviance, overdispersion, zero
+inflation, regularisasi, uncertainty, dan interpretabilitas parameter
+serta prediksi.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK2 melalui fokus: Pemilihan fungsi link yang sesuai;
+Analisis Tabel Kontingensi; Teori dan aplikasi tabel kontingensi dua dan
+tiga arah.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">SubCPMK2</span> <span class="badge">Fokus:
 asosiasi antar dua variabel kategori dan ukuran efeknya</span></p>
 <div class="learning-card">
@@ -4707,6 +5399,25 @@ yang tidak hanya mekanis tetapi juga substantif.</p>
 <div id="orientasi-konseptual-4" class="section level2" number="8.1">
 <h2><span class="header-section-number">8.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:18b161e70945 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Analisis Tabel Kontingensi Dua
+Arah.
+</p>
+<p>
+Minta AI menjelaskan <strong>Analisis Tabel Kontingensi Dua
+Arah</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian ini membahas asosiasi antar dua variabel kategori dan ukuran
 efeknya sebagai elemen penting dalam mata kuliah Model Linear
 Generalisasi. Dalam GLM, pertanyaan pertama bukan “pakai regresi apa?”
@@ -4743,6 +5454,25 @@ model, ke diagnostik, ke interpretasi, dan akhirnya ke rekomendasi.</p>
 </div>
 <div id="rumus-inti-4" class="section level2" number="8.2">
 <h2><span class="header-section-number">8.2</span> Rumus Inti</h2>
+<!-- BEGIN AI-INLINE:f8f3c357d0b5 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Analisis Tabel Kontingensi Dua
+Arah.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Analisis Tabel Kontingensi Dua Arah</strong>, lalu periksa
+setiap langkah secara manual, uji kasus batas, dan cocokkan dengan
+rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p>$$</p>
 <p>(m_{ij})=+_i<sup>X+<em>j^Y+</em>{ij}</sup>{XY}</p>
@@ -4810,6 +5540,30 @@ keputusan model secara akademik dan profesional.</p>
 <div id="studi-kasus-terapan-4" class="section level2" number="8.4">
 <h2><span class="header-section-number">8.4</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:3892a09bc87c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Analisis Tabel Kontingensi Dua
+Arah.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Kalibrasi, deviance,
+overdispersion, zero inflation, regularisasi, uncertainty, dan
+interpretabilitas parameter serta prediksi. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-card">
 <p><strong>Kasus:</strong> hubungan paparan dan penyakit, jenis layanan
 dan kepuasan, atau status kerja dan pendidikan. Misalkan seorang
@@ -4849,6 +5603,27 @@ model yang tahu wilayah kompetensinya sendiri.</p>
 <div id="implementasi-awal-dengan-r-4" class="section level2" number="8.5">
 <h2><span class="header-section-number">8.5</span> Implementasi Awal
 dengan R</h2>
+<!-- BEGIN AI-INLINE:98f74e873f27 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi Awal dengan R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Analisis Tabel Kontingensi Dua
+Arah.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut menunjukkan bentuk dasar analisis yang dapat
 dikembangkan sesuai konteks data. Kode sengaja dibuat ringkas agar
 mahasiswa melihat alur utamanya. Pada proyek nyata, setiap langkah harus
@@ -4887,6 +5662,27 @@ bicara, biasanya penting. 😄</p>
 <div id="diagnostik-dan-evaluasi-4" class="section level2" number="8.6">
 <h2><span class="header-section-number">8.6</span> Diagnostik dan
 Evaluasi</h2>
+<!-- BEGIN AI-INLINE:3a6f16b59d36 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Diagnostik dan Evaluasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Analisis Tabel Kontingensi Dua
+Arah.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Evaluasi model pada bagian ini sebaiknya dilakukan melalui beberapa
 indikator. Pertama, nilai deviance residual membantu melihat observasi
 yang tidak dijelaskan dengan baik oleh model. Kedua, leverage dan ukuran
@@ -4952,6 +5748,66 @@ atau model pembanding diubah?</li>
 <div id="pertemuan-6-tabel-kontingensi-tiga-arah-dan-interaksi" class="section level1" number="9">
 <h1><span class="header-section-number">9</span> Pertemuan 6: Tabel
 Kontingensi Tiga Arah dan Interaksi</h1>
+<!-- BEGIN AI-INLINE:3f1ca5bdb7b3 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 6</span>
+<h3>
+Generative dan Agentic AI untuk Tabel Kontingensi Tiga Arah dan
+Interaksi
+</h3>
+<p><strong>Arah RPS.</strong> Proyek data nyata yang mengharuskan
+baseline statistika, model alternatif AI, validasi, dan justifikasi
+kompleksitas model.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK2 melalui fokus: Model log-linear untuk data kategori;
+Pengujian interaksi dan asosiasi dalam tabel kontingensi; Pemodelan GLM
+untuk Data Respons Biner.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">SubCPMK2</span> <span class="badge">Fokus:
 struktur asosiasi bersyarat, confounding, dan effect
 modification</span></p>
@@ -4966,6 +5822,26 @@ interpretasi yang tidak hanya mekanis tetapi juga substantif.</p>
 <div id="orientasi-konseptual-5" class="section level2" number="9.1">
 <h2><span class="header-section-number">9.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:9a0a63099511 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 6: Tabel Kontingensi Tiga Arah dan
+Interaksi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Tabel Kontingensi Tiga Arah dan
+Interaksi</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian ini membahas struktur asosiasi bersyarat, confounding, dan
 effect modification sebagai elemen penting dalam mata kuliah Model
 Linear Generalisasi. Dalam GLM, pertanyaan pertama bukan “pakai regresi
@@ -5003,6 +5879,25 @@ model, ke diagnostik, ke interpretasi, dan akhirnya ke rekomendasi.</p>
 </div>
 <div id="rumus-inti-5" class="section level2" number="9.2">
 <h2><span class="header-section-number">9.2</span> Rumus Inti</h2>
+<!-- BEGIN AI-INLINE:351293840919 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 6: Tabel Kontingensi Tiga Arah dan
+Interaksi.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Tabel Kontingensi Tiga Arah dan Interaksi</strong>, lalu periksa
+setiap langkah secara manual, uji kasus batas, dan cocokkan dengan
+rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p>$$</p>
 <p>(m_{ijk})=+_i<sup>A+<em>j<sup>B+<em>k<sup>C+<em>{ij}^{AB}+</em>{ik}</sup>{AC}+</em>{jk}</sup>{BC}+</em>{ijk}</sup>{ABC}</p>
@@ -5070,6 +5965,30 @@ keputusan model secara akademik dan profesional.</p>
 <div id="studi-kasus-terapan-5" class="section level2" number="9.4">
 <h2><span class="header-section-number">9.4</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:d43dce9e6435 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 6: Tabel Kontingensi Tiga Arah dan
+Interaksi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Proyek data nyata yang
+mengharuskan baseline statistika, model alternatif AI, validasi, dan
+justifikasi kompleksitas model. Generative AI dapat menghasilkan
+beberapa skenario pemangku kepentingan dan draf narasi yang kemudian
+diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel,
+grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-card">
 <p><strong>Kasus:</strong> asosiasi merokok dan penyakit yang
 dikondisikan oleh kelompok umur atau jenis kelamin. Misalkan seorang
@@ -5109,6 +6028,27 @@ model yang tahu wilayah kompetensinya sendiri.</p>
 <div id="implementasi-awal-dengan-r-5" class="section level2" number="9.5">
 <h2><span class="header-section-number">9.5</span> Implementasi Awal
 dengan R</h2>
+<!-- BEGIN AI-INLINE:86095c38846b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi Awal dengan R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 6: Tabel Kontingensi Tiga Arah dan
+Interaksi.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut menunjukkan bentuk dasar analisis yang dapat
 dikembangkan sesuai konteks data. Kode sengaja dibuat ringkas agar
 mahasiswa melihat alur utamanya. Pada proyek nyata, setiap langkah harus
@@ -5147,6 +6087,27 @@ bicara, biasanya penting. 😄</p>
 <div id="diagnostik-dan-evaluasi-5" class="section level2" number="9.6">
 <h2><span class="header-section-number">9.6</span> Diagnostik dan
 Evaluasi</h2>
+<!-- BEGIN AI-INLINE:d5cb2884ec51 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Diagnostik dan Evaluasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 6: Tabel Kontingensi Tiga Arah dan
+Interaksi.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Evaluasi model pada bagian ini sebaiknya dilakukan melalui beberapa
 indikator. Pertama, nilai deviance residual membantu melihat observasi
 yang tidak dijelaskan dengan baik oleh model. Kedua, leverage dan ukuran
@@ -5212,6 +6173,64 @@ atau model pembanding diubah?</li>
 <div id="pertemuan-7-model-log-linear-konstruksi-seleksi-dan-interpretasi" class="section level1" number="10">
 <h1><span class="header-section-number">10</span> Pertemuan 7: Model
 Log-Linear: Konstruksi, Seleksi, dan Interpretasi</h1>
+<!-- BEGIN AI-INLINE:4ff8dc019cd7 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 7</span>
+<h3>
+Generative dan Agentic AI untuk Model Log-Linear: Konstruksi, Seleksi,
+dan Interpretasi
+</h3>
+<p><strong>Arah RPS.</strong> Perbandingan GLM/GLMM dengan GAM,
+boosting, dan model machine learning untuk respons nonnormal.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK2 melalui fokus: Model regresi logistik; Interpretasi
+koefisien dan odds ratio; Goodness-of-fit dan diagnosa model.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">SubCPMK2</span> <span class="badge">Fokus:
 evaluasi model kontingensi dua dan tiga arah secara
 sistematis</span></p>
@@ -5226,6 +6245,26 @@ yang tidak hanya mekanis tetapi juga substantif.</p>
 <div id="orientasi-konseptual-6" class="section level2" number="10.1">
 <h2><span class="header-section-number">10.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:199cdccde432 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 7: Model Log-Linear: Konstruksi,
+Seleksi, dan Interpretasi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Model Log-Linear: Konstruksi, Seleksi, dan
+Interpretasi</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian ini membahas evaluasi model kontingensi dua dan tiga arah
 secara sistematis sebagai elemen penting dalam mata kuliah Model Linear
 Generalisasi. Dalam GLM, pertanyaan pertama bukan “pakai regresi apa?”
@@ -5261,6 +6300,26 @@ model, ke diagnostik, ke interpretasi, dan akhirnya ke rekomendasi.</p>
 </div>
 <div id="rumus-inti-6" class="section level2" number="10.2">
 <h2><span class="header-section-number">10.2</span> Rumus Inti</h2>
+<!-- BEGIN AI-INLINE:2a28b2f6d4e5 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 7: Model Log-Linear: Konstruksi,
+Seleksi, dan Interpretasi.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Model Log-Linear: Konstruksi, Seleksi, dan
+Interpretasi</strong>, lalu periksa setiap langkah secara manual, uji
+kasus batas, dan cocokkan dengan rujukan primer. AI tidak boleh menjadi
+satu-satunya sumber rumus atau pembuktian; kesetaraan simbolik wajib
+dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p>$$</p>
 <p>G^2=2_{cells} O(O/E)</p>
@@ -5328,6 +6387,30 @@ keputusan model secara akademik dan profesional.</p>
 <div id="studi-kasus-terapan-6" class="section level2" number="10.4">
 <h2><span class="header-section-number">10.4</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:b9090c86a5c5 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 7: Model Log-Linear: Konstruksi,
+Seleksi, dan Interpretasi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Perbandingan GLM/GLMM
+dengan GAM, boosting, dan model machine learning untuk respons
+nonnormal. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-card">
 <p><strong>Kasus:</strong> model segmentasi pelanggan berdasarkan
 wilayah, jenis produk, dan preferensi pembelian. Misalkan seorang
@@ -5367,6 +6450,29 @@ model yang tahu wilayah kompetensinya sendiri.</p>
 <div id="implementasi-awal-dengan-r-6" class="section level2" number="10.5">
 <h2><span class="header-section-number">10.5</span> Implementasi Awal
 dengan R</h2>
+<!-- BEGIN AI-INLINE:709e008e43da -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi Awal dengan R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 7: Model Log-Linear: Konstruksi,
+Seleksi, dan Interpretasi.
+</p>
+<p>
+Agen dapat memasang kandidat model, menjalankan diagnostik,
+membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau
+konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+spesifikasi model, data leakage, konvergensi, residual, kalibrasi,
+ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut menunjukkan bentuk dasar analisis yang dapat
 dikembangkan sesuai konteks data. Kode sengaja dibuat ringkas agar
 mahasiswa melihat alur utamanya. Pada proyek nyata, setiap langkah harus
@@ -5405,6 +6511,29 @@ bicara, biasanya penting. 😄</p>
 <div id="diagnostik-dan-evaluasi-6" class="section level2" number="10.6">
 <h2><span class="header-section-number">10.6</span> Diagnostik dan
 Evaluasi</h2>
+<!-- BEGIN AI-INLINE:378664f55634 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Diagnostik dan Evaluasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 7: Model Log-Linear: Konstruksi,
+Seleksi, dan Interpretasi.
+</p>
+<p>
+Agen dapat memasang kandidat model, menjalankan diagnostik,
+membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau
+konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+spesifikasi model, data leakage, konvergensi, residual, kalibrasi,
+ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Evaluasi model pada bagian ini sebaiknya dilakukan melalui beberapa
 indikator. Pertama, nilai deviance residual membantu melihat observasi
 yang tidak dijelaskan dengan baik oleh model. Kedua, leverage dan ukuran
@@ -5470,6 +6599,63 @@ atau model pembanding diubah?</li>
 <div id="pertemuan-8-uts-proyek-pendahuluan-model-kontingensi-dan-glm" class="section level1" number="11">
 <h1><span class="header-section-number">11</span> Pertemuan 8: UTS:
 Proyek Pendahuluan Model Kontingensi dan GLM</h1>
+<!-- BEGIN AI-INLINE:5737b72724a3 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 8</span>
+<h3>
+Generative dan Agentic AI untuk UTS: Proyek Pendahuluan Model
+Kontingensi dan GLM
+</h3>
+<p><strong>Arah RPS.</strong> Penggunaan AI hanya sesuai instruksi
+dosen; seluruh bantuan harus diungkapkan dan hasil diverifikasi.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1–2 melalui fokus: Ujian Tengah Semester.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">UTS</span> <span class="badge">Fokus: sintesis
 awal antara desain data, pertanyaan riset, dan strategi
 pemodelan</span></p>
@@ -5485,6 +6671,26 @@ substantif.</p>
 <div id="orientasi-konseptual-7" class="section level2" number="11.1">
 <h2><span class="header-section-number">11.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:6cec924b834a -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 8: UTS: Proyek Pendahuluan Model
+Kontingensi dan GLM.
+</p>
+<p>
+Minta AI menjelaskan <strong>UTS: Proyek Pendahuluan Model Kontingensi
+dan GLM</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian ini membahas sintesis awal antara desain data, pertanyaan
 riset, dan strategi pemodelan sebagai elemen penting dalam mata kuliah
 Model Linear Generalisasi. Dalam GLM, pertanyaan pertama bukan “pakai
@@ -5521,6 +6727,25 @@ akhirnya ke rekomendasi.</p>
 </div>
 <div id="rumus-inti-7" class="section level2" number="11.2">
 <h2><span class="header-section-number">11.2</span> Rumus Inti</h2>
+<!-- BEGIN AI-INLINE:122c315576b4 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 8: UTS: Proyek Pendahuluan Model
+Kontingensi dan GLM.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>UTS: Proyek Pendahuluan Model Kontingensi dan GLM</strong>, lalu
+periksa setiap langkah secara manual, uji kasus batas, dan cocokkan
+dengan rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus
+atau pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p>$$</p>
 <p>()=_i f(y_i;_i,)</p>
@@ -5588,6 +6813,30 @@ keputusan model secara akademik dan profesional.</p>
 <div id="studi-kasus-terapan-7" class="section level2" number="11.4">
 <h2><span class="header-section-number">11.4</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:c0abd5ee4ea5 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 8: UTS: Proyek Pendahuluan Model
+Kontingensi dan GLM.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Penggunaan AI hanya
+sesuai instruksi dosen; seluruh bantuan harus diungkapkan dan hasil
+diverifikasi. Generative AI dapat menghasilkan beberapa skenario
+pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap
+hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-card">
 <p><strong>Kasus:</strong> mini proyek pada data nyata dari kesehatan,
 bisnis, industri, sosial, aktuaria, atau sains data. Misalkan seorang
@@ -5627,6 +6876,28 @@ model yang tahu wilayah kompetensinya sendiri.</p>
 <div id="implementasi-awal-dengan-r-7" class="section level2" number="11.5">
 <h2><span class="header-section-number">11.5</span> Implementasi Awal
 dengan R</h2>
+<!-- BEGIN AI-INLINE:e892d12f450e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi Awal dengan R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 8: UTS: Proyek Pendahuluan Model
+Kontingensi dan GLM.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut menunjukkan bentuk dasar analisis yang dapat
 dikembangkan sesuai konteks data. Kode sengaja dibuat ringkas agar
 mahasiswa melihat alur utamanya. Pada proyek nyata, setiap langkah harus
@@ -5665,6 +6936,28 @@ bicara, biasanya penting. 😄</p>
 <div id="diagnostik-dan-evaluasi-7" class="section level2" number="11.6">
 <h2><span class="header-section-number">11.6</span> Diagnostik dan
 Evaluasi</h2>
+<!-- BEGIN AI-INLINE:e489d8546b77 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Diagnostik dan Evaluasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 8: UTS: Proyek Pendahuluan Model
+Kontingensi dan GLM.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Evaluasi model pada bagian ini sebaiknya dilakukan melalui beberapa
 indikator. Pertama, nilai deviance residual membantu melihat observasi
 yang tidak dijelaskan dengan baik oleh model. Kedua, leverage dan ukuran
@@ -5730,6 +7023,65 @@ atau model pembanding diubah?</li>
 <div id="pertemuan-9-regresi-logistik-biner-dan-odds-ratio" class="section level1" number="12">
 <h1><span class="header-section-number">12</span> Pertemuan 9: Regresi
 Logistik Biner dan Odds Ratio</h1>
+<!-- BEGIN AI-INLINE:97b0a4993358 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 9</span>
+<h3>
+Generative dan Agentic AI untuk Regresi Logistik Biner dan Odds Ratio
+</h3>
+<p><strong>Arah RPS.</strong> Kalibrasi, deviance, overdispersion, zero
+inflation, regularisasi, uncertainty, dan interpretabilitas parameter
+serta prediksi.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Pemodelan GLM untuk Data Respons
+Multinom dan Ordinal; Model regresi multinomial; Model regresi ordinal
+(proportional odds, adjacent categories).</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">SubCPMK3</span> <span class="badge">Fokus:
 pemodelan probabilitas respons biner</span></p>
 <div class="learning-card">
@@ -5743,6 +7095,25 @@ tetapi juga substantif.</p>
 <div id="orientasi-konseptual-8" class="section level2" number="12.1">
 <h2><span class="header-section-number">12.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:8060aa8eb24d -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 9: Regresi Logistik Biner dan Odds
+Ratio.
+</p>
+<p>
+Minta AI menjelaskan <strong>Regresi Logistik Biner dan Odds
+Ratio</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian ini membahas pemodelan probabilitas respons biner sebagai
 elemen penting dalam mata kuliah Model Linear Generalisasi. Dalam GLM,
 pertanyaan pertama bukan “pakai regresi apa?” melainkan “bagaimana
@@ -5779,6 +7150,25 @@ akhirnya ke rekomendasi.</p>
 </div>
 <div id="rumus-inti-8" class="section level2" number="12.2">
 <h2><span class="header-section-number">12.2</span> Rumus Inti</h2>
+<!-- BEGIN AI-INLINE:e5f25f595b5a -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 9: Regresi Logistik Biner dan Odds
+Ratio.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Regresi Logistik Biner dan Odds Ratio</strong>, lalu periksa
+setiap langkah secara manual, uji kasus batas, dan cocokkan dengan
+rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p>$$</p>
 <p>()=_0+<em>1x</em>{i1}++<em>px</em>{ip}</p>
@@ -5846,6 +7236,30 @@ keputusan model secara akademik dan profesional.</p>
 <div id="studi-kasus-terapan-8" class="section level2" number="12.4">
 <h2><span class="header-section-number">12.4</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:5acd346d1690 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 9: Regresi Logistik Biner dan Odds
+Ratio.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Kalibrasi, deviance,
+overdispersion, zero inflation, regularisasi, uncertainty, dan
+interpretabilitas parameter serta prediksi. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-card">
 <p><strong>Kasus:</strong> status penyakit, keberhasilan terapi, gagal
 bayar kredit, churn pelanggan, dan kelulusan mahasiswa. Misalkan seorang
@@ -5885,6 +7299,29 @@ model yang tahu wilayah kompetensinya sendiri.</p>
 <div id="implementasi-awal-dengan-r-8" class="section level2" number="12.5">
 <h2><span class="header-section-number">12.5</span> Implementasi Awal
 dengan R</h2>
+<!-- BEGIN AI-INLINE:8dc653a23928 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi Awal dengan R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 9: Regresi Logistik Biner dan Odds
+Ratio.
+</p>
+<p>
+Agen dapat memasang kandidat model, menjalankan diagnostik,
+membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau
+konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+spesifikasi model, data leakage, konvergensi, residual, kalibrasi,
+ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut menunjukkan bentuk dasar analisis yang dapat
 dikembangkan sesuai konteks data. Kode sengaja dibuat ringkas agar
 mahasiswa melihat alur utamanya. Pada proyek nyata, setiap langkah harus
@@ -5923,6 +7360,29 @@ bicara, biasanya penting. 😄</p>
 <div id="diagnostik-dan-evaluasi-8" class="section level2" number="12.6">
 <h2><span class="header-section-number">12.6</span> Diagnostik dan
 Evaluasi</h2>
+<!-- BEGIN AI-INLINE:e23e83a038ac -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Diagnostik dan Evaluasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 9: Regresi Logistik Biner dan Odds
+Ratio.
+</p>
+<p>
+Agen dapat memasang kandidat model, menjalankan diagnostik,
+membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau
+konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+spesifikasi model, data leakage, konvergensi, residual, kalibrasi,
+ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Evaluasi model pada bagian ini sebaiknya dilakukan melalui beberapa
 indikator. Pertama, nilai deviance residual membantu melihat observasi
 yang tidak dijelaskan dengan baik oleh model. Kedua, leverage dan ukuran
@@ -5988,6 +7448,65 @@ atau model pembanding diubah?</li>
 <div id="pertemuan-10-regresi-multinomial-dan-ordinal" class="section level1" number="13">
 <h1><span class="header-section-number">13</span> Pertemuan 10: Regresi
 Multinomial dan Ordinal</h1>
+<!-- BEGIN AI-INLINE:5a87d456bbcc -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 10</span>
+<h3>
+Generative dan Agentic AI untuk Regresi Multinomial dan Ordinal
+</h3>
+<p><strong>Arah RPS.</strong> Proyek data nyata yang mengharuskan
+baseline statistika, model alternatif AI, validasi, dan justifikasi
+kompleksitas model.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Studi kasus aplikasi dan
+interpretasi; Pemodelan GLM untuk Data Cacah; Model Poisson dan Negative
+Binomial.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">SubCPMK3</span> <span class="badge">Fokus:
 respons kategorik dengan lebih dari dua kelas</span></p>
 <div class="learning-card">
@@ -6001,6 +7520,24 @@ mekanis tetapi juga substantif.</p>
 <div id="orientasi-konseptual-9" class="section level2" number="13.1">
 <h2><span class="header-section-number">13.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:dc5630ac676c -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 10: Regresi Multinomial dan Ordinal.
+</p>
+<p>
+Minta AI menjelaskan <strong>Regresi Multinomial dan Ordinal</strong>
+melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa
+kemudian membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian ini membahas respons kategorik dengan lebih dari dua kelas
 sebagai elemen penting dalam mata kuliah Model Linear Generalisasi.
 Dalam GLM, pertanyaan pertama bukan “pakai regresi apa?” melainkan
@@ -6038,6 +7575,24 @@ akhirnya ke rekomendasi.</p>
 </div>
 <div id="rumus-inti-9" class="section level2" number="13.2">
 <h2><span class="header-section-number">13.2</span> Rumus Inti</h2>
+<!-- BEGIN AI-INLINE:17295d9b0360 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 10: Regresi Multinomial dan Ordinal.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Regresi Multinomial dan Ordinal</strong>, lalu periksa setiap
+langkah secara manual, uji kasus batas, dan cocokkan dengan rujukan
+primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p>$$</p>
 <p>()=_j+x_i^T_j</p>
@@ -6105,6 +7660,29 @@ keputusan model secara akademik dan profesional.</p>
 <div id="studi-kasus-terapan-9" class="section level2" number="13.4">
 <h2><span class="header-section-number">13.4</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:75cc113b7b1d -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 10: Regresi Multinomial dan Ordinal.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Proyek data nyata yang
+mengharuskan baseline statistika, model alternatif AI, validasi, dan
+justifikasi kompleksitas model. Generative AI dapat menghasilkan
+beberapa skenario pemangku kepentingan dan draf narasi yang kemudian
+diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel,
+grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-card">
 <p><strong>Kasus:</strong> pilihan program studi, tingkat kepuasan,
 status nutrisi, tingkat risiko, dan klasifikasi mutu layanan. Misalkan
@@ -6144,6 +7722,28 @@ model yang tahu wilayah kompetensinya sendiri.</p>
 <div id="implementasi-awal-dengan-r-9" class="section level2" number="13.5">
 <h2><span class="header-section-number">13.5</span> Implementasi Awal
 dengan R</h2>
+<!-- BEGIN AI-INLINE:83930648e59e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi Awal dengan R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 10: Regresi Multinomial dan Ordinal.
+</p>
+<p>
+Agen dapat memasang kandidat model, menjalankan diagnostik,
+membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau
+konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+spesifikasi model, data leakage, konvergensi, residual, kalibrasi,
+ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut menunjukkan bentuk dasar analisis yang dapat
 dikembangkan sesuai konteks data. Kode sengaja dibuat ringkas agar
 mahasiswa melihat alur utamanya. Pada proyek nyata, setiap langkah harus
@@ -6183,6 +7783,28 @@ bicara, biasanya penting. 😄</p>
 <div id="diagnostik-dan-evaluasi-9" class="section level2" number="13.6">
 <h2><span class="header-section-number">13.6</span> Diagnostik dan
 Evaluasi</h2>
+<!-- BEGIN AI-INLINE:7ba036af86c1 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Diagnostik dan Evaluasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 10: Regresi Multinomial dan Ordinal.
+</p>
+<p>
+Agen dapat memasang kandidat model, menjalankan diagnostik,
+membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau
+konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+spesifikasi model, data leakage, konvergensi, residual, kalibrasi,
+ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Evaluasi model pada bagian ini sebaiknya dilakukan melalui beberapa
 indikator. Pertama, nilai deviance residual membantu melihat observasi
 yang tidak dijelaskan dengan baik oleh model. Kedua, leverage dan ukuran
@@ -6249,6 +7871,65 @@ atau model pembanding diubah?</li>
 <div id="pertemuan-11-model-poisson-dan-negative-binomial-untuk-data-cacah" class="section level1" number="14">
 <h1><span class="header-section-number">14</span> Pertemuan 11: Model
 Poisson dan Negative Binomial untuk Data Cacah</h1>
+<!-- BEGIN AI-INLINE:0e9c0f45fb25 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 11</span>
+<h3>
+Generative dan Agentic AI untuk Model Poisson dan Negative Binomial
+untuk Data Cacah
+</h3>
+<p><strong>Arah RPS.</strong> Perbandingan GLM/GLMM dengan GAM,
+boosting, dan model machine learning untuk respons nonnormal.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Overdispersion dan zero-inflated
+model; Studi kasus pemodelan data cacah; Evaluasi dan Diagnostik Model
+GLM.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">SubCPMK3</span> <span class="badge">Fokus:
 kejadian diskret, laju, eksposur, dan overdispersion</span></p>
 <div class="learning-card">
@@ -6262,6 +7943,26 @@ tidak hanya mekanis tetapi juga substantif.</p>
 <div id="orientasi-konseptual-10" class="section level2" number="14.1">
 <h2><span class="header-section-number">14.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:cbefe98b64f2 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 11: Model Poisson dan Negative
+Binomial untuk Data Cacah.
+</p>
+<p>
+Minta AI menjelaskan <strong>Model Poisson dan Negative Binomial untuk
+Data Cacah</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian ini membahas kejadian diskret, laju, eksposur, dan
 overdispersion sebagai elemen penting dalam mata kuliah Model Linear
 Generalisasi. Dalam GLM, pertanyaan pertama bukan “pakai regresi apa?”
@@ -6299,6 +8000,25 @@ akhirnya ke rekomendasi.</p>
 </div>
 <div id="rumus-inti-10" class="section level2" number="14.2">
 <h2><span class="header-section-number">14.2</span> Rumus Inti</h2>
+<!-- BEGIN AI-INLINE:f3bec7205730 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 11: Model Poisson dan Negative
+Binomial untuk Data Cacah.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Model Poisson dan Negative Binomial untuk Data Cacah</strong>,
+lalu periksa setiap langkah secara manual, uji kasus batas, dan cocokkan
+dengan rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus
+atau pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p>$$</p>
 <p>Y_iPoisson(_i),Var(Y_i)=<em>i;Var</em>{NB}(Y_i)=_i+_i^2</p>
@@ -6366,6 +8086,30 @@ keputusan model secara akademik dan profesional.</p>
 <div id="studi-kasus-terapan-10" class="section level2" number="14.4">
 <h2><span class="header-section-number">14.4</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:befc316ce3dc -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 11: Model Poisson dan Negative
+Binomial untuk Data Cacah.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Perbandingan GLM/GLMM
+dengan GAM, boosting, dan model machine learning untuk respons
+nonnormal. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-card">
 <p><strong>Kasus:</strong> jumlah kecelakaan lalu lintas, jumlah klaim,
 kasus penyakit, cacat produksi, dan kunjungan layanan. Misalkan seorang
@@ -6405,6 +8149,29 @@ model yang tahu wilayah kompetensinya sendiri.</p>
 <div id="implementasi-awal-dengan-r-10" class="section level2" number="14.5">
 <h2><span class="header-section-number">14.5</span> Implementasi Awal
 dengan R</h2>
+<!-- BEGIN AI-INLINE:76258563ef36 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi Awal dengan R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 11: Model Poisson dan Negative
+Binomial untuk Data Cacah.
+</p>
+<p>
+Agen dapat memasang kandidat model, menjalankan diagnostik,
+membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau
+konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+spesifikasi model, data leakage, konvergensi, residual, kalibrasi,
+ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut menunjukkan bentuk dasar analisis yang dapat
 dikembangkan sesuai konteks data. Kode sengaja dibuat ringkas agar
 mahasiswa melihat alur utamanya. Pada proyek nyata, setiap langkah harus
@@ -6444,6 +8211,29 @@ bicara, biasanya penting. 😄</p>
 <div id="diagnostik-dan-evaluasi-10" class="section level2" number="14.6">
 <h2><span class="header-section-number">14.6</span> Diagnostik dan
 Evaluasi</h2>
+<!-- BEGIN AI-INLINE:3597696c193c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Diagnostik dan Evaluasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 11: Model Poisson dan Negative
+Binomial untuk Data Cacah.
+</p>
+<p>
+Agen dapat memasang kandidat model, menjalankan diagnostik,
+membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau
+konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+spesifikasi model, data leakage, konvergensi, residual, kalibrasi,
+ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Evaluasi model pada bagian ini sebaiknya dilakukan melalui beberapa
 indikator. Pertama, nilai deviance residual membantu melihat observasi
 yang tidak dijelaskan dengan baik oleh model. Kedua, leverage dan ukuran
@@ -6509,6 +8299,65 @@ atau model pembanding diubah?</li>
 <div id="pertemuan-12-zero-inflated-hurdle-dan-model-respons-non-normal-lain" class="section level1" number="15">
 <h1><span class="header-section-number">15</span> Pertemuan 12:
 Zero-Inflated, Hurdle, dan Model Respons Non-Normal Lain</h1>
+<!-- BEGIN AI-INLINE:8322736859f4 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 12</span>
+<h3>
+Generative dan Agentic AI untuk Zero-Inflated, Hurdle, dan Model Respons
+Non-Normal Lain
+</h3>
+<p><strong>Arah RPS.</strong> Kalibrasi, deviance, overdispersion, zero
+inflation, regularisasi, uncertainty, dan interpretabilitas parameter
+serta prediksi.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Uji kecocokan model
+(goodness-of-fit); Analisis residual dan identifikasi outlier.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">SubCPMK3</span> <span class="badge">Fokus:
 situasi ketika data memiliki terlalu banyak nol atau variasi
 berlebih</span></p>
@@ -6523,6 +8372,26 @@ interpretasi yang tidak hanya mekanis tetapi juga substantif.</p>
 <div id="orientasi-konseptual-11" class="section level2" number="15.1">
 <h2><span class="header-section-number">15.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:e50a7b020528 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 12: Zero-Inflated, Hurdle, dan Model
+Respons Non-Normal Lain.
+</p>
+<p>
+Minta AI menjelaskan <strong>Zero-Inflated, Hurdle, dan Model Respons
+Non-Normal Lain</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian ini membahas situasi ketika data memiliki terlalu banyak nol
 atau variasi berlebih sebagai elemen penting dalam mata kuliah Model
 Linear Generalisasi. Dalam GLM, pertanyaan pertama bukan “pakai regresi
@@ -6561,6 +8430,26 @@ dan akhirnya ke rekomendasi.</p>
 </div>
 <div id="rumus-inti-11" class="section level2" number="15.2">
 <h2><span class="header-section-number">15.2</span> Rumus Inti</h2>
+<!-- BEGIN AI-INLINE:2a253efdfc7e -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 12: Zero-Inflated, Hurdle, dan Model
+Respons Non-Normal Lain.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Zero-Inflated, Hurdle, dan Model Respons Non-Normal
+Lain</strong>, lalu periksa setiap langkah secara manual, uji kasus
+batas, dan cocokkan dengan rujukan primer. AI tidak boleh menjadi
+satu-satunya sumber rumus atau pembuktian; kesetaraan simbolik wajib
+dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p>$$</p>
 <p>P(Y_i=0)=_i+(1-_i)f(0;_i),P(Y_i=y&gt;0)=(1-_i)f(y;_i)</p>
@@ -6629,6 +8518,30 @@ keputusan model secara akademik dan profesional.</p>
 <div id="studi-kasus-terapan-11" class="section level2" number="15.4">
 <h2><span class="header-section-number">15.4</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:0a2250d9f77c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 12: Zero-Inflated, Hurdle, dan Model
+Respons Non-Normal Lain.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Kalibrasi, deviance,
+overdispersion, zero inflation, regularisasi, uncertainty, dan
+interpretabilitas parameter serta prediksi. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-card">
 <p><strong>Kasus:</strong> jumlah klaim dengan banyak nasabah tanpa
 klaim, kunjungan dokter, jumlah publikasi, biaya kesehatan, dan durasi
@@ -6668,6 +8581,29 @@ model yang tahu wilayah kompetensinya sendiri.</p>
 <div id="implementasi-awal-dengan-r-11" class="section level2" number="15.5">
 <h2><span class="header-section-number">15.5</span> Implementasi Awal
 dengan R</h2>
+<!-- BEGIN AI-INLINE:750379d198ae -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi Awal dengan R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 12: Zero-Inflated, Hurdle, dan Model
+Respons Non-Normal Lain.
+</p>
+<p>
+Agen dapat memasang kandidat model, menjalankan diagnostik,
+membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau
+konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+spesifikasi model, data leakage, konvergensi, residual, kalibrasi,
+ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut menunjukkan bentuk dasar analisis yang dapat
 dikembangkan sesuai konteks data. Kode sengaja dibuat ringkas agar
 mahasiswa melihat alur utamanya. Pada proyek nyata, setiap langkah harus
@@ -6706,6 +8642,29 @@ bicara, biasanya penting. 😄</p>
 <div id="diagnostik-dan-evaluasi-11" class="section level2" number="15.6">
 <h2><span class="header-section-number">15.6</span> Diagnostik dan
 Evaluasi</h2>
+<!-- BEGIN AI-INLINE:d669034059a3 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Diagnostik dan Evaluasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 12: Zero-Inflated, Hurdle, dan Model
+Respons Non-Normal Lain.
+</p>
+<p>
+Agen dapat memasang kandidat model, menjalankan diagnostik,
+membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau
+konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+spesifikasi model, data leakage, konvergensi, residual, kalibrasi,
+ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Evaluasi model pada bagian ini sebaiknya dilakukan melalui beberapa
 indikator. Pertama, nilai deviance residual membantu melihat observasi
 yang tidak dijelaskan dengan baik oleh model. Kedua, leverage dan ukuran
@@ -6771,6 +8730,66 @@ atau model pembanding diubah?</li>
 <div id="pertemuan-13-evaluasi-diagnostik-dan-seleksi-model-glm" class="section level1" number="16">
 <h1><span class="header-section-number">16</span> Pertemuan 13:
 Evaluasi, Diagnostik, dan Seleksi Model GLM</h1>
+<!-- BEGIN AI-INLINE:4838b8f20cd9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 13</span>
+<h3>
+Generative dan Agentic AI untuk Evaluasi, Diagnostik, dan Seleksi Model
+GLM
+</h3>
+<p><strong>Arah RPS.</strong> Proyek data nyata yang mengharuskan
+baseline statistika, model alternatif AI, validasi, dan justifikasi
+kompleksitas model.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK4 melalui fokus: Model selection dan informasi
+criteria (AIC, BIC); Implementasi GLM dengan Perangkat Lunak Statistika;
+Penerapan GLM dengan R atau Python.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">SubCPMK4</span> <span class="badge">Fokus:
 goodness-of-fit, residual, leverage, influential observation, dan
 kriteria informasi</span></p>
@@ -6786,6 +8805,25 @@ tetapi juga substantif.</p>
 <div id="orientasi-konseptual-12" class="section level2" number="16.1">
 <h2><span class="header-section-number">16.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:49be3f9324af -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 13: Evaluasi, Diagnostik, dan
+Seleksi Model GLM.
+</p>
+<p>
+Minta AI menjelaskan <strong>Evaluasi, Diagnostik, dan Seleksi Model
+GLM</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian ini membahas goodness-of-fit, residual, leverage, influential
 observation, dan kriteria informasi sebagai elemen penting dalam mata
 kuliah Model Linear Generalisasi. Dalam GLM, pertanyaan pertama bukan
@@ -6823,6 +8861,25 @@ akhirnya ke rekomendasi.</p>
 </div>
 <div id="rumus-inti-12" class="section level2" number="16.2">
 <h2><span class="header-section-number">16.2</span> Rumus Inti</h2>
+<!-- BEGIN AI-INLINE:a47d5a70b767 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 13: Evaluasi, Diagnostik, dan
+Seleksi Model GLM.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Evaluasi, Diagnostik, dan Seleksi Model GLM</strong>, lalu
+periksa setiap langkah secara manual, uji kasus batas, dan cocokkan
+dengan rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus
+atau pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p>$$</p>
 <p>AIC=-2()+2k,BIC=-2()+k(n)</p>
@@ -6890,6 +8947,30 @@ keputusan model secara akademik dan profesional.</p>
 <div id="studi-kasus-terapan-12" class="section level2" number="16.4">
 <h2><span class="header-section-number">16.4</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:3d264b74f96e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 13: Evaluasi, Diagnostik, dan
+Seleksi Model GLM.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Proyek data nyata yang
+mengharuskan baseline statistika, model alternatif AI, validasi, dan
+justifikasi kompleksitas model. Generative AI dapat menghasilkan
+beberapa skenario pemangku kepentingan dan draf narasi yang kemudian
+diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel,
+grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-card">
 <p><strong>Kasus:</strong> membandingkan model logistik, Poisson,
 negative binomial, dan model ordinal untuk laporan riset. Misalkan
@@ -6929,6 +9010,29 @@ model yang tahu wilayah kompetensinya sendiri.</p>
 <div id="implementasi-awal-dengan-r-12" class="section level2" number="16.5">
 <h2><span class="header-section-number">16.5</span> Implementasi Awal
 dengan R</h2>
+<!-- BEGIN AI-INLINE:13d90d98fa06 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi Awal dengan R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 13: Evaluasi, Diagnostik, dan
+Seleksi Model GLM.
+</p>
+<p>
+Agen dapat memasang kandidat model, menjalankan diagnostik,
+membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau
+konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+spesifikasi model, data leakage, konvergensi, residual, kalibrasi,
+ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut menunjukkan bentuk dasar analisis yang dapat
 dikembangkan sesuai konteks data. Kode sengaja dibuat ringkas agar
 mahasiswa melihat alur utamanya. Pada proyek nyata, setiap langkah harus
@@ -6967,6 +9071,29 @@ bicara, biasanya penting. 😄</p>
 <div id="diagnostik-dan-evaluasi-12" class="section level2" number="16.6">
 <h2><span class="header-section-number">16.6</span> Diagnostik dan
 Evaluasi</h2>
+<!-- BEGIN AI-INLINE:a09ed8c8e053 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Diagnostik dan Evaluasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 13: Evaluasi, Diagnostik, dan
+Seleksi Model GLM.
+</p>
+<p>
+Agen dapat memasang kandidat model, menjalankan diagnostik,
+membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau
+konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+spesifikasi model, data leakage, konvergensi, residual, kalibrasi,
+ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Evaluasi model pada bagian ini sebaiknya dilakukan melalui beberapa
 indikator. Pertama, nilai deviance residual membantu melihat observasi
 yang tidak dijelaskan dengan baik oleh model. Kedua, leverage dan ukuran
@@ -7033,6 +9160,64 @@ atau model pembanding diubah?</li>
 <div id="pertemuan-14-workflow-implementasi-glm-dengan-r-dan-python" class="section level1" number="17">
 <h1><span class="header-section-number">17</span> Pertemuan 14: Workflow
 Implementasi GLM dengan R dan Python</h1>
+<!-- BEGIN AI-INLINE:c5d981e66382 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 14</span>
+<h3>
+Generative dan Agentic AI untuk Workflow Implementasi GLM dengan R dan
+Python
+</h3>
+<p><strong>Arah RPS.</strong> Perbandingan GLM/GLMM dengan GAM,
+boosting, dan model machine learning untuk respons nonnormal.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK4 melalui fokus: Interpretasi output perangkat lunak;
+Pelaporan hasil analisis; Pengembangan Solusi Inovatif dengan GLM.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">SubCPMK4</span> <span class="badge">Fokus:
 reproducible research dari data mentah hingga laporan ilmiah</span></p>
 <div class="learning-card">
@@ -7046,6 +9231,25 @@ yang tidak hanya mekanis tetapi juga substantif.</p>
 <div id="orientasi-konseptual-13" class="section level2" number="17.1">
 <h2><span class="header-section-number">17.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:bcd78bec182d -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Workflow Implementasi GLM dengan
+R dan Python.
+</p>
+<p>
+Minta AI menjelaskan <strong>Workflow Implementasi GLM dengan R dan
+Python</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian ini membahas reproducible research dari data mentah hingga
 laporan ilmiah sebagai elemen penting dalam mata kuliah Model Linear
 Generalisasi. Dalam GLM, pertanyaan pertama bukan “pakai regresi apa?”
@@ -7082,6 +9286,25 @@ diagnostik, ke interpretasi, dan akhirnya ke rekomendasi.</p>
 </div>
 <div id="rumus-inti-13" class="section level2" number="17.2">
 <h2><span class="header-section-number">17.2</span> Rumus Inti</h2>
+<!-- BEGIN AI-INLINE:b6860943d004 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Workflow Implementasi GLM dengan
+R dan Python.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Workflow Implementasi GLM dengan R dan Python</strong>, lalu
+periksa setiap langkah secara manual, uji kasus batas, dan cocokkan
+dengan rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus
+atau pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p>$$</p>
 <p>$$</p>
@@ -7148,6 +9371,30 @@ keputusan model secara akademik dan profesional.</p>
 <div id="studi-kasus-terapan-13" class="section level2" number="17.4">
 <h2><span class="header-section-number">17.4</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:887de357a4c1 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Workflow Implementasi GLM dengan
+R dan Python.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Perbandingan GLM/GLMM
+dengan GAM, boosting, dan model machine learning untuk respons
+nonnormal. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-card">
 <p><strong>Kasus:</strong> template analisis untuk proyek mahasiswa S2
 Statistika Terapan. Misalkan seorang peneliti ingin membangun model yang
@@ -7186,6 +9433,29 @@ model yang tahu wilayah kompetensinya sendiri.</p>
 <div id="implementasi-awal-dengan-r-13" class="section level2" number="17.5">
 <h2><span class="header-section-number">17.5</span> Implementasi Awal
 dengan R</h2>
+<!-- BEGIN AI-INLINE:3179f03879b4 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi Awal dengan R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Workflow Implementasi GLM dengan
+R dan Python.
+</p>
+<p>
+Agen dapat memasang kandidat model, menjalankan diagnostik,
+membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau
+konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+spesifikasi model, data leakage, konvergensi, residual, kalibrasi,
+ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut menunjukkan bentuk dasar analisis yang dapat
 dikembangkan sesuai konteks data. Kode sengaja dibuat ringkas agar
 mahasiswa melihat alur utamanya. Pada proyek nyata, setiap langkah harus
@@ -7224,6 +9494,29 @@ bicara, biasanya penting. 😄</p>
 <div id="diagnostik-dan-evaluasi-13" class="section level2" number="17.6">
 <h2><span class="header-section-number">17.6</span> Diagnostik dan
 Evaluasi</h2>
+<!-- BEGIN AI-INLINE:b2dcc9e2be5f -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Diagnostik dan Evaluasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Workflow Implementasi GLM dengan
+R dan Python.
+</p>
+<p>
+Agen dapat memasang kandidat model, menjalankan diagnostik,
+membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau
+konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+spesifikasi model, data leakage, konvergensi, residual, kalibrasi,
+ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Evaluasi model pada bagian ini sebaiknya dilakukan melalui beberapa
 indikator. Pertama, nilai deviance residual membantu melihat observasi
 yang tidak dijelaskan dengan baik oleh model. Kedua, leverage dan ukuran
@@ -7289,6 +9582,66 @@ atau model pembanding diubah?</li>
 <div id="pertemuan-15-pengembangan-solusi-inovatif-berbasis-glm" class="section level1" number="18">
 <h1><span class="header-section-number">18</span> Pertemuan 15:
 Pengembangan Solusi Inovatif Berbasis GLM</h1>
+<!-- BEGIN AI-INLINE:90d6f586c544 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 15</span>
+<h3>
+Generative dan Agentic AI untuk Pengembangan Solusi Inovatif Berbasis
+GLM
+</h3>
+<p><strong>Arah RPS.</strong> Kalibrasi, deviance, overdispersion, zero
+inflation, regularisasi, uncertainty, dan interpretabilitas parameter
+serta prediksi.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK4 melalui fokus: Integrasi GLM dalam alur kerja riset
+lintas disiplin; Presentasi dan komunikasi ilmiah hasil GLM; Studi
+literatur dan praktik baik terkini dalam pemodelan GLM.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">SubCPMK4</span> <span class="badge">Fokus:
 menerjemahkan masalah riil menjadi solusi statistik yang dapat
 dijelaskan</span></p>
@@ -7304,6 +9657,25 @@ substantif.</p>
 <div id="orientasi-konseptual-14" class="section level2" number="18.1">
 <h2><span class="header-section-number">18.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:64a89e673316 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 15: Pengembangan Solusi Inovatif
+Berbasis GLM.
+</p>
+<p>
+Minta AI menjelaskan <strong>Pengembangan Solusi Inovatif Berbasis
+GLM</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian ini membahas menerjemahkan masalah riil menjadi solusi
 statistik yang dapat dijelaskan sebagai elemen penting dalam mata kuliah
 Model Linear Generalisasi. Dalam GLM, pertanyaan pertama bukan “pakai
@@ -7342,6 +9714,25 @@ diagnostik, ke interpretasi, dan akhirnya ke rekomendasi.</p>
 </div>
 <div id="rumus-inti-14" class="section level2" number="18.2">
 <h2><span class="header-section-number">18.2</span> Rumus Inti</h2>
+<!-- BEGIN AI-INLINE:14fced87b6b9 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 15: Pengembangan Solusi Inovatif
+Berbasis GLM.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Pengembangan Solusi Inovatif Berbasis GLM</strong>, lalu periksa
+setiap langkah secara manual, uji kasus batas, dan cocokkan dengan
+rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p>$$</p>
 <p>(x)=g<sup>{-1}(x</sup>T)</p>
@@ -7409,6 +9800,30 @@ keputusan model secara akademik dan profesional.</p>
 <div id="studi-kasus-terapan-14" class="section level2" number="18.4">
 <h2><span class="header-section-number">18.4</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:4f9ae127b7b9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 15: Pengembangan Solusi Inovatif
+Berbasis GLM.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Kalibrasi, deviance,
+overdispersion, zero inflation, regularisasi, uncertainty, dan
+interpretabilitas parameter serta prediksi. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-card">
 <p><strong>Kasus:</strong> dashboard risiko kesehatan, model klaim
 aktuaria, segmentasi layanan, dan sistem peringatan dini kejadian cacah.
@@ -7448,6 +9863,29 @@ model yang tahu wilayah kompetensinya sendiri.</p>
 <div id="implementasi-awal-dengan-r-14" class="section level2" number="18.5">
 <h2><span class="header-section-number">18.5</span> Implementasi Awal
 dengan R</h2>
+<!-- BEGIN AI-INLINE:4bc376fd7aa0 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi Awal dengan R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 15: Pengembangan Solusi Inovatif
+Berbasis GLM.
+</p>
+<p>
+Agen dapat memasang kandidat model, menjalankan diagnostik,
+membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau
+konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+spesifikasi model, data leakage, konvergensi, residual, kalibrasi,
+ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut menunjukkan bentuk dasar analisis yang dapat
 dikembangkan sesuai konteks data. Kode sengaja dibuat ringkas agar
 mahasiswa melihat alur utamanya. Pada proyek nyata, setiap langkah harus
@@ -7486,6 +9924,29 @@ bicara, biasanya penting. 😄</p>
 <div id="diagnostik-dan-evaluasi-14" class="section level2" number="18.6">
 <h2><span class="header-section-number">18.6</span> Diagnostik dan
 Evaluasi</h2>
+<!-- BEGIN AI-INLINE:d4106de353f0 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Diagnostik dan Evaluasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 15: Pengembangan Solusi Inovatif
+Berbasis GLM.
+</p>
+<p>
+Agen dapat memasang kandidat model, menjalankan diagnostik,
+membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau
+konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+spesifikasi model, data leakage, konvergensi, residual, kalibrasi,
+ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Evaluasi model pada bagian ini sebaiknya dilakukan melalui beberapa
 indikator. Pertama, nilai deviance residual membantu melihat observasi
 yang tidak dijelaskan dengan baik oleh model. Kedua, leverage dan ukuran
@@ -7552,6 +10013,65 @@ atau model pembanding diubah?</li>
 <div id="pertemuan-16-uas-komunikasi-ilmiah-dan-presentasi-proyek-akhir-glm" class="section level1" number="19">
 <h1><span class="header-section-number">19</span> Pertemuan 16: UAS:
 Komunikasi Ilmiah dan Presentasi Proyek Akhir GLM</h1>
+<!-- BEGIN AI-INLINE:84ad168b87ff -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 16</span>
+<h3>
+Generative dan Agentic AI untuk UAS: Komunikasi Ilmiah dan Presentasi
+Proyek Akhir GLM
+</h3>
+<p><strong>Arah RPS.</strong> Audit akhir prompt, sumber, kode, hasil,
+ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila
+digunakan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek
+akhir.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">UAS</span> <span class="badge">Fokus: penyusunan
 narasi ilmiah, visualisasi hasil, argumentasi, dan
 rekomendasi</span></p>
@@ -7566,6 +10086,26 @@ interpretasi yang tidak hanya mekanis tetapi juga substantif.</p>
 <div id="orientasi-konseptual-15" class="section level2" number="19.1">
 <h2><span class="header-section-number">19.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:9f319db2424b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: UAS: Komunikasi Ilmiah dan
+Presentasi Proyek Akhir GLM.
+</p>
+<p>
+Minta AI menjelaskan <strong>UAS: Komunikasi Ilmiah dan Presentasi
+Proyek Akhir GLM</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian ini membahas penyusunan narasi ilmiah, visualisasi hasil,
 argumentasi, dan rekomendasi sebagai elemen penting dalam mata kuliah
 Model Linear Generalisasi. Dalam GLM, pertanyaan pertama bukan “pakai
@@ -7601,6 +10141,25 @@ model, ke diagnostik, ke interpretasi, dan akhirnya ke rekomendasi.</p>
 </div>
 <div id="rumus-inti-15" class="section level2" number="19.2">
 <h2><span class="header-section-number">19.2</span> Rumus Inti</h2>
+<!-- BEGIN AI-INLINE:538cd5d822f6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: UAS: Komunikasi Ilmiah dan
+Presentasi Proyek Akhir GLM.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>UAS: Komunikasi Ilmiah dan Presentasi Proyek Akhir GLM</strong>,
+lalu periksa setiap langkah secara manual, uji kasus batas, dan cocokkan
+dengan rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus
+atau pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p>$$</p>
 <p>=+++</p>
@@ -7668,6 +10227,30 @@ keputusan model secara akademik dan profesional.</p>
 <div id="studi-kasus-terapan-15" class="section level2" number="19.4">
 <h2><span class="header-section-number">19.4</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:c9b07097fcc1 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: UAS: Komunikasi Ilmiah dan
+Presentasi Proyek Akhir GLM.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Audit akhir prompt,
+sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi,
+serta log agen bila digunakan. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-card">
 <p><strong>Kasus:</strong> presentasi riset akhir mahasiswa dengan
 laporan, kode, visualisasi, dan refleksi dampak. Misalkan seorang
@@ -7707,6 +10290,28 @@ model yang tahu wilayah kompetensinya sendiri.</p>
 <div id="implementasi-awal-dengan-r-15" class="section level2" number="19.5">
 <h2><span class="header-section-number">19.5</span> Implementasi Awal
 dengan R</h2>
+<!-- BEGIN AI-INLINE:26112a2701f4 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi Awal dengan R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: UAS: Komunikasi Ilmiah dan
+Presentasi Proyek Akhir GLM.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut menunjukkan bentuk dasar analisis yang dapat
 dikembangkan sesuai konteks data. Kode sengaja dibuat ringkas agar
 mahasiswa melihat alur utamanya. Pada proyek nyata, setiap langkah harus
@@ -7745,6 +10350,28 @@ bicara, biasanya penting. 😄</p>
 <div id="diagnostik-dan-evaluasi-15" class="section level2" number="19.6">
 <h2><span class="header-section-number">19.6</span> Diagnostik dan
 Evaluasi</h2>
+<!-- BEGIN AI-INLINE:e517dbc35e0e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Diagnostik dan Evaluasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: UAS: Komunikasi Ilmiah dan
+Presentasi Proyek Akhir GLM.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Evaluasi model pada bagian ini sebaiknya dilakukan melalui beberapa
 indikator. Pertama, nilai deviance residual membantu melihat observasi
 yang tidak dijelaskan dengan baik oleh model. Kedua, leverage dan ukuran
@@ -7811,6 +10438,63 @@ atau model pembanding diubah?</li>
 <div id="integrasi-materi-dengan-penilaian-rps" class="section level1" number="20">
 <h1><span class="header-section-number">20</span> Integrasi Materi
 dengan Penilaian RPS</h1>
+<!-- BEGIN AI-INLINE:425f5e4b48be -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 4</span>
+<h3>
+Generative dan Agentic AI untuk Integrasi Materi dengan Penilaian RPS
+</h3>
+<p><strong>Arah RPS.</strong> Perbandingan GLM/GLMM dengan GAM,
+boosting, dan model machine learning untuk respons nonnormal.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Keluarga distribusi eksponensial;
+Fungsi link pada GLM (logit, probit, log, dll).</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Penilaian dalam RPS mencakup partisipasi, proyek, tugas, kuis, UTS,
 dan UAS. Struktur penilaian tersebut mendorong mahasiswa untuk belajar
 secara bertahap. Tugas awal menekankan kemampuan membaca struktur data.
@@ -7821,6 +10505,30 @@ kode.</p>
 <div id="rubrik-praktis-untuk-laporan-glm" class="section level2" number="20.1">
 <h2><span class="header-section-number">20.1</span> Rubrik Praktis untuk
 Laporan GLM</h2>
+<!-- BEGIN AI-INLINE:4b2b189e9a8a -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Rubrik Praktis untuk Laporan GLM
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 4: Integrasi Materi dengan Penilaian
+RPS.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Perbandingan GLM/GLMM
+dengan GAM, boosting, dan model machine learning untuk respons
+nonnormal. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <table>
 <colgroup>
 <col width="33%" />
@@ -7878,6 +10586,25 @@ diperiksa</td>
 <div id="template-narasi-hasil" class="section level2" number="20.2">
 <h2><span class="header-section-number">20.2</span> Template Narasi
 Hasil</h2>
+<!-- BEGIN AI-INLINE:3de3c61df468 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Template Narasi Hasil
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 4: Integrasi Materi dengan Penilaian
+RPS.
+</p>
+<p>
+Minta AI menjelaskan <strong>Integrasi Materi dengan Penilaian
+RPS</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Contoh narasi hasil yang baik tidak hanya menyebutkan nilai
 p. Misalnya: “Model logistik menunjukkan bahwa setelah mengendalikan
 usia dan jenis kelamin, peningkatan satu unit paparan berasosiasi dengan
@@ -7900,6 +10627,65 @@ industri, dan bisnis.</p>
 <div id="contoh-mini-project-lengkap" class="section level1" number="21">
 <h1><span class="header-section-number">21</span> Contoh Mini Project
 Lengkap</h1>
+<!-- BEGIN AI-INLINE:d9009e6106a0 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 5</span>
+<h3>
+Generative dan Agentic AI untuk Contoh Mini Project Lengkap
+</h3>
+<p><strong>Arah RPS.</strong> Kalibrasi, deviance, overdispersion, zero
+inflation, regularisasi, uncertainty, dan interpretabilitas parameter
+serta prediksi.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK2 melalui fokus: Pemilihan fungsi link yang sesuai;
+Analisis Tabel Kontingensi; Teori dan aplikasi tabel kontingensi dua dan
+tiga arah.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="latar-belakang" class="section level2" number="21.1">
 <h2><span class="header-section-number">21.1</span> Latar Belakang</h2>
 <p>Misalkan mahasiswa ingin menganalisis jumlah kunjungan pasien ke
@@ -8622,6 +11408,28 @@ yang lebih bertanggung jawab.</p>
 <div id="latihan-mandiri-9-diagnostik-glm-pada-masalah-validasi-laporan-proyek" class="section level2" number="25.9">
 <h2><span class="header-section-number">25.9</span> Latihan Mandiri 9:
 Diagnostik Glm pada Masalah Validasi Laporan Proyek</h2>
+<!-- BEGIN AI-INLINE:eee71fa0e66b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Latihan Mandiri 9: Diagnostik Glm pada Masalah Validasi
+Laporan Proyek
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Contoh Mini Project Lengkap.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p><strong>Deskripsi masalah.</strong> Bayangkan sebuah dataset terapan
 yang digunakan untuk menganalisis validasi laporan proyek. Respons dalam
 dataset tersebut perlu dipetakan ke model yang sesuai, bukan
@@ -9250,6 +12058,28 @@ yang lebih bertanggung jawab.</p>
 <div id="latihan-mandiri-18-diagnostik-glm-pada-masalah-validasi-laporan-proyek" class="section level2" number="25.18">
 <h2><span class="header-section-number">25.18</span> Latihan Mandiri 18:
 Diagnostik Glm pada Masalah Validasi Laporan Proyek</h2>
+<!-- BEGIN AI-INLINE:28bf306c4afb -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Latihan Mandiri 18: Diagnostik Glm pada Masalah Validasi
+Laporan Proyek
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Contoh Mini Project Lengkap.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p><strong>Deskripsi masalah.</strong> Bayangkan sebuah dataset terapan
 yang digunakan untuk menganalisis validasi laporan proyek. Respons dalam
 dataset tersebut perlu dipetakan ke model yang sesuai, bukan
@@ -10040,6 +12870,26 @@ Diagnostik Cepat</h1>
 <div id="panduan-diagnostik-cepat---catatan-1" class="section level2" number="29.1">
 <h2><span class="header-section-number">29.1</span> Panduan Diagnostik
 Cepat - Catatan 1</h2>
+<!-- BEGIN AI-INLINE:66525944a9a0 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Panduan Diagnostik Cepat - Catatan 1
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Contoh Mini Project Lengkap.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam konteks diagnostik model, mahasiswa perlu memperlakukan
 residual deviance, Pearson residual, leverage, Cook distance,
 overdispersion, dan validasi sebagai objek analisis yang memiliki
@@ -10091,6 +12941,26 @@ dipertanggungjawabkan.</p>
 <div id="panduan-diagnostik-cepat---catatan-2" class="section level2" number="29.2">
 <h2><span class="header-section-number">29.2</span> Panduan Diagnostik
 Cepat - Catatan 2</h2>
+<!-- BEGIN AI-INLINE:d7ffdff8501a -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Panduan Diagnostik Cepat - Catatan 2
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Contoh Mini Project Lengkap.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam konteks diagnostik model, mahasiswa perlu memperlakukan
 residual deviance, Pearson residual, leverage, Cook distance,
 overdispersion, dan validasi sebagai objek analisis yang memiliki
@@ -10142,6 +13012,26 @@ dipertanggungjawabkan.</p>
 <div id="panduan-diagnostik-cepat---catatan-3" class="section level2" number="29.3">
 <h2><span class="header-section-number">29.3</span> Panduan Diagnostik
 Cepat - Catatan 3</h2>
+<!-- BEGIN AI-INLINE:9069e8efd2ad -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Panduan Diagnostik Cepat - Catatan 3
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Contoh Mini Project Lengkap.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam konteks diagnostik model, mahasiswa perlu memperlakukan
 residual deviance, Pearson residual, leverage, Cook distance,
 overdispersion, dan validasi sebagai objek analisis yang memiliki
@@ -10193,6 +13083,26 @@ dipertanggungjawabkan.</p>
 <div id="panduan-diagnostik-cepat---catatan-4" class="section level2" number="29.4">
 <h2><span class="header-section-number">29.4</span> Panduan Diagnostik
 Cepat - Catatan 4</h2>
+<!-- BEGIN AI-INLINE:44064608dff8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Panduan Diagnostik Cepat - Catatan 4
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Contoh Mini Project Lengkap.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam konteks diagnostik model, mahasiswa perlu memperlakukan
 residual deviance, Pearson residual, leverage, Cook distance,
 overdispersion, dan validasi sebagai objek analisis yang memiliki
@@ -10244,6 +13154,26 @@ dipertanggungjawabkan.</p>
 <div id="panduan-diagnostik-cepat---catatan-5" class="section level2" number="29.5">
 <h2><span class="header-section-number">29.5</span> Panduan Diagnostik
 Cepat - Catatan 5</h2>
+<!-- BEGIN AI-INLINE:27b9add16256 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Panduan Diagnostik Cepat - Catatan 5
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Contoh Mini Project Lengkap.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam konteks diagnostik model, mahasiswa perlu memperlakukan
 residual deviance, Pearson residual, leverage, Cook distance,
 overdispersion, dan validasi sebagai objek analisis yang memiliki
@@ -10295,6 +13225,26 @@ dipertanggungjawabkan.</p>
 <div id="panduan-diagnostik-cepat---catatan-6" class="section level2" number="29.6">
 <h2><span class="header-section-number">29.6</span> Panduan Diagnostik
 Cepat - Catatan 6</h2>
+<!-- BEGIN AI-INLINE:a13e1cdbb6bf -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Panduan Diagnostik Cepat - Catatan 6
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Contoh Mini Project Lengkap.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam konteks diagnostik model, mahasiswa perlu memperlakukan
 residual deviance, Pearson residual, leverage, Cook distance,
 overdispersion, dan validasi sebagai objek analisis yang memiliki
@@ -10346,6 +13296,26 @@ dipertanggungjawabkan.</p>
 <div id="panduan-diagnostik-cepat---catatan-7" class="section level2" number="29.7">
 <h2><span class="header-section-number">29.7</span> Panduan Diagnostik
 Cepat - Catatan 7</h2>
+<!-- BEGIN AI-INLINE:64c4467e4c4e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Panduan Diagnostik Cepat - Catatan 7
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Contoh Mini Project Lengkap.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam konteks diagnostik model, mahasiswa perlu memperlakukan
 residual deviance, Pearson residual, leverage, Cook distance,
 overdispersion, dan validasi sebagai objek analisis yang memiliki
@@ -10401,6 +13371,29 @@ Proyek Mahasiswa</h1>
 <div id="bank-ide-proyek-mahasiswa---catatan-1" class="section level2" number="30.1">
 <h2><span class="header-section-number">30.1</span> Bank Ide Proyek
 Mahasiswa - Catatan 1</h2>
+<!-- BEGIN AI-INLINE:acd06e6cb1c3 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Bank Ide Proyek Mahasiswa - Catatan 1
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Contoh Mini Project Lengkap.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Kalibrasi, deviance,
+overdispersion, zero inflation, regularisasi, uncertainty, dan
+interpretabilitas parameter serta prediksi. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam konteks pengembangan proyek, mahasiswa perlu memperlakukan
 kesehatan, aktuaria, sosial, industri, bisnis, pendidikan, dan sains
 data sebagai objek analisis yang memiliki struktur data berbeda.
@@ -10451,6 +13444,29 @@ dipertanggungjawabkan.</p>
 <div id="bank-ide-proyek-mahasiswa---catatan-2" class="section level2" number="30.2">
 <h2><span class="header-section-number">30.2</span> Bank Ide Proyek
 Mahasiswa - Catatan 2</h2>
+<!-- BEGIN AI-INLINE:f3fcda735426 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Bank Ide Proyek Mahasiswa - Catatan 2
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Contoh Mini Project Lengkap.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Kalibrasi, deviance,
+overdispersion, zero inflation, regularisasi, uncertainty, dan
+interpretabilitas parameter serta prediksi. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam konteks pengembangan proyek, mahasiswa perlu memperlakukan
 kesehatan, aktuaria, sosial, industri, bisnis, pendidikan, dan sains
 data sebagai objek analisis yang memiliki struktur data berbeda.
@@ -10501,6 +13517,29 @@ dipertanggungjawabkan.</p>
 <div id="bank-ide-proyek-mahasiswa---catatan-3" class="section level2" number="30.3">
 <h2><span class="header-section-number">30.3</span> Bank Ide Proyek
 Mahasiswa - Catatan 3</h2>
+<!-- BEGIN AI-INLINE:32fceb318111 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Bank Ide Proyek Mahasiswa - Catatan 3
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Contoh Mini Project Lengkap.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Kalibrasi, deviance,
+overdispersion, zero inflation, regularisasi, uncertainty, dan
+interpretabilitas parameter serta prediksi. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam konteks pengembangan proyek, mahasiswa perlu memperlakukan
 kesehatan, aktuaria, sosial, industri, bisnis, pendidikan, dan sains
 data sebagai objek analisis yang memiliki struktur data berbeda.
@@ -10551,6 +13590,29 @@ dipertanggungjawabkan.</p>
 <div id="bank-ide-proyek-mahasiswa---catatan-4" class="section level2" number="30.4">
 <h2><span class="header-section-number">30.4</span> Bank Ide Proyek
 Mahasiswa - Catatan 4</h2>
+<!-- BEGIN AI-INLINE:3a1b773eab97 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Bank Ide Proyek Mahasiswa - Catatan 4
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Contoh Mini Project Lengkap.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Kalibrasi, deviance,
+overdispersion, zero inflation, regularisasi, uncertainty, dan
+interpretabilitas parameter serta prediksi. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam konteks pengembangan proyek, mahasiswa perlu memperlakukan
 kesehatan, aktuaria, sosial, industri, bisnis, pendidikan, dan sains
 data sebagai objek analisis yang memiliki struktur data berbeda.
@@ -10601,6 +13663,29 @@ dipertanggungjawabkan.</p>
 <div id="bank-ide-proyek-mahasiswa---catatan-5" class="section level2" number="30.5">
 <h2><span class="header-section-number">30.5</span> Bank Ide Proyek
 Mahasiswa - Catatan 5</h2>
+<!-- BEGIN AI-INLINE:bb8dfcd8d916 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Bank Ide Proyek Mahasiswa - Catatan 5
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Contoh Mini Project Lengkap.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Kalibrasi, deviance,
+overdispersion, zero inflation, regularisasi, uncertainty, dan
+interpretabilitas parameter serta prediksi. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam konteks pengembangan proyek, mahasiswa perlu memperlakukan
 kesehatan, aktuaria, sosial, industri, bisnis, pendidikan, dan sains
 data sebagai objek analisis yang memiliki struktur data berbeda.
@@ -10651,6 +13736,29 @@ dipertanggungjawabkan.</p>
 <div id="bank-ide-proyek-mahasiswa---catatan-6" class="section level2" number="30.6">
 <h2><span class="header-section-number">30.6</span> Bank Ide Proyek
 Mahasiswa - Catatan 6</h2>
+<!-- BEGIN AI-INLINE:03529cc24567 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Bank Ide Proyek Mahasiswa - Catatan 6
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Contoh Mini Project Lengkap.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Kalibrasi, deviance,
+overdispersion, zero inflation, regularisasi, uncertainty, dan
+interpretabilitas parameter serta prediksi. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam konteks pengembangan proyek, mahasiswa perlu memperlakukan
 kesehatan, aktuaria, sosial, industri, bisnis, pendidikan, dan sains
 data sebagai objek analisis yang memiliki struktur data berbeda.
@@ -10701,6 +13809,29 @@ dipertanggungjawabkan.</p>
 <div id="bank-ide-proyek-mahasiswa---catatan-7" class="section level2" number="30.7">
 <h2><span class="header-section-number">30.7</span> Bank Ide Proyek
 Mahasiswa - Catatan 7</h2>
+<!-- BEGIN AI-INLINE:303636ffac95 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Bank Ide Proyek Mahasiswa - Catatan 7
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Contoh Mini Project Lengkap.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Kalibrasi, deviance,
+overdispersion, zero inflation, regularisasi, uncertainty, dan
+interpretabilitas parameter serta prediksi. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam konteks pengembangan proyek, mahasiswa perlu memperlakukan
 kesehatan, aktuaria, sosial, industri, bisnis, pendidikan, dan sains
 data sebagai objek analisis yang memiliki struktur data berbeda.
@@ -10747,6 +13878,74 @@ temuan tidak hanya artefak dari satu spesifikasi. Dalam statistik
 terapan, kesimpulan yang stabil dan dapat dijelaskan sering lebih
 bernilai daripada model yang tampak paling canggih tetapi sulit
 dipertanggungjawabkan.</p>
+<!-- BEGIN ADOPSI AI RPS 2026 -->
+</div>
+<div id="penyelarasan-materi-dengan-rps-revisi-ai-2026" class="section level2" number="30.8">
+<h2><span class="header-section-number">30.8</span> Penyelarasan Materi
+dengan RPS Revisi AI 2026</h2>
+<p>Materi <strong>Model Linear Generalisasi</strong> ini telah
+diselaraskan dengan RPS Revisi AI 2026. Rumusan CPL program studi tetap
+dan tidak diubah. Generative AI maupun agentic AI hanya digunakan
+sebagai alat bantu untuk mempercepat ketercapaian CPMK dan Sub-CPMK;
+penalaran statistika, keputusan metodologis, dan tanggung jawab akademik
+tetap berada pada mahasiswa.</p>
+<div id="integrasi-ai-kontekstual" class="section level3" number="30.8.1">
+<h3><span class="header-section-number">30.8.1</span> Integrasi AI
+kontekstual</h3>
+<ul>
+<li>Perbandingan GLM/GLMM dengan GAM, boosting, dan model machine
+learning untuk respons nonnormal.</li>
+<li>Kalibrasi, deviance, overdispersion, zero inflation, regularisasi,
+uncertainty, dan interpretabilitas parameter serta prediksi.</li>
+<li>Proyek data nyata yang mengharuskan baseline statistika, model
+alternatif AI, validasi, dan justifikasi kompleksitas model.</li>
+</ul>
+</div>
+<div id="protokol-penggunaan-ai" class="section level3" number="30.8.2">
+<h3><span class="header-section-number">30.8.2</span> Protokol
+penggunaan AI</h3>
+<ol style="list-style-type: decimal">
+<li>Nyatakan alat, tujuan penggunaan, dan bagian pekerjaan yang dibantu
+AI.</li>
+<li>Simpan prompt log ringkas, sumber, versi kode/notebook, dan
+perubahan yang dilakukan.</li>
+<li>Verifikasi keluaran terhadap asumsi metode, sumber primer, hasil
+numerik, diagnostik, ketidakpastian, robustness, bias/fairness, privasi,
+dan konteks.</li>
+<li>Jangan memasukkan data pribadi, rahasia, soal asesmen tertutup, atau
+kredensial ke layanan AI yang tidak disetujui.</li>
+<li>Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil
+secara mandiri.</li>
+</ol>
+</div>
+<div id="bukti-asesmen" class="section level3" number="30.8.3">
+<h3><span class="header-section-number">30.8.3</span> Bukti asesmen</h3>
+<!-- BEGIN AI-INLINE:689eb2da9b7f -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Bukti asesmen
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Contoh Mini Project Lengkap.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
+<p>Penilaian berfokus pada ketepatan metode, validasi dan
+ketidakpastian, reproducibility, interpretasi, komunikasi, serta
+transparansi penggunaan AI. Keluaran AI tanpa verifikasi bukan bukti
+ketercapaian CPMK.</p>
+<!-- END ADOPSI AI RPS 2026 -->
 <div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
 <div id="ref-agresti2013" class="csl-entry">
 Agresti, Alan. 2013. <em>Categorical Data Analysis</em>. 3rd ed.
@@ -10833,32 +14032,13 @@ Statistical Software</em> 27 (8): 1–25.
 </div>
 </div>
 </div>
+</div>
 
 
 
 </div>
 </div>
 
-
-
-
-
-
-<!-- BEGIN ADOPSI AI RPS 2026 -->
-<section id="penyelarasan-rps-ai-2026" style="margin:2rem 0;padding:1.5rem;border-left:8px solid #f2a51a;background:#eef5f8;border-radius:8px">
-  <h2>Penyelarasan Materi dengan RPS Revisi AI 2026</h2>
-  <p>Materi <strong>Model Linear Generalisasi</strong> ini mempertahankan rumusan CPL yang berlaku. AI ditempatkan sebagai alat bantu untuk mempercepat ketercapaian CPMK dan Sub-CPMK, bukan sebagai CPL baru atau pengganti penalaran statistika.</p>
-  <h3>Integrasi AI kontekstual</h3><ul><li>Perbandingan GLM/GLMM dengan GAM, boosting, dan model machine learning untuk respons nonnormal.</li><li>Kalibrasi, deviance, overdispersion, zero inflation, regularisasi, uncertainty, dan interpretabilitas parameter serta prediksi.</li><li>Proyek data nyata yang mengharuskan baseline statistika, model alternatif AI, validasi, dan justifikasi kompleksitas model.</li></ul>
-  <h3>Protokol penggunaan AI</h3>
-  <ol>
-    <li>Ungkapkan alat, tujuan, prompt log ringkas, sumber, dan perubahan yang dilakukan.</li>
-    <li>Verifikasi asumsi, kode, hasil numerik, diagnostik, ketidakpastian, robustness, bias/fairness, privasi, dan konteks.</li>
-    <li>Jangan mengunggah data pribadi, rahasia, asesmen tertutup, atau kredensial ke layanan yang tidak disetujui.</li>
-    <li>Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil secara mandiri.</li>
-  </ol>
-  <p><strong>Bukti asesmen:</strong> ketepatan metode, validasi, reproducibility, interpretasi, komunikasi, dan transparansi penggunaan AI. Keluaran AI tanpa verifikasi bukan bukti ketercapaian CPMK.</p>
-</section>
-<!-- END ADOPSI AI RPS 2026 -->
 </div>
 
 <script>
@@ -10923,6 +14103,16 @@ $(document).ready(function ()  {
     // tocify
     var toc = $("#TOC").tocify(options).data("toc-tocify");
 });
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
 </script>
 
 </body>

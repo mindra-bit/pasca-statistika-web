@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="id" xml:lang="id">
+<html>
 
 <head>
 
@@ -3106,270 +3106,107 @@ serta komunikasi hasil secara ilmiah.</p>
 </div>
 <!-- END UNPAD MATERIAL ENHANCEMENT -->
 <style>
-html, body {
-  background: linear-gradient(135deg, #f8fbfd 0%, #fffdf8 48%, #f3f6ee 100%) !important;
-  color: #172033 !important;
+:root{
+--brown-900:#3b2415; --brown-800:#5a351e; --brown-700:#7a4a2a; --brown-600:#9b6337;
+--brown-500:#b9824a; --brown-300:#e8c49a; --brown-200:#f3ddc3; --brown-100:#fff5ea;
+--cream:#fffaf3; --ink:#1d1714; --muted:#6f5a4b; --gold:#d9a441; --blue:#2b5f75;
 }
-body {
-  font-family: "Segoe UI", Arial, sans-serif !important;
-  font-size: 17px !important;
-  line-height: 1.72 !important;
-  margin: 0 !important;
-  overflow-x: hidden !important;
+html, body { scroll-behavior: smooth; }
+body{
+color: var(--ink);
+background: linear-gradient(135deg, #fffaf3 0%, #f9ead8 35%, #e6c59b 100%);
+font-size: 16px; line-height: 1.72;
 }
-.main-container {
-  max-width: 1180px !important;
-  margin-top: 18px !important;
-  margin-bottom: 38px !important;
-  padding: 34px 46px 54px !important;
-  background: rgba(255, 253, 248, 0.98) !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  box-shadow: 0 18px 42px rgba(23, 57, 92, 0.12) !important;
-  overflow-x: hidden !important;
+.main-container, .container-fluid.main-container{
+max-width: 1180px !important;
+background: rgba(255,250,243,.96);
+border-radius: 24px;
+padding: 34px 48px;
+box-shadow: 0 22px 55px rgba(77,45,21,.18);
+margin-top: 24px; margin-bottom: 50px;
 }
-h1, h2, h3, h4 {
-  color: #17395c !important;
-  font-weight: 800 !important;
-  letter-spacing: 0 !important;
-  line-height: 1.24 !important;
+h1, h2, h3, h4 { color: var(--brown-900); font-weight: 800; letter-spacing: -.01em; }
+h1.title{
+font-size: 2.65rem;
+padding: 34px 32px;
+border-radius: 28px;
+color: #fff;
+background: linear-gradient(115deg, #3b2415 0%, #7a4a2a 48%, #d9a441 100%);
+box-shadow: 0 18px 40px rgba(83,49,22,.28);
 }
-h1.title {
-  color: #17395c !important;
-  -webkit-text-fill-color: #17395c !important;
-  background: none !important;
-  border-bottom: 4px solid #f2a51a !important;
-  padding-bottom: 14px !important;
+h2{
+margin-top: 2.4rem; padding: 18px 20px;
+border-radius: 20px;
+color: #fff;
+background: linear-gradient(100deg, var(--brown-800), var(--brown-500));
 }
-h2 {
-  margin-top: 46px !important;
-  padding: 12px 18px !important;
-  border-left: 8px solid #f2a51a !important;
-  border-radius: 8px !important;
-  background: linear-gradient(90deg, #eef8f6, #fff8e7) !important;
+h3{ border-left: 7px solid var(--gold); padding-left: 13px; margin-top: 1.65rem; }
+a{ color:#7c3f00; font-weight: 700; }
+blockquote{
+border-left: 8px solid var(--brown-500);
+background: #fff0de;
+color:#2a1e16;
+padding: 16px 22px;
+border-radius: 16px;
 }
-.unpad-cover h2 {
-  color: #111827 !important;
-  -webkit-text-fill-color: #111827 !important;
-  background: #fffdf8 !important;
-  border-left: 8px solid #f2a51a !important;
-  border-bottom: 0 !important;
+.formula, .rumus{
+background: #f7e7d2;
+color:#111111;
+border: 1px solid #e3c09b;
+border-left: 8px solid #a36a2d;
+border-radius: 18px;
+padding: 18px 22px;
+margin: 18px 0;
+box-shadow: inset 0 1px 0 rgba(255,255,255,.7), 0 8px 20px rgba(91,54,25,.08);
 }
-h3 {
-  margin-top: 30px !important;
+.rumus strong, .formula strong { color:#24160d; }
+.card, .case-box, .activity, .warning, .output-box{
+border-radius: 20px; padding: 18px 22px; margin: 18px 0;
+box-shadow: 0 10px 22px rgba(71,42,18,.11);
 }
-a {
-  color: #0b5c86 !important;
+.card{ background: linear-gradient(135deg, #fff8ef, #f3dcc1); border:1px solid #ead0b0; }
+.case-box{ background: linear-gradient(135deg, #fff4e5, #f2d2a9); border:1px solid #e2b979; }
+.activity{ background: linear-gradient(135deg, #f8f1e8, #e6c89e); border:1px dashed #a36a2d; }
+.warning{ background: #fff1d6; border:1px solid #d89f4f; }
+.output-box{ background: #f8efe2; border:1px solid #d8b083; }
+.badge{
+display:inline-block; padding: 4px 10px; border-radius: 999px;
+background: #f0c987; color: #3b2415; font-size:.86em; font-weight:800;
 }
-img, svg {
-  max-width: 100% !important;
-  height: auto !important;
+.kpi-grid{ display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin:18px 0; }
+.kpi{ background:#fff7ec; border:1px solid #e6c89e; border-radius:18px; padding:16px; }
+.kpi b{ color:var(--brown-800); }
+table{ width:100%; border-collapse: collapse; margin: 18px 0; background:#fff9ef; }
+th{ background:#6f3f1f; color:#fff; }
+th, td{ border:1px solid #dcb98f; padding:9px 12px; vertical-align:top; }
+tr:nth-child(even){ background:#f8ead8; }
+pre, code, pre code{
+background-color:#f8e6d0 !important;
+color:#111111 !important;
+border-radius: 12px;
 }
-table {
-  width: 100% !important;
-  border-collapse: collapse !important;
-  margin: 18px 0 26px !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
+pre{ padding:16px 18px; border:1px solid #e1c09a; box-shadow: 0 6px 18px rgba(90,53,30,.08); }
+.eq-note{ font-size:.96em; color:#4e3728; }
+.svg-card{ background:#fff7eb; border:1px solid #e6c493; border-radius:22px; padding:18px; margin:20px 0; text-align:center; }
+.caption{ font-size:.92em; color:#6f5a4b; margin-top:8px; font-style:italic; }
+#TOC, .tocify{
+background: #fff6eb !important;
+border:1px solid #e3c09b !important;
+border-radius: 18px !important;
+box-shadow: 0 12px 28px rgba(77,45,21,.16);
 }
-.s2-table-scroll {
-  width: 100% !important;
-  max-width: 100% !important;
-  overflow-x: auto !important;
-  margin: 18px 0 26px !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
+#TOC a, .tocify a{ color:#4a2b19 !important; }
+@media (min-width: 992px){
+body{ padding-left: 18px; }
+#TOC{ position: fixed; left: 18px; top: 18px; width: 285px; max-height: calc(100vh - 36px); overflow-y: auto; padding: 16px; }
+.main-container, .container-fluid.main-container{ margin-left: 330px !important; }
 }
-.s2-table-scroll table {
-  min-width: 680px !important;
-  margin: 0 !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-}
-th {
-  background: #17395c !important;
-  color: #ffffff !important;
-  padding: 10px 12px !important;
-}
-td {
-  background: #fffdf8 !important;
-  border: 1px solid #d7e2ea !important;
-  padding: 10px 12px !important;
-  vertical-align: top !important;
-}
-.main-container p, .main-container li, td, th {
-  overflow-wrap: anywhere !important;
-}
-pre {
-  overflow: auto !important;
-  padding: 16px !important;
-  background: #eef5f8 !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  color: #111827 !important;
-}
-code {
-  background: #eef5f8 !important;
-  border-radius: 6px !important;
-  color: #111827 !important;
-  padding: 2px 5px !important;
-}
-span.math.display, .math.display, .MathJax_Display, .MathJax, mjx-container {
-  display: block !important;
-  max-width: 100% !important;
-  overflow-x: auto !important;
-  overflow-y: hidden !important;
-}
-blockquote {
-  margin: 22px 0 !important;
-  padding: 16px 20px !important;
-  background: #fff8e7 !important;
-  border-left: 8px solid #0f766e !important;
-  border-radius: 0 8px 8px 0 !important;
-}
-#TOC, .tocify {
-  background: #ffffff !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  box-shadow: 0 12px 28px rgba(23, 57, 92, 0.10) !important;
-}
-.tocify {
-  max-height: calc(100vh - 40px) !important;
-}
-.tocify .active, #TOC .active {
-  background: linear-gradient(90deg, #17395c, #0f766e) !important;
-  color: #ffffff !important;
-  border-radius: 6px !important;
-}
-#TOC a, .tocify a {
-  color: #17395c !important;
-  text-decoration: none !important;
-}
-#TOC a:hover, .tocify a:hover {
-  color: #0f766e !important;
-  text-decoration: underline !important;
-}
-.hero, .rps-box, .rpsbox, .info-card, .card,
-.callout, .note, .casebox, .case-box, .examplebox, .exercise-box,
-.learning-box, .activitybox, .activity, .practice-box, .praktik-box,
-.praktikum, .tujuan, .interpretasi, .refleksi, .warning, .warningbox,
-.warning-box, .tip, .idea-box, .mathbox, .formula-box, .rumus-box,
-.contoh-box, .rubric-box {
-  margin: 22px 0 !important;
-  padding: 20px 24px !important;
-  background: #fffdf8 !important;
-  border: 1px solid #d7e2ea !important;
-  border-left: 8px solid #0f766e !important;
-  border-radius: 8px !important;
-  box-shadow: 0 10px 24px rgba(23, 57, 92, 0.10) !important;
-  color: #172033 !important;
-}
-.hero {
-  background: linear-gradient(135deg, #17395c 0%, #0f766e 62%, #f2a51a 100%) !important;
-  color: #ffffff !important;
-  border-left: 0 !important;
-}
-.hero h1, .hero h2, .hero h3, .hero h4, .hero p, .hero strong {
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-}
-.warning, .warningbox, .warning-box {
-  border-left-color: #b45309 !important;
-  background: #fff8e7 !important;
-}
-.rps-box, .rpsbox, .rubric-box {
-  border-left-color: #f2a51a !important;
-  background: linear-gradient(135deg, #fffdf8, #fff8e7) !important;
-}
-.mathbox, .formula-box, .rumus-box {
-  border-left-color: #17395c !important;
-  background: #eef5f8 !important;
-}
-.badge {
-  display: inline-block !important;
-  padding: 4px 10px !important;
-  border-radius: 999px !important;
-  background: #17395c !important;
-  color: #ffffff !important;
-  font-weight: 700 !important;
-  font-size: 0.85em !important;
-}
-.grid-2, .grid-3 {
-  display: grid !important;
-  gap: 18px !important;
-}
-.grid-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-}
-.grid-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-}
-hr {
-  border: 0 !important;
-  height: 2px !important;
-  background: linear-gradient(90deg, transparent, #d7e2ea, transparent) !important;
-  margin: 34px 0 !important;
-}
-@media (max-width: 980px) {
-  #TOC, .tocify {
-    position: relative !important;
-    width: auto !important;
-    max-height: 360px !important;
-    margin: 12px !important;
-  }
-  .main-container {
-    margin: 12px !important;
-    padding: 24px !important;
-  }
-  .grid-2, .grid-3 {
-    grid-template-columns: 1fr !important;
-  }
+@media print{
+body{ background:#fff; }
+.main-container{ box-shadow:none; margin:0; padding:0; }
+#TOC{ position: static; width:auto; box-shadow:none; }
 }
 </style>
-<script>
-window.MathJax = {
-  tex: {
-    inlineMath: [["\\(", "\\)"], ["$", "$"]],
-    displayMath: [["\\[", "\\]"], ["$$", "$$"]],
-    processEscapes: true,
-    processEnvironments: true,
-    tags: "ams"
-  },
-  options: {
-    skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"],
-    ignoreHtmlClass: "tex2jax_ignore"
-  },
-  chtml: {
-    fontURL: "../../assets/vendor/mathjax/output/chtml/fonts/woff-v2"
-  },
-  startup: {
-    typeset: true
-  }
-};
-
-(function () {
-  var script = document.createElement("script");
-  script.src = "../../assets/vendor/mathjax/tex-mml-chtml.js";
-  script.async = true;
-  script.onerror = function () {
-    var fallback = document.createElement("script");
-    fallback.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
-    fallback.async = true;
-    document.head.appendChild(fallback);
-  };
-  document.head.appendChild(script);
-})();
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll("table").forEach(function (table) {
-    if (table.parentElement && table.parentElement.classList.contains("s2-table-scroll")) return;
-    var wrapper = document.createElement("div");
-    wrapper.className = "s2-table-scroll";
-    table.parentNode.insertBefore(wrapper, table);
-    wrapper.appendChild(table);
-  });
-});
-</script>
 <div class="card">
 <p><strong>Identitas bahan ajar.</strong> Materi ini disusun untuk mata
 kuliah <strong>Proses Stokastik Tingkat Lanjut</strong> pada
@@ -3395,9 +3232,89 @@ untuk masalah nyata. Tahun pembuatan materi: <strong>Januari
 <b>Penulis RPS / Author</b><br>Dr. Irlandia Ginanjar, M.Si
 </div>
 </div>
+<!-- BEGIN AI-INLINE-STYLE-2026 -->
+<style>
+.ai-inline {
+margin: 1rem 0 1.35rem;
+padding: 1rem 1.1rem;
+border: 1px solid #bfd9d5;
+border-left: 7px solid #0f766e;
+border-radius: 8px;
+background: linear-gradient(135deg, #eff9f7, #fffaf0);
+}
+.ai-inline--agentic { border-left-color: #17395c; background: linear-gradient(135deg, #eef5fb, #f5faf8); }
+.ai-inline--assessment { border-left-color: #a35d00; background: #fff8e8; }
+.ai-inline h3, .ai-inline h4 { margin-top: 0; color: #17395c; }
+.ai-inline p:last-child, .ai-inline ul:last-child { margin-bottom: 0; }
+.ai-inline__label {
+display: inline-block; margin-bottom: .45rem; padding: .2rem .55rem;
+border-radius: 999px; background: #17395c; color: white;
+font-size: .78rem; font-weight: 800;
+}
+.ai-inline table { width: 100%; margin: .6rem 0; background: white; }
+</style>
+<!-- END AI-INLINE-STYLE-2026 -->
 <div id="peta-pembelajaran-dan-cara-menggunakan-materi" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Peta Pembelajaran dan
 Cara Menggunakan Materi</h1>
+<!-- BEGIN AI-INLINE:05511a3b4e8c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 1</span>
+<h3>
+Generative dan Agentic AI untuk Peta Pembelajaran dan Cara Menggunakan
+Materi
+</h3>
+<p><strong>Arah RPS.</strong> Simulasi proses stokastik skala besar dan
+estimasi parameter berbasis likelihood atau Bayesian menggunakan
+R/Python.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Peluang dan ekspektasi
+bersyarat.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk merumuskan alternatif penjelasan, contoh, dan
+hipotesis awal.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara
+bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik,
+dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti
+kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Materi ini dirancang sebagai e-book kuliah yang dapat langsung
 dikembangkan menjadi HTML melalui R Markdown. Bagian awal menjelaskan
 fondasi peluang bersyarat dan ekspektasi bersyarat; bagian tengah
@@ -3534,6 +3451,25 @@ hasil.</p>
 </div>
 <div id="konsep-kunci" class="section level3" number="1.3.2">
 <h3><span class="header-section-number">1.3.2</span> Konsep Kunci</h3>
+<!-- BEGIN AI-INLINE:3a736142affa -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Kunci
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Fondasi Berpikir Stokastik untuk Statistika Terapan membahas proses
 stokastik sebagai keluarga peubah acak yang diindeks oleh waktu atau
 ruang. Dalam proses stokastik, objek yang diamati bukan sekadar satu
@@ -3581,6 +3517,30 @@ warnanya.</p>
 <div id="contoh-kasus-terapan" class="section level3" number="1.3.4">
 <h3><span class="header-section-number">1.3.4</span> Contoh Kasus
 Terapan</h3>
+<!-- BEGIN AI-INLINE:974ebc24f410 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi proses
+stokastik skala besar dan estimasi parameter berbasis likelihood atau
+Bayesian menggunakan R/Python. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan kasus berikut: <strong>pemantauan jumlah pasien datang
 ke fasilitas kesehatan dari jam ke jam</strong>. Data dapat dicatat
 dalam bentuk waktu kejadian, jumlah kejadian per interval, atau status
@@ -3604,6 +3564,27 @@ menjelaskan dinamika acak.</p>
 <div id="implementasi-r-dasar" class="section level3" number="1.3.5">
 <h3><span class="header-section-number">1.3.5</span> Implementasi R
 Dasar</h3>
+<!-- BEGIN AI-INLINE:6aa65ad03a50 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R Dasar
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut disediakan sebagai ilustrasi. Pada dokumen ini opsi
 <code>eval = FALSE</code> digunakan agar file aman dirender di berbagai
 komputer. Mahasiswa dapat mengubahnya menjadi <code>eval = TRUE</code>
@@ -3632,6 +3613,25 @@ arah perubahan, dan konsekuensi praktis.</p>
 <div id="pengembangan-teori-secara-bertahap" class="section level3" number="1.3.7">
 <h3><span class="header-section-number">1.3.7</span> Pengembangan Teori
 Secara Bertahap</h3>
+<!-- BEGIN AI-INLINE:0723a50cf921 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pengembangan Teori Secara Bertahap
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada tingkat lanjut, mahasiswa perlu membedakan tiga level
 pembahasan. Level pertama adalah <strong>definisi matematis</strong>,
 yaitu bagaimana proses dinyatakan dengan peubah acak, indeks, ruang
@@ -3910,6 +3910,25 @@ evaluasi, dan komunikasi hasil.</p>
 </div>
 <div id="konsep-kunci-1" class="section level3" number="1.4.2">
 <h3><span class="header-section-number">1.4.2</span> Konsep Kunci</h3>
+<!-- BEGIN AI-INLINE:3a736142affa -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Kunci
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Peluang Bersyarat dan Hukum Probabilitas Total membahas peluang suatu
 kejadian setelah informasi baru tersedia. Dalam proses stokastik, objek
 yang diamati bukan sekadar satu angka, melainkan lintasan, rangkaian
@@ -3956,6 +3975,30 @@ sekadar indah warnanya.</p>
 <div id="contoh-kasus-terapan-1" class="section level3" number="1.4.4">
 <h3><span class="header-section-number">1.4.4</span> Contoh Kasus
 Terapan</h3>
+<!-- BEGIN AI-INLINE:974ebc24f410 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi proses
+stokastik skala besar dan estimasi parameter berbasis likelihood atau
+Bayesian menggunakan R/Python. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan kasus berikut: <strong>peluang pasien memerlukan
 layanan lanjutan setelah diketahui status triase awal</strong>. Data
 dapat dicatat dalam bentuk waktu kejadian, jumlah kejadian per interval,
@@ -3979,6 +4022,27 @@ menjelaskan dinamika acak.</p>
 <div id="implementasi-r-dasar-1" class="section level3" number="1.4.5">
 <h3><span class="header-section-number">1.4.5</span> Implementasi R
 Dasar</h3>
+<!-- BEGIN AI-INLINE:6aa65ad03a50 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R Dasar
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut disediakan sebagai ilustrasi. Pada dokumen ini opsi
 <code>eval = FALSE</code> digunakan agar file aman dirender di berbagai
 komputer. Mahasiswa dapat mengubahnya menjadi <code>eval = TRUE</code>
@@ -4007,6 +4071,25 @@ perubahan, dan konsekuensi praktis.</p>
 <div id="pengembangan-teori-secara-bertahap-1" class="section level3" number="1.4.7">
 <h3><span class="header-section-number">1.4.7</span> Pengembangan Teori
 Secara Bertahap</h3>
+<!-- BEGIN AI-INLINE:0723a50cf921 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pengembangan Teori Secara Bertahap
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada tingkat lanjut, mahasiswa perlu membedakan tiga level
 pembahasan. Level pertama adalah <strong>definisi matematis</strong>,
 yaitu bagaimana proses dinyatakan dengan peubah acak, indeks, ruang
@@ -4281,6 +4364,25 @@ hasil.</p>
 </div>
 <div id="konsep-kunci-2" class="section level3" number="1.5.2">
 <h3><span class="header-section-number">1.5.2</span> Konsep Kunci</h3>
+<!-- BEGIN AI-INLINE:3a736142affa -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Kunci
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Ekspektasi Bersyarat, Variansi Bersyarat, dan Prediksi membahas
 rata-rata teoretis dari peubah acak ketika sebagian informasi telah
 diketahui. Dalam proses stokastik, objek yang diamati bukan sekadar satu
@@ -4328,6 +4430,30 @@ warnanya.</p>
 <div id="contoh-kasus-terapan-2" class="section level3" number="1.5.4">
 <h3><span class="header-section-number">1.5.4</span> Contoh Kasus
 Terapan</h3>
+<!-- BEGIN AI-INLINE:974ebc24f410 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi proses
+stokastik skala besar dan estimasi parameter berbasis likelihood atau
+Bayesian menggunakan R/Python. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan kasus berikut: <strong>prediksi jumlah klaim asuransi
 setelah diketahui kelompok risiko pelanggan</strong>. Data dapat dicatat
 dalam bentuk waktu kejadian, jumlah kejadian per interval, atau status
@@ -4351,6 +4477,27 @@ menjelaskan dinamika acak.</p>
 <div id="implementasi-r-dasar-2" class="section level3" number="1.5.5">
 <h3><span class="header-section-number">1.5.5</span> Implementasi R
 Dasar</h3>
+<!-- BEGIN AI-INLINE:6aa65ad03a50 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R Dasar
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut disediakan sebagai ilustrasi. Pada dokumen ini opsi
 <code>eval = FALSE</code> digunakan agar file aman dirender di berbagai
 komputer. Mahasiswa dapat mengubahnya menjadi <code>eval = TRUE</code>
@@ -4379,6 +4526,25 @@ arah perubahan, dan konsekuensi praktis.</p>
 <div id="pengembangan-teori-secara-bertahap-2" class="section level3" number="1.5.7">
 <h3><span class="header-section-number">1.5.7</span> Pengembangan Teori
 Secara Bertahap</h3>
+<!-- BEGIN AI-INLINE:0723a50cf921 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pengembangan Teori Secara Bertahap
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada tingkat lanjut, mahasiswa perlu membedakan tiga level
 pembahasan. Level pertama adalah <strong>definisi matematis</strong>,
 yaitu bagaimana proses dinyatakan dengan peubah acak, indeks, ruang
@@ -4659,6 +4825,25 @@ hasil.</p>
 </div>
 <div id="konsep-kunci-3" class="section level3" number="1.6.2">
 <h3><span class="header-section-number">1.6.2</span> Konsep Kunci</h3>
+<!-- BEGIN AI-INLINE:3a736142affa -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Kunci
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pengumpulan Data, Sampling, dan Simulasi Proses Stokastik membahas
 strategi memperoleh lintasan, waktu kejadian, status, dan ukuran
 performa secara sahih. Dalam proses stokastik, objek yang diamati bukan
@@ -4706,6 +4891,30 @@ sesuai medan, bukan sekadar indah warnanya.</p>
 <div id="contoh-kasus-terapan-3" class="section level3" number="1.6.4">
 <h3><span class="header-section-number">1.6.4</span> Contoh Kasus
 Terapan</h3>
+<!-- BEGIN AI-INLINE:974ebc24f410 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi proses
+stokastik skala besar dan estimasi parameter berbasis likelihood atau
+Bayesian menggunakan R/Python. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan kasus berikut: <strong>membandingkan simple random
 sampling dan stratified sampling untuk estimasi rata-rata waktu
 tunggu</strong>. Data dapat dicatat dalam bentuk waktu kejadian, jumlah
@@ -4729,6 +4938,27 @@ menjelaskan dinamika acak.</p>
 <div id="implementasi-r-dasar-3" class="section level3" number="1.6.5">
 <h3><span class="header-section-number">1.6.5</span> Implementasi R
 Dasar</h3>
+<!-- BEGIN AI-INLINE:6aa65ad03a50 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R Dasar
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut disediakan sebagai ilustrasi. Pada dokumen ini opsi
 <code>eval = FALSE</code> digunakan agar file aman dirender di berbagai
 komputer. Mahasiswa dapat mengubahnya menjadi <code>eval = TRUE</code>
@@ -4757,6 +4987,25 @@ konteks, parameter, arah perubahan, dan konsekuensi praktis.</p>
 <div id="pengembangan-teori-secara-bertahap-3" class="section level3" number="1.6.7">
 <h3><span class="header-section-number">1.6.7</span> Pengembangan Teori
 Secara Bertahap</h3>
+<!-- BEGIN AI-INLINE:0723a50cf921 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pengembangan Teori Secara Bertahap
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada tingkat lanjut, mahasiswa perlu membedakan tiga level
 pembahasan. Level pertama adalah <strong>definisi matematis</strong>,
 yaitu bagaimana proses dinyatakan dengan peubah acak, indeks, ruang
@@ -5023,6 +5272,30 @@ parameter sudah didefinisikan sebelum melakukan perhitungan.</p>
 <div id="rantai-markov-diskrit-definisi-asumsi-dan-representasi" class="section level2" number="1.7">
 <h2><span class="header-section-number">1.7</span> Rantai Markov
 Diskrit: Definisi, Asumsi, dan Representasi</h2>
+<!-- BEGIN AI-INLINE:1d675af4972e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Rantai Markov Diskrit: Definisi, Asumsi, dan Representasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi proses
+stokastik skala besar dan estimasi parameter berbasis likelihood atau
+Bayesian menggunakan R/Python. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">Pertemuan: 4</span> <span class="badge">Rujukan:
 Norris (1997), Ross (2014), dan Medhi (2002)</span></p>
 <div id="tujuan-pembelajaran-4" class="section level3" number="1.7.1">
@@ -5039,6 +5312,25 @@ hasil.</p>
 </div>
 <div id="konsep-kunci-4" class="section level3" number="1.7.2">
 <h3><span class="header-section-number">1.7.2</span> Konsep Kunci</h3>
+<!-- BEGIN AI-INLINE:3a736142affa -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Kunci
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Rantai Markov Diskrit: Definisi, Asumsi, dan Representasi membahas
 proses diskrit yang masa depannya bergantung pada status saat ini, bukan
 seluruh sejarah masa lalu. Dalam proses stokastik, objek yang diamati
@@ -5101,6 +5393,30 @@ warnanya.</p>
 <div id="contoh-kasus-terapan-4" class="section level3" number="1.7.4">
 <h3><span class="header-section-number">1.7.4</span> Contoh Kasus
 Terapan</h3>
+<!-- BEGIN AI-INLINE:974ebc24f410 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi proses
+stokastik skala besar dan estimasi parameter berbasis likelihood atau
+Bayesian menggunakan R/Python. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan kasus berikut: <strong>perpindahan status pelanggan
 dari aktif, pasif, churn, dan kembali aktif</strong>. Data dapat dicatat
 dalam bentuk waktu kejadian, jumlah kejadian per interval, atau status
@@ -5124,6 +5440,27 @@ menjelaskan dinamika acak.</p>
 <div id="implementasi-r-dasar-4" class="section level3" number="1.7.5">
 <h3><span class="header-section-number">1.7.5</span> Implementasi R
 Dasar</h3>
+<!-- BEGIN AI-INLINE:6aa65ad03a50 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R Dasar
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut disediakan sebagai ilustrasi. Pada dokumen ini opsi
 <code>eval = FALSE</code> digunakan agar file aman dirender di berbagai
 komputer. Mahasiswa dapat mengubahnya menjadi <code>eval = TRUE</code>
@@ -5155,6 +5492,25 @@ praktis.</p>
 <div id="pengembangan-teori-secara-bertahap-4" class="section level3" number="1.7.7">
 <h3><span class="header-section-number">1.7.7</span> Pengembangan Teori
 Secara Bertahap</h3>
+<!-- BEGIN AI-INLINE:0723a50cf921 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pengembangan Teori Secara Bertahap
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada tingkat lanjut, mahasiswa perlu membedakan tiga level
 pembahasan. Level pertama adalah <strong>definisi matematis</strong>,
 yaitu bagaimana proses dinyatakan dengan peubah acak, indeks, ruang
@@ -5435,6 +5791,25 @@ hasil.</p>
 </div>
 <div id="konsep-kunci-5" class="section level3" number="1.8.2">
 <h3><span class="header-section-number">1.8.2</span> Konsep Kunci</h3>
+<!-- BEGIN AI-INLINE:3a736142affa -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Kunci
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Matriks Transisi, Diagram Status, dan Klasifikasi Kelas membahas
 struktur probabilitas yang menghubungkan status asal dan status tujuan
 dalam satu langkah. Dalam proses stokastik, objek yang diamati bukan
@@ -5482,6 +5857,30 @@ warnanya.</p>
 <div id="contoh-kasus-terapan-5" class="section level3" number="1.8.4">
 <h3><span class="header-section-number">1.8.4</span> Contoh Kasus
 Terapan</h3>
+<!-- BEGIN AI-INLINE:974ebc24f410 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi proses
+stokastik skala besar dan estimasi parameter berbasis likelihood atau
+Bayesian menggunakan R/Python. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan kasus berikut: <strong>analisis transisi status kredit
 lancar, perhatian khusus, macet, dan selesai</strong>. Data dapat
 dicatat dalam bentuk waktu kejadian, jumlah kejadian per interval, atau
@@ -5505,6 +5904,27 @@ menjelaskan dinamika acak.</p>
 <div id="implementasi-r-dasar-5" class="section level3" number="1.8.5">
 <h3><span class="header-section-number">1.8.5</span> Implementasi R
 Dasar</h3>
+<!-- BEGIN AI-INLINE:6aa65ad03a50 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R Dasar
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut disediakan sebagai ilustrasi. Pada dokumen ini opsi
 <code>eval = FALSE</code> digunakan agar file aman dirender di berbagai
 komputer. Mahasiswa dapat mengubahnya menjadi <code>eval = TRUE</code>
@@ -5533,6 +5953,25 @@ konteks, parameter, arah perubahan, dan konsekuensi praktis.</p>
 <div id="pengembangan-teori-secara-bertahap-5" class="section level3" number="1.8.7">
 <h3><span class="header-section-number">1.8.7</span> Pengembangan Teori
 Secara Bertahap</h3>
+<!-- BEGIN AI-INLINE:0723a50cf921 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pengembangan Teori Secara Bertahap
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada tingkat lanjut, mahasiswa perlu membedakan tiga level
 pembahasan. Level pertama adalah <strong>definisi matematis</strong>,
 yaitu bagaimana proses dinyatakan dengan peubah acak, indeks, ruang
@@ -5812,6 +6251,25 @@ analisis, evaluasi, dan komunikasi hasil.</p>
 </div>
 <div id="konsep-kunci-6" class="section level3" number="1.9.2">
 <h3><span class="header-section-number">1.9.2</span> Konsep Kunci</h3>
+<!-- BEGIN AI-INLINE:3a736142affa -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Kunci
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Distribusi Limit, Stasioneritas, dan Waktu Penyerapan membahas
 perilaku jangka panjang rantai Markov setelah banyak langkah. Dalam
 proses stokastik, objek yang diamati bukan sekadar satu angka, melainkan
@@ -5859,6 +6317,30 @@ sekadar indah warnanya.</p>
 <div id="contoh-kasus-terapan-6" class="section level3" number="1.9.4">
 <h3><span class="header-section-number">1.9.4</span> Contoh Kasus
 Terapan</h3>
+<!-- BEGIN AI-INLINE:974ebc24f410 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi proses
+stokastik skala besar dan estimasi parameter berbasis likelihood atau
+Bayesian menggunakan R/Python. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan kasus berikut: <strong>estimasi proporsi jangka panjang
 mesin berada pada kondisi baik, perlu perawatan, atau rusak</strong>.
 Data dapat dicatat dalam bentuk waktu kejadian, jumlah kejadian per
@@ -5882,6 +6364,27 @@ menjelaskan dinamika acak.</p>
 <div id="implementasi-r-dasar-6" class="section level3" number="1.9.5">
 <h3><span class="header-section-number">1.9.5</span> Implementasi R
 Dasar</h3>
+<!-- BEGIN AI-INLINE:6aa65ad03a50 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R Dasar
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut disediakan sebagai ilustrasi. Pada dokumen ini opsi
 <code>eval = FALSE</code> digunakan agar file aman dirender di berbagai
 komputer. Mahasiswa dapat mengubahnya menjadi <code>eval = TRUE</code>
@@ -5910,6 +6413,25 @@ arah perubahan, dan konsekuensi praktis.</p>
 <div id="pengembangan-teori-secara-bertahap-6" class="section level3" number="1.9.7">
 <h3><span class="header-section-number">1.9.7</span> Pengembangan Teori
 Secara Bertahap</h3>
+<!-- BEGIN AI-INLINE:0723a50cf921 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pengembangan Teori Secara Bertahap
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada tingkat lanjut, mahasiswa perlu membedakan tiga level
 pembahasan. Level pertama adalah <strong>definisi matematis</strong>,
 yaitu bagaimana proses dinyatakan dengan peubah acak, indeks, ruang
@@ -6191,6 +6713,25 @@ hasil.</p>
 </div>
 <div id="konsep-kunci-7" class="section level3" number="1.10.2">
 <h3><span class="header-section-number">1.10.2</span> Konsep Kunci</h3>
+<!-- BEGIN AI-INLINE:3a736142affa -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Kunci
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>UTS: Sintesis Peluang Bersyarat dan Rantai Markov membahas kemampuan
 mengintegrasikan peluang bersyarat, matriks transisi, distribusi
 n-langkah, dan interpretasi model. Dalam proses stokastik, objek yang
@@ -6238,6 +6779,30 @@ warnanya.</p>
 <div id="contoh-kasus-terapan-7" class="section level3" number="1.10.4">
 <h3><span class="header-section-number">1.10.4</span> Contoh Kasus
 Terapan</h3>
+<!-- BEGIN AI-INLINE:974ebc24f410 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi proses
+stokastik skala besar dan estimasi parameter berbasis likelihood atau
+Bayesian menggunakan R/Python. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan kasus berikut: <strong>evaluasi proses perpindahan
 kategori risiko pada data longitudinal</strong>. Data dapat dicatat
 dalam bentuk waktu kejadian, jumlah kejadian per interval, atau status
@@ -6261,6 +6826,27 @@ menjelaskan dinamika acak.</p>
 <div id="implementasi-r-dasar-7" class="section level3" number="1.10.5">
 <h3><span class="header-section-number">1.10.5</span> Implementasi R
 Dasar</h3>
+<!-- BEGIN AI-INLINE:6aa65ad03a50 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R Dasar
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut disediakan sebagai ilustrasi. Pada dokumen ini opsi
 <code>eval = FALSE</code> digunakan agar file aman dirender di berbagai
 komputer. Mahasiswa dapat mengubahnya menjadi <code>eval = TRUE</code>
@@ -6290,6 +6876,25 @@ perubahan, dan konsekuensi praktis.</p>
 <div id="pengembangan-teori-secara-bertahap-7" class="section level3" number="1.10.7">
 <h3><span class="header-section-number">1.10.7</span> Pengembangan Teori
 Secara Bertahap</h3>
+<!-- BEGIN AI-INLINE:0723a50cf921 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pengembangan Teori Secara Bertahap
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada tingkat lanjut, mahasiswa perlu membedakan tiga level
 pembahasan. Level pertama adalah <strong>definisi matematis</strong>,
 yaitu bagaimana proses dinyatakan dengan peubah acak, indeks, ruang
@@ -6571,6 +7176,25 @@ hasil.</p>
 </div>
 <div id="konsep-kunci-8" class="section level3" number="1.11.2">
 <h3><span class="header-section-number">1.11.2</span> Konsep Kunci</h3>
+<!-- BEGIN AI-INLINE:3a736142affa -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Kunci
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Proses Poisson: Kedatangan Acak dalam Waktu Kontinu membahas model
 jumlah kejadian acak dalam interval waktu ketika kedatangan independen
 dan laju rata-rata konstan. Dalam proses stokastik, objek yang diamati
@@ -6634,6 +7258,30 @@ sesuai medan, bukan sekadar indah warnanya.</p>
 <div id="contoh-kasus-terapan-8" class="section level3" number="1.11.4">
 <h3><span class="header-section-number">1.11.4</span> Contoh Kasus
 Terapan</h3>
+<!-- BEGIN AI-INLINE:974ebc24f410 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi proses
+stokastik skala besar dan estimasi parameter berbasis likelihood atau
+Bayesian menggunakan R/Python. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan kasus berikut: <strong>kedatangan pasien, transaksi
 digital, klaim asuransi, atau panggilan pusat layanan</strong>. Data
 dapat dicatat dalam bentuk waktu kejadian, jumlah kejadian per interval,
@@ -6657,6 +7305,27 @@ menjelaskan dinamika acak.</p>
 <div id="implementasi-r-dasar-8" class="section level3" number="1.11.5">
 <h3><span class="header-section-number">1.11.5</span> Implementasi R
 Dasar</h3>
+<!-- BEGIN AI-INLINE:6aa65ad03a50 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R Dasar
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut disediakan sebagai ilustrasi. Pada dokumen ini opsi
 <code>eval = FALSE</code> digunakan agar file aman dirender di berbagai
 komputer. Mahasiswa dapat mengubahnya menjadi <code>eval = TRUE</code>
@@ -6687,6 +7356,25 @@ arah perubahan, dan konsekuensi praktis.</p>
 <div id="pengembangan-teori-secara-bertahap-8" class="section level3" number="1.11.7">
 <h3><span class="header-section-number">1.11.7</span> Pengembangan Teori
 Secara Bertahap</h3>
+<!-- BEGIN AI-INLINE:0723a50cf921 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pengembangan Teori Secara Bertahap
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada tingkat lanjut, mahasiswa perlu membedakan tiga level
 pembahasan. Level pertama adalah <strong>definisi matematis</strong>,
 yaitu bagaimana proses dinyatakan dengan peubah acak, indeks, ruang
@@ -6968,6 +7656,25 @@ melakukan analisis, evaluasi, dan komunikasi hasil.</p>
 </div>
 <div id="konsep-kunci-9" class="section level3" number="1.12.2">
 <h3><span class="header-section-number">1.12.2</span> Konsep Kunci</h3>
+<!-- BEGIN AI-INLINE:3a736142affa -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Kunci
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Waktu Antar-Kedatangan, Superposisi, dan Thinning membahas hubungan
 antara hitungan Poisson dan waktu antar-kedatangan eksponensial. Dalam
 proses stokastik, objek yang diamati bukan sekadar satu angka, melainkan
@@ -7014,6 +7721,30 @@ warnanya.</p>
 <div id="contoh-kasus-terapan-9" class="section level3" number="1.12.4">
 <h3><span class="header-section-number">1.12.4</span> Contoh Kasus
 Terapan</h3>
+<!-- BEGIN AI-INLINE:974ebc24f410 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi proses
+stokastik skala besar dan estimasi parameter berbasis likelihood atau
+Bayesian menggunakan R/Python. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan kasus berikut: <strong>memilah kedatangan pelanggan
 menjadi kategori layanan cepat dan layanan kompleks</strong>. Data dapat
 dicatat dalam bentuk waktu kejadian, jumlah kejadian per interval, atau
@@ -7037,6 +7768,27 @@ menjelaskan dinamika acak.</p>
 <div id="implementasi-r-dasar-9" class="section level3" number="1.12.5">
 <h3><span class="header-section-number">1.12.5</span> Implementasi R
 Dasar</h3>
+<!-- BEGIN AI-INLINE:6aa65ad03a50 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R Dasar
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut disediakan sebagai ilustrasi. Pada dokumen ini opsi
 <code>eval = FALSE</code> digunakan agar file aman dirender di berbagai
 komputer. Mahasiswa dapat mengubahnya menjadi <code>eval = TRUE</code>
@@ -7065,6 +7817,25 @@ arah perubahan, dan konsekuensi praktis.</p>
 <div id="pengembangan-teori-secara-bertahap-9" class="section level3" number="1.12.7">
 <h3><span class="header-section-number">1.12.7</span> Pengembangan Teori
 Secara Bertahap</h3>
+<!-- BEGIN AI-INLINE:0723a50cf921 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pengembangan Teori Secara Bertahap
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada tingkat lanjut, mahasiswa perlu membedakan tiga level
 pembahasan. Level pertama adalah <strong>definisi matematis</strong>,
 yaitu bagaimana proses dinyatakan dengan peubah acak, indeks, ruang
@@ -7343,6 +8114,25 @@ hasil.</p>
 </div>
 <div id="konsep-kunci-10" class="section level3" number="1.13.2">
 <h3><span class="header-section-number">1.13.2</span> Konsep Kunci</h3>
+<!-- BEGIN AI-INLINE:3a736142affa -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Kunci
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Proses Poisson Majemuk dan Model Risiko Agregat membahas jumlah acak
 kejadian yang masing-masing membawa ukuran kerugian, klaim, atau dampak
 acak. Dalam proses stokastik, objek yang diamati bukan sekadar satu
@@ -7389,6 +8179,30 @@ sekadar indah warnanya.</p>
 <div id="contoh-kasus-terapan-10" class="section level3" number="1.13.4">
 <h3><span class="header-section-number">1.13.4</span> Contoh Kasus
 Terapan</h3>
+<!-- BEGIN AI-INLINE:974ebc24f410 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi proses
+stokastik skala besar dan estimasi parameter berbasis likelihood atau
+Bayesian menggunakan R/Python. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan kasus berikut: <strong>total klaim asuransi dalam satu
 bulan ketika jumlah klaim dan besar klaim sama-sama acak</strong>. Data
 dapat dicatat dalam bentuk waktu kejadian, jumlah kejadian per interval,
@@ -7412,6 +8226,27 @@ menjelaskan dinamika acak.</p>
 <div id="implementasi-r-dasar-10" class="section level3" number="1.13.5">
 <h3><span class="header-section-number">1.13.5</span> Implementasi R
 Dasar</h3>
+<!-- BEGIN AI-INLINE:6aa65ad03a50 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R Dasar
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut disediakan sebagai ilustrasi. Pada dokumen ini opsi
 <code>eval = FALSE</code> digunakan agar file aman dirender di berbagai
 komputer. Mahasiswa dapat mengubahnya menjadi <code>eval = TRUE</code>
@@ -7441,6 +8276,25 @@ arah perubahan, dan konsekuensi praktis.</p>
 <div id="pengembangan-teori-secara-bertahap-10" class="section level3" number="1.13.7">
 <h3><span class="header-section-number">1.13.7</span> Pengembangan Teori
 Secara Bertahap</h3>
+<!-- BEGIN AI-INLINE:0723a50cf921 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pengembangan Teori Secara Bertahap
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada tingkat lanjut, mahasiswa perlu membedakan tiga level
 pembahasan. Level pertama adalah <strong>definisi matematis</strong>,
 yaitu bagaimana proses dinyatakan dengan peubah acak, indeks, ruang
@@ -7721,6 +8575,25 @@ analisis, evaluasi, dan komunikasi hasil.</p>
 </div>
 <div id="konsep-kunci-11" class="section level3" number="1.14.2">
 <h3><span class="header-section-number">1.14.2</span> Konsep Kunci</h3>
+<!-- BEGIN AI-INLINE:3a736142affa -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Kunci
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Proses Kelahiran-Kematian dan Model Populasi Dinamis membahas proses
 waktu kontinu dengan transisi naik satu unit atau turun satu unit. Dalam
 proses stokastik, objek yang diamati bukan sekadar satu angka, melainkan
@@ -7768,6 +8641,30 @@ sesuai medan, bukan sekadar indah warnanya.</p>
 <div id="contoh-kasus-terapan-11" class="section level3" number="1.14.4">
 <h3><span class="header-section-number">1.14.4</span> Contoh Kasus
 Terapan</h3>
+<!-- BEGIN AI-INLINE:974ebc24f410 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi proses
+stokastik skala besar dan estimasi parameter berbasis likelihood atau
+Bayesian menggunakan R/Python. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan kasus berikut: <strong>pertumbuhan jumlah pelanggan
 aktif, infeksi aktif, atau mesin yang sedang beroperasi</strong>. Data
 dapat dicatat dalam bentuk waktu kejadian, jumlah kejadian per interval,
@@ -7791,6 +8688,27 @@ menjelaskan dinamika acak.</p>
 <div id="implementasi-r-dasar-11" class="section level3" number="1.14.5">
 <h3><span class="header-section-number">1.14.5</span> Implementasi R
 Dasar</h3>
+<!-- BEGIN AI-INLINE:6aa65ad03a50 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R Dasar
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut disediakan sebagai ilustrasi. Pada dokumen ini opsi
 <code>eval = FALSE</code> digunakan agar file aman dirender di berbagai
 komputer. Mahasiswa dapat mengubahnya menjadi <code>eval = TRUE</code>
@@ -7825,6 +8743,25 @@ arah perubahan, dan konsekuensi praktis.</p>
 <div id="pengembangan-teori-secara-bertahap-11" class="section level3" number="1.14.7">
 <h3><span class="header-section-number">1.14.7</span> Pengembangan Teori
 Secara Bertahap</h3>
+<!-- BEGIN AI-INLINE:0723a50cf921 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pengembangan Teori Secara Bertahap
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada tingkat lanjut, mahasiswa perlu membedakan tiga level
 pembahasan. Level pertama adalah <strong>definisi matematis</strong>,
 yaitu bagaimana proses dinyatakan dengan peubah acak, indeks, ruang
@@ -8105,6 +9042,25 @@ hasil.</p>
 </div>
 <div id="konsep-kunci-12" class="section level3" number="1.15.2">
 <h3><span class="header-section-number">1.15.2</span> Konsep Kunci</h3>
+<!-- BEGIN AI-INLINE:3a736142affa -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Kunci
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Proses Antrian: M/M/1, M/M/c, dan Ukuran Kinerja membahas model
 kedatangan, pelayanan, dan disiplin layanan yang menentukan waktu tunggu
 serta panjang antrian. Dalam proses stokastik, objek yang diamati bukan
@@ -8171,6 +9127,30 @@ warnanya.</p>
 <div id="contoh-kasus-terapan-12" class="section level3" number="1.15.4">
 <h3><span class="header-section-number">1.15.4</span> Contoh Kasus
 Terapan</h3>
+<!-- BEGIN AI-INLINE:974ebc24f410 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi proses
+stokastik skala besar dan estimasi parameter berbasis likelihood atau
+Bayesian menggunakan R/Python. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan kasus berikut: <strong>evaluasi loket administrasi
 akademik, klinik, bank, atau helpdesk digital</strong>. Data dapat
 dicatat dalam bentuk waktu kejadian, jumlah kejadian per interval, atau
@@ -8194,6 +9174,27 @@ menjelaskan dinamika acak.</p>
 <div id="implementasi-r-dasar-12" class="section level3" number="1.15.5">
 <h3><span class="header-section-number">1.15.5</span> Implementasi R
 Dasar</h3>
+<!-- BEGIN AI-INLINE:6aa65ad03a50 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R Dasar
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut disediakan sebagai ilustrasi. Pada dokumen ini opsi
 <code>eval = FALSE</code> digunakan agar file aman dirender di berbagai
 komputer. Mahasiswa dapat mengubahnya menjadi <code>eval = TRUE</code>
@@ -8222,6 +9223,25 @@ arah perubahan, dan konsekuensi praktis.</p>
 <div id="pengembangan-teori-secara-bertahap-12" class="section level3" number="1.15.7">
 <h3><span class="header-section-number">1.15.7</span> Pengembangan Teori
 Secara Bertahap</h3>
+<!-- BEGIN AI-INLINE:0723a50cf921 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pengembangan Teori Secara Bertahap
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada tingkat lanjut, mahasiswa perlu membedakan tiga level
 pembahasan. Level pertama adalah <strong>definisi matematis</strong>,
 yaitu bagaimana proses dinyatakan dengan peubah acak, indeks, ruang
@@ -8503,6 +9523,25 @@ melakukan analisis, evaluasi, dan komunikasi hasil.</p>
 </div>
 <div id="konsep-kunci-13" class="section level3" number="1.16.2">
 <h3><span class="header-section-number">1.16.2</span> Konsep Kunci</h3>
+<!-- BEGIN AI-INLINE:3a736142affa -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Kunci
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Renewal Process dan Analisis Waktu Pembaharuan membahas proses
 peristiwa berulang ketika waktu antar-pembaharuan bersifat i.i.d.. Dalam
 proses stokastik, objek yang diamati bukan sekadar satu angka, melainkan
@@ -8549,6 +9588,30 @@ sesuai medan, bukan sekadar indah warnanya.</p>
 <div id="contoh-kasus-terapan-13" class="section level3" number="1.16.4">
 <h3><span class="header-section-number">1.16.4</span> Contoh Kasus
 Terapan</h3>
+<!-- BEGIN AI-INLINE:974ebc24f410 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi proses
+stokastik skala besar dan estimasi parameter berbasis likelihood atau
+Bayesian menggunakan R/Python. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan kasus berikut: <strong>penggantian komponen mesin,
 kunjungan ulang pasien, atau pembelian ulang pelanggan</strong>. Data
 dapat dicatat dalam bentuk waktu kejadian, jumlah kejadian per interval,
@@ -8572,6 +9635,27 @@ menjelaskan dinamika acak.</p>
 <div id="implementasi-r-dasar-13" class="section level3" number="1.16.5">
 <h3><span class="header-section-number">1.16.5</span> Implementasi R
 Dasar</h3>
+<!-- BEGIN AI-INLINE:6aa65ad03a50 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R Dasar
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut disediakan sebagai ilustrasi. Pada dokumen ini opsi
 <code>eval = FALSE</code> digunakan agar file aman dirender di berbagai
 komputer. Mahasiswa dapat mengubahnya menjadi <code>eval = TRUE</code>
@@ -8601,6 +9685,25 @@ perubahan, dan konsekuensi praktis.</p>
 <div id="pengembangan-teori-secara-bertahap-13" class="section level3" number="1.16.7">
 <h3><span class="header-section-number">1.16.7</span> Pengembangan Teori
 Secara Bertahap</h3>
+<!-- BEGIN AI-INLINE:0723a50cf921 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pengembangan Teori Secara Bertahap
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada tingkat lanjut, mahasiswa perlu membedakan tiga level
 pembahasan. Level pertama adalah <strong>definisi matematis</strong>,
 yaitu bagaimana proses dinyatakan dengan peubah acak, indeks, ruang
@@ -8876,6 +9979,25 @@ hasil.</p>
 </div>
 <div id="konsep-kunci-14" class="section level3" number="1.17.2">
 <h3><span class="header-section-number">1.17.2</span> Konsep Kunci</h3>
+<!-- BEGIN AI-INLINE:3a736142affa -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Kunci
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Simulasi Monte Carlo untuk Model Stokastik membahas eksperimen
 komputasional untuk memperkirakan distribusi keluaran model yang sulit
 dihitung analitik. Dalam proses stokastik, objek yang diamati bukan
@@ -8922,6 +10044,30 @@ warnanya.</p>
 <div id="contoh-kasus-terapan-14" class="section level3" number="1.17.4">
 <h3><span class="header-section-number">1.17.4</span> Contoh Kasus
 Terapan</h3>
+<!-- BEGIN AI-INLINE:974ebc24f410 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi proses
+stokastik skala besar dan estimasi parameter berbasis likelihood atau
+Bayesian menggunakan R/Python. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan kasus berikut: <strong>mengestimasi probabilitas waktu
 tunggu melebihi standar layanan</strong>. Data dapat dicatat dalam
 bentuk waktu kejadian, jumlah kejadian per interval, atau status pada
@@ -8944,6 +10090,27 @@ menjelaskan dinamika acak.</p>
 <div id="implementasi-r-dasar-14" class="section level3" number="1.17.5">
 <h3><span class="header-section-number">1.17.5</span> Implementasi R
 Dasar</h3>
+<!-- BEGIN AI-INLINE:6aa65ad03a50 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R Dasar
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut disediakan sebagai ilustrasi. Pada dokumen ini opsi
 <code>eval = FALSE</code> digunakan agar file aman dirender di berbagai
 komputer. Mahasiswa dapat mengubahnya menjadi <code>eval = TRUE</code>
@@ -8971,6 +10138,25 @@ perubahan, dan konsekuensi praktis.</p>
 <div id="pengembangan-teori-secara-bertahap-14" class="section level3" number="1.17.7">
 <h3><span class="header-section-number">1.17.7</span> Pengembangan Teori
 Secara Bertahap</h3>
+<!-- BEGIN AI-INLINE:0723a50cf921 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pengembangan Teori Secara Bertahap
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada tingkat lanjut, mahasiswa perlu membedakan tiga level
 pembahasan. Level pertama adalah <strong>definisi matematis</strong>,
 yaitu bagaimana proses dinyatakan dengan peubah acak, indeks, ruang
@@ -9235,6 +10421,30 @@ didefinisikan sebelum melakukan perhitungan.</p>
 <div id="aplikasi-industri-kesehatan-aktuaria-dan-sains-data" class="section level2" number="1.18">
 <h2><span class="header-section-number">1.18</span> Aplikasi Industri,
 Kesehatan, Aktuaria, dan Sains Data</h2>
+<!-- BEGIN AI-INLINE:e15009e69d1a -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Aplikasi Industri, Kesehatan, Aktuaria, dan Sains Data
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi proses
+stokastik skala besar dan estimasi parameter berbasis likelihood atau
+Bayesian menggunakan R/Python. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">Pertemuan: 15</span> <span class="badge">Rujukan:
 Ross (2014), Tijms (2003), Asmussen (2003), dan Law (2015)</span></p>
 <div id="tujuan-pembelajaran-15" class="section level3" number="1.18.1">
@@ -9251,6 +10461,25 @@ hasil.</p>
 </div>
 <div id="konsep-kunci-15" class="section level3" number="1.18.2">
 <h3><span class="header-section-number">1.18.2</span> Konsep Kunci</h3>
+<!-- BEGIN AI-INLINE:3a736142affa -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Kunci
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Aplikasi Industri, Kesehatan, Aktuaria, dan Sains Data membahas
 pemetaan masalah nyata ke struktur status, kejadian, waktu tunggu,
 risiko, dan keputusan. Dalam proses stokastik, objek yang diamati bukan
@@ -9299,6 +10528,30 @@ sesuai medan, bukan sekadar indah warnanya.</p>
 <div id="contoh-kasus-terapan-15" class="section level3" number="1.18.4">
 <h3><span class="header-section-number">1.18.4</span> Contoh Kasus
 Terapan</h3>
+<!-- BEGIN AI-INLINE:974ebc24f410 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi proses
+stokastik skala besar dan estimasi parameter berbasis likelihood atau
+Bayesian menggunakan R/Python. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan kasus berikut: <strong>dashboard mini untuk memantau
 kepadatan antrian dan kebutuhan sumber daya layanan</strong>. Data dapat
 dicatat dalam bentuk waktu kejadian, jumlah kejadian per interval, atau
@@ -9322,6 +10575,27 @@ menjelaskan dinamika acak.</p>
 <div id="implementasi-r-dasar-15" class="section level3" number="1.18.5">
 <h3><span class="header-section-number">1.18.5</span> Implementasi R
 Dasar</h3>
+<!-- BEGIN AI-INLINE:6aa65ad03a50 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R Dasar
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut disediakan sebagai ilustrasi. Pada dokumen ini opsi
 <code>eval = FALSE</code> digunakan agar file aman dirender di berbagai
 komputer. Mahasiswa dapat mengubahnya menjadi <code>eval = TRUE</code>
@@ -9350,6 +10624,25 @@ arah perubahan, dan konsekuensi praktis.</p>
 <div id="pengembangan-teori-secara-bertahap-15" class="section level3" number="1.18.7">
 <h3><span class="header-section-number">1.18.7</span> Pengembangan Teori
 Secara Bertahap</h3>
+<!-- BEGIN AI-INLINE:0723a50cf921 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pengembangan Teori Secara Bertahap
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada tingkat lanjut, mahasiswa perlu membedakan tiga level
 pembahasan. Level pertama adalah <strong>definisi matematis</strong>,
 yaitu bagaimana proses dinyatakan dengan peubah acak, indeks, ruang
@@ -9616,6 +10909,30 @@ dan parameter sudah didefinisikan sebelum melakukan perhitungan.</p>
 <div id="proyek-akhir-dari-model-ke-solusi-inovatif" class="section level2" number="1.19">
 <h2><span class="header-section-number">1.19</span> Proyek Akhir: Dari
 Model ke Solusi Inovatif</h2>
+<!-- BEGIN AI-INLINE:f39bbe84a72a -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Proyek Akhir: Dari Model ke Solusi Inovatif
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi proses
+stokastik skala besar dan estimasi parameter berbasis likelihood atau
+Bayesian menggunakan R/Python. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">Pertemuan: 16</span> <span class="badge">Rujukan:
 Ross (2014), Cinlar (2011), Law (2015), dan Tijms (2003)</span></p>
 <div id="tujuan-pembelajaran-16" class="section level3" number="1.19.1">
@@ -9632,6 +10949,25 @@ hasil.</p>
 </div>
 <div id="konsep-kunci-16" class="section level3" number="1.19.2">
 <h3><span class="header-section-number">1.19.2</span> Konsep Kunci</h3>
+<!-- BEGIN AI-INLINE:3a736142affa -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Kunci
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Proyek Akhir: Dari Model ke Solusi Inovatif membahas integrasi teori,
 simulasi, data, interpretasi, dan komunikasi ilmiah dalam produk akhir.
 Dalam proses stokastik, objek yang diamati bukan sekadar satu angka,
@@ -9680,6 +11016,30 @@ sekadar indah warnanya.</p>
 <div id="contoh-kasus-terapan-16" class="section level3" number="1.19.4">
 <h3><span class="header-section-number">1.19.4</span> Contoh Kasus
 Terapan</h3>
+<!-- BEGIN AI-INLINE:974ebc24f410 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi proses
+stokastik skala besar dan estimasi parameter berbasis likelihood atau
+Bayesian menggunakan R/Python. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan kasus berikut: <strong>e-book atau laporan HTML tentang
 model proses stokastik untuk satu masalah nyata</strong>. Data dapat
 dicatat dalam bentuk waktu kejadian, jumlah kejadian per interval, atau
@@ -9703,6 +11063,27 @@ menjelaskan dinamika acak.</p>
 <div id="implementasi-r-dasar-16" class="section level3" number="1.19.5">
 <h3><span class="header-section-number">1.19.5</span> Implementasi R
 Dasar</h3>
+<!-- BEGIN AI-INLINE:6aa65ad03a50 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R Dasar
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut disediakan sebagai ilustrasi. Pada dokumen ini opsi
 <code>eval = FALSE</code> digunakan agar file aman dirender di berbagai
 komputer. Mahasiswa dapat mengubahnya menjadi <code>eval = TRUE</code>
@@ -9732,6 +11113,25 @@ perubahan, dan konsekuensi praktis.</p>
 <div id="pengembangan-teori-secara-bertahap-16" class="section level3" number="1.19.7">
 <h3><span class="header-section-number">1.19.7</span> Pengembangan Teori
 Secara Bertahap</h3>
+<!-- BEGIN AI-INLINE:0723a50cf921 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pengembangan Teori Secara Bertahap
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Peta Pembelajaran dan Cara Menggunakan
+Materi</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada tingkat lanjut, mahasiswa perlu membedakan tiga level
 pembahasan. Level pertama adalah <strong>definisi matematis</strong>,
 yaitu bagaimana proses dinyatakan dengan peubah acak, indeks, ruang
@@ -10009,6 +11409,30 @@ beberapa model.</p>
 <div id="struktur-laporan-proyek" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> Struktur Laporan
 Proyek</h2>
+<!-- BEGIN AI-INLINE:ac9c70247947 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Struktur Laporan Proyek
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi proses
+stokastik skala besar dan estimasi parameter berbasis likelihood atau
+Bayesian menggunakan R/Python. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <table>
 <colgroup>
 <col width="50%" />
@@ -10063,6 +11487,30 @@ asumsi</td>
 <div id="contoh-ide-proyek" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> Contoh Ide
 Proyek</h2>
+<!-- BEGIN AI-INLINE:3bbfd541df5e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Ide Proyek
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Peta Pembelajaran dan Cara
+Menggunakan Materi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi proses
+stokastik skala besar dan estimasi parameter berbasis likelihood atau
+Bayesian menggunakan R/Python. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li><strong>Antrian layanan akademik.</strong> Mahasiswa dapat
 memodelkan kedatangan mahasiswa ke loket layanan akademik dengan proses
@@ -10108,6 +11556,62 @@ Umum</h2>
 <div id="rubrik-penilaian-yang-disarankan" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Rubrik Penilaian yang
 Disarankan</h1>
+<!-- BEGIN AI-INLINE:54e838b23a53 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 2</span>
+<h3>
+Generative dan Agentic AI untuk Rubrik Penilaian yang Disarankan
+</h3>
+<p><strong>Arah RPS.</strong> Pengenalan state-space model, hidden
+Markov model, dan penggunaan surrogate model atau machine learning untuk
+aproksimasi proses yang mahal secara komputasi.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Rantai Markov diskrit.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk merumuskan alternatif penjelasan, contoh, dan
+hipotesis awal.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara
+bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik,
+dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti
+kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <table>
 <colgroup>
 <col width="30%" />
@@ -10290,6 +11794,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi" class="section level2" number="6.2">
 <h2><span class="header-section-number">6.2</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -10464,6 +11991,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-1" class="section level2" number="6.8">
 <h2><span class="header-section-number">6.8</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -10638,6 +12188,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-2" class="section level2" number="6.14">
 <h2><span class="header-section-number">6.14</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -10812,6 +12385,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-3" class="section level2" number="6.20">
 <h2><span class="header-section-number">6.20</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -10986,6 +12582,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-4" class="section level2" number="6.26">
 <h2><span class="header-section-number">6.26</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -11160,6 +12779,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-5" class="section level2" number="6.32">
 <h2><span class="header-section-number">6.32</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -11334,6 +12976,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-6" class="section level2" number="6.38">
 <h2><span class="header-section-number">6.38</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -11508,6 +13173,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-7" class="section level2" number="6.44">
 <h2><span class="header-section-number">6.44</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -11682,6 +13370,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-8" class="section level2" number="6.50">
 <h2><span class="header-section-number">6.50</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -11856,6 +13567,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-9" class="section level2" number="6.56">
 <h2><span class="header-section-number">6.56</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -12030,6 +13764,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-10" class="section level2" number="6.62">
 <h2><span class="header-section-number">6.62</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -12204,6 +13961,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-11" class="section level2" number="6.68">
 <h2><span class="header-section-number">6.68</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -12378,6 +14158,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-12" class="section level2" number="6.74">
 <h2><span class="header-section-number">6.74</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -12552,6 +14355,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-13" class="section level2" number="6.80">
 <h2><span class="header-section-number">6.80</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -12726,6 +14552,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-14" class="section level2" number="6.86">
 <h2><span class="header-section-number">6.86</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -12900,6 +14749,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-15" class="section level2" number="6.92">
 <h2><span class="header-section-number">6.92</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -13074,6 +14946,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-16" class="section level2" number="6.98">
 <h2><span class="header-section-number">6.98</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -13248,6 +15143,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-17" class="section level2" number="6.104">
 <h2><span class="header-section-number">6.104</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -13422,6 +15340,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-18" class="section level2" number="6.110">
 <h2><span class="header-section-number">6.110</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -13596,6 +15537,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-19" class="section level2" number="6.116">
 <h2><span class="header-section-number">6.116</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -13770,6 +15734,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-20" class="section level2" number="6.122">
 <h2><span class="header-section-number">6.122</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -13944,6 +15931,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-21" class="section level2" number="6.128">
 <h2><span class="header-section-number">6.128</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -14118,6 +16128,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-22" class="section level2" number="6.134">
 <h2><span class="header-section-number">6.134</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -14292,6 +16325,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-23" class="section level2" number="6.140">
 <h2><span class="header-section-number">6.140</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -14466,6 +16522,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-24" class="section level2" number="6.146">
 <h2><span class="header-section-number">6.146</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -14640,6 +16719,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-25" class="section level2" number="6.152">
 <h2><span class="header-section-number">6.152</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -14814,6 +16916,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-26" class="section level2" number="6.158">
 <h2><span class="header-section-number">6.158</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -14988,6 +17113,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-27" class="section level2" number="6.164">
 <h2><span class="header-section-number">6.164</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -15162,6 +17310,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-28" class="section level2" number="6.170">
 <h2><span class="header-section-number">6.170</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -15336,6 +17507,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-29" class="section level2" number="6.176">
 <h2><span class="header-section-number">6.176</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -15510,6 +17704,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-30" class="section level2" number="6.182">
 <h2><span class="header-section-number">6.182</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -15684,6 +17901,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-31" class="section level2" number="6.188">
 <h2><span class="header-section-number">6.188</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -15858,6 +18098,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-32" class="section level2" number="6.194">
 <h2><span class="header-section-number">6.194</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -16032,6 +18295,29 @@ keputusan, bukan sekadar latihan matematis.</p>
 <div id="skenario-2-perpindahan-status-pelanggan-aplikasi-33" class="section level2" number="6.200">
 <h2><span class="header-section-number">6.200</span> Skenario 2:
 Perpindahan status pelanggan aplikasi</h2>
+<!-- BEGIN AI-INLINE:7eecfe423180 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Skenario 2: Perpindahan status pelanggan aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Pengenalan state-space
+model, hidden Markov model, dan penggunaan surrogate model atau machine
+learning untuk aproksimasi proses yang mahal secara komputasi.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada skenario <strong>Perpindahan status pelanggan aplikasi</strong>,
 persoalan utama adalah bahwa status aktif, pasif, dan churn dapat
 berubah karena promosi, pengalaman pengguna, dan riwayat penggunaan.
@@ -16173,34 +18459,86 @@ Rekomendasi harus menyebutkan konsekuensi praktis: mengurangi waktu
 tunggu, menurunkan risiko, mengalokasikan server, atau mengevaluasi
 kebijakan. Dengan demikian, proses stokastik menjadi alat argumentasi
 keputusan, bukan sekadar latihan matematis.</p>
-</div>
-</div>
-
-
-
-</div>
-</div>
-
-
-
-
-
-
 <!-- BEGIN ADOPSI AI RPS 2026 -->
-<section id="penyelarasan-rps-ai-2026" style="margin:2rem 0;padding:1.5rem;border-left:8px solid #f2a51a;background:#eef5f8;border-radius:8px">
-  <h2>Penyelarasan Materi dengan RPS Revisi AI 2026</h2>
-  <p>Materi <strong>Proses Stokastik Tingkat Lanjut</strong> ini mempertahankan rumusan CPL yang berlaku. AI ditempatkan sebagai alat bantu untuk mempercepat ketercapaian CPMK dan Sub-CPMK, bukan sebagai CPL baru atau pengganti penalaran statistika.</p>
-  <h3>Integrasi AI kontekstual</h3><ul><li>Simulasi proses stokastik skala besar dan estimasi parameter berbasis likelihood atau Bayesian menggunakan R/Python.</li><li>Pengenalan state-space model, hidden Markov model, dan penggunaan surrogate model atau machine learning untuk aproksimasi proses yang mahal secara komputasi.</li><li>Asesmen studi kasus antrian, reliability, kejadian ekstrem, atau event process dengan validasi simulasi, analisis sensitivitas, dan dokumentasi reproducible.</li></ul>
-  <h3>Protokol penggunaan AI</h3>
-  <ol>
-    <li>Ungkapkan alat, tujuan, prompt log ringkas, sumber, dan perubahan yang dilakukan.</li>
-    <li>Verifikasi asumsi, kode, hasil numerik, diagnostik, ketidakpastian, robustness, bias/fairness, privasi, dan konteks.</li>
-    <li>Jangan mengunggah data pribadi, rahasia, asesmen tertutup, atau kredensial ke layanan yang tidak disetujui.</li>
-    <li>Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil secara mandiri.</li>
-  </ol>
-  <p><strong>Bukti asesmen:</strong> ketepatan metode, validasi, reproducibility, interpretasi, komunikasi, dan transparansi penggunaan AI. Keluaran AI tanpa verifikasi bukan bukti ketercapaian CPMK.</p>
-</section>
+</div>
+<div id="penyelarasan-materi-dengan-rps-revisi-ai-2026" class="section level2" number="6.205">
+<h2><span class="header-section-number">6.205</span> Penyelarasan Materi
+dengan RPS Revisi AI 2026</h2>
+<p>Materi <strong>Proses Stokastik Tingkat Lanjut</strong> ini telah
+diselaraskan dengan RPS Revisi AI 2026. Rumusan CPL program studi tetap
+dan tidak diubah. Generative AI maupun agentic AI hanya digunakan
+sebagai alat bantu untuk mempercepat ketercapaian CPMK dan Sub-CPMK;
+penalaran statistika, keputusan metodologis, dan tanggung jawab akademik
+tetap berada pada mahasiswa.</p>
+<div id="integrasi-ai-kontekstual" class="section level3" number="6.205.1">
+<h3><span class="header-section-number">6.205.1</span> Integrasi AI
+kontekstual</h3>
+<ul>
+<li>Simulasi proses stokastik skala besar dan estimasi parameter
+berbasis likelihood atau Bayesian menggunakan R/Python.</li>
+<li>Pengenalan state-space model, hidden Markov model, dan penggunaan
+surrogate model atau machine learning untuk aproksimasi proses yang
+mahal secara komputasi.</li>
+<li>Asesmen studi kasus antrian, reliability, kejadian ekstrem, atau
+event process dengan validasi simulasi, analisis sensitivitas, dan
+dokumentasi reproducible.</li>
+</ul>
+</div>
+<div id="protokol-penggunaan-ai" class="section level3" number="6.205.2">
+<h3><span class="header-section-number">6.205.2</span> Protokol
+penggunaan AI</h3>
+<ol style="list-style-type: decimal">
+<li>Nyatakan alat, tujuan penggunaan, dan bagian pekerjaan yang dibantu
+AI.</li>
+<li>Simpan prompt log ringkas, sumber, versi kode/notebook, dan
+perubahan yang dilakukan.</li>
+<li>Verifikasi keluaran terhadap asumsi metode, sumber primer, hasil
+numerik, diagnostik, ketidakpastian, robustness, bias/fairness, privasi,
+dan konteks.</li>
+<li>Jangan memasukkan data pribadi, rahasia, soal asesmen tertutup, atau
+kredensial ke layanan AI yang tidak disetujui.</li>
+<li>Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil
+secara mandiri.</li>
+</ol>
+</div>
+<div id="bukti-asesmen" class="section level3" number="6.205.3">
+<h3><span class="header-section-number">6.205.3</span> Bukti
+asesmen</h3>
+<!-- BEGIN AI-INLINE:44be8a611330 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Bukti asesmen
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Rubrik Penilaian yang Disarankan.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
+<p>Penilaian berfokus pada ketepatan metode, validasi dan
+ketidakpastian, reproducibility, interpretasi, komunikasi, serta
+transparansi penggunaan AI. Keluaran AI tanpa verifikasi bukan bukti
+ketercapaian CPMK.</p>
 <!-- END ADOPSI AI RPS 2026 -->
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
 </div>
 
 <script>
@@ -16265,6 +18603,16 @@ $(document).ready(function ()  {
     // tocify
     var toc = $("#TOC").tocify(options).data("toc-tocify");
 });
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
 </script>
 
 </body>

@@ -147,7 +147,6 @@ table {
 </style>
 <!-- END UNPAD MATERIAL STYLE -->
 
-
 <!-- BEGIN UNPAD MATERIAL ENHANCEMENT -->
 
 ```{r setup-unpad-render, include=FALSE}
@@ -164,7 +163,6 @@ knitr::opts_chunk$set(
 )
 set.seed(2025)
 ```
-
 
 <div class="unpad-cover">
 <div class="unpad-cover__brand">
@@ -256,7 +254,6 @@ hr{border:0; height:2px; background:linear-gradient(90deg,transparent,#a87340,tr
 @media(max-width:1000px){#TOC{position:relative; width:auto; left:auto; top:auto; bottom:auto;} .main-container,.container,.container-fluid{margin:20px !important; padding:26px !important;}}
 </style>
 
-
 <div class="hero">
 <h1>Materi Pembelajaran Teori Antrian</h1>
 <div class="subtitle">Program Studi S2 Statistika Terapan - FMIPA Universitas Padjadjaran</div>
@@ -268,6 +265,30 @@ hr{border:0; height:2px; background:linear-gradient(90deg,transparent,#a87340,tr
 <div class="rpsbox">
 <strong>Dasar penyusunan.</strong> Materi ini disusun mengikuti RPS Mata Kuliah <em>Teori Antrian</em> pada Program Studi S2 Statistika Terapan, FMIPA Universitas Padjadjaran. RPS menempatkan mata kuliah ini sebagai mata kuliah wajib semester 2 dengan fokus pada analisis karakteristik sistem antrian, pemodelan berbasis data nyata, simulasi komputer, serta inovasi model/algoritma teori antrian. Struktur materi dibagi ke dalam empat blok SubCPMK: konsep dasar, pemodelan data, simulasi komputer, dan inovasi/komunikasi ilmiah.
 </div>
+
+
+<!-- BEGIN AI-INLINE-STYLE-2026 -->
+<style>
+.ai-inline {
+  margin: 1rem 0 1.35rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid #bfd9d5;
+  border-left: 7px solid #0f766e;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #eff9f7, #fffaf0);
+}
+.ai-inline--agentic { border-left-color: #17395c; background: linear-gradient(135deg, #eef5fb, #f5faf8); }
+.ai-inline--assessment { border-left-color: #a35d00; background: #fff8e8; }
+.ai-inline h3, .ai-inline h4 { margin-top: 0; color: #17395c; }
+.ai-inline p:last-child, .ai-inline ul:last-child { margin-bottom: 0; }
+.ai-inline__label {
+  display: inline-block; margin-bottom: .45rem; padding: .2rem .55rem;
+  border-radius: 999px; background: #17395c; color: white;
+  font-size: .78rem; font-weight: 800;
+}
+.ai-inline table { width: 100%; margin: .6rem 0; background: white; }
+</style>
+<!-- END AI-INLINE-STYLE-2026 -->
 
 # Identitas Mata Kuliah dan Peta Pembelajaran
 
@@ -302,7 +323,6 @@ Materi ini menerjemahkan CPL3, CPL4, dan CPL5 ke dalam kegiatan belajar yang kon
 Modul ini dibuat dalam format R Markdown agar dapat dibaca sebagai HTML profesional, dikembangkan menjadi bahan ajar interaktif, dan dilengkapi kode yang dapat direproduksi. Mahasiswa sebaiknya membaca bagian konsep sebelum menjalankan kode, karena kode dalam teori antrian hanya bermakna jika asumsi model dipahami. Dosen dapat menggunakan modul ini sebagai bahan kuliah, bahan praktikum, lembar kerja proyek, atau bahan diskusi. Setiap bagian memuat konsep, rumus, contoh kasus, algoritma kerja, potongan kode R/Python, latihan, dan catatan interpretasi. Struktur ini sengaja dibuat konsisten agar mahasiswa memperoleh alur berpikir yang stabil: memahami sistem, mengumpulkan data, memilih model, menghitung indikator, memvalidasi asumsi, melakukan simulasi jika perlu, lalu menyusun rekomendasi.
 
 ## Ilustrasi dasar sistem antrian
-
 
 <div class="figurebox">
 <svg width="880" height="235" viewBox="0 0 880 235" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustrasi sistem antrian">
@@ -339,7 +359,6 @@ Modul ini dibuat dalam format R Markdown agar dapat dibaca sebagai HTML profesio
 </svg>
 </div>
 
-
 <div class="callout">
 <strong>Gagasan utama.</strong> Sistem antrian adalah sistem stokastik yang menghubungkan proses kedatangan, mekanisme pelayanan, disiplin antrean, kapasitas sistem, jumlah pelayan, dan populasi sumber. Yang dianalisis bukan hanya panjang antrean, tetapi juga waktu tunggu, utilisasi server, probabilitas kosong, probabilitas penuh, probabilitas menunggu, serta konsekuensi biaya dan mutu layanan.
 </div>
@@ -348,12 +367,34 @@ Modul ini dibuat dalam format R Markdown agar dapat dibaca sebagai HTML profesio
 
 Referensi utama yang digunakan dalam modul ini meliputi buku klasik dan modern teori antrian [@gross2018; @kleinrock1975; @bhat2015], dasar proses stokastik dan probabilitas [@ross2014; @tijms2003], hukum Little [@little1961], notasi Kendall [@kendall1953], serta literatur simulasi kejadian diskrit [@banks2010; @law2015; @nelson2013]. Untuk pembahasan jaringan antrian dan aplikasi komputasi, modul juga merujuk pada literatur queueing networks dan performance modeling [@bolch2006; @harcholbalter2013; @whitt2002].
 
-
 ```{r setup, include=FALSE, eval=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, fig.width = 8, fig.height = 5)
 ```
 
 # Landasan Teori dan Cara Berpikir Sistem
+
+<!-- BEGIN AI-INLINE:5ac43468cc9b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 1</span>
+<h3>Generative dan Agentic AI untuk Landasan Teori dan Cara Berpikir Sistem</h3>
+
+**Arah RPS.** Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK1 melalui fokus: Pendahuluan dan Konsep Dasar Teori Antrian; Definisi, sejarah, dan ruang lingkup teori antrian. |
+| Generative AI | Digunakan untuk merumuskan alternatif penjelasan, contoh, dan hipotesis awal. |
+| Agentic AI | Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 Teori antrian lahir dari kebutuhan praktis untuk memahami mengapa layanan dengan kapasitas yang tampaknya cukup tetap dapat menghasilkan antrean panjang. Pada level magister, fokus pembelajaran tidak berhenti pada penggunaan rumus, tetapi meluas pada kemampuan membaca sistem, menguji asumsi, menyusun model, dan menerjemahkan hasil ke dalam kebijakan layanan. Dalam kerangka ini, sistem antrian dipahami sebagai sistem stokastik: kedatangan tidak sepenuhnya dapat diprediksi, durasi pelayanan bervariasi, dan keputusan operasional selalu berhadapan dengan ketidakpastian.
 
@@ -383,6 +424,16 @@ Modul ini menggunakan empat prinsip pedagogis. Pertama, setiap konsep harus dika
 
 ## Alur analisis umum
 
+<!-- BEGIN AI-INLINE:c99d7abd1ed0 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Alur analisis umum</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 1. Pahami konteks layanan dan tentukan batas sistem.
 2. Buat diagram proses dari kedatangan sampai keluar sistem.
 3. Kumpulkan dan audit data timestamp.
@@ -395,6 +446,16 @@ Modul ini menggunakan empat prinsip pedagogis. Pertama, setiap konsep harus dika
 10. Susun rekomendasi dan komunikasikan keterbatasan.
 
 ## Pertemuan 1: Pendahuluan dan Konsep Dasar Teori Antrian
+
+<!-- BEGIN AI-INLINE:7c34fa76fdb0 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Pertemuan 1: Pendahuluan dan Konsep Dasar Teori Antrian</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Minta AI menjelaskan **Landasan Teori dan Cara Berpikir Sistem** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="tujuan">
 <strong>Tujuan pembelajaran.</strong> Setelah mempelajari bagian ini, mahasiswa diharapkan mampu menjelaskan konsep utama pendahuluan dan konsep dasar teori antrian, menghubungkannya dengan kerangka input-proses-output, menerapkan rumus kunci L=\lambda W, serta menyusun analisis awal untuk konteks pelayanan administrasi kampus, bank, rumah sakit, kasir minimarket, dan helpdesk digital.
@@ -430,14 +491,33 @@ Secara metodologis, asumsi harus selalu disebutkan sebelum hasil. Jika model men
 
 ### Rumus dan interpretasi inti
 
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Rumus dan interpretasi inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada **Landasan Teori dan Cara Berpikir Sistem**, lalu periksa setiap langkah secara manual, uji kasus batas, dan cocokkan dengan rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class="formula-box">
 $$L=\lambda W$$
 
 Hukum Little menyatakan bahwa rata-rata jumlah entitas dalam sistem sama dengan laju kedatangan efektif dikalikan rata-rata waktu dalam sistem. Rumus ini kuat karena berlaku luas pada sistem stabil, meskipun distribusi kedatangan dan pelayanan tidak harus selalu eksponensial.
 </div>
 
-
 ### Contoh kasus terapan
+
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 <strong>Skenario.</strong> Pertimbangkan pelayanan administrasi kampus, bank, rumah sakit, kasir minimarket, dan helpdesk digital. Pengelola ingin mengetahui apakah sistem saat ini masih layak dipertahankan, perlu ditambah kapasitas, atau cukup diperbaiki melalui perubahan disiplin pelayanan. Data minimal yang perlu dikumpulkan adalah waktu kedatangan, waktu mulai pelayanan, waktu selesai pelayanan, jumlah server aktif, jumlah pelanggan yang meninggalkan antrean, dan catatan kejadian khusus seperti gangguan sistem atau pergantian shift.
@@ -459,7 +539,6 @@ Langkah ketiga adalah memilih model awal. Model awal dapat berupa model analitik
 
 Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus operasional. Pernyataan seperti "sistem perlu diperbaiki" terlalu umum. Pernyataan yang lebih kuat adalah "menambah satu server pada pukul 08.00-10.00 diperkirakan menurunkan rata-rata waktu tunggu dari 18 menit menjadi 7 menit, dengan utilisasi server tetap berada di bawah 0,85". Rekomendasi seperti ini dapat diuji, dipertimbangkan biayanya, dan dikomunikasikan kepada pengelola layanan.
 
-
 ### Algoritma kerja analisis
 
 1. Definisikan batas sistem: siapa pelanggan, apa unit layanan, kapan proses dimulai, dan kapan proses selesai.
@@ -475,8 +554,6 @@ Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus opera
 
 Algoritma di atas tampak linear, tetapi dalam praktik bersifat iteratif. Setelah validasi dilakukan, mahasiswa mungkin perlu kembali ke tahap pengumpulan data atau definisi sistem. Iterasi ini sehat karena menunjukkan bahwa model sedang dikalibrasi dengan realitas. Dalam riset terapan, model yang langsung tampak sempurna justru sering mencurigakan; mungkin karena analis belum cukup keras menguji asumsi.
 
-
-
 ### Validasi, interpretasi, dan kesalahan umum
 
 Validasi dimulai dari pertanyaan sederhana: apakah parameter yang dihitung masuk akal menurut orang yang memahami layanan? Jika estimasi $\lambda$ menyatakan 120 pelanggan per jam tetapi loket hanya menerima 40 nomor antrean per hari, ada kesalahan definisi waktu atau unit pengamatan. Jika estimasi $\mu$ menyatakan rata-rata pelayanan 30 detik padahal observasi lapangan menunjukkan proses administratif membutuhkan beberapa menit, maka timestamp mungkin salah dicatat. Pemeriksaan kewajaran semacam ini sering lebih cepat menemukan masalah daripada uji statistik formal.
@@ -487,8 +564,17 @@ Interpretasi harus selalu menghubungkan angka dengan keputusan. Nilai $W_q$ sebe
 
 Pada bagian Pendahuluan dan Konsep Dasar Teori Antrian, mahasiswa juga perlu membedakan hasil analitik dan hasil simulasi. Hasil analitik memberikan ekspresi tertutup yang elegan, tetapi bergantung pada asumsi. Hasil simulasi lebih fleksibel, tetapi memiliki error Monte Carlo dan membutuhkan desain eksperimen. Jika keduanya sejalan, kepercayaan terhadap analisis meningkat. Jika keduanya berbeda, perbedaan itu harus dijelaskan, bukan disembunyikan seperti typo di laporan akhir.
 
-
 ### Latihan dan tugas mini
+
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan tugas mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 1. Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat diagram alur layanan, lalu tentukan batas sistem dan definisi pelanggan.
 2. Untuk konteks pelayanan administrasi kampus, bank, rumah sakit, kasir minimarket, dan helpdesk digital, jelaskan data apa saja yang harus dikumpulkan agar model kerangka input-proses-output dapat digunakan secara bertanggung jawab.
@@ -500,8 +586,17 @@ Pada bagian Pendahuluan dan Konsep Dasar Teori Antrian, mahasiswa juga perlu mem
 <strong>Output yang dikumpulkan.</strong> Mahasiswa menyiapkan catatan 1-2 halaman berisi deskripsi sistem, sketsa alur, tabel data yang diperlukan, model awal yang dipilih, serta dugaan keterbatasan. Untuk pertemuan proyek, catatan ini menjadi bahan diskusi kelompok dan dasar penyusunan laporan.
 </div>
 
-
 ### Catatan pendalaman untuk diskusi kelas
+
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Catatan pendalaman untuk diskusi kelas</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pendekatan terbaik dalam teori antrian adalah berpikir seperti konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa harus peka terhadap kebutuhan pengambil keputusan: seberapa lama pelanggan boleh menunggu, berapa biaya tambahan server, bagaimana jadwal kerja disusun, dan apakah rekomendasi dapat dilaksanakan. Sebagai peneliti, mahasiswa harus menjaga validitas: asumsi harus dinyatakan, data harus diaudit, estimasi harus dijelaskan, dan keterbatasan harus diakui. Keduanya tidak bertentangan; justru kombinasi ini yang membuat analisis statistik bernilai.
 
@@ -511,11 +606,9 @@ Untuk mahasiswa S2, kualitas analisis diukur dari kedalaman argumentasi. Jawaban
 
 Di akhir pertemuan, mahasiswa sebaiknya menuliskan satu insight metodologis dan satu insight praktis. Insight metodologis bisa berupa pemahaman tentang hubungan antara $\lambda$, $\mu$, dan $\rho$. Insight praktis bisa berupa kesadaran bahwa antrean panjang tidak selalu berarti pegawai lambat; bisa saja demand melebihi kapasitas pada jam tertentu, pelanggan tidak memiliki informasi, atau proses layanan terlalu heterogen. Kebiasaan memisahkan diagnosis dari prasangka adalah bekal penting dalam analisis statistik terapan.
 
-
 ### Ringkasan pertemuan
 
 Pertemuan 1 menekankan membedakan fenomena antrean sebagai gejala stokastik, bukan sekadar barisan orang melalui pembahasan pendahuluan dan konsep dasar teori antrian. Mahasiswa mempelajari bagaimana kerangka input-proses-output digunakan untuk membaca sistem nyata, bagaimana parameter kunci seperti $\lambda$, $\mu$, $c$, dan $\rho$ diinterpretasikan, serta bagaimana hasil analisis diterjemahkan menjadi rekomendasi. Bagian ini juga menyiapkan mahasiswa untuk tugas analisis kasus, praktikum pemodelan, proyek simulasi, dan pengembangan inovasi model pada bagian berikutnya.
-
 
 ## Pertemuan 2: Komponen Sistem Antrian: Kedatangan, Pelayanan, Disiplin, Kapasitas
 
@@ -553,14 +646,33 @@ Secara metodologis, asumsi harus selalu disebutkan sebelum hasil. Jika model men
 
 ### Rumus dan interpretasi inti
 
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Rumus dan interpretasi inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada **Landasan Teori dan Cara Berpikir Sistem**, lalu periksa setiap langkah secara manual, uji kasus batas, dan cocokkan dengan rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class="formula-box">
 $$\rho=\frac{\lambda}{c\mu}$$
 
 Utilisasi menggambarkan proporsi kapasitas pelayanan yang terpakai. Jika nilai ini mendekati satu, sistem terlihat produktif, tetapi cadangan kapasitas sangat tipis sehingga variasi kecil pada kedatangan dapat membuat waktu tunggu melonjak tajam.
 </div>
 
-
 ### Contoh kasus terapan
+
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 <strong>Skenario.</strong> Pertimbangkan loket layanan publik dengan jam sibuk pagi dan jeda siang. Pengelola ingin mengetahui apakah sistem saat ini masih layak dipertahankan, perlu ditambah kapasitas, atau cukup diperbaiki melalui perubahan disiplin pelayanan. Data minimal yang perlu dikumpulkan adalah waktu kedatangan, waktu mulai pelayanan, waktu selesai pelayanan, jumlah server aktif, jumlah pelanggan yang meninggalkan antrean, dan catatan kejadian khusus seperti gangguan sistem atau pergantian shift.
@@ -582,7 +694,6 @@ Langkah ketiga adalah memilih model awal. Model awal dapat berupa model analitik
 
 Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus operasional. Pernyataan seperti "sistem perlu diperbaiki" terlalu umum. Pernyataan yang lebih kuat adalah "menambah satu server pada pukul 08.00-10.00 diperkirakan menurunkan rata-rata waktu tunggu dari 18 menit menjadi 7 menit, dengan utilisasi server tetap berada di bawah 0,85". Rekomendasi seperti ini dapat diuji, dipertimbangkan biayanya, dan dikomunikasikan kepada pengelola layanan.
 
-
 ### Algoritma kerja analisis
 
 1. Definisikan batas sistem: siapa pelanggan, apa unit layanan, kapan proses dimulai, dan kapan proses selesai.
@@ -598,8 +709,6 @@ Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus opera
 
 Algoritma di atas tampak linear, tetapi dalam praktik bersifat iteratif. Setelah validasi dilakukan, mahasiswa mungkin perlu kembali ke tahap pengumpulan data atau definisi sistem. Iterasi ini sehat karena menunjukkan bahwa model sedang dikalibrasi dengan realitas. Dalam riset terapan, model yang langsung tampak sempurna justru sering mencurigakan; mungkin karena analis belum cukup keras menguji asumsi.
 
-
-
 ### Validasi, interpretasi, dan kesalahan umum
 
 Validasi dimulai dari pertanyaan sederhana: apakah parameter yang dihitung masuk akal menurut orang yang memahami layanan? Jika estimasi $\lambda$ menyatakan 120 pelanggan per jam tetapi loket hanya menerima 40 nomor antrean per hari, ada kesalahan definisi waktu atau unit pengamatan. Jika estimasi $\mu$ menyatakan rata-rata pelayanan 30 detik padahal observasi lapangan menunjukkan proses administratif membutuhkan beberapa menit, maka timestamp mungkin salah dicatat. Pemeriksaan kewajaran semacam ini sering lebih cepat menemukan masalah daripada uji statistik formal.
@@ -610,8 +719,17 @@ Interpretasi harus selalu menghubungkan angka dengan keputusan. Nilai $W_q$ sebe
 
 Pada bagian Komponen Sistem Antrian: Kedatangan, Pelayanan, Disiplin, Kapasitas, mahasiswa juga perlu membedakan hasil analitik dan hasil simulasi. Hasil analitik memberikan ekspresi tertutup yang elegan, tetapi bergantung pada asumsi. Hasil simulasi lebih fleksibel, tetapi memiliki error Monte Carlo dan membutuhkan desain eksperimen. Jika keduanya sejalan, kepercayaan terhadap analisis meningkat. Jika keduanya berbeda, perbedaan itu harus dijelaskan, bukan disembunyikan seperti typo di laporan akhir.
 
-
 ### Latihan dan tugas mini
+
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan tugas mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 1. Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat diagram alur layanan, lalu tentukan batas sistem dan definisi pelanggan.
 2. Untuk konteks loket layanan publik dengan jam sibuk pagi dan jeda siang, jelaskan data apa saja yang harus dikumpulkan agar model arrival process, service mechanism, queue discipline dapat digunakan secara bertanggung jawab.
@@ -623,8 +741,17 @@ Pada bagian Komponen Sistem Antrian: Kedatangan, Pelayanan, Disiplin, Kapasitas,
 <strong>Output yang dikumpulkan.</strong> Mahasiswa menyiapkan catatan 1-2 halaman berisi deskripsi sistem, sketsa alur, tabel data yang diperlukan, model awal yang dipilih, serta dugaan keterbatasan. Untuk pertemuan proyek, catatan ini menjadi bahan diskusi kelompok dan dasar penyusunan laporan.
 </div>
 
-
 ### Catatan pendalaman untuk diskusi kelas
+
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Catatan pendalaman untuk diskusi kelas</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pendekatan terbaik dalam teori antrian adalah berpikir seperti konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa harus peka terhadap kebutuhan pengambil keputusan: seberapa lama pelanggan boleh menunggu, berapa biaya tambahan server, bagaimana jadwal kerja disusun, dan apakah rekomendasi dapat dilaksanakan. Sebagai peneliti, mahasiswa harus menjaga validitas: asumsi harus dinyatakan, data harus diaudit, estimasi harus dijelaskan, dan keterbatasan harus diakui. Keduanya tidak bertentangan; justru kombinasi ini yang membuat analisis statistik bernilai.
 
@@ -634,11 +761,9 @@ Untuk mahasiswa S2, kualitas analisis diukur dari kedalaman argumentasi. Jawaban
 
 Di akhir pertemuan, mahasiswa sebaiknya menuliskan satu insight metodologis dan satu insight praktis. Insight metodologis bisa berupa pemahaman tentang hubungan antara $\lambda$, $\mu$, dan $\rho$. Insight praktis bisa berupa kesadaran bahwa antrean panjang tidak selalu berarti pegawai lambat; bisa saja demand melebihi kapasitas pada jam tertentu, pelanggan tidak memiliki informasi, atau proses layanan terlalu heterogen. Kebiasaan memisahkan diagnosis dari prasangka adalah bekal penting dalam analisis statistik terapan.
 
-
 ### Ringkasan pertemuan
 
 Pertemuan 2 menekankan menghubungkan komponen sistem dengan parameter operasional melalui pembahasan komponen sistem antrian: kedatangan, pelayanan, disiplin, kapasitas. Mahasiswa mempelajari bagaimana arrival process, service mechanism, queue discipline digunakan untuk membaca sistem nyata, bagaimana parameter kunci seperti $\lambda$, $\mu$, $c$, dan $\rho$ diinterpretasikan, serta bagaimana hasil analisis diterjemahkan menjadi rekomendasi. Bagian ini juga menyiapkan mahasiswa untuk tugas analisis kasus, praktikum pemodelan, proyek simulasi, dan pengembangan inovasi model pada bagian berikutnya.
-
 
 ## Pertemuan 3: Notasi Kendall, Parameter Kinerja, dan Klasifikasi Model
 
@@ -676,14 +801,33 @@ Secara metodologis, asumsi harus selalu disebutkan sebelum hasil. Jika model men
 
 ### Rumus dan interpretasi inti
 
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Rumus dan interpretasi inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada **Landasan Teori dan Cara Berpikir Sistem**, lalu periksa setiap langkah secara manual, uji kasus batas, dan cocokkan dengan rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class="formula-box">
 $$A/S/c/K/N/D$$
 
 Notasi Kendall meringkas asumsi model: distribusi kedatangan, distribusi pelayanan, jumlah server, kapasitas sistem, ukuran populasi, dan disiplin antrean.
 </div>
 
-
 ### Contoh kasus terapan
+
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 <strong>Skenario.</strong> Pertimbangkan klinik rawat jalan dengan pendaftaran, triase, dan pemeriksaan dokter. Pengelola ingin mengetahui apakah sistem saat ini masih layak dipertahankan, perlu ditambah kapasitas, atau cukup diperbaiki melalui perubahan disiplin pelayanan. Data minimal yang perlu dikumpulkan adalah waktu kedatangan, waktu mulai pelayanan, waktu selesai pelayanan, jumlah server aktif, jumlah pelanggan yang meninggalkan antrean, dan catatan kejadian khusus seperti gangguan sistem atau pergantian shift.
@@ -705,7 +849,6 @@ Langkah ketiga adalah memilih model awal. Model awal dapat berupa model analitik
 
 Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus operasional. Pernyataan seperti "sistem perlu diperbaiki" terlalu umum. Pernyataan yang lebih kuat adalah "menambah satu server pada pukul 08.00-10.00 diperkirakan menurunkan rata-rata waktu tunggu dari 18 menit menjadi 7 menit, dengan utilisasi server tetap berada di bawah 0,85". Rekomendasi seperti ini dapat diuji, dipertimbangkan biayanya, dan dikomunikasikan kepada pengelola layanan.
 
-
 ### Algoritma kerja analisis
 
 1. Definisikan batas sistem: siapa pelanggan, apa unit layanan, kapan proses dimulai, dan kapan proses selesai.
@@ -721,8 +864,6 @@ Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus opera
 
 Algoritma di atas tampak linear, tetapi dalam praktik bersifat iteratif. Setelah validasi dilakukan, mahasiswa mungkin perlu kembali ke tahap pengumpulan data atau definisi sistem. Iterasi ini sehat karena menunjukkan bahwa model sedang dikalibrasi dengan realitas. Dalam riset terapan, model yang langsung tampak sempurna justru sering mencurigakan; mungkin karena analis belum cukup keras menguji asumsi.
 
-
-
 ### Validasi, interpretasi, dan kesalahan umum
 
 Validasi dimulai dari pertanyaan sederhana: apakah parameter yang dihitung masuk akal menurut orang yang memahami layanan? Jika estimasi $\lambda$ menyatakan 120 pelanggan per jam tetapi loket hanya menerima 40 nomor antrean per hari, ada kesalahan definisi waktu atau unit pengamatan. Jika estimasi $\mu$ menyatakan rata-rata pelayanan 30 detik padahal observasi lapangan menunjukkan proses administratif membutuhkan beberapa menit, maka timestamp mungkin salah dicatat. Pemeriksaan kewajaran semacam ini sering lebih cepat menemukan masalah daripada uji statistik formal.
@@ -733,8 +874,17 @@ Interpretasi harus selalu menghubungkan angka dengan keputusan. Nilai $W_q$ sebe
 
 Pada bagian Notasi Kendall, Parameter Kinerja, dan Klasifikasi Model, mahasiswa juga perlu membedakan hasil analitik dan hasil simulasi. Hasil analitik memberikan ekspresi tertutup yang elegan, tetapi bergantung pada asumsi. Hasil simulasi lebih fleksibel, tetapi memiliki error Monte Carlo dan membutuhkan desain eksperimen. Jika keduanya sejalan, kepercayaan terhadap analisis meningkat. Jika keduanya berbeda, perbedaan itu harus dijelaskan, bukan disembunyikan seperti typo di laporan akhir.
 
-
 ### Latihan dan tugas mini
+
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan tugas mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 1. Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat diagram alur layanan, lalu tentukan batas sistem dan definisi pelanggan.
 2. Untuk konteks klinik rawat jalan dengan pendaftaran, triase, dan pemeriksaan dokter, jelaskan data apa saja yang harus dikumpulkan agar model A/S/c/K/N/D dapat digunakan secara bertanggung jawab.
@@ -746,8 +896,17 @@ Pada bagian Notasi Kendall, Parameter Kinerja, dan Klasifikasi Model, mahasiswa 
 <strong>Output yang dikumpulkan.</strong> Mahasiswa menyiapkan catatan 1-2 halaman berisi deskripsi sistem, sketsa alur, tabel data yang diperlukan, model awal yang dipilih, serta dugaan keterbatasan. Untuk pertemuan proyek, catatan ini menjadi bahan diskusi kelompok dan dasar penyusunan laporan.
 </div>
 
-
 ### Catatan pendalaman untuk diskusi kelas
+
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Catatan pendalaman untuk diskusi kelas</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pendekatan terbaik dalam teori antrian adalah berpikir seperti konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa harus peka terhadap kebutuhan pengambil keputusan: seberapa lama pelanggan boleh menunggu, berapa biaya tambahan server, bagaimana jadwal kerja disusun, dan apakah rekomendasi dapat dilaksanakan. Sebagai peneliti, mahasiswa harus menjaga validitas: asumsi harus dinyatakan, data harus diaudit, estimasi harus dijelaskan, dan keterbatasan harus diakui. Keduanya tidak bertentangan; justru kombinasi ini yang membuat analisis statistik bernilai.
 
@@ -757,11 +916,9 @@ Untuk mahasiswa S2, kualitas analisis diukur dari kedalaman argumentasi. Jawaban
 
 Di akhir pertemuan, mahasiswa sebaiknya menuliskan satu insight metodologis dan satu insight praktis. Insight metodologis bisa berupa pemahaman tentang hubungan antara $\lambda$, $\mu$, dan $\rho$. Insight praktis bisa berupa kesadaran bahwa antrean panjang tidak selalu berarti pegawai lambat; bisa saja demand melebihi kapasitas pada jam tertentu, pelanggan tidak memiliki informasi, atau proses layanan terlalu heterogen. Kebiasaan memisahkan diagnosis dari prasangka adalah bekal penting dalam analisis statistik terapan.
 
-
 ### Ringkasan pertemuan
 
 Pertemuan 3 menekankan membaca notasi model dan menerjemahkannya menjadi asumsi statistik melalui pembahasan notasi kendall, parameter kinerja, dan klasifikasi model. Mahasiswa mempelajari bagaimana A/S/c/K/N/D digunakan untuk membaca sistem nyata, bagaimana parameter kunci seperti $\lambda$, $\mu$, $c$, dan $\rho$ diinterpretasikan, serta bagaimana hasil analisis diterjemahkan menjadi rekomendasi. Bagian ini juga menyiapkan mahasiswa untuk tugas analisis kasus, praktikum pemodelan, proyek simulasi, dan pengembangan inovasi model pada bagian berikutnya.
-
 
 ## Pertemuan 4: Hukum Little dan Ukuran Kinerja Dasar
 
@@ -799,14 +956,33 @@ Secara metodologis, asumsi harus selalu disebutkan sebelum hasil. Jika model men
 
 ### Rumus dan interpretasi inti
 
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Rumus dan interpretasi inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada **Landasan Teori dan Cara Berpikir Sistem**, lalu periksa setiap langkah secara manual, uji kasus batas, dan cocokkan dengan rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class="formula-box">
 $$L_q=\lambda W_q,\qquad L_s=\lambda W_s$$
 
 Relasi antara jumlah rata-rata dan waktu rata-rata membantu memeriksa konsistensi hasil analitik, hasil data, dan hasil simulasi.
 </div>
 
-
 ### Contoh kasus terapan
+
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 <strong>Skenario.</strong> Pertimbangkan antrian tiket transportasi dan layanan call center sederhana. Pengelola ingin mengetahui apakah sistem saat ini masih layak dipertahankan, perlu ditambah kapasitas, atau cukup diperbaiki melalui perubahan disiplin pelayanan. Data minimal yang perlu dikumpulkan adalah waktu kedatangan, waktu mulai pelayanan, waktu selesai pelayanan, jumlah server aktif, jumlah pelanggan yang meninggalkan antrean, dan catatan kejadian khusus seperti gangguan sistem atau pergantian shift.
@@ -828,7 +1004,6 @@ Langkah ketiga adalah memilih model awal. Model awal dapat berupa model analitik
 
 Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus operasional. Pernyataan seperti "sistem perlu diperbaiki" terlalu umum. Pernyataan yang lebih kuat adalah "menambah satu server pada pukul 08.00-10.00 diperkirakan menurunkan rata-rata waktu tunggu dari 18 menit menjadi 7 menit, dengan utilisasi server tetap berada di bawah 0,85". Rekomendasi seperti ini dapat diuji, dipertimbangkan biayanya, dan dikomunikasikan kepada pengelola layanan.
 
-
 ### Algoritma kerja analisis
 
 1. Definisikan batas sistem: siapa pelanggan, apa unit layanan, kapan proses dimulai, dan kapan proses selesai.
@@ -844,8 +1019,6 @@ Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus opera
 
 Algoritma di atas tampak linear, tetapi dalam praktik bersifat iteratif. Setelah validasi dilakukan, mahasiswa mungkin perlu kembali ke tahap pengumpulan data atau definisi sistem. Iterasi ini sehat karena menunjukkan bahwa model sedang dikalibrasi dengan realitas. Dalam riset terapan, model yang langsung tampak sempurna justru sering mencurigakan; mungkin karena analis belum cukup keras menguji asumsi.
 
-
-
 ### Validasi, interpretasi, dan kesalahan umum
 
 Validasi dimulai dari pertanyaan sederhana: apakah parameter yang dihitung masuk akal menurut orang yang memahami layanan? Jika estimasi $\lambda$ menyatakan 120 pelanggan per jam tetapi loket hanya menerima 40 nomor antrean per hari, ada kesalahan definisi waktu atau unit pengamatan. Jika estimasi $\mu$ menyatakan rata-rata pelayanan 30 detik padahal observasi lapangan menunjukkan proses administratif membutuhkan beberapa menit, maka timestamp mungkin salah dicatat. Pemeriksaan kewajaran semacam ini sering lebih cepat menemukan masalah daripada uji statistik formal.
@@ -856,8 +1029,17 @@ Interpretasi harus selalu menghubungkan angka dengan keputusan. Nilai $W_q$ sebe
 
 Pada bagian Hukum Little dan Ukuran Kinerja Dasar, mahasiswa juga perlu membedakan hasil analitik dan hasil simulasi. Hasil analitik memberikan ekspresi tertutup yang elegan, tetapi bergantung pada asumsi. Hasil simulasi lebih fleksibel, tetapi memiliki error Monte Carlo dan membutuhkan desain eksperimen. Jika keduanya sejalan, kepercayaan terhadap analisis meningkat. Jika keduanya berbeda, perbedaan itu harus dijelaskan, bukan disembunyikan seperti typo di laporan akhir.
 
-
 ### Latihan dan tugas mini
+
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan tugas mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 1. Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat diagram alur layanan, lalu tentukan batas sistem dan definisi pelanggan.
 2. Untuk konteks antrian tiket transportasi dan layanan call center sederhana, jelaskan data apa saja yang harus dikumpulkan agar model hubungan L, W, Lq, dan Wq dapat digunakan secara bertanggung jawab.
@@ -869,8 +1051,17 @@ Pada bagian Hukum Little dan Ukuran Kinerja Dasar, mahasiswa juga perlu membedak
 <strong>Output yang dikumpulkan.</strong> Mahasiswa menyiapkan catatan 1-2 halaman berisi deskripsi sistem, sketsa alur, tabel data yang diperlukan, model awal yang dipilih, serta dugaan keterbatasan. Untuk pertemuan proyek, catatan ini menjadi bahan diskusi kelompok dan dasar penyusunan laporan.
 </div>
 
-
 ### Catatan pendalaman untuk diskusi kelas
+
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Catatan pendalaman untuk diskusi kelas</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pendekatan terbaik dalam teori antrian adalah berpikir seperti konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa harus peka terhadap kebutuhan pengambil keputusan: seberapa lama pelanggan boleh menunggu, berapa biaya tambahan server, bagaimana jadwal kerja disusun, dan apakah rekomendasi dapat dilaksanakan. Sebagai peneliti, mahasiswa harus menjaga validitas: asumsi harus dinyatakan, data harus diaudit, estimasi harus dijelaskan, dan keterbatasan harus diakui. Keduanya tidak bertentangan; justru kombinasi ini yang membuat analisis statistik bernilai.
 
@@ -880,11 +1071,9 @@ Untuk mahasiswa S2, kualitas analisis diukur dari kedalaman argumentasi. Jawaban
 
 Di akhir pertemuan, mahasiswa sebaiknya menuliskan satu insight metodologis dan satu insight praktis. Insight metodologis bisa berupa pemahaman tentang hubungan antara $\lambda$, $\mu$, dan $\rho$. Insight praktis bisa berupa kesadaran bahwa antrean panjang tidak selalu berarti pegawai lambat; bisa saja demand melebihi kapasitas pada jam tertentu, pelanggan tidak memiliki informasi, atau proses layanan terlalu heterogen. Kebiasaan memisahkan diagnosis dari prasangka adalah bekal penting dalam analisis statistik terapan.
 
-
 ### Ringkasan pertemuan
 
 Pertemuan 4 menekankan menginterpretasikan indikator kinerja sebagai dasar rekomendasi melalui pembahasan hukum little dan ukuran kinerja dasar. Mahasiswa mempelajari bagaimana hubungan L, W, Lq, dan Wq digunakan untuk membaca sistem nyata, bagaimana parameter kunci seperti $\lambda$, $\mu$, $c$, dan $\rho$ diinterpretasikan, serta bagaimana hasil analisis diterjemahkan menjadi rekomendasi. Bagian ini juga menyiapkan mahasiswa untuk tugas analisis kasus, praktikum pemodelan, proyek simulasi, dan pengembangan inovasi model pada bagian berikutnya.
-
 
 ## Pertemuan 5: Model M/M/1: Satu Server, Kedatangan Poisson, Pelayanan Eksponensial
 
@@ -922,14 +1111,33 @@ Secara metodologis, asumsi harus selalu disebutkan sebelum hasil. Jika model men
 
 ### Rumus dan interpretasi inti
 
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Rumus dan interpretasi inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada **Landasan Teori dan Cara Berpikir Sistem**, lalu periksa setiap langkah secara manual, uji kasus batas, dan cocokkan dengan rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class="formula-box">
 $$\rho=\frac{\lambda}{\mu},\quad P_0=1-\rho,\quad L_s=\frac{\rho}{1-\rho},\quad W_s=\frac{1}{\mu-\lambda}$$
 
 Model M/M/1 stabil hanya jika $\lambda<\mu$. Kenaikan utilisasi dari 0,80 ke 0,90 dapat menaikkan waktu tunggu secara tidak proporsional; ini efek nonlinier yang sering dilupakan oleh pengelola layanan.
 </div>
 
-
 ### Contoh kasus terapan
+
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 <strong>Skenario.</strong> Pertimbangkan satu loket administrasi atau satu kanal layanan daring. Pengelola ingin mengetahui apakah sistem saat ini masih layak dipertahankan, perlu ditambah kapasitas, atau cukup diperbaiki melalui perubahan disiplin pelayanan. Data minimal yang perlu dikumpulkan adalah waktu kedatangan, waktu mulai pelayanan, waktu selesai pelayanan, jumlah server aktif, jumlah pelanggan yang meninggalkan antrean, dan catatan kejadian khusus seperti gangguan sistem atau pergantian shift.
@@ -951,7 +1159,6 @@ Langkah ketiga adalah memilih model awal. Model awal dapat berupa model analitik
 
 Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus operasional. Pernyataan seperti "sistem perlu diperbaiki" terlalu umum. Pernyataan yang lebih kuat adalah "menambah satu server pada pukul 08.00-10.00 diperkirakan menurunkan rata-rata waktu tunggu dari 18 menit menjadi 7 menit, dengan utilisasi server tetap berada di bawah 0,85". Rekomendasi seperti ini dapat diuji, dipertimbangkan biayanya, dan dikomunikasikan kepada pengelola layanan.
 
-
 ### Algoritma kerja analisis
 
 1. Definisikan batas sistem: siapa pelanggan, apa unit layanan, kapan proses dimulai, dan kapan proses selesai.
@@ -967,11 +1174,19 @@ Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus opera
 
 Algoritma di atas tampak linear, tetapi dalam praktik bersifat iteratif. Setelah validasi dilakukan, mahasiswa mungkin perlu kembali ke tahap pengumpulan data atau definisi sistem. Iterasi ini sehat karena menunjukkan bahwa model sedang dikalibrasi dengan realitas. Dalam riset terapan, model yang langsung tampak sempurna justru sering mencurigakan; mungkin karena analis belum cukup keras menguji asumsi.
 
-
 ### Implementasi komputasi
 
-Kode berikut dapat digunakan sebagai titik awal praktikum. Chunk diberi `eval=FALSE` agar aman saat dokumen pertama kali dibuka. Mahasiswa dapat mengubah parameter sesuai data kasus, lalu menjalankan kode secara bertahap di RStudio atau lingkungan Python. Prinsip yang perlu dijaga adalah reprodusibilitas: gunakan seed, simpan data, tulis fungsi, dan hindari perhitungan manual yang tidak terdokumentasi.
+<!-- BEGIN AI-INLINE:7519f67823a9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi komputasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
 
+
+Kode berikut dapat digunakan sebagai titik awal praktikum. Chunk diberi `eval=FALSE` agar aman saat dokumen pertama kali dibuka. Mahasiswa dapat mengubah parameter sesuai data kasus, lalu menjalankan kode secara bertahap di RStudio atau lingkungan Python. Prinsip yang perlu dijaga adalah reprodusibilitas: gunakan seed, simpan data, tulis fungsi, dan hindari perhitungan manual yang tidak terdokumentasi.
 
 ```{r mm1-function, eval=FALSE}
 mm1_metrics <- function(lambda, mu){
@@ -988,8 +1203,6 @@ mm1_metrics <- function(lambda, mu){
 mm1_metrics(lambda = 8, mu = 10)
 ```
 
-
-
 ### Validasi, interpretasi, dan kesalahan umum
 
 Validasi dimulai dari pertanyaan sederhana: apakah parameter yang dihitung masuk akal menurut orang yang memahami layanan? Jika estimasi $\lambda$ menyatakan 120 pelanggan per jam tetapi loket hanya menerima 40 nomor antrean per hari, ada kesalahan definisi waktu atau unit pengamatan. Jika estimasi $\mu$ menyatakan rata-rata pelayanan 30 detik padahal observasi lapangan menunjukkan proses administratif membutuhkan beberapa menit, maka timestamp mungkin salah dicatat. Pemeriksaan kewajaran semacam ini sering lebih cepat menemukan masalah daripada uji statistik formal.
@@ -1000,8 +1213,17 @@ Interpretasi harus selalu menghubungkan angka dengan keputusan. Nilai $W_q$ sebe
 
 Pada bagian Model M/M/1: Satu Server, Kedatangan Poisson, Pelayanan Eksponensial, mahasiswa juga perlu membedakan hasil analitik dan hasil simulasi. Hasil analitik memberikan ekspresi tertutup yang elegan, tetapi bergantung pada asumsi. Hasil simulasi lebih fleksibel, tetapi memiliki error Monte Carlo dan membutuhkan desain eksperimen. Jika keduanya sejalan, kepercayaan terhadap analisis meningkat. Jika keduanya berbeda, perbedaan itu harus dijelaskan, bukan disembunyikan seperti typo di laporan akhir.
 
-
 ### Latihan dan tugas mini
+
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan tugas mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 1. Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat diagram alur layanan, lalu tentukan batas sistem dan definisi pelanggan.
 2. Untuk konteks satu loket administrasi atau satu kanal layanan daring, jelaskan data apa saja yang harus dikumpulkan agar model M/M/1 dapat digunakan secara bertanggung jawab.
@@ -1013,8 +1235,17 @@ Pada bagian Model M/M/1: Satu Server, Kedatangan Poisson, Pelayanan Eksponensial
 <strong>Output yang dikumpulkan.</strong> Mahasiswa menyiapkan catatan 1-2 halaman berisi deskripsi sistem, sketsa alur, tabel data yang diperlukan, model awal yang dipilih, serta dugaan keterbatasan. Untuk pertemuan proyek, catatan ini menjadi bahan diskusi kelompok dan dasar penyusunan laporan.
 </div>
 
-
 ### Catatan pendalaman untuk diskusi kelas
+
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Catatan pendalaman untuk diskusi kelas</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pendekatan terbaik dalam teori antrian adalah berpikir seperti konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa harus peka terhadap kebutuhan pengambil keputusan: seberapa lama pelanggan boleh menunggu, berapa biaya tambahan server, bagaimana jadwal kerja disusun, dan apakah rekomendasi dapat dilaksanakan. Sebagai peneliti, mahasiswa harus menjaga validitas: asumsi harus dinyatakan, data harus diaudit, estimasi harus dijelaskan, dan keterbatasan harus diakui. Keduanya tidak bertentangan; justru kombinasi ini yang membuat analisis statistik bernilai.
 
@@ -1024,11 +1255,9 @@ Untuk mahasiswa S2, kualitas analisis diukur dari kedalaman argumentasi. Jawaban
 
 Di akhir pertemuan, mahasiswa sebaiknya menuliskan satu insight metodologis dan satu insight praktis. Insight metodologis bisa berupa pemahaman tentang hubungan antara $\lambda$, $\mu$, dan $\rho$. Insight praktis bisa berupa kesadaran bahwa antrean panjang tidak selalu berarti pegawai lambat; bisa saja demand melebihi kapasitas pada jam tertentu, pelanggan tidak memiliki informasi, atau proses layanan terlalu heterogen. Kebiasaan memisahkan diagnosis dari prasangka adalah bekal penting dalam analisis statistik terapan.
 
-
 ### Ringkasan pertemuan
 
 Pertemuan 5 menekankan menentukan stabilitas dan menilai dampak utilisasi tinggi melalui pembahasan model m/m/1: satu server, kedatangan poisson, pelayanan eksponensial. Mahasiswa mempelajari bagaimana M/M/1 digunakan untuk membaca sistem nyata, bagaimana parameter kunci seperti $\lambda$, $\mu$, $c$, dan $\rho$ diinterpretasikan, serta bagaimana hasil analisis diterjemahkan menjadi rekomendasi. Bagian ini juga menyiapkan mahasiswa untuk tugas analisis kasus, praktikum pemodelan, proyek simulasi, dan pengembangan inovasi model pada bagian berikutnya.
-
 
 ## Pertemuan 6: Model M/M/c dan Erlang C untuk Multi-Server
 
@@ -1066,14 +1295,33 @@ Secara metodologis, asumsi harus selalu disebutkan sebelum hasil. Jika model men
 
 ### Rumus dan interpretasi inti
 
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Rumus dan interpretasi inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada **Landasan Teori dan Cara Berpikir Sistem**, lalu periksa setiap langkah secara manual, uji kasus batas, dan cocokkan dengan rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class="formula-box">
 $$a=\frac{\lambda}{\mu},\quad \rho=\frac{a}{c},\quad P(W_q>0)=C(c,a)$$
 
 Erlang C digunakan untuk menghitung probabilitas pelanggan harus menunggu pada sistem multi-server dengan kedatangan Poisson dan pelayanan eksponensial.
 </div>
 
-
 ### Contoh kasus terapan
+
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 <strong>Skenario.</strong> Pertimbangkan call center, farmasi rumah sakit, gerbang tol, dan helpdesk multi-agen. Pengelola ingin mengetahui apakah sistem saat ini masih layak dipertahankan, perlu ditambah kapasitas, atau cukup diperbaiki melalui perubahan disiplin pelayanan. Data minimal yang perlu dikumpulkan adalah waktu kedatangan, waktu mulai pelayanan, waktu selesai pelayanan, jumlah server aktif, jumlah pelanggan yang meninggalkan antrean, dan catatan kejadian khusus seperti gangguan sistem atau pergantian shift.
@@ -1095,7 +1343,6 @@ Langkah ketiga adalah memilih model awal. Model awal dapat berupa model analitik
 
 Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus operasional. Pernyataan seperti "sistem perlu diperbaiki" terlalu umum. Pernyataan yang lebih kuat adalah "menambah satu server pada pukul 08.00-10.00 diperkirakan menurunkan rata-rata waktu tunggu dari 18 menit menjadi 7 menit, dengan utilisasi server tetap berada di bawah 0,85". Rekomendasi seperti ini dapat diuji, dipertimbangkan biayanya, dan dikomunikasikan kepada pengelola layanan.
 
-
 ### Algoritma kerja analisis
 
 1. Definisikan batas sistem: siapa pelanggan, apa unit layanan, kapan proses dimulai, dan kapan proses selesai.
@@ -1111,11 +1358,19 @@ Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus opera
 
 Algoritma di atas tampak linear, tetapi dalam praktik bersifat iteratif. Setelah validasi dilakukan, mahasiswa mungkin perlu kembali ke tahap pengumpulan data atau definisi sistem. Iterasi ini sehat karena menunjukkan bahwa model sedang dikalibrasi dengan realitas. Dalam riset terapan, model yang langsung tampak sempurna justru sering mencurigakan; mungkin karena analis belum cukup keras menguji asumsi.
 
-
 ### Implementasi komputasi
 
-Kode berikut dapat digunakan sebagai titik awal praktikum. Chunk diberi `eval=FALSE` agar aman saat dokumen pertama kali dibuka. Mahasiswa dapat mengubah parameter sesuai data kasus, lalu menjalankan kode secara bertahap di RStudio atau lingkungan Python. Prinsip yang perlu dijaga adalah reprodusibilitas: gunakan seed, simpan data, tulis fungsi, dan hindari perhitungan manual yang tidak terdokumentasi.
+<!-- BEGIN AI-INLINE:7519f67823a9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi komputasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
 
+
+Kode berikut dapat digunakan sebagai titik awal praktikum. Chunk diberi `eval=FALSE` agar aman saat dokumen pertama kali dibuka. Mahasiswa dapat mengubah parameter sesuai data kasus, lalu menjalankan kode secara bertahap di RStudio atau lingkungan Python. Prinsip yang perlu dijaga adalah reprodusibilitas: gunakan seed, simpan data, tulis fungsi, dan hindari perhitungan manual yang tidak terdokumentasi.
 
 ```{r mmc-function, eval=FALSE}
 mmc_metrics <- function(lambda, mu, c){
@@ -1136,8 +1391,6 @@ mmc_metrics <- function(lambda, mu, c){
 mmc_metrics(lambda = 24, mu = 10, c = 3)
 ```
 
-
-
 ### Validasi, interpretasi, dan kesalahan umum
 
 Validasi dimulai dari pertanyaan sederhana: apakah parameter yang dihitung masuk akal menurut orang yang memahami layanan? Jika estimasi $\lambda$ menyatakan 120 pelanggan per jam tetapi loket hanya menerima 40 nomor antrean per hari, ada kesalahan definisi waktu atau unit pengamatan. Jika estimasi $\mu$ menyatakan rata-rata pelayanan 30 detik padahal observasi lapangan menunjukkan proses administratif membutuhkan beberapa menit, maka timestamp mungkin salah dicatat. Pemeriksaan kewajaran semacam ini sering lebih cepat menemukan masalah daripada uji statistik formal.
@@ -1148,8 +1401,17 @@ Interpretasi harus selalu menghubungkan angka dengan keputusan. Nilai $W_q$ sebe
 
 Pada bagian Model M/M/c dan Erlang C untuk Multi-Server, mahasiswa juga perlu membedakan hasil analitik dan hasil simulasi. Hasil analitik memberikan ekspresi tertutup yang elegan, tetapi bergantung pada asumsi. Hasil simulasi lebih fleksibel, tetapi memiliki error Monte Carlo dan membutuhkan desain eksperimen. Jika keduanya sejalan, kepercayaan terhadap analisis meningkat. Jika keduanya berbeda, perbedaan itu harus dijelaskan, bukan disembunyikan seperti typo di laporan akhir.
 
-
 ### Latihan dan tugas mini
+
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan tugas mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 1. Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat diagram alur layanan, lalu tentukan batas sistem dan definisi pelanggan.
 2. Untuk konteks call center, farmasi rumah sakit, gerbang tol, dan helpdesk multi-agen, jelaskan data apa saja yang harus dikumpulkan agar model M/M/c dapat digunakan secara bertanggung jawab.
@@ -1161,8 +1423,17 @@ Pada bagian Model M/M/c dan Erlang C untuk Multi-Server, mahasiswa juga perlu me
 <strong>Output yang dikumpulkan.</strong> Mahasiswa menyiapkan catatan 1-2 halaman berisi deskripsi sistem, sketsa alur, tabel data yang diperlukan, model awal yang dipilih, serta dugaan keterbatasan. Untuk pertemuan proyek, catatan ini menjadi bahan diskusi kelompok dan dasar penyusunan laporan.
 </div>
 
-
 ### Catatan pendalaman untuk diskusi kelas
+
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Catatan pendalaman untuk diskusi kelas</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pendekatan terbaik dalam teori antrian adalah berpikir seperti konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa harus peka terhadap kebutuhan pengambil keputusan: seberapa lama pelanggan boleh menunggu, berapa biaya tambahan server, bagaimana jadwal kerja disusun, dan apakah rekomendasi dapat dilaksanakan. Sebagai peneliti, mahasiswa harus menjaga validitas: asumsi harus dinyatakan, data harus diaudit, estimasi harus dijelaskan, dan keterbatasan harus diakui. Keduanya tidak bertentangan; justru kombinasi ini yang membuat analisis statistik bernilai.
 
@@ -1172,11 +1443,9 @@ Untuk mahasiswa S2, kualitas analisis diukur dari kedalaman argumentasi. Jawaban
 
 Di akhir pertemuan, mahasiswa sebaiknya menuliskan satu insight metodologis dan satu insight praktis. Insight metodologis bisa berupa pemahaman tentang hubungan antara $\lambda$, $\mu$, dan $\rho$. Insight praktis bisa berupa kesadaran bahwa antrean panjang tidak selalu berarti pegawai lambat; bisa saja demand melebihi kapasitas pada jam tertentu, pelanggan tidak memiliki informasi, atau proses layanan terlalu heterogen. Kebiasaan memisahkan diagnosis dari prasangka adalah bekal penting dalam analisis statistik terapan.
 
-
 ### Ringkasan pertemuan
 
 Pertemuan 6 menekankan menimbang trade-off antara jumlah server dan waktu tunggu melalui pembahasan model m/m/c dan erlang c untuk multi-server. Mahasiswa mempelajari bagaimana M/M/c digunakan untuk membaca sistem nyata, bagaimana parameter kunci seperti $\lambda$, $\mu$, $c$, dan $\rho$ diinterpretasikan, serta bagaimana hasil analisis diterjemahkan menjadi rekomendasi. Bagian ini juga menyiapkan mahasiswa untuk tugas analisis kasus, praktikum pemodelan, proyek simulasi, dan pengembangan inovasi model pada bagian berikutnya.
-
 
 ## Pertemuan 7: Variasi Model: M/M/∞, Kapasitas Terbatas, dan Populasi Terbatas
 
@@ -1214,14 +1483,33 @@ Secara metodologis, asumsi harus selalu disebutkan sebelum hasil. Jika model men
 
 ### Rumus dan interpretasi inti
 
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Rumus dan interpretasi inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada **Landasan Teori dan Cara Berpikir Sistem**, lalu periksa setiap langkah secara manual, uji kasus batas, dan cocokkan dengan rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class="formula-box">
 $$P_K=\frac{(1-\rho)\rho^K}{1-\rho^{K+1}},\qquad \lambda_{eff}=\lambda(1-P_K)$$
 
 Pada sistem berkapasitas terbatas, pelanggan dapat ditolak atau hilang ketika sistem penuh. Karena itu laju kedatangan efektif berbeda dari laju kedatangan potensial.
 </div>
 
-
 ### Contoh kasus terapan
+
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 <strong>Skenario.</strong> Pertimbangkan layanan cloud otomatis, ruang tunggu terbatas, dan mesin produksi yang memerlukan perbaikan. Pengelola ingin mengetahui apakah sistem saat ini masih layak dipertahankan, perlu ditambah kapasitas, atau cukup diperbaiki melalui perubahan disiplin pelayanan. Data minimal yang perlu dikumpulkan adalah waktu kedatangan, waktu mulai pelayanan, waktu selesai pelayanan, jumlah server aktif, jumlah pelanggan yang meninggalkan antrean, dan catatan kejadian khusus seperti gangguan sistem atau pergantian shift.
@@ -1243,7 +1531,6 @@ Langkah ketiga adalah memilih model awal. Model awal dapat berupa model analitik
 
 Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus operasional. Pernyataan seperti "sistem perlu diperbaiki" terlalu umum. Pernyataan yang lebih kuat adalah "menambah satu server pada pukul 08.00-10.00 diperkirakan menurunkan rata-rata waktu tunggu dari 18 menit menjadi 7 menit, dengan utilisasi server tetap berada di bawah 0,85". Rekomendasi seperti ini dapat diuji, dipertimbangkan biayanya, dan dikomunikasikan kepada pengelola layanan.
 
-
 ### Algoritma kerja analisis
 
 1. Definisikan batas sistem: siapa pelanggan, apa unit layanan, kapan proses dimulai, dan kapan proses selesai.
@@ -1259,8 +1546,6 @@ Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus opera
 
 Algoritma di atas tampak linear, tetapi dalam praktik bersifat iteratif. Setelah validasi dilakukan, mahasiswa mungkin perlu kembali ke tahap pengumpulan data atau definisi sistem. Iterasi ini sehat karena menunjukkan bahwa model sedang dikalibrasi dengan realitas. Dalam riset terapan, model yang langsung tampak sempurna justru sering mencurigakan; mungkin karena analis belum cukup keras menguji asumsi.
 
-
-
 ### Validasi, interpretasi, dan kesalahan umum
 
 Validasi dimulai dari pertanyaan sederhana: apakah parameter yang dihitung masuk akal menurut orang yang memahami layanan? Jika estimasi $\lambda$ menyatakan 120 pelanggan per jam tetapi loket hanya menerima 40 nomor antrean per hari, ada kesalahan definisi waktu atau unit pengamatan. Jika estimasi $\mu$ menyatakan rata-rata pelayanan 30 detik padahal observasi lapangan menunjukkan proses administratif membutuhkan beberapa menit, maka timestamp mungkin salah dicatat. Pemeriksaan kewajaran semacam ini sering lebih cepat menemukan masalah daripada uji statistik formal.
@@ -1271,8 +1556,17 @@ Interpretasi harus selalu menghubungkan angka dengan keputusan. Nilai $W_q$ sebe
 
 Pada bagian Variasi Model: M/M/∞, Kapasitas Terbatas, dan Populasi Terbatas, mahasiswa juga perlu membedakan hasil analitik dan hasil simulasi. Hasil analitik memberikan ekspresi tertutup yang elegan, tetapi bergantung pada asumsi. Hasil simulasi lebih fleksibel, tetapi memiliki error Monte Carlo dan membutuhkan desain eksperimen. Jika keduanya sejalan, kepercayaan terhadap analisis meningkat. Jika keduanya berbeda, perbedaan itu harus dijelaskan, bukan disembunyikan seperti typo di laporan akhir.
 
-
 ### Latihan dan tugas mini
+
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan tugas mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 1. Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat diagram alur layanan, lalu tentukan batas sistem dan definisi pelanggan.
 2. Untuk konteks layanan cloud otomatis, ruang tunggu terbatas, dan mesin produksi yang memerlukan perbaikan, jelaskan data apa saja yang harus dikumpulkan agar model M/M/∞, M/M/1/K, finite source dapat digunakan secara bertanggung jawab.
@@ -1284,8 +1578,17 @@ Pada bagian Variasi Model: M/M/∞, Kapasitas Terbatas, dan Populasi Terbatas, m
 <strong>Output yang dikumpulkan.</strong> Mahasiswa menyiapkan catatan 1-2 halaman berisi deskripsi sistem, sketsa alur, tabel data yang diperlukan, model awal yang dipilih, serta dugaan keterbatasan. Untuk pertemuan proyek, catatan ini menjadi bahan diskusi kelompok dan dasar penyusunan laporan.
 </div>
 
-
 ### Catatan pendalaman untuk diskusi kelas
+
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Catatan pendalaman untuk diskusi kelas</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pendekatan terbaik dalam teori antrian adalah berpikir seperti konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa harus peka terhadap kebutuhan pengambil keputusan: seberapa lama pelanggan boleh menunggu, berapa biaya tambahan server, bagaimana jadwal kerja disusun, dan apakah rekomendasi dapat dilaksanakan. Sebagai peneliti, mahasiswa harus menjaga validitas: asumsi harus dinyatakan, data harus diaudit, estimasi harus dijelaskan, dan keterbatasan harus diakui. Keduanya tidak bertentangan; justru kombinasi ini yang membuat analisis statistik bernilai.
 
@@ -1295,13 +1598,21 @@ Untuk mahasiswa S2, kualitas analisis diukur dari kedalaman argumentasi. Jawaban
 
 Di akhir pertemuan, mahasiswa sebaiknya menuliskan satu insight metodologis dan satu insight praktis. Insight metodologis bisa berupa pemahaman tentang hubungan antara $\lambda$, $\mu$, dan $\rho$. Insight praktis bisa berupa kesadaran bahwa antrean panjang tidak selalu berarti pegawai lambat; bisa saja demand melebihi kapasitas pada jam tertentu, pelanggan tidak memiliki informasi, atau proses layanan terlalu heterogen. Kebiasaan memisahkan diagnosis dari prasangka adalah bekal penting dalam analisis statistik terapan.
 
-
 ### Ringkasan pertemuan
 
 Pertemuan 7 menekankan menilai blocking probability dan implikasi kehilangan pelanggan melalui pembahasan variasi model: m/m/∞, kapasitas terbatas, dan populasi terbatas. Mahasiswa mempelajari bagaimana M/M/∞, M/M/1/K, finite source digunakan untuk membaca sistem nyata, bagaimana parameter kunci seperti $\lambda$, $\mu$, $c$, dan $\rho$ diinterpretasikan, serta bagaimana hasil analisis diterjemahkan menjadi rekomendasi. Bagian ini juga menyiapkan mahasiswa untuk tugas analisis kasus, praktikum pemodelan, proyek simulasi, dan pengembangan inovasi model pada bagian berikutnya.
 
-
 ## Pertemuan 8: UTS: Proyek Pendahuluan Pemodelan Data Nyata
+
+<!-- BEGIN AI-INLINE:182db7f29053 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Pertemuan 8: UTS: Proyek Pendahuluan Pemodelan Data Nyata</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="tujuan">
 <strong>Tujuan pembelajaran.</strong> Setelah mempelajari bagian ini, mahasiswa diharapkan mampu menjelaskan konsep utama uts: proyek pendahuluan pemodelan data nyata, menghubungkannya dengan validasi asumsi dan pelaporan awal, menerapkan rumus kunci \hat{\lambda}=1/\overline{T}_{arrival},\quad \hat{\mu}=1/\overline{T}_{service}, serta menyusun analisis awal untuk konteks data kedatangan dan pelayanan dari layanan nyata yang dipilih mahasiswa.
@@ -1337,14 +1648,33 @@ Secara metodologis, asumsi harus selalu disebutkan sebelum hasil. Jika model men
 
 ### Rumus dan interpretasi inti
 
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Rumus dan interpretasi inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada **Landasan Teori dan Cara Berpikir Sistem**, lalu periksa setiap langkah secara manual, uji kasus batas, dan cocokkan dengan rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class="formula-box">
 $$L_q=\frac{\lambda^2\operatorname{Var}(S)+\rho^2}{2(1-\rho)}$$
 
 Rumus Pollaczek-Khinchine untuk M/G/1 menunjukkan bahwa variasi waktu pelayanan meningkatkan antrean. Dua layanan dengan rata-rata sama dapat memiliki performa sangat berbeda jika variansnya berbeda.
 </div>
 
-
 ### Contoh kasus terapan
+
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 <strong>Skenario.</strong> Pertimbangkan data kedatangan dan pelayanan dari layanan nyata yang dipilih mahasiswa. Pengelola ingin mengetahui apakah sistem saat ini masih layak dipertahankan, perlu ditambah kapasitas, atau cukup diperbaiki melalui perubahan disiplin pelayanan. Data minimal yang perlu dikumpulkan adalah waktu kedatangan, waktu mulai pelayanan, waktu selesai pelayanan, jumlah server aktif, jumlah pelanggan yang meninggalkan antrean, dan catatan kejadian khusus seperti gangguan sistem atau pergantian shift.
@@ -1366,7 +1696,6 @@ Langkah ketiga adalah memilih model awal. Model awal dapat berupa model analitik
 
 Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus operasional. Pernyataan seperti "sistem perlu diperbaiki" terlalu umum. Pernyataan yang lebih kuat adalah "menambah satu server pada pukul 08.00-10.00 diperkirakan menurunkan rata-rata waktu tunggu dari 18 menit menjadi 7 menit, dengan utilisasi server tetap berada di bawah 0,85". Rekomendasi seperti ini dapat diuji, dipertimbangkan biayanya, dan dikomunikasikan kepada pengelola layanan.
 
-
 ### Algoritma kerja analisis
 
 1. Definisikan batas sistem: siapa pelanggan, apa unit layanan, kapan proses dimulai, dan kapan proses selesai.
@@ -1382,8 +1711,6 @@ Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus opera
 
 Algoritma di atas tampak linear, tetapi dalam praktik bersifat iteratif. Setelah validasi dilakukan, mahasiswa mungkin perlu kembali ke tahap pengumpulan data atau definisi sistem. Iterasi ini sehat karena menunjukkan bahwa model sedang dikalibrasi dengan realitas. Dalam riset terapan, model yang langsung tampak sempurna justru sering mencurigakan; mungkin karena analis belum cukup keras menguji asumsi.
 
-
-
 ### Validasi, interpretasi, dan kesalahan umum
 
 Validasi dimulai dari pertanyaan sederhana: apakah parameter yang dihitung masuk akal menurut orang yang memahami layanan? Jika estimasi $\lambda$ menyatakan 120 pelanggan per jam tetapi loket hanya menerima 40 nomor antrean per hari, ada kesalahan definisi waktu atau unit pengamatan. Jika estimasi $\mu$ menyatakan rata-rata pelayanan 30 detik padahal observasi lapangan menunjukkan proses administratif membutuhkan beberapa menit, maka timestamp mungkin salah dicatat. Pemeriksaan kewajaran semacam ini sering lebih cepat menemukan masalah daripada uji statistik formal.
@@ -1394,8 +1721,17 @@ Interpretasi harus selalu menghubungkan angka dengan keputusan. Nilai $W_q$ sebe
 
 Pada bagian UTS: Proyek Pendahuluan Pemodelan Data Nyata, mahasiswa juga perlu membedakan hasil analitik dan hasil simulasi. Hasil analitik memberikan ekspresi tertutup yang elegan, tetapi bergantung pada asumsi. Hasil simulasi lebih fleksibel, tetapi memiliki error Monte Carlo dan membutuhkan desain eksperimen. Jika keduanya sejalan, kepercayaan terhadap analisis meningkat. Jika keduanya berbeda, perbedaan itu harus dijelaskan, bukan disembunyikan seperti typo di laporan akhir.
 
-
 ### Latihan dan tugas mini
+
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan tugas mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 1. Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat diagram alur layanan, lalu tentukan batas sistem dan definisi pelanggan.
 2. Untuk konteks data kedatangan dan pelayanan dari layanan nyata yang dipilih mahasiswa, jelaskan data apa saja yang harus dikumpulkan agar model validasi asumsi dan pelaporan awal dapat digunakan secara bertanggung jawab.
@@ -1407,8 +1743,17 @@ Pada bagian UTS: Proyek Pendahuluan Pemodelan Data Nyata, mahasiswa juga perlu m
 <strong>Output yang dikumpulkan.</strong> Mahasiswa menyiapkan catatan 1-2 halaman berisi deskripsi sistem, sketsa alur, tabel data yang diperlukan, model awal yang dipilih, serta dugaan keterbatasan. Untuk pertemuan proyek, catatan ini menjadi bahan diskusi kelompok dan dasar penyusunan laporan.
 </div>
 
-
 ### Catatan pendalaman untuk diskusi kelas
+
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Catatan pendalaman untuk diskusi kelas</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pendekatan terbaik dalam teori antrian adalah berpikir seperti konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa harus peka terhadap kebutuhan pengambil keputusan: seberapa lama pelanggan boleh menunggu, berapa biaya tambahan server, bagaimana jadwal kerja disusun, dan apakah rekomendasi dapat dilaksanakan. Sebagai peneliti, mahasiswa harus menjaga validitas: asumsi harus dinyatakan, data harus diaudit, estimasi harus dijelaskan, dan keterbatasan harus diakui. Keduanya tidak bertentangan; justru kombinasi ini yang membuat analisis statistik bernilai.
 
@@ -1418,11 +1763,9 @@ Untuk mahasiswa S2, kualitas analisis diukur dari kedalaman argumentasi. Jawaban
 
 Di akhir pertemuan, mahasiswa sebaiknya menuliskan satu insight metodologis dan satu insight praktis. Insight metodologis bisa berupa pemahaman tentang hubungan antara $\lambda$, $\mu$, dan $\rho$. Insight praktis bisa berupa kesadaran bahwa antrean panjang tidak selalu berarti pegawai lambat; bisa saja demand melebihi kapasitas pada jam tertentu, pelanggan tidak memiliki informasi, atau proses layanan terlalu heterogen. Kebiasaan memisahkan diagnosis dari prasangka adalah bekal penting dalam analisis statistik terapan.
 
-
 ### Ringkasan pertemuan
 
 Pertemuan 8 menekankan mengubah observasi lapangan menjadi model yang dapat diuji melalui pembahasan uts: proyek pendahuluan pemodelan data nyata. Mahasiswa mempelajari bagaimana validasi asumsi dan pelaporan awal digunakan untuk membaca sistem nyata, bagaimana parameter kunci seperti $\lambda$, $\mu$, $c$, dan $\rho$ diinterpretasikan, serta bagaimana hasil analisis diterjemahkan menjadi rekomendasi. Bagian ini juga menyiapkan mahasiswa untuk tugas analisis kasus, praktikum pemodelan, proyek simulasi, dan pengembangan inovasi model pada bagian berikutnya.
-
 
 ## Pertemuan 9: Pengantar Simulasi Kejadian Diskrit untuk Sistem Antrian
 
@@ -1460,14 +1803,33 @@ Secara metodologis, asumsi harus selalu disebutkan sebelum hasil. Jika model men
 
 ### Rumus dan interpretasi inti
 
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Rumus dan interpretasi inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada **Landasan Teori dan Cara Berpikir Sistem**, lalu periksa setiap langkah secara manual, uji kasus batas, dan cocokkan dengan rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class="formula-box">
 $$t_{next}=\min(t_{arrival},t_{departure})$$
 
 Dalam simulasi kejadian diskrit, waktu simulasi bergerak dari satu kejadian ke kejadian berikutnya. State sistem hanya berubah pada waktu kedatangan, awal pelayanan, selesai pelayanan, atau kejadian perilaku pelanggan.
 </div>
 
-
 ### Contoh kasus terapan
+
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 <strong>Skenario.</strong> Pertimbangkan sistem pelayanan yang tidak memenuhi asumsi analitik klasik. Pengelola ingin mengetahui apakah sistem saat ini masih layak dipertahankan, perlu ditambah kapasitas, atau cukup diperbaiki melalui perubahan disiplin pelayanan. Data minimal yang perlu dikumpulkan adalah waktu kedatangan, waktu mulai pelayanan, waktu selesai pelayanan, jumlah server aktif, jumlah pelanggan yang meninggalkan antrean, dan catatan kejadian khusus seperti gangguan sistem atau pergantian shift.
@@ -1489,7 +1851,6 @@ Langkah ketiga adalah memilih model awal. Model awal dapat berupa model analitik
 
 Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus operasional. Pernyataan seperti "sistem perlu diperbaiki" terlalu umum. Pernyataan yang lebih kuat adalah "menambah satu server pada pukul 08.00-10.00 diperkirakan menurunkan rata-rata waktu tunggu dari 18 menit menjadi 7 menit, dengan utilisasi server tetap berada di bawah 0,85". Rekomendasi seperti ini dapat diuji, dipertimbangkan biayanya, dan dikomunikasikan kepada pengelola layanan.
 
-
 ### Algoritma kerja analisis
 
 1. Definisikan batas sistem: siapa pelanggan, apa unit layanan, kapan proses dimulai, dan kapan proses selesai.
@@ -1505,11 +1866,19 @@ Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus opera
 
 Algoritma di atas tampak linear, tetapi dalam praktik bersifat iteratif. Setelah validasi dilakukan, mahasiswa mungkin perlu kembali ke tahap pengumpulan data atau definisi sistem. Iterasi ini sehat karena menunjukkan bahwa model sedang dikalibrasi dengan realitas. Dalam riset terapan, model yang langsung tampak sempurna justru sering mencurigakan; mungkin karena analis belum cukup keras menguji asumsi.
 
-
 ### Implementasi komputasi
 
-Kode berikut dapat digunakan sebagai titik awal praktikum. Chunk diberi `eval=FALSE` agar aman saat dokumen pertama kali dibuka. Mahasiswa dapat mengubah parameter sesuai data kasus, lalu menjalankan kode secara bertahap di RStudio atau lingkungan Python. Prinsip yang perlu dijaga adalah reprodusibilitas: gunakan seed, simpan data, tulis fungsi, dan hindari perhitungan manual yang tidak terdokumentasi.
+<!-- BEGIN AI-INLINE:7519f67823a9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi komputasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
 
+
+Kode berikut dapat digunakan sebagai titik awal praktikum. Chunk diberi `eval=FALSE` agar aman saat dokumen pertama kali dibuka. Mahasiswa dapat mengubah parameter sesuai data kasus, lalu menjalankan kode secara bertahap di RStudio atau lingkungan Python. Prinsip yang perlu dijaga adalah reprodusibilitas: gunakan seed, simpan data, tulis fungsi, dan hindari perhitungan manual yang tidak terdokumentasi.
 
 ```{r simulate-mm1, eval=FALSE}
 simulate_mm1 <- function(n_customers = 1000, lambda = 8, mu = 10, seed = 123){
@@ -1534,8 +1903,6 @@ summary(hasil$wait)
 mean(hasil$system_time)
 ```
 
-
-
 ### Validasi, interpretasi, dan kesalahan umum
 
 Validasi dimulai dari pertanyaan sederhana: apakah parameter yang dihitung masuk akal menurut orang yang memahami layanan? Jika estimasi $\lambda$ menyatakan 120 pelanggan per jam tetapi loket hanya menerima 40 nomor antrean per hari, ada kesalahan definisi waktu atau unit pengamatan. Jika estimasi $\mu$ menyatakan rata-rata pelayanan 30 detik padahal observasi lapangan menunjukkan proses administratif membutuhkan beberapa menit, maka timestamp mungkin salah dicatat. Pemeriksaan kewajaran semacam ini sering lebih cepat menemukan masalah daripada uji statistik formal.
@@ -1546,8 +1913,17 @@ Interpretasi harus selalu menghubungkan angka dengan keputusan. Nilai $W_q$ sebe
 
 Pada bagian Pengantar Simulasi Kejadian Diskrit untuk Sistem Antrian, mahasiswa juga perlu membedakan hasil analitik dan hasil simulasi. Hasil analitik memberikan ekspresi tertutup yang elegan, tetapi bergantung pada asumsi. Hasil simulasi lebih fleksibel, tetapi memiliki error Monte Carlo dan membutuhkan desain eksperimen. Jika keduanya sejalan, kepercayaan terhadap analisis meningkat. Jika keduanya berbeda, perbedaan itu harus dijelaskan, bukan disembunyikan seperti typo di laporan akhir.
 
-
 ### Latihan dan tugas mini
+
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan tugas mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 1. Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat diagram alur layanan, lalu tentukan batas sistem dan definisi pelanggan.
 2. Untuk konteks sistem pelayanan yang tidak memenuhi asumsi analitik klasik, jelaskan data apa saja yang harus dikumpulkan agar model discrete-event simulation dapat digunakan secara bertanggung jawab.
@@ -1559,8 +1935,17 @@ Pada bagian Pengantar Simulasi Kejadian Diskrit untuk Sistem Antrian, mahasiswa 
 <strong>Output yang dikumpulkan.</strong> Mahasiswa menyiapkan catatan 1-2 halaman berisi deskripsi sistem, sketsa alur, tabel data yang diperlukan, model awal yang dipilih, serta dugaan keterbatasan. Untuk pertemuan proyek, catatan ini menjadi bahan diskusi kelompok dan dasar penyusunan laporan.
 </div>
 
-
 ### Catatan pendalaman untuk diskusi kelas
+
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Catatan pendalaman untuk diskusi kelas</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pendekatan terbaik dalam teori antrian adalah berpikir seperti konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa harus peka terhadap kebutuhan pengambil keputusan: seberapa lama pelanggan boleh menunggu, berapa biaya tambahan server, bagaimana jadwal kerja disusun, dan apakah rekomendasi dapat dilaksanakan. Sebagai peneliti, mahasiswa harus menjaga validitas: asumsi harus dinyatakan, data harus diaudit, estimasi harus dijelaskan, dan keterbatasan harus diakui. Keduanya tidak bertentangan; justru kombinasi ini yang membuat analisis statistik bernilai.
 
@@ -1570,11 +1955,9 @@ Untuk mahasiswa S2, kualitas analisis diukur dari kedalaman argumentasi. Jawaban
 
 Di akhir pertemuan, mahasiswa sebaiknya menuliskan satu insight metodologis dan satu insight praktis. Insight metodologis bisa berupa pemahaman tentang hubungan antara $\lambda$, $\mu$, dan $\rho$. Insight praktis bisa berupa kesadaran bahwa antrean panjang tidak selalu berarti pegawai lambat; bisa saja demand melebihi kapasitas pada jam tertentu, pelanggan tidak memiliki informasi, atau proses layanan terlalu heterogen. Kebiasaan memisahkan diagnosis dari prasangka adalah bekal penting dalam analisis statistik terapan.
 
-
 ### Ringkasan pertemuan
 
 Pertemuan 9 menekankan membangun logika event arrival, service start, dan departure melalui pembahasan pengantar simulasi kejadian diskrit untuk sistem antrian. Mahasiswa mempelajari bagaimana discrete-event simulation digunakan untuk membaca sistem nyata, bagaimana parameter kunci seperti $\lambda$, $\mu$, $c$, dan $\rho$ diinterpretasikan, serta bagaimana hasil analisis diterjemahkan menjadi rekomendasi. Bagian ini juga menyiapkan mahasiswa untuk tugas analisis kasus, praktikum pemodelan, proyek simulasi, dan pengembangan inovasi model pada bagian berikutnya.
-
 
 ## Pertemuan 10: Algoritma Simulasi Antrian dan Replikasi Monte Carlo
 
@@ -1612,14 +1995,33 @@ Secara metodologis, asumsi harus selalu disebutkan sebelum hasil. Jika model men
 
 ### Rumus dan interpretasi inti
 
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Rumus dan interpretasi inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada **Landasan Teori dan Cara Berpikir Sistem**, lalu periksa setiap langkah secara manual, uji kasus batas, dan cocokkan dengan rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class="formula-box">
 $$\bar{Y}=\frac{1}{R}\sum_{r=1}^R Y_r,\qquad s_Y^2=\frac{1}{R-1}\sum_{r=1}^R(Y_r-\bar{Y})^2$$
 
 Output simulasi harus dianalisis antar-replikasi, bukan hanya dari satu lintasan. Satu lintasan dapat sangat dipengaruhi oleh seed acak.
 </div>
 
-
 ### Contoh kasus terapan
+
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 <strong>Skenario.</strong> Pertimbangkan pelayanan klinik dengan waktu pelayanan bervariasi dan jam kedatangan tidak homogen. Pengelola ingin mengetahui apakah sistem saat ini masih layak dipertahankan, perlu ditambah kapasitas, atau cukup diperbaiki melalui perubahan disiplin pelayanan. Data minimal yang perlu dikumpulkan adalah waktu kedatangan, waktu mulai pelayanan, waktu selesai pelayanan, jumlah server aktif, jumlah pelanggan yang meninggalkan antrean, dan catatan kejadian khusus seperti gangguan sistem atau pergantian shift.
@@ -1641,7 +2043,6 @@ Langkah ketiga adalah memilih model awal. Model awal dapat berupa model analitik
 
 Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus operasional. Pernyataan seperti "sistem perlu diperbaiki" terlalu umum. Pernyataan yang lebih kuat adalah "menambah satu server pada pukul 08.00-10.00 diperkirakan menurunkan rata-rata waktu tunggu dari 18 menit menjadi 7 menit, dengan utilisasi server tetap berada di bawah 0,85". Rekomendasi seperti ini dapat diuji, dipertimbangkan biayanya, dan dikomunikasikan kepada pengelola layanan.
 
-
 ### Algoritma kerja analisis
 
 1. Definisikan batas sistem: siapa pelanggan, apa unit layanan, kapan proses dimulai, dan kapan proses selesai.
@@ -1657,11 +2058,19 @@ Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus opera
 
 Algoritma di atas tampak linear, tetapi dalam praktik bersifat iteratif. Setelah validasi dilakukan, mahasiswa mungkin perlu kembali ke tahap pengumpulan data atau definisi sistem. Iterasi ini sehat karena menunjukkan bahwa model sedang dikalibrasi dengan realitas. Dalam riset terapan, model yang langsung tampak sempurna justru sering mencurigakan; mungkin karena analis belum cukup keras menguji asumsi.
 
-
 ### Implementasi komputasi
 
-Kode berikut dapat digunakan sebagai titik awal praktikum. Chunk diberi `eval=FALSE` agar aman saat dokumen pertama kali dibuka. Mahasiswa dapat mengubah parameter sesuai data kasus, lalu menjalankan kode secara bertahap di RStudio atau lingkungan Python. Prinsip yang perlu dijaga adalah reprodusibilitas: gunakan seed, simpan data, tulis fungsi, dan hindari perhitungan manual yang tidak terdokumentasi.
+<!-- BEGIN AI-INLINE:7519f67823a9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi komputasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
 
+
+Kode berikut dapat digunakan sebagai titik awal praktikum. Chunk diberi `eval=FALSE` agar aman saat dokumen pertama kali dibuka. Mahasiswa dapat mengubah parameter sesuai data kasus, lalu menjalankan kode secara bertahap di RStudio atau lingkungan Python. Prinsip yang perlu dijaga adalah reprodusibilitas: gunakan seed, simpan data, tulis fungsi, dan hindari perhitungan manual yang tidak terdokumentasi.
 
 ```{python simulate-mm1-python, eval=FALSE}
 import random
@@ -1689,8 +2098,6 @@ def simulate_mm1(n_customers=1000, lam=8, mu=10, seed=123):
 simulate_mm1()
 ```
 
-
-
 ### Validasi, interpretasi, dan kesalahan umum
 
 Validasi dimulai dari pertanyaan sederhana: apakah parameter yang dihitung masuk akal menurut orang yang memahami layanan? Jika estimasi $\lambda$ menyatakan 120 pelanggan per jam tetapi loket hanya menerima 40 nomor antrean per hari, ada kesalahan definisi waktu atau unit pengamatan. Jika estimasi $\mu$ menyatakan rata-rata pelayanan 30 detik padahal observasi lapangan menunjukkan proses administratif membutuhkan beberapa menit, maka timestamp mungkin salah dicatat. Pemeriksaan kewajaran semacam ini sering lebih cepat menemukan masalah daripada uji statistik formal.
@@ -1701,8 +2108,17 @@ Interpretasi harus selalu menghubungkan angka dengan keputusan. Nilai $W_q$ sebe
 
 Pada bagian Algoritma Simulasi Antrian dan Replikasi Monte Carlo, mahasiswa juga perlu membedakan hasil analitik dan hasil simulasi. Hasil analitik memberikan ekspresi tertutup yang elegan, tetapi bergantung pada asumsi. Hasil simulasi lebih fleksibel, tetapi memiliki error Monte Carlo dan membutuhkan desain eksperimen. Jika keduanya sejalan, kepercayaan terhadap analisis meningkat. Jika keduanya berbeda, perbedaan itu harus dijelaskan, bukan disembunyikan seperti typo di laporan akhir.
 
-
 ### Latihan dan tugas mini
+
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan tugas mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 1. Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat diagram alur layanan, lalu tentukan batas sistem dan definisi pelanggan.
 2. Untuk konteks pelayanan klinik dengan waktu pelayanan bervariasi dan jam kedatangan tidak homogen, jelaskan data apa saja yang harus dikumpulkan agar model event calendar, state variable, random variate generation dapat digunakan secara bertanggung jawab.
@@ -1714,8 +2130,17 @@ Pada bagian Algoritma Simulasi Antrian dan Replikasi Monte Carlo, mahasiswa juga
 <strong>Output yang dikumpulkan.</strong> Mahasiswa menyiapkan catatan 1-2 halaman berisi deskripsi sistem, sketsa alur, tabel data yang diperlukan, model awal yang dipilih, serta dugaan keterbatasan. Untuk pertemuan proyek, catatan ini menjadi bahan diskusi kelompok dan dasar penyusunan laporan.
 </div>
 
-
 ### Catatan pendalaman untuk diskusi kelas
+
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Catatan pendalaman untuk diskusi kelas</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pendekatan terbaik dalam teori antrian adalah berpikir seperti konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa harus peka terhadap kebutuhan pengambil keputusan: seberapa lama pelanggan boleh menunggu, berapa biaya tambahan server, bagaimana jadwal kerja disusun, dan apakah rekomendasi dapat dilaksanakan. Sebagai peneliti, mahasiswa harus menjaga validitas: asumsi harus dinyatakan, data harus diaudit, estimasi harus dijelaskan, dan keterbatasan harus diakui. Keduanya tidak bertentangan; justru kombinasi ini yang membuat analisis statistik bernilai.
 
@@ -1725,13 +2150,21 @@ Untuk mahasiswa S2, kualitas analisis diukur dari kedalaman argumentasi. Jawaban
 
 Di akhir pertemuan, mahasiswa sebaiknya menuliskan satu insight metodologis dan satu insight praktis. Insight metodologis bisa berupa pemahaman tentang hubungan antara $\lambda$, $\mu$, dan $\rho$. Insight praktis bisa berupa kesadaran bahwa antrean panjang tidak selalu berarti pegawai lambat; bisa saja demand melebihi kapasitas pada jam tertentu, pelanggan tidak memiliki informasi, atau proses layanan terlalu heterogen. Kebiasaan memisahkan diagnosis dari prasangka adalah bekal penting dalam analisis statistik terapan.
 
-
 ### Ringkasan pertemuan
 
 Pertemuan 10 menekankan membedakan satu lintasan simulasi dan ringkasan antar-replikasi melalui pembahasan algoritma simulasi antrian dan replikasi monte carlo. Mahasiswa mempelajari bagaimana event calendar, state variable, random variate generation digunakan untuk membaca sistem nyata, bagaimana parameter kunci seperti $\lambda$, $\mu$, $c$, dan $\rho$ diinterpretasikan, serta bagaimana hasil analisis diterjemahkan menjadi rekomendasi. Bagian ini juga menyiapkan mahasiswa untuk tugas analisis kasus, praktikum pemodelan, proyek simulasi, dan pengembangan inovasi model pada bagian berikutnya.
 
-
 ## Pertemuan 11: Implementasi Simulasi dengan R dan Python
+
+<!-- BEGIN AI-INLINE:ec0ab555571a -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Pertemuan 11: Implementasi Simulasi dengan R dan Python</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="tujuan">
 <strong>Tujuan pembelajaran.</strong> Setelah mempelajari bagian ini, mahasiswa diharapkan mampu menjelaskan konsep utama implementasi simulasi dengan r dan python, menghubungkannya dengan kode reprodusibel dan dokumentasi eksperimen, menerapkan rumus kunci CI: \bar{Y}\pm t_{R-1,0.975}\frac{s_Y}{\sqrt{R}}, serta menyusun analisis awal untuk konteks simulasi pengaruh jumlah server terhadap waktu tunggu.
@@ -1767,14 +2200,33 @@ Secara metodologis, asumsi harus selalu disebutkan sebelum hasil. Jika model men
 
 ### Rumus dan interpretasi inti
 
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Rumus dan interpretasi inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada **Landasan Teori dan Cara Berpikir Sistem**, lalu periksa setiap langkah secara manual, uji kasus batas, dan cocokkan dengan rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class="formula-box">
 $$\bar{Y}\pm t_{R-1,0.975}\frac{s_Y}{\sqrt{R}}$$
 
 Interval kepercayaan output simulasi membantu membedakan perbedaan yang substantif dari variasi Monte Carlo.
 </div>
 
-
 ### Contoh kasus terapan
+
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 <strong>Skenario.</strong> Pertimbangkan simulasi pengaruh jumlah server terhadap waktu tunggu. Pengelola ingin mengetahui apakah sistem saat ini masih layak dipertahankan, perlu ditambah kapasitas, atau cukup diperbaiki melalui perubahan disiplin pelayanan. Data minimal yang perlu dikumpulkan adalah waktu kedatangan, waktu mulai pelayanan, waktu selesai pelayanan, jumlah server aktif, jumlah pelanggan yang meninggalkan antrean, dan catatan kejadian khusus seperti gangguan sistem atau pergantian shift.
@@ -1796,7 +2248,6 @@ Langkah ketiga adalah memilih model awal. Model awal dapat berupa model analitik
 
 Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus operasional. Pernyataan seperti "sistem perlu diperbaiki" terlalu umum. Pernyataan yang lebih kuat adalah "menambah satu server pada pukul 08.00-10.00 diperkirakan menurunkan rata-rata waktu tunggu dari 18 menit menjadi 7 menit, dengan utilisasi server tetap berada di bawah 0,85". Rekomendasi seperti ini dapat diuji, dipertimbangkan biayanya, dan dikomunikasikan kepada pengelola layanan.
 
-
 ### Algoritma kerja analisis
 
 1. Definisikan batas sistem: siapa pelanggan, apa unit layanan, kapan proses dimulai, dan kapan proses selesai.
@@ -1812,11 +2263,19 @@ Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus opera
 
 Algoritma di atas tampak linear, tetapi dalam praktik bersifat iteratif. Setelah validasi dilakukan, mahasiswa mungkin perlu kembali ke tahap pengumpulan data atau definisi sistem. Iterasi ini sehat karena menunjukkan bahwa model sedang dikalibrasi dengan realitas. Dalam riset terapan, model yang langsung tampak sempurna justru sering mencurigakan; mungkin karena analis belum cukup keras menguji asumsi.
 
-
 ### Implementasi komputasi
 
-Kode berikut dapat digunakan sebagai titik awal praktikum. Chunk diberi `eval=FALSE` agar aman saat dokumen pertama kali dibuka. Mahasiswa dapat mengubah parameter sesuai data kasus, lalu menjalankan kode secara bertahap di RStudio atau lingkungan Python. Prinsip yang perlu dijaga adalah reprodusibilitas: gunakan seed, simpan data, tulis fungsi, dan hindari perhitungan manual yang tidak terdokumentasi.
+<!-- BEGIN AI-INLINE:7519f67823a9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi komputasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
 
+
+Kode berikut dapat digunakan sebagai titik awal praktikum. Chunk diberi `eval=FALSE` agar aman saat dokumen pertama kali dibuka. Mahasiswa dapat mengubah parameter sesuai data kasus, lalu menjalankan kode secara bertahap di RStudio atau lingkungan Python. Prinsip yang perlu dijaga adalah reprodusibilitas: gunakan seed, simpan data, tulis fungsi, dan hindari perhitungan manual yang tidak terdokumentasi.
 
 ```{r replication, eval=FALSE}
 replicate_sim <- function(R = 50, n_customers = 1000, lambda = 8, mu = 10){
@@ -1832,8 +2291,6 @@ mean(res$mean_wait)
 sd(res$mean_wait)
 ```
 
-
-
 ### Validasi, interpretasi, dan kesalahan umum
 
 Validasi dimulai dari pertanyaan sederhana: apakah parameter yang dihitung masuk akal menurut orang yang memahami layanan? Jika estimasi $\lambda$ menyatakan 120 pelanggan per jam tetapi loket hanya menerima 40 nomor antrean per hari, ada kesalahan definisi waktu atau unit pengamatan. Jika estimasi $\mu$ menyatakan rata-rata pelayanan 30 detik padahal observasi lapangan menunjukkan proses administratif membutuhkan beberapa menit, maka timestamp mungkin salah dicatat. Pemeriksaan kewajaran semacam ini sering lebih cepat menemukan masalah daripada uji statistik formal.
@@ -1844,8 +2301,17 @@ Interpretasi harus selalu menghubungkan angka dengan keputusan. Nilai $W_q$ sebe
 
 Pada bagian Implementasi Simulasi dengan R dan Python, mahasiswa juga perlu membedakan hasil analitik dan hasil simulasi. Hasil analitik memberikan ekspresi tertutup yang elegan, tetapi bergantung pada asumsi. Hasil simulasi lebih fleksibel, tetapi memiliki error Monte Carlo dan membutuhkan desain eksperimen. Jika keduanya sejalan, kepercayaan terhadap analisis meningkat. Jika keduanya berbeda, perbedaan itu harus dijelaskan, bukan disembunyikan seperti typo di laporan akhir.
 
-
 ### Latihan dan tugas mini
+
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan tugas mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 1. Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat diagram alur layanan, lalu tentukan batas sistem dan definisi pelanggan.
 2. Untuk konteks simulasi pengaruh jumlah server terhadap waktu tunggu, jelaskan data apa saja yang harus dikumpulkan agar model kode reprodusibel dan dokumentasi eksperimen dapat digunakan secara bertanggung jawab.
@@ -1857,8 +2323,17 @@ Pada bagian Implementasi Simulasi dengan R dan Python, mahasiswa juga perlu memb
 <strong>Output yang dikumpulkan.</strong> Mahasiswa menyiapkan catatan 1-2 halaman berisi deskripsi sistem, sketsa alur, tabel data yang diperlukan, model awal yang dipilih, serta dugaan keterbatasan. Untuk pertemuan proyek, catatan ini menjadi bahan diskusi kelompok dan dasar penyusunan laporan.
 </div>
 
-
 ### Catatan pendalaman untuk diskusi kelas
+
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Catatan pendalaman untuk diskusi kelas</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pendekatan terbaik dalam teori antrian adalah berpikir seperti konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa harus peka terhadap kebutuhan pengambil keputusan: seberapa lama pelanggan boleh menunggu, berapa biaya tambahan server, bagaimana jadwal kerja disusun, dan apakah rekomendasi dapat dilaksanakan. Sebagai peneliti, mahasiswa harus menjaga validitas: asumsi harus dinyatakan, data harus diaudit, estimasi harus dijelaskan, dan keterbatasan harus diakui. Keduanya tidak bertentangan; justru kombinasi ini yang membuat analisis statistik bernilai.
 
@@ -1868,11 +2343,9 @@ Untuk mahasiswa S2, kualitas analisis diukur dari kedalaman argumentasi. Jawaban
 
 Di akhir pertemuan, mahasiswa sebaiknya menuliskan satu insight metodologis dan satu insight praktis. Insight metodologis bisa berupa pemahaman tentang hubungan antara $\lambda$, $\mu$, dan $\rho$. Insight praktis bisa berupa kesadaran bahwa antrean panjang tidak selalu berarti pegawai lambat; bisa saja demand melebihi kapasitas pada jam tertentu, pelanggan tidak memiliki informasi, atau proses layanan terlalu heterogen. Kebiasaan memisahkan diagnosis dari prasangka adalah bekal penting dalam analisis statistik terapan.
 
-
 ### Ringkasan pertemuan
 
 Pertemuan 11 menekankan menghasilkan output simulasi yang dapat diaudit dan dijalankan ulang melalui pembahasan implementasi simulasi dengan r dan python. Mahasiswa mempelajari bagaimana kode reprodusibel dan dokumentasi eksperimen digunakan untuk membaca sistem nyata, bagaimana parameter kunci seperti $\lambda$, $\mu$, $c$, dan $\rho$ diinterpretasikan, serta bagaimana hasil analisis diterjemahkan menjadi rekomendasi. Bagian ini juga menyiapkan mahasiswa untuk tugas analisis kasus, praktikum pemodelan, proyek simulasi, dan pengembangan inovasi model pada bagian berikutnya.
-
 
 ## Pertemuan 12: Evaluasi Hasil Simulasi, Warm-Up, dan Perbandingan Skenario
 
@@ -1910,14 +2383,33 @@ Secara metodologis, asumsi harus selalu disebutkan sebelum hasil. Jika model men
 
 ### Rumus dan interpretasi inti
 
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Rumus dan interpretasi inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada **Landasan Teori dan Cara Berpikir Sistem**, lalu periksa setiap langkah secara manual, uji kasus batas, dan cocokkan dengan rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class="formula-box">
 $$\Delta=E[Y_A]-E[Y_B]$$
 
 Perbandingan skenario sebaiknya dinyatakan sebagai estimasi selisih indikator, misalnya penurunan rata-rata waktu tunggu setelah menambah server.
 </div>
 
-
 ### Contoh kasus terapan
+
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 <strong>Skenario.</strong> Pertimbangkan penentuan kapasitas layanan pada jam sibuk dan jam normal. Pengelola ingin mengetahui apakah sistem saat ini masih layak dipertahankan, perlu ditambah kapasitas, atau cukup diperbaiki melalui perubahan disiplin pelayanan. Data minimal yang perlu dikumpulkan adalah waktu kedatangan, waktu mulai pelayanan, waktu selesai pelayanan, jumlah server aktif, jumlah pelanggan yang meninggalkan antrean, dan catatan kejadian khusus seperti gangguan sistem atau pergantian shift.
@@ -1939,7 +2431,6 @@ Langkah ketiga adalah memilih model awal. Model awal dapat berupa model analitik
 
 Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus operasional. Pernyataan seperti "sistem perlu diperbaiki" terlalu umum. Pernyataan yang lebih kuat adalah "menambah satu server pada pukul 08.00-10.00 diperkirakan menurunkan rata-rata waktu tunggu dari 18 menit menjadi 7 menit, dengan utilisasi server tetap berada di bawah 0,85". Rekomendasi seperti ini dapat diuji, dipertimbangkan biayanya, dan dikomunikasikan kepada pengelola layanan.
 
-
 ### Algoritma kerja analisis
 
 1. Definisikan batas sistem: siapa pelanggan, apa unit layanan, kapan proses dimulai, dan kapan proses selesai.
@@ -1955,11 +2446,19 @@ Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus opera
 
 Algoritma di atas tampak linear, tetapi dalam praktik bersifat iteratif. Setelah validasi dilakukan, mahasiswa mungkin perlu kembali ke tahap pengumpulan data atau definisi sistem. Iterasi ini sehat karena menunjukkan bahwa model sedang dikalibrasi dengan realitas. Dalam riset terapan, model yang langsung tampak sempurna justru sering mencurigakan; mungkin karena analis belum cukup keras menguji asumsi.
 
-
 ### Implementasi komputasi
 
-Kode berikut dapat digunakan sebagai titik awal praktikum. Chunk diberi `eval=FALSE` agar aman saat dokumen pertama kali dibuka. Mahasiswa dapat mengubah parameter sesuai data kasus, lalu menjalankan kode secara bertahap di RStudio atau lingkungan Python. Prinsip yang perlu dijaga adalah reprodusibilitas: gunakan seed, simpan data, tulis fungsi, dan hindari perhitungan manual yang tidak terdokumentasi.
+<!-- BEGIN AI-INLINE:7519f67823a9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi komputasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
 
+
+Kode berikut dapat digunakan sebagai titik awal praktikum. Chunk diberi `eval=FALSE` agar aman saat dokumen pertama kali dibuka. Mahasiswa dapat mengubah parameter sesuai data kasus, lalu menjalankan kode secara bertahap di RStudio atau lingkungan Python. Prinsip yang perlu dijaga adalah reprodusibilitas: gunakan seed, simpan data, tulis fungsi, dan hindari perhitungan manual yang tidak terdokumentasi.
 
 ```{r compare-scenarios, eval=FALSE}
 scenario_grid <- expand.grid(lambda = c(6, 8, 9), mu = c(10, 11, 12))
@@ -1967,8 +2466,6 @@ scenario_grid$rho <- with(scenario_grid, lambda / mu)
 scenario_grid$Ws <- with(scenario_grid, ifelse(rho < 1, 1/(mu-lambda), NA))
 scenario_grid
 ```
-
-
 
 ### Validasi, interpretasi, dan kesalahan umum
 
@@ -1980,8 +2477,17 @@ Interpretasi harus selalu menghubungkan angka dengan keputusan. Nilai $W_q$ sebe
 
 Pada bagian Evaluasi Hasil Simulasi, Warm-Up, dan Perbandingan Skenario, mahasiswa juga perlu membedakan hasil analitik dan hasil simulasi. Hasil analitik memberikan ekspresi tertutup yang elegan, tetapi bergantung pada asumsi. Hasil simulasi lebih fleksibel, tetapi memiliki error Monte Carlo dan membutuhkan desain eksperimen. Jika keduanya sejalan, kepercayaan terhadap analisis meningkat. Jika keduanya berbeda, perbedaan itu harus dijelaskan, bukan disembunyikan seperti typo di laporan akhir.
 
-
 ### Latihan dan tugas mini
+
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan tugas mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 1. Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat diagram alur layanan, lalu tentukan batas sistem dan definisi pelanggan.
 2. Untuk konteks penentuan kapasitas layanan pada jam sibuk dan jam normal, jelaskan data apa saja yang harus dikumpulkan agar model output analysis dapat digunakan secara bertanggung jawab.
@@ -1993,8 +2499,17 @@ Pada bagian Evaluasi Hasil Simulasi, Warm-Up, dan Perbandingan Skenario, mahasis
 <strong>Output yang dikumpulkan.</strong> Mahasiswa menyiapkan catatan 1-2 halaman berisi deskripsi sistem, sketsa alur, tabel data yang diperlukan, model awal yang dipilih, serta dugaan keterbatasan. Untuk pertemuan proyek, catatan ini menjadi bahan diskusi kelompok dan dasar penyusunan laporan.
 </div>
 
-
 ### Catatan pendalaman untuk diskusi kelas
+
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Catatan pendalaman untuk diskusi kelas</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pendekatan terbaik dalam teori antrian adalah berpikir seperti konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa harus peka terhadap kebutuhan pengambil keputusan: seberapa lama pelanggan boleh menunggu, berapa biaya tambahan server, bagaimana jadwal kerja disusun, dan apakah rekomendasi dapat dilaksanakan. Sebagai peneliti, mahasiswa harus menjaga validitas: asumsi harus dinyatakan, data harus diaudit, estimasi harus dijelaskan, dan keterbatasan harus diakui. Keduanya tidak bertentangan; justru kombinasi ini yang membuat analisis statistik bernilai.
 
@@ -2004,11 +2519,9 @@ Untuk mahasiswa S2, kualitas analisis diukur dari kedalaman argumentasi. Jawaban
 
 Di akhir pertemuan, mahasiswa sebaiknya menuliskan satu insight metodologis dan satu insight praktis. Insight metodologis bisa berupa pemahaman tentang hubungan antara $\lambda$, $\mu$, dan $\rho$. Insight praktis bisa berupa kesadaran bahwa antrean panjang tidak selalu berarti pegawai lambat; bisa saja demand melebihi kapasitas pada jam tertentu, pelanggan tidak memiliki informasi, atau proses layanan terlalu heterogen. Kebiasaan memisahkan diagnosis dari prasangka adalah bekal penting dalam analisis statistik terapan.
 
-
 ### Ringkasan pertemuan
 
 Pertemuan 12 menekankan membandingkan alternatif kebijakan menggunakan bukti simulasi melalui pembahasan evaluasi hasil simulasi, warm-up, dan perbandingan skenario. Mahasiswa mempelajari bagaimana output analysis digunakan untuk membaca sistem nyata, bagaimana parameter kunci seperti $\lambda$, $\mu$, $c$, dan $\rho$ diinterpretasikan, serta bagaimana hasil analisis diterjemahkan menjadi rekomendasi. Bagian ini juga menyiapkan mahasiswa untuk tugas analisis kasus, praktikum pemodelan, proyek simulasi, dan pengembangan inovasi model pada bagian berikutnya.
-
 
 ## Pertemuan 13: Jaringan Antrian dan Model Layanan Bertahap
 
@@ -2046,14 +2559,33 @@ Secara metodologis, asumsi harus selalu disebutkan sebelum hasil. Jika model men
 
 ### Rumus dan interpretasi inti
 
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Rumus dan interpretasi inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada **Landasan Teori dan Cara Berpikir Sistem**, lalu periksa setiap langkah secara manual, uji kasus batas, dan cocokkan dengan rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class="formula-box">
 $$\lambda_i=e_i+\sum_j\lambda_jp_{ji}$$
 
 Traffic equation pada jaringan antrian menyatakan bahwa kedatangan ke node berasal dari kedatangan eksternal dan aliran internal dari node lain.
 </div>
 
-
 ### Contoh kasus terapan
+
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 <strong>Skenario.</strong> Pertimbangkan pasien rumah sakit: pendaftaran, triase, pemeriksaan, laboratorium, farmasi. Pengelola ingin mengetahui apakah sistem saat ini masih layak dipertahankan, perlu ditambah kapasitas, atau cukup diperbaiki melalui perubahan disiplin pelayanan. Data minimal yang perlu dikumpulkan adalah waktu kedatangan, waktu mulai pelayanan, waktu selesai pelayanan, jumlah server aktif, jumlah pelanggan yang meninggalkan antrean, dan catatan kejadian khusus seperti gangguan sistem atau pergantian shift.
@@ -2075,7 +2607,6 @@ Langkah ketiga adalah memilih model awal. Model awal dapat berupa model analitik
 
 Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus operasional. Pernyataan seperti "sistem perlu diperbaiki" terlalu umum. Pernyataan yang lebih kuat adalah "menambah satu server pada pukul 08.00-10.00 diperkirakan menurunkan rata-rata waktu tunggu dari 18 menit menjadi 7 menit, dengan utilisasi server tetap berada di bawah 0,85". Rekomendasi seperti ini dapat diuji, dipertimbangkan biayanya, dan dikomunikasikan kepada pengelola layanan.
 
-
 ### Algoritma kerja analisis
 
 1. Definisikan batas sistem: siapa pelanggan, apa unit layanan, kapan proses dimulai, dan kapan proses selesai.
@@ -2091,11 +2622,19 @@ Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus opera
 
 Algoritma di atas tampak linear, tetapi dalam praktik bersifat iteratif. Setelah validasi dilakukan, mahasiswa mungkin perlu kembali ke tahap pengumpulan data atau definisi sistem. Iterasi ini sehat karena menunjukkan bahwa model sedang dikalibrasi dengan realitas. Dalam riset terapan, model yang langsung tampak sempurna justru sering mencurigakan; mungkin karena analis belum cukup keras menguji asumsi.
 
-
 ### Implementasi komputasi
 
-Kode berikut dapat digunakan sebagai titik awal praktikum. Chunk diberi `eval=FALSE` agar aman saat dokumen pertama kali dibuka. Mahasiswa dapat mengubah parameter sesuai data kasus, lalu menjalankan kode secara bertahap di RStudio atau lingkungan Python. Prinsip yang perlu dijaga adalah reprodusibilitas: gunakan seed, simpan data, tulis fungsi, dan hindari perhitungan manual yang tidak terdokumentasi.
+<!-- BEGIN AI-INLINE:7519f67823a9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi komputasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
 
+
+Kode berikut dapat digunakan sebagai titik awal praktikum. Chunk diberi `eval=FALSE` agar aman saat dokumen pertama kali dibuka. Mahasiswa dapat mengubah parameter sesuai data kasus, lalu menjalankan kode secara bertahap di RStudio atau lingkungan Python. Prinsip yang perlu dijaga adalah reprodusibilitas: gunakan seed, simpan data, tulis fungsi, dan hindari perhitungan manual yang tidak terdokumentasi.
 
 ```{r traffic-equation, eval=FALSE}
 # Contoh jaringan tiga node: pendaftaran -> dokter -> farmasi
@@ -2107,8 +2646,6 @@ lambda_nodes <- as.numeric(solve(diag(3) - t(P), e))
 lambda_nodes
 ```
 
-
-
 ### Validasi, interpretasi, dan kesalahan umum
 
 Validasi dimulai dari pertanyaan sederhana: apakah parameter yang dihitung masuk akal menurut orang yang memahami layanan? Jika estimasi $\lambda$ menyatakan 120 pelanggan per jam tetapi loket hanya menerima 40 nomor antrean per hari, ada kesalahan definisi waktu atau unit pengamatan. Jika estimasi $\mu$ menyatakan rata-rata pelayanan 30 detik padahal observasi lapangan menunjukkan proses administratif membutuhkan beberapa menit, maka timestamp mungkin salah dicatat. Pemeriksaan kewajaran semacam ini sering lebih cepat menemukan masalah daripada uji statistik formal.
@@ -2119,8 +2656,17 @@ Interpretasi harus selalu menghubungkan angka dengan keputusan. Nilai $W_q$ sebe
 
 Pada bagian Jaringan Antrian dan Model Layanan Bertahap, mahasiswa juga perlu membedakan hasil analitik dan hasil simulasi. Hasil analitik memberikan ekspresi tertutup yang elegan, tetapi bergantung pada asumsi. Hasil simulasi lebih fleksibel, tetapi memiliki error Monte Carlo dan membutuhkan desain eksperimen. Jika keduanya sejalan, kepercayaan terhadap analisis meningkat. Jika keduanya berbeda, perbedaan itu harus dijelaskan, bukan disembunyikan seperti typo di laporan akhir.
 
-
 ### Latihan dan tugas mini
+
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan tugas mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 1. Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat diagram alur layanan, lalu tentukan batas sistem dan definisi pelanggan.
 2. Untuk konteks pasien rumah sakit: pendaftaran, triase, pemeriksaan, laboratorium, farmasi, jelaskan data apa saja yang harus dikumpulkan agar model queueing networks dan Jackson network dapat digunakan secara bertanggung jawab.
@@ -2132,8 +2678,17 @@ Pada bagian Jaringan Antrian dan Model Layanan Bertahap, mahasiswa juga perlu me
 <strong>Output yang dikumpulkan.</strong> Mahasiswa menyiapkan catatan 1-2 halaman berisi deskripsi sistem, sketsa alur, tabel data yang diperlukan, model awal yang dipilih, serta dugaan keterbatasan. Untuk pertemuan proyek, catatan ini menjadi bahan diskusi kelompok dan dasar penyusunan laporan.
 </div>
 
-
 ### Catatan pendalaman untuk diskusi kelas
+
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Catatan pendalaman untuk diskusi kelas</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pendekatan terbaik dalam teori antrian adalah berpikir seperti konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa harus peka terhadap kebutuhan pengambil keputusan: seberapa lama pelanggan boleh menunggu, berapa biaya tambahan server, bagaimana jadwal kerja disusun, dan apakah rekomendasi dapat dilaksanakan. Sebagai peneliti, mahasiswa harus menjaga validitas: asumsi harus dinyatakan, data harus diaudit, estimasi harus dijelaskan, dan keterbatasan harus diakui. Keduanya tidak bertentangan; justru kombinasi ini yang membuat analisis statistik bernilai.
 
@@ -2143,11 +2698,9 @@ Untuk mahasiswa S2, kualitas analisis diukur dari kedalaman argumentasi. Jawaban
 
 Di akhir pertemuan, mahasiswa sebaiknya menuliskan satu insight metodologis dan satu insight praktis. Insight metodologis bisa berupa pemahaman tentang hubungan antara $\lambda$, $\mu$, dan $\rho$. Insight praktis bisa berupa kesadaran bahwa antrean panjang tidak selalu berarti pegawai lambat; bisa saja demand melebihi kapasitas pada jam tertentu, pelanggan tidak memiliki informasi, atau proses layanan terlalu heterogen. Kebiasaan memisahkan diagnosis dari prasangka adalah bekal penting dalam analisis statistik terapan.
 
-
 ### Ringkasan pertemuan
 
 Pertemuan 13 menekankan melihat layanan sebagai jaringan, bukan loket tunggal melalui pembahasan jaringan antrian dan model layanan bertahap. Mahasiswa mempelajari bagaimana queueing networks dan Jackson network digunakan untuk membaca sistem nyata, bagaimana parameter kunci seperti $\lambda$, $\mu$, $c$, dan $\rho$ diinterpretasikan, serta bagaimana hasil analisis diterjemahkan menjadi rekomendasi. Bagian ini juga menyiapkan mahasiswa untuk tugas analisis kasus, praktikum pemodelan, proyek simulasi, dan pengembangan inovasi model pada bagian berikutnya.
-
 
 ## Pertemuan 14: Antrian Prioritas, Reneging, Balking, Blocking, dan Retrial
 
@@ -2185,14 +2738,33 @@ Secara metodologis, asumsi harus selalu disebutkan sebelum hasil. Jika model men
 
 ### Rumus dan interpretasi inti
 
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Rumus dan interpretasi inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada **Landasan Teori dan Cara Berpikir Sistem**, lalu periksa setiap langkah secara manual, uji kasus batas, dan cocokkan dengan rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class="formula-box">
 $$P(\text{abandon})=P(W_q>\tau)$$
 
 Reneging dapat dimodelkan sebagai pelanggan meninggalkan antrean ketika waktu tunggu melampaui ambang toleransi. Pada layanan kritis, ambang ini bukan sekadar teknis, tetapi juga etik.
 </div>
 
-
 ### Contoh kasus terapan
+
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 <strong>Skenario.</strong> Pertimbangkan IGD, call center darurat, layanan pelanggan dengan pelanggan meninggalkan antrean. Pengelola ingin mengetahui apakah sistem saat ini masih layak dipertahankan, perlu ditambah kapasitas, atau cukup diperbaiki melalui perubahan disiplin pelayanan. Data minimal yang perlu dikumpulkan adalah waktu kedatangan, waktu mulai pelayanan, waktu selesai pelayanan, jumlah server aktif, jumlah pelanggan yang meninggalkan antrean, dan catatan kejadian khusus seperti gangguan sistem atau pergantian shift.
@@ -2214,7 +2786,6 @@ Langkah ketiga adalah memilih model awal. Model awal dapat berupa model analitik
 
 Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus operasional. Pernyataan seperti "sistem perlu diperbaiki" terlalu umum. Pernyataan yang lebih kuat adalah "menambah satu server pada pukul 08.00-10.00 diperkirakan menurunkan rata-rata waktu tunggu dari 18 menit menjadi 7 menit, dengan utilisasi server tetap berada di bawah 0,85". Rekomendasi seperti ini dapat diuji, dipertimbangkan biayanya, dan dikomunikasikan kepada pengelola layanan.
 
-
 ### Algoritma kerja analisis
 
 1. Definisikan batas sistem: siapa pelanggan, apa unit layanan, kapan proses dimulai, dan kapan proses selesai.
@@ -2230,11 +2801,19 @@ Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus opera
 
 Algoritma di atas tampak linear, tetapi dalam praktik bersifat iteratif. Setelah validasi dilakukan, mahasiswa mungkin perlu kembali ke tahap pengumpulan data atau definisi sistem. Iterasi ini sehat karena menunjukkan bahwa model sedang dikalibrasi dengan realitas. Dalam riset terapan, model yang langsung tampak sempurna justru sering mencurigakan; mungkin karena analis belum cukup keras menguji asumsi.
 
-
 ### Implementasi komputasi
 
-Kode berikut dapat digunakan sebagai titik awal praktikum. Chunk diberi `eval=FALSE` agar aman saat dokumen pertama kali dibuka. Mahasiswa dapat mengubah parameter sesuai data kasus, lalu menjalankan kode secara bertahap di RStudio atau lingkungan Python. Prinsip yang perlu dijaga adalah reprodusibilitas: gunakan seed, simpan data, tulis fungsi, dan hindari perhitungan manual yang tidak terdokumentasi.
+<!-- BEGIN AI-INLINE:7519f67823a9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi komputasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
 
+
+Kode berikut dapat digunakan sebagai titik awal praktikum. Chunk diberi `eval=FALSE` agar aman saat dokumen pertama kali dibuka. Mahasiswa dapat mengubah parameter sesuai data kasus, lalu menjalankan kode secara bertahap di RStudio atau lingkungan Python. Prinsip yang perlu dijaga adalah reprodusibilitas: gunakan seed, simpan data, tulis fungsi, dan hindari perhitungan manual yang tidak terdokumentasi.
 
 ```{r balking-reneging-skeleton, eval=FALSE}
 # Kerangka sederhana: pelanggan menolak masuk jika panjang antrean >= threshold
@@ -2244,8 +2823,6 @@ simulate_balking_rule <- function(queue_length, threshold = 10){
 
 sapply(0:12, simulate_balking_rule, threshold = 8)
 ```
-
-
 
 ### Validasi, interpretasi, dan kesalahan umum
 
@@ -2257,8 +2834,17 @@ Interpretasi harus selalu menghubungkan angka dengan keputusan. Nilai $W_q$ sebe
 
 Pada bagian Antrian Prioritas, Reneging, Balking, Blocking, dan Retrial, mahasiswa juga perlu membedakan hasil analitik dan hasil simulasi. Hasil analitik memberikan ekspresi tertutup yang elegan, tetapi bergantung pada asumsi. Hasil simulasi lebih fleksibel, tetapi memiliki error Monte Carlo dan membutuhkan desain eksperimen. Jika keduanya sejalan, kepercayaan terhadap analisis meningkat. Jika keduanya berbeda, perbedaan itu harus dijelaskan, bukan disembunyikan seperti typo di laporan akhir.
 
-
 ### Latihan dan tugas mini
+
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan tugas mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 1. Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat diagram alur layanan, lalu tentukan batas sistem dan definisi pelanggan.
 2. Untuk konteks IGD, call center darurat, layanan pelanggan dengan pelanggan meninggalkan antrean, jelaskan data apa saja yang harus dikumpulkan agar model priority queues dan customer behavior dapat digunakan secara bertanggung jawab.
@@ -2270,8 +2856,17 @@ Pada bagian Antrian Prioritas, Reneging, Balking, Blocking, dan Retrial, mahasis
 <strong>Output yang dikumpulkan.</strong> Mahasiswa menyiapkan catatan 1-2 halaman berisi deskripsi sistem, sketsa alur, tabel data yang diperlukan, model awal yang dipilih, serta dugaan keterbatasan. Untuk pertemuan proyek, catatan ini menjadi bahan diskusi kelompok dan dasar penyusunan laporan.
 </div>
 
-
 ### Catatan pendalaman untuk diskusi kelas
+
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Catatan pendalaman untuk diskusi kelas</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pendekatan terbaik dalam teori antrian adalah berpikir seperti konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa harus peka terhadap kebutuhan pengambil keputusan: seberapa lama pelanggan boleh menunggu, berapa biaya tambahan server, bagaimana jadwal kerja disusun, dan apakah rekomendasi dapat dilaksanakan. Sebagai peneliti, mahasiswa harus menjaga validitas: asumsi harus dinyatakan, data harus diaudit, estimasi harus dijelaskan, dan keterbatasan harus diakui. Keduanya tidak bertentangan; justru kombinasi ini yang membuat analisis statistik bernilai.
 
@@ -2281,11 +2876,9 @@ Untuk mahasiswa S2, kualitas analisis diukur dari kedalaman argumentasi. Jawaban
 
 Di akhir pertemuan, mahasiswa sebaiknya menuliskan satu insight metodologis dan satu insight praktis. Insight metodologis bisa berupa pemahaman tentang hubungan antara $\lambda$, $\mu$, dan $\rho$. Insight praktis bisa berupa kesadaran bahwa antrean panjang tidak selalu berarti pegawai lambat; bisa saja demand melebihi kapasitas pada jam tertentu, pelanggan tidak memiliki informasi, atau proses layanan terlalu heterogen. Kebiasaan memisahkan diagnosis dari prasangka adalah bekal penting dalam analisis statistik terapan.
 
-
 ### Ringkasan pertemuan
 
 Pertemuan 14 menekankan memasukkan perilaku pelanggan dan kebijakan prioritas ke model melalui pembahasan antrian prioritas, reneging, balking, blocking, dan retrial. Mahasiswa mempelajari bagaimana priority queues dan customer behavior digunakan untuk membaca sistem nyata, bagaimana parameter kunci seperti $\lambda$, $\mu$, $c$, dan $\rho$ diinterpretasikan, serta bagaimana hasil analisis diterjemahkan menjadi rekomendasi. Bagian ini juga menyiapkan mahasiswa untuk tugas analisis kasus, praktikum pemodelan, proyek simulasi, dan pengembangan inovasi model pada bagian berikutnya.
-
 
 ## Pertemuan 15: Inovasi Model dan Kajian Literatur Terkini
 
@@ -2323,14 +2916,33 @@ Secara metodologis, asumsi harus selalu disebutkan sebelum hasil. Jika model men
 
 ### Rumus dan interpretasi inti
 
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Rumus dan interpretasi inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada **Landasan Teori dan Cara Berpikir Sistem**, lalu periksa setiap langkah secara manual, uji kasus batas, dan cocokkan dengan rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class="formula-box">
 $$\min_c\ \{C_s c + C_w L_q(c)+C_l P_K(c)\}$$
 
 Inovasi model sering muncul ketika ukuran performa teknis digabungkan dengan fungsi biaya, mutu layanan, keadilan akses, atau risiko kehilangan permintaan.
 </div>
 
-
 ### Contoh kasus terapan
+
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 <strong>Skenario.</strong> Pertimbangkan layanan modern: telemedicine, ride hailing, platform digital, manufaktur cerdas. Pengelola ingin mengetahui apakah sistem saat ini masih layak dipertahankan, perlu ditambah kapasitas, atau cukup diperbaiki melalui perubahan disiplin pelayanan. Data minimal yang perlu dikumpulkan adalah waktu kedatangan, waktu mulai pelayanan, waktu selesai pelayanan, jumlah server aktif, jumlah pelanggan yang meninggalkan antrean, dan catatan kejadian khusus seperti gangguan sistem atau pergantian shift.
@@ -2352,7 +2964,6 @@ Langkah ketiga adalah memilih model awal. Model awal dapat berupa model analitik
 
 Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus operasional. Pernyataan seperti "sistem perlu diperbaiki" terlalu umum. Pernyataan yang lebih kuat adalah "menambah satu server pada pukul 08.00-10.00 diperkirakan menurunkan rata-rata waktu tunggu dari 18 menit menjadi 7 menit, dengan utilisasi server tetap berada di bawah 0,85". Rekomendasi seperti ini dapat diuji, dipertimbangkan biayanya, dan dikomunikasikan kepada pengelola layanan.
 
-
 ### Algoritma kerja analisis
 
 1. Definisikan batas sistem: siapa pelanggan, apa unit layanan, kapan proses dimulai, dan kapan proses selesai.
@@ -2368,8 +2979,6 @@ Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus opera
 
 Algoritma di atas tampak linear, tetapi dalam praktik bersifat iteratif. Setelah validasi dilakukan, mahasiswa mungkin perlu kembali ke tahap pengumpulan data atau definisi sistem. Iterasi ini sehat karena menunjukkan bahwa model sedang dikalibrasi dengan realitas. Dalam riset terapan, model yang langsung tampak sempurna justru sering mencurigakan; mungkin karena analis belum cukup keras menguji asumsi.
 
-
-
 ### Validasi, interpretasi, dan kesalahan umum
 
 Validasi dimulai dari pertanyaan sederhana: apakah parameter yang dihitung masuk akal menurut orang yang memahami layanan? Jika estimasi $\lambda$ menyatakan 120 pelanggan per jam tetapi loket hanya menerima 40 nomor antrean per hari, ada kesalahan definisi waktu atau unit pengamatan. Jika estimasi $\mu$ menyatakan rata-rata pelayanan 30 detik padahal observasi lapangan menunjukkan proses administratif membutuhkan beberapa menit, maka timestamp mungkin salah dicatat. Pemeriksaan kewajaran semacam ini sering lebih cepat menemukan masalah daripada uji statistik formal.
@@ -2380,8 +2989,17 @@ Interpretasi harus selalu menghubungkan angka dengan keputusan. Nilai $W_q$ sebe
 
 Pada bagian Inovasi Model dan Kajian Literatur Terkini, mahasiswa juga perlu membedakan hasil analitik dan hasil simulasi. Hasil analitik memberikan ekspresi tertutup yang elegan, tetapi bergantung pada asumsi. Hasil simulasi lebih fleksibel, tetapi memiliki error Monte Carlo dan membutuhkan desain eksperimen. Jika keduanya sejalan, kepercayaan terhadap analisis meningkat. Jika keduanya berbeda, perbedaan itu harus dijelaskan, bukan disembunyikan seperti typo di laporan akhir.
 
-
 ### Latihan dan tugas mini
+
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan tugas mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 1. Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat diagram alur layanan, lalu tentukan batas sistem dan definisi pelanggan.
 2. Untuk konteks layanan modern: telemedicine, ride hailing, platform digital, manufaktur cerdas, jelaskan data apa saja yang harus dikumpulkan agar model pengembangan model/algoritma berbasis kebutuhan aplikasi dapat digunakan secara bertanggung jawab.
@@ -2393,8 +3011,17 @@ Pada bagian Inovasi Model dan Kajian Literatur Terkini, mahasiswa juga perlu mem
 <strong>Output yang dikumpulkan.</strong> Mahasiswa menyiapkan catatan 1-2 halaman berisi deskripsi sistem, sketsa alur, tabel data yang diperlukan, model awal yang dipilih, serta dugaan keterbatasan. Untuk pertemuan proyek, catatan ini menjadi bahan diskusi kelompok dan dasar penyusunan laporan.
 </div>
 
-
 ### Catatan pendalaman untuk diskusi kelas
+
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Catatan pendalaman untuk diskusi kelas</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pendekatan terbaik dalam teori antrian adalah berpikir seperti konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa harus peka terhadap kebutuhan pengambil keputusan: seberapa lama pelanggan boleh menunggu, berapa biaya tambahan server, bagaimana jadwal kerja disusun, dan apakah rekomendasi dapat dilaksanakan. Sebagai peneliti, mahasiswa harus menjaga validitas: asumsi harus dinyatakan, data harus diaudit, estimasi harus dijelaskan, dan keterbatasan harus diakui. Keduanya tidak bertentangan; justru kombinasi ini yang membuat analisis statistik bernilai.
 
@@ -2404,13 +3031,21 @@ Untuk mahasiswa S2, kualitas analisis diukur dari kedalaman argumentasi. Jawaban
 
 Di akhir pertemuan, mahasiswa sebaiknya menuliskan satu insight metodologis dan satu insight praktis. Insight metodologis bisa berupa pemahaman tentang hubungan antara $\lambda$, $\mu$, dan $\rho$. Insight praktis bisa berupa kesadaran bahwa antrean panjang tidak selalu berarti pegawai lambat; bisa saja demand melebihi kapasitas pada jam tertentu, pelanggan tidak memiliki informasi, atau proses layanan terlalu heterogen. Kebiasaan memisahkan diagnosis dari prasangka adalah bekal penting dalam analisis statistik terapan.
 
-
 ### Ringkasan pertemuan
 
 Pertemuan 15 menekankan merumuskan gap riset dan kontribusi metodologis melalui pembahasan inovasi model dan kajian literatur terkini. Mahasiswa mempelajari bagaimana pengembangan model/algoritma berbasis kebutuhan aplikasi digunakan untuk membaca sistem nyata, bagaimana parameter kunci seperti $\lambda$, $\mu$, $c$, dan $\rho$ diinterpretasikan, serta bagaimana hasil analisis diterjemahkan menjadi rekomendasi. Bagian ini juga menyiapkan mahasiswa untuk tugas analisis kasus, praktikum pemodelan, proyek simulasi, dan pengembangan inovasi model pada bagian berikutnya.
 
-
 ## Pertemuan 16: UAS: Penulisan Ilmiah dan Presentasi Hasil Analisis
+
+<!-- BEGIN AI-INLINE:8cc589470df6 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Pertemuan 16: UAS: Penulisan Ilmiah dan Presentasi Hasil Analisis</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="tujuan">
 <strong>Tujuan pembelajaran.</strong> Setelah mempelajari bagian ini, mahasiswa diharapkan mampu menjelaskan konsep utama uas: penulisan ilmiah dan presentasi hasil analisis, menghubungkannya dengan artikel terapan, laporan simulasi, dan presentasi ilmiah, menerapkan rumus kunci 	ext{claim}=	ext{data}+	ext{model}+	ext{evidence}+	ext{interpretation}, serta menyusun analisis awal untuk konteks proyek akhir teori antrian berbasis data, simulasi, atau inovasi model.
@@ -2446,14 +3081,33 @@ Secara metodologis, asumsi harus selalu disebutkan sebelum hasil. Jika model men
 
 ### Rumus dan interpretasi inti
 
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Rumus dan interpretasi inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada **Landasan Teori dan Cara Berpikir Sistem**, lalu periksa setiap langkah secara manual, uji kasus batas, dan cocokkan dengan rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class="formula-box">
 $$\text{Klaim ilmiah}=\text{data}+\text{model}+\text{bukti}+\text{interpretasi}$$
 
 Laporan antrian yang baik tidak berhenti pada angka. Ia menjelaskan mengapa model dipilih, seberapa kuat asumsi didukung data, dan bagaimana hasil diterjemahkan menjadi keputusan.
 </div>
 
-
 ### Contoh kasus terapan
+
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh kasus terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 <strong>Skenario.</strong> Pertimbangkan proyek akhir teori antrian berbasis data, simulasi, atau inovasi model. Pengelola ingin mengetahui apakah sistem saat ini masih layak dipertahankan, perlu ditambah kapasitas, atau cukup diperbaiki melalui perubahan disiplin pelayanan. Data minimal yang perlu dikumpulkan adalah waktu kedatangan, waktu mulai pelayanan, waktu selesai pelayanan, jumlah server aktif, jumlah pelanggan yang meninggalkan antrean, dan catatan kejadian khusus seperti gangguan sistem atau pergantian shift.
@@ -2475,7 +3129,6 @@ Langkah ketiga adalah memilih model awal. Model awal dapat berupa model analitik
 
 Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus operasional. Pernyataan seperti "sistem perlu diperbaiki" terlalu umum. Pernyataan yang lebih kuat adalah "menambah satu server pada pukul 08.00-10.00 diperkirakan menurunkan rata-rata waktu tunggu dari 18 menit menjadi 7 menit, dengan utilisasi server tetap berada di bawah 0,85". Rekomendasi seperti ini dapat diuji, dipertimbangkan biayanya, dan dikomunikasikan kepada pengelola layanan.
 
-
 ### Algoritma kerja analisis
 
 1. Definisikan batas sistem: siapa pelanggan, apa unit layanan, kapan proses dimulai, dan kapan proses selesai.
@@ -2491,8 +3144,6 @@ Langkah keempat adalah merumuskan rekomendasi. Rekomendasi yang baik harus opera
 
 Algoritma di atas tampak linear, tetapi dalam praktik bersifat iteratif. Setelah validasi dilakukan, mahasiswa mungkin perlu kembali ke tahap pengumpulan data atau definisi sistem. Iterasi ini sehat karena menunjukkan bahwa model sedang dikalibrasi dengan realitas. Dalam riset terapan, model yang langsung tampak sempurna justru sering mencurigakan; mungkin karena analis belum cukup keras menguji asumsi.
 
-
-
 ### Validasi, interpretasi, dan kesalahan umum
 
 Validasi dimulai dari pertanyaan sederhana: apakah parameter yang dihitung masuk akal menurut orang yang memahami layanan? Jika estimasi $\lambda$ menyatakan 120 pelanggan per jam tetapi loket hanya menerima 40 nomor antrean per hari, ada kesalahan definisi waktu atau unit pengamatan. Jika estimasi $\mu$ menyatakan rata-rata pelayanan 30 detik padahal observasi lapangan menunjukkan proses administratif membutuhkan beberapa menit, maka timestamp mungkin salah dicatat. Pemeriksaan kewajaran semacam ini sering lebih cepat menemukan masalah daripada uji statistik formal.
@@ -2503,8 +3154,17 @@ Interpretasi harus selalu menghubungkan angka dengan keputusan. Nilai $W_q$ sebe
 
 Pada bagian UAS: Penulisan Ilmiah dan Presentasi Hasil Analisis, mahasiswa juga perlu membedakan hasil analitik dan hasil simulasi. Hasil analitik memberikan ekspresi tertutup yang elegan, tetapi bergantung pada asumsi. Hasil simulasi lebih fleksibel, tetapi memiliki error Monte Carlo dan membutuhkan desain eksperimen. Jika keduanya sejalan, kepercayaan terhadap analisis meningkat. Jika keduanya berbeda, perbedaan itu harus dijelaskan, bukan disembunyikan seperti typo di laporan akhir.
 
-
 ### Latihan dan tugas mini
+
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Latihan dan tugas mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 1. Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat diagram alur layanan, lalu tentukan batas sistem dan definisi pelanggan.
 2. Untuk konteks proyek akhir teori antrian berbasis data, simulasi, atau inovasi model, jelaskan data apa saja yang harus dikumpulkan agar model artikel terapan, laporan simulasi, dan presentasi ilmiah dapat digunakan secara bertanggung jawab.
@@ -2516,8 +3176,17 @@ Pada bagian UAS: Penulisan Ilmiah dan Presentasi Hasil Analisis, mahasiswa juga 
 <strong>Output yang dikumpulkan.</strong> Mahasiswa menyiapkan catatan 1-2 halaman berisi deskripsi sistem, sketsa alur, tabel data yang diperlukan, model awal yang dipilih, serta dugaan keterbatasan. Untuk pertemuan proyek, catatan ini menjadi bahan diskusi kelompok dan dasar penyusunan laporan.
 </div>
 
-
 ### Catatan pendalaman untuk diskusi kelas
+
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Catatan pendalaman untuk diskusi kelas</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pendekatan terbaik dalam teori antrian adalah berpikir seperti konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa harus peka terhadap kebutuhan pengambil keputusan: seberapa lama pelanggan boleh menunggu, berapa biaya tambahan server, bagaimana jadwal kerja disusun, dan apakah rekomendasi dapat dilaksanakan. Sebagai peneliti, mahasiswa harus menjaga validitas: asumsi harus dinyatakan, data harus diaudit, estimasi harus dijelaskan, dan keterbatasan harus diakui. Keduanya tidak bertentangan; justru kombinasi ini yang membuat analisis statistik bernilai.
 
@@ -2526,7 +3195,6 @@ Dalam diskusi kelas, dosen dapat meminta mahasiswa membandingkan dua strategi pe
 Untuk mahasiswa S2, kualitas analisis diukur dari kedalaman argumentasi. Jawaban "karena rumusnya demikian" belum cukup. Mahasiswa perlu menjawab mengapa rumus tersebut relevan, apa asumsi di baliknya, apakah data mendukung asumsi, apa konsekuensi jika asumsi dilanggar, dan bagaimana hasilnya akan berubah jika parameter berbeda. Kebiasaan bertanya seperti ini akan sangat membantu ketika mahasiswa menyusun mini project, proyek simulasi, dan makalah inovasi.
 
 Di akhir pertemuan, mahasiswa sebaiknya menuliskan satu insight metodologis dan satu insight praktis. Insight metodologis bisa berupa pemahaman tentang hubungan antara $\lambda$, $\mu$, dan $\rho$. Insight praktis bisa berupa kesadaran bahwa antrean panjang tidak selalu berarti pegawai lambat; bisa saja demand melebihi kapasitas pada jam tertentu, pelanggan tidak memiliki informasi, atau proses layanan terlalu heterogen. Kebiasaan memisahkan diagnosis dari prasangka adalah bekal penting dalam analisis statistik terapan.
-
 
 ### Ringkasan pertemuan
 
@@ -2644,6 +3312,16 @@ Kesimpulan menjawab pertanyaan penelitian atau tujuan praktikum. Rekomendasi har
 
 ## Studi Kasus F.1: Rumah sakit rawat jalan
 
+<!-- BEGIN AI-INLINE:960c73d7aa3c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus F.1: Rumah sakit rawat jalan</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Sistem rumah sakit rawat jalan dapat dipandang sebagai jaringan layanan dengan alur pendaftaran, triase, dokter, laboratorium, farmasi. Pelanggan utama dalam sistem ini adalah pasien umum dan prioritas klinis. Analisis antrian dimulai dengan menentukan apakah setiap tahap perlu dimodelkan sebagai node terpisah atau cukup diringkas sebagai satu sistem agregat. Keputusan ini bergantung pada tujuan. Jika tujuan hanya memperkirakan total waktu tunggu, model agregat mungkin cukup. Jika tujuan menemukan bottleneck, model bertahap lebih tepat karena dapat menunjukkan node mana yang membentuk antrean paling panjang.
 
 Data yang dibutuhkan meliputi timestamp kedatangan, waktu mulai pelayanan pada setiap node, waktu selesai pelayanan, jumlah server aktif, serta status pelanggan yang batal, keluar, atau dialihkan. Data juga perlu diberi penanda periode waktu karena pola kedatangan sering berubah antarjam. Pada jam sibuk, estimasi laju kedatangan biasanya lebih tinggi dan dapat membuat sistem yang tampak stabil secara harian menjadi tidak stabil secara lokal. Oleh karena itu analisis harus mempertimbangkan segmentasi waktu.
@@ -2655,6 +3333,16 @@ Skenario perbaikan dapat berupa penambahan server pada jam tertentu, pemisahan j
 Mahasiswa diminta membuat laporan ringkas yang memuat diagram alur, notasi Kendall untuk setiap node, estimasi parameter, hasil model atau simulasi, rekomendasi, dan keterbatasan. Keterbatasan penting untuk dicatat karena sistem nyata jarang sepenuhnya memenuhi asumsi model. Justru dari keterbatasan tersebut mahasiswa dapat merumuskan gagasan inovasi model atau riset lanjutan.
 
 ## Studi Kasus F.2: Call center layanan publik
+
+<!-- BEGIN AI-INLINE:9bb7e94ca17e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus F.2: Call center layanan publik</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Sistem call center layanan publik dapat dipandang sebagai jaringan layanan dengan alur panggilan masuk, IVR, agen, eskalasi supervisor. Pelanggan utama dalam sistem ini adalah pelanggan yang menunggu atau menutup panggilan. Analisis antrian dimulai dengan menentukan apakah setiap tahap perlu dimodelkan sebagai node terpisah atau cukup diringkas sebagai satu sistem agregat. Keputusan ini bergantung pada tujuan. Jika tujuan hanya memperkirakan total waktu tunggu, model agregat mungkin cukup. Jika tujuan menemukan bottleneck, model bertahap lebih tepat karena dapat menunjukkan node mana yang membentuk antrean paling panjang.
 
@@ -2668,6 +3356,16 @@ Mahasiswa diminta membuat laporan ringkas yang memuat diagram alur, notasi Kenda
 
 ## Studi Kasus F.3: Gerbang tol
 
+<!-- BEGIN AI-INLINE:5dd3d45f028b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus F.3: Gerbang tol</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Sistem gerbang tol dapat dipandang sebagai jaringan layanan dengan alur kedatangan kendaraan, gardu, transaksi, keluar ruas. Pelanggan utama dalam sistem ini adalah kendaraan ringan dan berat. Analisis antrian dimulai dengan menentukan apakah setiap tahap perlu dimodelkan sebagai node terpisah atau cukup diringkas sebagai satu sistem agregat. Keputusan ini bergantung pada tujuan. Jika tujuan hanya memperkirakan total waktu tunggu, model agregat mungkin cukup. Jika tujuan menemukan bottleneck, model bertahap lebih tepat karena dapat menunjukkan node mana yang membentuk antrean paling panjang.
 
 Data yang dibutuhkan meliputi timestamp kedatangan, waktu mulai pelayanan pada setiap node, waktu selesai pelayanan, jumlah server aktif, serta status pelanggan yang batal, keluar, atau dialihkan. Data juga perlu diberi penanda periode waktu karena pola kedatangan sering berubah antarjam. Pada jam sibuk, estimasi laju kedatangan biasanya lebih tinggi dan dapat membuat sistem yang tampak stabil secara harian menjadi tidak stabil secara lokal. Oleh karena itu analisis harus mempertimbangkan segmentasi waktu.
@@ -2679,6 +3377,16 @@ Skenario perbaikan dapat berupa penambahan server pada jam tertentu, pemisahan j
 Mahasiswa diminta membuat laporan ringkas yang memuat diagram alur, notasi Kendall untuk setiap node, estimasi parameter, hasil model atau simulasi, rekomendasi, dan keterbatasan. Keterbatasan penting untuk dicatat karena sistem nyata jarang sepenuhnya memenuhi asumsi model. Justru dari keterbatasan tersebut mahasiswa dapat merumuskan gagasan inovasi model atau riset lanjutan.
 
 ## Studi Kasus F.4: Administrasi akademik
+
+<!-- BEGIN AI-INLINE:83ad7f5f5c96 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus F.4: Administrasi akademik</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Sistem administrasi akademik dapat dipandang sebagai jaringan layanan dengan alur pengambilan nomor, verifikasi berkas, validasi, penyelesaian. Pelanggan utama dalam sistem ini adalah mahasiswa dan alumni. Analisis antrian dimulai dengan menentukan apakah setiap tahap perlu dimodelkan sebagai node terpisah atau cukup diringkas sebagai satu sistem agregat. Keputusan ini bergantung pada tujuan. Jika tujuan hanya memperkirakan total waktu tunggu, model agregat mungkin cukup. Jika tujuan menemukan bottleneck, model bertahap lebih tepat karena dapat menunjukkan node mana yang membentuk antrean paling panjang.
 
@@ -2692,6 +3400,16 @@ Mahasiswa diminta membuat laporan ringkas yang memuat diagram alur, notasi Kenda
 
 ## Studi Kasus F.5: Manufaktur
 
+<!-- BEGIN AI-INLINE:114adb9a2d41 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus F.5: Manufaktur</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Sistem manufaktur dapat dipandang sebagai jaringan layanan dengan alur mesin rusak, teknisi, perbaikan, kembali produksi. Pelanggan utama dalam sistem ini adalah mesin sebagai sumber terbatas. Analisis antrian dimulai dengan menentukan apakah setiap tahap perlu dimodelkan sebagai node terpisah atau cukup diringkas sebagai satu sistem agregat. Keputusan ini bergantung pada tujuan. Jika tujuan hanya memperkirakan total waktu tunggu, model agregat mungkin cukup. Jika tujuan menemukan bottleneck, model bertahap lebih tepat karena dapat menunjukkan node mana yang membentuk antrean paling panjang.
 
 Data yang dibutuhkan meliputi timestamp kedatangan, waktu mulai pelayanan pada setiap node, waktu selesai pelayanan, jumlah server aktif, serta status pelanggan yang batal, keluar, atau dialihkan. Data juga perlu diberi penanda periode waktu karena pola kedatangan sering berubah antarjam. Pada jam sibuk, estimasi laju kedatangan biasanya lebih tinggi dan dapat membuat sistem yang tampak stabil secara harian menjadi tidak stabil secara lokal. Oleh karena itu analisis harus mempertimbangkan segmentasi waktu.
@@ -2703,6 +3421,16 @@ Skenario perbaikan dapat berupa penambahan server pada jam tertentu, pemisahan j
 Mahasiswa diminta membuat laporan ringkas yang memuat diagram alur, notasi Kendall untuk setiap node, estimasi parameter, hasil model atau simulasi, rekomendasi, dan keterbatasan. Keterbatasan penting untuk dicatat karena sistem nyata jarang sepenuhnya memenuhi asumsi model. Justru dari keterbatasan tersebut mahasiswa dapat merumuskan gagasan inovasi model atau riset lanjutan.
 
 ## Studi Kasus F.6: Restoran cepat saji
+
+<!-- BEGIN AI-INLINE:f55856d7c964 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus F.6: Restoran cepat saji</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Sistem restoran cepat saji dapat dipandang sebagai jaringan layanan dengan alur pesanan, pembayaran, persiapan, pengambilan. Pelanggan utama dalam sistem ini adalah pelanggan makan di tempat dan bawa pulang. Analisis antrian dimulai dengan menentukan apakah setiap tahap perlu dimodelkan sebagai node terpisah atau cukup diringkas sebagai satu sistem agregat. Keputusan ini bergantung pada tujuan. Jika tujuan hanya memperkirakan total waktu tunggu, model agregat mungkin cukup. Jika tujuan menemukan bottleneck, model bertahap lebih tepat karena dapat menunjukkan node mana yang membentuk antrean paling panjang.
 
@@ -2716,6 +3444,16 @@ Mahasiswa diminta membuat laporan ringkas yang memuat diagram alur, notasi Kenda
 
 ## Studi Kasus F.7: Bandara
 
+<!-- BEGIN AI-INLINE:0e6a3056519c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus F.7: Bandara</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Sistem bandara dapat dipandang sebagai jaringan layanan dengan alur check-in, bag drop, keamanan, boarding. Pelanggan utama dalam sistem ini adalah penumpang domestik dan internasional. Analisis antrian dimulai dengan menentukan apakah setiap tahap perlu dimodelkan sebagai node terpisah atau cukup diringkas sebagai satu sistem agregat. Keputusan ini bergantung pada tujuan. Jika tujuan hanya memperkirakan total waktu tunggu, model agregat mungkin cukup. Jika tujuan menemukan bottleneck, model bertahap lebih tepat karena dapat menunjukkan node mana yang membentuk antrean paling panjang.
 
 Data yang dibutuhkan meliputi timestamp kedatangan, waktu mulai pelayanan pada setiap node, waktu selesai pelayanan, jumlah server aktif, serta status pelanggan yang batal, keluar, atau dialihkan. Data juga perlu diberi penanda periode waktu karena pola kedatangan sering berubah antarjam. Pada jam sibuk, estimasi laju kedatangan biasanya lebih tinggi dan dapat membuat sistem yang tampak stabil secara harian menjadi tidak stabil secara lokal. Oleh karena itu analisis harus mempertimbangkan segmentasi waktu.
@@ -2728,6 +3466,16 @@ Mahasiswa diminta membuat laporan ringkas yang memuat diagram alur, notasi Kenda
 
 ## Studi Kasus F.8: Platform digital
 
+<!-- BEGIN AI-INLINE:2fc8f3aa0d43 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus F.8: Platform digital</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Sistem platform digital dapat dipandang sebagai jaringan layanan dengan alur request pengguna, server aplikasi, database, cache. Pelanggan utama dalam sistem ini adalah permintaan API. Analisis antrian dimulai dengan menentukan apakah setiap tahap perlu dimodelkan sebagai node terpisah atau cukup diringkas sebagai satu sistem agregat. Keputusan ini bergantung pada tujuan. Jika tujuan hanya memperkirakan total waktu tunggu, model agregat mungkin cukup. Jika tujuan menemukan bottleneck, model bertahap lebih tepat karena dapat menunjukkan node mana yang membentuk antrean paling panjang.
 
 Data yang dibutuhkan meliputi timestamp kedatangan, waktu mulai pelayanan pada setiap node, waktu selesai pelayanan, jumlah server aktif, serta status pelanggan yang batal, keluar, atau dialihkan. Data juga perlu diberi penanda periode waktu karena pola kedatangan sering berubah antarjam. Pada jam sibuk, estimasi laju kedatangan biasanya lebih tinggi dan dapat membuat sistem yang tampak stabil secara harian menjadi tidak stabil secara lokal. Oleh karena itu analisis harus mempertimbangkan segmentasi waktu.
@@ -2738,12 +3486,9 @@ Skenario perbaikan dapat berupa penambahan server pada jam tertentu, pemisahan j
 
 Mahasiswa diminta membuat laporan ringkas yang memuat diagram alur, notasi Kendall untuk setiap node, estimasi parameter, hasil model atau simulasi, rekomendasi, dan keterbatasan. Keterbatasan penting untuk dicatat karena sistem nyata jarang sepenuhnya memenuhi asumsi model. Justru dari keterbatasan tersebut mahasiswa dapat merumuskan gagasan inovasi model atau riset lanjutan.
 
-
-
 <!-- Akhir modul pembelajaran Teori Antrian. -->
 
 # Lampiran G: Catatan Pengayaan untuk Dosen dan Mahasiswa
-
 
 ## Catatan pengayaan 1: layanan kesehatan
 
@@ -2806,6 +3551,16 @@ Dalam laporan, mahasiswa sebaiknya menyajikan narasi yang menghubungkan statisti
 Akhirnya, pengayaan ini menekankan etika rekomendasi. Keputusan mengurangi antrean bukan hanya masalah efisiensi. Dalam layanan kesehatan, pendidikan, transportasi, atau administrasi publik, waktu tunggu berkaitan dengan hak akses, kenyamanan, dan kepercayaan masyarakat. Oleh sebab itu, rekomendasi berbasis teori antrian harus mempertimbangkan dampak terhadap kelompok rentan, keadilan prioritas, dan kelayakan implementasi. Angka adalah bukti; keputusan tetap membutuhkan pertimbangan manusiawi.
 
 ## Catatan pengayaan 7: platform komputasi awan
+
+<!-- BEGIN AI-INLINE:757b9e2bbfe7 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Catatan pengayaan 7: platform komputasi awan</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pengayaan ini memperdalam hubungan antara teori antrian dan praktik analisis data. Dalam konteks platform komputasi awan, analis perlu mengingat bahwa model tidak menggantikan observasi lapangan. Model membantu menyederhanakan sistem, tetapi penyederhanaan harus dijelaskan. Jika data menunjukkan pola kedatangan yang sangat berbeda antara pagi, siang, dan sore, maka satu nilai rata-rata kedatangan harian dapat menyembunyikan risiko overload. Mahasiswa dapat memecah data ke dalam interval waktu dan menghitung parameter per interval, kemudian membandingkan hasilnya dengan model agregat. Perbandingan tersebut sering menghasilkan diskusi yang lebih kaya daripada hanya melaporkan satu angka rata-rata.
 
@@ -2912,6 +3667,16 @@ berada pada mahasiswa.
 5. Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil secara mandiri.
 
 ### Bukti asesmen
+
+<!-- BEGIN AI-INLINE:962c6759c89e -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Bukti asesmen</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir Sistem.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Penilaian berfokus pada ketepatan metode, validasi dan ketidakpastian,
 reproducibility, interpretasi, komunikasi, serta transparansi penggunaan AI.

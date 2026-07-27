@@ -3128,270 +3128,63 @@ serta komunikasi hasil secara ilmiah.</p>
 </div>
 <!-- END UNPAD MATERIAL ENHANCEMENT -->
 <style>
-html, body {
-  background: linear-gradient(135deg, #f8fbfd 0%, #fffdf8 48%, #f3f6ee 100%) !important;
-  color: #172033 !important;
+:root{
+--brown-900:#2f1b0c; --brown-800:#4b2a14; --brown-700:#6b3f20; --brown-600:#8a5a2b;
+--brown-500:#a77545; --brown-300:#d7b98c; --brown-200:#ead8bc; --brown-100:#f7efe2;
+--cream:#fff9ef; --amber:#f0b44c; --rose:#ad6551; --green:#5a7d59; --ink:#24150d;
 }
-body {
-  font-family: "Segoe UI", Arial, sans-serif !important;
-  font-size: 17px !important;
-  line-height: 1.72 !important;
-  margin: 0 !important;
-  overflow-x: hidden !important;
+html, body { scroll-behavior: smooth; }
+body{
+color:var(--ink);
+background:linear-gradient(135deg,#fff8eb 0%,#f1dfc5 32%,#d3a66c 70%,#75441f 100%);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+line-height:1.72;
 }
-.main-container {
-  max-width: 1180px !important;
-  margin-top: 18px !important;
-  margin-bottom: 38px !important;
-  padding: 34px 46px 54px !important;
-  background: rgba(255, 253, 248, 0.98) !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  box-shadow: 0 18px 42px rgba(23, 57, 92, 0.12) !important;
-  overflow-x: hidden !important;
+#TOC{
+position:fixed; top:0; left:0; bottom:0; width:310px; overflow-y:auto;
+padding:26px 20px; background:linear-gradient(180deg,#4b2a14 0%,#7a4d28 58%,#a6723e 100%);
+color:#fff8ea; box-shadow:8px 0 28px rgba(47,27,12,.25); z-index:10;
 }
-h1, h2, h3, h4 {
-  color: #17395c !important;
-  font-weight: 800 !important;
-  letter-spacing: 0 !important;
-  line-height: 1.24 !important;
-}
-h1.title {
-  color: #17395c !important;
-  -webkit-text-fill-color: #17395c !important;
-  background: none !important;
-  border-bottom: 4px solid #f2a51a !important;
-  padding-bottom: 14px !important;
-}
-h2 {
-  margin-top: 46px !important;
-  padding: 12px 18px !important;
-  border-left: 8px solid #f2a51a !important;
-  border-radius: 8px !important;
-  background: linear-gradient(90deg, #eef8f6, #fff8e7) !important;
-}
-.unpad-cover h2 {
-  color: #111827 !important;
-  -webkit-text-fill-color: #111827 !important;
-  background: #fffdf8 !important;
-  border-left: 8px solid #f2a51a !important;
-  border-bottom: 0 !important;
-}
-h3 {
-  margin-top: 30px !important;
-}
-a {
-  color: #0b5c86 !important;
-}
-img, svg {
-  max-width: 100% !important;
-  height: auto !important;
-}
-table {
-  width: 100% !important;
-  border-collapse: collapse !important;
-  margin: 18px 0 26px !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-}
-.s2-table-scroll {
-  width: 100% !important;
-  max-width: 100% !important;
-  overflow-x: auto !important;
-  margin: 18px 0 26px !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-}
-.s2-table-scroll table {
-  min-width: 680px !important;
-  margin: 0 !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-}
-th {
-  background: #17395c !important;
-  color: #ffffff !important;
-  padding: 10px 12px !important;
-}
-td {
-  background: #fffdf8 !important;
-  border: 1px solid #d7e2ea !important;
-  padding: 10px 12px !important;
-  vertical-align: top !important;
-}
-.main-container p, .main-container li, td, th {
-  overflow-wrap: anywhere !important;
-}
-pre {
-  overflow: auto !important;
-  padding: 16px !important;
-  background: #eef5f8 !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  color: #111827 !important;
-}
-code {
-  background: #eef5f8 !important;
-  border-radius: 6px !important;
-  color: #111827 !important;
-  padding: 2px 5px !important;
-}
-span.math.display, .math.display, .MathJax_Display, .MathJax, mjx-container {
-  display: block !important;
-  max-width: 100% !important;
-  overflow-x: auto !important;
-  overflow-y: hidden !important;
-}
-blockquote {
-  margin: 22px 0 !important;
-  padding: 16px 20px !important;
-  background: #fff8e7 !important;
-  border-left: 8px solid #0f766e !important;
-  border-radius: 0 8px 8px 0 !important;
-}
-#TOC, .tocify {
-  background: #ffffff !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  box-shadow: 0 12px 28px rgba(23, 57, 92, 0.10) !important;
-}
-.tocify {
-  max-height: calc(100vh - 40px) !important;
-}
-.tocify .active, #TOC .active {
-  background: linear-gradient(90deg, #17395c, #0f766e) !important;
-  color: #ffffff !important;
-  border-radius: 6px !important;
-}
-#TOC a, .tocify a {
-  color: #17395c !important;
-  text-decoration: none !important;
-}
-#TOC a:hover, .tocify a:hover {
-  color: #0f766e !important;
-  text-decoration: underline !important;
-}
-.hero, .rps-box, .rpsbox, .info-card, .card,
-.callout, .note, .casebox, .case-box, .examplebox, .exercise-box,
-.learning-box, .activitybox, .activity, .practice-box, .praktik-box,
-.praktikum, .tujuan, .interpretasi, .refleksi, .warning, .warningbox,
-.warning-box, .tip, .idea-box, .mathbox, .formula-box, .rumus-box,
-.contoh-box, .rubric-box {
-  margin: 22px 0 !important;
-  padding: 20px 24px !important;
-  background: #fffdf8 !important;
-  border: 1px solid #d7e2ea !important;
-  border-left: 8px solid #0f766e !important;
-  border-radius: 8px !important;
-  box-shadow: 0 10px 24px rgba(23, 57, 92, 0.10) !important;
-  color: #172033 !important;
-}
-.hero {
-  background: linear-gradient(135deg, #17395c 0%, #0f766e 62%, #f2a51a 100%) !important;
-  color: #ffffff !important;
-  border-left: 0 !important;
-}
-.hero h1, .hero h2, .hero h3, .hero h4, .hero p, .hero strong {
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-}
-.warning, .warningbox, .warning-box {
-  border-left-color: #b45309 !important;
-  background: #fff8e7 !important;
-}
-.rps-box, .rpsbox, .rubric-box {
-  border-left-color: #f2a51a !important;
-  background: linear-gradient(135deg, #fffdf8, #fff8e7) !important;
-}
-.mathbox, .formula-box, .rumus-box {
-  border-left-color: #17395c !important;
-  background: #eef5f8 !important;
-}
-.badge {
-  display: inline-block !important;
-  padding: 4px 10px !important;
-  border-radius: 999px !important;
-  background: #17395c !important;
-  color: #ffffff !important;
-  font-weight: 700 !important;
-  font-size: 0.85em !important;
-}
-.grid-2, .grid-3 {
-  display: grid !important;
-  gap: 18px !important;
-}
-.grid-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-}
-.grid-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-}
-hr {
-  border: 0 !important;
-  height: 2px !important;
-  background: linear-gradient(90deg, transparent, #d7e2ea, transparent) !important;
-  margin: 34px 0 !important;
-}
-@media (max-width: 980px) {
-  #TOC, .tocify {
-    position: relative !important;
-    width: auto !important;
-    max-height: 360px !important;
-    margin: 12px !important;
-  }
-  .main-container {
-    margin: 12px !important;
-    padding: 24px !important;
-  }
-  .grid-2, .grid-3 {
-    grid-template-columns: 1fr !important;
-  }
-}
+#TOC:before{ content:"📚 Daftar Isi"; display:block; font-weight:800; font-size:1.25rem; margin-bottom:18px; color:#ffe0a1; }
+#TOC a{ color:#fff4d8; text-decoration:none; border-bottom:1px dotted rgba(255,255,255,.25); }
+#TOC a:hover{ color:#ffe2a3; border-bottom:1px solid #ffe2a3; }
+#TOC ul{ padding-left:1.05rem; }
+body > .container, body > main, body > div:not(#TOC){ max-width:1060px; margin-left:350px; margin-right:40px; }
+@media(max-width:980px){ #TOC{position:relative; width:auto; max-height:380px;} body > .container, body > main, body > div:not(#TOC){margin:18px;} }
+h1,h2,h3,h4{ color:var(--brown-900); font-weight:800; letter-spacing:.01em; }
+h1{ margin-top:1rem; padding:1.2rem 1.4rem; border-radius:24px; color:#fff8ec;
+background:linear-gradient(135deg,#3b210f 0%,#7b4d27 50%,#d49b4e 100%); box-shadow:0 16px 38px rgba(60,32,14,.28); }
+h2{ margin-top:2.4rem; padding:.8rem 1rem; border-left:10px solid var(--amber); background:linear-gradient(90deg,#fff3d9,#f6e1bc); border-radius:14px; }
+h3{ margin-top:1.7rem; color:#5e351a; }
+h4{ color:#74461f; }
+a{ color:#7b4017; font-weight:650; }
+blockquote{ background:linear-gradient(90deg,#fff8eb,#efd0a4); border-left:8px solid #9b632f; padding:1.0rem 1.2rem; border-radius:14px; }
+pre, code{ font-family:"Fira Code","Source Code Pro",Menlo,Consolas,monospace; }
+pre{ background:#f7e7cf !important; color:#1c120a !important; border:1px solid #d2a66d; border-radius:16px; padding:1.1rem; overflow:auto; box-shadow:inset 0 0 0 1px rgba(255,255,255,.45); }
+code{ background:#f5dfbf; color:#24150d; border-radius:6px; padding:.12rem .33rem; }
+table{ border-collapse:collapse; width:100%; background:#fffaf2; border-radius:14px; overflow:hidden; box-shadow:0 8px 24px rgba(74,42,20,.08); }
+th{ background:linear-gradient(90deg,#6f441f,#a66f36); color:white; }
+th,td{ padding:.7rem .8rem; border:1px solid #d9b889; vertical-align:top; }
+tr:nth-child(even) td{ background:#fff3df; }
+.hero-card{ padding:2rem; margin:1rem 0 2rem 0; border-radius:28px; color:#fff8ea;
+background:radial-gradient(circle at top left,#e2b05d 0%,transparent 28%),linear-gradient(135deg,#2f1b0c 0%,#6e3f1d 45%,#c4873f 100%);
+box-shadow:0 24px 60px rgba(47,27,12,.35); }
+.hero-card .subtitle{ font-size:1.15rem; opacity:.95; }
+.badge{ display:inline-block; padding:.35rem .72rem; border-radius:999px; background:#ffe0a1; color:#4b2a14; margin:.15rem; font-weight:750; }
+.info-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem; }
+.info-card,.callout,.case-box,.formula-box,.practice-box,.rubric-box,.warning-box{ border-radius:20px; padding:1.1rem 1.25rem; margin:1rem 0; box-shadow:0 12px 28px rgba(72,42,19,.10); }
+.info-card{ background:linear-gradient(135deg,#fffaf2,#f2d4a9); border:1px solid #e2bc82; }
+.callout{ background:linear-gradient(135deg,#fff8ea,#f5dab3); border-left:8px solid #b87633; }
+.case-box{ background:linear-gradient(135deg,#fff7e8,#edd0a4); border:1px solid #c8904e; }
+.formula-box{ background:#f7e4c4; border:2px solid #c99455; color:#111; }
+.practice-box{ background:linear-gradient(135deg,#fdf4df,#f1d6ad); border-left:8px solid #5a7d59; }
+.rubric-box{ background:linear-gradient(135deg,#fff6e7,#efd1a6); border-left:8px solid #ad6551; }
+.warning-box{ background:linear-gradient(135deg,#fff2dc,#e9bc82); border-left:8px solid #8a331e; }
+.figure-box{ background:#fffaf2; border:1px solid #e0bd87; border-radius:22px; padding:1rem; margin:1.25rem 0; text-align:center; box-shadow:0 14px 36px rgba(72,42,19,.12); }
+.caption{ font-size:.92rem; color:#6b3f20; font-weight:650; margin-top:.4rem; }
+hr{ border:0; height:4px; border-radius:999px; background:linear-gradient(90deg,#4b2a14,#d8a15a,#fff3d6); margin:2rem 0; }
+.small-note{ font-size:.95rem; color:#5c3a1f; }
 </style>
-<script>
-window.MathJax = {
-  tex: {
-    inlineMath: [["\\(", "\\)"], ["$", "$"]],
-    displayMath: [["\\[", "\\]"], ["$$", "$$"]],
-    processEscapes: true,
-    processEnvironments: true,
-    tags: "ams"
-  },
-  options: {
-    skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"],
-    ignoreHtmlClass: "tex2jax_ignore"
-  },
-  chtml: {
-    fontURL: "../../assets/vendor/mathjax/output/chtml/fonts/woff-v2"
-  },
-  startup: {
-    typeset: true
-  }
-};
-
-(function () {
-  var script = document.createElement("script");
-  script.src = "../../assets/vendor/mathjax/tex-mml-chtml.js";
-  script.async = true;
-  script.onerror = function () {
-    var fallback = document.createElement("script");
-    fallback.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
-    fallback.async = true;
-    document.head.appendChild(fallback);
-  };
-  document.head.appendChild(script);
-})();
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll("table").forEach(function (table) {
-    if (table.parentElement && table.parentElement.classList.contains("s2-table-scroll")) return;
-    var wrapper = document.createElement("div");
-    wrapper.className = "s2-table-scroll";
-    table.parentNode.insertBefore(wrapper, table);
-    wrapper.appendChild(table);
-  });
-});
-</script>
 <div class="hero-card">
 <h1 style="margin:0; box-shadow:none; background:transparent; padding:0;">
 Teori Risiko
@@ -3427,9 +3220,89 @@ evaluasi solusi inovatif. Pendekatan pembelajaran diarahkan pada
 kemampuan analitis, komputasional, dan komunikatif mahasiswa
 pascasarjana statistika terapan.</p>
 </blockquote>
+<!-- BEGIN AI-INLINE-STYLE-2026 -->
+<style>
+.ai-inline {
+margin: 1rem 0 1.35rem;
+padding: 1rem 1.1rem;
+border: 1px solid #bfd9d5;
+border-left: 7px solid #0f766e;
+border-radius: 8px;
+background: linear-gradient(135deg, #eff9f7, #fffaf0);
+}
+.ai-inline--agentic { border-left-color: #17395c; background: linear-gradient(135deg, #eef5fb, #f5faf8); }
+.ai-inline--assessment { border-left-color: #a35d00; background: #fff8e8; }
+.ai-inline h3, .ai-inline h4 { margin-top: 0; color: #17395c; }
+.ai-inline p:last-child, .ai-inline ul:last-child { margin-bottom: 0; }
+.ai-inline__label {
+display: inline-block; margin-bottom: .45rem; padding: .2rem .55rem;
+border-radius: 999px; background: #17395c; color: white;
+font-size: .78rem; font-weight: 800;
+}
+.ai-inline table { width: 100%; margin: .6rem 0; background: white; }
+</style>
+<!-- END AI-INLINE-STYLE-2026 -->
 <div id="petunjuk-penggunaan-materi" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Petunjuk Penggunaan
 Materi</h1>
+<!-- BEGIN AI-INLINE:d6d2c55464b3 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 1</span>
+<h3>
+Generative dan Agentic AI untuk Petunjuk Penggunaan Materi
+</h3>
+<p><strong>Arah RPS.</strong> AI untuk risk scoring, anomaly detection,
+early warning, dan kombinasi model dengan extreme value atau heavy-tail
+models.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Pendahuluan Teori Risiko; Pengertian
+risiko dan ketidakpastian.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk mengurai notasi dan menawarkan langkah derivasi
+alternatif tanpa menggantikan pembuktian mahasiswa.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter; agen wajib berhenti pada checkpoint
+dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas,
+satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Materi ini disusun sebagai bahan ajar panjang untuk satu semester.
 Setiap bab dapat digunakan sebagai bahan bacaan sebelum kuliah, bahan
 diskusi saat pertemuan sinkron, serta panduan praktikum. Struktur bab
@@ -3499,6 +3372,66 @@ mitigasi berbasis bukti.
 <div id="peta-capaian-pembelajaran-dan-struktur-semester" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Peta Capaian
 Pembelajaran dan Struktur Semester</h1>
+<!-- BEGIN AI-INLINE:199d8043b46b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 2</span>
+<h3>
+Generative dan Agentic AI untuk Peta Capaian Pembelajaran dan Struktur
+Semester
+</h3>
+<p><strong>Arah RPS.</strong> Stress testing, scenario analysis,
+adversarial robustness, model uncertainty, dan risiko sistemik dari
+otomatisasi keputusan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Perbedaan risiko murni dan risiko
+spekulatif; Peran teori risiko di bidang aktuaria dan keuangan;
+Klasifikasi dan Identifikasi Risiko.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <table>
 <colgroup>
 <col width="50%" />
@@ -3594,6 +3527,64 @@ lengkap dari data, model, simulasi, sampai rekomendasi.
 <div id="ringkasan-formula-inti" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Ringkasan Formula
 Inti</h1>
+<!-- BEGIN AI-INLINE:3203f3b734b6 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 3</span>
+<h3>
+Generative dan Agentic AI untuk Ringkasan Formula Inti
+</h3>
+<p><strong>Arah RPS.</strong> Asesmen studi kasus menghasilkan risk
+dashboard, dokumentasi asumsi, dan rekomendasi mitigasi yang dapat
+dipertanggungjawabkan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Jenis-jenis risiko (individu, bisnis,
+keuangan, operasional, sosial, dsb); Sumber dan penyebab risiko.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk mengurai notasi dan menawarkan langkah derivasi
+alternatif tanpa menggantikan pembuktian mahasiswa.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter; agen wajib berhenti pada checkpoint
+dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas,
+satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p>Rata-rata kerugian atau expected loss dirumuskan sebagai</p>
 <p><span class="math display">\[E[X]=\sum_x x f(x) \quad \text{untuk
@@ -3639,6 +3630,64 @@ kerugian setelah ambang.
 <div id="rencana-praktikum-komputasi" class="section level1" number="4">
 <h1><span class="header-section-number">4</span> Rencana Praktikum
 Komputasi</h1>
+<!-- BEGIN AI-INLINE:70c18b45ea33 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 4</span>
+<h3>
+Generative dan Agentic AI untuk Rencana Praktikum Komputasi
+</h3>
+<p><strong>Arah RPS.</strong> AI untuk risk scoring, anomaly detection,
+early warning, dan kombinasi model dengan extreme value atau heavy-tail
+models.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Siklus manajemen risiko; Pengukuran
+Risiko.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk mengurai notasi dan menawarkan langkah derivasi
+alternatif tanpa menggantikan pembuktian mahasiswa.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter; agen wajib berhenti pada checkpoint
+dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas,
+satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Praktikum diarahkan agar mahasiswa mampu menghubungkan konsep dengan
 data. Pada awal semester mahasiswa dapat memakai data simulasi
 sederhana, misalnya jumlah klaim bulanan, besar klaim asuransi
@@ -3664,6 +3713,65 @@ keterbatasan data.</p>
 <div id="etika-validitas-dan-komunikasi-risiko" class="section level1" number="5">
 <h1><span class="header-section-number">5</span> Etika, Validitas, dan
 Komunikasi Risiko</h1>
+<!-- BEGIN AI-INLINE:ee96314e865c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 5</span>
+<h3>
+Generative dan Agentic AI untuk Etika, Validitas, dan Komunikasi Risiko
+</h3>
+<p><strong>Arah RPS.</strong> Stress testing, scenario analysis,
+adversarial robustness, model uncertainty, dan risiko sistemik dari
+otomatisasi keputusan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK2 melalui fokus: Ukuran-ukuran risiko: nilai harapan,
+variansi, standar deviasi, skewness, kurtosis; Nilai Kerugian Ekspektasi
+(Expected Loss).</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam pembelajaran Teori Risiko, ukuran kuantitatif tidak boleh
 dipisahkan dari implikasi etis. Ketika model menunjukkan adanya risiko
 tinggi, keputusan yang diambil dapat memengaruhi premi, akses layanan,
@@ -3686,6 +3794,64 @@ dan skenario stres membantu audiens memahami bahwa risiko bukan satu
 angka tunggal, melainkan spektrum kemungkinan. Inilah alasan praktikum
 diarahkan tidak hanya menghasilkan output, tetapi juga narasi
 interpretasi. # Bab 1. Pendahuluan Teori Risiko</p>
+<!-- BEGIN AI-INLINE:6266131daaaf -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 1</span>
+<h3>
+Generative dan Agentic AI untuk Pendahuluan Teori Risiko
+</h3>
+<p><strong>Arah RPS.</strong> AI untuk risk scoring, anomaly detection,
+early warning, dan kombinasi model dengan extreme value atau heavy-tail
+models.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Pendahuluan Teori Risiko; Pengertian
+risiko dan ketidakpastian.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk mengurai notasi dan menawarkan langkah derivasi
+alternatif tanpa menggantikan pembuktian mahasiswa.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter; agen wajib berhenti pada checkpoint
+dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas,
+satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <strong>Pertemuan 1 - SubCPMK1.</strong> Fokus bab ini adalah pengertian
 risiko dan ketidakpastian. Mahasiswa diharapkan mampu menjelaskan
@@ -3695,6 +3861,24 @@ dengan keputusan manajemen risiko.
 <div id="orientasi-konseptual" class="section level2" number="5.1">
 <h2><span class="header-section-number">5.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:1a8fe32cc181 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Pendahuluan Teori Risiko.
+</p>
+<p>
+Minta AI menjelaskan <strong>Pendahuluan Teori Risiko</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bab ini membahas pengertian risiko dan ketidakpastian dalam kerangka
 Teori Risiko. Konsep utama yang perlu dikuasai adalah risiko sebagai
 variasi hasil, ketidakpastian dan informasi, peran teori risiko dalam
@@ -3734,6 +3918,24 @@ dibandingkan risiko lain yang kurang terlihat.</p>
 </div>
 <div id="peta-konsep" class="section level2" number="5.2">
 <h2><span class="header-section-number">5.2</span> Peta Konsep</h2>
+<!-- BEGIN AI-INLINE:f96d92ffb1f9 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Peta Konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Pendahuluan Teori Risiko.
+</p>
+<p>
+Minta AI menjelaskan <strong>Pendahuluan Teori Risiko</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="risiko-sebagai-variasi-hasil" class="section level3" number="5.2.1">
 <h3><span class="header-section-number">5.2.1</span> 1. Risiko Sebagai
 Variasi Hasil</h3>
@@ -3805,6 +4007,24 @@ rapat penting.</p>
 <div id="peran-teori-risiko-dalam-aktuaria" class="section level3" number="5.2.3">
 <h3><span class="header-section-number">5.2.3</span> 3. Peran Teori
 Risiko Dalam Aktuaria</h3>
+<!-- BEGIN AI-INLINE:4a3a02c8fb36 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada 3. Peran Teori Risiko Dalam Aktuaria
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Pendahuluan Teori Risiko.
+</p>
+<p>
+Minta AI menjelaskan <strong>Pendahuluan Teori Risiko</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Konsep <strong>peran teori risiko dalam aktuaria</strong> perlu
 dibaca sebagai komponen dari sistem pengukuran risiko. Pada tahap awal,
 mahasiswa perlu menjelaskan definisi operasionalnya, bukan hanya
@@ -3907,6 +4127,29 @@ jarang tetapi besar dapat menentukan ketahanan organisasi.</p>
 <div id="contoh-kasus-terarah" class="section level2" number="5.4">
 <h2><span class="header-section-number">5.4</span> Contoh Kasus
 Terarah</h2>
+<!-- BEGIN AI-INLINE:8c36f4e71d30 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terarah
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Pendahuluan Teori Risiko.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI untuk risk scoring,
+anomaly detection, early warning, dan kombinasi model dengan extreme
+value atau heavy-tail models. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan perusahaan asuransi kesehatan yang harus memperkirakan
 klaim rawat inap tahunan. Langkah pertama adalah menyusun narasi proses
 risiko. Mahasiswa harus menjawab: apa unit eksposurnya, apa kejadian
@@ -3937,6 +4180,27 @@ reasuransi.</p>
 <div id="implementasi-rpython-yang-disarankan" class="section level2" number="5.5">
 <h2><span class="header-section-number">5.5</span> Implementasi R/Python
 yang Disarankan</h2>
+<!-- BEGIN AI-INLINE:971ef1eb06c7 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R/Python yang Disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Pendahuluan Teori Risiko.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian komputasi untuk bab ini dapat dilakukan menggunakan R atau
 Python. Kode berikut bersifat template dan dapat dimodifikasi sesuai
 data. Tujuan utama kode bukan sekadar menghasilkan angka, melainkan
@@ -3981,6 +4245,27 @@ risiko, dan menyiapkan interpretasi.</p>
 <div id="praktikum-dan-diskusi-kelas" class="section level2" number="5.6">
 <h2><span class="header-section-number">5.6</span> Praktikum dan Diskusi
 Kelas</h2>
+<!-- BEGIN AI-INLINE:2518a83faf6f -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum dan Diskusi Kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Pendahuluan Teori Risiko.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="practice-box">
 <strong>Praktikum Bab 1.</strong> Mahasiswa diminta membentuk kelompok
 kecil, memilih satu kasus risiko, lalu menyusun risk register. Setiap
@@ -4101,6 +4386,66 @@ semester.</p>
 <div id="bab-2.-risiko-murni-risiko-spekulatif-dan-konteks-aplikasi" class="section level1" number="6">
 <h1><span class="header-section-number">6</span> Bab 2. Risiko Murni,
 Risiko Spekulatif, dan Konteks Aplikasi</h1>
+<!-- BEGIN AI-INLINE:2aca5cd98c10 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 2</span>
+<h3>
+Generative dan Agentic AI untuk Risiko Murni, Risiko Spekulatif, dan
+Konteks Aplikasi
+</h3>
+<p><strong>Arah RPS.</strong> Stress testing, scenario analysis,
+adversarial robustness, model uncertainty, dan risiko sistemik dari
+otomatisasi keputusan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Perbedaan risiko murni dan risiko
+spekulatif; Peran teori risiko di bidang aktuaria dan keuangan;
+Klasifikasi dan Identifikasi Risiko.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <strong>Pertemuan 2 - SubCPMK1.</strong> Fokus bab ini adalah perbedaan
 risiko murni dan risiko spekulatif. Mahasiswa diharapkan mampu
@@ -4110,6 +4455,26 @@ hasilnya dengan keputusan manajemen risiko.
 <div id="orientasi-konseptual-1" class="section level2" number="6.1">
 <h2><span class="header-section-number">6.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:4576d99d778f -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Risiko Murni, Risiko Spekulatif,
+dan Konteks Aplikasi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Risiko Murni, Risiko Spekulatif, dan
+Konteks Aplikasi</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bab ini membahas perbedaan risiko murni dan risiko spekulatif dalam
 kerangka Teori Risiko. Konsep utama yang perlu dikuasai adalah risiko
 murni, risiko spekulatif, eksposur, dan kerugian langsung dan tidak
@@ -4149,6 +4514,26 @@ relatif kecil dibandingkan risiko lain yang kurang terlihat.</p>
 </div>
 <div id="peta-konsep-1" class="section level2" number="6.2">
 <h2><span class="header-section-number">6.2</span> Peta Konsep</h2>
+<!-- BEGIN AI-INLINE:71360ff59048 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Peta Konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Risiko Murni, Risiko Spekulatif,
+dan Konteks Aplikasi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Risiko Murni, Risiko Spekulatif, dan
+Konteks Aplikasi</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="risiko-murni" class="section level3" number="6.2.1">
 <h3><span class="header-section-number">6.2.1</span> 1. Risiko
 Murni</h3>
@@ -4318,6 +4703,30 @@ jarang tetapi besar dapat menentukan ketahanan organisasi.</p>
 <div id="contoh-kasus-terarah-1" class="section level2" number="6.4">
 <h2><span class="header-section-number">6.4</span> Contoh Kasus
 Terarah</h2>
+<!-- BEGIN AI-INLINE:4298dff423ec -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terarah
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Risiko Murni, Risiko Spekulatif,
+dan Konteks Aplikasi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Stress testing, scenario
+analysis, adversarial robustness, model uncertainty, dan risiko sistemik
+dari otomatisasi keputusan. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan koperasi pegawai yang menghadapi risiko kebakaran,
 kredit macet, dan fluktuasi investasi. Langkah pertama adalah menyusun
 narasi proses risiko. Mahasiswa harus menjawab: apa unit eksposurnya,
@@ -4348,6 +4757,28 @@ pembelian reasuransi.</p>
 <div id="implementasi-rpython-yang-disarankan-1" class="section level2" number="6.5">
 <h2><span class="header-section-number">6.5</span> Implementasi R/Python
 yang Disarankan</h2>
+<!-- BEGIN AI-INLINE:5f2ecebff3ae -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R/Python yang Disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Risiko Murni, Risiko Spekulatif,
+dan Konteks Aplikasi.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian komputasi untuk bab ini dapat dilakukan menggunakan R atau
 Python. Kode berikut bersifat template dan dapat dimodifikasi sesuai
 data. Tujuan utama kode bukan sekadar menghasilkan angka, melainkan
@@ -4392,6 +4823,28 @@ risiko, dan menyiapkan interpretasi.</p>
 <div id="praktikum-dan-diskusi-kelas-1" class="section level2" number="6.6">
 <h2><span class="header-section-number">6.6</span> Praktikum dan Diskusi
 Kelas</h2>
+<!-- BEGIN AI-INLINE:a31e027eab90 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum dan Diskusi Kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Risiko Murni, Risiko Spekulatif,
+dan Konteks Aplikasi.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="practice-box">
 <strong>Praktikum Bab 2.</strong> Mahasiswa diminta membentuk kelompok
 kecil, memilih satu kasus risiko, lalu menyusun risk register. Setiap
@@ -4514,6 +4967,65 @@ hitung di akhir semester.</p>
 <div id="bab-3.-identifikasi-klasifikasi-dan-siklus-manajemen-risiko" class="section level1" number="7">
 <h1><span class="header-section-number">7</span> Bab 3. Identifikasi,
 Klasifikasi, dan Siklus Manajemen Risiko</h1>
+<!-- BEGIN AI-INLINE:75c15565a895 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 3</span>
+<h3>
+Generative dan Agentic AI untuk Identifikasi, Klasifikasi, dan Siklus
+Manajemen Risiko
+</h3>
+<p><strong>Arah RPS.</strong> Asesmen studi kasus menghasilkan risk
+dashboard, dokumentasi asumsi, dan rekomendasi mitigasi yang dapat
+dipertanggungjawabkan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Jenis-jenis risiko (individu, bisnis,
+keuangan, operasional, sosial, dsb); Sumber dan penyebab risiko.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk mengurai notasi dan menawarkan langkah derivasi
+alternatif tanpa menggantikan pembuktian mahasiswa.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter; agen wajib berhenti pada checkpoint
+dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas,
+satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <strong>Pertemuan 3 - SubCPMK1.</strong> Fokus bab ini adalah sumber
 risiko dan siklus manajemen risiko. Mahasiswa diharapkan mampu
@@ -4523,6 +5035,26 @@ hasilnya dengan keputusan manajemen risiko.
 <div id="orientasi-konseptual-2" class="section level2" number="7.1">
 <h2><span class="header-section-number">7.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:761a2b946f45 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 3: Identifikasi, Klasifikasi, dan
+Siklus Manajemen Risiko.
+</p>
+<p>
+Minta AI menjelaskan <strong>Identifikasi, Klasifikasi, dan Siklus
+Manajemen Risiko</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bab ini membahas sumber risiko dan siklus manajemen risiko dalam
 kerangka Teori Risiko. Konsep utama yang perlu dikuasai adalah risk
 register, likelihood-impact matrix, root cause, dan prioritas mitigasi.
@@ -4562,6 +5094,26 @@ relatif kecil dibandingkan risiko lain yang kurang terlihat.</p>
 </div>
 <div id="peta-konsep-2" class="section level2" number="7.2">
 <h2><span class="header-section-number">7.2</span> Peta Konsep</h2>
+<!-- BEGIN AI-INLINE:c1004b83d6b9 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Peta Konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 3: Identifikasi, Klasifikasi, dan
+Siklus Manajemen Risiko.
+</p>
+<p>
+Minta AI menjelaskan <strong>Identifikasi, Klasifikasi, dan Siklus
+Manajemen Risiko</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="risk-register" class="section level3" number="7.2.1">
 <h3><span class="header-section-number">7.2.1</span> 1. Risk
 Register</h3>
@@ -4732,6 +5284,30 @@ jarang tetapi besar dapat menentukan ketahanan organisasi.</p>
 <div id="contoh-kasus-terarah-2" class="section level2" number="7.4">
 <h2><span class="header-section-number">7.4</span> Contoh Kasus
 Terarah</h2>
+<!-- BEGIN AI-INLINE:ccd6c6cff1a0 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terarah
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 3: Identifikasi, Klasifikasi, dan
+Siklus Manajemen Risiko.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Asesmen studi kasus
+menghasilkan risk dashboard, dokumentasi asumsi, dan rekomendasi
+mitigasi yang dapat dipertanggungjawabkan. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan rumah sakit yang menghadapi risiko keterlambatan klaim
 BPJS, infeksi nosokomial, dan gangguan sistem informasi. Langkah pertama
 adalah menyusun narasi proses risiko. Mahasiswa harus menjawab: apa unit
@@ -4762,6 +5338,28 @@ proses, pembatasan eksposur, atau pembelian reasuransi.</p>
 <div id="implementasi-rpython-yang-disarankan-2" class="section level2" number="7.5">
 <h2><span class="header-section-number">7.5</span> Implementasi R/Python
 yang Disarankan</h2>
+<!-- BEGIN AI-INLINE:8fc9614fc0da -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R/Python yang Disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 3: Identifikasi, Klasifikasi, dan
+Siklus Manajemen Risiko.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian komputasi untuk bab ini dapat dilakukan menggunakan R atau
 Python. Kode berikut bersifat template dan dapat dimodifikasi sesuai
 data. Tujuan utama kode bukan sekadar menghasilkan angka, melainkan
@@ -4806,6 +5404,28 @@ risiko, dan menyiapkan interpretasi.</p>
 <div id="praktikum-dan-diskusi-kelas-2" class="section level2" number="7.6">
 <h2><span class="header-section-number">7.6</span> Praktikum dan Diskusi
 Kelas</h2>
+<!-- BEGIN AI-INLINE:db13e581c174 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum dan Diskusi Kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 3: Identifikasi, Klasifikasi, dan
+Siklus Manajemen Risiko.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="practice-box">
 <strong>Praktikum Bab 3.</strong> Mahasiswa diminta membentuk kelompok
 kecil, memilih satu kasus risiko, lalu menyusun risk register. Setiap
@@ -4926,6 +5546,65 @@ sekadar tugas hitung di akhir semester.</p>
 <div id="bab-4.-ukuran-risiko-dasar-mean-variansi-skewness-dan-kurtosis" class="section level1" number="8">
 <h1><span class="header-section-number">8</span> Bab 4. Ukuran Risiko
 Dasar: Mean, Variansi, Skewness, dan Kurtosis</h1>
+<!-- BEGIN AI-INLINE:8146963cbc2c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 4</span>
+<h3>
+Generative dan Agentic AI untuk Ukuran Risiko Dasar: Mean, Variansi,
+Skewness, dan Kurtosis
+</h3>
+<p><strong>Arah RPS.</strong> AI untuk risk scoring, anomaly detection,
+early warning, dan kombinasi model dengan extreme value atau heavy-tail
+models.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Siklus manajemen risiko; Pengukuran
+Risiko.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk mengurai notasi dan menawarkan langkah derivasi
+alternatif tanpa menggantikan pembuktian mahasiswa.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter; agen wajib berhenti pada checkpoint
+dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas,
+satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <strong>Pertemuan 4 - SubCPMK2.</strong> Fokus bab ini adalah pengukuran
 risiko menggunakan momen distribusi. Mahasiswa diharapkan mampu
@@ -4935,6 +5614,26 @@ hasilnya dengan keputusan manajemen risiko.
 <div id="orientasi-konseptual-3" class="section level2" number="8.1">
 <h2><span class="header-section-number">8.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:098aac0e353f -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 4: Ukuran Risiko Dasar: Mean,
+Variansi, Skewness, dan Kurtosis.
+</p>
+<p>
+Minta AI menjelaskan <strong>Ukuran Risiko Dasar: Mean, Variansi,
+Skewness, dan Kurtosis</strong> melalui definisi, analogi, contoh, dan
+contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bab ini membahas pengukuran risiko menggunakan momen distribusi dalam
 kerangka Teori Risiko. Konsep utama yang perlu dikuasai adalah expected
 loss, variansi, skewness, dan kurtosis. Dalam literatur aktuaria dan
@@ -4972,6 +5671,26 @@ relatif kecil dibandingkan risiko lain yang kurang terlihat.</p>
 </div>
 <div id="peta-konsep-3" class="section level2" number="8.2">
 <h2><span class="header-section-number">8.2</span> Peta Konsep</h2>
+<!-- BEGIN AI-INLINE:3e5770b04f8b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Peta Konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 4: Ukuran Risiko Dasar: Mean,
+Variansi, Skewness, dan Kurtosis.
+</p>
+<p>
+Minta AI menjelaskan <strong>Ukuran Risiko Dasar: Mean, Variansi,
+Skewness, dan Kurtosis</strong> melalui definisi, analogi, contoh, dan
+contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="expected-loss" class="section level3" number="8.2.1">
 <h3><span class="header-section-number">8.2.1</span> 1. Expected
 Loss</h3>
@@ -5137,6 +5856,30 @@ jarang tetapi besar dapat menentukan ketahanan organisasi.</p>
 <div id="contoh-kasus-terarah-3" class="section level2" number="8.4">
 <h2><span class="header-section-number">8.4</span> Contoh Kasus
 Terarah</h2>
+<!-- BEGIN AI-INLINE:09ff02e859a1 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terarah
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 4: Ukuran Risiko Dasar: Mean,
+Variansi, Skewness, dan Kurtosis.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI untuk risk scoring,
+anomaly detection, early warning, dan kombinasi model dengan extreme
+value atau heavy-tail models. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan data besar klaim kendaraan yang memiliki banyak klaim
 kecil dan sedikit klaim sangat besar. Langkah pertama adalah menyusun
 narasi proses risiko. Mahasiswa harus menjawab: apa unit eksposurnya,
@@ -5167,6 +5910,28 @@ eksposur, atau pembelian reasuransi.</p>
 <div id="implementasi-rpython-yang-disarankan-3" class="section level2" number="8.5">
 <h2><span class="header-section-number">8.5</span> Implementasi R/Python
 yang Disarankan</h2>
+<!-- BEGIN AI-INLINE:0b1d82d9f8c0 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R/Python yang Disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 4: Ukuran Risiko Dasar: Mean,
+Variansi, Skewness, dan Kurtosis.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian komputasi untuk bab ini dapat dilakukan menggunakan R atau
 Python. Kode berikut bersifat template dan dapat dimodifikasi sesuai
 data. Tujuan utama kode bukan sekadar menghasilkan angka, melainkan
@@ -5211,6 +5976,28 @@ risiko, dan menyiapkan interpretasi.</p>
 <div id="praktikum-dan-diskusi-kelas-3" class="section level2" number="8.6">
 <h2><span class="header-section-number">8.6</span> Praktikum dan Diskusi
 Kelas</h2>
+<!-- BEGIN AI-INLINE:d45ef6fcd36d -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum dan Diskusi Kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 4: Ukuran Risiko Dasar: Mean,
+Variansi, Skewness, dan Kurtosis.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="practice-box">
 <strong>Praktikum Bab 4.</strong> Mahasiswa diminta membentuk kelompok
 kecil, memilih satu kasus risiko, lalu menyusun risk register. Setiap
@@ -5332,6 +6119,65 @@ sekadar tugas hitung di akhir semester.</p>
 <div id="bab-5.-distribusi-diskrit-untuk-frekuensi-klaim" class="section level1" number="9">
 <h1><span class="header-section-number">9</span> Bab 5. Distribusi
 Diskrit untuk Frekuensi Klaim</h1>
+<!-- BEGIN AI-INLINE:20f945d74054 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 5</span>
+<h3>
+Generative dan Agentic AI untuk Distribusi Diskrit untuk Frekuensi Klaim
+</h3>
+<p><strong>Arah RPS.</strong> Stress testing, scenario analysis,
+adversarial robustness, model uncertainty, dan risiko sistemik dari
+otomatisasi keputusan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK2 melalui fokus: Ukuran-ukuran risiko: nilai harapan,
+variansi, standar deviasi, skewness, kurtosis; Nilai Kerugian Ekspektasi
+(Expected Loss).</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk mengurai notasi dan menawarkan langkah derivasi
+alternatif tanpa menggantikan pembuktian mahasiswa.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter; agen wajib berhenti pada checkpoint
+dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas,
+satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <strong>Pertemuan 5 - SubCPMK2.</strong> Fokus bab ini adalah model
 probabilitas diskrit. Mahasiswa diharapkan mampu menjelaskan konsep,
@@ -5341,6 +6187,25 @@ keputusan manajemen risiko.
 <div id="orientasi-konseptual-4" class="section level2" number="9.1">
 <h2><span class="header-section-number">9.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:a75399f516ac -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Distribusi Diskrit untuk
+Frekuensi Klaim.
+</p>
+<p>
+Minta AI menjelaskan <strong>Distribusi Diskrit untuk Frekuensi
+Klaim</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bab ini membahas model probabilitas diskrit dalam kerangka Teori
 Risiko. Konsep utama yang perlu dikuasai adalah Bernoulli, Binomial,
 Poisson, dan Negative Binomial. Dalam literatur aktuaria dan manajemen
@@ -5380,6 +6245,25 @@ dibandingkan risiko lain yang kurang terlihat.</p>
 </div>
 <div id="peta-konsep-4" class="section level2" number="9.2">
 <h2><span class="header-section-number">9.2</span> Peta Konsep</h2>
+<!-- BEGIN AI-INLINE:94132a44ac15 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Peta Konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Distribusi Diskrit untuk
+Frekuensi Klaim.
+</p>
+<p>
+Minta AI menjelaskan <strong>Distribusi Diskrit untuk Frekuensi
+Klaim</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="bernoulli" class="section level3" number="9.2.1">
 <h3><span class="header-section-number">9.2.1</span> 1. Bernoulli</h3>
 <p>Konsep <strong>Bernoulli</strong> perlu dibaca sebagai komponen dari
@@ -5545,6 +6429,30 @@ jarang tetapi besar dapat menentukan ketahanan organisasi.</p>
 <div id="contoh-kasus-terarah-4" class="section level2" number="9.4">
 <h2><span class="header-section-number">9.4</span> Contoh Kasus
 Terarah</h2>
+<!-- BEGIN AI-INLINE:4c0a9f2e970c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terarah
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Distribusi Diskrit untuk
+Frekuensi Klaim.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Stress testing, scenario
+analysis, adversarial robustness, model uncertainty, dan risiko sistemik
+dari otomatisasi keputusan. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan jumlah klaim kecelakaan kendaraan per bulan pada
 perusahaan asuransi umum. Langkah pertama adalah menyusun narasi proses
 risiko. Mahasiswa harus menjawab: apa unit eksposurnya, apa kejadian
@@ -5575,6 +6483,27 @@ reasuransi.</p>
 <div id="implementasi-rpython-yang-disarankan-4" class="section level2" number="9.5">
 <h2><span class="header-section-number">9.5</span> Implementasi R/Python
 yang Disarankan</h2>
+<!-- BEGIN AI-INLINE:4d89655534fc -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R/Python yang Disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Distribusi Diskrit untuk
+Frekuensi Klaim.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian komputasi untuk bab ini dapat dilakukan menggunakan R atau
 Python. Kode berikut bersifat template dan dapat dimodifikasi sesuai
 data. Tujuan utama kode bukan sekadar menghasilkan angka, melainkan
@@ -5619,6 +6548,27 @@ risiko, dan menyiapkan interpretasi.</p>
 <div id="praktikum-dan-diskusi-kelas-4" class="section level2" number="9.6">
 <h2><span class="header-section-number">9.6</span> Praktikum dan Diskusi
 Kelas</h2>
+<!-- BEGIN AI-INLINE:d461de23cac5 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum dan Diskusi Kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Distribusi Diskrit untuk
+Frekuensi Klaim.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="practice-box">
 <strong>Praktikum Bab 5.</strong> Mahasiswa diminta membentuk kelompok
 kecil, memilih satu kasus risiko, lalu menyusun risk register. Setiap
@@ -5738,6 +6688,66 @@ hitung di akhir semester.</p>
 <div id="bab-6.-distribusi-kontinu-untuk-severitas-klaim" class="section level1" number="10">
 <h1><span class="header-section-number">10</span> Bab 6. Distribusi
 Kontinu untuk Severitas Klaim</h1>
+<!-- BEGIN AI-INLINE:ca29377b0002 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 6</span>
+<h3>
+Generative dan Agentic AI untuk Distribusi Kontinu untuk Severitas Klaim
+</h3>
+<p><strong>Arah RPS.</strong> Asesmen studi kasus menghasilkan risk
+dashboard, dokumentasi asumsi, dan rekomendasi mitigasi yang dapat
+dipertanggungjawabkan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK2 melalui fokus: Ukuran risiko lainnya: VaR (Value at
+Risk), TVaR, ruin probability; Model Probabilitas untuk Risiko;
+Distribusi probabilitas diskrit dan kontinu dalam risiko (binomial,
+Poisson, eksponensial, normal, dll).</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <strong>Pertemuan 6 - SubCPMK2.</strong> Fokus bab ini adalah model
 probabilitas kontinu untuk besar kerugian. Mahasiswa diharapkan mampu
@@ -5747,6 +6757,25 @@ hasilnya dengan keputusan manajemen risiko.
 <div id="orientasi-konseptual-5" class="section level2" number="10.1">
 <h2><span class="header-section-number">10.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:0afd1ee49363 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 6: Distribusi Kontinu untuk
+Severitas Klaim.
+</p>
+<p>
+Minta AI menjelaskan <strong>Distribusi Kontinu untuk Severitas
+Klaim</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bab ini membahas model probabilitas kontinu untuk besar kerugian
 dalam kerangka Teori Risiko. Konsep utama yang perlu dikuasai adalah
 Exponential, Gamma, Lognormal, dan Pareto. Dalam literatur aktuaria dan
@@ -5785,6 +6814,25 @@ dibandingkan risiko lain yang kurang terlihat.</p>
 </div>
 <div id="peta-konsep-5" class="section level2" number="10.2">
 <h2><span class="header-section-number">10.2</span> Peta Konsep</h2>
+<!-- BEGIN AI-INLINE:42b50887d265 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Peta Konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 6: Distribusi Kontinu untuk
+Severitas Klaim.
+</p>
+<p>
+Minta AI menjelaskan <strong>Distribusi Kontinu untuk Severitas
+Klaim</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="exponential" class="section level3" number="10.2.1">
 <h3><span class="header-section-number">10.2.1</span> 1.
 Exponential</h3>
@@ -5948,6 +6996,30 @@ jarang tetapi besar dapat menentukan ketahanan organisasi.</p>
 <div id="contoh-kasus-terarah-5" class="section level2" number="10.4">
 <h2><span class="header-section-number">10.4</span> Contoh Kasus
 Terarah</h2>
+<!-- BEGIN AI-INLINE:52cb75d2df52 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terarah
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 6: Distribusi Kontinu untuk
+Severitas Klaim.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Asesmen studi kasus
+menghasilkan risk dashboard, dokumentasi asumsi, dan rekomendasi
+mitigasi yang dapat dipertanggungjawabkan. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan klaim kebakaran properti yang jarang terjadi tetapi
 dapat bernilai sangat besar. Langkah pertama adalah menyusun narasi
 proses risiko. Mahasiswa harus menjawab: apa unit eksposurnya, apa
@@ -5978,6 +7050,27 @@ pembelian reasuransi.</p>
 <div id="implementasi-rpython-yang-disarankan-5" class="section level2" number="10.5">
 <h2><span class="header-section-number">10.5</span> Implementasi
 R/Python yang Disarankan</h2>
+<!-- BEGIN AI-INLINE:0bd45dd1568b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R/Python yang Disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 6: Distribusi Kontinu untuk
+Severitas Klaim.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian komputasi untuk bab ini dapat dilakukan menggunakan R atau
 Python. Kode berikut bersifat template dan dapat dimodifikasi sesuai
 data. Tujuan utama kode bukan sekadar menghasilkan angka, melainkan
@@ -6022,6 +7115,27 @@ risiko, dan menyiapkan interpretasi.</p>
 <div id="praktikum-dan-diskusi-kelas-5" class="section level2" number="10.6">
 <h2><span class="header-section-number">10.6</span> Praktikum dan
 Diskusi Kelas</h2>
+<!-- BEGIN AI-INLINE:d3ee8f0f0159 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum dan Diskusi Kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 6: Distribusi Kontinu untuk
+Severitas Klaim.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="practice-box">
 <strong>Praktikum Bab 6.</strong> Mahasiswa diminta membentuk kelompok
 kecil, memilih satu kasus risiko, lalu menyusun risk register. Setiap
@@ -6142,6 +7256,64 @@ hitung di akhir semester.</p>
 <div id="bab-7.-estimasi-parameter-dan-goodness-of-fit" class="section level1" number="11">
 <h1><span class="header-section-number">11</span> Bab 7. Estimasi
 Parameter dan Goodness of Fit</h1>
+<!-- BEGIN AI-INLINE:acdd174899e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 7</span>
+<h3>
+Generative dan Agentic AI untuk Estimasi Parameter dan Goodness of Fit
+</h3>
+<p><strong>Arah RPS.</strong> AI untuk risk scoring, anomaly detection,
+early warning, dan kombinasi model dengan extreme value atau heavy-tail
+models.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK2 melalui fokus: Model frekuensi dan severitas klaim;
+Penentuan model distribusi terbaik untuk data risiko.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <strong>Pertemuan 7 - SubCPMK2.</strong> Fokus bab ini adalah pemilihan
 model distribusi terbaik. Mahasiswa diharapkan mampu menjelaskan konsep,
@@ -6151,6 +7323,25 @@ keputusan manajemen risiko.
 <div id="orientasi-konseptual-6" class="section level2" number="11.1">
 <h2><span class="header-section-number">11.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:a8bbfdf2e05f -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 7: Estimasi Parameter dan Goodness
+of Fit.
+</p>
+<p>
+Minta AI menjelaskan <strong>Estimasi Parameter dan Goodness of
+Fit</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bab ini membahas pemilihan model distribusi terbaik dalam kerangka
 Teori Risiko. Konsep utama yang perlu dikuasai adalah maximum
 likelihood, QQ plot, AIC dan BIC, dan uji Kolmogorov-Smirnov. Dalam
@@ -6190,6 +7381,25 @@ dibandingkan risiko lain yang kurang terlihat.</p>
 </div>
 <div id="peta-konsep-6" class="section level2" number="11.2">
 <h2><span class="header-section-number">11.2</span> Peta Konsep</h2>
+<!-- BEGIN AI-INLINE:fa8da0f37ecb -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Peta Konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 7: Estimasi Parameter dan Goodness
+of Fit.
+</p>
+<p>
+Minta AI menjelaskan <strong>Estimasi Parameter dan Goodness of
+Fit</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="maximum-likelihood" class="section level3" number="11.2.1">
 <h3><span class="header-section-number">11.2.1</span> 1. Maximum
 Likelihood</h3>
@@ -6359,6 +7569,30 @@ jarang tetapi besar dapat menentukan ketahanan organisasi.</p>
 <div id="contoh-kasus-terarah-6" class="section level2" number="11.4">
 <h2><span class="header-section-number">11.4</span> Contoh Kasus
 Terarah</h2>
+<!-- BEGIN AI-INLINE:859e86fce5e7 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terarah
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 7: Estimasi Parameter dan Goodness
+of Fit.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI untuk risk scoring,
+anomaly detection, early warning, dan kombinasi model dengan extreme
+value atau heavy-tail models. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan membandingkan model lognormal dan gamma untuk data
 klaim rawat inap. Langkah pertama adalah menyusun narasi proses risiko.
 Mahasiswa harus menjawab: apa unit eksposurnya, apa kejadian risikonya,
@@ -6389,6 +7623,28 @@ reasuransi.</p>
 <div id="implementasi-rpython-yang-disarankan-6" class="section level2" number="11.5">
 <h2><span class="header-section-number">11.5</span> Implementasi
 R/Python yang Disarankan</h2>
+<!-- BEGIN AI-INLINE:356bd951cc80 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R/Python yang Disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 7: Estimasi Parameter dan Goodness
+of Fit.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian komputasi untuk bab ini dapat dilakukan menggunakan R atau
 Python. Kode berikut bersifat template dan dapat dimodifikasi sesuai
 data. Tujuan utama kode bukan sekadar menghasilkan angka, melainkan
@@ -6433,6 +7689,28 @@ risiko, dan menyiapkan interpretasi.</p>
 <div id="praktikum-dan-diskusi-kelas-6" class="section level2" number="11.6">
 <h2><span class="header-section-number">11.6</span> Praktikum dan
 Diskusi Kelas</h2>
+<!-- BEGIN AI-INLINE:fdd069e5df90 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum dan Diskusi Kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 7: Estimasi Parameter dan Goodness
+of Fit.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="practice-box">
 <strong>Praktikum Bab 7.</strong> Mahasiswa diminta membentuk kelompok
 kecil, memilih satu kasus risiko, lalu menyusun risk register. Setiap
@@ -6553,6 +7831,62 @@ hitung di akhir semester.</p>
 <div id="bab-8.-uts-proyek-pendahuluan-analisis-risiko" class="section level1" number="12">
 <h1><span class="header-section-number">12</span> Bab 8. UTS: Proyek
 Pendahuluan Analisis Risiko</h1>
+<!-- BEGIN AI-INLINE:8ec43faa9a14 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 8</span>
+<h3>
+Generative dan Agentic AI untuk UTS: Proyek Pendahuluan Analisis Risiko
+</h3>
+<p><strong>Arah RPS.</strong> Penggunaan AI hanya sesuai instruksi
+dosen; seluruh bantuan harus diungkapkan dan hasil diverifikasi.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1–2 melalui fokus: Ujian Tengah Semester.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <strong>Pertemuan 8 - SubCPMK2.</strong> Fokus bab ini adalah integrasi
 konsep awal sampai evaluasi distribusi. Mahasiswa diharapkan mampu
@@ -6562,6 +7896,25 @@ hasilnya dengan keputusan manajemen risiko.
 <div id="orientasi-konseptual-7" class="section level2" number="12.1">
 <h2><span class="header-section-number">12.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:f69fd735b7ed -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 8: UTS: Proyek Pendahuluan Analisis
+Risiko.
+</p>
+<p>
+Minta AI menjelaskan <strong>UTS: Proyek Pendahuluan Analisis
+Risiko</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bab ini membahas integrasi konsep awal sampai evaluasi distribusi
 dalam kerangka Teori Risiko. Konsep utama yang perlu dikuasai adalah
 rumusan masalah, data dictionary, analisis eksplorasi, dan argumentasi
@@ -6601,9 +7954,47 @@ dibandingkan risiko lain yang kurang terlihat.</p>
 </div>
 <div id="peta-konsep-7" class="section level2" number="12.2">
 <h2><span class="header-section-number">12.2</span> Peta Konsep</h2>
+<!-- BEGIN AI-INLINE:698758ac9358 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Peta Konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 8: UTS: Proyek Pendahuluan Analisis
+Risiko.
+</p>
+<p>
+Minta AI menjelaskan <strong>UTS: Proyek Pendahuluan Analisis
+Risiko</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="rumusan-masalah" class="section level3" number="12.2.1">
 <h3><span class="header-section-number">12.2.1</span> 1. Rumusan
 Masalah</h3>
+<!-- BEGIN AI-INLINE:4686cbe4b9ea -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada 1. Rumusan Masalah
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 8: UTS: Proyek Pendahuluan Analisis
+Risiko.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>UTS: Proyek Pendahuluan Analisis Risiko</strong>, lalu periksa
+setiap langkah secara manual, uji kasus batas, dan cocokkan dengan
+rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Konsep <strong>rumusan masalah</strong> perlu dibaca sebagai komponen
 dari sistem pengukuran risiko. Pada tahap awal, mahasiswa perlu
 menjelaskan definisi operasionalnya, bukan hanya definisi kamus.
@@ -6775,6 +8166,30 @@ jarang tetapi besar dapat menentukan ketahanan organisasi.</p>
 <div id="contoh-kasus-terarah-7" class="section level2" number="12.4">
 <h2><span class="header-section-number">12.4</span> Contoh Kasus
 Terarah</h2>
+<!-- BEGIN AI-INLINE:d9e2f6aea2ec -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terarah
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 8: UTS: Proyek Pendahuluan Analisis
+Risiko.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Penggunaan AI hanya
+sesuai instruksi dosen; seluruh bantuan harus diungkapkan dan hasil
+diverifikasi. Generative AI dapat menghasilkan beberapa skenario
+pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap
+hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan mini project pengukuran risiko pada data klaim atau
 data kerugian operasional. Langkah pertama adalah menyusun narasi proses
 risiko. Mahasiswa harus menjawab: apa unit eksposurnya, apa kejadian
@@ -6805,6 +8220,28 @@ eksposur, atau pembelian reasuransi.</p>
 <div id="implementasi-rpython-yang-disarankan-7" class="section level2" number="12.5">
 <h2><span class="header-section-number">12.5</span> Implementasi
 R/Python yang Disarankan</h2>
+<!-- BEGIN AI-INLINE:74aa463043e1 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R/Python yang Disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 8: UTS: Proyek Pendahuluan Analisis
+Risiko.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian komputasi untuk bab ini dapat dilakukan menggunakan R atau
 Python. Kode berikut bersifat template dan dapat dimodifikasi sesuai
 data. Tujuan utama kode bukan sekadar menghasilkan angka, melainkan
@@ -6849,6 +8286,28 @@ risiko, dan menyiapkan interpretasi.</p>
 <div id="praktikum-dan-diskusi-kelas-7" class="section level2" number="12.6">
 <h2><span class="header-section-number">12.6</span> Praktikum dan
 Diskusi Kelas</h2>
+<!-- BEGIN AI-INLINE:197191d2b993 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum dan Diskusi Kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 8: UTS: Proyek Pendahuluan Analisis
+Risiko.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="practice-box">
 <strong>Praktikum Bab 8.</strong> Mahasiswa diminta membentuk kelompok
 kecil, memilih satu kasus risiko, lalu menyusun risk register. Setiap
@@ -6997,6 +8456,65 @@ digabungkan menjadi kerugian agregat.
 <div id="bab-9.-agregasi-risiko-dan-model-frekuensi-severitas" class="section level1" number="13">
 <h1><span class="header-section-number">13</span> Bab 9. Agregasi Risiko
 dan Model Frekuensi-Severitas</h1>
+<!-- BEGIN AI-INLINE:e980a5664d60 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 9</span>
+<h3>
+Generative dan Agentic AI untuk Agregasi Risiko dan Model
+Frekuensi-Severitas
+</h3>
+<p><strong>Arah RPS.</strong> Stress testing, scenario analysis,
+adversarial robustness, model uncertainty, dan risiko sistemik dari
+otomatisasi keputusan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Agregasi dan Diversifikasi Risiko;
+Konsep agregasi risiko dan korelasi antar risiko.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <strong>Pertemuan 9 - SubCPMK3.</strong> Fokus bab ini adalah kerugian
 agregat dan compound distribution. Mahasiswa diharapkan mampu
@@ -7006,6 +8524,26 @@ hasilnya dengan keputusan manajemen risiko.
 <div id="orientasi-konseptual-8" class="section level2" number="13.1">
 <h2><span class="header-section-number">13.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:aee19411c6c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 9: Agregasi Risiko dan Model
+Frekuensi-Severitas.
+</p>
+<p>
+Minta AI menjelaskan <strong>Agregasi Risiko dan Model
+Frekuensi-Severitas</strong> melalui definisi, analogi, contoh, dan
+contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bab ini membahas kerugian agregat dan compound distribution dalam
 kerangka Teori Risiko. Konsep utama yang perlu dikuasai adalah aggregate
 loss, compound Poisson, konvolusi, dan independensi frekuensi dan
@@ -7046,6 +8584,26 @@ dibandingkan risiko lain yang kurang terlihat.</p>
 </div>
 <div id="peta-konsep-8" class="section level2" number="13.2">
 <h2><span class="header-section-number">13.2</span> Peta Konsep</h2>
+<!-- BEGIN AI-INLINE:3c423cb01b03 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Peta Konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 9: Agregasi Risiko dan Model
+Frekuensi-Severitas.
+</p>
+<p>
+Minta AI menjelaskan <strong>Agregasi Risiko dan Model
+Frekuensi-Severitas</strong> melalui definisi, analogi, contoh, dan
+contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="aggregate-loss" class="section level3" number="13.2.1">
 <h3><span class="header-section-number">13.2.1</span> 1. Aggregate
 Loss</h3>
@@ -7217,6 +8775,30 @@ jarang tetapi besar dapat menentukan ketahanan organisasi.</p>
 <div id="contoh-kasus-terarah-8" class="section level2" number="13.4">
 <h2><span class="header-section-number">13.4</span> Contoh Kasus
 Terarah</h2>
+<!-- BEGIN AI-INLINE:47ed16d1ca37 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terarah
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 9: Agregasi Risiko dan Model
+Frekuensi-Severitas.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Stress testing, scenario
+analysis, adversarial robustness, model uncertainty, dan risiko sistemik
+dari otomatisasi keputusan. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan portofolio asuransi kendaraan yang menggabungkan jumlah
 klaim dan besar klaim. Langkah pertama adalah menyusun narasi proses
 risiko. Mahasiswa harus menjawab: apa unit eksposurnya, apa kejadian
@@ -7247,6 +8829,29 @@ reasuransi.</p>
 <div id="implementasi-rpython-yang-disarankan-8" class="section level2" number="13.5">
 <h2><span class="header-section-number">13.5</span> Implementasi
 R/Python yang Disarankan</h2>
+<!-- BEGIN AI-INLINE:1f6b6f750f62 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R/Python yang Disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 9: Agregasi Risiko dan Model
+Frekuensi-Severitas.
+</p>
+<p>
+Agen dapat memasang kandidat model, menjalankan diagnostik,
+membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau
+konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+spesifikasi model, data leakage, konvergensi, residual, kalibrasi,
+ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian komputasi untuk bab ini dapat dilakukan menggunakan R atau
 Python. Kode berikut bersifat template dan dapat dimodifikasi sesuai
 data. Tujuan utama kode bukan sekadar menghasilkan angka, melainkan
@@ -7291,6 +8896,29 @@ risiko, dan menyiapkan interpretasi.</p>
 <div id="praktikum-dan-diskusi-kelas-8" class="section level2" number="13.6">
 <h2><span class="header-section-number">13.6</span> Praktikum dan
 Diskusi Kelas</h2>
+<!-- BEGIN AI-INLINE:1b807ec4e3c8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum dan Diskusi Kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 9: Agregasi Risiko dan Model
+Frekuensi-Severitas.
+</p>
+<p>
+Agen dapat memasang kandidat model, menjalankan diagnostik,
+membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau
+konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+spesifikasi model, data leakage, konvergensi, residual, kalibrasi,
+ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="practice-box">
 <strong>Praktikum Bab 9.</strong> Mahasiswa diminta membentuk kelompok
 kecil, memilih satu kasus risiko, lalu menyusun risk register. Setiap
@@ -7412,6 +9040,66 @@ hitung di akhir semester.</p>
 <div id="bab-10.-simulasi-monte-carlo-untuk-kerugian-agregat" class="section level1" number="14">
 <h1><span class="header-section-number">14</span> Bab 10. Simulasi Monte
 Carlo untuk Kerugian Agregat</h1>
+<!-- BEGIN AI-INLINE:711da401c8f9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 10</span>
+<h3>
+Generative dan Agentic AI untuk Simulasi Monte Carlo untuk Kerugian
+Agregat
+</h3>
+<p><strong>Arah RPS.</strong> Asesmen studi kasus menghasilkan risk
+dashboard, dokumentasi asumsi, dan rekomendasi mitigasi yang dapat
+dipertanggungjawabkan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Model portofolio risiko;
+Diversifikasi dan efek portofolio; Simulasi dan Analisis Risiko dengan
+Perangkat Lunak Statistika.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <strong>Pertemuan 10 - SubCPMK3.</strong> Fokus bab ini adalah simulasi
 komputasi untuk distribusi risiko. Mahasiswa diharapkan mampu
@@ -7421,6 +9109,26 @@ hasilnya dengan keputusan manajemen risiko.
 <div id="orientasi-konseptual-9" class="section level2" number="14.1">
 <h2><span class="header-section-number">14.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:caf8d2c73072 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 10: Simulasi Monte Carlo untuk
+Kerugian Agregat.
+</p>
+<p>
+Minta AI menjelaskan <strong>Simulasi Monte Carlo untuk Kerugian
+Agregat</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bab ini membahas simulasi komputasi untuk distribusi risiko dalam
 kerangka Teori Risiko. Konsep utama yang perlu dikuasai adalah random
 number generation, replikasi, error simulasi, dan validasi hasil
@@ -7459,6 +9167,26 @@ dibandingkan risiko lain yang kurang terlihat.</p>
 </div>
 <div id="peta-konsep-9" class="section level2" number="14.2">
 <h2><span class="header-section-number">14.2</span> Peta Konsep</h2>
+<!-- BEGIN AI-INLINE:c867f2be2fcb -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Peta Konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 10: Simulasi Monte Carlo untuk
+Kerugian Agregat.
+</p>
+<p>
+Minta AI menjelaskan <strong>Simulasi Monte Carlo untuk Kerugian
+Agregat</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="random-number-generation" class="section level3" number="14.2.1">
 <h3><span class="header-section-number">14.2.1</span> 1. Random Number
 Generation</h3>
@@ -7630,6 +9358,30 @@ jarang tetapi besar dapat menentukan ketahanan organisasi.</p>
 <div id="contoh-kasus-terarah-9" class="section level2" number="14.4">
 <h2><span class="header-section-number">14.4</span> Contoh Kasus
 Terarah</h2>
+<!-- BEGIN AI-INLINE:6d1d4572367b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terarah
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 10: Simulasi Monte Carlo untuk
+Kerugian Agregat.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Asesmen studi kasus
+menghasilkan risk dashboard, dokumentasi asumsi, dan rekomendasi
+mitigasi yang dapat dipertanggungjawabkan. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan estimasi distribusi total klaim tahunan dengan 100.000
 skenario. Langkah pertama adalah menyusun narasi proses risiko.
 Mahasiswa harus menjawab: apa unit eksposurnya, apa kejadian risikonya,
@@ -7660,6 +9412,27 @@ reasuransi.</p>
 <div id="implementasi-rpython-yang-disarankan-9" class="section level2" number="14.5">
 <h2><span class="header-section-number">14.5</span> Implementasi
 R/Python yang Disarankan</h2>
+<!-- BEGIN AI-INLINE:4539871c60ab -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R/Python yang Disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 10: Simulasi Monte Carlo untuk
+Kerugian Agregat.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian komputasi untuk bab ini dapat dilakukan menggunakan R atau
 Python. Kode berikut bersifat template dan dapat dimodifikasi sesuai
 data. Tujuan utama kode bukan sekadar menghasilkan angka, melainkan
@@ -7704,6 +9477,27 @@ risiko, dan menyiapkan interpretasi.</p>
 <div id="praktikum-dan-diskusi-kelas-9" class="section level2" number="14.6">
 <h2><span class="header-section-number">14.6</span> Praktikum dan
 Diskusi Kelas</h2>
+<!-- BEGIN AI-INLINE:efee37e3f778 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum dan Diskusi Kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 10: Simulasi Monte Carlo untuk
+Kerugian Agregat.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="practice-box">
 <strong>Praktikum Bab 10.</strong> Mahasiswa diminta membentuk kelompok
 kecil, memilih satu kasus risiko, lalu menyusun risk register. Setiap
@@ -7824,6 +9618,65 @@ hitung di akhir semester.</p>
 <div id="bab-11.-value-at-risk-tvar-dan-risiko-ekor" class="section level1" number="15">
 <h1><span class="header-section-number">15</span> Bab 11. Value at Risk,
 TVaR, dan Risiko Ekor</h1>
+<!-- BEGIN AI-INLINE:74ab5c990236 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 11</span>
+<h3>
+Generative dan Agentic AI untuk Value at Risk, TVaR, dan Risiko Ekor
+</h3>
+<p><strong>Arah RPS.</strong> AI untuk risk scoring, anomaly detection,
+early warning, dan kombinasi model dengan extreme value atau heavy-tail
+models.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Penerapan perangkat lunak (R/Python)
+dalam simulasi risiko; Monte Carlo simulation untuk estimasi kerugian
+agregat.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk mengurai notasi dan menawarkan langkah derivasi
+alternatif tanpa menggantikan pembuktian mahasiswa.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter; agen wajib berhenti pada checkpoint
+dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas,
+satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <strong>Pertemuan 11 - SubCPMK3.</strong> Fokus bab ini adalah ukuran
 risiko berbasis kuantil dan ekor. Mahasiswa diharapkan mampu menjelaskan
@@ -7833,6 +9686,25 @@ dengan keputusan manajemen risiko.
 <div id="orientasi-konseptual-10" class="section level2" number="15.1">
 <h2><span class="header-section-number">15.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:f200f635dc9a -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 11: Value at Risk, TVaR, dan Risiko
+Ekor.
+</p>
+<p>
+Minta AI menjelaskan <strong>Value at Risk, TVaR, dan Risiko
+Ekor</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bab ini membahas ukuran risiko berbasis kuantil dan ekor dalam
 kerangka Teori Risiko. Konsep utama yang perlu dikuasai adalah VaR,
 TVaR, Expected Shortfall, dan coherence. Dalam literatur aktuaria dan
@@ -7870,6 +9742,25 @@ kurang terlihat.</p>
 </div>
 <div id="peta-konsep-10" class="section level2" number="15.2">
 <h2><span class="header-section-number">15.2</span> Peta Konsep</h2>
+<!-- BEGIN AI-INLINE:b4be38d66837 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Peta Konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 11: Value at Risk, TVaR, dan Risiko
+Ekor.
+</p>
+<p>
+Minta AI menjelaskan <strong>Value at Risk, TVaR, dan Risiko
+Ekor</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="var" class="section level3" number="15.2.1">
 <h3><span class="header-section-number">15.2.1</span> 1. Var</h3>
 <p>Konsep <strong>VaR</strong> perlu dibaca sebagai komponen dari sistem
@@ -8035,6 +9926,30 @@ jarang tetapi besar dapat menentukan ketahanan organisasi.</p>
 <div id="contoh-kasus-terarah-10" class="section level2" number="15.4">
 <h2><span class="header-section-number">15.4</span> Contoh Kasus
 Terarah</h2>
+<!-- BEGIN AI-INLINE:f9db561d8533 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terarah
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 11: Value at Risk, TVaR, dan Risiko
+Ekor.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI untuk risk scoring,
+anomaly detection, early warning, dan kombinasi model dengan extreme
+value atau heavy-tail models. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan penentuan modal risiko untuk portofolio klaim
 kesehatan. Langkah pertama adalah menyusun narasi proses risiko.
 Mahasiswa harus menjawab: apa unit eksposurnya, apa kejadian risikonya,
@@ -8064,6 +9979,28 @@ proses, pembatasan eksposur, atau pembelian reasuransi.</p>
 <div id="implementasi-rpython-yang-disarankan-10" class="section level2" number="15.5">
 <h2><span class="header-section-number">15.5</span> Implementasi
 R/Python yang Disarankan</h2>
+<!-- BEGIN AI-INLINE:e4b46598c569 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R/Python yang Disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 11: Value at Risk, TVaR, dan Risiko
+Ekor.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian komputasi untuk bab ini dapat dilakukan menggunakan R atau
 Python. Kode berikut bersifat template dan dapat dimodifikasi sesuai
 data. Tujuan utama kode bukan sekadar menghasilkan angka, melainkan
@@ -8108,6 +10045,28 @@ risiko, dan menyiapkan interpretasi.</p>
 <div id="praktikum-dan-diskusi-kelas-10" class="section level2" number="15.6">
 <h2><span class="header-section-number">15.6</span> Praktikum dan
 Diskusi Kelas</h2>
+<!-- BEGIN AI-INLINE:1a442f6a6601 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum dan Diskusi Kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 11: Value at Risk, TVaR, dan Risiko
+Ekor.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="practice-box">
 <strong>Praktikum Bab 11.</strong> Mahasiswa diminta membentuk kelompok
 kecil, memilih satu kasus risiko, lalu menyusun risk register. Setiap
@@ -8227,6 +10186,65 @@ hitung di akhir semester.</p>
 <div id="bab-12.-diversifikasi-dependensi-dan-portofolio-risiko" class="section level1" number="16">
 <h1><span class="header-section-number">16</span> Bab 12. Diversifikasi,
 Dependensi, dan Portofolio Risiko</h1>
+<!-- BEGIN AI-INLINE:4fcb793d75d4 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 12</span>
+<h3>
+Generative dan Agentic AI untuk Diversifikasi, Dependensi, dan
+Portofolio Risiko
+</h3>
+<p><strong>Arah RPS.</strong> Stress testing, scenario analysis,
+adversarial robustness, model uncertainty, dan risiko sistemik dari
+otomatisasi keputusan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Interpretasi hasil simulasi; Strategi
+Pengelolaan dan Mitigasi Risiko.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk mengurai notasi dan menawarkan langkah derivasi
+alternatif tanpa menggantikan pembuktian mahasiswa.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter; agen wajib berhenti pada checkpoint
+dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas,
+satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <strong>Pertemuan 12 - SubCPMK3.</strong> Fokus bab ini adalah korelasi
 antar risiko dan efek portofolio. Mahasiswa diharapkan mampu menjelaskan
@@ -8236,6 +10254,25 @@ dengan keputusan manajemen risiko.
 <div id="orientasi-konseptual-11" class="section level2" number="16.1">
 <h2><span class="header-section-number">16.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:22adf940ee96 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 12: Diversifikasi, Dependensi, dan
+Portofolio Risiko.
+</p>
+<p>
+Minta AI menjelaskan <strong>Diversifikasi, Dependensi, dan Portofolio
+Risiko</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bab ini membahas korelasi antar risiko dan efek portofolio dalam
 kerangka Teori Risiko. Konsep utama yang perlu dikuasai adalah
 diversifikasi, korelasi, dependensi ekor, dan stress testing. Dalam
@@ -8273,6 +10310,25 @@ relatif kecil dibandingkan risiko lain yang kurang terlihat.</p>
 </div>
 <div id="peta-konsep-11" class="section level2" number="16.2">
 <h2><span class="header-section-number">16.2</span> Peta Konsep</h2>
+<!-- BEGIN AI-INLINE:137ec243f8fd -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Peta Konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 12: Diversifikasi, Dependensi, dan
+Portofolio Risiko.
+</p>
+<p>
+Minta AI menjelaskan <strong>Diversifikasi, Dependensi, dan Portofolio
+Risiko</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="diversifikasi" class="section level3" number="16.2.1">
 <h3><span class="header-section-number">16.2.1</span> 1.
 Diversifikasi</h3>
@@ -8444,6 +10500,30 @@ jarang tetapi besar dapat menentukan ketahanan organisasi.</p>
 <div id="contoh-kasus-terarah-11" class="section level2" number="16.4">
 <h2><span class="header-section-number">16.4</span> Contoh Kasus
 Terarah</h2>
+<!-- BEGIN AI-INLINE:abac2c8c673e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terarah
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 12: Diversifikasi, Dependensi, dan
+Portofolio Risiko.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Stress testing, scenario
+analysis, adversarial robustness, model uncertainty, dan risiko sistemik
+dari otomatisasi keputusan. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan gabungan risiko klaim kesehatan, kendaraan, dan
 properti pada satu perusahaan asuransi. Langkah pertama adalah menyusun
 narasi proses risiko. Mahasiswa harus menjawab: apa unit eksposurnya,
@@ -8474,6 +10554,28 @@ pembelian reasuransi.</p>
 <div id="implementasi-rpython-yang-disarankan-11" class="section level2" number="16.5">
 <h2><span class="header-section-number">16.5</span> Implementasi
 R/Python yang Disarankan</h2>
+<!-- BEGIN AI-INLINE:d53d2e98f5ff -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R/Python yang Disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 12: Diversifikasi, Dependensi, dan
+Portofolio Risiko.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian komputasi untuk bab ini dapat dilakukan menggunakan R atau
 Python. Kode berikut bersifat template dan dapat dimodifikasi sesuai
 data. Tujuan utama kode bukan sekadar menghasilkan angka, melainkan
@@ -8518,6 +10620,28 @@ risiko, dan menyiapkan interpretasi.</p>
 <div id="praktikum-dan-diskusi-kelas-11" class="section level2" number="16.6">
 <h2><span class="header-section-number">16.6</span> Praktikum dan
 Diskusi Kelas</h2>
+<!-- BEGIN AI-INLINE:5ef7fbf75995 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum dan Diskusi Kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 12: Diversifikasi, Dependensi, dan
+Portofolio Risiko.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="practice-box">
 <strong>Praktikum Bab 12.</strong> Mahasiswa diminta membentuk kelompok
 kecil, memilih satu kasus risiko, lalu menyusun risk register. Setiap
@@ -8666,6 +10790,64 @@ keputusan mitigasi.
 <div id="bab-13.-strategi-mitigasi-risiko-berbasis-data" class="section level1" number="17">
 <h1><span class="header-section-number">17</span> Bab 13. Strategi
 Mitigasi Risiko Berbasis Data</h1>
+<!-- BEGIN AI-INLINE:e07ed5d3f827 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 13</span>
+<h3>
+Generative dan Agentic AI untuk Strategi Mitigasi Risiko Berbasis Data
+</h3>
+<p><strong>Arah RPS.</strong> Asesmen studi kasus menghasilkan risk
+dashboard, dokumentasi asumsi, dan rekomendasi mitigasi yang dapat
+dipertanggungjawabkan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK4 melalui fokus: Identifikasi alternatif mitigasi
+risiko; Asuransi dan re-asuransi.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk mengurai notasi dan menawarkan langkah derivasi
+alternatif tanpa menggantikan pembuktian mahasiswa.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter; agen wajib berhenti pada checkpoint
+dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas,
+satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <strong>Pertemuan 13 - SubCPMK4.</strong> Fokus bab ini adalah
 alternatif mitigasi risiko. Mahasiswa diharapkan mampu menjelaskan
@@ -8675,6 +10857,25 @@ dengan keputusan manajemen risiko.
 <div id="orientasi-konseptual-12" class="section level2" number="17.1">
 <h2><span class="header-section-number">17.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:dded48c9e945 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 13: Strategi Mitigasi Risiko
+Berbasis Data.
+</p>
+<p>
+Minta AI menjelaskan <strong>Strategi Mitigasi Risiko Berbasis
+Data</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bab ini membahas alternatif mitigasi risiko dalam kerangka Teori
 Risiko. Konsep utama yang perlu dikuasai adalah avoidance, reduction,
 transfer, dan retention. Dalam literatur aktuaria dan manajemen risiko,
@@ -8714,6 +10915,25 @@ relatif kecil dibandingkan risiko lain yang kurang terlihat.</p>
 </div>
 <div id="peta-konsep-12" class="section level2" number="17.2">
 <h2><span class="header-section-number">17.2</span> Peta Konsep</h2>
+<!-- BEGIN AI-INLINE:bfddbc513322 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Peta Konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 13: Strategi Mitigasi Risiko
+Berbasis Data.
+</p>
+<p>
+Minta AI menjelaskan <strong>Strategi Mitigasi Risiko Berbasis
+Data</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="avoidance" class="section level3" number="17.2.1">
 <h3><span class="header-section-number">17.2.1</span> 1. Avoidance</h3>
 <p>Konsep <strong>avoidance</strong> perlu dibaca sebagai komponen dari
@@ -8875,6 +11095,30 @@ jarang tetapi besar dapat menentukan ketahanan organisasi.</p>
 <div id="contoh-kasus-terarah-12" class="section level2" number="17.4">
 <h2><span class="header-section-number">17.4</span> Contoh Kasus
 Terarah</h2>
+<!-- BEGIN AI-INLINE:6deb059d0439 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terarah
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 13: Strategi Mitigasi Risiko
+Berbasis Data.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Asesmen studi kasus
+menghasilkan risk dashboard, dokumentasi asumsi, dan rekomendasi
+mitigasi yang dapat dipertanggungjawabkan. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan perusahaan logistik yang menghadapi risiko
 keterlambatan, kecelakaan, dan lonjakan biaya bahan bakar. Langkah
 pertama adalah menyusun narasi proses risiko. Mahasiswa harus menjawab:
@@ -8905,6 +11149,28 @@ eksposur, atau pembelian reasuransi.</p>
 <div id="implementasi-rpython-yang-disarankan-12" class="section level2" number="17.5">
 <h2><span class="header-section-number">17.5</span> Implementasi
 R/Python yang Disarankan</h2>
+<!-- BEGIN AI-INLINE:bbc2dc8cc02f -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R/Python yang Disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 13: Strategi Mitigasi Risiko
+Berbasis Data.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian komputasi untuk bab ini dapat dilakukan menggunakan R atau
 Python. Kode berikut bersifat template dan dapat dimodifikasi sesuai
 data. Tujuan utama kode bukan sekadar menghasilkan angka, melainkan
@@ -8949,6 +11215,28 @@ risiko, dan menyiapkan interpretasi.</p>
 <div id="praktikum-dan-diskusi-kelas-12" class="section level2" number="17.6">
 <h2><span class="header-section-number">17.6</span> Praktikum dan
 Diskusi Kelas</h2>
+<!-- BEGIN AI-INLINE:f84b6ece21fc -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum dan Diskusi Kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 13: Strategi Mitigasi Risiko
+Berbasis Data.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="practice-box">
 <strong>Praktikum Bab 13.</strong> Mahasiswa diminta membentuk kelompok
 kecil, memilih satu kasus risiko, lalu menyusun risk register. Setiap
@@ -9069,6 +11357,66 @@ hitung di akhir semester.</p>
 <div id="bab-14.-asuransi-reasuransi-dan-transfer-risiko" class="section level1" number="18">
 <h1><span class="header-section-number">18</span> Bab 14. Asuransi,
 Reasuransi, dan Transfer Risiko</h1>
+<!-- BEGIN AI-INLINE:ebe2f2f436bc -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 14</span>
+<h3>
+Generative dan Agentic AI untuk Asuransi, Reasuransi, dan Transfer
+Risiko
+</h3>
+<p><strong>Arah RPS.</strong> AI untuk risk scoring, anomaly detection,
+early warning, dan kombinasi model dengan extreme value atau heavy-tail
+models.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK4 melalui fokus: Manajemen risiko operasional dan
+strategis; Evaluasi dan Inovasi Solusi Risiko; Penyusunan laporan dan
+presentasi hasil analisis risiko.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <strong>Pertemuan 14 - SubCPMK4.</strong> Fokus bab ini adalah mekanisme
 transfer risiko. Mahasiswa diharapkan mampu menjelaskan konsep,
@@ -9078,6 +11426,25 @@ keputusan manajemen risiko.
 <div id="orientasi-konseptual-13" class="section level2" number="18.1">
 <h2><span class="header-section-number">18.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:92ddf56825b7 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Asuransi, Reasuransi, dan
+Transfer Risiko.
+</p>
+<p>
+Minta AI menjelaskan <strong>Asuransi, Reasuransi, dan Transfer
+Risiko</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bab ini membahas mekanisme transfer risiko dalam kerangka Teori
 Risiko. Konsep utama yang perlu dikuasai adalah premi, deductible,
 policy limit, dan reinsurance. Dalam literatur aktuaria dan manajemen
@@ -9116,6 +11483,25 @@ dibandingkan risiko lain yang kurang terlihat.</p>
 </div>
 <div id="peta-konsep-13" class="section level2" number="18.2">
 <h2><span class="header-section-number">18.2</span> Peta Konsep</h2>
+<!-- BEGIN AI-INLINE:8f49ff048364 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Peta Konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Asuransi, Reasuransi, dan
+Transfer Risiko.
+</p>
+<p>
+Minta AI menjelaskan <strong>Asuransi, Reasuransi, dan Transfer
+Risiko</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="premi" class="section level3" number="18.2.1">
 <h3><span class="header-section-number">18.2.1</span> 1. Premi</h3>
 <p>Konsep <strong>premi</strong> perlu dibaca sebagai komponen dari
@@ -9281,6 +11667,30 @@ jarang tetapi besar dapat menentukan ketahanan organisasi.</p>
 <div id="contoh-kasus-terarah-13" class="section level2" number="18.4">
 <h2><span class="header-section-number">18.4</span> Contoh Kasus
 Terarah</h2>
+<!-- BEGIN AI-INLINE:efc74f0aea4e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terarah
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Asuransi, Reasuransi, dan
+Transfer Risiko.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI untuk risk scoring,
+anomaly detection, early warning, dan kombinasi model dengan extreme
+value atau heavy-tail models. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan perusahaan asuransi umum yang membeli reasuransi
 excess-of-loss. Langkah pertama adalah menyusun narasi proses risiko.
 Mahasiswa harus menjawab: apa unit eksposurnya, apa kejadian risikonya,
@@ -9310,6 +11720,28 @@ audit proses, pembatasan eksposur, atau pembelian reasuransi.</p>
 <div id="implementasi-rpython-yang-disarankan-13" class="section level2" number="18.5">
 <h2><span class="header-section-number">18.5</span> Implementasi
 R/Python yang Disarankan</h2>
+<!-- BEGIN AI-INLINE:085ade7413d2 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R/Python yang Disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Asuransi, Reasuransi, dan
+Transfer Risiko.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian komputasi untuk bab ini dapat dilakukan menggunakan R atau
 Python. Kode berikut bersifat template dan dapat dimodifikasi sesuai
 data. Tujuan utama kode bukan sekadar menghasilkan angka, melainkan
@@ -9354,6 +11786,28 @@ risiko, dan menyiapkan interpretasi.</p>
 <div id="praktikum-dan-diskusi-kelas-13" class="section level2" number="18.6">
 <h2><span class="header-section-number">18.6</span> Praktikum dan
 Diskusi Kelas</h2>
+<!-- BEGIN AI-INLINE:ab0bcdae6707 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum dan Diskusi Kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Asuransi, Reasuransi, dan
+Transfer Risiko.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="practice-box">
 <strong>Praktikum Bab 14.</strong> Mahasiswa diminta membentuk kelompok
 kecil, memilih satu kasus risiko, lalu menyusun risk register. Setiap
@@ -9473,6 +11927,65 @@ hitung di akhir semester.</p>
 <div id="bab-15.-laporan-visualisasi-dan-presentasi-rekomendasi-risiko" class="section level1" number="19">
 <h1><span class="header-section-number">19</span> Bab 15. Laporan,
 Visualisasi, dan Presentasi Rekomendasi Risiko</h1>
+<!-- BEGIN AI-INLINE:8b2e6b09f9fc -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 15</span>
+<h3>
+Generative dan Agentic AI untuk Laporan, Visualisasi, dan Presentasi
+Rekomendasi Risiko
+</h3>
+<p><strong>Arah RPS.</strong> Stress testing, scenario analysis,
+adversarial robustness, model uncertainty, dan risiko sistemik dari
+otomatisasi keputusan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK4 melalui fokus: Studi kasus aplikasi teori risiko di
+dunia nyata; Pengembangan solusi inovatif dalam pengelolaan risiko.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <strong>Pertemuan 15 - SubCPMK4.</strong> Fokus bab ini adalah
 komunikasi hasil analisis risiko. Mahasiswa diharapkan mampu menjelaskan
@@ -9482,6 +11995,26 @@ dengan keputusan manajemen risiko.
 <div id="orientasi-konseptual-14" class="section level2" number="19.1">
 <h2><span class="header-section-number">19.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:5c090270b12a -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 15: Laporan, Visualisasi, dan
+Presentasi Rekomendasi Risiko.
+</p>
+<p>
+Minta AI menjelaskan <strong>Laporan, Visualisasi, dan Presentasi
+Rekomendasi Risiko</strong> melalui definisi, analogi, contoh, dan
+contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bab ini membahas komunikasi hasil analisis risiko dalam kerangka
 Teori Risiko. Konsep utama yang perlu dikuasai adalah executive summary,
 visualisasi distribusi, dashboard risiko, dan argumentasi kebijakan.
@@ -9520,6 +12053,26 @@ kurang terlihat.</p>
 </div>
 <div id="peta-konsep-14" class="section level2" number="19.2">
 <h2><span class="header-section-number">19.2</span> Peta Konsep</h2>
+<!-- BEGIN AI-INLINE:45cf9bb602f3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Peta Konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 15: Laporan, Visualisasi, dan
+Presentasi Rekomendasi Risiko.
+</p>
+<p>
+Minta AI menjelaskan <strong>Laporan, Visualisasi, dan Presentasi
+Rekomendasi Risiko</strong> melalui definisi, analogi, contoh, dan
+contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="executive-summary" class="section level3" number="19.2.1">
 <h3><span class="header-section-number">19.2.1</span> 1. Executive
 Summary</h3>
@@ -9694,6 +12247,30 @@ jarang tetapi besar dapat menentukan ketahanan organisasi.</p>
 <div id="contoh-kasus-terarah-14" class="section level2" number="19.4">
 <h2><span class="header-section-number">19.4</span> Contoh Kasus
 Terarah</h2>
+<!-- BEGIN AI-INLINE:7649752bf349 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terarah
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 15: Laporan, Visualisasi, dan
+Presentasi Rekomendasi Risiko.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Stress testing, scenario
+analysis, adversarial robustness, model uncertainty, dan risiko sistemik
+dari otomatisasi keputusan. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan presentasi rekomendasi cadangan modal kepada manajemen.
 Langkah pertama adalah menyusun narasi proses risiko. Mahasiswa harus
 menjawab: apa unit eksposurnya, apa kejadian risikonya, kapan risiko
@@ -9722,6 +12299,28 @@ proses, pembatasan eksposur, atau pembelian reasuransi.</p>
 <div id="implementasi-rpython-yang-disarankan-14" class="section level2" number="19.5">
 <h2><span class="header-section-number">19.5</span> Implementasi
 R/Python yang Disarankan</h2>
+<!-- BEGIN AI-INLINE:8429f986595d -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R/Python yang Disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 15: Laporan, Visualisasi, dan
+Presentasi Rekomendasi Risiko.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian komputasi untuk bab ini dapat dilakukan menggunakan R atau
 Python. Kode berikut bersifat template dan dapat dimodifikasi sesuai
 data. Tujuan utama kode bukan sekadar menghasilkan angka, melainkan
@@ -9766,6 +12365,28 @@ risiko, dan menyiapkan interpretasi.</p>
 <div id="praktikum-dan-diskusi-kelas-14" class="section level2" number="19.6">
 <h2><span class="header-section-number">19.6</span> Praktikum dan
 Diskusi Kelas</h2>
+<!-- BEGIN AI-INLINE:6581e8bb7428 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum dan Diskusi Kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 15: Laporan, Visualisasi, dan
+Presentasi Rekomendasi Risiko.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="practice-box">
 <strong>Praktikum Bab 15.</strong> Mahasiswa diminta membentuk kelompok
 kecil, memilih satu kasus risiko, lalu menyusun risk register. Setiap
@@ -9886,6 +12507,65 @@ sekadar tugas hitung di akhir semester.</p>
 <div id="bab-16.-uas-proyek-akhir-dan-evaluasi-solusi-inovatif" class="section level1" number="20">
 <h1><span class="header-section-number">20</span> Bab 16. UAS: Proyek
 Akhir dan Evaluasi Solusi Inovatif</h1>
+<!-- BEGIN AI-INLINE:a2d07642bd8b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 16</span>
+<h3>
+Generative dan Agentic AI untuk UAS: Proyek Akhir dan Evaluasi Solusi
+Inovatif
+</h3>
+<p><strong>Arah RPS.</strong> Audit akhir prompt, sumber, kode, hasil,
+ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila
+digunakan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek
+akhir.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <strong>Pertemuan 16 - SubCPMK4.</strong> Fokus bab ini adalah integrasi
 model, simulasi, dan mitigasi. Mahasiswa diharapkan mampu menjelaskan
@@ -9895,6 +12575,26 @@ dengan keputusan manajemen risiko.
 <div id="orientasi-konseptual-15" class="section level2" number="20.1">
 <h2><span class="header-section-number">20.1</span> Orientasi
 Konseptual</h2>
+<!-- BEGIN AI-INLINE:2e57f5c1373c -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Orientasi Konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: UAS: Proyek Akhir dan Evaluasi
+Solusi Inovatif.
+</p>
+<p>
+Minta AI menjelaskan <strong>UAS: Proyek Akhir dan Evaluasi Solusi
+Inovatif</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bab ini membahas integrasi model, simulasi, dan mitigasi dalam
 kerangka Teori Risiko. Konsep utama yang perlu dikuasai adalah validasi,
 skenario, inovasi, dan evaluasi efektivitas. Dalam literatur aktuaria
@@ -9934,6 +12634,26 @@ dibandingkan risiko lain yang kurang terlihat.</p>
 </div>
 <div id="peta-konsep-15" class="section level2" number="20.2">
 <h2><span class="header-section-number">20.2</span> Peta Konsep</h2>
+<!-- BEGIN AI-INLINE:9964a0fdaf5c -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Peta Konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: UAS: Proyek Akhir dan Evaluasi
+Solusi Inovatif.
+</p>
+<p>
+Minta AI menjelaskan <strong>UAS: Proyek Akhir dan Evaluasi Solusi
+Inovatif</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="validasi" class="section level3" number="20.2.1">
 <h3><span class="header-section-number">20.2.1</span> 1. Validasi</h3>
 <p>Konsep <strong>validasi</strong> perlu dibaca sebagai komponen dari
@@ -10100,6 +12820,30 @@ jarang tetapi besar dapat menentukan ketahanan organisasi.</p>
 <div id="contoh-kasus-terarah-15" class="section level2" number="20.4">
 <h2><span class="header-section-number">20.4</span> Contoh Kasus
 Terarah</h2>
+<!-- BEGIN AI-INLINE:6d298cf5b1f9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terarah
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: UAS: Proyek Akhir dan Evaluasi
+Solusi Inovatif.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Audit akhir prompt,
+sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi,
+serta log agen bila digunakan. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pertimbangkan proyek akhir analisis risiko lengkap dari data sampai
 rekomendasi implementasi. Langkah pertama adalah menyusun narasi proses
 risiko. Mahasiswa harus menjawab: apa unit eksposurnya, apa kejadian
@@ -10130,6 +12874,28 @@ reasuransi.</p>
 <div id="implementasi-rpython-yang-disarankan-15" class="section level2" number="20.5">
 <h2><span class="header-section-number">20.5</span> Implementasi
 R/Python yang Disarankan</h2>
+<!-- BEGIN AI-INLINE:8cb2c6ee57b4 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R/Python yang Disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: UAS: Proyek Akhir dan Evaluasi
+Solusi Inovatif.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian komputasi untuk bab ini dapat dilakukan menggunakan R atau
 Python. Kode berikut bersifat template dan dapat dimodifikasi sesuai
 data. Tujuan utama kode bukan sekadar menghasilkan angka, melainkan
@@ -10174,6 +12940,28 @@ risiko, dan menyiapkan interpretasi.</p>
 <div id="praktikum-dan-diskusi-kelas-15" class="section level2" number="20.6">
 <h2><span class="header-section-number">20.6</span> Praktikum dan
 Diskusi Kelas</h2>
+<!-- BEGIN AI-INLINE:8935e30c355a -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum dan Diskusi Kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: UAS: Proyek Akhir dan Evaluasi
+Solusi Inovatif.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="practice-box">
 <strong>Praktikum Bab 16.</strong> Mahasiswa diminta membentuk kelompok
 kecil, memilih satu kasus risiko, lalu menyusun risk register. Setiap
@@ -10294,6 +13082,64 @@ hitung di akhir semester.</p>
 <div id="rubrik-penilaian-dan-panduan-proyek" class="section level1" number="21">
 <h1><span class="header-section-number">21</span> Rubrik Penilaian dan
 Panduan Proyek</h1>
+<!-- BEGIN AI-INLINE:8aae37f5611b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 17</span>
+<h3>
+Generative dan Agentic AI untuk Rubrik Penilaian dan Panduan Proyek
+</h3>
+<p><strong>Arah RPS.</strong> Audit akhir prompt, sumber, kode, hasil,
+ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila
+digunakan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek
+akhir.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian ini merangkum rubrik pembelajaran agar mahasiswa memahami
 standar mutu yang diharapkan. Rubrik tidak dimaksudkan sebagai daftar
 administrasi semata. Rubrik adalah kontrak akademik yang menjelaskan
@@ -10304,6 +13150,28 @@ dengan masalah nyata.</p>
 <div id="rubrik-tugas-analisis-kasus-risiko-nyata" class="section level2" number="21.1">
 <h2><span class="header-section-number">21.1</span> Rubrik Tugas
 Analisis Kasus Risiko Nyata</h2>
+<!-- BEGIN AI-INLINE:0e17f189036b -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Rubrik Tugas Analisis Kasus Risiko Nyata
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: Rubrik Penilaian dan Panduan
+Proyek.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <table>
 <colgroup>
 <col width="30%" />
@@ -10394,6 +13262,30 @@ dibahas</td>
 <div id="rubrik-proyek-simulasi-agregasi-risiko-portofolio" class="section level2" number="21.3">
 <h2><span class="header-section-number">21.3</span> Rubrik Proyek
 Simulasi Agregasi Risiko Portofolio</h2>
+<!-- BEGIN AI-INLINE:a4eab7254344 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Rubrik Proyek Simulasi Agregasi Risiko Portofolio
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: Rubrik Penilaian dan Panduan
+Proyek.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Audit akhir prompt,
+sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi,
+serta log agen bila digunakan. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <table>
 <colgroup>
 <col width="30%" />
@@ -10475,6 +13367,64 @@ Mitigasi Risiko</h2>
 <div id="template-laporan-proyek-akhir" class="section level1" number="22">
 <h1><span class="header-section-number">22</span> Template Laporan
 Proyek Akhir</h1>
+<!-- BEGIN AI-INLINE:31d212b7b287 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 18</span>
+<h3>
+Generative dan Agentic AI untuk Template Laporan Proyek Akhir
+</h3>
+<p><strong>Arah RPS.</strong> Audit akhir prompt, sumber, kode, hasil,
+ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila
+digunakan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek
+akhir.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Laporan proyek akhir disarankan memiliki struktur berikut. Pertama,
 ringkasan eksekutif satu halaman yang menjelaskan kasus, data, model,
 hasil utama, dan rekomendasi. Kedua, pendahuluan yang menjelaskan
@@ -10531,6 +13481,64 @@ menerima risiko secara sadar.</p>
 </div>
 <div id="catatan-penutup" class="section level1" number="25">
 <h1><span class="header-section-number">25</span> Catatan Penutup</h1>
+<!-- BEGIN AI-INLINE:2bd01629cfff -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 19</span>
+<h3>
+Generative dan Agentic AI untuk Catatan Penutup
+</h3>
+<p><strong>Arah RPS.</strong> Audit akhir prompt, sumber, kode, hasil,
+ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila
+digunakan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek
+akhir.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Materi Teori Risiko ini dirancang untuk membantu mahasiswa S2
 Statistika Terapan membangun kompetensi analitis, komputasional, dan
 komunikatif secara utuh. Kompetensi analitis muncul ketika mahasiswa
@@ -16707,6 +19715,75 @@ operasional, indikatornya dapat berupa penurunan waktu pemrosesan,
 penurunan jumlah insiden, atau penurunan biaya akibat gangguan. Tanpa
 indikator evaluasi, mitigasi berisiko menjadi slogan yang manis di
 slide, tetapi sulit dipertanggungjawabkan setelah semester berakhir.</p>
+<!-- BEGIN ADOPSI AI RPS 2026 -->
+</div>
+<div id="penyelarasan-materi-dengan-rps-revisi-ai-2026" class="section level2" number="26.162">
+<h2><span class="header-section-number">26.162</span> Penyelarasan
+Materi dengan RPS Revisi AI 2026</h2>
+<p>Materi <strong>Teori Risiko</strong> ini telah diselaraskan dengan
+RPS Revisi AI 2026. Rumusan CPL program studi tetap dan tidak diubah.
+Generative AI maupun agentic AI hanya digunakan sebagai alat bantu untuk
+mempercepat ketercapaian CPMK dan Sub-CPMK; penalaran statistika,
+keputusan metodologis, dan tanggung jawab akademik tetap berada pada
+mahasiswa.</p>
+<div id="integrasi-ai-kontekstual" class="section level3" number="26.162.1">
+<h3><span class="header-section-number">26.162.1</span> Integrasi AI
+kontekstual</h3>
+<ul>
+<li>AI untuk risk scoring, anomaly detection, early warning, dan
+kombinasi model dengan extreme value atau heavy-tail models.</li>
+<li>Stress testing, scenario analysis, adversarial robustness, model
+uncertainty, dan risiko sistemik dari otomatisasi keputusan.</li>
+<li>Asesmen studi kasus menghasilkan risk dashboard, dokumentasi asumsi,
+dan rekomendasi mitigasi yang dapat dipertanggungjawabkan.</li>
+</ul>
+</div>
+<div id="protokol-penggunaan-ai" class="section level3" number="26.162.2">
+<h3><span class="header-section-number">26.162.2</span> Protokol
+penggunaan AI</h3>
+<ol style="list-style-type: decimal">
+<li>Nyatakan alat, tujuan penggunaan, dan bagian pekerjaan yang dibantu
+AI.</li>
+<li>Simpan prompt log ringkas, sumber, versi kode/notebook, dan
+perubahan yang dilakukan.</li>
+<li>Verifikasi keluaran terhadap asumsi metode, sumber primer, hasil
+numerik, diagnostik, ketidakpastian, robustness, bias/fairness, privasi,
+dan konteks.</li>
+<li>Jangan memasukkan data pribadi, rahasia, soal asesmen tertutup, atau
+kredensial ke layanan AI yang tidak disetujui.</li>
+<li>Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil
+secara mandiri.</li>
+</ol>
+</div>
+<div id="bukti-asesmen" class="section level3" number="26.162.3">
+<h3><span class="header-section-number">26.162.3</span> Bukti
+asesmen</h3>
+<!-- BEGIN AI-INLINE:e91641335eb7 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Bukti asesmen
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: Catatan Penutup.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
+<p>Penilaian berfokus pada ketepatan metode, validasi dan
+ketidakpastian, reproducibility, interpretasi, komunikasi, serta
+transparansi penggunaan AI. Keluaran AI tanpa verifikasi bukan bukti
+ketercapaian CPMK.</p>
+<!-- END ADOPSI AI RPS 2026 -->
 <div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
 <div id="ref-artzner1999" class="csl-entry">
 Artzner, Philippe, Freddy Delbaen, Jean-Marc Eber, dan David Heath.
@@ -16788,31 +19865,13 @@ Wickham, Hadley, Mine Cetinkaya-Rundel, dan Garrett Grolemund. 2023.
 </div>
 </div>
 </div>
+</div>
 
 
 
 </div>
 </div>
 
-
-
-
-
-<!-- BEGIN ADOPSI AI RPS 2026 -->
-<section id="penyelarasan-rps-ai-2026" style="margin:2rem 0;padding:1.5rem;border-left:8px solid #f2a51a;background:#eef5f8;border-radius:8px">
-  <h2>Penyelarasan Materi dengan RPS Revisi AI 2026</h2>
-  <p>Materi <strong>Teori Risiko</strong> ini mempertahankan rumusan CPL yang berlaku. AI ditempatkan sebagai alat bantu untuk mempercepat ketercapaian CPMK dan Sub-CPMK, bukan sebagai CPL baru atau pengganti penalaran statistika.</p>
-  <h3>Integrasi AI kontekstual</h3><ul><li>AI untuk risk scoring, anomaly detection, early warning, dan kombinasi model dengan extreme value atau heavy-tail models.</li><li>Stress testing, scenario analysis, adversarial robustness, model uncertainty, dan risiko sistemik dari otomatisasi keputusan.</li><li>Asesmen studi kasus menghasilkan risk dashboard, dokumentasi asumsi, dan rekomendasi mitigasi yang dapat dipertanggungjawabkan.</li></ul>
-  <h3>Protokol penggunaan AI</h3>
-  <ol>
-    <li>Ungkapkan alat, tujuan, prompt log ringkas, sumber, dan perubahan yang dilakukan.</li>
-    <li>Verifikasi asumsi, kode, hasil numerik, diagnostik, ketidakpastian, robustness, bias/fairness, privasi, dan konteks.</li>
-    <li>Jangan mengunggah data pribadi, rahasia, asesmen tertutup, atau kredensial ke layanan yang tidak disetujui.</li>
-    <li>Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil secara mandiri.</li>
-  </ol>
-  <p><strong>Bukti asesmen:</strong> ketepatan metode, validasi, reproducibility, interpretasi, komunikasi, dan transparansi penggunaan AI. Keluaran AI tanpa verifikasi bukan bukti ketercapaian CPMK.</p>
-</section>
-<!-- END ADOPSI AI RPS 2026 -->
 </div>
 
 <script>
@@ -16877,6 +19936,16 @@ $(document).ready(function ()  {
     // tocify
     var toc = $("#TOC").tocify(options).data("toc-tocify");
 });
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
 </script>
 
 </body>

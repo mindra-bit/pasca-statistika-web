@@ -147,7 +147,6 @@ table {
 </style>
 <!-- END UNPAD MATERIAL STYLE -->
 
-
 <!-- BEGIN UNPAD MATERIAL ENHANCEMENT -->
 
 ```{r setup-unpad-render, include=FALSE}
@@ -164,7 +163,6 @@ knitr::opts_chunk$set(
 )
 set.seed(2025)
 ```
-
 
 <div class="unpad-cover">
 <div class="unpad-cover__brand">
@@ -223,10 +221,33 @@ hr{border:none;border-top:2px dashed #caa272;margin:35px 0;}
 @media(max-width:980px){.main-container{margin-left:auto;padding:25px;} #TOC{position:relative;width:auto;max-height:none;left:auto;top:auto;margin-bottom:18px;}}
 </style>
 
-
 <div class="rpsbox">
 **Identitas Mata Kuliah.** Materi ini disusun untuk **Matematika Aktuaria 2** pada **Program Studi S2 Statistika Terapan, Fakultas Matematika dan Ilmu Pengetahuan Alam, Universitas Padjadjaran**. Dokumen mengikuti arah RPS-OBE 2025: mata kuliah wajib semester 2, kode **D20B.211**, bobot **T = 2 SKS** dan **P = 1 SKS**, dengan dosen pengampu sekaligus pengembang RPS **Dr. Lienda Noviyanti, M.Si**. Fokus pembelajaran mengikuti CPMK dalam RPS: analisis *multiple life functions*, evaluasi produk asuransi dan anuitas dua kehidupan, konstruksi model komputasi *multiple decrement*, serta perancangan solusi *benefit premium* dan *benefit reserve* untuk produk aktuaria lanjut.
 </div>
+
+
+<!-- BEGIN AI-INLINE-STYLE-2026 -->
+<style>
+.ai-inline {
+  margin: 1rem 0 1.35rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid #bfd9d5;
+  border-left: 7px solid #0f766e;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #eff9f7, #fffaf0);
+}
+.ai-inline--agentic { border-left-color: #17395c; background: linear-gradient(135deg, #eef5fb, #f5faf8); }
+.ai-inline--assessment { border-left-color: #a35d00; background: #fff8e8; }
+.ai-inline h3, .ai-inline h4 { margin-top: 0; color: #17395c; }
+.ai-inline p:last-child, .ai-inline ul:last-child { margin-bottom: 0; }
+.ai-inline__label {
+  display: inline-block; margin-bottom: .45rem; padding: .2rem .55rem;
+  border-radius: 999px; background: #17395c; color: white;
+  font-size: .78rem; font-weight: 800;
+}
+.ai-inline table { width: 100%; margin: .6rem 0; background: white; }
+</style>
+<!-- END AI-INLINE-STYLE-2026 -->
 
 # Prakata
 
@@ -271,11 +292,19 @@ Bagian kode R bersifat edukatif. Data yang digunakan sebagian besar berupa data 
 
 ### Konsep Inti
 
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali simbol, indeks umur, periode proyeksi, status hidup, status meninggal, dan hubungan antar variabel acak. Lapis kedua adalah lapis probabilitas, yaitu kemampuan mengubah cerita kontrak asuransi menjadi peluang, fungsi distribusi, atau nilai harapan. Lapis ketiga adalah lapis aktuaria terapan, yaitu kemampuan menerjemahkan hasil probabilitas ke dalam nilai kini manfaat, premi, cadangan, atau rekomendasi desain produk. Ketiga lapis ini tidak berdiri sendiri. Kesalahan kecil pada lapis notasi dapat menjalar menjadi kesalahan besar pada lapis premi dan cadangan.
 
 Pendekatan yang digunakan adalah kombinasi antara penurunan matematis dan pemodelan komputasi. Penurunan matematis melatih mahasiswa memahami struktur formula secara konseptual. Pemodelan komputasi melatih mahasiswa memeriksa formula melalui simulasi, membangun fungsi, dan melakukan analisis sensitivitas. Dalam praktik aktuaria modern, keduanya harus berjalan bersama. Komputasi tanpa teori mudah menghasilkan angka yang tampak meyakinkan tetapi salah konteks. Teori tanpa komputasi sulit digunakan untuk mengevaluasi portofolio yang besar, asumsi yang berlapis, dan skenario risiko yang berubah.
-
 
 Pada pertemuan ini, titik tekan pembelajaran adalah **pendahuluan multiple life functions**. Topik ini mencakup ruang lingkup multiple life, notasi future lifetime, status joint-life, status last-survivor, hubungan dengan produk asuransi keluarga. Dalam literatur aktuaria klasik, nilai kini manfaat asuransi dan anuitas selalu dibangun dari tiga komponen utama: fungsi survival, fungsi diskonto, dan struktur manfaat [@Dickson2013; @Bowers1997]. Ketika kontrak melibatkan dua kehidupan atau lebih, komponen survival tidak lagi cukup dibaca dari satu orang saja. Status kontrak harus didefinisikan dengan jelas: apakah manfaat bergantung pada keduanya masih hidup, salah satu masih hidup, kematian pertama, kematian kedua, atau kematian individu tertentu.
 
@@ -286,7 +315,6 @@ Dalam implementasi komputasi, topik ruang lingkup multiple life, notasi future l
 ### Notasi dan Formulasi Dasar
 
 Sebelum melakukan perhitungan, tetapkan notasi secara konsisten. Gunakan $x$ dan $y$ untuk umur dua individu pada waktu kontrak dimulai. Gunakan $T_x$ dan $T_y$ untuk *future lifetime* kontinu, serta $K_x$ dan $K_y$ untuk *curtate future lifetime*. Nilai $i$ menyatakan tingkat bunga efektif tahunan, sedangkan $v=(1+i)^{-1}$ menyatakan faktor diskonto satu tahun. Dalam banyak contoh awal, asumsi independensi digunakan agar struktur formula mudah dipahami. Setelah itu, mahasiswa dapat memperluas model melalui dependensi, skenario stres, atau faktor risiko bersama.
-
 
 ::: {.mathbox}
 Untuk dua individu berumur $x$ dan $y$ dengan future lifetimes $T_x$ dan $T_y$, status joint-life bertahan sampai waktu $t$ jika keduanya masih hidup:
@@ -299,7 +327,6 @@ $$
 $$
 :::
 
-
 ::: {.mathbox}
 Status last survivor bertahan sampai waktu $t$ jika minimal satu dari dua individu masih hidup:
 $$
@@ -311,10 +338,19 @@ $$
 $$
 :::
 
-
 Formula di atas harus dipahami sebagai representasi dari cerita kontrak. Pada laporan akademik, mahasiswa sebaiknya tidak hanya menuliskan rumus, tetapi juga menjelaskan arti setiap simbol. Penjelasan simbol membuat pembaca memahami apakah peluang yang dihitung adalah peluang hidup bersama, peluang minimal satu hidup, peluang kematian pertama, atau peluang kematian terakhir. Di dunia aktuaria, satu garis notasi yang ambigu bisa berubah menjadi satu halaman klarifikasi; lebih baik jelas sejak awal daripada rapat produk menjadi sidang tebak-tebakan.
 
 ### Contoh Konseptual dan Interpretasi
+
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Contoh Konseptual dan Interpretasi</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="examplebox">
 **Contoh.** Misalkan terdapat pasangan berumur 45 dan 43 tahun yang hendak membeli produk asuransi keluarga. Produk pertama membayar manfaat ketika kematian pertama terjadi, sedangkan produk kedua membayar manfaat ketika kematian kedua terjadi. Walaupun kedua produk menggunakan dua orang yang sama, status aktuaria produk berbeda. Produk pertama berhubungan erat dengan status *joint-life* karena status berhenti pada kematian pertama. Produk kedua berhubungan dengan status *last-survivor* karena pembayaran menunggu sampai keduanya meninggal.
@@ -326,8 +362,17 @@ Interpretasi hasil harus selalu dikaitkan dengan pertanyaan bisnis. Jika nilai k
 
 ### Implementasi R
 
-Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi R</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
 
+
+Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
 
 ```{r setup-actuarial, message=FALSE, warning=FALSE, eval=FALSE}
 # Paket dasar yang digunakan dalam materi.
@@ -372,10 +417,19 @@ ggplot(prob, aes(x = t)) +
   theme_minimal()
 ```
 
-
 Setelah menjalankan kode, mahasiswa perlu membaca output secara substantif. Untuk grafik probabilitas dua kehidupan, kurva *joint-life* biasanya berada di bawah kurva *last-survivor* karena peluang keduanya hidup sampai waktu tertentu lebih kecil daripada peluang minimal satu masih hidup. Untuk tabel *multiple decrement*, jumlah decrement per penyebab harus konsisten dengan total keluar dari kelompok risiko. Untuk premi dan cadangan, nilai cadangan pada awal kontrak biasanya mendekati nol dalam model premi bersih, lalu berubah mengikuti waktu, probabilitas klaim, dan sisa kewajiban.
 
 ### Studi Kasus Mini
+
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 **Skenario.** Sebuah perusahaan asuransi sedang mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga menjelang pensiun. Tim aktuaria diminta menghitung nilai manfaat, menguji sensitivitas terhadap suku bunga, serta menjelaskan risiko asumsi mortalitas. Pada pertemuan 1, fokus analisis diarahkan pada ruang lingkup multiple life, notasi future lifetime, status joint-life.
@@ -421,9 +475,7 @@ Dalam tugas dan proyek, pemilihan studi kasus harus disertai alasan. Kasus pasan
 
 Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tiga hal: formula yang dipelajari, contoh kontrak yang cocok dengan formula tersebut, dan satu pertanyaan kritis tentang asumsi. Kebiasaan ini membantu mahasiswa bergerak dari hafalan ke pemahaman. Jika setiap pertemuan menghasilkan satu jurnal reflektif yang baik, pada akhir semester mahasiswa sudah memiliki peta konsep personal yang kuat untuk menyusun proyek akhir.
 
-
 ---
-
 
 ## Pertemuan 2: Joint Distributions of Future Lifetimes
 
@@ -439,11 +491,19 @@ Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tig
 
 ### Konsep Inti
 
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali simbol, indeks umur, periode proyeksi, status hidup, status meninggal, dan hubungan antar variabel acak. Lapis kedua adalah lapis probabilitas, yaitu kemampuan mengubah cerita kontrak asuransi menjadi peluang, fungsi distribusi, atau nilai harapan. Lapis ketiga adalah lapis aktuaria terapan, yaitu kemampuan menerjemahkan hasil probabilitas ke dalam nilai kini manfaat, premi, cadangan, atau rekomendasi desain produk. Ketiga lapis ini tidak berdiri sendiri. Kesalahan kecil pada lapis notasi dapat menjalar menjadi kesalahan besar pada lapis premi dan cadangan.
 
 Pendekatan yang digunakan adalah kombinasi antara penurunan matematis dan pemodelan komputasi. Penurunan matematis melatih mahasiswa memahami struktur formula secara konseptual. Pemodelan komputasi melatih mahasiswa memeriksa formula melalui simulasi, membangun fungsi, dan melakukan analisis sensitivitas. Dalam praktik aktuaria modern, keduanya harus berjalan bersama. Komputasi tanpa teori mudah menghasilkan angka yang tampak meyakinkan tetapi salah konteks. Teori tanpa komputasi sulit digunakan untuk mengevaluasi portofolio yang besar, asumsi yang berlapis, dan skenario risiko yang berubah.
-
 
 Pada pertemuan ini, titik tekan pembelajaran adalah **joint distributions of future lifetimes**. Topik ini mencakup distribusi gabungan, fungsi survival gabungan, independensi dan dependensi, interpretasi tabel mortalitas, ekspektasi dua kehidupan. Dalam literatur aktuaria klasik, nilai kini manfaat asuransi dan anuitas selalu dibangun dari tiga komponen utama: fungsi survival, fungsi diskonto, dan struktur manfaat [@Dickson2013; @Bowers1997]. Ketika kontrak melibatkan dua kehidupan atau lebih, komponen survival tidak lagi cukup dibaca dari satu orang saja. Status kontrak harus didefinisikan dengan jelas: apakah manfaat bergantung pada keduanya masih hidup, salah satu masih hidup, kematian pertama, kematian kedua, atau kematian individu tertentu.
 
@@ -454,7 +514,6 @@ Dalam implementasi komputasi, topik distribusi gabungan, fungsi survival gabunga
 ### Notasi dan Formulasi Dasar
 
 Sebelum melakukan perhitungan, tetapkan notasi secara konsisten. Gunakan $x$ dan $y$ untuk umur dua individu pada waktu kontrak dimulai. Gunakan $T_x$ dan $T_y$ untuk *future lifetime* kontinu, serta $K_x$ dan $K_y$ untuk *curtate future lifetime*. Nilai $i$ menyatakan tingkat bunga efektif tahunan, sedangkan $v=(1+i)^{-1}$ menyatakan faktor diskonto satu tahun. Dalam banyak contoh awal, asumsi independensi digunakan agar struktur formula mudah dipahami. Setelah itu, mahasiswa dapat memperluas model melalui dependensi, skenario stres, atau faktor risiko bersama.
-
 
 ::: {.mathbox}
 Untuk dua individu berumur $x$ dan $y$ dengan future lifetimes $T_x$ dan $T_y$, status joint-life bertahan sampai waktu $t$ jika keduanya masih hidup:
@@ -467,7 +526,6 @@ $$
 $$
 :::
 
-
 ::: {.mathbox}
 Status last survivor bertahan sampai waktu $t$ jika minimal satu dari dua individu masih hidup:
 $$
@@ -479,10 +537,19 @@ $$
 $$
 :::
 
-
 Formula di atas harus dipahami sebagai representasi dari cerita kontrak. Pada laporan akademik, mahasiswa sebaiknya tidak hanya menuliskan rumus, tetapi juga menjelaskan arti setiap simbol. Penjelasan simbol membuat pembaca memahami apakah peluang yang dihitung adalah peluang hidup bersama, peluang minimal satu hidup, peluang kematian pertama, atau peluang kematian terakhir. Di dunia aktuaria, satu garis notasi yang ambigu bisa berubah menjadi satu halaman klarifikasi; lebih baik jelas sejak awal daripada rapat produk menjadi sidang tebak-tebakan.
 
 ### Contoh Konseptual dan Interpretasi
+
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Contoh Konseptual dan Interpretasi</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="examplebox">
 **Contoh.** Misalkan terdapat pasangan berumur 45 dan 43 tahun yang hendak membeli produk asuransi keluarga. Produk pertama membayar manfaat ketika kematian pertama terjadi, sedangkan produk kedua membayar manfaat ketika kematian kedua terjadi. Walaupun kedua produk menggunakan dua orang yang sama, status aktuaria produk berbeda. Produk pertama berhubungan erat dengan status *joint-life* karena status berhenti pada kematian pertama. Produk kedua berhubungan dengan status *last-survivor* karena pembayaran menunggu sampai keduanya meninggal.
@@ -494,8 +561,17 @@ Interpretasi hasil harus selalu dikaitkan dengan pertanyaan bisnis. Jika nilai k
 
 ### Implementasi R
 
-Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi R</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
 
+
+Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
 
 ```{r two-life-probability-example-2, message=FALSE, warning=FALSE, eval=FALSE}
 x <- 45; y <- 43
@@ -517,10 +593,19 @@ ggplot(prob, aes(x = t)) +
   theme_minimal()
 ```
 
-
 Setelah menjalankan kode, mahasiswa perlu membaca output secara substantif. Untuk grafik probabilitas dua kehidupan, kurva *joint-life* biasanya berada di bawah kurva *last-survivor* karena peluang keduanya hidup sampai waktu tertentu lebih kecil daripada peluang minimal satu masih hidup. Untuk tabel *multiple decrement*, jumlah decrement per penyebab harus konsisten dengan total keluar dari kelompok risiko. Untuk premi dan cadangan, nilai cadangan pada awal kontrak biasanya mendekati nol dalam model premi bersih, lalu berubah mengikuti waktu, probabilitas klaim, dan sisa kewajiban.
 
 ### Studi Kasus Mini
+
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 **Skenario.** Sebuah perusahaan asuransi sedang mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga menjelang pensiun. Tim aktuaria diminta menghitung nilai manfaat, menguji sensitivitas terhadap suku bunga, serta menjelaskan risiko asumsi mortalitas. Pada pertemuan 2, fokus analisis diarahkan pada distribusi gabungan, fungsi survival gabungan, independensi dan dependensi.
@@ -566,9 +651,7 @@ Mahasiswa juga perlu memperhatikan keterbatasan data. Data mortalitas atau decre
 
 Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tiga hal: formula yang dipelajari, contoh kontrak yang cocok dengan formula tersebut, dan satu pertanyaan kritis tentang asumsi. Kebiasaan ini membantu mahasiswa bergerak dari hafalan ke pemahaman. Jika setiap pertemuan menghasilkan satu jurnal reflektif yang baik, pada akhir semester mahasiswa sudah memiliki peta konsep personal yang kuat untuk menyusun proyek akhir.
 
-
 ---
-
 
 ## Pertemuan 3: Probabilitas dan Ekspektasi Dua Kehidupan
 
@@ -584,11 +667,19 @@ Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tig
 
 ### Konsep Inti
 
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali simbol, indeks umur, periode proyeksi, status hidup, status meninggal, dan hubungan antar variabel acak. Lapis kedua adalah lapis probabilitas, yaitu kemampuan mengubah cerita kontrak asuransi menjadi peluang, fungsi distribusi, atau nilai harapan. Lapis ketiga adalah lapis aktuaria terapan, yaitu kemampuan menerjemahkan hasil probabilitas ke dalam nilai kini manfaat, premi, cadangan, atau rekomendasi desain produk. Ketiga lapis ini tidak berdiri sendiri. Kesalahan kecil pada lapis notasi dapat menjalar menjadi kesalahan besar pada lapis premi dan cadangan.
 
 Pendekatan yang digunakan adalah kombinasi antara penurunan matematis dan pemodelan komputasi. Penurunan matematis melatih mahasiswa memahami struktur formula secara konseptual. Pemodelan komputasi melatih mahasiswa memeriksa formula melalui simulasi, membangun fungsi, dan melakukan analisis sensitivitas. Dalam praktik aktuaria modern, keduanya harus berjalan bersama. Komputasi tanpa teori mudah menghasilkan angka yang tampak meyakinkan tetapi salah konteks. Teori tanpa komputasi sulit digunakan untuk mengevaluasi portofolio yang besar, asumsi yang berlapis, dan skenario risiko yang berubah.
-
 
 Pada pertemuan ini, titik tekan pembelajaran adalah **probabilitas dan ekspektasi dua kehidupan**. Topik ini mencakup peluang hidup bersama, peluang kematian pertama, peluang kematian kedua, ekspektasi curtate lifetime, variansi sederhana. Dalam literatur aktuaria klasik, nilai kini manfaat asuransi dan anuitas selalu dibangun dari tiga komponen utama: fungsi survival, fungsi diskonto, dan struktur manfaat [@Dickson2013; @Bowers1997]. Ketika kontrak melibatkan dua kehidupan atau lebih, komponen survival tidak lagi cukup dibaca dari satu orang saja. Status kontrak harus didefinisikan dengan jelas: apakah manfaat bergantung pada keduanya masih hidup, salah satu masih hidup, kematian pertama, kematian kedua, atau kematian individu tertentu.
 
@@ -599,7 +690,6 @@ Dalam implementasi komputasi, topik peluang hidup bersama, peluang kematian pert
 ### Notasi dan Formulasi Dasar
 
 Sebelum melakukan perhitungan, tetapkan notasi secara konsisten. Gunakan $x$ dan $y$ untuk umur dua individu pada waktu kontrak dimulai. Gunakan $T_x$ dan $T_y$ untuk *future lifetime* kontinu, serta $K_x$ dan $K_y$ untuk *curtate future lifetime*. Nilai $i$ menyatakan tingkat bunga efektif tahunan, sedangkan $v=(1+i)^{-1}$ menyatakan faktor diskonto satu tahun. Dalam banyak contoh awal, asumsi independensi digunakan agar struktur formula mudah dipahami. Setelah itu, mahasiswa dapat memperluas model melalui dependensi, skenario stres, atau faktor risiko bersama.
-
 
 ::: {.mathbox}
 Untuk dua individu berumur $x$ dan $y$ dengan future lifetimes $T_x$ dan $T_y$, status joint-life bertahan sampai waktu $t$ jika keduanya masih hidup:
@@ -612,7 +702,6 @@ $$
 $$
 :::
 
-
 ::: {.mathbox}
 Status last survivor bertahan sampai waktu $t$ jika minimal satu dari dua individu masih hidup:
 $$
@@ -624,10 +713,19 @@ $$
 $$
 :::
 
-
 Formula di atas harus dipahami sebagai representasi dari cerita kontrak. Pada laporan akademik, mahasiswa sebaiknya tidak hanya menuliskan rumus, tetapi juga menjelaskan arti setiap simbol. Penjelasan simbol membuat pembaca memahami apakah peluang yang dihitung adalah peluang hidup bersama, peluang minimal satu hidup, peluang kematian pertama, atau peluang kematian terakhir. Di dunia aktuaria, satu garis notasi yang ambigu bisa berubah menjadi satu halaman klarifikasi; lebih baik jelas sejak awal daripada rapat produk menjadi sidang tebak-tebakan.
 
 ### Contoh Konseptual dan Interpretasi
+
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Contoh Konseptual dan Interpretasi</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="examplebox">
 **Contoh.** Misalkan terdapat pasangan berumur 45 dan 43 tahun yang hendak membeli produk asuransi keluarga. Produk pertama membayar manfaat ketika kematian pertama terjadi, sedangkan produk kedua membayar manfaat ketika kematian kedua terjadi. Walaupun kedua produk menggunakan dua orang yang sama, status aktuaria produk berbeda. Produk pertama berhubungan erat dengan status *joint-life* karena status berhenti pada kematian pertama. Produk kedua berhubungan dengan status *last-survivor* karena pembayaran menunggu sampai keduanya meninggal.
@@ -639,8 +737,17 @@ Interpretasi hasil harus selalu dikaitkan dengan pertanyaan bisnis. Jika nilai k
 
 ### Implementasi R
 
-Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi R</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
 
+
+Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
 
 ```{r two-life-probability-example-3, message=FALSE, warning=FALSE, eval=FALSE}
 x <- 45; y <- 43
@@ -662,10 +769,19 @@ ggplot(prob, aes(x = t)) +
   theme_minimal()
 ```
 
-
 Setelah menjalankan kode, mahasiswa perlu membaca output secara substantif. Untuk grafik probabilitas dua kehidupan, kurva *joint-life* biasanya berada di bawah kurva *last-survivor* karena peluang keduanya hidup sampai waktu tertentu lebih kecil daripada peluang minimal satu masih hidup. Untuk tabel *multiple decrement*, jumlah decrement per penyebab harus konsisten dengan total keluar dari kelompok risiko. Untuk premi dan cadangan, nilai cadangan pada awal kontrak biasanya mendekati nol dalam model premi bersih, lalu berubah mengikuti waktu, probabilitas klaim, dan sisa kewajiban.
 
 ### Studi Kasus Mini
+
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 **Skenario.** Sebuah perusahaan asuransi sedang mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga menjelang pensiun. Tim aktuaria diminta menghitung nilai manfaat, menguji sensitivitas terhadap suku bunga, serta menjelaskan risiko asumsi mortalitas. Pada pertemuan 3, fokus analisis diarahkan pada peluang hidup bersama, peluang kematian pertama, peluang kematian kedua.
@@ -711,11 +827,19 @@ Setiap hasil numerik perlu ditafsirkan sebagai konsekuensi dari asumsi. Jika dia
 
 Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tiga hal: formula yang dipelajari, contoh kontrak yang cocok dengan formula tersebut, dan satu pertanyaan kritis tentang asumsi. Kebiasaan ini membantu mahasiswa bergerak dari hafalan ke pemahaman. Jika setiap pertemuan menghasilkan satu jurnal reflektif yang baik, pada akhir semester mahasiswa sudah memiliki peta konsep personal yang kuat untuk menyusun proyek akhir.
 
-
 ---
 
-
 ## Pertemuan 4: Aplikasi Multiple Life pada Asuransi Pasangan dan Keluarga
+
+<!-- BEGIN AI-INLINE:f33e714cf763 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Pertemuan 4: Aplikasi Multiple Life pada Asuransi Pasangan dan Keluarga</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses belajar Matematika Aktuaria 2 Pertemuan 4: Aplikasi Multiple Life pada Asuransi Pasangan dan Keluarga secara terkontrol. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="callout">
 **Capaian Bab (SubCPMK1).** Setelah mempelajari bab ini, mahasiswa diharapkan mampu menghubungkan konsep teoritis, formulasi matematis, dan implementasi komputasi untuk topik-topik berikut:
@@ -729,11 +853,19 @@ Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tig
 
 ### Konsep Inti
 
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali simbol, indeks umur, periode proyeksi, status hidup, status meninggal, dan hubungan antar variabel acak. Lapis kedua adalah lapis probabilitas, yaitu kemampuan mengubah cerita kontrak asuransi menjadi peluang, fungsi distribusi, atau nilai harapan. Lapis ketiga adalah lapis aktuaria terapan, yaitu kemampuan menerjemahkan hasil probabilitas ke dalam nilai kini manfaat, premi, cadangan, atau rekomendasi desain produk. Ketiga lapis ini tidak berdiri sendiri. Kesalahan kecil pada lapis notasi dapat menjalar menjadi kesalahan besar pada lapis premi dan cadangan.
 
 Pendekatan yang digunakan adalah kombinasi antara penurunan matematis dan pemodelan komputasi. Penurunan matematis melatih mahasiswa memahami struktur formula secara konseptual. Pemodelan komputasi melatih mahasiswa memeriksa formula melalui simulasi, membangun fungsi, dan melakukan analisis sensitivitas. Dalam praktik aktuaria modern, keduanya harus berjalan bersama. Komputasi tanpa teori mudah menghasilkan angka yang tampak meyakinkan tetapi salah konteks. Teori tanpa komputasi sulit digunakan untuk mengevaluasi portofolio yang besar, asumsi yang berlapis, dan skenario risiko yang berubah.
-
 
 Pada pertemuan ini, titik tekan pembelajaran adalah **aplikasi multiple life pada asuransi pasangan dan keluarga**. Topik ini mencakup narasi kontrak, pemilihan status yang tepat, nilai harapan manfaat, komunikasi hasil, analisis sensitivitas. Dalam literatur aktuaria klasik, nilai kini manfaat asuransi dan anuitas selalu dibangun dari tiga komponen utama: fungsi survival, fungsi diskonto, dan struktur manfaat [@Dickson2013; @Bowers1997]. Ketika kontrak melibatkan dua kehidupan atau lebih, komponen survival tidak lagi cukup dibaca dari satu orang saja. Status kontrak harus didefinisikan dengan jelas: apakah manfaat bergantung pada keduanya masih hidup, salah satu masih hidup, kematian pertama, kematian kedua, atau kematian individu tertentu.
 
@@ -744,7 +876,6 @@ Dalam implementasi komputasi, topik narasi kontrak, pemilihan status yang tepat,
 ### Notasi dan Formulasi Dasar
 
 Sebelum melakukan perhitungan, tetapkan notasi secara konsisten. Gunakan $x$ dan $y$ untuk umur dua individu pada waktu kontrak dimulai. Gunakan $T_x$ dan $T_y$ untuk *future lifetime* kontinu, serta $K_x$ dan $K_y$ untuk *curtate future lifetime*. Nilai $i$ menyatakan tingkat bunga efektif tahunan, sedangkan $v=(1+i)^{-1}$ menyatakan faktor diskonto satu tahun. Dalam banyak contoh awal, asumsi independensi digunakan agar struktur formula mudah dipahami. Setelah itu, mahasiswa dapat memperluas model melalui dependensi, skenario stres, atau faktor risiko bersama.
-
 
 ::: {.mathbox}
 Untuk dua individu berumur $x$ dan $y$ dengan future lifetimes $T_x$ dan $T_y$, status joint-life bertahan sampai waktu $t$ jika keduanya masih hidup:
@@ -757,7 +888,6 @@ $$
 $$
 :::
 
-
 ::: {.mathbox}
 Nilai kini aktuaria asuransi diskrit yang membayar 1 pada akhir tahun kematian pertama status joint-life dapat ditulis
 $$
@@ -766,10 +896,19 @@ $$
 di mana $q_{xy+k}=1-p_{x+k}p_{y+k}$ untuk asumsi independen tahunan.
 :::
 
-
 Formula di atas harus dipahami sebagai representasi dari cerita kontrak. Pada laporan akademik, mahasiswa sebaiknya tidak hanya menuliskan rumus, tetapi juga menjelaskan arti setiap simbol. Penjelasan simbol membuat pembaca memahami apakah peluang yang dihitung adalah peluang hidup bersama, peluang minimal satu hidup, peluang kematian pertama, atau peluang kematian terakhir. Di dunia aktuaria, satu garis notasi yang ambigu bisa berubah menjadi satu halaman klarifikasi; lebih baik jelas sejak awal daripada rapat produk menjadi sidang tebak-tebakan.
 
 ### Contoh Konseptual dan Interpretasi
+
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Contoh Konseptual dan Interpretasi</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="examplebox">
 **Contoh.** Misalkan terdapat pasangan berumur 45 dan 43 tahun yang hendak membeli produk asuransi keluarga. Produk pertama membayar manfaat ketika kematian pertama terjadi, sedangkan produk kedua membayar manfaat ketika kematian kedua terjadi. Walaupun kedua produk menggunakan dua orang yang sama, status aktuaria produk berbeda. Produk pertama berhubungan erat dengan status *joint-life* karena status berhenti pada kematian pertama. Produk kedua berhubungan dengan status *last-survivor* karena pembayaran menunggu sampai keduanya meninggal.
@@ -781,8 +920,17 @@ Interpretasi hasil harus selalu dikaitkan dengan pertanyaan bisnis. Jika nilai k
 
 ### Implementasi R
 
-Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi R</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
 
+
+Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
 
 ```{r two-life-probability-example-4, message=FALSE, warning=FALSE, eval=FALSE}
 x <- 45; y <- 43
@@ -804,10 +952,19 @@ ggplot(prob, aes(x = t)) +
   theme_minimal()
 ```
 
-
 Setelah menjalankan kode, mahasiswa perlu membaca output secara substantif. Untuk grafik probabilitas dua kehidupan, kurva *joint-life* biasanya berada di bawah kurva *last-survivor* karena peluang keduanya hidup sampai waktu tertentu lebih kecil daripada peluang minimal satu masih hidup. Untuk tabel *multiple decrement*, jumlah decrement per penyebab harus konsisten dengan total keluar dari kelompok risiko. Untuk premi dan cadangan, nilai cadangan pada awal kontrak biasanya mendekati nol dalam model premi bersih, lalu berubah mengikuti waktu, probabilitas klaim, dan sisa kewajiban.
 
 ### Studi Kasus Mini
+
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 **Skenario.** Sebuah perusahaan asuransi sedang mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga menjelang pensiun. Tim aktuaria diminta menghitung nilai manfaat, menguji sensitivitas terhadap suku bunga, serta menjelaskan risiko asumsi mortalitas. Pada pertemuan 4, fokus analisis diarahkan pada narasi kontrak, pemilihan status yang tepat, nilai harapan manfaat.
@@ -853,9 +1010,7 @@ Dalam konteks S2 Statistika Terapan, mahasiswa diharapkan tidak berhenti pada ha
 
 Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tiga hal: formula yang dipelajari, contoh kontrak yang cocok dengan formula tersebut, dan satu pertanyaan kritis tentang asumsi. Kebiasaan ini membantu mahasiswa bergerak dari hafalan ke pemahaman. Jika setiap pertemuan menghasilkan satu jurnal reflektif yang baik, pada akhir semester mahasiswa sudah memiliki peta konsep personal yang kuat untuk menyusun proyek akhir.
 
-
 ---
-
 
 ## Pertemuan 5: Produk Asuransi Dua Kehidupan
 
@@ -871,11 +1026,19 @@ Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tig
 
 ### Konsep Inti
 
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali simbol, indeks umur, periode proyeksi, status hidup, status meninggal, dan hubungan antar variabel acak. Lapis kedua adalah lapis probabilitas, yaitu kemampuan mengubah cerita kontrak asuransi menjadi peluang, fungsi distribusi, atau nilai harapan. Lapis ketiga adalah lapis aktuaria terapan, yaitu kemampuan menerjemahkan hasil probabilitas ke dalam nilai kini manfaat, premi, cadangan, atau rekomendasi desain produk. Ketiga lapis ini tidak berdiri sendiri. Kesalahan kecil pada lapis notasi dapat menjalar menjadi kesalahan besar pada lapis premi dan cadangan.
 
 Pendekatan yang digunakan adalah kombinasi antara penurunan matematis dan pemodelan komputasi. Penurunan matematis melatih mahasiswa memahami struktur formula secara konseptual. Pemodelan komputasi melatih mahasiswa memeriksa formula melalui simulasi, membangun fungsi, dan melakukan analisis sensitivitas. Dalam praktik aktuaria modern, keduanya harus berjalan bersama. Komputasi tanpa teori mudah menghasilkan angka yang tampak meyakinkan tetapi salah konteks. Teori tanpa komputasi sulit digunakan untuk mengevaluasi portofolio yang besar, asumsi yang berlapis, dan skenario risiko yang berubah.
-
 
 Pada pertemuan ini, titik tekan pembelajaran adalah **produk asuransi dua kehidupan**. Topik ini mencakup joint-life insurance, last-survivor insurance, term insurance, whole life insurance, pengaruh umur pasangan. Dalam literatur aktuaria klasik, nilai kini manfaat asuransi dan anuitas selalu dibangun dari tiga komponen utama: fungsi survival, fungsi diskonto, dan struktur manfaat [@Dickson2013; @Bowers1997]. Ketika kontrak melibatkan dua kehidupan atau lebih, komponen survival tidak lagi cukup dibaca dari satu orang saja. Status kontrak harus didefinisikan dengan jelas: apakah manfaat bergantung pada keduanya masih hidup, salah satu masih hidup, kematian pertama, kematian kedua, atau kematian individu tertentu.
 
@@ -887,7 +1050,6 @@ Dalam implementasi komputasi, topik joint-life insurance, last-survivor insuranc
 
 Sebelum melakukan perhitungan, tetapkan notasi secara konsisten. Gunakan $x$ dan $y$ untuk umur dua individu pada waktu kontrak dimulai. Gunakan $T_x$ dan $T_y$ untuk *future lifetime* kontinu, serta $K_x$ dan $K_y$ untuk *curtate future lifetime*. Nilai $i$ menyatakan tingkat bunga efektif tahunan, sedangkan $v=(1+i)^{-1}$ menyatakan faktor diskonto satu tahun. Dalam banyak contoh awal, asumsi independensi digunakan agar struktur formula mudah dipahami. Setelah itu, mahasiswa dapat memperluas model melalui dependensi, skenario stres, atau faktor risiko bersama.
 
-
 ::: {.mathbox}
 Nilai kini aktuaria asuransi diskrit yang membayar 1 pada akhir tahun kematian pertama status joint-life dapat ditulis
 $$
@@ -895,7 +1057,6 @@ A_{xy}=\sum_{k=0}^{\omega} v^{k+1}\,{}_kp_{xy}\,q_{xy+k},
 $$
 di mana $q_{xy+k}=1-p_{x+k}p_{y+k}$ untuk asumsi independen tahunan.
 :::
-
 
 ::: {.mathbox}
 Untuk dua individu berumur $x$ dan $y$ dengan future lifetimes $T_x$ dan $T_y$, status joint-life bertahan sampai waktu $t$ jika keduanya masih hidup:
@@ -908,7 +1069,6 @@ $$
 $$
 :::
 
-
 ::: {.mathbox}
 Status last survivor bertahan sampai waktu $t$ jika minimal satu dari dua individu masih hidup:
 $$
@@ -920,10 +1080,19 @@ $$
 $$
 :::
 
-
 Formula di atas harus dipahami sebagai representasi dari cerita kontrak. Pada laporan akademik, mahasiswa sebaiknya tidak hanya menuliskan rumus, tetapi juga menjelaskan arti setiap simbol. Penjelasan simbol membuat pembaca memahami apakah peluang yang dihitung adalah peluang hidup bersama, peluang minimal satu hidup, peluang kematian pertama, atau peluang kematian terakhir. Di dunia aktuaria, satu garis notasi yang ambigu bisa berubah menjadi satu halaman klarifikasi; lebih baik jelas sejak awal daripada rapat produk menjadi sidang tebak-tebakan.
 
 ### Contoh Konseptual dan Interpretasi
+
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Contoh Konseptual dan Interpretasi</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="examplebox">
 **Contoh.** Misalkan terdapat pasangan berumur 45 dan 43 tahun yang hendak membeli produk asuransi keluarga. Produk pertama membayar manfaat ketika kematian pertama terjadi, sedangkan produk kedua membayar manfaat ketika kematian kedua terjadi. Walaupun kedua produk menggunakan dua orang yang sama, status aktuaria produk berbeda. Produk pertama berhubungan erat dengan status *joint-life* karena status berhenti pada kematian pertama. Produk kedua berhubungan dengan status *last-survivor* karena pembayaran menunggu sampai keduanya meninggal.
@@ -935,8 +1104,17 @@ Interpretasi hasil harus selalu dikaitkan dengan pertanyaan bisnis. Jika nilai k
 
 ### Implementasi R
 
-Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi R</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
 
+
+Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
 
 ```{r two-life-probability-example-5, message=FALSE, warning=FALSE, eval=FALSE}
 x <- 45; y <- 43
@@ -958,10 +1136,19 @@ ggplot(prob, aes(x = t)) +
   theme_minimal()
 ```
 
-
 Setelah menjalankan kode, mahasiswa perlu membaca output secara substantif. Untuk grafik probabilitas dua kehidupan, kurva *joint-life* biasanya berada di bawah kurva *last-survivor* karena peluang keduanya hidup sampai waktu tertentu lebih kecil daripada peluang minimal satu masih hidup. Untuk tabel *multiple decrement*, jumlah decrement per penyebab harus konsisten dengan total keluar dari kelompok risiko. Untuk premi dan cadangan, nilai cadangan pada awal kontrak biasanya mendekati nol dalam model premi bersih, lalu berubah mengikuti waktu, probabilitas klaim, dan sisa kewajiban.
 
 ### Studi Kasus Mini
+
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 **Skenario.** Sebuah perusahaan asuransi sedang mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga menjelang pensiun. Tim aktuaria diminta menghitung nilai manfaat, menguji sensitivitas terhadap suku bunga, serta menjelaskan risiko asumsi mortalitas. Pada pertemuan 5, fokus analisis diarahkan pada joint-life insurance, last-survivor insurance, term insurance.
@@ -1007,9 +1194,7 @@ Salah satu strategi belajar yang efektif adalah membuat tabel kecil secara manua
 
 Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tiga hal: formula yang dipelajari, contoh kontrak yang cocok dengan formula tersebut, dan satu pertanyaan kritis tentang asumsi. Kebiasaan ini membantu mahasiswa bergerak dari hafalan ke pemahaman. Jika setiap pertemuan menghasilkan satu jurnal reflektif yang baik, pada akhir semester mahasiswa sudah memiliki peta konsep personal yang kuat untuk menyusun proyek akhir.
 
-
 ---
-
 
 ## Pertemuan 6: Anuitas Dua Kehidupan dan Special Two-Life Annuities
 
@@ -1025,11 +1210,19 @@ Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tig
 
 ### Konsep Inti
 
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali simbol, indeks umur, periode proyeksi, status hidup, status meninggal, dan hubungan antar variabel acak. Lapis kedua adalah lapis probabilitas, yaitu kemampuan mengubah cerita kontrak asuransi menjadi peluang, fungsi distribusi, atau nilai harapan. Lapis ketiga adalah lapis aktuaria terapan, yaitu kemampuan menerjemahkan hasil probabilitas ke dalam nilai kini manfaat, premi, cadangan, atau rekomendasi desain produk. Ketiga lapis ini tidak berdiri sendiri. Kesalahan kecil pada lapis notasi dapat menjalar menjadi kesalahan besar pada lapis premi dan cadangan.
 
 Pendekatan yang digunakan adalah kombinasi antara penurunan matematis dan pemodelan komputasi. Penurunan matematis melatih mahasiswa memahami struktur formula secara konseptual. Pemodelan komputasi melatih mahasiswa memeriksa formula melalui simulasi, membangun fungsi, dan melakukan analisis sensitivitas. Dalam praktik aktuaria modern, keduanya harus berjalan bersama. Komputasi tanpa teori mudah menghasilkan angka yang tampak meyakinkan tetapi salah konteks. Teori tanpa komputasi sulit digunakan untuk mengevaluasi portofolio yang besar, asumsi yang berlapis, dan skenario risiko yang berubah.
-
 
 Pada pertemuan ini, titik tekan pembelajaran adalah **anuitas dua kehidupan dan special two-life annuities**. Topik ini mencakup annuity-due, immediate annuity, reversionary annuity, continuation benefit, pembayaran selama minimal satu hidup. Dalam literatur aktuaria klasik, nilai kini manfaat asuransi dan anuitas selalu dibangun dari tiga komponen utama: fungsi survival, fungsi diskonto, dan struktur manfaat [@Dickson2013; @Bowers1997]. Ketika kontrak melibatkan dua kehidupan atau lebih, komponen survival tidak lagi cukup dibaca dari satu orang saja. Status kontrak harus didefinisikan dengan jelas: apakah manfaat bergantung pada keduanya masih hidup, salah satu masih hidup, kematian pertama, kematian kedua, atau kematian individu tertentu.
 
@@ -1041,7 +1234,6 @@ Dalam implementasi komputasi, topik annuity-due, immediate annuity, reversionary
 
 Sebelum melakukan perhitungan, tetapkan notasi secara konsisten. Gunakan $x$ dan $y$ untuk umur dua individu pada waktu kontrak dimulai. Gunakan $T_x$ dan $T_y$ untuk *future lifetime* kontinu, serta $K_x$ dan $K_y$ untuk *curtate future lifetime*. Nilai $i$ menyatakan tingkat bunga efektif tahunan, sedangkan $v=(1+i)^{-1}$ menyatakan faktor diskonto satu tahun. Dalam banyak contoh awal, asumsi independensi digunakan agar struktur formula mudah dipahami. Setelah itu, mahasiswa dapat memperluas model melalui dependensi, skenario stres, atau faktor risiko bersama.
 
-
 ::: {.mathbox}
 Nilai kini aktuaria anuitas diskrit-due untuk status $s$ adalah
 $$
@@ -1049,7 +1241,6 @@ $$
 $$
 dengan $v=(1+i)^{-1}$. Untuk status joint-life, gunakan ${}_kp_{xy}$; untuk last-survivor, gunakan ${}_kp_{\overline{xy}}$.
 :::
-
 
 ::: {.mathbox}
 Status last survivor bertahan sampai waktu $t$ jika minimal satu dari dua individu masih hidup:
@@ -1062,7 +1253,6 @@ $$
 $$
 :::
 
-
 ::: {.mathbox}
 Untuk dua individu berumur $x$ dan $y$ dengan future lifetimes $T_x$ dan $T_y$, status joint-life bertahan sampai waktu $t$ jika keduanya masih hidup:
 $$
@@ -1074,10 +1264,19 @@ $$
 $$
 :::
 
-
 Formula di atas harus dipahami sebagai representasi dari cerita kontrak. Pada laporan akademik, mahasiswa sebaiknya tidak hanya menuliskan rumus, tetapi juga menjelaskan arti setiap simbol. Penjelasan simbol membuat pembaca memahami apakah peluang yang dihitung adalah peluang hidup bersama, peluang minimal satu hidup, peluang kematian pertama, atau peluang kematian terakhir. Di dunia aktuaria, satu garis notasi yang ambigu bisa berubah menjadi satu halaman klarifikasi; lebih baik jelas sejak awal daripada rapat produk menjadi sidang tebak-tebakan.
 
 ### Contoh Konseptual dan Interpretasi
+
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Contoh Konseptual dan Interpretasi</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="examplebox">
 **Contoh.** Misalkan terdapat pasangan berumur 45 dan 43 tahun yang hendak membeli produk asuransi keluarga. Produk pertama membayar manfaat ketika kematian pertama terjadi, sedangkan produk kedua membayar manfaat ketika kematian kedua terjadi. Walaupun kedua produk menggunakan dua orang yang sama, status aktuaria produk berbeda. Produk pertama berhubungan erat dengan status *joint-life* karena status berhenti pada kematian pertama. Produk kedua berhubungan dengan status *last-survivor* karena pembayaran menunggu sampai keduanya meninggal.
@@ -1089,8 +1288,17 @@ Interpretasi hasil harus selalu dikaitkan dengan pertanyaan bisnis. Jika nilai k
 
 ### Implementasi R
 
-Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi R</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
 
+
+Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
 
 ```{r annuity-two-life-example, message=FALSE, warning=FALSE, eval=FALSE}
 x <- 60; y <- 57; i <- 0.045; n <- 30
@@ -1108,10 +1316,19 @@ hasil <- data.frame(
 hasil
 ```
 
-
 Setelah menjalankan kode, mahasiswa perlu membaca output secara substantif. Untuk grafik probabilitas dua kehidupan, kurva *joint-life* biasanya berada di bawah kurva *last-survivor* karena peluang keduanya hidup sampai waktu tertentu lebih kecil daripada peluang minimal satu masih hidup. Untuk tabel *multiple decrement*, jumlah decrement per penyebab harus konsisten dengan total keluar dari kelompok risiko. Untuk premi dan cadangan, nilai cadangan pada awal kontrak biasanya mendekati nol dalam model premi bersih, lalu berubah mengikuti waktu, probabilitas klaim, dan sisa kewajiban.
 
 ### Studi Kasus Mini
+
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 **Skenario.** Sebuah perusahaan asuransi sedang mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga menjelang pensiun. Tim aktuaria diminta menghitung nilai manfaat, menguji sensitivitas terhadap suku bunga, serta menjelaskan risiko asumsi mortalitas. Pada pertemuan 6, fokus analisis diarahkan pada annuity-due, immediate annuity, reversionary annuity.
@@ -1157,9 +1374,7 @@ Dalam diskusi kelas, mahasiswa dapat membandingkan hasil antar kelompok dengan p
 
 Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tiga hal: formula yang dipelajari, contoh kontrak yang cocok dengan formula tersebut, dan satu pertanyaan kritis tentang asumsi. Kebiasaan ini membantu mahasiswa bergerak dari hafalan ke pemahaman. Jika setiap pertemuan menghasilkan satu jurnal reflektif yang baik, pada akhir semester mahasiswa sudah memiliki peta konsep personal yang kuat untuk menyusun proyek akhir.
 
-
 ---
-
 
 ## Pertemuan 7: Simple Contingent Function dan Asumsi Mortalitas Khusus
 
@@ -1175,11 +1390,19 @@ Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tig
 
 ### Konsep Inti
 
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali simbol, indeks umur, periode proyeksi, status hidup, status meninggal, dan hubungan antar variabel acak. Lapis kedua adalah lapis probabilitas, yaitu kemampuan mengubah cerita kontrak asuransi menjadi peluang, fungsi distribusi, atau nilai harapan. Lapis ketiga adalah lapis aktuaria terapan, yaitu kemampuan menerjemahkan hasil probabilitas ke dalam nilai kini manfaat, premi, cadangan, atau rekomendasi desain produk. Ketiga lapis ini tidak berdiri sendiri. Kesalahan kecil pada lapis notasi dapat menjalar menjadi kesalahan besar pada lapis premi dan cadangan.
 
 Pendekatan yang digunakan adalah kombinasi antara penurunan matematis dan pemodelan komputasi. Penurunan matematis melatih mahasiswa memahami struktur formula secara konseptual. Pemodelan komputasi melatih mahasiswa memeriksa formula melalui simulasi, membangun fungsi, dan melakukan analisis sensitivitas. Dalam praktik aktuaria modern, keduanya harus berjalan bersama. Komputasi tanpa teori mudah menghasilkan angka yang tampak meyakinkan tetapi salah konteks. Teori tanpa komputasi sulit digunakan untuk mengevaluasi portofolio yang besar, asumsi yang berlapis, dan skenario risiko yang berubah.
-
 
 Pada pertemuan ini, titik tekan pembelajaran adalah **simple contingent function dan asumsi mortalitas khusus**. Topik ini mencakup contingent benefit, pembayaran pada kematian tertentu, common shock, dependent lifetimes, evaluasi asumsi. Dalam literatur aktuaria klasik, nilai kini manfaat asuransi dan anuitas selalu dibangun dari tiga komponen utama: fungsi survival, fungsi diskonto, dan struktur manfaat [@Dickson2013; @Bowers1997]. Ketika kontrak melibatkan dua kehidupan atau lebih, komponen survival tidak lagi cukup dibaca dari satu orang saja. Status kontrak harus didefinisikan dengan jelas: apakah manfaat bergantung pada keduanya masih hidup, salah satu masih hidup, kematian pertama, kematian kedua, atau kematian individu tertentu.
 
@@ -1191,7 +1414,6 @@ Dalam implementasi komputasi, topik contingent benefit, pembayaran pada kematian
 
 Sebelum melakukan perhitungan, tetapkan notasi secara konsisten. Gunakan $x$ dan $y$ untuk umur dua individu pada waktu kontrak dimulai. Gunakan $T_x$ dan $T_y$ untuk *future lifetime* kontinu, serta $K_x$ dan $K_y$ untuk *curtate future lifetime*. Nilai $i$ menyatakan tingkat bunga efektif tahunan, sedangkan $v=(1+i)^{-1}$ menyatakan faktor diskonto satu tahun. Dalam banyak contoh awal, asumsi independensi digunakan agar struktur formula mudah dipahami. Setelah itu, mahasiswa dapat memperluas model melalui dependensi, skenario stres, atau faktor risiko bersama.
 
-
 ::: {.mathbox}
 Nilai kini aktuaria asuransi diskrit yang membayar 1 pada akhir tahun kematian pertama status joint-life dapat ditulis
 $$
@@ -1199,7 +1421,6 @@ A_{xy}=\sum_{k=0}^{\omega} v^{k+1}\,{}_kp_{xy}\,q_{xy+k},
 $$
 di mana $q_{xy+k}=1-p_{x+k}p_{y+k}$ untuk asumsi independen tahunan.
 :::
-
 
 ::: {.mathbox}
 Untuk dua individu berumur $x$ dan $y$ dengan future lifetimes $T_x$ dan $T_y$, status joint-life bertahan sampai waktu $t$ jika keduanya masih hidup:
@@ -1212,7 +1433,6 @@ $$
 $$
 :::
 
-
 ::: {.mathbox}
 Status last survivor bertahan sampai waktu $t$ jika minimal satu dari dua individu masih hidup:
 $$
@@ -1224,10 +1444,19 @@ $$
 $$
 :::
 
-
 Formula di atas harus dipahami sebagai representasi dari cerita kontrak. Pada laporan akademik, mahasiswa sebaiknya tidak hanya menuliskan rumus, tetapi juga menjelaskan arti setiap simbol. Penjelasan simbol membuat pembaca memahami apakah peluang yang dihitung adalah peluang hidup bersama, peluang minimal satu hidup, peluang kematian pertama, atau peluang kematian terakhir. Di dunia aktuaria, satu garis notasi yang ambigu bisa berubah menjadi satu halaman klarifikasi; lebih baik jelas sejak awal daripada rapat produk menjadi sidang tebak-tebakan.
 
 ### Contoh Konseptual dan Interpretasi
+
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Contoh Konseptual dan Interpretasi</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="examplebox">
 **Contoh.** Misalkan terdapat pasangan berumur 45 dan 43 tahun yang hendak membeli produk asuransi keluarga. Produk pertama membayar manfaat ketika kematian pertama terjadi, sedangkan produk kedua membayar manfaat ketika kematian kedua terjadi. Walaupun kedua produk menggunakan dua orang yang sama, status aktuaria produk berbeda. Produk pertama berhubungan erat dengan status *joint-life* karena status berhenti pada kematian pertama. Produk kedua berhubungan dengan status *last-survivor* karena pembayaran menunggu sampai keduanya meninggal.
@@ -1239,8 +1468,17 @@ Interpretasi hasil harus selalu dikaitkan dengan pertanyaan bisnis. Jika nilai k
 
 ### Implementasi R
 
-Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi R</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
 
+
+Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
 
 ```{r two-life-probability-example-6, message=FALSE, warning=FALSE, eval=FALSE}
 x <- 45; y <- 43
@@ -1262,10 +1500,19 @@ ggplot(prob, aes(x = t)) +
   theme_minimal()
 ```
 
-
 Setelah menjalankan kode, mahasiswa perlu membaca output secara substantif. Untuk grafik probabilitas dua kehidupan, kurva *joint-life* biasanya berada di bawah kurva *last-survivor* karena peluang keduanya hidup sampai waktu tertentu lebih kecil daripada peluang minimal satu masih hidup. Untuk tabel *multiple decrement*, jumlah decrement per penyebab harus konsisten dengan total keluar dari kelompok risiko. Untuk premi dan cadangan, nilai cadangan pada awal kontrak biasanya mendekati nol dalam model premi bersih, lalu berubah mengikuti waktu, probabilitas klaim, dan sisa kewajiban.
 
 ### Studi Kasus Mini
+
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 **Skenario.** Sebuah perusahaan asuransi sedang mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga menjelang pensiun. Tim aktuaria diminta menghitung nilai manfaat, menguji sensitivitas terhadap suku bunga, serta menjelaskan risiko asumsi mortalitas. Pada pertemuan 7, fokus analisis diarahkan pada contingent benefit, pembayaran pada kematian tertentu, common shock.
@@ -1311,11 +1558,19 @@ Penilaian aktuaria yang baik selalu memperhatikan dimensi komunikasi. Hasil perh
 
 Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tiga hal: formula yang dipelajari, contoh kontrak yang cocok dengan formula tersebut, dan satu pertanyaan kritis tentang asumsi. Kebiasaan ini membantu mahasiswa bergerak dari hafalan ke pemahaman. Jika setiap pertemuan menghasilkan satu jurnal reflektif yang baik, pada akhir semester mahasiswa sudah memiliki peta konsep personal yang kuat untuk menyusun proyek akhir.
 
-
 ---
 
-
 ## Pertemuan 8: UTS: Evaluasi Produk dan Presentasi Proyek Pendahuluan
+
+<!-- BEGIN AI-INLINE:a7bdcb7d8e7a -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Pertemuan 8: UTS: Evaluasi Produk dan Presentasi Proyek Pendahuluan</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses belajar Matematika Aktuaria 2 Pertemuan 8: UTS: Evaluasi Produk dan Presentasi Proyek Pendahuluan secara terkontrol. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="callout">
 **Capaian Bab (SubCPMK2).** Setelah mempelajari bab ini, mahasiswa diharapkan mampu menghubungkan konsep teoritis, formulasi matematis, dan implementasi komputasi untuk topik-topik berikut:
@@ -1329,11 +1584,19 @@ Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tig
 
 ### Konsep Inti
 
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali simbol, indeks umur, periode proyeksi, status hidup, status meninggal, dan hubungan antar variabel acak. Lapis kedua adalah lapis probabilitas, yaitu kemampuan mengubah cerita kontrak asuransi menjadi peluang, fungsi distribusi, atau nilai harapan. Lapis ketiga adalah lapis aktuaria terapan, yaitu kemampuan menerjemahkan hasil probabilitas ke dalam nilai kini manfaat, premi, cadangan, atau rekomendasi desain produk. Ketiga lapis ini tidak berdiri sendiri. Kesalahan kecil pada lapis notasi dapat menjalar menjadi kesalahan besar pada lapis premi dan cadangan.
 
 Pendekatan yang digunakan adalah kombinasi antara penurunan matematis dan pemodelan komputasi. Penurunan matematis melatih mahasiswa memahami struktur formula secara konseptual. Pemodelan komputasi melatih mahasiswa memeriksa formula melalui simulasi, membangun fungsi, dan melakukan analisis sensitivitas. Dalam praktik aktuaria modern, keduanya harus berjalan bersama. Komputasi tanpa teori mudah menghasilkan angka yang tampak meyakinkan tetapi salah konteks. Teori tanpa komputasi sulit digunakan untuk mengevaluasi portofolio yang besar, asumsi yang berlapis, dan skenario risiko yang berubah.
-
 
 Pada pertemuan ini, titik tekan pembelajaran adalah **uts: evaluasi produk dan presentasi proyek pendahuluan**. Topik ini mencakup desain proyek, rubrik evaluasi, validasi asumsi, pelaporan, presentasi aktuaria. Dalam literatur aktuaria klasik, nilai kini manfaat asuransi dan anuitas selalu dibangun dari tiga komponen utama: fungsi survival, fungsi diskonto, dan struktur manfaat [@Dickson2013; @Bowers1997]. Ketika kontrak melibatkan dua kehidupan atau lebih, komponen survival tidak lagi cukup dibaca dari satu orang saja. Status kontrak harus didefinisikan dengan jelas: apakah manfaat bergantung pada keduanya masih hidup, salah satu masih hidup, kematian pertama, kematian kedua, atau kematian individu tertentu.
 
@@ -1345,7 +1608,6 @@ Dalam implementasi komputasi, topik desain proyek, rubrik evaluasi, validasi asu
 
 Sebelum melakukan perhitungan, tetapkan notasi secara konsisten. Gunakan $x$ dan $y$ untuk umur dua individu pada waktu kontrak dimulai. Gunakan $T_x$ dan $T_y$ untuk *future lifetime* kontinu, serta $K_x$ dan $K_y$ untuk *curtate future lifetime*. Nilai $i$ menyatakan tingkat bunga efektif tahunan, sedangkan $v=(1+i)^{-1}$ menyatakan faktor diskonto satu tahun. Dalam banyak contoh awal, asumsi independensi digunakan agar struktur formula mudah dipahami. Setelah itu, mahasiswa dapat memperluas model melalui dependensi, skenario stres, atau faktor risiko bersama.
 
-
 ::: {.mathbox}
 Nilai kini aktuaria anuitas diskrit-due untuk status $s$ adalah
 $$
@@ -1353,7 +1615,6 @@ $$
 $$
 dengan $v=(1+i)^{-1}$. Untuk status joint-life, gunakan ${}_kp_{xy}$; untuk last-survivor, gunakan ${}_kp_{\overline{xy}}$.
 :::
-
 
 ::: {.mathbox}
 Nilai kini aktuaria asuransi diskrit yang membayar 1 pada akhir tahun kematian pertama status joint-life dapat ditulis
@@ -1363,10 +1624,19 @@ $$
 di mana $q_{xy+k}=1-p_{x+k}p_{y+k}$ untuk asumsi independen tahunan.
 :::
 
-
 Formula di atas harus dipahami sebagai representasi dari cerita kontrak. Pada laporan akademik, mahasiswa sebaiknya tidak hanya menuliskan rumus, tetapi juga menjelaskan arti setiap simbol. Penjelasan simbol membuat pembaca memahami apakah peluang yang dihitung adalah peluang hidup bersama, peluang minimal satu hidup, peluang kematian pertama, atau peluang kematian terakhir. Di dunia aktuaria, satu garis notasi yang ambigu bisa berubah menjadi satu halaman klarifikasi; lebih baik jelas sejak awal daripada rapat produk menjadi sidang tebak-tebakan.
 
 ### Contoh Konseptual dan Interpretasi
+
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Contoh Konseptual dan Interpretasi</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="examplebox">
 **Contoh.** Misalkan terdapat pasangan berumur 45 dan 43 tahun yang hendak membeli produk asuransi keluarga. Produk pertama membayar manfaat ketika kematian pertama terjadi, sedangkan produk kedua membayar manfaat ketika kematian kedua terjadi. Walaupun kedua produk menggunakan dua orang yang sama, status aktuaria produk berbeda. Produk pertama berhubungan erat dengan status *joint-life* karena status berhenti pada kematian pertama. Produk kedua berhubungan dengan status *last-survivor* karena pembayaran menunggu sampai keduanya meninggal.
@@ -1378,8 +1648,17 @@ Interpretasi hasil harus selalu dikaitkan dengan pertanyaan bisnis. Jika nilai k
 
 ### Implementasi R
 
-Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi R</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
 
+
+Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
 
 ```{r annuity-two-life-example-2, message=FALSE, warning=FALSE, eval=FALSE}
 x <- 60; y <- 57; i <- 0.045; n <- 30
@@ -1397,10 +1676,19 @@ hasil <- data.frame(
 hasil
 ```
 
-
 Setelah menjalankan kode, mahasiswa perlu membaca output secara substantif. Untuk grafik probabilitas dua kehidupan, kurva *joint-life* biasanya berada di bawah kurva *last-survivor* karena peluang keduanya hidup sampai waktu tertentu lebih kecil daripada peluang minimal satu masih hidup. Untuk tabel *multiple decrement*, jumlah decrement per penyebab harus konsisten dengan total keluar dari kelompok risiko. Untuk premi dan cadangan, nilai cadangan pada awal kontrak biasanya mendekati nol dalam model premi bersih, lalu berubah mengikuti waktu, probabilitas klaim, dan sisa kewajiban.
 
 ### Studi Kasus Mini
+
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 **Skenario.** Sebuah perusahaan asuransi sedang mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga menjelang pensiun. Tim aktuaria diminta menghitung nilai manfaat, menguji sensitivitas terhadap suku bunga, serta menjelaskan risiko asumsi mortalitas. Pada pertemuan 8, fokus analisis diarahkan pada desain proyek, rubrik evaluasi, validasi asumsi.
@@ -1446,9 +1734,7 @@ Model sederhana dalam bab ini harus dipahami sebagai titik awal. Dalam praktik, 
 
 Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tiga hal: formula yang dipelajari, contoh kontrak yang cocok dengan formula tersebut, dan satu pertanyaan kritis tentang asumsi. Kebiasaan ini membantu mahasiswa bergerak dari hafalan ke pemahaman. Jika setiap pertemuan menghasilkan satu jurnal reflektif yang baik, pada akhir semester mahasiswa sudah memiliki peta konsep personal yang kuat untuk menyusun proyek akhir.
 
-
 ---
-
 
 ## Pertemuan 9: Multiple Decrement Theory
 
@@ -1464,11 +1750,19 @@ Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tig
 
 ### Konsep Inti
 
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali simbol, indeks umur, periode proyeksi, status hidup, status meninggal, dan hubungan antar variabel acak. Lapis kedua adalah lapis probabilitas, yaitu kemampuan mengubah cerita kontrak asuransi menjadi peluang, fungsi distribusi, atau nilai harapan. Lapis ketiga adalah lapis aktuaria terapan, yaitu kemampuan menerjemahkan hasil probabilitas ke dalam nilai kini manfaat, premi, cadangan, atau rekomendasi desain produk. Ketiga lapis ini tidak berdiri sendiri. Kesalahan kecil pada lapis notasi dapat menjalar menjadi kesalahan besar pada lapis premi dan cadangan.
 
 Pendekatan yang digunakan adalah kombinasi antara penurunan matematis dan pemodelan komputasi. Penurunan matematis melatih mahasiswa memahami struktur formula secara konseptual. Pemodelan komputasi melatih mahasiswa memeriksa formula melalui simulasi, membangun fungsi, dan melakukan analisis sensitivitas. Dalam praktik aktuaria modern, keduanya harus berjalan bersama. Komputasi tanpa teori mudah menghasilkan angka yang tampak meyakinkan tetapi salah konteks. Teori tanpa komputasi sulit digunakan untuk mengevaluasi portofolio yang besar, asumsi yang berlapis, dan skenario risiko yang berubah.
-
 
 Pada pertemuan ini, titik tekan pembelajaran adalah **multiple decrement theory**. Topik ini mencakup dua variabel acak, time to decrement, cause of decrement, survivorship group, total decrement. Dalam literatur aktuaria klasik, nilai kini manfaat asuransi dan anuitas selalu dibangun dari tiga komponen utama: fungsi survival, fungsi diskonto, dan struktur manfaat [@Bowers1997; @Benjamin2012; @Gerber1997]. Ketika kontrak melibatkan dua kehidupan atau lebih, komponen survival tidak lagi cukup dibaca dari satu orang saja. Status kontrak harus didefinisikan dengan jelas: apakah manfaat bergantung pada keduanya masih hidup, salah satu masih hidup, kematian pertama, kematian kedua, atau kematian individu tertentu.
 
@@ -1479,7 +1773,6 @@ Dalam implementasi komputasi, topik dua variabel acak, time to decrement, cause 
 ### Notasi dan Formulasi Dasar
 
 Sebelum melakukan perhitungan, tetapkan notasi secara konsisten. Gunakan $x$ dan $y$ untuk umur dua individu pada waktu kontrak dimulai. Gunakan $T_x$ dan $T_y$ untuk *future lifetime* kontinu, serta $K_x$ dan $K_y$ untuk *curtate future lifetime*. Nilai $i$ menyatakan tingkat bunga efektif tahunan, sedangkan $v=(1+i)^{-1}$ menyatakan faktor diskonto satu tahun. Dalam banyak contoh awal, asumsi independensi digunakan agar struktur formula mudah dipahami. Setelah itu, mahasiswa dapat memperluas model melalui dependensi, skenario stres, atau faktor risiko bersama.
-
 
 ::: {.mathbox}
 Pada model multiple decrement, peluang keluar karena penyebab $j$ selama interval $[x,x+1)$ ditulis
@@ -1492,10 +1785,19 @@ q_x^{(\tau)}=\sum_j q_x^{(j)},\qquad p_x^{(\tau)}=1-q_x^{(\tau)}.
 $$
 :::
 
-
 Formula di atas harus dipahami sebagai representasi dari cerita kontrak. Pada laporan akademik, mahasiswa sebaiknya tidak hanya menuliskan rumus, tetapi juga menjelaskan arti setiap simbol. Penjelasan simbol membuat pembaca memahami apakah peluang yang dihitung adalah peluang hidup bersama, peluang minimal satu hidup, peluang kematian pertama, atau peluang kematian terakhir. Di dunia aktuaria, satu garis notasi yang ambigu bisa berubah menjadi satu halaman klarifikasi; lebih baik jelas sejak awal daripada rapat produk menjadi sidang tebak-tebakan.
 
 ### Contoh Konseptual dan Interpretasi
+
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Contoh Konseptual dan Interpretasi</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="examplebox">
 **Contoh.** Misalkan terdapat pasangan berumur 45 dan 43 tahun yang hendak membeli produk asuransi keluarga. Produk pertama membayar manfaat ketika kematian pertama terjadi, sedangkan produk kedua membayar manfaat ketika kematian kedua terjadi. Walaupun kedua produk menggunakan dua orang yang sama, status aktuaria produk berbeda. Produk pertama berhubungan erat dengan status *joint-life* karena status berhenti pada kematian pertama. Produk kedua berhubungan dengan status *last-survivor* karena pembayaran menunggu sampai keduanya meninggal.
@@ -1507,8 +1809,17 @@ Interpretasi hasil harus selalu dikaitkan dengan pertanyaan bisnis. Jika nilai k
 
 ### Implementasi R
 
-Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi R</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
 
+
+Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
 
 ```{r md-table-example, message=FALSE, warning=FALSE, eval=FALSE}
 ages <- 50:60
@@ -1536,10 +1847,19 @@ md$d_withdrawal <- round(md$lx * md$q_withdrawal, 2)
 md
 ```
 
-
 Setelah menjalankan kode, mahasiswa perlu membaca output secara substantif. Untuk grafik probabilitas dua kehidupan, kurva *joint-life* biasanya berada di bawah kurva *last-survivor* karena peluang keduanya hidup sampai waktu tertentu lebih kecil daripada peluang minimal satu masih hidup. Untuk tabel *multiple decrement*, jumlah decrement per penyebab harus konsisten dengan total keluar dari kelompok risiko. Untuk premi dan cadangan, nilai cadangan pada awal kontrak biasanya mendekati nol dalam model premi bersih, lalu berubah mengikuti waktu, probabilitas klaim, dan sisa kewajiban.
 
 ### Studi Kasus Mini
+
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 **Skenario.** Sebuah perusahaan asuransi sedang mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga menjelang pensiun. Tim aktuaria diminta menghitung nilai manfaat, menguji sensitivitas terhadap suku bunga, serta menjelaskan risiko asumsi mortalitas. Pada pertemuan 9, fokus analisis diarahkan pada dua variabel acak, time to decrement, cause of decrement.
@@ -1585,9 +1905,7 @@ Kualitas implementasi komputasi dapat diperiksa melalui tiga cara. Pertama, band
 
 Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tiga hal: formula yang dipelajari, contoh kontrak yang cocok dengan formula tersebut, dan satu pertanyaan kritis tentang asumsi. Kebiasaan ini membantu mahasiswa bergerak dari hafalan ke pemahaman. Jika setiap pertemuan menghasilkan satu jurnal reflektif yang baik, pada akhir semester mahasiswa sudah memiliki peta konsep personal yang kuat untuk menyusun proyek akhir.
 
-
 ---
-
 
 ## Pertemuan 10: Associated Single Decrement Table dan Relasi Dasar
 
@@ -1603,11 +1921,19 @@ Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tig
 
 ### Konsep Inti
 
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali simbol, indeks umur, periode proyeksi, status hidup, status meninggal, dan hubungan antar variabel acak. Lapis kedua adalah lapis probabilitas, yaitu kemampuan mengubah cerita kontrak asuransi menjadi peluang, fungsi distribusi, atau nilai harapan. Lapis ketiga adalah lapis aktuaria terapan, yaitu kemampuan menerjemahkan hasil probabilitas ke dalam nilai kini manfaat, premi, cadangan, atau rekomendasi desain produk. Ketiga lapis ini tidak berdiri sendiri. Kesalahan kecil pada lapis notasi dapat menjalar menjadi kesalahan besar pada lapis premi dan cadangan.
 
 Pendekatan yang digunakan adalah kombinasi antara penurunan matematis dan pemodelan komputasi. Penurunan matematis melatih mahasiswa memahami struktur formula secara konseptual. Pemodelan komputasi melatih mahasiswa memeriksa formula melalui simulasi, membangun fungsi, dan melakukan analisis sensitivitas. Dalam praktik aktuaria modern, keduanya harus berjalan bersama. Komputasi tanpa teori mudah menghasilkan angka yang tampak meyakinkan tetapi salah konteks. Teori tanpa komputasi sulit digunakan untuk mengevaluasi portofolio yang besar, asumsi yang berlapis, dan skenario risiko yang berubah.
-
 
 Pada pertemuan ini, titik tekan pembelajaran adalah **associated single decrement table dan relasi dasar**. Topik ini mencakup associated single decrement, net probability, crude probability, relasi antar tabel, interpretasi aktuarial. Dalam literatur aktuaria klasik, nilai kini manfaat asuransi dan anuitas selalu dibangun dari tiga komponen utama: fungsi survival, fungsi diskonto, dan struktur manfaat [@Bowers1997; @Benjamin2012; @Gerber1997]. Ketika kontrak melibatkan dua kehidupan atau lebih, komponen survival tidak lagi cukup dibaca dari satu orang saja. Status kontrak harus didefinisikan dengan jelas: apakah manfaat bergantung pada keduanya masih hidup, salah satu masih hidup, kematian pertama, kematian kedua, atau kematian individu tertentu.
 
@@ -1618,7 +1944,6 @@ Dalam implementasi komputasi, topik associated single decrement, net probability
 ### Notasi dan Formulasi Dasar
 
 Sebelum melakukan perhitungan, tetapkan notasi secara konsisten. Gunakan $x$ dan $y$ untuk umur dua individu pada waktu kontrak dimulai. Gunakan $T_x$ dan $T_y$ untuk *future lifetime* kontinu, serta $K_x$ dan $K_y$ untuk *curtate future lifetime*. Nilai $i$ menyatakan tingkat bunga efektif tahunan, sedangkan $v=(1+i)^{-1}$ menyatakan faktor diskonto satu tahun. Dalam banyak contoh awal, asumsi independensi digunakan agar struktur formula mudah dipahami. Setelah itu, mahasiswa dapat memperluas model melalui dependensi, skenario stres, atau faktor risiko bersama.
-
 
 ::: {.mathbox}
 Pada model multiple decrement, peluang keluar karena penyebab $j$ selama interval $[x,x+1)$ ditulis
@@ -1631,10 +1956,19 @@ q_x^{(\tau)}=\sum_j q_x^{(j)},\qquad p_x^{(\tau)}=1-q_x^{(\tau)}.
 $$
 :::
 
-
 Formula di atas harus dipahami sebagai representasi dari cerita kontrak. Pada laporan akademik, mahasiswa sebaiknya tidak hanya menuliskan rumus, tetapi juga menjelaskan arti setiap simbol. Penjelasan simbol membuat pembaca memahami apakah peluang yang dihitung adalah peluang hidup bersama, peluang minimal satu hidup, peluang kematian pertama, atau peluang kematian terakhir. Di dunia aktuaria, satu garis notasi yang ambigu bisa berubah menjadi satu halaman klarifikasi; lebih baik jelas sejak awal daripada rapat produk menjadi sidang tebak-tebakan.
 
 ### Contoh Konseptual dan Interpretasi
+
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Contoh Konseptual dan Interpretasi</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="examplebox">
 **Contoh.** Misalkan terdapat pasangan berumur 45 dan 43 tahun yang hendak membeli produk asuransi keluarga. Produk pertama membayar manfaat ketika kematian pertama terjadi, sedangkan produk kedua membayar manfaat ketika kematian kedua terjadi. Walaupun kedua produk menggunakan dua orang yang sama, status aktuaria produk berbeda. Produk pertama berhubungan erat dengan status *joint-life* karena status berhenti pada kematian pertama. Produk kedua berhubungan dengan status *last-survivor* karena pembayaran menunggu sampai keduanya meninggal.
@@ -1646,8 +1980,17 @@ Interpretasi hasil harus selalu dikaitkan dengan pertanyaan bisnis. Jika nilai k
 
 ### Implementasi R
 
-Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi R</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
 
+
+Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
 
 ```{r md-table-example-2, message=FALSE, warning=FALSE, eval=FALSE}
 ages <- 50:60
@@ -1675,10 +2018,19 @@ md$d_withdrawal <- round(md$lx * md$q_withdrawal, 2)
 md
 ```
 
-
 Setelah menjalankan kode, mahasiswa perlu membaca output secara substantif. Untuk grafik probabilitas dua kehidupan, kurva *joint-life* biasanya berada di bawah kurva *last-survivor* karena peluang keduanya hidup sampai waktu tertentu lebih kecil daripada peluang minimal satu masih hidup. Untuk tabel *multiple decrement*, jumlah decrement per penyebab harus konsisten dengan total keluar dari kelompok risiko. Untuk premi dan cadangan, nilai cadangan pada awal kontrak biasanya mendekati nol dalam model premi bersih, lalu berubah mengikuti waktu, probabilitas klaim, dan sisa kewajiban.
 
 ### Studi Kasus Mini
+
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 **Skenario.** Sebuah perusahaan asuransi sedang mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga menjelang pensiun. Tim aktuaria diminta menghitung nilai manfaat, menguji sensitivitas terhadap suku bunga, serta menjelaskan risiko asumsi mortalitas. Pada pertemuan 10, fokus analisis diarahkan pada associated single decrement, net probability, crude probability.
@@ -1724,9 +2076,7 @@ Aktuaria tidak hanya menghitung ekspektasi. Aktuaria juga menilai ketidakpastian
 
 Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tiga hal: formula yang dipelajari, contoh kontrak yang cocok dengan formula tersebut, dan satu pertanyaan kritis tentang asumsi. Kebiasaan ini membantu mahasiswa bergerak dari hafalan ke pemahaman. Jika setiap pertemuan menghasilkan satu jurnal reflektif yang baik, pada akhir semester mahasiswa sudah memiliki peta konsep personal yang kuat untuk menyusun proyek akhir.
 
-
 ---
-
 
 ## Pertemuan 11: Central Rates of Multiple Decrement
 
@@ -1742,11 +2092,19 @@ Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tig
 
 ### Konsep Inti
 
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali simbol, indeks umur, periode proyeksi, status hidup, status meninggal, dan hubungan antar variabel acak. Lapis kedua adalah lapis probabilitas, yaitu kemampuan mengubah cerita kontrak asuransi menjadi peluang, fungsi distribusi, atau nilai harapan. Lapis ketiga adalah lapis aktuaria terapan, yaitu kemampuan menerjemahkan hasil probabilitas ke dalam nilai kini manfaat, premi, cadangan, atau rekomendasi desain produk. Ketiga lapis ini tidak berdiri sendiri. Kesalahan kecil pada lapis notasi dapat menjalar menjadi kesalahan besar pada lapis premi dan cadangan.
 
 Pendekatan yang digunakan adalah kombinasi antara penurunan matematis dan pemodelan komputasi. Penurunan matematis melatih mahasiswa memahami struktur formula secara konseptual. Pemodelan komputasi melatih mahasiswa memeriksa formula melalui simulasi, membangun fungsi, dan melakukan analisis sensitivitas. Dalam praktik aktuaria modern, keduanya harus berjalan bersama. Komputasi tanpa teori mudah menghasilkan angka yang tampak meyakinkan tetapi salah konteks. Teori tanpa komputasi sulit digunakan untuk mengevaluasi portofolio yang besar, asumsi yang berlapis, dan skenario risiko yang berubah.
-
 
 Pada pertemuan ini, titik tekan pembelajaran adalah **central rates of multiple decrement**. Topik ini mencakup central rate, constant force assumption, uniform distribution assumption, konversi rate ke probability, simulasi asumsi. Dalam literatur aktuaria klasik, nilai kini manfaat asuransi dan anuitas selalu dibangun dari tiga komponen utama: fungsi survival, fungsi diskonto, dan struktur manfaat [@Bowers1997; @Benjamin2012; @Gerber1997]. Ketika kontrak melibatkan dua kehidupan atau lebih, komponen survival tidak lagi cukup dibaca dari satu orang saja. Status kontrak harus didefinisikan dengan jelas: apakah manfaat bergantung pada keduanya masih hidup, salah satu masih hidup, kematian pertama, kematian kedua, atau kematian individu tertentu.
 
@@ -1757,7 +2115,6 @@ Dalam implementasi komputasi, topik central rate, constant force assumption, uni
 ### Notasi dan Formulasi Dasar
 
 Sebelum melakukan perhitungan, tetapkan notasi secara konsisten. Gunakan $x$ dan $y$ untuk umur dua individu pada waktu kontrak dimulai. Gunakan $T_x$ dan $T_y$ untuk *future lifetime* kontinu, serta $K_x$ dan $K_y$ untuk *curtate future lifetime*. Nilai $i$ menyatakan tingkat bunga efektif tahunan, sedangkan $v=(1+i)^{-1}$ menyatakan faktor diskonto satu tahun. Dalam banyak contoh awal, asumsi independensi digunakan agar struktur formula mudah dipahami. Setelah itu, mahasiswa dapat memperluas model melalui dependensi, skenario stres, atau faktor risiko bersama.
-
 
 ::: {.mathbox}
 Pada model multiple decrement, peluang keluar karena penyebab $j$ selama interval $[x,x+1)$ ditulis
@@ -1770,10 +2127,19 @@ q_x^{(\tau)}=\sum_j q_x^{(j)},\qquad p_x^{(\tau)}=1-q_x^{(\tau)}.
 $$
 :::
 
-
 Formula di atas harus dipahami sebagai representasi dari cerita kontrak. Pada laporan akademik, mahasiswa sebaiknya tidak hanya menuliskan rumus, tetapi juga menjelaskan arti setiap simbol. Penjelasan simbol membuat pembaca memahami apakah peluang yang dihitung adalah peluang hidup bersama, peluang minimal satu hidup, peluang kematian pertama, atau peluang kematian terakhir. Di dunia aktuaria, satu garis notasi yang ambigu bisa berubah menjadi satu halaman klarifikasi; lebih baik jelas sejak awal daripada rapat produk menjadi sidang tebak-tebakan.
 
 ### Contoh Konseptual dan Interpretasi
+
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Contoh Konseptual dan Interpretasi</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="examplebox">
 **Contoh.** Misalkan terdapat pasangan berumur 45 dan 43 tahun yang hendak membeli produk asuransi keluarga. Produk pertama membayar manfaat ketika kematian pertama terjadi, sedangkan produk kedua membayar manfaat ketika kematian kedua terjadi. Walaupun kedua produk menggunakan dua orang yang sama, status aktuaria produk berbeda. Produk pertama berhubungan erat dengan status *joint-life* karena status berhenti pada kematian pertama. Produk kedua berhubungan dengan status *last-survivor* karena pembayaran menunggu sampai keduanya meninggal.
@@ -1785,8 +2151,17 @@ Interpretasi hasil harus selalu dikaitkan dengan pertanyaan bisnis. Jika nilai k
 
 ### Implementasi R
 
-Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi R</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
 
+
+Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
 
 ```{r md-table-example-3, message=FALSE, warning=FALSE, eval=FALSE}
 ages <- 50:60
@@ -1814,10 +2189,19 @@ md$d_withdrawal <- round(md$lx * md$q_withdrawal, 2)
 md
 ```
 
-
 Setelah menjalankan kode, mahasiswa perlu membaca output secara substantif. Untuk grafik probabilitas dua kehidupan, kurva *joint-life* biasanya berada di bawah kurva *last-survivor* karena peluang keduanya hidup sampai waktu tertentu lebih kecil daripada peluang minimal satu masih hidup. Untuk tabel *multiple decrement*, jumlah decrement per penyebab harus konsisten dengan total keluar dari kelompok risiko. Untuk premi dan cadangan, nilai cadangan pada awal kontrak biasanya mendekati nol dalam model premi bersih, lalu berubah mengikuti waktu, probabilitas klaim, dan sisa kewajiban.
 
 ### Studi Kasus Mini
+
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 **Skenario.** Sebuah perusahaan asuransi sedang mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga menjelang pensiun. Tim aktuaria diminta menghitung nilai manfaat, menguji sensitivitas terhadap suku bunga, serta menjelaskan risiko asumsi mortalitas. Pada pertemuan 11, fokus analisis diarahkan pada central rate, constant force assumption, uniform distribution assumption.
@@ -1863,11 +2247,19 @@ Dalam tugas dan proyek, pemilihan studi kasus harus disertai alasan. Kasus pasan
 
 Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tiga hal: formula yang dipelajari, contoh kontrak yang cocok dengan formula tersebut, dan satu pertanyaan kritis tentang asumsi. Kebiasaan ini membantu mahasiswa bergerak dari hafalan ke pemahaman. Jika setiap pertemuan menghasilkan satu jurnal reflektif yang baik, pada akhir semester mahasiswa sudah memiliki peta konsep personal yang kuat untuk menyusun proyek akhir.
 
-
 ---
 
-
 ## Pertemuan 12: Konstruksi dan Implementasi MD Table dengan R
+
+<!-- BEGIN AI-INLINE:c6b54e3d3476 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Pertemuan 12: Konstruksi dan Implementasi MD Table dengan R</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="callout">
 **Capaian Bab (SubCPMK3).** Setelah mempelajari bab ini, mahasiswa diharapkan mampu menghubungkan konsep teoritis, formulasi matematis, dan implementasi komputasi untuk topik-topik berikut:
@@ -1881,11 +2273,19 @@ Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tig
 
 ### Konsep Inti
 
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali simbol, indeks umur, periode proyeksi, status hidup, status meninggal, dan hubungan antar variabel acak. Lapis kedua adalah lapis probabilitas, yaitu kemampuan mengubah cerita kontrak asuransi menjadi peluang, fungsi distribusi, atau nilai harapan. Lapis ketiga adalah lapis aktuaria terapan, yaitu kemampuan menerjemahkan hasil probabilitas ke dalam nilai kini manfaat, premi, cadangan, atau rekomendasi desain produk. Ketiga lapis ini tidak berdiri sendiri. Kesalahan kecil pada lapis notasi dapat menjalar menjadi kesalahan besar pada lapis premi dan cadangan.
 
 Pendekatan yang digunakan adalah kombinasi antara penurunan matematis dan pemodelan komputasi. Penurunan matematis melatih mahasiswa memahami struktur formula secara konseptual. Pemodelan komputasi melatih mahasiswa memeriksa formula melalui simulasi, membangun fungsi, dan melakukan analisis sensitivitas. Dalam praktik aktuaria modern, keduanya harus berjalan bersama. Komputasi tanpa teori mudah menghasilkan angka yang tampak meyakinkan tetapi salah konteks. Teori tanpa komputasi sulit digunakan untuk mengevaluasi portofolio yang besar, asumsi yang berlapis, dan skenario risiko yang berubah.
-
 
 Pada pertemuan ini, titik tekan pembelajaran adalah **konstruksi dan implementasi md table dengan r**. Topik ini mencakup algoritma konstruksi, data sintetik, validasi tabel, visualisasi decrement, aplikasi portofolio. Dalam literatur aktuaria klasik, nilai kini manfaat asuransi dan anuitas selalu dibangun dari tiga komponen utama: fungsi survival, fungsi diskonto, dan struktur manfaat [@Bowers1997; @Benjamin2012; @Gerber1997]. Ketika kontrak melibatkan dua kehidupan atau lebih, komponen survival tidak lagi cukup dibaca dari satu orang saja. Status kontrak harus didefinisikan dengan jelas: apakah manfaat bergantung pada keduanya masih hidup, salah satu masih hidup, kematian pertama, kematian kedua, atau kematian individu tertentu.
 
@@ -1896,7 +2296,6 @@ Dalam implementasi komputasi, topik algoritma konstruksi, data sintetik, validas
 ### Notasi dan Formulasi Dasar
 
 Sebelum melakukan perhitungan, tetapkan notasi secara konsisten. Gunakan $x$ dan $y$ untuk umur dua individu pada waktu kontrak dimulai. Gunakan $T_x$ dan $T_y$ untuk *future lifetime* kontinu, serta $K_x$ dan $K_y$ untuk *curtate future lifetime*. Nilai $i$ menyatakan tingkat bunga efektif tahunan, sedangkan $v=(1+i)^{-1}$ menyatakan faktor diskonto satu tahun. Dalam banyak contoh awal, asumsi independensi digunakan agar struktur formula mudah dipahami. Setelah itu, mahasiswa dapat memperluas model melalui dependensi, skenario stres, atau faktor risiko bersama.
-
 
 ::: {.mathbox}
 Pada model multiple decrement, peluang keluar karena penyebab $j$ selama interval $[x,x+1)$ ditulis
@@ -1909,10 +2308,19 @@ q_x^{(\tau)}=\sum_j q_x^{(j)},\qquad p_x^{(\tau)}=1-q_x^{(\tau)}.
 $$
 :::
 
-
 Formula di atas harus dipahami sebagai representasi dari cerita kontrak. Pada laporan akademik, mahasiswa sebaiknya tidak hanya menuliskan rumus, tetapi juga menjelaskan arti setiap simbol. Penjelasan simbol membuat pembaca memahami apakah peluang yang dihitung adalah peluang hidup bersama, peluang minimal satu hidup, peluang kematian pertama, atau peluang kematian terakhir. Di dunia aktuaria, satu garis notasi yang ambigu bisa berubah menjadi satu halaman klarifikasi; lebih baik jelas sejak awal daripada rapat produk menjadi sidang tebak-tebakan.
 
 ### Contoh Konseptual dan Interpretasi
+
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Contoh Konseptual dan Interpretasi</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="examplebox">
 **Contoh.** Misalkan terdapat pasangan berumur 45 dan 43 tahun yang hendak membeli produk asuransi keluarga. Produk pertama membayar manfaat ketika kematian pertama terjadi, sedangkan produk kedua membayar manfaat ketika kematian kedua terjadi. Walaupun kedua produk menggunakan dua orang yang sama, status aktuaria produk berbeda. Produk pertama berhubungan erat dengan status *joint-life* karena status berhenti pada kematian pertama. Produk kedua berhubungan dengan status *last-survivor* karena pembayaran menunggu sampai keduanya meninggal.
@@ -1924,8 +2332,17 @@ Interpretasi hasil harus selalu dikaitkan dengan pertanyaan bisnis. Jika nilai k
 
 ### Implementasi R
 
-Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi R</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
 
+
+Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
 
 ```{r md-table-example-4, message=FALSE, warning=FALSE, eval=FALSE}
 ages <- 50:60
@@ -1953,10 +2370,19 @@ md$d_withdrawal <- round(md$lx * md$q_withdrawal, 2)
 md
 ```
 
-
 Setelah menjalankan kode, mahasiswa perlu membaca output secara substantif. Untuk grafik probabilitas dua kehidupan, kurva *joint-life* biasanya berada di bawah kurva *last-survivor* karena peluang keduanya hidup sampai waktu tertentu lebih kecil daripada peluang minimal satu masih hidup. Untuk tabel *multiple decrement*, jumlah decrement per penyebab harus konsisten dengan total keluar dari kelompok risiko. Untuk premi dan cadangan, nilai cadangan pada awal kontrak biasanya mendekati nol dalam model premi bersih, lalu berubah mengikuti waktu, probabilitas klaim, dan sisa kewajiban.
 
 ### Studi Kasus Mini
+
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 **Skenario.** Sebuah perusahaan asuransi sedang mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga menjelang pensiun. Tim aktuaria diminta menghitung nilai manfaat, menguji sensitivitas terhadap suku bunga, serta menjelaskan risiko asumsi mortalitas. Pada pertemuan 12, fokus analisis diarahkan pada algoritma konstruksi, data sintetik, validasi tabel.
@@ -2002,9 +2428,7 @@ Mahasiswa juga perlu memperhatikan keterbatasan data. Data mortalitas atau decre
 
 Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tiga hal: formula yang dipelajari, contoh kontrak yang cocok dengan formula tersebut, dan satu pertanyaan kritis tentang asumsi. Kebiasaan ini membantu mahasiswa bergerak dari hafalan ke pemahaman. Jika setiap pertemuan menghasilkan satu jurnal reflektif yang baik, pada akhir semester mahasiswa sudah memiliki peta konsep personal yang kuat untuk menyusun proyek akhir.
 
-
 ---
-
 
 ## Pertemuan 13: Insurance dan Annuity: Continuous dan Discrete
 
@@ -2020,11 +2444,19 @@ Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tig
 
 ### Konsep Inti
 
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali simbol, indeks umur, periode proyeksi, status hidup, status meninggal, dan hubungan antar variabel acak. Lapis kedua adalah lapis probabilitas, yaitu kemampuan mengubah cerita kontrak asuransi menjadi peluang, fungsi distribusi, atau nilai harapan. Lapis ketiga adalah lapis aktuaria terapan, yaitu kemampuan menerjemahkan hasil probabilitas ke dalam nilai kini manfaat, premi, cadangan, atau rekomendasi desain produk. Ketiga lapis ini tidak berdiri sendiri. Kesalahan kecil pada lapis notasi dapat menjalar menjadi kesalahan besar pada lapis premi dan cadangan.
 
 Pendekatan yang digunakan adalah kombinasi antara penurunan matematis dan pemodelan komputasi. Penurunan matematis melatih mahasiswa memahami struktur formula secara konseptual. Pemodelan komputasi melatih mahasiswa memeriksa formula melalui simulasi, membangun fungsi, dan melakukan analisis sensitivitas. Dalam praktik aktuaria modern, keduanya harus berjalan bersama. Komputasi tanpa teori mudah menghasilkan angka yang tampak meyakinkan tetapi salah konteks. Teori tanpa komputasi sulit digunakan untuk mengevaluasi portofolio yang besar, asumsi yang berlapis, dan skenario risiko yang berubah.
-
 
 Pada pertemuan ini, titik tekan pembelajaran adalah **insurance dan annuity: continuous dan discrete**. Topik ini mencakup pembayaran kontinu, pembayaran diskrit, nilai kini aktuaria, struktur pembayaran, perbandingan model. Dalam literatur aktuaria klasik, nilai kini manfaat asuransi dan anuitas selalu dibangun dari tiga komponen utama: fungsi survival, fungsi diskonto, dan struktur manfaat [@Bowers1997; @Benjamin2012; @Gerber1997]. Ketika kontrak melibatkan dua kehidupan atau lebih, komponen survival tidak lagi cukup dibaca dari satu orang saja. Status kontrak harus didefinisikan dengan jelas: apakah manfaat bergantung pada keduanya masih hidup, salah satu masih hidup, kematian pertama, kematian kedua, atau kematian individu tertentu.
 
@@ -2036,7 +2468,6 @@ Dalam implementasi komputasi, topik pembayaran kontinu, pembayaran diskrit, nila
 
 Sebelum melakukan perhitungan, tetapkan notasi secara konsisten. Gunakan $x$ dan $y$ untuk umur dua individu pada waktu kontrak dimulai. Gunakan $T_x$ dan $T_y$ untuk *future lifetime* kontinu, serta $K_x$ dan $K_y$ untuk *curtate future lifetime*. Nilai $i$ menyatakan tingkat bunga efektif tahunan, sedangkan $v=(1+i)^{-1}$ menyatakan faktor diskonto satu tahun. Dalam banyak contoh awal, asumsi independensi digunakan agar struktur formula mudah dipahami. Setelah itu, mahasiswa dapat memperluas model melalui dependensi, skenario stres, atau faktor risiko bersama.
 
-
 ::: {.mathbox}
 Nilai kini aktuaria anuitas diskrit-due untuk status $s$ adalah
 $$
@@ -2044,7 +2475,6 @@ $$
 $$
 dengan $v=(1+i)^{-1}$. Untuk status joint-life, gunakan ${}_kp_{xy}$; untuk last-survivor, gunakan ${}_kp_{\overline{xy}}$.
 :::
-
 
 ::: {.mathbox}
 Nilai kini aktuaria asuransi diskrit yang membayar 1 pada akhir tahun kematian pertama status joint-life dapat ditulis
@@ -2054,10 +2484,19 @@ $$
 di mana $q_{xy+k}=1-p_{x+k}p_{y+k}$ untuk asumsi independen tahunan.
 :::
 
-
 Formula di atas harus dipahami sebagai representasi dari cerita kontrak. Pada laporan akademik, mahasiswa sebaiknya tidak hanya menuliskan rumus, tetapi juga menjelaskan arti setiap simbol. Penjelasan simbol membuat pembaca memahami apakah peluang yang dihitung adalah peluang hidup bersama, peluang minimal satu hidup, peluang kematian pertama, atau peluang kematian terakhir. Di dunia aktuaria, satu garis notasi yang ambigu bisa berubah menjadi satu halaman klarifikasi; lebih baik jelas sejak awal daripada rapat produk menjadi sidang tebak-tebakan.
 
 ### Contoh Konseptual dan Interpretasi
+
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Contoh Konseptual dan Interpretasi</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="examplebox">
 **Contoh.** Misalkan terdapat pasangan berumur 45 dan 43 tahun yang hendak membeli produk asuransi keluarga. Produk pertama membayar manfaat ketika kematian pertama terjadi, sedangkan produk kedua membayar manfaat ketika kematian kedua terjadi. Walaupun kedua produk menggunakan dua orang yang sama, status aktuaria produk berbeda. Produk pertama berhubungan erat dengan status *joint-life* karena status berhenti pada kematian pertama. Produk kedua berhubungan dengan status *last-survivor* karena pembayaran menunggu sampai keduanya meninggal.
@@ -2069,8 +2508,17 @@ Interpretasi hasil harus selalu dikaitkan dengan pertanyaan bisnis. Jika nilai k
 
 ### Implementasi R
 
-Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi R</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
 
+
+Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
 
 ```{r annuity-two-life-example-3, message=FALSE, warning=FALSE, eval=FALSE}
 x <- 60; y <- 57; i <- 0.045; n <- 30
@@ -2088,10 +2536,19 @@ hasil <- data.frame(
 hasil
 ```
 
-
 Setelah menjalankan kode, mahasiswa perlu membaca output secara substantif. Untuk grafik probabilitas dua kehidupan, kurva *joint-life* biasanya berada di bawah kurva *last-survivor* karena peluang keduanya hidup sampai waktu tertentu lebih kecil daripada peluang minimal satu masih hidup. Untuk tabel *multiple decrement*, jumlah decrement per penyebab harus konsisten dengan total keluar dari kelompok risiko. Untuk premi dan cadangan, nilai cadangan pada awal kontrak biasanya mendekati nol dalam model premi bersih, lalu berubah mengikuti waktu, probabilitas klaim, dan sisa kewajiban.
 
 ### Studi Kasus Mini
+
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 **Skenario.** Sebuah perusahaan asuransi sedang mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga menjelang pensiun. Tim aktuaria diminta menghitung nilai manfaat, menguji sensitivitas terhadap suku bunga, serta menjelaskan risiko asumsi mortalitas. Pada pertemuan 13, fokus analisis diarahkan pada pembayaran kontinu, pembayaran diskrit, nilai kini aktuaria.
@@ -2137,9 +2594,7 @@ Setiap hasil numerik perlu ditafsirkan sebagai konsekuensi dari asumsi. Jika dia
 
 Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tiga hal: formula yang dipelajari, contoh kontrak yang cocok dengan formula tersebut, dan satu pertanyaan kritis tentang asumsi. Kebiasaan ini membantu mahasiswa bergerak dari hafalan ke pemahaman. Jika setiap pertemuan menghasilkan satu jurnal reflektif yang baik, pada akhir semester mahasiswa sudah memiliki peta konsep personal yang kuat untuk menyusun proyek akhir.
 
-
 ---
-
 
 ## Pertemuan 14: Perhitungan Benefit Premium
 
@@ -2155,11 +2610,19 @@ Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tig
 
 ### Konsep Inti
 
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali simbol, indeks umur, periode proyeksi, status hidup, status meninggal, dan hubungan antar variabel acak. Lapis kedua adalah lapis probabilitas, yaitu kemampuan mengubah cerita kontrak asuransi menjadi peluang, fungsi distribusi, atau nilai harapan. Lapis ketiga adalah lapis aktuaria terapan, yaitu kemampuan menerjemahkan hasil probabilitas ke dalam nilai kini manfaat, premi, cadangan, atau rekomendasi desain produk. Ketiga lapis ini tidak berdiri sendiri. Kesalahan kecil pada lapis notasi dapat menjalar menjadi kesalahan besar pada lapis premi dan cadangan.
 
 Pendekatan yang digunakan adalah kombinasi antara penurunan matematis dan pemodelan komputasi. Penurunan matematis melatih mahasiswa memahami struktur formula secara konseptual. Pemodelan komputasi melatih mahasiswa memeriksa formula melalui simulasi, membangun fungsi, dan melakukan analisis sensitivitas. Dalam praktik aktuaria modern, keduanya harus berjalan bersama. Komputasi tanpa teori mudah menghasilkan angka yang tampak meyakinkan tetapi salah konteks. Teori tanpa komputasi sulit digunakan untuk mengevaluasi portofolio yang besar, asumsi yang berlapis, dan skenario risiko yang berubah.
-
 
 Pada pertemuan ini, titik tekan pembelajaran adalah **perhitungan benefit premium**. Topik ini mencakup prinsip ekuivalensi, premi bersih, premi level, basis manfaat, sensitivitas premi. Dalam literatur aktuaria klasik, nilai kini manfaat asuransi dan anuitas selalu dibangun dari tiga komponen utama: fungsi survival, fungsi diskonto, dan struktur manfaat [@Bowers1997; @Benjamin2012; @Gerber1997]. Ketika kontrak melibatkan dua kehidupan atau lebih, komponen survival tidak lagi cukup dibaca dari satu orang saja. Status kontrak harus didefinisikan dengan jelas: apakah manfaat bergantung pada keduanya masih hidup, salah satu masih hidup, kematian pertama, kematian kedua, atau kematian individu tertentu.
 
@@ -2170,7 +2633,6 @@ Dalam implementasi komputasi, topik prinsip ekuivalensi, premi bersih, premi lev
 ### Notasi dan Formulasi Dasar
 
 Sebelum melakukan perhitungan, tetapkan notasi secara konsisten. Gunakan $x$ dan $y$ untuk umur dua individu pada waktu kontrak dimulai. Gunakan $T_x$ dan $T_y$ untuk *future lifetime* kontinu, serta $K_x$ dan $K_y$ untuk *curtate future lifetime*. Nilai $i$ menyatakan tingkat bunga efektif tahunan, sedangkan $v=(1+i)^{-1}$ menyatakan faktor diskonto satu tahun. Dalam banyak contoh awal, asumsi independensi digunakan agar struktur formula mudah dipahami. Setelah itu, mahasiswa dapat memperluas model melalui dependensi, skenario stres, atau faktor risiko bersama.
-
 
 ::: {.mathbox}
 Prinsip ekuivalensi untuk benefit premium menyatakan bahwa nilai kini harapan premi sama dengan nilai kini harapan manfaat:
@@ -2183,7 +2645,6 @@ P=\frac{A_{\text{benefit basis}}}{\ddot{a}_{\text{premium basis}}}.
 $$
 :::
 
-
 ::: {.mathbox}
 Nilai kini aktuaria anuitas diskrit-due untuk status $s$ adalah
 $$
@@ -2191,7 +2652,6 @@ $$
 $$
 dengan $v=(1+i)^{-1}$. Untuk status joint-life, gunakan ${}_kp_{xy}$; untuk last-survivor, gunakan ${}_kp_{\overline{xy}}$.
 :::
-
 
 ::: {.mathbox}
 Nilai kini aktuaria asuransi diskrit yang membayar 1 pada akhir tahun kematian pertama status joint-life dapat ditulis
@@ -2201,10 +2661,19 @@ $$
 di mana $q_{xy+k}=1-p_{x+k}p_{y+k}$ untuk asumsi independen tahunan.
 :::
 
-
 Formula di atas harus dipahami sebagai representasi dari cerita kontrak. Pada laporan akademik, mahasiswa sebaiknya tidak hanya menuliskan rumus, tetapi juga menjelaskan arti setiap simbol. Penjelasan simbol membuat pembaca memahami apakah peluang yang dihitung adalah peluang hidup bersama, peluang minimal satu hidup, peluang kematian pertama, atau peluang kematian terakhir. Di dunia aktuaria, satu garis notasi yang ambigu bisa berubah menjadi satu halaman klarifikasi; lebih baik jelas sejak awal daripada rapat produk menjadi sidang tebak-tebakan.
 
 ### Contoh Konseptual dan Interpretasi
+
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Contoh Konseptual dan Interpretasi</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="examplebox">
 **Contoh.** Misalkan terdapat pasangan berumur 45 dan 43 tahun yang hendak membeli produk asuransi keluarga. Produk pertama membayar manfaat ketika kematian pertama terjadi, sedangkan produk kedua membayar manfaat ketika kematian kedua terjadi. Walaupun kedua produk menggunakan dua orang yang sama, status aktuaria produk berbeda. Produk pertama berhubungan erat dengan status *joint-life* karena status berhenti pada kematian pertama. Produk kedua berhubungan dengan status *last-survivor* karena pembayaran menunggu sampai keduanya meninggal.
@@ -2216,8 +2685,17 @@ Interpretasi hasil harus selalu dikaitkan dengan pertanyaan bisnis. Jika nilai k
 
 ### Implementasi R
 
-Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi R</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
 
+
+Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
 
 ```{r premium-reserve-example, message=FALSE, warning=FALSE, eval=FALSE}
 # Premi bersih sederhana untuk asuransi joint-life 10 tahun
@@ -2240,10 +2718,19 @@ reserve <- sapply(0:n, function(t) {
 data.frame(t = 0:n, reserve = round(reserve, 6))
 ```
 
-
 Setelah menjalankan kode, mahasiswa perlu membaca output secara substantif. Untuk grafik probabilitas dua kehidupan, kurva *joint-life* biasanya berada di bawah kurva *last-survivor* karena peluang keduanya hidup sampai waktu tertentu lebih kecil daripada peluang minimal satu masih hidup. Untuk tabel *multiple decrement*, jumlah decrement per penyebab harus konsisten dengan total keluar dari kelompok risiko. Untuk premi dan cadangan, nilai cadangan pada awal kontrak biasanya mendekati nol dalam model premi bersih, lalu berubah mengikuti waktu, probabilitas klaim, dan sisa kewajiban.
 
 ### Studi Kasus Mini
+
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 **Skenario.** Sebuah perusahaan asuransi sedang mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga menjelang pensiun. Tim aktuaria diminta menghitung nilai manfaat, menguji sensitivitas terhadap suku bunga, serta menjelaskan risiko asumsi mortalitas. Pada pertemuan 14, fokus analisis diarahkan pada prinsip ekuivalensi, premi bersih, premi level.
@@ -2289,9 +2776,7 @@ Dalam konteks S2 Statistika Terapan, mahasiswa diharapkan tidak berhenti pada ha
 
 Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tiga hal: formula yang dipelajari, contoh kontrak yang cocok dengan formula tersebut, dan satu pertanyaan kritis tentang asumsi. Kebiasaan ini membantu mahasiswa bergerak dari hafalan ke pemahaman. Jika setiap pertemuan menghasilkan satu jurnal reflektif yang baik, pada akhir semester mahasiswa sudah memiliki peta konsep personal yang kuat untuk menyusun proyek akhir.
 
-
 ---
-
 
 ## Pertemuan 15: Perhitungan Benefit Reserve
 
@@ -2307,11 +2792,19 @@ Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tig
 
 ### Konsep Inti
 
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali simbol, indeks umur, periode proyeksi, status hidup, status meninggal, dan hubungan antar variabel acak. Lapis kedua adalah lapis probabilitas, yaitu kemampuan mengubah cerita kontrak asuransi menjadi peluang, fungsi distribusi, atau nilai harapan. Lapis ketiga adalah lapis aktuaria terapan, yaitu kemampuan menerjemahkan hasil probabilitas ke dalam nilai kini manfaat, premi, cadangan, atau rekomendasi desain produk. Ketiga lapis ini tidak berdiri sendiri. Kesalahan kecil pada lapis notasi dapat menjalar menjadi kesalahan besar pada lapis premi dan cadangan.
 
 Pendekatan yang digunakan adalah kombinasi antara penurunan matematis dan pemodelan komputasi. Penurunan matematis melatih mahasiswa memahami struktur formula secara konseptual. Pemodelan komputasi melatih mahasiswa memeriksa formula melalui simulasi, membangun fungsi, dan melakukan analisis sensitivitas. Dalam praktik aktuaria modern, keduanya harus berjalan bersama. Komputasi tanpa teori mudah menghasilkan angka yang tampak meyakinkan tetapi salah konteks. Teori tanpa komputasi sulit digunakan untuk mengevaluasi portofolio yang besar, asumsi yang berlapis, dan skenario risiko yang berubah.
-
 
 Pada pertemuan ini, titik tekan pembelajaran adalah **perhitungan benefit reserve**. Topik ini mencakup cadangan prospektif, cadangan retrospektif, rekursi cadangan, reserve trajectory, solvabilitas. Dalam literatur aktuaria klasik, nilai kini manfaat asuransi dan anuitas selalu dibangun dari tiga komponen utama: fungsi survival, fungsi diskonto, dan struktur manfaat [@Bowers1997; @Benjamin2012; @Gerber1997]. Ketika kontrak melibatkan dua kehidupan atau lebih, komponen survival tidak lagi cukup dibaca dari satu orang saja. Status kontrak harus didefinisikan dengan jelas: apakah manfaat bergantung pada keduanya masih hidup, salah satu masih hidup, kematian pertama, kematian kedua, atau kematian individu tertentu.
 
@@ -2323,14 +2816,12 @@ Dalam implementasi komputasi, topik cadangan prospektif, cadangan retrospektif, 
 
 Sebelum melakukan perhitungan, tetapkan notasi secara konsisten. Gunakan $x$ dan $y$ untuk umur dua individu pada waktu kontrak dimulai. Gunakan $T_x$ dan $T_y$ untuk *future lifetime* kontinu, serta $K_x$ dan $K_y$ untuk *curtate future lifetime*. Nilai $i$ menyatakan tingkat bunga efektif tahunan, sedangkan $v=(1+i)^{-1}$ menyatakan faktor diskonto satu tahun. Dalam banyak contoh awal, asumsi independensi digunakan agar struktur formula mudah dipahami. Setelah itu, mahasiswa dapat memperluas model melalui dependensi, skenario stres, atau faktor risiko bersama.
 
-
 ::: {.mathbox}
 Cadangan prospektif pada waktu $t$ adalah selisih nilai kini harapan manfaat masa depan dan nilai kini harapan premi masa depan:
 $$
 V_t=\text{EPV}_t(\text{future benefits})-\text{EPV}_t(\text{future premiums}).
 $$
 :::
-
 
 ::: {.mathbox}
 Prinsip ekuivalensi untuk benefit premium menyatakan bahwa nilai kini harapan premi sama dengan nilai kini harapan manfaat:
@@ -2343,10 +2834,19 @@ P=\frac{A_{\text{benefit basis}}}{\ddot{a}_{\text{premium basis}}}.
 $$
 :::
 
-
 Formula di atas harus dipahami sebagai representasi dari cerita kontrak. Pada laporan akademik, mahasiswa sebaiknya tidak hanya menuliskan rumus, tetapi juga menjelaskan arti setiap simbol. Penjelasan simbol membuat pembaca memahami apakah peluang yang dihitung adalah peluang hidup bersama, peluang minimal satu hidup, peluang kematian pertama, atau peluang kematian terakhir. Di dunia aktuaria, satu garis notasi yang ambigu bisa berubah menjadi satu halaman klarifikasi; lebih baik jelas sejak awal daripada rapat produk menjadi sidang tebak-tebakan.
 
 ### Contoh Konseptual dan Interpretasi
+
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Contoh Konseptual dan Interpretasi</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="examplebox">
 **Contoh.** Misalkan terdapat pasangan berumur 45 dan 43 tahun yang hendak membeli produk asuransi keluarga. Produk pertama membayar manfaat ketika kematian pertama terjadi, sedangkan produk kedua membayar manfaat ketika kematian kedua terjadi. Walaupun kedua produk menggunakan dua orang yang sama, status aktuaria produk berbeda. Produk pertama berhubungan erat dengan status *joint-life* karena status berhenti pada kematian pertama. Produk kedua berhubungan dengan status *last-survivor* karena pembayaran menunggu sampai keduanya meninggal.
@@ -2358,8 +2858,17 @@ Interpretasi hasil harus selalu dikaitkan dengan pertanyaan bisnis. Jika nilai k
 
 ### Implementasi R
 
-Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi R</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
 
+
+Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
 
 ```{r premium-reserve-example-2, message=FALSE, warning=FALSE, eval=FALSE}
 # Premi bersih sederhana untuk asuransi joint-life 10 tahun
@@ -2382,10 +2891,19 @@ reserve <- sapply(0:n, function(t) {
 data.frame(t = 0:n, reserve = round(reserve, 6))
 ```
 
-
 Setelah menjalankan kode, mahasiswa perlu membaca output secara substantif. Untuk grafik probabilitas dua kehidupan, kurva *joint-life* biasanya berada di bawah kurva *last-survivor* karena peluang keduanya hidup sampai waktu tertentu lebih kecil daripada peluang minimal satu masih hidup. Untuk tabel *multiple decrement*, jumlah decrement per penyebab harus konsisten dengan total keluar dari kelompok risiko. Untuk premi dan cadangan, nilai cadangan pada awal kontrak biasanya mendekati nol dalam model premi bersih, lalu berubah mengikuti waktu, probabilitas klaim, dan sisa kewajiban.
 
 ### Studi Kasus Mini
+
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 **Skenario.** Sebuah perusahaan asuransi sedang mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga menjelang pensiun. Tim aktuaria diminta menghitung nilai manfaat, menguji sensitivitas terhadap suku bunga, serta menjelaskan risiko asumsi mortalitas. Pada pertemuan 15, fokus analisis diarahkan pada cadangan prospektif, cadangan retrospektif, rekursi cadangan.
@@ -2431,9 +2949,7 @@ Salah satu strategi belajar yang efektif adalah membuat tabel kecil secara manua
 
 Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tiga hal: formula yang dipelajari, contoh kontrak yang cocok dengan formula tersebut, dan satu pertanyaan kritis tentang asumsi. Kebiasaan ini membantu mahasiswa bergerak dari hafalan ke pemahaman. Jika setiap pertemuan menghasilkan satu jurnal reflektif yang baik, pada akhir semester mahasiswa sudah memiliki peta konsep personal yang kuat untuk menyusun proyek akhir.
 
-
 ---
-
 
 ## Pertemuan 16: UAS: Solusi Inovatif Produk Asuransi Tingkat Lanjut
 
@@ -2449,11 +2965,19 @@ Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tig
 
 ### Konsep Inti
 
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali simbol, indeks umur, periode proyeksi, status hidup, status meninggal, dan hubungan antar variabel acak. Lapis kedua adalah lapis probabilitas, yaitu kemampuan mengubah cerita kontrak asuransi menjadi peluang, fungsi distribusi, atau nilai harapan. Lapis ketiga adalah lapis aktuaria terapan, yaitu kemampuan menerjemahkan hasil probabilitas ke dalam nilai kini manfaat, premi, cadangan, atau rekomendasi desain produk. Ketiga lapis ini tidak berdiri sendiri. Kesalahan kecil pada lapis notasi dapat menjalar menjadi kesalahan besar pada lapis premi dan cadangan.
 
 Pendekatan yang digunakan adalah kombinasi antara penurunan matematis dan pemodelan komputasi. Penurunan matematis melatih mahasiswa memahami struktur formula secara konseptual. Pemodelan komputasi melatih mahasiswa memeriksa formula melalui simulasi, membangun fungsi, dan melakukan analisis sensitivitas. Dalam praktik aktuaria modern, keduanya harus berjalan bersama. Komputasi tanpa teori mudah menghasilkan angka yang tampak meyakinkan tetapi salah konteks. Teori tanpa komputasi sulit digunakan untuk mengevaluasi portofolio yang besar, asumsi yang berlapis, dan skenario risiko yang berubah.
-
 
 Pada pertemuan ini, titik tekan pembelajaran adalah **uas: solusi inovatif produk asuransi tingkat lanjut**. Topik ini mencakup mini riset, inovasi produk, evaluasi cadangan, komunikasi manajerial, rekomendasi implementasi. Dalam literatur aktuaria klasik, nilai kini manfaat asuransi dan anuitas selalu dibangun dari tiga komponen utama: fungsi survival, fungsi diskonto, dan struktur manfaat [@Bowers1997; @Benjamin2012; @Gerber1997]. Ketika kontrak melibatkan dua kehidupan atau lebih, komponen survival tidak lagi cukup dibaca dari satu orang saja. Status kontrak harus didefinisikan dengan jelas: apakah manfaat bergantung pada keduanya masih hidup, salah satu masih hidup, kematian pertama, kematian kedua, atau kematian individu tertentu.
 
@@ -2464,7 +2988,6 @@ Dalam implementasi komputasi, topik mini riset, inovasi produk, evaluasi cadanga
 ### Notasi dan Formulasi Dasar
 
 Sebelum melakukan perhitungan, tetapkan notasi secara konsisten. Gunakan $x$ dan $y$ untuk umur dua individu pada waktu kontrak dimulai. Gunakan $T_x$ dan $T_y$ untuk *future lifetime* kontinu, serta $K_x$ dan $K_y$ untuk *curtate future lifetime*. Nilai $i$ menyatakan tingkat bunga efektif tahunan, sedangkan $v=(1+i)^{-1}$ menyatakan faktor diskonto satu tahun. Dalam banyak contoh awal, asumsi independensi digunakan agar struktur formula mudah dipahami. Setelah itu, mahasiswa dapat memperluas model melalui dependensi, skenario stres, atau faktor risiko bersama.
-
 
 ::: {.mathbox}
 Prinsip ekuivalensi untuk benefit premium menyatakan bahwa nilai kini harapan premi sama dengan nilai kini harapan manfaat:
@@ -2477,7 +3000,6 @@ P=\frac{A_{\text{benefit basis}}}{\ddot{a}_{\text{premium basis}}}.
 $$
 :::
 
-
 ::: {.mathbox}
 Cadangan prospektif pada waktu $t$ adalah selisih nilai kini harapan manfaat masa depan dan nilai kini harapan premi masa depan:
 $$
@@ -2485,10 +3007,19 @@ V_t=\text{EPV}_t(\text{future benefits})-\text{EPV}_t(\text{future premiums}).
 $$
 :::
 
-
 Formula di atas harus dipahami sebagai representasi dari cerita kontrak. Pada laporan akademik, mahasiswa sebaiknya tidak hanya menuliskan rumus, tetapi juga menjelaskan arti setiap simbol. Penjelasan simbol membuat pembaca memahami apakah peluang yang dihitung adalah peluang hidup bersama, peluang minimal satu hidup, peluang kematian pertama, atau peluang kematian terakhir. Di dunia aktuaria, satu garis notasi yang ambigu bisa berubah menjadi satu halaman klarifikasi; lebih baik jelas sejak awal daripada rapat produk menjadi sidang tebak-tebakan.
 
 ### Contoh Konseptual dan Interpretasi
+
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Contoh Konseptual dan Interpretasi</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Minta AI menjelaskan **Matematika Aktuaria 2** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="examplebox">
 **Contoh.** Misalkan terdapat pasangan berumur 45 dan 43 tahun yang hendak membeli produk asuransi keluarga. Produk pertama membayar manfaat ketika kematian pertama terjadi, sedangkan produk kedua membayar manfaat ketika kematian kedua terjadi. Walaupun kedua produk menggunakan dua orang yang sama, status aktuaria produk berbeda. Produk pertama berhubungan erat dengan status *joint-life* karena status berhenti pada kematian pertama. Produk kedua berhubungan dengan status *last-survivor* karena pembayaran menunggu sampai keduanya meninggal.
@@ -2500,8 +3031,17 @@ Interpretasi hasil harus selalu dikaitkan dengan pertanyaan bisnis. Jika nilai k
 
 ### Implementasi R
 
-Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi R</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** setiap langkah aljabar, syarat regularitas, satuan, kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
 
+
+Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi mortalitas. Perhatikan bahwa tabel mortalitas yang digunakan adalah tabel sintetik untuk pembelajaran. Untuk analisis profesional, gunakan tabel mortalitas yang sesuai, terdokumentasi, dan relevan dengan populasi risiko.
 
 ```{r premium-reserve-example-3, message=FALSE, warning=FALSE, eval=FALSE}
 # Premi bersih sederhana untuk asuransi joint-life 10 tahun
@@ -2524,10 +3064,19 @@ reserve <- sapply(0:n, function(t) {
 data.frame(t = 0:n, reserve = round(reserve, 6))
 ```
 
-
 Setelah menjalankan kode, mahasiswa perlu membaca output secara substantif. Untuk grafik probabilitas dua kehidupan, kurva *joint-life* biasanya berada di bawah kurva *last-survivor* karena peluang keduanya hidup sampai waktu tertentu lebih kecil daripada peluang minimal satu masih hidup. Untuk tabel *multiple decrement*, jumlah decrement per penyebab harus konsisten dengan total keluar dari kelompok risiko. Untuk premi dan cadangan, nilai cadangan pada awal kontrak biasanya mendekati nol dalam model premi bersih, lalu berubah mengikuti waktu, probabilitas klaim, dan sisa kewajiban.
 
 ### Studi Kasus Mini
+
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 <div class="casebox">
 **Skenario.** Sebuah perusahaan asuransi sedang mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga menjelang pensiun. Tim aktuaria diminta menghitung nilai manfaat, menguji sensitivitas terhadap suku bunga, serta menjelaskan risiko asumsi mortalitas. Pada pertemuan 16, fokus analisis diarahkan pada mini riset, inovasi produk, evaluasi cadangan.
@@ -2573,13 +3122,21 @@ Dalam diskusi kelas, mahasiswa dapat membandingkan hasil antar kelompok dengan p
 
 Dalam pembelajaran mandiri, mahasiswa dianjurkan membuat jurnal kecil berisi tiga hal: formula yang dipelajari, contoh kontrak yang cocok dengan formula tersebut, dan satu pertanyaan kritis tentang asumsi. Kebiasaan ini membantu mahasiswa bergerak dari hafalan ke pemahaman. Jika setiap pertemuan menghasilkan satu jurnal reflektif yang baik, pada akhir semester mahasiswa sudah memiliki peta konsep personal yang kuat untuk menyusun proyek akhir.
 
-
 ---
-
 
 # Panduan Proyek Semester
 
 ## Proyek 1: Analisis Multiple Life Functions
+
+<!-- BEGIN AI-INLINE:89091fc0619b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Proyek 1: Analisis Multiple Life Functions</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses belajar Matematika Aktuaria 2 Proyek 1: Analisis Multiple Life Functions secara terkontrol. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Proyek pertama diarahkan untuk mengukur kemampuan mahasiswa pada SubCPMK1. Mahasiswa memilih kasus dua kehidupan, misalnya pasangan suami-istri, orang tua-anak, dua mitra bisnis, atau dua peserta dalam kontrak manfaat keluarga. Analisis minimal mencakup definisi status, perhitungan peluang survival joint-life dan last-survivor, nilai ekspektasi sederhana, visualisasi kurva survival status, serta interpretasi dampaknya terhadap produk asuransi. Laporan maksimal delapan halaman, dilampiri kode R atau Excel.
 
@@ -2587,11 +3144,31 @@ Struktur laporan disarankan terdiri atas latar belakang kasus, definisi kontrak,
 
 ## Proyek 2: Evaluasi Produk Asuransi dan Anuitas Dua Kehidupan
 
+<!-- BEGIN AI-INLINE:af1224c599af -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Proyek 2: Evaluasi Produk Asuransi dan Anuitas Dua Kehidupan</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses belajar Matematika Aktuaria 2 Proyek 2: Evaluasi Produk Asuransi dan Anuitas Dua Kehidupan secara terkontrol. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Proyek kedua diarahkan untuk SubCPMK2. Mahasiswa membandingkan minimal dua desain produk. Contohnya adalah joint-life term insurance dan last-survivor whole life insurance, atau joint-life annuity dan last-survivor annuity. Evaluasi mencakup nilai kini aktuaria, sensitivitas terhadap suku bunga dan umur, serta dampak asumsi mortalitas khusus. Mahasiswa juga dapat menambahkan diskusi tentang produk modern, misalnya manfaat pasangan, manfaat pendidikan keluarga, atau manfaat pensiun survivor.
 
 Dalam proyek ini, kualitas argumentasi lebih penting daripada banyaknya angka. Angka harus digunakan untuk mendukung kesimpulan. Mahasiswa perlu menjelaskan produk mana yang lebih sensitif terhadap mortalitas, produk mana yang lebih dipengaruhi diskonto, dan produk mana yang memerlukan komunikasi risiko lebih hati-hati kepada calon pemegang polis. Jika rekomendasi hanya berupa “produk A lebih besar dari produk B” tanpa interpretasi, analisis belum cukup matang.
 
 ## Proyek 3: Konstruksi Multiple Decrement Table
+
+<!-- BEGIN AI-INLINE:769cbee0c280 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Proyek 3: Konstruksi Multiple Decrement Table</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses belajar Matematika Aktuaria 2 Proyek 3: Konstruksi Multiple Decrement Table secara terkontrol. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Proyek ketiga diarahkan untuk SubCPMK3. Mahasiswa membangun tabel multiple decrement dari data sintetik atau data nyata. Penyebab decrement dapat berupa kematian, disabilitas, lapse, pensiun, keluar pekerjaan, atau penyebab lain yang relevan. Mahasiswa menghitung peluang decrement per penyebab, total decrement, jumlah keluar, dan jumlah tersisa. Mahasiswa juga membandingkan hasil di bawah asumsi constant force dan uniform distribution jika memungkinkan.
 
@@ -2599,11 +3176,44 @@ Validasi tabel menjadi bagian penting. Total peluang decrement tidak boleh meleb
 
 ## Proyek 4: Inovasi Benefit Premium dan Benefit Reserve
 
+<!-- BEGIN AI-INLINE:2f2ec985d6b5 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Proyek 4: Inovasi Benefit Premium dan Benefit Reserve</h4>
+<p><strong>Konteks:</strong> Matematika Aktuaria 2.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses belajar Matematika Aktuaria 2 Proyek 4: Inovasi Benefit Premium dan Benefit Reserve secara terkontrol. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Proyek akhir diarahkan untuk SubCPMK4. Mahasiswa merancang solusi inovatif terkait premi dan cadangan untuk produk dua kehidupan atau produk dengan multiple decrement. Inovasi dapat berupa desain produk baru, modifikasi manfaat, simulasi skenario, dashboard sederhana, algoritma komputasi, atau evaluasi risiko cadangan. Produk akhir berupa laporan mini riset dan presentasi.
 
 Laporan proyek akhir perlu memuat kajian literatur, identifikasi masalah, formulasi model, hasil komputasi, analisis sensitivitas, keunggulan, keterbatasan, serta rekomendasi implementasi. Presentasi harus menonjolkan pesan utama: masalah apa yang diselesaikan, pendekatan apa yang digunakan, hasil apa yang paling penting, dan bagaimana hasil tersebut dapat dimanfaatkan. Dalam forum profesional, visual yang jelas sering membuat hasil aktuaria lebih cepat dipahami dibanding tabel panjang yang membuat mata kuliah terasa seperti ujian ketahanan retina.
 
 # Template Fungsi R Tambahan
+
+<!-- BEGIN AI-INLINE:25f70f218e5f -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 1</span>
+<h3>Generative dan Agentic AI untuk Template Fungsi R Tambahan</h3>
+
+**Arah RPS.** Machine learning untuk reserving, fraud detection, severity-frequency modeling, dan portfolio segmentation.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK1 melalui fokus: Pendahuluan Multiple Life Functions; Pengantar dan ruang lingkup multiple life functions; Notasi dan definisi joint life dan last survivor status. |
+| Generative AI | Digunakan untuk merumuskan alternatif penjelasan, contoh, dan hipotesis awal. |
+| Agentic AI | Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 Bagian ini menyediakan kumpulan fungsi R yang dapat digunakan kembali untuk berbagai tugas. Mahasiswa dapat menyalin fungsi ini ke file R terpisah atau tetap menjalankannya di dalam R Markdown.
 
@@ -2668,6 +3278,16 @@ Refleksi terakhir adalah etika profesional. Penilaian aktuaria memengaruhi harga
 
 ## Catatan Tambahan 3: Pendalaman UTS: Evaluasi Produk dan Presentasi Proyek Pendahuluan
 
+<!-- BEGIN AI-INLINE:1ece6144b952 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Catatan Tambahan 3: Pendalaman UTS: Evaluasi Produk dan Presentasi Proyek Pendahuluan</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Template Fungsi R Tambahan.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Machine learning untuk reserving, fraud detection, severity-frequency modeling, dan portfolio segmentation. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Catatan tambahan ini memperkuat pembahasan **UTS: Evaluasi Produk dan Presentasi Proyek Pendahuluan** dengan menekankan hubungan antara teori dan praktik. Dalam konteks desain proyek, rubrik evaluasi, validasi asumsi, pelaporan, presentasi aktuaria, mahasiswa perlu selalu memulai dari pertanyaan kontraktual. Siapa yang menjadi tertanggung? Kapan manfaat dibayarkan? Apakah pembayaran berhenti pada kematian pertama, kematian terakhir, atau sebab decrement tertentu? Apakah premi dibayar selama status tertentu masih aktif? Pertanyaan-pertanyaan ini tampak administratif, tetapi sebenarnya menentukan bentuk formula probabilitas dan nilai kini aktuaria.
 
 Pendalaman lain yang perlu diperhatikan adalah peran asumsi. Asumsi independensi sering digunakan untuk membangun pemahaman awal karena formula menjadi lebih sederhana. Namun, dalam banyak kontrak keluarga atau pasangan, risiko dapat memiliki komponen bersama seperti kondisi sosial ekonomi, gaya hidup, lingkungan tempat tinggal, atau kejadian bencana. Jika faktor bersama kuat, asumsi independensi dapat meremehkan atau melebihkan nilai risiko. Karena itu, analisis sensitivitas terhadap dependensi menjadi latihan penting, terutama untuk mahasiswa pascasarjana yang diharapkan mampu berpikir kritis.
@@ -2680,6 +3300,16 @@ Refleksi terakhir adalah etika profesional. Penilaian aktuaria memengaruhi harga
 
 ## Catatan Tambahan 6: Pendalaman UTS: Evaluasi Produk dan Presentasi Proyek Pendahuluan
 
+<!-- BEGIN AI-INLINE:29e4e2d357dc -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Catatan Tambahan 6: Pendalaman UTS: Evaluasi Produk dan Presentasi Proyek Pendahuluan</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Template Fungsi R Tambahan.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Machine learning untuk reserving, fraud detection, severity-frequency modeling, dan portfolio segmentation. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Catatan tambahan ini memperkuat pembahasan **UTS: Evaluasi Produk dan Presentasi Proyek Pendahuluan** dengan menekankan hubungan antara teori dan praktik. Dalam konteks desain proyek, rubrik evaluasi, validasi asumsi, pelaporan, presentasi aktuaria, mahasiswa perlu selalu memulai dari pertanyaan kontraktual. Siapa yang menjadi tertanggung? Kapan manfaat dibayarkan? Apakah pembayaran berhenti pada kematian pertama, kematian terakhir, atau sebab decrement tertentu? Apakah premi dibayar selama status tertentu masih aktif? Pertanyaan-pertanyaan ini tampak administratif, tetapi sebenarnya menentukan bentuk formula probabilitas dan nilai kini aktuaria.
 
 Pendalaman lain yang perlu diperhatikan adalah peran asumsi. Asumsi independensi sering digunakan untuk membangun pemahaman awal karena formula menjadi lebih sederhana. Namun, dalam banyak kontrak keluarga atau pasangan, risiko dapat memiliki komponen bersama seperti kondisi sosial ekonomi, gaya hidup, lingkungan tempat tinggal, atau kejadian bencana. Jika faktor bersama kuat, asumsi independensi dapat meremehkan atau melebihkan nilai risiko. Karena itu, analisis sensitivitas terhadap dependensi menjadi latihan penting, terutama untuk mahasiswa pascasarjana yang diharapkan mampu berpikir kritis.
@@ -2691,6 +3321,16 @@ Pada laporan tertulis, gunakan visualisasi untuk memperjelas hasil. Kurva surviv
 Refleksi terakhir adalah etika profesional. Penilaian aktuaria memengaruhi harga produk, kecukupan dana, dan perlindungan pemegang polis. Oleh sebab itu, mahasiswa harus membiasakan diri menulis asumsi secara jujur, menyajikan keterbatasan, dan menghindari klaim yang tidak didukung perhitungan. Aktuaris atau analis risiko yang baik bukan orang yang selalu menghasilkan angka kecil agar produk tampak murah, melainkan orang yang mampu menyeimbangkan daya saing produk dan keberlanjutan kewajiban. Angka boleh elegan, tetapi solvabilitas harus tetap waras.
 
 ## Catatan Tambahan 9: Pendalaman UTS: Evaluasi Produk dan Presentasi Proyek Pendahuluan
+
+<!-- BEGIN AI-INLINE:8958f2fb430a -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Catatan Tambahan 9: Pendalaman UTS: Evaluasi Produk dan Presentasi Proyek Pendahuluan</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Template Fungsi R Tambahan.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Machine learning untuk reserving, fraud detection, severity-frequency modeling, dan portfolio segmentation. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Catatan tambahan ini memperkuat pembahasan **UTS: Evaluasi Produk dan Presentasi Proyek Pendahuluan** dengan menekankan hubungan antara teori dan praktik. Dalam konteks desain proyek, rubrik evaluasi, validasi asumsi, pelaporan, presentasi aktuaria, mahasiswa perlu selalu memulai dari pertanyaan kontraktual. Siapa yang menjadi tertanggung? Kapan manfaat dibayarkan? Apakah pembayaran berhenti pada kematian pertama, kematian terakhir, atau sebab decrement tertentu? Apakah premi dibayar selama status tertentu masih aktif? Pertanyaan-pertanyaan ini tampak administratif, tetapi sebenarnya menentukan bentuk formula probabilitas dan nilai kini aktuaria.
 
@@ -2812,6 +3452,16 @@ Refleksi terakhir adalah etika profesional. Penilaian aktuaria memengaruhi harga
 
 ## Catatan Tambahan 38: Pendalaman Konstruksi dan Implementasi MD Table dengan R
 
+<!-- BEGIN AI-INLINE:4ddf7d944afc -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Catatan Tambahan 38: Pendalaman Konstruksi dan Implementasi MD Table dengan R</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Template Fungsi R Tambahan.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Catatan tambahan ini memperkuat pembahasan **Konstruksi dan Implementasi MD Table dengan R** dengan menekankan hubungan antara teori dan praktik. Dalam konteks algoritma konstruksi, data sintetik, validasi tabel, visualisasi decrement, aplikasi portofolio, mahasiswa perlu selalu memulai dari pertanyaan kontraktual. Siapa yang menjadi tertanggung? Kapan manfaat dibayarkan? Apakah pembayaran berhenti pada kematian pertama, kematian terakhir, atau sebab decrement tertentu? Apakah premi dibayar selama status tertentu masih aktif? Pertanyaan-pertanyaan ini tampak administratif, tetapi sebenarnya menentukan bentuk formula probabilitas dan nilai kini aktuaria.
 
 Pendalaman lain yang perlu diperhatikan adalah peran asumsi. Asumsi independensi sering digunakan untuk membangun pemahaman awal karena formula menjadi lebih sederhana. Namun, dalam banyak kontrak keluarga atau pasangan, risiko dapat memiliki komponen bersama seperti kondisi sosial ekonomi, gaya hidup, lingkungan tempat tinggal, atau kejadian bencana. Jika faktor bersama kuat, asumsi independensi dapat meremehkan atau melebihkan nilai risiko. Karena itu, analisis sensitivitas terhadap dependensi menjadi latihan penting, terutama untuk mahasiswa pascasarjana yang diharapkan mampu berpikir kritis.
@@ -2823,6 +3473,16 @@ Pada laporan tertulis, gunakan visualisasi untuk memperjelas hasil. Kurva surviv
 Refleksi terakhir adalah etika profesional. Penilaian aktuaria memengaruhi harga produk, kecukupan dana, dan perlindungan pemegang polis. Oleh sebab itu, mahasiswa harus membiasakan diri menulis asumsi secara jujur, menyajikan keterbatasan, dan menghindari klaim yang tidak didukung perhitungan. Aktuaris atau analis risiko yang baik bukan orang yang selalu menghasilkan angka kecil agar produk tampak murah, melainkan orang yang mampu menyeimbangkan daya saing produk dan keberlanjutan kewajiban. Angka boleh elegan, tetapi solvabilitas harus tetap waras.
 
 ## Catatan Tambahan 41: Pendalaman Konstruksi dan Implementasi MD Table dengan R
+
+<!-- BEGIN AI-INLINE:286b9c52e37e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Catatan Tambahan 41: Pendalaman Konstruksi dan Implementasi MD Table dengan R</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Template Fungsi R Tambahan.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Catatan tambahan ini memperkuat pembahasan **Konstruksi dan Implementasi MD Table dengan R** dengan menekankan hubungan antara teori dan praktik. Dalam konteks algoritma konstruksi, data sintetik, validasi tabel, visualisasi decrement, aplikasi portofolio, mahasiswa perlu selalu memulai dari pertanyaan kontraktual. Siapa yang menjadi tertanggung? Kapan manfaat dibayarkan? Apakah pembayaran berhenti pada kematian pertama, kematian terakhir, atau sebab decrement tertentu? Apakah premi dibayar selama status tertentu masih aktif? Pertanyaan-pertanyaan ini tampak administratif, tetapi sebenarnya menentukan bentuk formula probabilitas dan nilai kini aktuaria.
 
@@ -3077,6 +3737,16 @@ berada pada mahasiswa.
 5. Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil secara mandiri.
 
 ### Bukti asesmen
+
+<!-- BEGIN AI-INLINE:d875d9cfb331 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Bukti asesmen</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Template Fungsi R Tambahan.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Penilaian berfokus pada ketepatan metode, validasi dan ketidakpastian,
 reproducibility, interpretasi, komunikasi, serta transparansi penggunaan AI.

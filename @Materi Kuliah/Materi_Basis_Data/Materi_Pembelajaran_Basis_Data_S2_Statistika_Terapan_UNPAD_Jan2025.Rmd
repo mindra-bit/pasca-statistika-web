@@ -146,7 +146,6 @@ table {
 </style>
 <!-- END UNPAD MATERIAL STYLE -->
 
-
 <!-- BEGIN UNPAD MATERIAL ENHANCEMENT -->
 
 ```{r setup-unpad-render, include=FALSE}
@@ -163,7 +162,6 @@ knitr::opts_chunk$set(
 )
 set.seed(2025)
 ```
-
 
 <div class="unpad-cover">
 <div class="unpad-cover__brand">
@@ -222,7 +220,6 @@ blockquote { border-left: 7px solid #9b6843; background: #fff8ee; padding: 12px 
 hr { border: 0; height: 2px; background: linear-gradient(90deg, transparent, #b9875a, transparent); margin: 32px 0; }
 </style>
 
-
 <div class="hero-card">
 <h2>Basis Data untuk Riset Statistik Terapan</h2>
 <p><strong>Program Studi:</strong> S2 Statistika Terapan, FMIPA Universitas Padjadjaran</p>
@@ -230,6 +227,30 @@ hr { border: 0; height: 2px; background: linear-gradient(90deg, transparent, #b9
 <p><strong>Tahun Pembuatan Materi:</strong> Januari 2025</p>
 <p>Materi ini disusun sebagai bahan ajar profesional berbasis R Markdown dengan nuansa coklat degradasi. Isi diselaraskan dengan RPS mata kuliah Basis Data, termasuk capaian pembelajaran, SubCPMK, bahan kajian, metode pembelajaran, tugas, proyek, UTS, UAS, dan rubrik penilaian.</p>
 </div>
+
+
+<!-- BEGIN AI-INLINE-STYLE-2026 -->
+<style>
+.ai-inline {
+  margin: 1rem 0 1.35rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid #bfd9d5;
+  border-left: 7px solid #0f766e;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #eff9f7, #fffaf0);
+}
+.ai-inline--agentic { border-left-color: #17395c; background: linear-gradient(135deg, #eef5fb, #f5faf8); }
+.ai-inline--assessment { border-left-color: #a35d00; background: #fff8e8; }
+.ai-inline h3, .ai-inline h4 { margin-top: 0; color: #17395c; }
+.ai-inline p:last-child, .ai-inline ul:last-child { margin-bottom: 0; }
+.ai-inline__label {
+  display: inline-block; margin-bottom: .45rem; padding: .2rem .55rem;
+  border-radius: 999px; background: #17395c; color: white;
+  font-size: .78rem; font-weight: 800;
+}
+.ai-inline table { width: 100%; margin: .6rem 0; background: white; }
+</style>
+<!-- END AI-INLINE-STYLE-2026 -->
 
 # Identitas Mata Kuliah dan Orientasi Pembelajaran
 
@@ -289,8 +310,30 @@ Referensi utama yang digunakan dalam modul ini meliputi buku sistem basis data k
 
 # Pertemuan 1: Pendahuluan Sistem Basis Data untuk Riset Statistik
 
-<span class="badge">SubCPMK1</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
+<!-- BEGIN AI-INLINE:d12bb927a2c8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 1</span>
+<h3>Generative dan Agentic AI untuk Pendahuluan Sistem Basis Data untuk Riset Statistik</h3>
 
+**Arah RPS.** Pipeline ETL/ELT, data warehouse/lakehouse, streaming, API, cloud, dan pengantar vector database untuk aplikasi AI.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK1 melalui fokus: Pendahuluan Sistem Basis Data dan Data Warehouse; Peran Basis Data dalam riset statistik multidisiplin; Arsitektur sistem Basis Data vs data warehouse. |
+| Generative AI | Digunakan untuk menyusun data dictionary, mendeteksi potensi masalah kualitas data, dan mengusulkan aturan pemeriksaan. |
+| Agentic AI | Dapat memprofilkan data, menjalankan validasi skema, menandai missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa asal-usul data, unit observasi, coverage, kebocoran data, privasi, dan keputusan pembersihan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
+<span class="badge">SubCPMK1</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
 
 <div class="info-box">
 Bab ini membahas **pendahuluan sistem basis data untuk riset statistik** dalam konteks riset kesehatan masyarakat, survei sosial, aktuaria, dan sains data. Sasaran akhirnya adalah mahasiswa mampu menghasilkan **daftar kebutuhan data awal dan kamus data** yang dapat dipakai sebagai bagian dari proyek basis data statistik. Rujukan konseptual utama bab ini antara lain [@elmasri2015; @ramakrishnan2002; @dama2017].
@@ -304,11 +347,31 @@ Mahasiswa juga diharapkan mampu menghubungkan topik ini dengan proses analisis s
 
 ## Narasi Kasus Pembuka
 
+<!-- BEGIN AI-INLINE:7cbada15b83b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Narasi Kasus Pembuka</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Pendahuluan Sistem Basis Data untuk Riset Statistik.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Pipeline ETL/ELT, data warehouse/lakehouse, streaming, API, cloud, dan pengantar vector database untuk aplikasi AI. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan sebuah tim riset sedang mengerjakan riset kesehatan masyarakat, survei sosial, aktuaria, dan sains data. Tim tersebut memiliki data dari beberapa sumber, format berbeda, periode berbeda, dan tingkat agregasi berbeda. Sebagian data berada dalam file spreadsheet, sebagian dalam database institusi, sebagian lagi berasal dari API atau dokumen publik. Tanpa rancangan basis data yang sistematis, pekerjaan analisis akan tersendat oleh masalah yang berulang: kolom tidak konsisten, kode wilayah berubah, nilai hilang tidak terdokumentasi, dan hasil query sulit direproduksi. Pada bab ini, masalah tersebut diurai melalui perspektif pendahuluan sistem basis data untuk riset statistik.
 
 Kasus pembuka ini penting karena sebagian besar proyek statistik terapan tidak dimulai dari data yang sudah rapi. Data sering datang sebagai kumpulan potongan informasi yang perlu dirapikan, disatukan, diberi makna, dan dijaga kualitasnya. Peran basis data adalah menyediakan struktur agar potongan tersebut dapat menjadi sistem informasi yang siap dianalisis.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:0bd2ef58a2a7 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Pendahuluan Sistem Basis Data untuk Riset Statistik.</p>
+<p>Minta AI menjelaskan **Pendahuluan Sistem Basis Data untuk Riset Statistik** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ### Data
 
@@ -392,7 +455,6 @@ Secara praktis, pembahasan **integritas** harus selalu dikaitkan dengan dokument
 
 Topik pendahuluan sistem basis data untuk riset statistik dapat dirangkum melalui tiga prinsip: kejelasan struktur, keterlacakan proses, dan kesesuaian dengan kebutuhan analisis. Kejelasan struktur berarti tabel, relasi, tipe data, dan constraint dapat dijelaskan secara eksplisit. Keterlacakan proses berarti perubahan dari data mentah menuju data analisis memiliki log atau dokumentasi. Kesesuaian dengan kebutuhan analisis berarti desain data tidak hanya benar secara komputasional, tetapi juga relevan dengan tujuan statistik.
 
-
 <div class="formula">
 
 $$\text{Kualitas Sistem Data} = f(\text{struktur},\ \text{integritas},\ \text{keterlacakan},\ \text{keamanan},\ \text{kegunaan analitik})$$
@@ -432,6 +494,16 @@ Contoh kode di atas sengaja dibuat ringkas agar fokus pembelajaran berada pada l
 
 ## Studi Kasus Mini
 
+<!-- BEGIN AI-INLINE:fe19821fd7e7 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Pendahuluan Sistem Basis Data untuk Riset Statistik.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Pipeline ETL/ELT, data warehouse/lakehouse, streaming, API, cloud, dan pengantar vector database untuk aplikasi AI. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Pada studi kasus mini, mahasiswa diminta mengembangkan skenario riset kesehatan masyarakat, survei sosial, aktuaria, dan sains data. Misalkan terdapat entitas utama seperti wilayah, waktu, responden, observasi, indikator, dan sumber data. Mahasiswa harus menjawab pertanyaan: data apa yang dibutuhkan, bagaimana relasi antarentitas, bagaimana validasi dilakukan, dan bagaimana hasilnya dapat dipakai untuk analisis statistik. Jawaban tidak boleh berhenti pada gambar ERD atau query SQL; mahasiswa harus menjelaskan alasan metodologis di balik desain tersebut.
 
 Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memiliki rata-rata indikator tertinggi, bagaimana perubahan indikator antarperiode, apakah terdapat kelompok responden dengan karakteristik tertentu, dan bagaimana data dapat disiapkan untuk pemodelan statistik. Dengan pertanyaan seperti ini, basis data berfungsi langsung sebagai instrumen riset, bukan sekadar lemari penyimpanan digital.
@@ -446,6 +518,16 @@ Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memili
 - Mengabaikan keamanan akses pada data sensitif, padahal data riset sering memuat informasi personal atau kelembagaan.
 
 ## Pengayaan Teoretis dan Diskusi
+
+<!-- BEGIN AI-INLINE:664d18870ee6 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Pengayaan Teoretis dan Diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Pendahuluan Sistem Basis Data untuk Riset Statistik.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Sebuah basis data riset yang baik selalu memiliki jejak keputusan. Jejak itu tampak pada nama tabel, definisi variabel, tipe data, aturan validasi, kunci primer, kunci asing, serta dokumentasi transformasi. Tanpa jejak tersebut, data memang dapat dianalisis, tetapi kualitas inferensinya sulit dipertanggungjawabkan. Dalam riset terapan, situasi ini berbahaya karena hasil analisis sering dipakai sebagai dasar rekomendasi kebijakan, evaluasi program, atau pengambilan keputusan organisasi.
 
@@ -476,8 +558,30 @@ Refleksi utama bab ini adalah bahwa pendahuluan sistem basis data untuk riset st
 <hr>
 # Pertemuan 2: Analisis Kebutuhan Data dan Pemodelan Konseptual
 
-<span class="badge">SubCPMK1</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
+<!-- BEGIN AI-INLINE:401cc155daff -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 2</span>
+<h3>Generative dan Agentic AI untuk Analisis Kebutuhan Data dan Pemodelan Konseptual</h3>
 
+**Arah RPS.** Data quality, metadata, lineage, provenance, versioning, access control, privacy, keamanan, dan audit log.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK1 melalui fokus: Studi kasus integrasi data; Model Data Relasional dan Perancangan ER-Diagram; Konsep model data relasional tingkat lanjut. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
+<span class="badge">SubCPMK1</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
 
 <div class="info-box">
 Bab ini membahas **analisis kebutuhan data dan pemodelan konseptual** dalam konteks penelitian stunting kabupaten/kota yang memerlukan data anak, rumah tangga, fasilitas, dan wilayah. Sasaran akhirnya adalah mahasiswa mampu menghasilkan **dokumen requirement dan ERD konseptual** yang dapat dipakai sebagai bagian dari proyek basis data statistik. Rujukan konseptual utama bab ini antara lain [@connolly2015; @elmasri2015].
@@ -491,11 +595,31 @@ Mahasiswa juga diharapkan mampu menghubungkan topik ini dengan proses analisis s
 
 ## Narasi Kasus Pembuka
 
+<!-- BEGIN AI-INLINE:f4b843ae25c4 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Narasi Kasus Pembuka</h4>
+<p><strong>Konteks:</strong> Pertemuan 2: Analisis Kebutuhan Data dan Pemodelan Konseptual.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Data quality, metadata, lineage, provenance, versioning, access control, privacy, keamanan, dan audit log. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan sebuah tim riset sedang mengerjakan penelitian stunting kabupaten/kota yang memerlukan data anak, rumah tangga, fasilitas, dan wilayah. Tim tersebut memiliki data dari beberapa sumber, format berbeda, periode berbeda, dan tingkat agregasi berbeda. Sebagian data berada dalam file spreadsheet, sebagian dalam database institusi, sebagian lagi berasal dari API atau dokumen publik. Tanpa rancangan basis data yang sistematis, pekerjaan analisis akan tersendat oleh masalah yang berulang: kolom tidak konsisten, kode wilayah berubah, nilai hilang tidak terdokumentasi, dan hasil query sulit direproduksi. Pada bab ini, masalah tersebut diurai melalui perspektif analisis kebutuhan data dan pemodelan konseptual.
 
 Kasus pembuka ini penting karena sebagian besar proyek statistik terapan tidak dimulai dari data yang sudah rapi. Data sering datang sebagai kumpulan potongan informasi yang perlu dirapikan, disatukan, diberi makna, dan dijaga kualitasnya. Peran basis data adalah menyediakan struktur agar potongan tersebut dapat menjadi sistem informasi yang siap dianalisis.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:b976ef99644c -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 2: Analisis Kebutuhan Data dan Pemodelan Konseptual.</p>
+<p>Minta AI menjelaskan **Analisis Kebutuhan Data dan Pemodelan Konseptual** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ### Kebutuhan Fungsional
 
@@ -579,7 +703,6 @@ Secara praktis, pembahasan **constraint** harus selalu dikaitkan dengan dokument
 
 Topik analisis kebutuhan data dan pemodelan konseptual dapat dirangkum melalui tiga prinsip: kejelasan struktur, keterlacakan proses, dan kesesuaian dengan kebutuhan analisis. Kejelasan struktur berarti tabel, relasi, tipe data, dan constraint dapat dijelaskan secara eksplisit. Keterlacakan proses berarti perubahan dari data mentah menuju data analisis memiliki log atau dokumentasi. Kesesuaian dengan kebutuhan analisis berarti desain data tidak hanya benar secara komputasional, tetapi juga relevan dengan tujuan statistik.
 
-
 <div class="formula">
 
 $$\text{Kualitas Sistem Data} = f(\text{struktur},\ \text{integritas},\ \text{keterlacakan},\ \text{keamanan},\ \text{kegunaan analitik})$$
@@ -618,6 +741,16 @@ Contoh kode di atas sengaja dibuat ringkas agar fokus pembelajaran berada pada l
 
 ## Studi Kasus Mini
 
+<!-- BEGIN AI-INLINE:697f0d146b3f -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 2: Analisis Kebutuhan Data dan Pemodelan Konseptual.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Data quality, metadata, lineage, provenance, versioning, access control, privacy, keamanan, dan audit log. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Pada studi kasus mini, mahasiswa diminta mengembangkan skenario penelitian stunting kabupaten/kota yang memerlukan data anak, rumah tangga, fasilitas, dan wilayah. Misalkan terdapat entitas utama seperti wilayah, waktu, responden, observasi, indikator, dan sumber data. Mahasiswa harus menjawab pertanyaan: data apa yang dibutuhkan, bagaimana relasi antarentitas, bagaimana validasi dilakukan, dan bagaimana hasilnya dapat dipakai untuk analisis statistik. Jawaban tidak boleh berhenti pada gambar ERD atau query SQL; mahasiswa harus menjelaskan alasan metodologis di balik desain tersebut.
 
 Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memiliki rata-rata indikator tertinggi, bagaimana perubahan indikator antarperiode, apakah terdapat kelompok responden dengan karakteristik tertentu, dan bagaimana data dapat disiapkan untuk pemodelan statistik. Dengan pertanyaan seperti ini, basis data berfungsi langsung sebagai instrumen riset, bukan sekadar lemari penyimpanan digital.
@@ -632,6 +765,16 @@ Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memili
 - Mengabaikan keamanan akses pada data sensitif, padahal data riset sering memuat informasi personal atau kelembagaan.
 
 ## Pengayaan Teoretis dan Diskusi
+
+<!-- BEGIN AI-INLINE:7901ac0e7b76 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Pengayaan Teoretis dan Diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 2: Analisis Kebutuhan Data dan Pemodelan Konseptual.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Sebuah basis data riset yang baik selalu memiliki jejak keputusan. Jejak itu tampak pada nama tabel, definisi variabel, tipe data, aturan validasi, kunci primer, kunci asing, serta dokumentasi transformasi. Tanpa jejak tersebut, data memang dapat dianalisis, tetapi kualitas inferensinya sulit dipertanggungjawabkan. Dalam riset terapan, situasi ini berbahaya karena hasil analisis sering dipakai sebagai dasar rekomendasi kebijakan, evaluasi program, atau pengambilan keputusan organisasi.
 
@@ -662,8 +805,30 @@ Refleksi utama bab ini adalah bahwa analisis kebutuhan data dan pemodelan konsep
 <hr>
 # Pertemuan 3: Model Data Relasional, ERD Lanjutan, dan Normalisasi
 
-<span class="badge">SubCPMK1</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
+<!-- BEGIN AI-INLINE:4119b935e30e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 3</span>
+<h3>Generative dan Agentic AI untuk Model Data Relasional, ERD Lanjutan, dan Normalisasi</h3>
 
+**Arah RPS.** Proyek membangun data product yang terdokumentasi dengan data dictionary/datasheet, uji kualitas otomatis, dan kontrol penggunaan data sensitif.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK1 melalui fokus: Perancangan Entity-Relationship Diagram (ERD) untuk kebutuhan riset; Studi desain basis data multidisiplin; Sistem Manajemen Basis Data Lanjutan. |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
+<span class="badge">SubCPMK1</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
 
 <div class="info-box">
 Bab ini membahas **model data relasional, erd lanjutan, dan normalisasi** dalam konteks database survei mahasiswa dan data longitudinal pelayanan kesehatan. Sasaran akhirnya adalah mahasiswa mampu menghasilkan **skema relasional dan justifikasi normalisasi** yang dapat dipakai sebagai bagian dari proyek basis data statistik. Rujukan konseptual utama bab ini antara lain [@date2004; @ullman1982; @silberschatz2011].
@@ -677,11 +842,31 @@ Mahasiswa juga diharapkan mampu menghubungkan topik ini dengan proses analisis s
 
 ## Narasi Kasus Pembuka
 
+<!-- BEGIN AI-INLINE:0a7f2f869511 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Narasi Kasus Pembuka</h4>
+<p><strong>Konteks:</strong> Pertemuan 3: Model Data Relasional, ERD Lanjutan, dan Normalisasi.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Proyek membangun data product yang terdokumentasi dengan data dictionary/datasheet, uji kualitas otomatis, dan kontrol penggunaan data sensitif. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan sebuah tim riset sedang mengerjakan database survei mahasiswa dan data longitudinal pelayanan kesehatan. Tim tersebut memiliki data dari beberapa sumber, format berbeda, periode berbeda, dan tingkat agregasi berbeda. Sebagian data berada dalam file spreadsheet, sebagian dalam database institusi, sebagian lagi berasal dari API atau dokumen publik. Tanpa rancangan basis data yang sistematis, pekerjaan analisis akan tersendat oleh masalah yang berulang: kolom tidak konsisten, kode wilayah berubah, nilai hilang tidak terdokumentasi, dan hasil query sulit direproduksi. Pada bab ini, masalah tersebut diurai melalui perspektif model data relasional, erd lanjutan, dan normalisasi.
 
 Kasus pembuka ini penting karena sebagian besar proyek statistik terapan tidak dimulai dari data yang sudah rapi. Data sering datang sebagai kumpulan potongan informasi yang perlu dirapikan, disatukan, diberi makna, dan dijaga kualitasnya. Peran basis data adalah menyediakan struktur agar potongan tersebut dapat menjadi sistem informasi yang siap dianalisis.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:d23c9a225d96 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 3: Model Data Relasional, ERD Lanjutan, dan Normalisasi.</p>
+<p>Minta AI menjelaskan **Model Data Relasional, ERD Lanjutan, dan Normalisasi** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ### Relasi
 
@@ -775,7 +960,6 @@ Dalam konteks pembelajaran S2, penguasaan **normalisasi** harus menghasilkan kem
 
 Topik model data relasional, erd lanjutan, dan normalisasi dapat dirangkum melalui tiga prinsip: kejelasan struktur, keterlacakan proses, dan kesesuaian dengan kebutuhan analisis. Kejelasan struktur berarti tabel, relasi, tipe data, dan constraint dapat dijelaskan secara eksplisit. Keterlacakan proses berarti perubahan dari data mentah menuju data analisis memiliki log atau dokumentasi. Kesesuaian dengan kebutuhan analisis berarti desain data tidak hanya benar secara komputasional, tetapi juga relevan dengan tujuan statistik.
 
-
 <div class="formula">
 
 $$\text{Kualitas Sistem Data} = f(\text{struktur},\ \text{integritas},\ \text{keterlacakan},\ \text{keamanan},\ \text{kegunaan analitik})$$
@@ -783,7 +967,6 @@ $$\text{Kualitas Sistem Data} = f(\text{struktur},\ \text{integritas},\ \text{ke
 </div>
 
 Formula konseptual di atas bukan rumus estimasi, melainkan cara berpikir. Basis data yang baik tidak cukup hanya dapat menyimpan data. Ia harus menjaga integritas, memungkinkan audit, mengamankan akses, dan mempermudah analisis. Dalam konteks statistik, aspek kegunaan analitik menjadi sangat penting karena basis data pada akhirnya akan memberi makan model. Kalau makanannya kacau, model bisa ikut kacau; statistik juga butuh gizi data yang seimbang.
-
 
 <div class="formula">
 
@@ -822,6 +1005,16 @@ Contoh kode di atas sengaja dibuat ringkas agar fokus pembelajaran berada pada l
 
 ## Studi Kasus Mini
 
+<!-- BEGIN AI-INLINE:33b49c331ac6 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 3: Model Data Relasional, ERD Lanjutan, dan Normalisasi.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Proyek membangun data product yang terdokumentasi dengan data dictionary/datasheet, uji kualitas otomatis, dan kontrol penggunaan data sensitif. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Pada studi kasus mini, mahasiswa diminta mengembangkan skenario database survei mahasiswa dan data longitudinal pelayanan kesehatan. Misalkan terdapat entitas utama seperti wilayah, waktu, responden, observasi, indikator, dan sumber data. Mahasiswa harus menjawab pertanyaan: data apa yang dibutuhkan, bagaimana relasi antarentitas, bagaimana validasi dilakukan, dan bagaimana hasilnya dapat dipakai untuk analisis statistik. Jawaban tidak boleh berhenti pada gambar ERD atau query SQL; mahasiswa harus menjelaskan alasan metodologis di balik desain tersebut.
 
 Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memiliki rata-rata indikator tertinggi, bagaimana perubahan indikator antarperiode, apakah terdapat kelompok responden dengan karakteristik tertentu, dan bagaimana data dapat disiapkan untuk pemodelan statistik. Dengan pertanyaan seperti ini, basis data berfungsi langsung sebagai instrumen riset, bukan sekadar lemari penyimpanan digital.
@@ -836,6 +1029,16 @@ Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memili
 - Mengabaikan keamanan akses pada data sensitif, padahal data riset sering memuat informasi personal atau kelembagaan.
 
 ## Pengayaan Teoretis dan Diskusi
+
+<!-- BEGIN AI-INLINE:f759824cc3ea -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Pengayaan Teoretis dan Diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 3: Model Data Relasional, ERD Lanjutan, dan Normalisasi.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Sebuah basis data riset yang baik selalu memiliki jejak keputusan. Jejak itu tampak pada nama tabel, definisi variabel, tipe data, aturan validasi, kunci primer, kunci asing, serta dokumentasi transformasi. Tanpa jejak tersebut, data memang dapat dianalisis, tetapi kualitas inferensinya sulit dipertanggungjawabkan. Dalam riset terapan, situasi ini berbahaya karena hasil analisis sering dipakai sebagai dasar rekomendasi kebijakan, evaluasi program, atau pengambilan keputusan organisasi.
 
@@ -866,8 +1069,30 @@ Refleksi utama bab ini adalah bahwa model data relasional, erd lanjutan, dan nor
 <hr>
 # Pertemuan 4: Arsitektur Basis Data dan Data Warehouse
 
-<span class="badge">SubCPMK1</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
+<!-- BEGIN AI-INLINE:9ffdf5c9c264 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 4</span>
+<h3>Generative dan Agentic AI untuk Arsitektur Basis Data dan Data Warehouse</h3>
 
+**Arah RPS.** Pipeline ETL/ELT, data warehouse/lakehouse, streaming, API, cloud, dan pengantar vector database untuk aplikasi AI.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK1 melalui fokus: Struktur dan organisasi Basis Data; Keamanan, integritas, dan interoperabilitas data. |
+| Generative AI | Digunakan untuk menyusun data dictionary, mendeteksi potensi masalah kualitas data, dan mengusulkan aturan pemeriksaan. |
+| Agentic AI | Dapat memprofilkan data, menjalankan validasi skema, menandai missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa asal-usul data, unit observasi, coverage, kebocoran data, privasi, dan keputusan pembersihan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
+<span class="badge">SubCPMK1</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
 
 <div class="info-box">
 Bab ini membahas **arsitektur basis data dan data warehouse** dalam konteks integrasi data pendidikan, publikasi, dan tracer study untuk analitik program studi. Sasaran akhirnya adalah mahasiswa mampu menghasilkan **diagram arsitektur OLTP-OLAP dan tabel fakta-dimensi** yang dapat dipakai sebagai bagian dari proyek basis data statistik. Rujukan konseptual utama bab ini antara lain [@kimball2013; @inmon2005; @kleppmann2017].
@@ -881,11 +1106,31 @@ Mahasiswa juga diharapkan mampu menghubungkan topik ini dengan proses analisis s
 
 ## Narasi Kasus Pembuka
 
+<!-- BEGIN AI-INLINE:9901d231c90e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Narasi Kasus Pembuka</h4>
+<p><strong>Konteks:</strong> Pertemuan 4: Arsitektur Basis Data dan Data Warehouse.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Pipeline ETL/ELT, data warehouse/lakehouse, streaming, API, cloud, dan pengantar vector database untuk aplikasi AI. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan sebuah tim riset sedang mengerjakan integrasi data pendidikan, publikasi, dan tracer study untuk analitik program studi. Tim tersebut memiliki data dari beberapa sumber, format berbeda, periode berbeda, dan tingkat agregasi berbeda. Sebagian data berada dalam file spreadsheet, sebagian dalam database institusi, sebagian lagi berasal dari API atau dokumen publik. Tanpa rancangan basis data yang sistematis, pekerjaan analisis akan tersendat oleh masalah yang berulang: kolom tidak konsisten, kode wilayah berubah, nilai hilang tidak terdokumentasi, dan hasil query sulit direproduksi. Pada bab ini, masalah tersebut diurai melalui perspektif arsitektur basis data dan data warehouse.
 
 Kasus pembuka ini penting karena sebagian besar proyek statistik terapan tidak dimulai dari data yang sudah rapi. Data sering datang sebagai kumpulan potongan informasi yang perlu dirapikan, disatukan, diberi makna, dan dijaga kualitasnya. Peran basis data adalah menyediakan struktur agar potongan tersebut dapat menjadi sistem informasi yang siap dianalisis.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:30694f5bc551 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 4: Arsitektur Basis Data dan Data Warehouse.</p>
+<p>Minta AI menjelaskan **Arsitektur Basis Data dan Data Warehouse** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ### Oltp
 
@@ -979,7 +1224,6 @@ Dalam konteks pembelajaran S2, penguasaan **granularity** harus menghasilkan kem
 
 Topik arsitektur basis data dan data warehouse dapat dirangkum melalui tiga prinsip: kejelasan struktur, keterlacakan proses, dan kesesuaian dengan kebutuhan analisis. Kejelasan struktur berarti tabel, relasi, tipe data, dan constraint dapat dijelaskan secara eksplisit. Keterlacakan proses berarti perubahan dari data mentah menuju data analisis memiliki log atau dokumentasi. Kesesuaian dengan kebutuhan analisis berarti desain data tidak hanya benar secara komputasional, tetapi juga relevan dengan tujuan statistik.
 
-
 <div class="formula">
 
 $$\text{Kualitas Sistem Data} = f(\text{struktur},\ \text{integritas},\ \text{keterlacakan},\ \text{keamanan},\ \text{kegunaan analitik})$$
@@ -987,7 +1231,6 @@ $$\text{Kualitas Sistem Data} = f(\text{struktur},\ \text{integritas},\ \text{ke
 </div>
 
 Formula konseptual di atas bukan rumus estimasi, melainkan cara berpikir. Basis data yang baik tidak cukup hanya dapat menyimpan data. Ia harus menjaga integritas, memungkinkan audit, mengamankan akses, dan mempermudah analisis. Dalam konteks statistik, aspek kegunaan analitik menjadi sangat penting karena basis data pada akhirnya akan memberi makan model. Kalau makanannya kacau, model bisa ikut kacau; statistik juga butuh gizi data yang seimbang.
-
 
 <div class="formula">
 
@@ -1026,6 +1269,16 @@ Contoh kode di atas sengaja dibuat ringkas agar fokus pembelajaran berada pada l
 
 ## Studi Kasus Mini
 
+<!-- BEGIN AI-INLINE:4a7c3a36316e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 4: Arsitektur Basis Data dan Data Warehouse.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Pipeline ETL/ELT, data warehouse/lakehouse, streaming, API, cloud, dan pengantar vector database untuk aplikasi AI. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Pada studi kasus mini, mahasiswa diminta mengembangkan skenario integrasi data pendidikan, publikasi, dan tracer study untuk analitik program studi. Misalkan terdapat entitas utama seperti wilayah, waktu, responden, observasi, indikator, dan sumber data. Mahasiswa harus menjawab pertanyaan: data apa yang dibutuhkan, bagaimana relasi antarentitas, bagaimana validasi dilakukan, dan bagaimana hasilnya dapat dipakai untuk analisis statistik. Jawaban tidak boleh berhenti pada gambar ERD atau query SQL; mahasiswa harus menjelaskan alasan metodologis di balik desain tersebut.
 
 Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memiliki rata-rata indikator tertinggi, bagaimana perubahan indikator antarperiode, apakah terdapat kelompok responden dengan karakteristik tertentu, dan bagaimana data dapat disiapkan untuk pemodelan statistik. Dengan pertanyaan seperti ini, basis data berfungsi langsung sebagai instrumen riset, bukan sekadar lemari penyimpanan digital.
@@ -1040,6 +1293,16 @@ Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memili
 - Mengabaikan keamanan akses pada data sensitif, padahal data riset sering memuat informasi personal atau kelembagaan.
 
 ## Pengayaan Teoretis dan Diskusi
+
+<!-- BEGIN AI-INLINE:d87a9647815f -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Pengayaan Teoretis dan Diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 4: Arsitektur Basis Data dan Data Warehouse.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Sebuah basis data riset yang baik selalu memiliki jejak keputusan. Jejak itu tampak pada nama tabel, definisi variabel, tipe data, aturan validasi, kunci primer, kunci asing, serta dokumentasi transformasi. Tanpa jejak tersebut, data memang dapat dianalisis, tetapi kualitas inferensinya sulit dipertanggungjawabkan. Dalam riset terapan, situasi ini berbahaya karena hasil analisis sering dipakai sebagai dasar rekomendasi kebijakan, evaluasi program, atau pengambilan keputusan organisasi.
 
@@ -1070,8 +1333,30 @@ Refleksi utama bab ini adalah bahwa arsitektur basis data dan data warehouse sel
 <hr>
 # Pertemuan 5: Aljabar Relasional dan Dasar Query Kompleks
 
-<span class="badge">SubCPMK2</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
+<!-- BEGIN AI-INLINE:cf8fefd30069 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 5</span>
+<h3>Generative dan Agentic AI untuk Aljabar Relasional dan Dasar Query Kompleks</h3>
 
+**Arah RPS.** Data quality, metadata, lineage, provenance, versioning, access control, privacy, keamanan, dan audit log.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK2 melalui fokus: Optimasi struktur Basis Data untuk analisis statistik; Aljabar dan Kalkulus Relasional; Teori aljabar relasional untuk query. |
+| Generative AI | Digunakan untuk menyusun data dictionary, mendeteksi potensi masalah kualitas data, dan mengusulkan aturan pemeriksaan. |
+| Agentic AI | Dapat memprofilkan data, menjalankan validasi skema, menandai missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa asal-usul data, unit observasi, coverage, kebocoran data, privasi, dan keputusan pembersihan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
+<span class="badge">SubCPMK2</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
 
 <div class="info-box">
 Bab ini membahas **aljabar relasional dan dasar query kompleks** dalam konteks eksplorasi data multi-tabel untuk laporan penelitian kolaboratif. Sasaran akhirnya adalah mahasiswa mampu menghasilkan **ekspresi aljabar relasional dan translasi SQL** yang dapat dipakai sebagai bagian dari proyek basis data statistik. Rujukan konseptual utama bab ini antara lain [@ullman1982; @date2004; @ramakrishnan2002].
@@ -1085,11 +1370,31 @@ Mahasiswa juga diharapkan mampu menghubungkan topik ini dengan proses analisis s
 
 ## Narasi Kasus Pembuka
 
+<!-- BEGIN AI-INLINE:62a7883dda88 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Narasi Kasus Pembuka</h4>
+<p><strong>Konteks:</strong> Pertemuan 5: Aljabar Relasional dan Dasar Query Kompleks.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Data quality, metadata, lineage, provenance, versioning, access control, privacy, keamanan, dan audit log. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan sebuah tim riset sedang mengerjakan eksplorasi data multi-tabel untuk laporan penelitian kolaboratif. Tim tersebut memiliki data dari beberapa sumber, format berbeda, periode berbeda, dan tingkat agregasi berbeda. Sebagian data berada dalam file spreadsheet, sebagian dalam database institusi, sebagian lagi berasal dari API atau dokumen publik. Tanpa rancangan basis data yang sistematis, pekerjaan analisis akan tersendat oleh masalah yang berulang: kolom tidak konsisten, kode wilayah berubah, nilai hilang tidak terdokumentasi, dan hasil query sulit direproduksi. Pada bab ini, masalah tersebut diurai melalui perspektif aljabar relasional dan dasar query kompleks.
 
 Kasus pembuka ini penting karena sebagian besar proyek statistik terapan tidak dimulai dari data yang sudah rapi. Data sering datang sebagai kumpulan potongan informasi yang perlu dirapikan, disatukan, diberi makna, dan dijaga kualitasnya. Peran basis data adalah menyediakan struktur agar potongan tersebut dapat menjadi sistem informasi yang siap dianalisis.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:bb20d7db6732 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 5: Aljabar Relasional dan Dasar Query Kompleks.</p>
+<p>Minta AI menjelaskan **Aljabar Relasional dan Dasar Query Kompleks** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ### Selection
 
@@ -1183,7 +1488,6 @@ Dalam konteks pembelajaran S2, penguasaan **closure** harus menghasilkan kemampu
 
 Topik aljabar relasional dan dasar query kompleks dapat dirangkum melalui tiga prinsip: kejelasan struktur, keterlacakan proses, dan kesesuaian dengan kebutuhan analisis. Kejelasan struktur berarti tabel, relasi, tipe data, dan constraint dapat dijelaskan secara eksplisit. Keterlacakan proses berarti perubahan dari data mentah menuju data analisis memiliki log atau dokumentasi. Kesesuaian dengan kebutuhan analisis berarti desain data tidak hanya benar secara komputasional, tetapi juga relevan dengan tujuan statistik.
 
-
 <div class="formula">
 
 $$\text{Kualitas Sistem Data} = f(\text{struktur},\ \text{integritas},\ \text{keterlacakan},\ \text{keamanan},\ \text{kegunaan analitik})$$
@@ -1191,7 +1495,6 @@ $$\text{Kualitas Sistem Data} = f(\text{struktur},\ \text{integritas},\ \text{ke
 </div>
 
 Formula konseptual di atas bukan rumus estimasi, melainkan cara berpikir. Basis data yang baik tidak cukup hanya dapat menyimpan data. Ia harus menjaga integritas, memungkinkan audit, mengamankan akses, dan mempermudah analisis. Dalam konteks statistik, aspek kegunaan analitik menjadi sangat penting karena basis data pada akhirnya akan memberi makan model. Kalau makanannya kacau, model bisa ikut kacau; statistik juga butuh gizi data yang seimbang.
-
 
 <div class="formula">
 
@@ -1232,6 +1535,16 @@ Contoh kode di atas sengaja dibuat ringkas agar fokus pembelajaran berada pada l
 
 ## Studi Kasus Mini
 
+<!-- BEGIN AI-INLINE:d0db9946e441 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 5: Aljabar Relasional dan Dasar Query Kompleks.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Data quality, metadata, lineage, provenance, versioning, access control, privacy, keamanan, dan audit log. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Pada studi kasus mini, mahasiswa diminta mengembangkan skenario eksplorasi data multi-tabel untuk laporan penelitian kolaboratif. Misalkan terdapat entitas utama seperti wilayah, waktu, responden, observasi, indikator, dan sumber data. Mahasiswa harus menjawab pertanyaan: data apa yang dibutuhkan, bagaimana relasi antarentitas, bagaimana validasi dilakukan, dan bagaimana hasilnya dapat dipakai untuk analisis statistik. Jawaban tidak boleh berhenti pada gambar ERD atau query SQL; mahasiswa harus menjelaskan alasan metodologis di balik desain tersebut.
 
 Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memiliki rata-rata indikator tertinggi, bagaimana perubahan indikator antarperiode, apakah terdapat kelompok responden dengan karakteristik tertentu, dan bagaimana data dapat disiapkan untuk pemodelan statistik. Dengan pertanyaan seperti ini, basis data berfungsi langsung sebagai instrumen riset, bukan sekadar lemari penyimpanan digital.
@@ -1246,6 +1559,16 @@ Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memili
 - Mengabaikan keamanan akses pada data sensitif, padahal data riset sering memuat informasi personal atau kelembagaan.
 
 ## Pengayaan Teoretis dan Diskusi
+
+<!-- BEGIN AI-INLINE:8b00097c63eb -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Pengayaan Teoretis dan Diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 5: Aljabar Relasional dan Dasar Query Kompleks.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Sebuah basis data riset yang baik selalu memiliki jejak keputusan. Jejak itu tampak pada nama tabel, definisi variabel, tipe data, aturan validasi, kunci primer, kunci asing, serta dokumentasi transformasi. Tanpa jejak tersebut, data memang dapat dianalisis, tetapi kualitas inferensinya sulit dipertanggungjawabkan. Dalam riset terapan, situasi ini berbahaya karena hasil analisis sering dipakai sebagai dasar rekomendasi kebijakan, evaluasi program, atau pengambilan keputusan organisasi.
 
@@ -1276,8 +1599,30 @@ Refleksi utama bab ini adalah bahwa aljabar relasional dan dasar query kompleks 
 <hr>
 # Pertemuan 6: SQL/MySQL Lanjutan: Join, Subquery, Agregasi, View, dan Trigger
 
-<span class="badge">SubCPMK2</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
+<!-- BEGIN AI-INLINE:df7ad445d7ff -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 6</span>
+<h3>Generative dan Agentic AI untuk SQL/MySQL Lanjutan: Join, Subquery, Agregasi, View, dan Trigger</h3>
 
+**Arah RPS.** Proyek membangun data product yang terdokumentasi dengan data dictionary/datasheet, uji kualitas otomatis, dan kontrol penggunaan data sensitif.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK2 melalui fokus: Kalkulus relasional dan aplikasinya; Penyusunan query kompleks berbasis logika; Structured Query Language (SQL) dan MySQL Lanjutan. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
+<span class="badge">SubCPMK2</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
 
 <div class="info-box">
 Bab ini membahas **sql/mysql lanjutan: join, subquery, agregasi, view, dan trigger** dalam konteks statistik deskriptif berbasis basis data untuk dashboard survei. Sasaran akhirnya adalah mahasiswa mampu menghasilkan **script SQL lanjutan dan interpretasi output** yang dapat dipakai sebagai bagian dari proyek basis data statistik. Rujukan konseptual utama bab ini antara lain [@ramakrishnan2002; @silberschatz2011; @bulger2004].
@@ -1291,11 +1636,31 @@ Mahasiswa juga diharapkan mampu menghubungkan topik ini dengan proses analisis s
 
 ## Narasi Kasus Pembuka
 
+<!-- BEGIN AI-INLINE:1563f987b033 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Narasi Kasus Pembuka</h4>
+<p><strong>Konteks:</strong> Pertemuan 6: SQL/MySQL Lanjutan: Join, Subquery, Agregasi, View, dan Trigger.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Proyek membangun data product yang terdokumentasi dengan data dictionary/datasheet, uji kualitas otomatis, dan kontrol penggunaan data sensitif. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan sebuah tim riset sedang mengerjakan statistik deskriptif berbasis basis data untuk dashboard survei. Tim tersebut memiliki data dari beberapa sumber, format berbeda, periode berbeda, dan tingkat agregasi berbeda. Sebagian data berada dalam file spreadsheet, sebagian dalam database institusi, sebagian lagi berasal dari API atau dokumen publik. Tanpa rancangan basis data yang sistematis, pekerjaan analisis akan tersendat oleh masalah yang berulang: kolom tidak konsisten, kode wilayah berubah, nilai hilang tidak terdokumentasi, dan hasil query sulit direproduksi. Pada bab ini, masalah tersebut diurai melalui perspektif sql/mysql lanjutan: join, subquery, agregasi, view, dan trigger.
 
 Kasus pembuka ini penting karena sebagian besar proyek statistik terapan tidak dimulai dari data yang sudah rapi. Data sering datang sebagai kumpulan potongan informasi yang perlu dirapikan, disatukan, diberi makna, dan dijaga kualitasnya. Peran basis data adalah menyediakan struktur agar potongan tersebut dapat menjadi sistem informasi yang siap dianalisis.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:1c787d6ff3ae -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 6: SQL/MySQL Lanjutan: Join, Subquery, Agregasi, View, dan Trigger.</p>
+<p>Minta AI menjelaskan **SQL/MySQL Lanjutan: Join, Subquery, Agregasi, View, dan Trigger** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ### Inner Join
 
@@ -1389,7 +1754,6 @@ Dalam konteks pembelajaran S2, penguasaan **stored procedure** harus menghasilka
 
 Topik sql/mysql lanjutan: join, subquery, agregasi, view, dan trigger dapat dirangkum melalui tiga prinsip: kejelasan struktur, keterlacakan proses, dan kesesuaian dengan kebutuhan analisis. Kejelasan struktur berarti tabel, relasi, tipe data, dan constraint dapat dijelaskan secara eksplisit. Keterlacakan proses berarti perubahan dari data mentah menuju data analisis memiliki log atau dokumentasi. Kesesuaian dengan kebutuhan analisis berarti desain data tidak hanya benar secara komputasional, tetapi juga relevan dengan tujuan statistik.
 
-
 <div class="formula">
 
 $$\text{Kualitas Sistem Data} = f(\text{struktur},\ \text{integritas},\ \text{keterlacakan},\ \text{keamanan},\ \text{kegunaan analitik})$$
@@ -1397,7 +1761,6 @@ $$\text{Kualitas Sistem Data} = f(\text{struktur},\ \text{integritas},\ \text{ke
 </div>
 
 Formula konseptual di atas bukan rumus estimasi, melainkan cara berpikir. Basis data yang baik tidak cukup hanya dapat menyimpan data. Ia harus menjaga integritas, memungkinkan audit, mengamankan akses, dan mempermudah analisis. Dalam konteks statistik, aspek kegunaan analitik menjadi sangat penting karena basis data pada akhirnya akan memberi makan model. Kalau makanannya kacau, model bisa ikut kacau; statistik juga butuh gizi data yang seimbang.
-
 
 <div class="formula">
 
@@ -1439,6 +1802,16 @@ Contoh kode di atas sengaja dibuat ringkas agar fokus pembelajaran berada pada l
 
 ## Studi Kasus Mini
 
+<!-- BEGIN AI-INLINE:750c98781bea -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 6: SQL/MySQL Lanjutan: Join, Subquery, Agregasi, View, dan Trigger.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Proyek membangun data product yang terdokumentasi dengan data dictionary/datasheet, uji kualitas otomatis, dan kontrol penggunaan data sensitif. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Pada studi kasus mini, mahasiswa diminta mengembangkan skenario statistik deskriptif berbasis basis data untuk dashboard survei. Misalkan terdapat entitas utama seperti wilayah, waktu, responden, observasi, indikator, dan sumber data. Mahasiswa harus menjawab pertanyaan: data apa yang dibutuhkan, bagaimana relasi antarentitas, bagaimana validasi dilakukan, dan bagaimana hasilnya dapat dipakai untuk analisis statistik. Jawaban tidak boleh berhenti pada gambar ERD atau query SQL; mahasiswa harus menjelaskan alasan metodologis di balik desain tersebut.
 
 Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memiliki rata-rata indikator tertinggi, bagaimana perubahan indikator antarperiode, apakah terdapat kelompok responden dengan karakteristik tertentu, dan bagaimana data dapat disiapkan untuk pemodelan statistik. Dengan pertanyaan seperti ini, basis data berfungsi langsung sebagai instrumen riset, bukan sekadar lemari penyimpanan digital.
@@ -1453,6 +1826,16 @@ Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memili
 - Mengabaikan keamanan akses pada data sensitif, padahal data riset sering memuat informasi personal atau kelembagaan.
 
 ## Pengayaan Teoretis dan Diskusi
+
+<!-- BEGIN AI-INLINE:9d4c1272f9fc -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Pengayaan Teoretis dan Diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 6: SQL/MySQL Lanjutan: Join, Subquery, Agregasi, View, dan Trigger.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Sebuah basis data riset yang baik selalu memiliki jejak keputusan. Jejak itu tampak pada nama tabel, definisi variabel, tipe data, aturan validasi, kunci primer, kunci asing, serta dokumentasi transformasi. Tanpa jejak tersebut, data memang dapat dianalisis, tetapi kualitas inferensinya sulit dipertanggungjawabkan. Dalam riset terapan, situasi ini berbahaya karena hasil analisis sering dipakai sebagai dasar rekomendasi kebijakan, evaluasi program, atau pengambilan keputusan organisasi.
 
@@ -1483,8 +1866,30 @@ Refleksi utama bab ini adalah bahwa sql/mysql lanjutan: join, subquery, agregasi
 <hr>
 # Pertemuan 7: Optimasi Query dan Indeks untuk Data Berskala Besar
 
-<span class="badge">SubCPMK2</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
+<!-- BEGIN AI-INLINE:ba7fa920034d -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 7</span>
+<h3>Generative dan Agentic AI untuk Optimasi Query dan Indeks untuk Data Berskala Besar</h3>
 
+**Arah RPS.** Pipeline ETL/ELT, data warehouse/lakehouse, streaming, API, cloud, dan pengantar vector database untuk aplikasi AI.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK2 melalui fokus: Penerapan query tingkat lanjut (join, subquery, agregasi, trigger); Optimasi query untuk data berskala besar; Praktikum SQL/MySQL dengan XAMPP. |
+| Generative AI | Digunakan untuk menyusun data dictionary, mendeteksi potensi masalah kualitas data, dan mengusulkan aturan pemeriksaan. |
+| Agentic AI | Dapat memprofilkan data, menjalankan validasi skema, menandai missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa asal-usul data, unit observasi, coverage, kebocoran data, privasi, dan keputusan pembersihan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
+<span class="badge">SubCPMK2</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
 
 <div class="info-box">
 Bab ini membahas **optimasi query dan indeks untuk data berskala besar** dalam konteks data transaksi atau survei besar yang harus diekstrak untuk model statistik. Sasaran akhirnya adalah mahasiswa mampu menghasilkan **laporan uji query plan dan rekomendasi indeks** yang dapat dipakai sebagai bagian dari proyek basis data statistik. Rujukan konseptual utama bab ini antara lain [@ramakrishnan2002; @silberschatz2011; @kleppmann2017].
@@ -1498,11 +1903,31 @@ Mahasiswa juga diharapkan mampu menghubungkan topik ini dengan proses analisis s
 
 ## Narasi Kasus Pembuka
 
+<!-- BEGIN AI-INLINE:24df39d00a0a -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Narasi Kasus Pembuka</h4>
+<p><strong>Konteks:</strong> Pertemuan 7: Optimasi Query dan Indeks untuk Data Berskala Besar.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Pipeline ETL/ELT, data warehouse/lakehouse, streaming, API, cloud, dan pengantar vector database untuk aplikasi AI. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan sebuah tim riset sedang mengerjakan data transaksi atau survei besar yang harus diekstrak untuk model statistik. Tim tersebut memiliki data dari beberapa sumber, format berbeda, periode berbeda, dan tingkat agregasi berbeda. Sebagian data berada dalam file spreadsheet, sebagian dalam database institusi, sebagian lagi berasal dari API atau dokumen publik. Tanpa rancangan basis data yang sistematis, pekerjaan analisis akan tersendat oleh masalah yang berulang: kolom tidak konsisten, kode wilayah berubah, nilai hilang tidak terdokumentasi, dan hasil query sulit direproduksi. Pada bab ini, masalah tersebut diurai melalui perspektif optimasi query dan indeks untuk data berskala besar.
 
 Kasus pembuka ini penting karena sebagian besar proyek statistik terapan tidak dimulai dari data yang sudah rapi. Data sering datang sebagai kumpulan potongan informasi yang perlu dirapikan, disatukan, diberi makna, dan dijaga kualitasnya. Peran basis data adalah menyediakan struktur agar potongan tersebut dapat menjadi sistem informasi yang siap dianalisis.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:ff0d5c31a7a5 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 7: Optimasi Query dan Indeks untuk Data Berskala Besar.</p>
+<p>Minta AI menjelaskan **Optimasi Query dan Indeks untuk Data Berskala Besar** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ### Index
 
@@ -1586,7 +2011,6 @@ Secara praktis, pembahasan **materialized view** harus selalu dikaitkan dengan d
 
 Topik optimasi query dan indeks untuk data berskala besar dapat dirangkum melalui tiga prinsip: kejelasan struktur, keterlacakan proses, dan kesesuaian dengan kebutuhan analisis. Kejelasan struktur berarti tabel, relasi, tipe data, dan constraint dapat dijelaskan secara eksplisit. Keterlacakan proses berarti perubahan dari data mentah menuju data analisis memiliki log atau dokumentasi. Kesesuaian dengan kebutuhan analisis berarti desain data tidak hanya benar secara komputasional, tetapi juga relevan dengan tujuan statistik.
 
-
 <div class="formula">
 
 $$\text{Kualitas Sistem Data} = f(\text{struktur},\ \text{integritas},\ \text{keterlacakan},\ \text{keamanan},\ \text{kegunaan analitik})$$
@@ -1594,7 +2018,6 @@ $$\text{Kualitas Sistem Data} = f(\text{struktur},\ \text{integritas},\ \text{ke
 </div>
 
 Formula konseptual di atas bukan rumus estimasi, melainkan cara berpikir. Basis data yang baik tidak cukup hanya dapat menyimpan data. Ia harus menjaga integritas, memungkinkan audit, mengamankan akses, dan mempermudah analisis. Dalam konteks statistik, aspek kegunaan analitik menjadi sangat penting karena basis data pada akhirnya akan memberi makan model. Kalau makanannya kacau, model bisa ikut kacau; statistik juga butuh gizi data yang seimbang.
-
 
 <div class="formula">
 
@@ -1634,6 +2057,16 @@ Contoh kode di atas sengaja dibuat ringkas agar fokus pembelajaran berada pada l
 
 ## Studi Kasus Mini
 
+<!-- BEGIN AI-INLINE:ba4e38eae0e4 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 7: Optimasi Query dan Indeks untuk Data Berskala Besar.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Pipeline ETL/ELT, data warehouse/lakehouse, streaming, API, cloud, dan pengantar vector database untuk aplikasi AI. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Pada studi kasus mini, mahasiswa diminta mengembangkan skenario data transaksi atau survei besar yang harus diekstrak untuk model statistik. Misalkan terdapat entitas utama seperti wilayah, waktu, responden, observasi, indikator, dan sumber data. Mahasiswa harus menjawab pertanyaan: data apa yang dibutuhkan, bagaimana relasi antarentitas, bagaimana validasi dilakukan, dan bagaimana hasilnya dapat dipakai untuk analisis statistik. Jawaban tidak boleh berhenti pada gambar ERD atau query SQL; mahasiswa harus menjelaskan alasan metodologis di balik desain tersebut.
 
 Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memiliki rata-rata indikator tertinggi, bagaimana perubahan indikator antarperiode, apakah terdapat kelompok responden dengan karakteristik tertentu, dan bagaimana data dapat disiapkan untuk pemodelan statistik. Dengan pertanyaan seperti ini, basis data berfungsi langsung sebagai instrumen riset, bukan sekadar lemari penyimpanan digital.
@@ -1648,6 +2081,16 @@ Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memili
 - Mengabaikan keamanan akses pada data sensitif, padahal data riset sering memuat informasi personal atau kelembagaan.
 
 ## Pengayaan Teoretis dan Diskusi
+
+<!-- BEGIN AI-INLINE:06ff2bf5fa8c -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Pengayaan Teoretis dan Diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 7: Optimasi Query dan Indeks untuk Data Berskala Besar.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Sebuah basis data riset yang baik selalu memiliki jejak keputusan. Jejak itu tampak pada nama tabel, definisi variabel, tipe data, aturan validasi, kunci primer, kunci asing, serta dokumentasi transformasi. Tanpa jejak tersebut, data memang dapat dianalisis, tetapi kualitas inferensinya sulit dipertanggungjawabkan. Dalam riset terapan, situasi ini berbahaya karena hasil analisis sering dipakai sebagai dasar rekomendasi kebijakan, evaluasi program, atau pengambilan keputusan organisasi.
 
@@ -1678,8 +2121,30 @@ Refleksi utama bab ini adalah bahwa optimasi query dan indeks untuk data berskal
 <hr>
 # Pertemuan 8: UTS: Proyek Pendahuluan, Presentasi, dan Review Desain
 
-<span class="badge">SubCPMK1-2</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
+<!-- BEGIN AI-INLINE:4a4caf2159e1 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 8</span>
+<h3>Generative dan Agentic AI untuk UTS: Proyek Pendahuluan, Presentasi, dan Review Desain</h3>
 
+**Arah RPS.** Penggunaan AI hanya sesuai instruksi dosen; seluruh bantuan harus diungkapkan dan hasil diverifikasi.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK1–2 melalui fokus: Ujian Tengah Semester. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
+<span class="badge">SubCPMK1-2</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
 
 <div class="info-box">
 Bab ini membahas **uts: proyek pendahuluan, presentasi, dan review desain** dalam konteks proyek basis data statistik yang dikembangkan bertahap sampai UAS. Sasaran akhirnya adalah mahasiswa mampu menghasilkan **proposal awal, ERD, dan demonstrasi query** yang dapat dipakai sebagai bagian dari proyek basis data statistik. Rujukan konseptual utama bab ini antara lain [@elmasri2015; @connolly2015; @dama2017].
@@ -1693,11 +2158,31 @@ Mahasiswa juga diharapkan mampu menghubungkan topik ini dengan proses analisis s
 
 ## Narasi Kasus Pembuka
 
+<!-- BEGIN AI-INLINE:9949d7a03031 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Narasi Kasus Pembuka</h4>
+<p><strong>Konteks:</strong> Pertemuan 8: UTS: Proyek Pendahuluan, Presentasi, dan Review Desain.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Penggunaan AI hanya sesuai instruksi dosen; seluruh bantuan harus diungkapkan dan hasil diverifikasi. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan sebuah tim riset sedang mengerjakan proyek basis data statistik yang dikembangkan bertahap sampai UAS. Tim tersebut memiliki data dari beberapa sumber, format berbeda, periode berbeda, dan tingkat agregasi berbeda. Sebagian data berada dalam file spreadsheet, sebagian dalam database institusi, sebagian lagi berasal dari API atau dokumen publik. Tanpa rancangan basis data yang sistematis, pekerjaan analisis akan tersendat oleh masalah yang berulang: kolom tidak konsisten, kode wilayah berubah, nilai hilang tidak terdokumentasi, dan hasil query sulit direproduksi. Pada bab ini, masalah tersebut diurai melalui perspektif uts: proyek pendahuluan, presentasi, dan review desain.
 
 Kasus pembuka ini penting karena sebagian besar proyek statistik terapan tidak dimulai dari data yang sudah rapi. Data sering datang sebagai kumpulan potongan informasi yang perlu dirapikan, disatukan, diberi makna, dan dijaga kualitasnya. Peran basis data adalah menyediakan struktur agar potongan tersebut dapat menjadi sistem informasi yang siap dianalisis.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:7f2503b4353a -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 8: UTS: Proyek Pendahuluan, Presentasi, dan Review Desain.</p>
+<p>Minta AI menjelaskan **UTS: Proyek Pendahuluan, Presentasi, dan Review Desain** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ### Problem Statement
 
@@ -1781,7 +2266,6 @@ Secara praktis, pembahasan **peer review** harus selalu dikaitkan dengan dokumen
 
 Topik uts: proyek pendahuluan, presentasi, dan review desain dapat dirangkum melalui tiga prinsip: kejelasan struktur, keterlacakan proses, dan kesesuaian dengan kebutuhan analisis. Kejelasan struktur berarti tabel, relasi, tipe data, dan constraint dapat dijelaskan secara eksplisit. Keterlacakan proses berarti perubahan dari data mentah menuju data analisis memiliki log atau dokumentasi. Kesesuaian dengan kebutuhan analisis berarti desain data tidak hanya benar secara komputasional, tetapi juga relevan dengan tujuan statistik.
 
-
 <div class="formula">
 
 $$\text{Kualitas Sistem Data} = f(\text{struktur},\ \text{integritas},\ \text{keterlacakan},\ \text{keamanan},\ \text{kegunaan analitik})$$
@@ -1821,6 +2305,16 @@ Contoh kode di atas sengaja dibuat ringkas agar fokus pembelajaran berada pada l
 
 ## Studi Kasus Mini
 
+<!-- BEGIN AI-INLINE:8eaf525ba89b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 8: UTS: Proyek Pendahuluan, Presentasi, dan Review Desain.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Penggunaan AI hanya sesuai instruksi dosen; seluruh bantuan harus diungkapkan dan hasil diverifikasi. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Pada studi kasus mini, mahasiswa diminta mengembangkan skenario proyek basis data statistik yang dikembangkan bertahap sampai UAS. Misalkan terdapat entitas utama seperti wilayah, waktu, responden, observasi, indikator, dan sumber data. Mahasiswa harus menjawab pertanyaan: data apa yang dibutuhkan, bagaimana relasi antarentitas, bagaimana validasi dilakukan, dan bagaimana hasilnya dapat dipakai untuk analisis statistik. Jawaban tidak boleh berhenti pada gambar ERD atau query SQL; mahasiswa harus menjelaskan alasan metodologis di balik desain tersebut.
 
 Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memiliki rata-rata indikator tertinggi, bagaimana perubahan indikator antarperiode, apakah terdapat kelompok responden dengan karakteristik tertentu, dan bagaimana data dapat disiapkan untuk pemodelan statistik. Dengan pertanyaan seperti ini, basis data berfungsi langsung sebagai instrumen riset, bukan sekadar lemari penyimpanan digital.
@@ -1835,6 +2329,16 @@ Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memili
 - Mengabaikan keamanan akses pada data sensitif, padahal data riset sering memuat informasi personal atau kelembagaan.
 
 ## Pengayaan Teoretis dan Diskusi
+
+<!-- BEGIN AI-INLINE:5ede6f6836d7 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Pengayaan Teoretis dan Diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 8: UTS: Proyek Pendahuluan, Presentasi, dan Review Desain.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Sebuah basis data riset yang baik selalu memiliki jejak keputusan. Jejak itu tampak pada nama tabel, definisi variabel, tipe data, aturan validasi, kunci primer, kunci asing, serta dokumentasi transformasi. Tanpa jejak tersebut, data memang dapat dianalisis, tetapi kualitas inferensinya sulit dipertanggungjawabkan. Dalam riset terapan, situasi ini berbahaya karena hasil analisis sering dipakai sebagai dasar rekomendasi kebijakan, evaluasi program, atau pengambilan keputusan organisasi.
 
@@ -1865,8 +2369,30 @@ Refleksi utama bab ini adalah bahwa uts: proyek pendahuluan, presentasi, dan rev
 <hr>
 # Pertemuan 9: Manipulasi, Manajemen, dan Integrasi Data Multi-Sumber
 
-<span class="badge">SubCPMK3</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
+<!-- BEGIN AI-INLINE:615dc4dbe19f -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 9</span>
+<h3>Generative dan Agentic AI untuk Manipulasi, Manajemen, dan Integrasi Data Multi-Sumber</h3>
 
+**Arah RPS.** Data quality, metadata, lineage, provenance, versioning, access control, privacy, keamanan, dan audit log.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3 melalui fokus: Manipulasi, Manajemen, dan Integrasi Data; Data wrangling dan pembersihan data (cleaning); Integrasi data multi-sumber. |
+| Generative AI | Digunakan untuk menyusun data dictionary, mendeteksi potensi masalah kualitas data, dan mengusulkan aturan pemeriksaan. |
+| Agentic AI | Dapat memprofilkan data, menjalankan validasi skema, menandai missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa asal-usul data, unit observasi, coverage, kebocoran data, privasi, dan keputusan pembersihan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
+<span class="badge">SubCPMK3</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
 
 <div class="info-box">
 Bab ini membahas **manipulasi, manajemen, dan integrasi data multi-sumber** dalam konteks menggabungkan data survei, data administratif, dan data geospasial untuk analisis kebijakan. Sasaran akhirnya adalah mahasiswa mampu menghasilkan **workflow integrasi dan log transformasi** yang dapat dipakai sebagai bagian dari proyek basis data statistik. Rujukan konseptual utama bab ini antara lain [@dama2017; @mckinney2022; @wickham2023].
@@ -1880,11 +2406,31 @@ Mahasiswa juga diharapkan mampu menghubungkan topik ini dengan proses analisis s
 
 ## Narasi Kasus Pembuka
 
+<!-- BEGIN AI-INLINE:9d6eac609c3b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Narasi Kasus Pembuka</h4>
+<p><strong>Konteks:</strong> Pertemuan 9: Manipulasi, Manajemen, dan Integrasi Data Multi-Sumber.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Data quality, metadata, lineage, provenance, versioning, access control, privacy, keamanan, dan audit log. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan sebuah tim riset sedang mengerjakan menggabungkan data survei, data administratif, dan data geospasial untuk analisis kebijakan. Tim tersebut memiliki data dari beberapa sumber, format berbeda, periode berbeda, dan tingkat agregasi berbeda. Sebagian data berada dalam file spreadsheet, sebagian dalam database institusi, sebagian lagi berasal dari API atau dokumen publik. Tanpa rancangan basis data yang sistematis, pekerjaan analisis akan tersendat oleh masalah yang berulang: kolom tidak konsisten, kode wilayah berubah, nilai hilang tidak terdokumentasi, dan hasil query sulit direproduksi. Pada bab ini, masalah tersebut diurai melalui perspektif manipulasi, manajemen, dan integrasi data multi-sumber.
 
 Kasus pembuka ini penting karena sebagian besar proyek statistik terapan tidak dimulai dari data yang sudah rapi. Data sering datang sebagai kumpulan potongan informasi yang perlu dirapikan, disatukan, diberi makna, dan dijaga kualitasnya. Peran basis data adalah menyediakan struktur agar potongan tersebut dapat menjadi sistem informasi yang siap dianalisis.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:55227a276f50 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 9: Manipulasi, Manajemen, dan Integrasi Data Multi-Sumber.</p>
+<p>Minta AI menjelaskan **Manipulasi, Manajemen, dan Integrasi Data Multi-Sumber** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ### Data Cleaning
 
@@ -1968,7 +2514,6 @@ Secara praktis, pembahasan **data lineage** harus selalu dikaitkan dengan dokume
 
 Topik manipulasi, manajemen, dan integrasi data multi-sumber dapat dirangkum melalui tiga prinsip: kejelasan struktur, keterlacakan proses, dan kesesuaian dengan kebutuhan analisis. Kejelasan struktur berarti tabel, relasi, tipe data, dan constraint dapat dijelaskan secara eksplisit. Keterlacakan proses berarti perubahan dari data mentah menuju data analisis memiliki log atau dokumentasi. Kesesuaian dengan kebutuhan analisis berarti desain data tidak hanya benar secara komputasional, tetapi juga relevan dengan tujuan statistik.
 
-
 <div class="formula">
 
 $$\text{Kualitas Sistem Data} = f(\text{struktur},\ \text{integritas},\ \text{keterlacakan},\ \text{keamanan},\ \text{kegunaan analitik})$$
@@ -1976,7 +2521,6 @@ $$\text{Kualitas Sistem Data} = f(\text{struktur},\ \text{integritas},\ \text{ke
 </div>
 
 Formula konseptual di atas bukan rumus estimasi, melainkan cara berpikir. Basis data yang baik tidak cukup hanya dapat menyimpan data. Ia harus menjaga integritas, memungkinkan audit, mengamankan akses, dan mempermudah analisis. Dalam konteks statistik, aspek kegunaan analitik menjadi sangat penting karena basis data pada akhirnya akan memberi makan model. Kalau makanannya kacau, model bisa ikut kacau; statistik juga butuh gizi data yang seimbang.
-
 
 <div class="formula">
 
@@ -2017,6 +2561,16 @@ Contoh kode di atas sengaja dibuat ringkas agar fokus pembelajaran berada pada l
 
 ## Studi Kasus Mini
 
+<!-- BEGIN AI-INLINE:e4572e70a5cf -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 9: Manipulasi, Manajemen, dan Integrasi Data Multi-Sumber.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Data quality, metadata, lineage, provenance, versioning, access control, privacy, keamanan, dan audit log. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Pada studi kasus mini, mahasiswa diminta mengembangkan skenario menggabungkan data survei, data administratif, dan data geospasial untuk analisis kebijakan. Misalkan terdapat entitas utama seperti wilayah, waktu, responden, observasi, indikator, dan sumber data. Mahasiswa harus menjawab pertanyaan: data apa yang dibutuhkan, bagaimana relasi antarentitas, bagaimana validasi dilakukan, dan bagaimana hasilnya dapat dipakai untuk analisis statistik. Jawaban tidak boleh berhenti pada gambar ERD atau query SQL; mahasiswa harus menjelaskan alasan metodologis di balik desain tersebut.
 
 Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memiliki rata-rata indikator tertinggi, bagaimana perubahan indikator antarperiode, apakah terdapat kelompok responden dengan karakteristik tertentu, dan bagaimana data dapat disiapkan untuk pemodelan statistik. Dengan pertanyaan seperti ini, basis data berfungsi langsung sebagai instrumen riset, bukan sekadar lemari penyimpanan digital.
@@ -2031,6 +2585,16 @@ Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memili
 - Mengabaikan keamanan akses pada data sensitif, padahal data riset sering memuat informasi personal atau kelembagaan.
 
 ## Pengayaan Teoretis dan Diskusi
+
+<!-- BEGIN AI-INLINE:9893cfdfc5bb -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Pengayaan Teoretis dan Diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 9: Manipulasi, Manajemen, dan Integrasi Data Multi-Sumber.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Sebuah basis data riset yang baik selalu memiliki jejak keputusan. Jejak itu tampak pada nama tabel, definisi variabel, tipe data, aturan validasi, kunci primer, kunci asing, serta dokumentasi transformasi. Tanpa jejak tersebut, data memang dapat dianalisis, tetapi kualitas inferensinya sulit dipertanggungjawabkan. Dalam riset terapan, situasi ini berbahaya karena hasil analisis sering dipakai sebagai dasar rekomendasi kebijakan, evaluasi program, atau pengambilan keputusan organisasi.
 
@@ -2061,8 +2625,30 @@ Refleksi utama bab ini adalah bahwa manipulasi, manajemen, dan integrasi data mu
 <hr>
 # Pertemuan 10: ETL: Extract, Transform, Load dan Automasi Basis Data
 
-<span class="badge">SubCPMK3</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
+<!-- BEGIN AI-INLINE:7b63a4e97226 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 10</span>
+<h3>Generative dan Agentic AI untuk ETL: Extract, Transform, Load dan Automasi Basis Data</h3>
 
+**Arah RPS.** Proyek membangun data product yang terdokumentasi dengan data dictionary/datasheet, uji kualitas otomatis, dan kontrol penggunaan data sensitif.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3 melalui fokus: Workflow manajemen data statistik; ETL (Extract, Transform, Load) dan Otomasi Basis Data; Proses ETL dalam pengelolaan data statistik. |
+| Generative AI | Digunakan untuk menyusun data dictionary, mendeteksi potensi masalah kualitas data, dan mengusulkan aturan pemeriksaan. |
+| Agentic AI | Dapat memprofilkan data, menjalankan validasi skema, menandai missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa asal-usul data, unit observasi, coverage, kebocoran data, privasi, dan keputusan pembersihan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
+<span class="badge">SubCPMK3</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
 
 <div class="info-box">
 Bab ini membahas **etl: extract, transform, load dan automasi basis data** dalam konteks pipeline data statistik periodik untuk laporan bulanan atau dashboard program. Sasaran akhirnya adalah mahasiswa mampu menghasilkan **script ETL dan dokumentasi jadwal proses** yang dapat dipakai sebagai bagian dari proyek basis data statistik. Rujukan konseptual utama bab ini antara lain [@kimball2004; @kimball2013; @kleppmann2017].
@@ -2076,11 +2662,31 @@ Mahasiswa juga diharapkan mampu menghubungkan topik ini dengan proses analisis s
 
 ## Narasi Kasus Pembuka
 
+<!-- BEGIN AI-INLINE:2887e1c13022 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Narasi Kasus Pembuka</h4>
+<p><strong>Konteks:</strong> Pertemuan 10: ETL: Extract, Transform, Load dan Automasi Basis Data.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Proyek membangun data product yang terdokumentasi dengan data dictionary/datasheet, uji kualitas otomatis, dan kontrol penggunaan data sensitif. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan sebuah tim riset sedang mengerjakan pipeline data statistik periodik untuk laporan bulanan atau dashboard program. Tim tersebut memiliki data dari beberapa sumber, format berbeda, periode berbeda, dan tingkat agregasi berbeda. Sebagian data berada dalam file spreadsheet, sebagian dalam database institusi, sebagian lagi berasal dari API atau dokumen publik. Tanpa rancangan basis data yang sistematis, pekerjaan analisis akan tersendat oleh masalah yang berulang: kolom tidak konsisten, kode wilayah berubah, nilai hilang tidak terdokumentasi, dan hasil query sulit direproduksi. Pada bab ini, masalah tersebut diurai melalui perspektif etl: extract, transform, load dan automasi basis data.
 
 Kasus pembuka ini penting karena sebagian besar proyek statistik terapan tidak dimulai dari data yang sudah rapi. Data sering datang sebagai kumpulan potongan informasi yang perlu dirapikan, disatukan, diberi makna, dan dijaga kualitasnya. Peran basis data adalah menyediakan struktur agar potongan tersebut dapat menjadi sistem informasi yang siap dianalisis.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:76fc1efd7fa7 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 10: ETL: Extract, Transform, Load dan Automasi Basis Data.</p>
+<p>Minta AI menjelaskan **ETL: Extract, Transform, Load dan Automasi Basis Data** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ### Extract
 
@@ -2174,7 +2780,6 @@ Dalam konteks pembelajaran S2, penguasaan **audit trail** harus menghasilkan kem
 
 Topik etl: extract, transform, load dan automasi basis data dapat dirangkum melalui tiga prinsip: kejelasan struktur, keterlacakan proses, dan kesesuaian dengan kebutuhan analisis. Kejelasan struktur berarti tabel, relasi, tipe data, dan constraint dapat dijelaskan secara eksplisit. Keterlacakan proses berarti perubahan dari data mentah menuju data analisis memiliki log atau dokumentasi. Kesesuaian dengan kebutuhan analisis berarti desain data tidak hanya benar secara komputasional, tetapi juga relevan dengan tujuan statistik.
 
-
 <div class="formula">
 
 $$\text{Kualitas Sistem Data} = f(\text{struktur},\ \text{integritas},\ \text{keterlacakan},\ \text{keamanan},\ \text{kegunaan analitik})$$
@@ -2183,7 +2788,6 @@ $$\text{Kualitas Sistem Data} = f(\text{struktur},\ \text{integritas},\ \text{ke
 
 Formula konseptual di atas bukan rumus estimasi, melainkan cara berpikir. Basis data yang baik tidak cukup hanya dapat menyimpan data. Ia harus menjaga integritas, memungkinkan audit, mengamankan akses, dan mempermudah analisis. Dalam konteks statistik, aspek kegunaan analitik menjadi sangat penting karena basis data pada akhirnya akan memberi makan model. Kalau makanannya kacau, model bisa ikut kacau; statistik juga butuh gizi data yang seimbang.
 
-
 <div class="formula">
 
 $$\text{Data Warehouse} = \text{subject-oriented} + \text{integrated} + \text{time-variant} + \text{non-volatile}$$
@@ -2191,7 +2795,6 @@ $$\text{Data Warehouse} = \text{subject-oriented} + \text{integrated} + \text{ti
 </div>
 
 Persamaan ringkas ini merangkum karakter utama data warehouse. Ia berorientasi subjek, menyatukan sumber berbeda, memuat dimensi waktu, dan tidak mudah berubah seperti sistem transaksi. Untuk riset statistik, data warehouse membantu menyimpan sejarah data sehingga analisis tren, monitoring indikator, dan evaluasi program dapat dilakukan secara konsisten.
-
 
 <div class="formula">
 
@@ -2233,6 +2836,16 @@ Contoh kode di atas sengaja dibuat ringkas agar fokus pembelajaran berada pada l
 
 ## Studi Kasus Mini
 
+<!-- BEGIN AI-INLINE:50721abd5730 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 10: ETL: Extract, Transform, Load dan Automasi Basis Data.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Proyek membangun data product yang terdokumentasi dengan data dictionary/datasheet, uji kualitas otomatis, dan kontrol penggunaan data sensitif. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Pada studi kasus mini, mahasiswa diminta mengembangkan skenario pipeline data statistik periodik untuk laporan bulanan atau dashboard program. Misalkan terdapat entitas utama seperti wilayah, waktu, responden, observasi, indikator, dan sumber data. Mahasiswa harus menjawab pertanyaan: data apa yang dibutuhkan, bagaimana relasi antarentitas, bagaimana validasi dilakukan, dan bagaimana hasilnya dapat dipakai untuk analisis statistik. Jawaban tidak boleh berhenti pada gambar ERD atau query SQL; mahasiswa harus menjelaskan alasan metodologis di balik desain tersebut.
 
 Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memiliki rata-rata indikator tertinggi, bagaimana perubahan indikator antarperiode, apakah terdapat kelompok responden dengan karakteristik tertentu, dan bagaimana data dapat disiapkan untuk pemodelan statistik. Dengan pertanyaan seperti ini, basis data berfungsi langsung sebagai instrumen riset, bukan sekadar lemari penyimpanan digital.
@@ -2247,6 +2860,16 @@ Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memili
 - Mengabaikan keamanan akses pada data sensitif, padahal data riset sering memuat informasi personal atau kelembagaan.
 
 ## Pengayaan Teoretis dan Diskusi
+
+<!-- BEGIN AI-INLINE:c096f1f6a9ec -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Pengayaan Teoretis dan Diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 10: ETL: Extract, Transform, Load dan Automasi Basis Data.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Sebuah basis data riset yang baik selalu memiliki jejak keputusan. Jejak itu tampak pada nama tabel, definisi variabel, tipe data, aturan validasi, kunci primer, kunci asing, serta dokumentasi transformasi. Tanpa jejak tersebut, data memang dapat dianalisis, tetapi kualitas inferensinya sulit dipertanggungjawabkan. Dalam riset terapan, situasi ini berbahaya karena hasil analisis sering dipakai sebagai dasar rekomendasi kebijakan, evaluasi program, atau pengambilan keputusan organisasi.
 
@@ -2277,8 +2900,30 @@ Refleksi utama bab ini adalah bahwa etl: extract, transform, load dan automasi b
 <hr>
 # Pertemuan 11: Integrasi Basis Data dengan R/Python untuk Analisis Statistik
 
-<span class="badge">SubCPMK3</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
+<!-- BEGIN AI-INLINE:4a7b55cb8951 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 11</span>
+<h3>Generative dan Agentic AI untuk Integrasi Basis Data dengan R/Python untuk Analisis Statistik</h3>
 
+**Arah RPS.** Pipeline ETL/ELT, data warehouse/lakehouse, streaming, API, cloud, dan pengantar vector database untuk aplikasi AI.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3 melalui fokus: Scripting otomasi (menggunakan SQL, Python, atau R); Monitoring dan scheduling proses ETL; Agregasi Data dan Pelaporan Statistik. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
+<span class="badge">SubCPMK3</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
 
 <div class="info-box">
 Bab ini membahas **integrasi basis data dengan r/python untuk analisis statistik** dalam konteks mengambil data langsung dari database untuk regresi, visualisasi, dan laporan otomatis. Sasaran akhirnya adalah mahasiswa mampu menghasilkan **script R/Python yang membaca, menganalisis, dan melaporkan data** yang dapat dipakai sebagai bagian dari proyek basis data statistik. Rujukan konseptual utama bab ini antara lain [@mckinney2022; @wickham2023; @dama2017].
@@ -2292,11 +2937,31 @@ Mahasiswa juga diharapkan mampu menghubungkan topik ini dengan proses analisis s
 
 ## Narasi Kasus Pembuka
 
+<!-- BEGIN AI-INLINE:fdd0eeba123a -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Narasi Kasus Pembuka</h4>
+<p><strong>Konteks:</strong> Pertemuan 11: Integrasi Basis Data dengan R/Python untuk Analisis Statistik.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Pipeline ETL/ELT, data warehouse/lakehouse, streaming, API, cloud, dan pengantar vector database untuk aplikasi AI. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan sebuah tim riset sedang mengerjakan mengambil data langsung dari database untuk regresi, visualisasi, dan laporan otomatis. Tim tersebut memiliki data dari beberapa sumber, format berbeda, periode berbeda, dan tingkat agregasi berbeda. Sebagian data berada dalam file spreadsheet, sebagian dalam database institusi, sebagian lagi berasal dari API atau dokumen publik. Tanpa rancangan basis data yang sistematis, pekerjaan analisis akan tersendat oleh masalah yang berulang: kolom tidak konsisten, kode wilayah berubah, nilai hilang tidak terdokumentasi, dan hasil query sulit direproduksi. Pada bab ini, masalah tersebut diurai melalui perspektif integrasi basis data dengan r/python untuk analisis statistik.
 
 Kasus pembuka ini penting karena sebagian besar proyek statistik terapan tidak dimulai dari data yang sudah rapi. Data sering datang sebagai kumpulan potongan informasi yang perlu dirapikan, disatukan, diberi makna, dan dijaga kualitasnya. Peran basis data adalah menyediakan struktur agar potongan tersebut dapat menjadi sistem informasi yang siap dianalisis.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:1ee5a5aa801f -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 11: Integrasi Basis Data dengan R/Python untuk Analisis Statistik.</p>
+<p>Minta AI menjelaskan **Integrasi Basis Data dengan R/Python untuk Analisis Statistik** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ### Dbi
 
@@ -2380,7 +3045,6 @@ Secara praktis, pembahasan **pipeline** harus selalu dikaitkan dengan dokumentas
 
 Topik integrasi basis data dengan r/python untuk analisis statistik dapat dirangkum melalui tiga prinsip: kejelasan struktur, keterlacakan proses, dan kesesuaian dengan kebutuhan analisis. Kejelasan struktur berarti tabel, relasi, tipe data, dan constraint dapat dijelaskan secara eksplisit. Keterlacakan proses berarti perubahan dari data mentah menuju data analisis memiliki log atau dokumentasi. Kesesuaian dengan kebutuhan analisis berarti desain data tidak hanya benar secara komputasional, tetapi juga relevan dengan tujuan statistik.
 
-
 <div class="formula">
 
 $$\text{Kualitas Sistem Data} = f(\text{struktur},\ \text{integritas},\ \text{keterlacakan},\ \text{keamanan},\ \text{kegunaan analitik})$$
@@ -2421,6 +3085,16 @@ Contoh kode di atas sengaja dibuat ringkas agar fokus pembelajaran berada pada l
 
 ## Studi Kasus Mini
 
+<!-- BEGIN AI-INLINE:d17690820e9e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 11: Integrasi Basis Data dengan R/Python untuk Analisis Statistik.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Pipeline ETL/ELT, data warehouse/lakehouse, streaming, API, cloud, dan pengantar vector database untuk aplikasi AI. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Pada studi kasus mini, mahasiswa diminta mengembangkan skenario mengambil data langsung dari database untuk regresi, visualisasi, dan laporan otomatis. Misalkan terdapat entitas utama seperti wilayah, waktu, responden, observasi, indikator, dan sumber data. Mahasiswa harus menjawab pertanyaan: data apa yang dibutuhkan, bagaimana relasi antarentitas, bagaimana validasi dilakukan, dan bagaimana hasilnya dapat dipakai untuk analisis statistik. Jawaban tidak boleh berhenti pada gambar ERD atau query SQL; mahasiswa harus menjelaskan alasan metodologis di balik desain tersebut.
 
 Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memiliki rata-rata indikator tertinggi, bagaimana perubahan indikator antarperiode, apakah terdapat kelompok responden dengan karakteristik tertentu, dan bagaimana data dapat disiapkan untuk pemodelan statistik. Dengan pertanyaan seperti ini, basis data berfungsi langsung sebagai instrumen riset, bukan sekadar lemari penyimpanan digital.
@@ -2435,6 +3109,16 @@ Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memili
 - Mengabaikan keamanan akses pada data sensitif, padahal data riset sering memuat informasi personal atau kelembagaan.
 
 ## Pengayaan Teoretis dan Diskusi
+
+<!-- BEGIN AI-INLINE:dfb212810be0 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Pengayaan Teoretis dan Diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 11: Integrasi Basis Data dengan R/Python untuk Analisis Statistik.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Sebuah basis data riset yang baik selalu memiliki jejak keputusan. Jejak itu tampak pada nama tabel, definisi variabel, tipe data, aturan validasi, kunci primer, kunci asing, serta dokumentasi transformasi. Tanpa jejak tersebut, data memang dapat dianalisis, tetapi kualitas inferensinya sulit dipertanggungjawabkan. Dalam riset terapan, situasi ini berbahaya karena hasil analisis sering dipakai sebagai dasar rekomendasi kebijakan, evaluasi program, atau pengambilan keputusan organisasi.
 
@@ -2465,8 +3149,30 @@ Refleksi utama bab ini adalah bahwa integrasi basis data dengan r/python untuk a
 <hr>
 # Pertemuan 12: Aplikasi Web Basis Data untuk Reporting Statistik
 
-<span class="badge">SubCPMK3</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
+<!-- BEGIN AI-INLINE:7da748369594 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 12</span>
+<h3>Generative dan Agentic AI untuk Aplikasi Web Basis Data untuk Reporting Statistik</h3>
 
+**Arah RPS.** Data quality, metadata, lineage, provenance, versioning, access control, privacy, keamanan, dan audit log.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3 melalui fokus: Penerapan agregat data dalam laporan statistik; Statistik deskriptif berbasis basis data. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
+<span class="badge">SubCPMK3</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
 
 <div class="info-box">
 Bab ini membahas **aplikasi web basis data untuk reporting statistik** dalam konteks aplikasi input dan pelaporan indikator riset atau monitoring akademik. Sasaran akhirnya adalah mahasiswa mampu menghasilkan **prototype aplikasi web dan dashboard ringkas** yang dapat dipakai sebagai bagian dari proyek basis data statistik. Rujukan konseptual utama bab ini antara lain [@bulger2004; @kleppmann2017; @kimball2013].
@@ -2480,11 +3186,31 @@ Mahasiswa juga diharapkan mampu menghubungkan topik ini dengan proses analisis s
 
 ## Narasi Kasus Pembuka
 
+<!-- BEGIN AI-INLINE:d85e88ebf478 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Narasi Kasus Pembuka</h4>
+<p><strong>Konteks:</strong> Pertemuan 12: Aplikasi Web Basis Data untuk Reporting Statistik.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Data quality, metadata, lineage, provenance, versioning, access control, privacy, keamanan, dan audit log. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan sebuah tim riset sedang mengerjakan aplikasi input dan pelaporan indikator riset atau monitoring akademik. Tim tersebut memiliki data dari beberapa sumber, format berbeda, periode berbeda, dan tingkat agregasi berbeda. Sebagian data berada dalam file spreadsheet, sebagian dalam database institusi, sebagian lagi berasal dari API atau dokumen publik. Tanpa rancangan basis data yang sistematis, pekerjaan analisis akan tersendat oleh masalah yang berulang: kolom tidak konsisten, kode wilayah berubah, nilai hilang tidak terdokumentasi, dan hasil query sulit direproduksi. Pada bab ini, masalah tersebut diurai melalui perspektif aplikasi web basis data untuk reporting statistik.
 
 Kasus pembuka ini penting karena sebagian besar proyek statistik terapan tidak dimulai dari data yang sudah rapi. Data sering datang sebagai kumpulan potongan informasi yang perlu dirapikan, disatukan, diberi makna, dan dijaga kualitasnya. Peran basis data adalah menyediakan struktur agar potongan tersebut dapat menjadi sistem informasi yang siap dianalisis.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:0a25615bc37b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 12: Aplikasi Web Basis Data untuk Reporting Statistik.</p>
+<p>Minta AI menjelaskan **Aplikasi Web Basis Data untuk Reporting Statistik** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ### Php-Mysql
 
@@ -2578,7 +3304,6 @@ Dalam konteks pembelajaran S2, penguasaan **XAMPP** harus menghasilkan kemampuan
 
 Topik aplikasi web basis data untuk reporting statistik dapat dirangkum melalui tiga prinsip: kejelasan struktur, keterlacakan proses, dan kesesuaian dengan kebutuhan analisis. Kejelasan struktur berarti tabel, relasi, tipe data, dan constraint dapat dijelaskan secara eksplisit. Keterlacakan proses berarti perubahan dari data mentah menuju data analisis memiliki log atau dokumentasi. Kesesuaian dengan kebutuhan analisis berarti desain data tidak hanya benar secara komputasional, tetapi juga relevan dengan tujuan statistik.
 
-
 <div class="formula">
 
 $$\text{Kualitas Sistem Data} = f(\text{struktur},\ \text{integritas},\ \text{keterlacakan},\ \text{keamanan},\ \text{kegunaan analitik})$$
@@ -2586,7 +3311,6 @@ $$\text{Kualitas Sistem Data} = f(\text{struktur},\ \text{integritas},\ \text{ke
 </div>
 
 Formula konseptual di atas bukan rumus estimasi, melainkan cara berpikir. Basis data yang baik tidak cukup hanya dapat menyimpan data. Ia harus menjaga integritas, memungkinkan audit, mengamankan akses, dan mempermudah analisis. Dalam konteks statistik, aspek kegunaan analitik menjadi sangat penting karena basis data pada akhirnya akan memberi makan model. Kalau makanannya kacau, model bisa ikut kacau; statistik juga butuh gizi data yang seimbang.
-
 
 <div class="formula">
 
@@ -2628,6 +3352,16 @@ Contoh kode di atas sengaja dibuat ringkas agar fokus pembelajaran berada pada l
 
 ## Studi Kasus Mini
 
+<!-- BEGIN AI-INLINE:b0bdeec40b35 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 12: Aplikasi Web Basis Data untuk Reporting Statistik.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Data quality, metadata, lineage, provenance, versioning, access control, privacy, keamanan, dan audit log. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Pada studi kasus mini, mahasiswa diminta mengembangkan skenario aplikasi input dan pelaporan indikator riset atau monitoring akademik. Misalkan terdapat entitas utama seperti wilayah, waktu, responden, observasi, indikator, dan sumber data. Mahasiswa harus menjawab pertanyaan: data apa yang dibutuhkan, bagaimana relasi antarentitas, bagaimana validasi dilakukan, dan bagaimana hasilnya dapat dipakai untuk analisis statistik. Jawaban tidak boleh berhenti pada gambar ERD atau query SQL; mahasiswa harus menjelaskan alasan metodologis di balik desain tersebut.
 
 Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memiliki rata-rata indikator tertinggi, bagaimana perubahan indikator antarperiode, apakah terdapat kelompok responden dengan karakteristik tertentu, dan bagaimana data dapat disiapkan untuk pemodelan statistik. Dengan pertanyaan seperti ini, basis data berfungsi langsung sebagai instrumen riset, bukan sekadar lemari penyimpanan digital.
@@ -2642,6 +3376,16 @@ Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memili
 - Mengabaikan keamanan akses pada data sensitif, padahal data riset sering memuat informasi personal atau kelembagaan.
 
 ## Pengayaan Teoretis dan Diskusi
+
+<!-- BEGIN AI-INLINE:7583b72307e1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Pengayaan Teoretis dan Diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 12: Aplikasi Web Basis Data untuk Reporting Statistik.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Sebuah basis data riset yang baik selalu memiliki jejak keputusan. Jejak itu tampak pada nama tabel, definisi variabel, tipe data, aturan validasi, kunci primer, kunci asing, serta dokumentasi transformasi. Tanpa jejak tersebut, data memang dapat dianalisis, tetapi kualitas inferensinya sulit dipertanggungjawabkan. Dalam riset terapan, situasi ini berbahaya karena hasil analisis sering dipakai sebagai dasar rekomendasi kebijakan, evaluasi program, atau pengambilan keputusan organisasi.
 
@@ -2672,8 +3416,30 @@ Refleksi utama bab ini adalah bahwa aplikasi web basis data untuk reporting stat
 <hr>
 # Pertemuan 13: Evaluasi Kualitas Data dan Audit Basis Data Statistik
 
-<span class="badge">SubCPMK4</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
+<!-- BEGIN AI-INLINE:1976157b1323 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 13</span>
+<h3>Generative dan Agentic AI untuk Evaluasi Kualitas Data dan Audit Basis Data Statistik</h3>
 
+**Arah RPS.** Proyek membangun data product yang terdokumentasi dengan data dictionary/datasheet, uji kualitas otomatis, dan kontrol penggunaan data sensitif.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK4 melalui fokus: Penyusunan laporan otomatis dan dashboard sederhana; Pengembangan Aplikasi Basis Data Berbasis Web; Dasar-dasar basis data web (PHP-MySQL, API, XAMPP). |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
+<span class="badge">SubCPMK4</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
 
 <div class="info-box">
 Bab ini membahas **evaluasi kualitas data dan audit basis data statistik** dalam konteks audit dataset sebelum digunakan untuk publikasi ilmiah dan rekomendasi kebijakan. Sasaran akhirnya adalah mahasiswa mampu menghasilkan **laporan kualitas data dan rekomendasi pembersihan** yang dapat dipakai sebagai bagian dari proyek basis data statistik. Rujukan konseptual utama bab ini antara lain [@iso25012; @dama2017; @connolly2015].
@@ -2687,11 +3453,31 @@ Mahasiswa juga diharapkan mampu menghubungkan topik ini dengan proses analisis s
 
 ## Narasi Kasus Pembuka
 
+<!-- BEGIN AI-INLINE:035b04dbd1a8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Narasi Kasus Pembuka</h4>
+<p><strong>Konteks:</strong> Pertemuan 13: Evaluasi Kualitas Data dan Audit Basis Data Statistik.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Proyek membangun data product yang terdokumentasi dengan data dictionary/datasheet, uji kualitas otomatis, dan kontrol penggunaan data sensitif. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan sebuah tim riset sedang mengerjakan audit dataset sebelum digunakan untuk publikasi ilmiah dan rekomendasi kebijakan. Tim tersebut memiliki data dari beberapa sumber, format berbeda, periode berbeda, dan tingkat agregasi berbeda. Sebagian data berada dalam file spreadsheet, sebagian dalam database institusi, sebagian lagi berasal dari API atau dokumen publik. Tanpa rancangan basis data yang sistematis, pekerjaan analisis akan tersendat oleh masalah yang berulang: kolom tidak konsisten, kode wilayah berubah, nilai hilang tidak terdokumentasi, dan hasil query sulit direproduksi. Pada bab ini, masalah tersebut diurai melalui perspektif evaluasi kualitas data dan audit basis data statistik.
 
 Kasus pembuka ini penting karena sebagian besar proyek statistik terapan tidak dimulai dari data yang sudah rapi. Data sering datang sebagai kumpulan potongan informasi yang perlu dirapikan, disatukan, diberi makna, dan dijaga kualitasnya. Peran basis data adalah menyediakan struktur agar potongan tersebut dapat menjadi sistem informasi yang siap dianalisis.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:4360961ed5e5 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 13: Evaluasi Kualitas Data dan Audit Basis Data Statistik.</p>
+<p>Minta AI menjelaskan **Evaluasi Kualitas Data dan Audit Basis Data Statistik** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ### Accuracy
 
@@ -2785,7 +3571,6 @@ Dalam konteks pembelajaran S2, penguasaan **profiling** harus menghasilkan kemam
 
 Topik evaluasi kualitas data dan audit basis data statistik dapat dirangkum melalui tiga prinsip: kejelasan struktur, keterlacakan proses, dan kesesuaian dengan kebutuhan analisis. Kejelasan struktur berarti tabel, relasi, tipe data, dan constraint dapat dijelaskan secara eksplisit. Keterlacakan proses berarti perubahan dari data mentah menuju data analisis memiliki log atau dokumentasi. Kesesuaian dengan kebutuhan analisis berarti desain data tidak hanya benar secara komputasional, tetapi juga relevan dengan tujuan statistik.
 
-
 <div class="formula">
 
 $$\text{Kualitas Sistem Data} = f(\text{struktur},\ \text{integritas},\ \text{keterlacakan},\ \text{keamanan},\ \text{kegunaan analitik})$$
@@ -2793,7 +3578,6 @@ $$\text{Kualitas Sistem Data} = f(\text{struktur},\ \text{integritas},\ \text{ke
 </div>
 
 Formula konseptual di atas bukan rumus estimasi, melainkan cara berpikir. Basis data yang baik tidak cukup hanya dapat menyimpan data. Ia harus menjaga integritas, memungkinkan audit, mengamankan akses, dan mempermudah analisis. Dalam konteks statistik, aspek kegunaan analitik menjadi sangat penting karena basis data pada akhirnya akan memberi makan model. Kalau makanannya kacau, model bisa ikut kacau; statistik juga butuh gizi data yang seimbang.
-
 
 <div class="formula">
 
@@ -2835,6 +3619,16 @@ Contoh kode di atas sengaja dibuat ringkas agar fokus pembelajaran berada pada l
 
 ## Studi Kasus Mini
 
+<!-- BEGIN AI-INLINE:ed93d3d54af1 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 13: Evaluasi Kualitas Data dan Audit Basis Data Statistik.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Proyek membangun data product yang terdokumentasi dengan data dictionary/datasheet, uji kualitas otomatis, dan kontrol penggunaan data sensitif. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Pada studi kasus mini, mahasiswa diminta mengembangkan skenario audit dataset sebelum digunakan untuk publikasi ilmiah dan rekomendasi kebijakan. Misalkan terdapat entitas utama seperti wilayah, waktu, responden, observasi, indikator, dan sumber data. Mahasiswa harus menjawab pertanyaan: data apa yang dibutuhkan, bagaimana relasi antarentitas, bagaimana validasi dilakukan, dan bagaimana hasilnya dapat dipakai untuk analisis statistik. Jawaban tidak boleh berhenti pada gambar ERD atau query SQL; mahasiswa harus menjelaskan alasan metodologis di balik desain tersebut.
 
 Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memiliki rata-rata indikator tertinggi, bagaimana perubahan indikator antarperiode, apakah terdapat kelompok responden dengan karakteristik tertentu, dan bagaimana data dapat disiapkan untuk pemodelan statistik. Dengan pertanyaan seperti ini, basis data berfungsi langsung sebagai instrumen riset, bukan sekadar lemari penyimpanan digital.
@@ -2849,6 +3643,16 @@ Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memili
 - Mengabaikan keamanan akses pada data sensitif, padahal data riset sering memuat informasi personal atau kelembagaan.
 
 ## Pengayaan Teoretis dan Diskusi
+
+<!-- BEGIN AI-INLINE:e5639e204f39 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Pengayaan Teoretis dan Diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 13: Evaluasi Kualitas Data dan Audit Basis Data Statistik.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Sebuah basis data riset yang baik selalu memiliki jejak keputusan. Jejak itu tampak pada nama tabel, definisi variabel, tipe data, aturan validasi, kunci primer, kunci asing, serta dokumentasi transformasi. Tanpa jejak tersebut, data memang dapat dianalisis, tetapi kualitas inferensinya sulit dipertanggungjawabkan. Dalam riset terapan, situasi ini berbahaya karena hasil analisis sering dipakai sebagai dasar rekomendasi kebijakan, evaluasi program, atau pengambilan keputusan organisasi.
 
@@ -2879,8 +3683,30 @@ Refleksi utama bab ini adalah bahwa evaluasi kualitas data dan audit basis data 
 <hr>
 # Pertemuan 14: Keamanan, Privasi, dan Tata Kelola Akses Basis Data
 
-<span class="badge">SubCPMK4</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
+<!-- BEGIN AI-INLINE:ef7f91f1ae57 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 14</span>
+<h3>Generative dan Agentic AI untuk Keamanan, Privasi, dan Tata Kelola Akses Basis Data</h3>
 
+**Arah RPS.** Pipeline ETL/ELT, data warehouse/lakehouse, streaming, API, cloud, dan pengantar vector database untuk aplikasi AI.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK4 melalui fokus: Pembuatan aplikasi web sederhana untuk analisis statistik; Visualisasi data dan pelaporan interaktif berbasis web; Evaluasi, Audit, dan Inovasi Basis Data untuk Riset. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
+<span class="badge">SubCPMK4</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
 
 <div class="info-box">
 Bab ini membahas **keamanan, privasi, dan tata kelola akses basis data** dalam konteks pengelolaan data sensitif pada riset kesehatan, pendidikan, dan sosial. Sasaran akhirnya adalah mahasiswa mampu menghasilkan **rancangan kontrol akses dan prosedur backup-restore** yang dapat dipakai sebagai bagian dari proyek basis data statistik. Rujukan konseptual utama bab ini antara lain [@iso27001; @connolly2015; @kleppmann2017].
@@ -2894,11 +3720,31 @@ Mahasiswa juga diharapkan mampu menghubungkan topik ini dengan proses analisis s
 
 ## Narasi Kasus Pembuka
 
+<!-- BEGIN AI-INLINE:2a0e91a9d4b9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Narasi Kasus Pembuka</h4>
+<p><strong>Konteks:</strong> Pertemuan 14: Keamanan, Privasi, dan Tata Kelola Akses Basis Data.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Pipeline ETL/ELT, data warehouse/lakehouse, streaming, API, cloud, dan pengantar vector database untuk aplikasi AI. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan sebuah tim riset sedang mengerjakan pengelolaan data sensitif pada riset kesehatan, pendidikan, dan sosial. Tim tersebut memiliki data dari beberapa sumber, format berbeda, periode berbeda, dan tingkat agregasi berbeda. Sebagian data berada dalam file spreadsheet, sebagian dalam database institusi, sebagian lagi berasal dari API atau dokumen publik. Tanpa rancangan basis data yang sistematis, pekerjaan analisis akan tersendat oleh masalah yang berulang: kolom tidak konsisten, kode wilayah berubah, nilai hilang tidak terdokumentasi, dan hasil query sulit direproduksi. Pada bab ini, masalah tersebut diurai melalui perspektif keamanan, privasi, dan tata kelola akses basis data.
 
 Kasus pembuka ini penting karena sebagian besar proyek statistik terapan tidak dimulai dari data yang sudah rapi. Data sering datang sebagai kumpulan potongan informasi yang perlu dirapikan, disatukan, diberi makna, dan dijaga kualitasnya. Peran basis data adalah menyediakan struktur agar potongan tersebut dapat menjadi sistem informasi yang siap dianalisis.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:ba5561efe8f1 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 14: Keamanan, Privasi, dan Tata Kelola Akses Basis Data.</p>
+<p>Minta AI menjelaskan **Keamanan, Privasi, dan Tata Kelola Akses Basis Data** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ### Authentication
 
@@ -2992,7 +3838,6 @@ Dalam konteks pembelajaran S2, penguasaan **privacy** harus menghasilkan kemampu
 
 Topik keamanan, privasi, dan tata kelola akses basis data dapat dirangkum melalui tiga prinsip: kejelasan struktur, keterlacakan proses, dan kesesuaian dengan kebutuhan analisis. Kejelasan struktur berarti tabel, relasi, tipe data, dan constraint dapat dijelaskan secara eksplisit. Keterlacakan proses berarti perubahan dari data mentah menuju data analisis memiliki log atau dokumentasi. Kesesuaian dengan kebutuhan analisis berarti desain data tidak hanya benar secara komputasional, tetapi juga relevan dengan tujuan statistik.
 
-
 <div class="formula">
 
 $$\text{Kualitas Sistem Data} = f(\text{struktur},\ \text{integritas},\ \text{keterlacakan},\ \text{keamanan},\ \text{kegunaan analitik})$$
@@ -3000,7 +3845,6 @@ $$\text{Kualitas Sistem Data} = f(\text{struktur},\ \text{integritas},\ \text{ke
 </div>
 
 Formula konseptual di atas bukan rumus estimasi, melainkan cara berpikir. Basis data yang baik tidak cukup hanya dapat menyimpan data. Ia harus menjaga integritas, memungkinkan audit, mengamankan akses, dan mempermudah analisis. Dalam konteks statistik, aspek kegunaan analitik menjadi sangat penting karena basis data pada akhirnya akan memberi makan model. Kalau makanannya kacau, model bisa ikut kacau; statistik juga butuh gizi data yang seimbang.
-
 
 <div class="formula">
 
@@ -3040,6 +3884,16 @@ Contoh kode di atas sengaja dibuat ringkas agar fokus pembelajaran berada pada l
 
 ## Studi Kasus Mini
 
+<!-- BEGIN AI-INLINE:f94ee1e8fad7 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 14: Keamanan, Privasi, dan Tata Kelola Akses Basis Data.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Pipeline ETL/ELT, data warehouse/lakehouse, streaming, API, cloud, dan pengantar vector database untuk aplikasi AI. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Pada studi kasus mini, mahasiswa diminta mengembangkan skenario pengelolaan data sensitif pada riset kesehatan, pendidikan, dan sosial. Misalkan terdapat entitas utama seperti wilayah, waktu, responden, observasi, indikator, dan sumber data. Mahasiswa harus menjawab pertanyaan: data apa yang dibutuhkan, bagaimana relasi antarentitas, bagaimana validasi dilakukan, dan bagaimana hasilnya dapat dipakai untuk analisis statistik. Jawaban tidak boleh berhenti pada gambar ERD atau query SQL; mahasiswa harus menjelaskan alasan metodologis di balik desain tersebut.
 
 Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memiliki rata-rata indikator tertinggi, bagaimana perubahan indikator antarperiode, apakah terdapat kelompok responden dengan karakteristik tertentu, dan bagaimana data dapat disiapkan untuk pemodelan statistik. Dengan pertanyaan seperti ini, basis data berfungsi langsung sebagai instrumen riset, bukan sekadar lemari penyimpanan digital.
@@ -3054,6 +3908,16 @@ Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memili
 - Mengabaikan keamanan akses pada data sensitif, padahal data riset sering memuat informasi personal atau kelembagaan.
 
 ## Pengayaan Teoretis dan Diskusi
+
+<!-- BEGIN AI-INLINE:81644b65fccb -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Pengayaan Teoretis dan Diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 14: Keamanan, Privasi, dan Tata Kelola Akses Basis Data.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Sebuah basis data riset yang baik selalu memiliki jejak keputusan. Jejak itu tampak pada nama tabel, definisi variabel, tipe data, aturan validasi, kunci primer, kunci asing, serta dokumentasi transformasi. Tanpa jejak tersebut, data memang dapat dianalisis, tetapi kualitas inferensinya sulit dipertanggungjawabkan. Dalam riset terapan, situasi ini berbahaya karena hasil analisis sering dipakai sebagai dasar rekomendasi kebijakan, evaluasi program, atau pengambilan keputusan organisasi.
 
@@ -3084,8 +3948,30 @@ Refleksi utama bab ini adalah bahwa keamanan, privasi, dan tata kelola akses bas
 <hr>
 # Pertemuan 15: Interoperabilitas, Open Data Riset, dan Inovasi Aplikasi Basis Data
 
-<span class="badge">SubCPMK4</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
+<!-- BEGIN AI-INLINE:369afed31db1 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 15</span>
+<h3>Generative dan Agentic AI untuk Interoperabilitas, Open Data Riset, dan Inovasi Aplikasi Basis Data</h3>
 
+**Arah RPS.** Data quality, metadata, lineage, provenance, versioning, access control, privacy, keamanan, dan audit log.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK4 melalui fokus: Audit kualitas dan keamanan Basis Data; Best practice interoperabilitas dan open data riset; Pengembangan proposal inovasi aplikasi Basis Data untuk kolaborasi riset. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
+<span class="badge">SubCPMK4</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
 
 <div class="info-box">
 Bab ini membahas **interoperabilitas, open data riset, dan inovasi aplikasi basis data** dalam konteks kolaborasi riset lintas fakultas, pemerintah daerah, dan mitra industri. Sasaran akhirnya adalah mahasiswa mampu menghasilkan **proposal inovasi aplikasi basis data riset** yang dapat dipakai sebagai bagian dari proyek basis data statistik. Rujukan konseptual utama bab ini antara lain [@dama2017; @kleppmann2017; @kimball2013].
@@ -3099,11 +3985,31 @@ Mahasiswa juga diharapkan mampu menghubungkan topik ini dengan proses analisis s
 
 ## Narasi Kasus Pembuka
 
+<!-- BEGIN AI-INLINE:58ed3e8eb453 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Narasi Kasus Pembuka</h4>
+<p><strong>Konteks:</strong> Pertemuan 15: Interoperabilitas, Open Data Riset, dan Inovasi Aplikasi Basis Data.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Data quality, metadata, lineage, provenance, versioning, access control, privacy, keamanan, dan audit log. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan sebuah tim riset sedang mengerjakan kolaborasi riset lintas fakultas, pemerintah daerah, dan mitra industri. Tim tersebut memiliki data dari beberapa sumber, format berbeda, periode berbeda, dan tingkat agregasi berbeda. Sebagian data berada dalam file spreadsheet, sebagian dalam database institusi, sebagian lagi berasal dari API atau dokumen publik. Tanpa rancangan basis data yang sistematis, pekerjaan analisis akan tersendat oleh masalah yang berulang: kolom tidak konsisten, kode wilayah berubah, nilai hilang tidak terdokumentasi, dan hasil query sulit direproduksi. Pada bab ini, masalah tersebut diurai melalui perspektif interoperabilitas, open data riset, dan inovasi aplikasi basis data.
 
 Kasus pembuka ini penting karena sebagian besar proyek statistik terapan tidak dimulai dari data yang sudah rapi. Data sering datang sebagai kumpulan potongan informasi yang perlu dirapikan, disatukan, diberi makna, dan dijaga kualitasnya. Peran basis data adalah menyediakan struktur agar potongan tersebut dapat menjadi sistem informasi yang siap dianalisis.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:46e00707cbb1 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 15: Interoperabilitas, Open Data Riset, dan Inovasi Aplikasi Basis Data.</p>
+<p>Minta AI menjelaskan **Interoperabilitas, Open Data Riset, dan Inovasi Aplikasi Basis Data** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ### Interoperability
 
@@ -3197,7 +4103,6 @@ Dalam konteks pembelajaran S2, penguasaan **innovation** harus menghasilkan kema
 
 Topik interoperabilitas, open data riset, dan inovasi aplikasi basis data dapat dirangkum melalui tiga prinsip: kejelasan struktur, keterlacakan proses, dan kesesuaian dengan kebutuhan analisis. Kejelasan struktur berarti tabel, relasi, tipe data, dan constraint dapat dijelaskan secara eksplisit. Keterlacakan proses berarti perubahan dari data mentah menuju data analisis memiliki log atau dokumentasi. Kesesuaian dengan kebutuhan analisis berarti desain data tidak hanya benar secara komputasional, tetapi juga relevan dengan tujuan statistik.
 
-
 <div class="formula">
 
 $$\text{Kualitas Sistem Data} = f(\text{struktur},\ \text{integritas},\ \text{keterlacakan},\ \text{keamanan},\ \text{kegunaan analitik})$$
@@ -3205,7 +4110,6 @@ $$\text{Kualitas Sistem Data} = f(\text{struktur},\ \text{integritas},\ \text{ke
 </div>
 
 Formula konseptual di atas bukan rumus estimasi, melainkan cara berpikir. Basis data yang baik tidak cukup hanya dapat menyimpan data. Ia harus menjaga integritas, memungkinkan audit, mengamankan akses, dan mempermudah analisis. Dalam konteks statistik, aspek kegunaan analitik menjadi sangat penting karena basis data pada akhirnya akan memberi makan model. Kalau makanannya kacau, model bisa ikut kacau; statistik juga butuh gizi data yang seimbang.
-
 
 <div class="formula">
 
@@ -3245,6 +4149,16 @@ Contoh kode di atas sengaja dibuat ringkas agar fokus pembelajaran berada pada l
 
 ## Studi Kasus Mini
 
+<!-- BEGIN AI-INLINE:9601a31afd3d -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 15: Interoperabilitas, Open Data Riset, dan Inovasi Aplikasi Basis Data.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Data quality, metadata, lineage, provenance, versioning, access control, privacy, keamanan, dan audit log. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Pada studi kasus mini, mahasiswa diminta mengembangkan skenario kolaborasi riset lintas fakultas, pemerintah daerah, dan mitra industri. Misalkan terdapat entitas utama seperti wilayah, waktu, responden, observasi, indikator, dan sumber data. Mahasiswa harus menjawab pertanyaan: data apa yang dibutuhkan, bagaimana relasi antarentitas, bagaimana validasi dilakukan, dan bagaimana hasilnya dapat dipakai untuk analisis statistik. Jawaban tidak boleh berhenti pada gambar ERD atau query SQL; mahasiswa harus menjelaskan alasan metodologis di balik desain tersebut.
 
 Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memiliki rata-rata indikator tertinggi, bagaimana perubahan indikator antarperiode, apakah terdapat kelompok responden dengan karakteristik tertentu, dan bagaimana data dapat disiapkan untuk pemodelan statistik. Dengan pertanyaan seperti ini, basis data berfungsi langsung sebagai instrumen riset, bukan sekadar lemari penyimpanan digital.
@@ -3259,6 +4173,16 @@ Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memili
 - Mengabaikan keamanan akses pada data sensitif, padahal data riset sering memuat informasi personal atau kelembagaan.
 
 ## Pengayaan Teoretis dan Diskusi
+
+<!-- BEGIN AI-INLINE:7682af51f5ac -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Pengayaan Teoretis dan Diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 15: Interoperabilitas, Open Data Riset, dan Inovasi Aplikasi Basis Data.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Sebuah basis data riset yang baik selalu memiliki jejak keputusan. Jejak itu tampak pada nama tabel, definisi variabel, tipe data, aturan validasi, kunci primer, kunci asing, serta dokumentasi transformasi. Tanpa jejak tersebut, data memang dapat dianalisis, tetapi kualitas inferensinya sulit dipertanggungjawabkan. Dalam riset terapan, situasi ini berbahaya karena hasil analisis sering dipakai sebagai dasar rekomendasi kebijakan, evaluasi program, atau pengambilan keputusan organisasi.
 
@@ -3289,8 +4213,30 @@ Refleksi utama bab ini adalah bahwa interoperabilitas, open data riset, dan inov
 <hr>
 # Pertemuan 16: UAS: Presentasi Proyek Akhir dan Rencana Pengembangan Lanjutan
 
-<span class="badge">SubCPMK4</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
+<!-- BEGIN AI-INLINE:b8fcfa29cd5a -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 16</span>
+<h3>Generative dan Agentic AI untuk UAS: Presentasi Proyek Akhir dan Rencana Pengembangan Lanjutan</h3>
 
+**Arah RPS.** Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek akhir. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
+<span class="badge">SubCPMK4</span> <span class="badge">Basis Data Statistik</span> <span class="badge">S2 Statistika Terapan</span>
 
 <div class="info-box">
 Bab ini membahas **uas: presentasi proyek akhir dan rencana pengembangan lanjutan** dalam konteks produk akhir berupa aplikasi basis data statistik yang dapat diuji, dijelaskan, dan dikembangkan. Sasaran akhirnya adalah mahasiswa mampu menghasilkan **laporan final, slide, source code, dan video demonstrasi** yang dapat dipakai sebagai bagian dari proyek basis data statistik. Rujukan konseptual utama bab ini antara lain [@elmasri2015; @dama2017; @kleppmann2017].
@@ -3304,11 +4250,31 @@ Mahasiswa juga diharapkan mampu menghubungkan topik ini dengan proses analisis s
 
 ## Narasi Kasus Pembuka
 
+<!-- BEGIN AI-INLINE:92a31ef6fb0c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Narasi Kasus Pembuka</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: UAS: Presentasi Proyek Akhir dan Rencana Pengembangan Lanjutan.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Bayangkan sebuah tim riset sedang mengerjakan produk akhir berupa aplikasi basis data statistik yang dapat diuji, dijelaskan, dan dikembangkan. Tim tersebut memiliki data dari beberapa sumber, format berbeda, periode berbeda, dan tingkat agregasi berbeda. Sebagian data berada dalam file spreadsheet, sebagian dalam database institusi, sebagian lagi berasal dari API atau dokumen publik. Tanpa rancangan basis data yang sistematis, pekerjaan analisis akan tersendat oleh masalah yang berulang: kolom tidak konsisten, kode wilayah berubah, nilai hilang tidak terdokumentasi, dan hasil query sulit direproduksi. Pada bab ini, masalah tersebut diurai melalui perspektif uas: presentasi proyek akhir dan rencana pengembangan lanjutan.
 
 Kasus pembuka ini penting karena sebagian besar proyek statistik terapan tidak dimulai dari data yang sudah rapi. Data sering datang sebagai kumpulan potongan informasi yang perlu dirapikan, disatukan, diberi makna, dan dijaga kualitasnya. Peran basis data adalah menyediakan struktur agar potongan tersebut dapat menjadi sistem informasi yang siap dianalisis.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:c1fc2e59ff7f -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: UAS: Presentasi Proyek Akhir dan Rencana Pengembangan Lanjutan.</p>
+<p>Minta AI menjelaskan **UAS: Presentasi Proyek Akhir dan Rencana Pengembangan Lanjutan** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ### Final Report
 
@@ -3392,7 +4358,6 @@ Secara praktis, pembahasan **impact** harus selalu dikaitkan dengan dokumentasi.
 
 Topik uas: presentasi proyek akhir dan rencana pengembangan lanjutan dapat dirangkum melalui tiga prinsip: kejelasan struktur, keterlacakan proses, dan kesesuaian dengan kebutuhan analisis. Kejelasan struktur berarti tabel, relasi, tipe data, dan constraint dapat dijelaskan secara eksplisit. Keterlacakan proses berarti perubahan dari data mentah menuju data analisis memiliki log atau dokumentasi. Kesesuaian dengan kebutuhan analisis berarti desain data tidak hanya benar secara komputasional, tetapi juga relevan dengan tujuan statistik.
 
-
 <div class="formula">
 
 $$\text{Kualitas Sistem Data} = f(\text{struktur},\ \text{integritas},\ \text{keterlacakan},\ \text{keamanan},\ \text{kegunaan analitik})$$
@@ -3431,6 +4396,16 @@ Contoh kode di atas sengaja dibuat ringkas agar fokus pembelajaran berada pada l
 
 ## Studi Kasus Mini
 
+<!-- BEGIN AI-INLINE:7953e5436d31 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Studi Kasus Mini</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: UAS: Presentasi Proyek Akhir dan Rencana Pengembangan Lanjutan.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Pada studi kasus mini, mahasiswa diminta mengembangkan skenario produk akhir berupa aplikasi basis data statistik yang dapat diuji, dijelaskan, dan dikembangkan. Misalkan terdapat entitas utama seperti wilayah, waktu, responden, observasi, indikator, dan sumber data. Mahasiswa harus menjawab pertanyaan: data apa yang dibutuhkan, bagaimana relasi antarentitas, bagaimana validasi dilakukan, dan bagaimana hasilnya dapat dipakai untuk analisis statistik. Jawaban tidak boleh berhenti pada gambar ERD atau query SQL; mahasiswa harus menjelaskan alasan metodologis di balik desain tersebut.
 
 Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memiliki rata-rata indikator tertinggi, bagaimana perubahan indikator antarperiode, apakah terdapat kelompok responden dengan karakteristik tertentu, dan bagaimana data dapat disiapkan untuk pemodelan statistik. Dengan pertanyaan seperti ini, basis data berfungsi langsung sebagai instrumen riset, bukan sekadar lemari penyimpanan digital.
@@ -3445,6 +4420,16 @@ Contoh pertanyaan analitik yang dapat digunakan adalah: wilayah mana yang memili
 - Mengabaikan keamanan akses pada data sensitif, padahal data riset sering memuat informasi personal atau kelembagaan.
 
 ## Pengayaan Teoretis dan Diskusi
+
+<!-- BEGIN AI-INLINE:ab7643f45081 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Pengayaan Teoretis dan Diskusi</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: UAS: Presentasi Proyek Akhir dan Rencana Pengembangan Lanjutan.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Sebuah basis data riset yang baik selalu memiliki jejak keputusan. Jejak itu tampak pada nama tabel, definisi variabel, tipe data, aturan validasi, kunci primer, kunci asing, serta dokumentasi transformasi. Tanpa jejak tersebut, data memang dapat dianalisis, tetapi kualitas inferensinya sulit dipertanggungjawabkan. Dalam riset terapan, situasi ini berbahaya karena hasil analisis sering dipakai sebagai dasar rekomendasi kebijakan, evaluasi program, atau pengambilan keputusan organisasi.
 
@@ -3482,6 +4467,16 @@ Proyek semester merupakan benang merah seluruh mata kuliah. Mahasiswa disarankan
 
 ## Struktur Proyek yang Disarankan
 
+<!-- BEGIN AI-INLINE:20ef4b208340 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Struktur Proyek yang Disarankan</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: UAS: Presentasi Proyek Akhir dan Rencana Pengembangan Lanjutan.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 | Tahap | Minggu | Produk | Kriteria Keberhasilan |
 |---|---:|---|---|
 | Analisis kebutuhan | 1-2 | Dokumen kebutuhan data | Unit observasi, sumber data, dan pertanyaan riset jelas |
@@ -3494,6 +4489,16 @@ Proyek semester merupakan benang merah seluruh mata kuliah. Mahasiswa disarankan
 | UAS | 16 | Laporan final | Sistem dapat didemonstrasikan dan dikritisi |
 
 ## Template Laporan Proyek
+
+<!-- BEGIN AI-INLINE:bb85ab48f672 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Template Laporan Proyek</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: UAS: Presentasi Proyek Akhir dan Rencana Pengembangan Lanjutan.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Laporan proyek sebaiknya memuat identitas kelompok, latar belakang kasus, tujuan analisis, sumber data, deskripsi entitas, ERD, skema relasional, query utama, hasil ringkasan statistik, desain ETL, tampilan aplikasi, evaluasi kualitas data, evaluasi keamanan, keterbatasan, rekomendasi inovasi, dan lampiran kode. Format ini dibuat agar mahasiswa tidak hanya menyerahkan kode, tetapi juga menunjukkan argumentasi desain. Dalam riset statistik, argumentasi desain sering sama pentingnya dengan hasil numerik karena ia menjelaskan mengapa data dapat dipercaya.
 
@@ -3648,8 +4653,30 @@ Antarmuka pemrograman yang memungkinkan aplikasi lain mengakses data atau layana
 
 Tampilan visual ringkas untuk memantau indikator, tren, dan hasil analisis. Dalam konteks mata kuliah ini, istilah **Dashboard** harus selalu dikaitkan dengan kasus statistik terapan. Mahasiswa perlu mampu memberi contoh, menunjukkan implementasi, dan menjelaskan konsekuensi jika konsep tersebut diabaikan.
 
-
 # Bank Contoh Soal dan Jawaban Ringkas
+
+<!-- BEGIN AI-INLINE:dfc823cfca98 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 1</span>
+<h3>Generative dan Agentic AI untuk Bank Contoh Soal dan Jawaban Ringkas</h3>
+
+**Arah RPS.** Pipeline ETL/ELT, data warehouse/lakehouse, streaming, API, cloud, dan pengantar vector database untuk aplikasi AI.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK1 melalui fokus: Pendahuluan Sistem Basis Data dan Data Warehouse; Peran Basis Data dalam riset statistik multidisiplin; Arsitektur sistem Basis Data vs data warehouse. |
+| Generative AI | Digunakan untuk menyusun data dictionary, mendeteksi potensi masalah kualitas data, dan mengusulkan aturan pemeriksaan. |
+| Agentic AI | Dapat memprofilkan data, menjalankan validasi skema, menandai missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa asal-usul data, unit observasi, coverage, kebocoran data, privasi, dan keputusan pembersihan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 ## Soal 1
 Jelaskan perbedaan antara basis data operasional dan data warehouse dalam konteks riset statistik.
@@ -3704,6 +4731,16 @@ Apa hubungan antara ETL dan pelaporan otomatis?
 
 ## Deskripsi Kasus
 
+<!-- BEGIN AI-INLINE:428e24b80c94 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Deskripsi Kasus</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Bank Contoh Soal dan Jawaban Ringkas.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Pipeline ETL/ELT, data warehouse/lakehouse, streaming, API, cloud, dan pengantar vector database untuk aplikasi AI. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Sebuah program studi ingin membangun basis data untuk memantau aktivitas akademik mahasiswa, publikasi dosen, keterlibatan mahasiswa dalam riset, serta capaian luaran. Data berasal dari spreadsheet akademik, formulir penelitian, file publikasi, dan laporan kegiatan. Tujuannya adalah membuat dashboard sederhana yang menampilkan jumlah mahasiswa aktif, jumlah publikasi, jumlah mahasiswa yang terlibat riset, dan tren kegiatan per semester.
 
 ## Rancangan Entitas
@@ -3745,6 +4782,16 @@ CREATE TABLE keterlibatan_mahasiswa (
 ```
 
 ## Contoh Query Laporan
+
+<!-- BEGIN AI-INLINE:bd199084ac96 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh Query Laporan</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Bank Contoh Soal dan Jawaban Ringkas.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Pipeline ETL/ELT, data warehouse/lakehouse, streaming, API, cloud, dan pengantar vector database untuk aplikasi AI. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```sql
 SELECT k.tahun, COUNT(DISTINCT km.id_mahasiswa) AS jumlah_mahasiswa_terlibat
@@ -3815,6 +4862,16 @@ berada pada mahasiswa.
 5. Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil secara mandiri.
 
 ### Bukti asesmen
+
+<!-- BEGIN AI-INLINE:982db9ddb097 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Bukti asesmen</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Bank Contoh Soal dan Jawaban Ringkas.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Penilaian berfokus pada ketepatan metode, validasi dan ketidakpastian,
 reproducibility, interpretasi, komunikasi, serta transparansi penggunaan AI.

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="id" xml:lang="id">
+<html>
 
 <head>
 
@@ -3128,273 +3128,185 @@ serta komunikasi hasil secara ilmiah.</p>
 </div>
 <!-- END UNPAD MATERIAL ENHANCEMENT -->
 <style>
-html, body {
-  background: linear-gradient(135deg, #f8fbfd 0%, #fffdf8 48%, #f3f6ee 100%) !important;
-  color: #172033 !important;
+500;600;700;800&display=swap');
+:root{
+--espresso:#3b2415;
+--cocoa:#6b3f22;
+--caramel:#a66a3f;
+--sand:#f7ead7;
+--cream:#fffaf2;
+--gold:#d5a449;
+--ink:#1f1712;
+--muted:#6f6259;
 }
+html, body { scroll-behavior:smooth; }
 body {
-  font-family: "Segoe UI", Arial, sans-serif !important;
-  font-size: 17px !important;
-  line-height: 1.72 !important;
-  margin: 0 !important;
-  overflow-x: hidden !important;
+font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+color: var(--ink);
+background:
+radial-gradient(circle at 8% 5%, rgba(255,235,198,.95), transparent 26%),
+radial-gradient(circle at 92% 12%, rgba(180,111,58,.35), transparent 28%),
+linear-gradient(135deg, #fff7ec 0%, #f7dfc1 42%, #d4a06c 100%);
+line-height:1.72;
 }
 .main-container {
-  max-width: 1180px !important;
-  margin-top: 18px !important;
-  margin-bottom: 38px !important;
-  padding: 34px 46px 54px !important;
-  background: rgba(255, 253, 248, 0.98) !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  box-shadow: 0 18px 42px rgba(23, 57, 92, 0.12) !important;
-  overflow-x: hidden !important;
+max-width: 1180px !important;
+background: rgba(255,250,242,.97);
+border: 1px solid rgba(107,63,34,.16);
+border-radius: 24px;
+padding: 36px 46px 52px 46px;
+box-shadow: 0 30px 90px rgba(59,36,21,.18);
+margin-top: 24px;
+margin-bottom: 48px;
 }
-h1, h2, h3, h4 {
-  color: #17395c !important;
-  font-weight: 800 !important;
-  letter-spacing: 0 !important;
-  line-height: 1.24 !important;
+.title, .subtitle, .author, .date { text-align:center; }
+.title { color: var(--espresso); font-weight:800; letter-spacing:-.03em; }
+.subtitle { color: var(--cocoa); font-weight:700; }
+.author, .date { color: var(--muted); font-weight:600; }
+h1, h2, h3, h4 { color: var(--espresso); font-weight:800; letter-spacing:-.02em; }
+h1 {
+border-bottom: 4px solid transparent;
+border-image: linear-gradient(90deg, var(--espresso), var(--gold), transparent) 1;
+padding-bottom: .35em;
+margin-top: 1.4em;
 }
-h1.title {
-  color: #17395c !important;
-  -webkit-text-fill-color: #17395c !important;
-  background: none !important;
-  border-bottom: 4px solid #f2a51a !important;
-  padding-bottom: 14px !important;
-}
-h2 {
-  margin-top: 46px !important;
-  padding: 12px 18px !important;
-  border-left: 8px solid #f2a51a !important;
-  border-radius: 8px !important;
-  background: linear-gradient(90deg, #eef8f6, #fff8e7) !important;
-}
-.unpad-cover h2 {
-  color: #111827 !important;
-  -webkit-text-fill-color: #111827 !important;
-  background: #fffdf8 !important;
-  border-left: 8px solid #f2a51a !important;
-  border-bottom: 0 !important;
-}
-h3 {
-  margin-top: 30px !important;
-}
-a {
-  color: #0b5c86 !important;
-}
-img, svg {
-  max-width: 100% !important;
-  height: auto !important;
-}
-table {
-  width: 100% !important;
-  border-collapse: collapse !important;
-  margin: 18px 0 26px !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-}
-.s2-table-scroll {
-  width: 100% !important;
-  max-width: 100% !important;
-  overflow-x: auto !important;
-  margin: 18px 0 26px !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-}
-.s2-table-scroll table {
-  min-width: 680px !important;
-  margin: 0 !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-}
-th {
-  background: #17395c !important;
-  color: #ffffff !important;
-  padding: 10px 12px !important;
-}
-td {
-  background: #fffdf8 !important;
-  border: 1px solid #d7e2ea !important;
-  padding: 10px 12px !important;
-  vertical-align: top !important;
-}
-.main-container p, .main-container li, td, th {
-  overflow-wrap: anywhere !important;
-}
-pre {
-  overflow: auto !important;
-  padding: 16px !important;
-  background: #eef5f8 !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  color: #111827 !important;
-}
-code {
-  background: #eef5f8 !important;
-  border-radius: 6px !important;
-  color: #111827 !important;
-  padding: 2px 5px !important;
-}
-span.math.display, .math.display, .MathJax_Display, .MathJax, mjx-container {
-  display: block !important;
-  max-width: 100% !important;
-  overflow-x: auto !important;
-  overflow-y: hidden !important;
-}
+h2 { margin-top: 1.15em; color:#4d2e1c; }
+h3 { color:#6b3f22; }
+a { color:#8a4f25; font-weight:650; }
 blockquote {
-  margin: 22px 0 !important;
-  padding: 16px 20px !important;
-  background: #fff8e7 !important;
-  border-left: 8px solid #0f766e !important;
-  border-radius: 0 8px 8px 0 !important;
+background: linear-gradient(135deg, #fff2df, #f8dfbf);
+border-left: 8px solid var(--caramel);
+border-radius: 16px;
+padding: 18px 22px;
+color:#3a2619;
+box-shadow: 0 12px 30px rgba(107,63,34,.08);
 }
-#TOC, .tocify {
-  background: #ffffff !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  box-shadow: 0 12px 28px rgba(23, 57, 92, 0.10) !important;
+pre, pre.sourceCode, div.sourceCode, .sourceCode {
+background: #f7e2c5 !important;
+color: #111 !important;
+border: 1px solid #d2a06d;
+border-radius: 16px;
+box-shadow: inset 0 0 0 1px rgba(255,255,255,.45), 0 10px 24px rgba(107,63,34,.08);
 }
-.tocify {
-  max-height: calc(100vh - 40px) !important;
+code, pre code {
+color:#111 !important;
+background: #f7e2c5 !important;
+border-radius: 8px;
+padding: 2px 5px;
 }
-.tocify .active, #TOC .active {
-  background: linear-gradient(90deg, #17395c, #0f766e) !important;
-  color: #ffffff !important;
-  border-radius: 6px !important;
+.math, span.math, div.math, .MathJax, .mjx-chtml { color:#111 !important; }
+.formula-box, .concept-box, .case-box, .practice-box, .warning-box, .rps-box {
+border-radius: 20px;
+padding: 20px 24px;
+margin: 20px 0;
+box-shadow: 0 14px 35px rgba(74,42,23,.10);
 }
-#TOC a, .tocify a {
-  color: #17395c !important;
-  text-decoration: none !important;
+.formula-box { background: #f8e8cf; border: 1px solid #d7a66f; color:#111; }
+.concept-box { background: linear-gradient(135deg,#fff6e9,#f1d2aa); border: 1px solid #d6a269; }
+.case-box { background: linear-gradient(135deg,#fffaf2,#ecd1b0); border: 1px solid #c18a55; }
+.practice-box { background: linear-gradient(135deg,#fff4dd,#f9d79c); border: 1px solid #d5a449; }
+.warning-box { background: linear-gradient(135deg,#fff1e6,#efc4aa); border: 1px solid #bd7048; }
+.rps-box { background: linear-gradient(135deg,#fff7ec,#f4dfc6); border: 1px solid #c3925a; }
+table { background:#fffaf2; border-radius:14px; overflow:hidden; }
+th { background:#6b3f22 !important; color:#fff !important; }
+td { border-color:#ead0ad !important; }
+.tocify, .list-group, #TOC {
+background: rgba(255,250,242,.96) !important;
+border-radius: 18px;
+border: 1px solid rgba(107,63,34,.18);
+box-shadow: 0 14px 35px rgba(74,42,23,.10);
 }
-#TOC a:hover, .tocify a:hover {
-  color: #0f766e !important;
-  text-decoration: underline !important;
+.tocify-item a, .tocify-subheader a { color:#4c2c1a !important; }
+.tocify-item.active, .tocify-subheader .active { background:#8b552d !important; color:#fff !important; }
+hr { border-top: 1px solid #d9b98d; }
+.badge-coklat {
+display:inline-block; padding: 4px 10px; border-radius: 999px;
+background: linear-gradient(135deg,#6b3f22,#c98e4e);
+color:white; font-weight:700; font-size:.85em;
 }
-.hero, .rps-box, .rpsbox, .info-card, .card,
-.callout, .note, .casebox, .case-box, .examplebox, .exercise-box,
-.learning-box, .activitybox, .activity, .practice-box, .praktik-box,
-.praktikum, .tujuan, .interpretasi, .refleksi, .warning, .warningbox,
-.warning-box, .tip, .idea-box, .mathbox, .formula-box, .rumus-box,
-.contoh-box, .rubric-box {
-  margin: 22px 0 !important;
-  padding: 20px 24px !important;
-  background: #fffdf8 !important;
-  border: 1px solid #d7e2ea !important;
-  border-left: 8px solid #0f766e !important;
-  border-radius: 8px !important;
-  box-shadow: 0 10px 24px rgba(23, 57, 92, 0.10) !important;
-  color: #172033 !important;
-}
-.hero {
-  background: linear-gradient(135deg, #17395c 0%, #0f766e 62%, #f2a51a 100%) !important;
-  color: #ffffff !important;
-  border-left: 0 !important;
-}
-.hero h1, .hero h2, .hero h3, .hero h4, .hero p, .hero strong {
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-}
-.warning, .warningbox, .warning-box {
-  border-left-color: #b45309 !important;
-  background: #fff8e7 !important;
-}
-.rps-box, .rpsbox, .rubric-box {
-  border-left-color: #f2a51a !important;
-  background: linear-gradient(135deg, #fffdf8, #fff8e7) !important;
-}
-.mathbox, .formula-box, .rumus-box {
-  border-left-color: #17395c !important;
-  background: #eef5f8 !important;
-}
-.badge {
-  display: inline-block !important;
-  padding: 4px 10px !important;
-  border-radius: 999px !important;
-  background: #17395c !important;
-  color: #ffffff !important;
-  font-weight: 700 !important;
-  font-size: 0.85em !important;
-}
-.grid-2, .grid-3 {
-  display: grid !important;
-  gap: 18px !important;
-}
-.grid-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-}
-.grid-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-}
-hr {
-  border: 0 !important;
-  height: 2px !important;
-  background: linear-gradient(90deg, transparent, #d7e2ea, transparent) !important;
-  margin: 34px 0 !important;
-}
-@media (max-width: 980px) {
-  #TOC, .tocify {
-    position: relative !important;
-    width: auto !important;
-    max-height: 360px !important;
-    margin: 12px !important;
-  }
-  .main-container {
-    margin: 12px !important;
-    padding: 24px !important;
-  }
-  .grid-2, .grid-3 {
-    grid-template-columns: 1fr !important;
-  }
-}
+.small-note { color:#6f6259; font-size:.95em; }
 </style>
-<script>
-window.MathJax = {
-  tex: {
-    inlineMath: [["\\(", "\\)"], ["$", "$"]],
-    displayMath: [["\\[", "\\]"], ["$$", "$$"]],
-    processEscapes: true,
-    processEnvironments: true,
-    tags: "ams"
-  },
-  options: {
-    skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"],
-    ignoreHtmlClass: "tex2jax_ignore"
-  },
-  chtml: {
-    fontURL: "../../assets/vendor/mathjax/output/chtml/fonts/woff-v2"
-  },
-  startup: {
-    typeset: true
-  }
-};
-
-(function () {
-  var script = document.createElement("script");
-  script.src = "../../assets/vendor/mathjax/tex-mml-chtml.js";
-  script.async = true;
-  script.onerror = function () {
-    var fallback = document.createElement("script");
-    fallback.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
-    fallback.async = true;
-    document.head.appendChild(fallback);
-  };
-  document.head.appendChild(script);
-})();
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll("table").forEach(function (table) {
-    if (table.parentElement && table.parentElement.classList.contains("s2-table-scroll")) return;
-    var wrapper = document.createElement("div");
-    wrapper.className = "s2-table-scroll";
-    table.parentNode.insertBefore(wrapper, table);
-    wrapper.appendChild(table);
-  });
-});
-</script>
+<!-- BEGIN AI-INLINE-STYLE-2026 -->
+<style>
+.ai-inline {
+margin: 1rem 0 1.35rem;
+padding: 1rem 1.1rem;
+border: 1px solid #bfd9d5;
+border-left: 7px solid #0f766e;
+border-radius: 8px;
+background: linear-gradient(135deg, #eff9f7, #fffaf0);
+}
+.ai-inline--agentic { border-left-color: #17395c; background: linear-gradient(135deg, #eef5fb, #f5faf8); }
+.ai-inline--assessment { border-left-color: #a35d00; background: #fff8e8; }
+.ai-inline h3, .ai-inline h4 { margin-top: 0; color: #17395c; }
+.ai-inline p:last-child, .ai-inline ul:last-child { margin-bottom: 0; }
+.ai-inline__label {
+display: inline-block; margin-bottom: .45rem; padding: .2rem .55rem;
+border-radius: 999px; background: #17395c; color: white;
+font-size: .78rem; font-weight: 800;
+}
+.ai-inline table { width: 100%; margin: .6rem 0; background: white; }
+</style>
+<!-- END AI-INLINE-STYLE-2026 -->
 <div id="identitas-dan-peta-pembelajaran" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Identitas dan Peta
 Pembelajaran</h1>
+<!-- BEGIN AI-INLINE:7377e35b83ca -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 1</span>
+<h3>
+Generative dan Agentic AI untuk Identitas dan Peta Pembelajaran
+</h3>
+<p><strong>Arah RPS.</strong> A/B testing, sequential experiment,
+adaptive design, bandit sebagai pengayaan, serta randomization
+inference.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Pendahuluan Desain Eksperimen.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk merumuskan alternatif penjelasan, contoh, dan
+hipotesis awal.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara
+bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik,
+dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti
+kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rps-box">
 <p><span class="badge-coklat">S2 Statistika Terapan FMIPA
 UNPAD</span></p>
@@ -3634,6 +3546,62 @@ replikasi—sekali gagal, panik berjamaah. 😄</p>
 <div id="pertemuan-1-pendahuluan-desain-eksperimen" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Pertemuan 1:
 Pendahuluan Desain Eksperimen</h1>
+<!-- BEGIN AI-INLINE:6ee5237e0301 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 1</span>
+<h3>
+Generative dan Agentic AI untuk Pendahuluan Desain Eksperimen
+</h3>
+<p><strong>Arah RPS.</strong> A/B testing, sequential experiment,
+adaptive design, bandit sebagai pengayaan, serta randomization
+inference.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Pendahuluan Desain Eksperimen.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk merumuskan alternatif penjelasan, contoh, dan
+hipotesis awal.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara
+bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik,
+dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti
+kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rps-box">
 <p><strong>Keterkaitan RPS:</strong> SubCPMK1 — materi ini mengikuti
 bahan kajian RPS pada pertemuan 1. Fokus pembelajaran adalah pendahuluan
@@ -3657,6 +3625,24 @@ dan komunikatif.</li>
 <div id="konsep-inti-dan-posisi-dalam-desain-eksperimen" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> Konsep Inti dan
 Posisi dalam Desain Eksperimen</h2>
+<!-- BEGIN AI-INLINE:7661159ee4f1 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti dan Posisi dalam Desain Eksperimen
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Pendahuluan Desain Eksperimen.
+</p>
+<p>
+Minta AI menjelaskan <strong>Pendahuluan Desain Eksperimen</strong>
+melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa
+kemudian membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Fokus utama pertemuan ini adalah <strong>Pendahuluan Desain
 Eksperimen</strong>. Kata kunci yang harus dikuasai mahasiswa meliputi
 tujuan eksperimen, unit eksperimen, perlakuan, faktor, taraf, respons,
@@ -3850,6 +3836,29 @@ apakah hasil eksperimen benar-benar dapat dipercaya.</p>
 <div id="contoh-kasus-terapan" class="section level2" number="2.5">
 <h2><span class="header-section-number">2.5</span> Contoh Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:8bea3588eb2c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Pendahuluan Desain Eksperimen.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: A/B testing, sequential
+experiment, adaptive design, bandit sebagai pengayaan, serta
+randomization inference. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-box">
 <p>Kasus yang digunakan pada pertemuan ini adalah <strong>pengujian
 formula pupuk organik terhadap pertumbuhan tanaman</strong>. Bayangkan
@@ -3889,6 +3898,26 @@ tugas. 😄</p>
 </div>
 <div id="implementasi-r" class="section level2" number="2.6">
 <h2><span class="header-section-number">2.6</span> Implementasi R</h2>
+<!-- BEGIN AI-INLINE:45369a457b90 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Pendahuluan Desain Eksperimen.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co"># Ilustrasi sederhana: rancangan acak lengkap dengan 3 perlakuan dan 4 replikasi</span></span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>perlakuan <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;Kontrol&quot;</span>, <span class="st">&quot;Formula_A&quot;</span>, <span class="st">&quot;Formula_B&quot;</span>), <span class="at">each =</span> <span class="dv">4</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>unit <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;U&quot;</span>, <span class="fu">sprintf</span>(<span class="st">&quot;%02d&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(perlakuan)))</span>
@@ -4057,6 +4086,64 @@ desain mengizinkan.</p>
 <div id="pertemuan-2-faktor-kuantitatif-dan-kualitatif-dalam-eksperimen-faktorial" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Pertemuan 2: Faktor
 Kuantitatif dan Kualitatif dalam Eksperimen Faktorial</h1>
+<!-- BEGIN AI-INLINE:e1983aa7ef31 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 2</span>
+<h3>
+Generative dan Agentic AI untuk Faktor Kuantitatif dan Kualitatif dalam
+Eksperimen Faktorial
+</h3>
+<p><strong>Arah RPS.</strong> Heterogeneous treatment effect, causal
+forest, optimasi desain dengan komputasi, dan pengendalian
+multiplicity.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Eksperimen Faktorial: Faktor
+Kuantitatif dan Kualitatif; Eksperimen Faktorial 2k dan 3k.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk merumuskan alternatif penjelasan, contoh, dan
+hipotesis awal.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara
+bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik,
+dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti
+kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rps-box">
 <p><strong>Keterkaitan RPS:</strong> SubCPMK1 — materi ini mengikuti
 bahan kajian RPS pada pertemuan 2. Fokus pembelajaran adalah faktor
@@ -4080,6 +4167,26 @@ dan komunikatif.</li>
 <div id="konsep-inti-dan-posisi-dalam-desain-eksperimen-1" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> Konsep Inti dan
 Posisi dalam Desain Eksperimen</h2>
+<!-- BEGIN AI-INLINE:516c3c5d9723 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti dan Posisi dalam Desain Eksperimen
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Faktor Kuantitatif dan Kualitatif
+dalam Eksperimen Faktorial.
+</p>
+<p>
+Minta AI menjelaskan <strong>Faktor Kuantitatif dan Kualitatif dalam
+Eksperimen Faktorial</strong> melalui definisi, analogi, contoh, dan
+contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Fokus utama pertemuan ini adalah <strong>Faktor Kuantitatif dan
 Kualitatif dalam Eksperimen Faktorial</strong>. Kata kunci yang harus
 dikuasai mahasiswa meliputi faktor kuantitatif, faktor kualitatif,
@@ -4241,6 +4348,30 @@ apakah hasil eksperimen benar-benar dapat dipercaya.</p>
 <div id="contoh-kasus-terapan-1" class="section level2" number="3.5">
 <h2><span class="header-section-number">3.5</span> Contoh Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:b4c5daa7401c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Faktor Kuantitatif dan Kualitatif
+dalam Eksperimen Faktorial.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Heterogeneous treatment
+effect, causal forest, optimasi desain dengan komputasi, dan
+pengendalian multiplicity. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-box">
 <p>Kasus yang digunakan pada pertemuan ini adalah <strong>pengaruh suhu
 inkubasi dan jenis media terhadap yield enzim</strong>. Bayangkan
@@ -4280,6 +4411,27 @@ tugas. 😄</p>
 </div>
 <div id="implementasi-r-1" class="section level2" number="3.6">
 <h2><span class="header-section-number">3.6</span> Implementasi R</h2>
+<!-- BEGIN AI-INLINE:5bc1481a57b7 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Faktor Kuantitatif dan Kualitatif
+dalam Eksperimen Faktorial.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="co"># Ilustrasi interaksi faktor kualitatif dan kuantitatif</span></span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2025</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">media =</span> <span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>), <span class="at">suhu =</span> <span class="fu">c</span>(<span class="dv">30</span>, <span class="dv">35</span>, <span class="dv">40</span>), <span class="at">rep =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
@@ -4441,6 +4593,64 @@ dan simpulkan hanya sejauh desain mengizinkan.</p>
 <div id="pertemuan-3-eksperimen-faktorial-2k" class="section level1" number="4">
 <h1><span class="header-section-number">4</span> Pertemuan 3: Eksperimen
 Faktorial 2^k</h1>
+<!-- BEGIN AI-INLINE:8e0fd6679e66 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 3</span>
+<h3>
+Generative dan Agentic AI untuk Eksperimen Faktorial 2^k
+</h3>
+<p><strong>Arah RPS.</strong> Proyek eksperimen nyata atau simulasi yang
+memuat preregistration, power analysis, ethical safeguards, dan
+pelaporan reproducible.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Ekspektasi Kuadrat Tengah (EKT) pada
+Model Tetap, Acak, dan Campuran.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rps-box">
 <p><strong>Keterkaitan RPS:</strong> SubCPMK1 — materi ini mengikuti
 bahan kajian RPS pada pertemuan 3. Fokus pembelajaran adalah eksperimen
@@ -4464,6 +4674,24 @@ dan komunikatif.</li>
 <div id="konsep-inti-dan-posisi-dalam-desain-eksperimen-2" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> Konsep Inti dan
 Posisi dalam Desain Eksperimen</h2>
+<!-- BEGIN AI-INLINE:843aaaddd4c5 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti dan Posisi dalam Desain Eksperimen
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 3: Eksperimen Faktorial 2^k.
+</p>
+<p>
+Minta AI menjelaskan <strong>Eksperimen Faktorial 2^k</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Fokus utama pertemuan ini adalah <strong>Eksperimen Faktorial
 2^k</strong>. Kata kunci yang harus dikuasai mahasiswa meliputi
 faktorial dua taraf, notasi Yates, kontras, estimasi efek, interaksi
@@ -4624,6 +4852,29 @@ apakah hasil eksperimen benar-benar dapat dipercaya.</p>
 <div id="contoh-kasus-terapan-2" class="section level2" number="4.5">
 <h2><span class="header-section-number">4.5</span> Contoh Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:b6d909fda4a8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 3: Eksperimen Faktorial 2^k.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Proyek eksperimen nyata
+atau simulasi yang memuat preregistration, power analysis, ethical
+safeguards, dan pelaporan reproducible. Generative AI dapat menghasilkan
+beberapa skenario pemangku kepentingan dan draf narasi yang kemudian
+diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel,
+grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-box">
 <p>Kasus yang digunakan pada pertemuan ini adalah <strong>optimasi
 kecepatan mesin, tekanan, dan jenis katalis pada proses
@@ -4664,6 +4915,26 @@ tugas. 😄</p>
 </div>
 <div id="implementasi-r-2" class="section level2" number="4.6">
 <h2><span class="header-section-number">4.6</span> Implementasi R</h2>
+<!-- BEGIN AI-INLINE:38464554014f -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 3: Eksperimen Faktorial 2^k.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="co"># Rancangan faktorial 2^3 dengan coding -1 dan +1</span></span>
 <span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>des <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">A =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>), <span class="at">B =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>), <span class="at">C =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>), <span class="at">rep =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2025</span>)</span>
@@ -4825,6 +5096,65 @@ desain mengizinkan.</p>
 <div id="pertemuan-4-eksperimen-faktorial-3k-dan-ekspektasi-kuadrat-tengah" class="section level1" number="5">
 <h1><span class="header-section-number">5</span> Pertemuan 4: Eksperimen
 Faktorial 3^k dan Ekspektasi Kuadrat Tengah</h1>
+<!-- BEGIN AI-INLINE:ba59dc627c85 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 4</span>
+<h3>
+Generative dan Agentic AI untuk Eksperimen Faktorial 3^k dan Ekspektasi
+Kuadrat Tengah
+</h3>
+<p><strong>Arah RPS.</strong> A/B testing, sequential experiment,
+adaptive design, bandit sebagai pengayaan, serta randomization
+inference.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Model Satterthwaite pada Desain
+Eksperimen.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rps-box">
 <p><strong>Keterkaitan RPS:</strong> SubCPMK1 — materi ini mengikuti
 bahan kajian RPS pada pertemuan 4. Fokus pembelajaran adalah eksperimen
@@ -4848,6 +5178,26 @@ dan komunikatif.</li>
 <div id="konsep-inti-dan-posisi-dalam-desain-eksperimen-3" class="section level2" number="5.2">
 <h2><span class="header-section-number">5.2</span> Konsep Inti dan
 Posisi dalam Desain Eksperimen</h2>
+<!-- BEGIN AI-INLINE:093b3fe624c0 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti dan Posisi dalam Desain Eksperimen
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 4: Eksperimen Faktorial 3^k dan
+Ekspektasi Kuadrat Tengah.
+</p>
+<p>
+Minta AI menjelaskan <strong>Eksperimen Faktorial 3^k dan Ekspektasi
+Kuadrat Tengah</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Fokus utama pertemuan ini adalah <strong>Eksperimen Faktorial 3^k dan
 Ekspektasi Kuadrat Tengah</strong>. Kata kunci yang harus dikuasai
 mahasiswa meliputi faktorial tiga taraf, efek linear dan kuadratik, EKT,
@@ -5021,6 +5371,30 @@ apakah hasil eksperimen benar-benar dapat dipercaya.</p>
 <div id="contoh-kasus-terapan-3" class="section level2" number="5.5">
 <h2><span class="header-section-number">5.5</span> Contoh Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:638736edbf6e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 4: Eksperimen Faktorial 3^k dan
+Ekspektasi Kuadrat Tengah.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: A/B testing, sequential
+experiment, adaptive design, bandit sebagai pengayaan, serta
+randomization inference. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-box">
 <p>Kasus yang digunakan pada pertemuan ini adalah <strong>pengujian tiga
 tingkat dosis, tiga waktu reaksi, dan tiga suhu proses</strong>.
@@ -5060,6 +5434,27 @@ tugas. 😄</p>
 </div>
 <div id="implementasi-r-3" class="section level2" number="5.6">
 <h2><span class="header-section-number">5.6</span> Implementasi R</h2>
+<!-- BEGIN AI-INLINE:d7913a34454e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 4: Eksperimen Faktorial 3^k dan
+Ekspektasi Kuadrat Tengah.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="co"># Contoh faktorial 3^2: efek linear dan kuadratik dengan polynomial contrasts</span></span>
 <span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2025</span>)</span>
 <span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">dosis =</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;rendah&quot;</span>, <span class="st">&quot;sedang&quot;</span>, <span class="st">&quot;tinggi&quot;</span>), <span class="at">ordered =</span> <span class="cn">TRUE</span>),</span>
@@ -5223,6 +5618,64 @@ desain mengizinkan.</p>
 <div id="pertemuan-5-pembauran-pada-desain-faktorial-2k-dan-3k" class="section level1" number="6">
 <h1><span class="header-section-number">6</span> Pertemuan 5: Pembauran
 pada Desain Faktorial 2^k dan 3^k</h1>
+<!-- BEGIN AI-INLINE:e0fda57bf357 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 5</span>
+<h3>
+Generative dan Agentic AI untuk Pembauran pada Desain Faktorial 2^k dan
+3^k
+</h3>
+<p><strong>Arah RPS.</strong> Heterogeneous treatment effect, causal
+forest, optimasi desain dengan komputasi, dan pengendalian
+multiplicity.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK2 melalui fokus: Pembauran pada Desain Faktorial 2k
+dan 3k; Pembauran dalam replikasi.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk merumuskan alternatif penjelasan, contoh, dan
+hipotesis awal.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara
+bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik,
+dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti
+kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rps-box">
 <p><strong>Keterkaitan RPS:</strong> SubCPMK2 — materi ini mengikuti
 bahan kajian RPS pada pertemuan 5. Fokus pembelajaran adalah pembauran
@@ -5246,6 +5699,25 @@ dan komunikatif.</li>
 <div id="konsep-inti-dan-posisi-dalam-desain-eksperimen-4" class="section level2" number="6.2">
 <h2><span class="header-section-number">6.2</span> Konsep Inti dan
 Posisi dalam Desain Eksperimen</h2>
+<!-- BEGIN AI-INLINE:2e269b89a65b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti dan Posisi dalam Desain Eksperimen
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Pembauran pada Desain Faktorial
+2^k dan 3^k.
+</p>
+<p>
+Minta AI menjelaskan <strong>Pembauran pada Desain Faktorial 2^k dan
+3^k</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Fokus utama pertemuan ini adalah <strong>Pembauran pada Desain
 Faktorial 2^k dan 3^k</strong>. Kata kunci yang harus dikuasai mahasiswa
 meliputi confounding, blocking, efek terbaur, defining contrast,
@@ -5405,6 +5877,30 @@ apakah hasil eksperimen benar-benar dapat dipercaya.</p>
 <div id="contoh-kasus-terapan-4" class="section level2" number="6.5">
 <h2><span class="header-section-number">6.5</span> Contoh Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:8dd1c689c3d0 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Pembauran pada Desain Faktorial
+2^k dan 3^k.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Heterogeneous treatment
+effect, causal forest, optimasi desain dengan komputasi, dan
+pengendalian multiplicity. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-box">
 <p>Kasus yang digunakan pada pertemuan ini adalah <strong>eksperimen
 produksi yang harus dibagi ke beberapa hari kerja karena kapasitas mesin
@@ -5445,6 +5941,27 @@ tugas. 😄</p>
 </div>
 <div id="implementasi-r-4" class="section level2" number="6.6">
 <h2><span class="header-section-number">6.6</span> Implementasi R</h2>
+<!-- BEGIN AI-INLINE:0611eda04375 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Pembauran pada Desain Faktorial
+2^k dan 3^k.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="co"># Contoh blok pada faktorial 2^3: efek ABC digunakan sebagai pembentuk blok</span></span>
 <span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>full <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">A =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>), <span class="at">B =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>), <span class="at">C =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>))</span>
 <span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>full<span class="sc">$</span>ABC <span class="ot">&lt;-</span> <span class="fu">with</span>(full, A<span class="sc">*</span>B<span class="sc">*</span>C)</span>
@@ -5601,6 +6118,62 @@ desain mengizinkan.</p>
 <div id="pertemuan-6-desain-baur-parsial-dan-tanpa-replikasi" class="section level1" number="7">
 <h1><span class="header-section-number">7</span> Pertemuan 6: Desain
 Baur Parsial dan Tanpa Replikasi</h1>
+<!-- BEGIN AI-INLINE:54d07f6f9123 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 6</span>
+<h3>
+Generative dan Agentic AI untuk Desain Baur Parsial dan Tanpa Replikasi
+</h3>
+<p><strong>Arah RPS.</strong> Proyek eksperimen nyata atau simulasi yang
+memuat preregistration, power analysis, ethical safeguards, dan
+pelaporan reproducible.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK2 melalui fokus: Desain baur parsial.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk merumuskan alternatif penjelasan, contoh, dan
+hipotesis awal.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara
+bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik,
+dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti
+kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rps-box">
 <p><strong>Keterkaitan RPS:</strong> SubCPMK2 — materi ini mengikuti
 bahan kajian RPS pada pertemuan 6. Fokus pembelajaran adalah desain baur
@@ -5624,6 +6197,26 @@ dan komunikatif.</li>
 <div id="konsep-inti-dan-posisi-dalam-desain-eksperimen-5" class="section level2" number="7.2">
 <h2><span class="header-section-number">7.2</span> Konsep Inti dan
 Posisi dalam Desain Eksperimen</h2>
+<!-- BEGIN AI-INLINE:e90c3cb4e615 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti dan Posisi dalam Desain Eksperimen
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 6: Desain Baur Parsial dan Tanpa
+Replikasi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Desain Baur Parsial dan Tanpa
+Replikasi</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Fokus utama pertemuan ini adalah <strong>Desain Baur Parsial dan
 Tanpa Replikasi</strong>. Kata kunci yang harus dikuasai mahasiswa
 meliputi unreplicated factorial, sparsity of effects, normal plot, Lenth
@@ -5787,6 +6380,30 @@ apakah hasil eksperimen benar-benar dapat dipercaya.</p>
 <div id="contoh-kasus-terapan-5" class="section level2" number="7.5">
 <h2><span class="header-section-number">7.5</span> Contoh Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:cc26b3da51b4 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 6: Desain Baur Parsial dan Tanpa
+Replikasi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Proyek eksperimen nyata
+atau simulasi yang memuat preregistration, power analysis, ethical
+safeguards, dan pelaporan reproducible. Generative AI dapat menghasilkan
+beberapa skenario pemangku kepentingan dan draf narasi yang kemudian
+diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel,
+grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-box">
 <p>Kasus yang digunakan pada pertemuan ini adalah <strong>screening
 banyak faktor proses ketika biaya eksperimen hanya memungkinkan satu
@@ -5827,6 +6444,27 @@ tugas. 😄</p>
 </div>
 <div id="implementasi-r-5" class="section level2" number="7.6">
 <h2><span class="header-section-number">7.6</span> Implementasi R</h2>
+<!-- BEGIN AI-INLINE:5f63b12a8d34 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 6: Desain Baur Parsial dan Tanpa
+Replikasi.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="co"># Screening tanpa replikasi: gunakan plot efek untuk mencari kandidat efek aktif</span></span>
 <span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2025</span>)</span>
 <span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>des <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">A=</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>), <span class="at">B=</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>), <span class="at">C=</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>), <span class="at">D=</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>))</span>
@@ -5987,6 +6625,63 @@ desain mengizinkan.</p>
 <div id="pertemuan-7-faktorial-fraksional-2k-dan-3k" class="section level1" number="8">
 <h1><span class="header-section-number">8</span> Pertemuan 7: Faktorial
 Fraksional 2^k dan 3^k</h1>
+<!-- BEGIN AI-INLINE:b63d61266cb2 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 7</span>
+<h3>
+Generative dan Agentic AI untuk Faktorial Fraksional 2^k dan 3^k
+</h3>
+<p><strong>Arah RPS.</strong> A/B testing, sequential experiment,
+adaptive design, bandit sebagai pengayaan, serta randomization
+inference.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK2 melalui fokus: Pembauran tanpa replikasi; Faktorial
+Fraksional untuk Eksperimen Faktorial 2k dan 3k.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk merumuskan alternatif penjelasan, contoh, dan
+hipotesis awal.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara
+bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik,
+dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti
+kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rps-box">
 <p><strong>Keterkaitan RPS:</strong> SubCPMK2 — materi ini mengikuti
 bahan kajian RPS pada pertemuan 7. Fokus pembelajaran adalah faktorial
@@ -6010,6 +6705,24 @@ dan komunikatif.</li>
 <div id="konsep-inti-dan-posisi-dalam-desain-eksperimen-6" class="section level2" number="8.2">
 <h2><span class="header-section-number">8.2</span> Konsep Inti dan
 Posisi dalam Desain Eksperimen</h2>
+<!-- BEGIN AI-INLINE:dfc035fc01da -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti dan Posisi dalam Desain Eksperimen
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 7: Faktorial Fraksional 2^k dan 3^k.
+</p>
+<p>
+Minta AI menjelaskan <strong>Faktorial Fraksional 2^k dan 3^k</strong>
+melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa
+kemudian membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Fokus utama pertemuan ini adalah <strong>Faktorial Fraksional 2^k dan
 3^k</strong>. Kata kunci yang harus dikuasai mahasiswa meliputi
 fractional factorial, generator, alias structure, resolusi desain,
@@ -6170,6 +6883,29 @@ apakah hasil eksperimen benar-benar dapat dipercaya.</p>
 <div id="contoh-kasus-terapan-6" class="section level2" number="8.5">
 <h2><span class="header-section-number">8.5</span> Contoh Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:67a0e7953d5c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 7: Faktorial Fraksional 2^k dan 3^k.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: A/B testing, sequential
+experiment, adaptive design, bandit sebagai pengayaan, serta
+randomization inference. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-box">
 <p>Kasus yang digunakan pada pertemuan ini adalah <strong>seleksi awal
 faktor penting dalam pengembangan produk pangan fungsional</strong>.
@@ -6209,6 +6945,26 @@ tugas. 😄</p>
 </div>
 <div id="implementasi-r-6" class="section level2" number="8.6">
 <h2><span class="header-section-number">8.6</span> Implementasi R</h2>
+<!-- BEGIN AI-INLINE:bafbf261b1f9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 7: Faktorial Fraksional 2^k dan 3^k.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="co"># Fraksi 2^(4-1) dengan generator D = A*B*C</span></span>
 <span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>frac <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">A=</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>), <span class="at">B=</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>), <span class="at">C=</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>))</span>
 <span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>frac<span class="sc">$</span>D <span class="ot">&lt;-</span> <span class="fu">with</span>(frac, A<span class="sc">*</span>B<span class="sc">*</span>C)</span>
@@ -6367,6 +7123,63 @@ desain mengizinkan.</p>
 <div id="pertemuan-8-anava-pada-desain-fraksional-dan-uts-proyek-pendahuluan" class="section level1" number="9">
 <h1><span class="header-section-number">9</span> Pertemuan 8: ANAVA pada
 Desain Fraksional dan UTS Proyek Pendahuluan</h1>
+<!-- BEGIN AI-INLINE:0c092ea9f15d -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 8</span>
+<h3>
+Generative dan Agentic AI untuk ANAVA pada Desain Fraksional dan UTS
+Proyek Pendahuluan
+</h3>
+<p><strong>Arah RPS.</strong> Penggunaan AI hanya sesuai instruksi
+dosen; seluruh bantuan harus diungkapkan dan hasil diverifikasi.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1–2 melalui fokus: Ujian Tengah Semester.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rps-box">
 <p><strong>Keterkaitan RPS:</strong> SubCPMK2 — materi ini mengikuti
 bahan kajian RPS pada pertemuan 8. Fokus pembelajaran adalah anava pada
@@ -6390,6 +7203,26 @@ dan komunikatif.</li>
 <div id="konsep-inti-dan-posisi-dalam-desain-eksperimen-7" class="section level2" number="9.2">
 <h2><span class="header-section-number">9.2</span> Konsep Inti dan
 Posisi dalam Desain Eksperimen</h2>
+<!-- BEGIN AI-INLINE:a6eaa7fb1c46 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti dan Posisi dalam Desain Eksperimen
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 8: ANAVA pada Desain Fraksional dan
+UTS Proyek Pendahuluan.
+</p>
+<p>
+Minta AI menjelaskan <strong>ANAVA pada Desain Fraksional dan UTS Proyek
+Pendahuluan</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Fokus utama pertemuan ini adalah <strong>ANAVA pada Desain Fraksional
 dan UTS Proyek Pendahuluan</strong>. Kata kunci yang harus dikuasai
 mahasiswa meliputi ANAVA fraksional, pooling error, hierarchy principle,
@@ -6551,6 +7384,30 @@ apakah hasil eksperimen benar-benar dapat dipercaya.</p>
 <div id="contoh-kasus-terapan-7" class="section level2" number="9.5">
 <h2><span class="header-section-number">9.5</span> Contoh Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:fc5cfdba2885 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 8: ANAVA pada Desain Fraksional dan
+UTS Proyek Pendahuluan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Penggunaan AI hanya
+sesuai instruksi dosen; seluruh bantuan harus diungkapkan dan hasil
+diverifikasi. Generative AI dapat menghasilkan beberapa skenario
+pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap
+hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-box">
 <p>Kasus yang digunakan pada pertemuan ini adalah <strong>kajian awal
 faktor aktif pada eksperimen optimasi kualitas air</strong>. Bayangkan
@@ -6590,6 +7447,28 @@ tugas. 😄</p>
 </div>
 <div id="implementasi-r-7" class="section level2" number="9.6">
 <h2><span class="header-section-number">9.6</span> Implementasi R</h2>
+<!-- BEGIN AI-INLINE:ce52b103e840 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 8: ANAVA pada Desain Fraksional dan
+UTS Proyek Pendahuluan.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2025</span>)</span>
 <span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>frac <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">A=</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>), <span class="at">B=</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>), <span class="at">C=</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>))</span>
 <span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>frac<span class="sc">$</span>D <span class="ot">&lt;-</span> <span class="fu">with</span>(frac, A<span class="sc">*</span>B<span class="sc">*</span>C)</span>
@@ -6749,6 +7628,64 @@ desain mengizinkan.</p>
 <div id="pertemuan-9-model-dan-asumsi-eksperimen-tersarang" class="section level1" number="10">
 <h1><span class="header-section-number">10</span> Pertemuan 9: Model dan
 Asumsi Eksperimen Tersarang</h1>
+<!-- BEGIN AI-INLINE:684cdf3f5307 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 9</span>
+<h3>
+Generative dan Agentic AI untuk Model dan Asumsi Eksperimen Tersarang
+</h3>
+<p><strong>Arah RPS.</strong> Heterogeneous treatment effect, causal
+forest, optimasi desain dengan komputasi, dan pengendalian
+multiplicity.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Analisis Varians (ANAVA) pada Desain
+Fraksional.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rps-box">
 <p><strong>Keterkaitan RPS:</strong> SubCPMK3 — materi ini mengikuti
 bahan kajian RPS pada pertemuan 9. Fokus pembelajaran adalah model dan
@@ -6772,6 +7709,26 @@ dan komunikatif.</li>
 <div id="konsep-inti-dan-posisi-dalam-desain-eksperimen-8" class="section level2" number="10.2">
 <h2><span class="header-section-number">10.2</span> Konsep Inti dan
 Posisi dalam Desain Eksperimen</h2>
+<!-- BEGIN AI-INLINE:bce16b3126e0 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti dan Posisi dalam Desain Eksperimen
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 9: Model dan Asumsi Eksperimen
+Tersarang.
+</p>
+<p>
+Minta AI menjelaskan <strong>Model dan Asumsi Eksperimen
+Tersarang</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Fokus utama pertemuan ini adalah <strong>Model dan Asumsi Eksperimen
 Tersarang</strong>. Kata kunci yang harus dikuasai mahasiswa meliputi
 nested design, unit sampling, unit eksperimen, komponen ragam, struktur
@@ -6936,6 +7893,30 @@ apakah hasil eksperimen benar-benar dapat dipercaya.</p>
 <div id="contoh-kasus-terapan-8" class="section level2" number="10.5">
 <h2><span class="header-section-number">10.5</span> Contoh Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:1d1bd799d0f5 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 9: Model dan Asumsi Eksperimen
+Tersarang.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Heterogeneous treatment
+effect, causal forest, optimasi desain dengan komputasi, dan
+pengendalian multiplicity. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-box">
 <p>Kasus yang digunakan pada pertemuan ini adalah <strong>pengukuran
 kualitas produk dari beberapa pabrik, mesin di dalam pabrik, dan batch
@@ -6976,6 +7957,29 @@ tugas. 😄</p>
 </div>
 <div id="implementasi-r-8" class="section level2" number="10.6">
 <h2><span class="header-section-number">10.6</span> Implementasi R</h2>
+<!-- BEGIN AI-INLINE:d13556bf523b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 9: Model dan Asumsi Eksperimen
+Tersarang.
+</p>
+<p>
+Agen dapat memasang kandidat model, menjalankan diagnostik,
+membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau
+konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+spesifikasi model, data leakage, konvergensi, residual, kalibrasi,
+ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2025</span>)</span>
 <span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">pabrik =</span> <span class="fu">factor</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>), <span class="at">mesin =</span> <span class="fu">factor</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>), <span class="at">batch =</span> <span class="fu">factor</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>))</span>
 <span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>dat<span class="sc">$</span>mesin_id <span class="ot">&lt;-</span> <span class="fu">interaction</span>(dat<span class="sc">$</span>pabrik, dat<span class="sc">$</span>mesin)</span>
@@ -7133,6 +8137,65 @@ desain mengizinkan.</p>
 <div id="pertemuan-10-analisis-varians-pada-faktorial-tersarang" class="section level1" number="11">
 <h1><span class="header-section-number">11</span> Pertemuan 10: Analisis
 Varians pada Faktorial Tersarang</h1>
+<!-- BEGIN AI-INLINE:0b23e5457ffc -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 10</span>
+<h3>
+Generative dan Agentic AI untuk Analisis Varians pada Faktorial
+Tersarang
+</h3>
+<p><strong>Arah RPS.</strong> Proyek eksperimen nyata atau simulasi yang
+memuat preregistration, power analysis, ethical safeguards, dan
+pelaporan reproducible.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Model dan Asumsi Eksperimen
+Tersarang.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rps-box">
 <p><strong>Keterkaitan RPS:</strong> SubCPMK3 — materi ini mengikuti
 bahan kajian RPS pada pertemuan 10. Fokus pembelajaran adalah analisis
@@ -7156,6 +8219,26 @@ dan komunikatif.</li>
 <div id="konsep-inti-dan-posisi-dalam-desain-eksperimen-9" class="section level2" number="11.2">
 <h2><span class="header-section-number">11.2</span> Konsep Inti dan
 Posisi dalam Desain Eksperimen</h2>
+<!-- BEGIN AI-INLINE:c3195bf06168 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti dan Posisi dalam Desain Eksperimen
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 10: Analisis Varians pada Faktorial
+Tersarang.
+</p>
+<p>
+Minta AI menjelaskan <strong>Analisis Varians pada Faktorial
+Tersarang</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Fokus utama pertemuan ini adalah <strong>Analisis Varians pada
 Faktorial Tersarang</strong>. Kata kunci yang harus dikuasai mahasiswa
 meliputi faktorial tersarang, crossed factor, nested factor, error term,
@@ -7318,6 +8401,30 @@ apakah hasil eksperimen benar-benar dapat dipercaya.</p>
 <div id="contoh-kasus-terapan-9" class="section level2" number="11.5">
 <h2><span class="header-section-number">11.5</span> Contoh Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:c4e83b112c84 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 10: Analisis Varians pada Faktorial
+Tersarang.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Proyek eksperimen nyata
+atau simulasi yang memuat preregistration, power analysis, ethical
+safeguards, dan pelaporan reproducible. Generative AI dapat menghasilkan
+beberapa skenario pemangku kepentingan dan draf narasi yang kemudian
+diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel,
+grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-box">
 <p>Kasus yang digunakan pada pertemuan ini adalah <strong>evaluasi
 performa metode laboratorium dengan operator tersarang dalam
@@ -7358,6 +8465,27 @@ tugas. 😄</p>
 </div>
 <div id="implementasi-r-9" class="section level2" number="11.6">
 <h2><span class="header-section-number">11.6</span> Implementasi R</h2>
+<!-- BEGIN AI-INLINE:60b4e978d6ee -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 10: Analisis Varians pada Faktorial
+Tersarang.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2025</span>)</span>
 <span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">metode =</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;M1&quot;</span>,<span class="st">&quot;M2&quot;</span>)), <span class="at">lab =</span> <span class="fu">factor</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>), <span class="at">operator =</span> <span class="fu">factor</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>), <span class="at">rep =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span>
 <span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a>dat<span class="sc">$</span>operator_id <span class="ot">&lt;-</span> <span class="fu">interaction</span>(dat<span class="sc">$</span>lab, dat<span class="sc">$</span>operator)</span>
@@ -7516,6 +8644,65 @@ desain mengizinkan.</p>
 <div id="pertemuan-11-pembatasan-pengacakan-pada-desain-faktorial" class="section level1" number="12">
 <h1><span class="header-section-number">12</span> Pertemuan 11:
 Pembatasan Pengacakan pada Desain Faktorial</h1>
+<!-- BEGIN AI-INLINE:b3525083f050 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 11</span>
+<h3>
+Generative dan Agentic AI untuk Pembatasan Pengacakan pada Desain
+Faktorial
+</h3>
+<p><strong>Arah RPS.</strong> A/B testing, sequential experiment,
+adaptive design, bandit sebagai pengayaan, serta randomization
+inference.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Analisis Varians pada Eksperimen
+Tersarang dan Faktorial Tersarang; Pembatasan dalam Pengacakan pada
+Desain Faktorial.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk merumuskan alternatif penjelasan, contoh, dan
+hipotesis awal.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara
+bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik,
+dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti
+kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rps-box">
 <p><strong>Keterkaitan RPS:</strong> SubCPMK3 — materi ini mengikuti
 bahan kajian RPS pada pertemuan 11. Fokus pembelajaran adalah pembatasan
@@ -7539,6 +8726,26 @@ dan komunikatif.</li>
 <div id="konsep-inti-dan-posisi-dalam-desain-eksperimen-10" class="section level2" number="12.2">
 <h2><span class="header-section-number">12.2</span> Konsep Inti dan
 Posisi dalam Desain Eksperimen</h2>
+<!-- BEGIN AI-INLINE:f47169fbca74 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti dan Posisi dalam Desain Eksperimen
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 11: Pembatasan Pengacakan pada
+Desain Faktorial.
+</p>
+<p>
+Minta AI menjelaskan <strong>Pembatasan Pengacakan pada Desain
+Faktorial</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Fokus utama pertemuan ini adalah <strong>Pembatasan Pengacakan pada
 Desain Faktorial</strong>. Kata kunci yang harus dikuasai mahasiswa
 meliputi restriction on randomization, whole plot, subplot,
@@ -7700,6 +8907,30 @@ apakah hasil eksperimen benar-benar dapat dipercaya.</p>
 <div id="contoh-kasus-terapan-10" class="section level2" number="12.5">
 <h2><span class="header-section-number">12.5</span> Contoh Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:bd78f7aa0339 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 11: Pembatasan Pengacakan pada
+Desain Faktorial.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: A/B testing, sequential
+experiment, adaptive design, bandit sebagai pengayaan, serta
+randomization inference. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-box">
 <p>Kasus yang digunakan pada pertemuan ini adalah <strong>eksperimen
 suhu oven yang sulit diubah dan waktu pemanggangan yang mudah
@@ -7740,6 +8971,27 @@ tugas. 😄</p>
 </div>
 <div id="implementasi-r-10" class="section level2" number="12.6">
 <h2><span class="header-section-number">12.6</span> Implementasi R</h2>
+<!-- BEGIN AI-INLINE:bbffcbe4789f -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 11: Pembatasan Pengacakan pada
+Desain Faktorial.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="co"># Ilustrasi layout split-plot: faktor sulit diubah = suhu oven</span></span>
 <span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2025</span>)</span>
 <span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a>whole_plot <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">batch =</span> <span class="fu">factor</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>), <span class="at">suhu =</span> <span class="fu">sample</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;Rendah&quot;</span>, <span class="st">&quot;Tinggi&quot;</span>), <span class="at">each =</span> <span class="dv">2</span>)))</span>
@@ -7899,6 +9151,62 @@ desain mengizinkan.</p>
 <div id="pertemuan-12-desain-split-plot" class="section level1" number="13">
 <h1><span class="header-section-number">13</span> Pertemuan 12: Desain
 Split Plot</h1>
+<!-- BEGIN AI-INLINE:911aec44ba50 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 12</span>
+<h3>
+Generative dan Agentic AI untuk Desain Split Plot
+</h3>
+<p><strong>Arah RPS.</strong> Heterogeneous treatment effect, causal
+forest, optimasi desain dengan komputasi, dan pengendalian
+multiplicity.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Desain Split Plot.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk merumuskan alternatif penjelasan, contoh, dan
+hipotesis awal.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara
+bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik,
+dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti
+kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rps-box">
 <p><strong>Keterkaitan RPS:</strong> SubCPMK3 — materi ini mengikuti
 bahan kajian RPS pada pertemuan 12. Fokus pembelajaran adalah desain
@@ -7922,6 +9230,24 @@ dan komunikatif.</li>
 <div id="konsep-inti-dan-posisi-dalam-desain-eksperimen-11" class="section level2" number="13.2">
 <h2><span class="header-section-number">13.2</span> Konsep Inti dan
 Posisi dalam Desain Eksperimen</h2>
+<!-- BEGIN AI-INLINE:13a57f568f80 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti dan Posisi dalam Desain Eksperimen
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 12: Desain Split Plot.
+</p>
+<p>
+Minta AI menjelaskan <strong>Desain Split Plot</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Fokus utama pertemuan ini adalah <strong>Desain Split Plot</strong>.
 Kata kunci yang harus dikuasai mahasiswa meliputi split plot, whole-plot
 error, subplot error, mixed model, interaksi, praktikum pelaporan.
@@ -8085,6 +9411,29 @@ apakah hasil eksperimen benar-benar dapat dipercaya.</p>
 <div id="contoh-kasus-terapan-11" class="section level2" number="13.5">
 <h2><span class="header-section-number">13.5</span> Contoh Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:357ca831bbe4 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 12: Desain Split Plot.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Heterogeneous treatment
+effect, causal forest, optimasi desain dengan komputasi, dan
+pengendalian multiplicity. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-box">
 <p>Kasus yang digunakan pada pertemuan ini adalah <strong>percobaan
 pertanian dengan varietas sebagai whole-plot dan dosis pupuk sebagai
@@ -8125,6 +9474,26 @@ tugas. 😄</p>
 </div>
 <div id="implementasi-r-11" class="section level2" number="13.6">
 <h2><span class="header-section-number">13.6</span> Implementasi R</h2>
+<!-- BEGIN AI-INLINE:3a23fd7f3866 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 12: Desain Split Plot.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2025</span>)</span>
 <span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">blok=</span><span class="fu">factor</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>), <span class="at">varietas=</span><span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;V1&quot;</span>,<span class="st">&quot;V2&quot;</span>)), <span class="at">dosis=</span><span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;D1&quot;</span>,<span class="st">&quot;D2&quot;</span>,<span class="st">&quot;D3&quot;</span>)))</span>
 <span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>dat<span class="sc">$</span>whole <span class="ot">&lt;-</span> <span class="fu">interaction</span>(dat<span class="sc">$</span>blok, dat<span class="sc">$</span>varietas)</span>
@@ -8281,6 +9650,64 @@ mengizinkan.</p>
 <div id="pertemuan-13-analisis-kovarians-dalam-desain-eksperimen" class="section level1" number="14">
 <h1><span class="header-section-number">14</span> Pertemuan 13: Analisis
 Kovarians dalam Desain Eksperimen</h1>
+<!-- BEGIN AI-INLINE:191c34121ca5 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 13</span>
+<h3>
+Generative dan Agentic AI untuk Analisis Kovarians dalam Desain
+Eksperimen
+</h3>
+<p><strong>Arah RPS.</strong> Proyek eksperimen nyata atau simulasi yang
+memuat preregistration, power analysis, ethical safeguards, dan
+pelaporan reproducible.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK4 melalui fokus: Analisis Kovarians (ANCOVA) dalam
+Desain Eksperimen.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk merumuskan alternatif penjelasan, contoh, dan
+hipotesis awal.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara
+bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik,
+dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti
+kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rps-box">
 <p><strong>Keterkaitan RPS:</strong> SubCPMK3 — materi ini mengikuti
 bahan kajian RPS pada pertemuan 13. Fokus pembelajaran adalah analisis
@@ -8304,6 +9731,26 @@ dan komunikatif.</li>
 <div id="konsep-inti-dan-posisi-dalam-desain-eksperimen-12" class="section level2" number="14.2">
 <h2><span class="header-section-number">14.2</span> Konsep Inti dan
 Posisi dalam Desain Eksperimen</h2>
+<!-- BEGIN AI-INLINE:916dbc702c2e -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti dan Posisi dalam Desain Eksperimen
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 13: Analisis Kovarians dalam Desain
+Eksperimen.
+</p>
+<p>
+Minta AI menjelaskan <strong>Analisis Kovarians dalam Desain
+Eksperimen</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Fokus utama pertemuan ini adalah <strong>Analisis Kovarians dalam
 Desain Eksperimen</strong>. Kata kunci yang harus dikuasai mahasiswa
 meliputi ANCOVA, kovariat, adjusted means, homogeneity of slopes,
@@ -8464,6 +9911,30 @@ apakah hasil eksperimen benar-benar dapat dipercaya.</p>
 <div id="contoh-kasus-terapan-12" class="section level2" number="14.5">
 <h2><span class="header-section-number">14.5</span> Contoh Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:53e9084a8c14 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 13: Analisis Kovarians dalam Desain
+Eksperimen.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Proyek eksperimen nyata
+atau simulasi yang memuat preregistration, power analysis, ethical
+safeguards, dan pelaporan reproducible. Generative AI dapat menghasilkan
+beberapa skenario pemangku kepentingan dan draf narasi yang kemudian
+diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel,
+grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-box">
 <p>Kasus yang digunakan pada pertemuan ini adalah <strong>evaluasi
 perlakuan pembelajaran dengan skor pre-test sebagai kovariat</strong>.
@@ -8503,6 +9974,27 @@ tugas. 😄</p>
 </div>
 <div id="implementasi-r-12" class="section level2" number="14.6">
 <h2><span class="header-section-number">14.6</span> Implementasi R</h2>
+<!-- BEGIN AI-INLINE:a896b801a5f9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 13: Analisis Kovarians dalam Desain
+Eksperimen.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2025</span>)</span>
 <span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">perlakuan =</span> <span class="fu">factor</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;Kontrol&quot;</span>,<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>), <span class="at">each=</span><span class="dv">20</span>)))</span>
 <span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>dat<span class="sc">$</span>pre <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="fu">nrow</span>(dat), <span class="dv">70</span>, <span class="dv">8</span>)</span>
@@ -8664,6 +10156,63 @@ desain mengizinkan.</p>
 <div id="pertemuan-14-response-surface-methodology-tahap-awal" class="section level1" number="15">
 <h1><span class="header-section-number">15</span> Pertemuan 14: Response
 Surface Methodology Tahap Awal</h1>
+<!-- BEGIN AI-INLINE:daa331cfa202 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 14</span>
+<h3>
+Generative dan Agentic AI untuk Response Surface Methodology Tahap Awal
+</h3>
+<p><strong>Arah RPS.</strong> A/B testing, sequential experiment,
+adaptive design, bandit sebagai pengayaan, serta randomization
+inference.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK4 melalui fokus: Metode Permukaan Respon (Response
+Surface Methodology); Optimasi Titik Faktor pada Permukaan Respon.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk merumuskan alternatif penjelasan, contoh, dan
+hipotesis awal.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara
+bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik,
+dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti
+kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rps-box">
 <p><strong>Keterkaitan RPS:</strong> SubCPMK4 — materi ini mengikuti
 bahan kajian RPS pada pertemuan 14. Fokus pembelajaran adalah response
@@ -8687,6 +10236,25 @@ dan komunikatif.</li>
 <div id="konsep-inti-dan-posisi-dalam-desain-eksperimen-13" class="section level2" number="15.2">
 <h2><span class="header-section-number">15.2</span> Konsep Inti dan
 Posisi dalam Desain Eksperimen</h2>
+<!-- BEGIN AI-INLINE:f675185a2d80 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti dan Posisi dalam Desain Eksperimen
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Response Surface Methodology
+Tahap Awal.
+</p>
+<p>
+Minta AI menjelaskan <strong>Response Surface Methodology Tahap
+Awal</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Fokus utama pertemuan ini adalah <strong>Response Surface Methodology
 Tahap Awal</strong>. Kata kunci yang harus dikuasai mahasiswa meliputi
 RSM, model orde pertama, steepest ascent, central composite design,
@@ -8847,6 +10415,30 @@ apakah hasil eksperimen benar-benar dapat dipercaya.</p>
 <div id="contoh-kasus-terapan-13" class="section level2" number="15.5">
 <h2><span class="header-section-number">15.5</span> Contoh Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:844bffd5c77c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Response Surface Methodology
+Tahap Awal.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: A/B testing, sequential
+experiment, adaptive design, bandit sebagai pengayaan, serta
+randomization inference. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-box">
 <p>Kasus yang digunakan pada pertemuan ini adalah <strong>optimasi
 rendemen ekstraksi senyawa aktif berdasarkan suhu dan waktu</strong>.
@@ -8886,6 +10478,27 @@ tugas. 😄</p>
 </div>
 <div id="implementasi-r-13" class="section level2" number="15.6">
 <h2><span class="header-section-number">15.6</span> Implementasi R</h2>
+<!-- BEGIN AI-INLINE:652d17c022a7 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Response Surface Methodology
+Tahap Awal.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2025</span>)</span>
 <span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">x1 =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>), <span class="at">x2 =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>), <span class="at">rep =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)</span>
 <span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a>dat<span class="sc">$</span>y <span class="ot">&lt;-</span> <span class="dv">40</span> <span class="sc">+</span> <span class="dv">5</span><span class="sc">*</span>dat<span class="sc">$</span>x1 <span class="sc">+</span> <span class="dv">3</span><span class="sc">*</span>dat<span class="sc">$</span>x2 <span class="sc">-</span> <span class="dv">2</span><span class="sc">*</span>dat<span class="sc">$</span>x1<span class="sc">^</span><span class="dv">2</span> <span class="sc">-</span> <span class="fl">1.5</span><span class="sc">*</span>dat<span class="sc">$</span>x2<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="fu">nrow</span>(dat),<span class="dv">0</span>,<span class="dv">1</span>)</span>
@@ -9046,6 +10659,65 @@ desain mengizinkan.</p>
 <div id="pertemuan-15-optimasi-titik-faktor-pada-permukaan-respon" class="section level1" number="16">
 <h1><span class="header-section-number">16</span> Pertemuan 15: Optimasi
 Titik Faktor pada Permukaan Respon</h1>
+<!-- BEGIN AI-INLINE:16407cd43aba -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 15</span>
+<h3>
+Generative dan Agentic AI untuk Optimasi Titik Faktor pada Permukaan
+Respon
+</h3>
+<p><strong>Arah RPS.</strong> Heterogeneous treatment effect, causal
+forest, optimasi desain dengan komputasi, dan pengendalian
+multiplicity.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK4 melalui fokus: Interpretasi, Kesimpulan, dan
+Komunikasi Hasil Eksperimen.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rps-box">
 <p><strong>Keterkaitan RPS:</strong> SubCPMK4 — materi ini mengikuti
 bahan kajian RPS pada pertemuan 15. Fokus pembelajaran adalah optimasi
@@ -9069,6 +10741,25 @@ dan komunikatif.</li>
 <div id="konsep-inti-dan-posisi-dalam-desain-eksperimen-14" class="section level2" number="16.2">
 <h2><span class="header-section-number">16.2</span> Konsep Inti dan
 Posisi dalam Desain Eksperimen</h2>
+<!-- BEGIN AI-INLINE:460ee778a6ee -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti dan Posisi dalam Desain Eksperimen
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 15: Optimasi Titik Faktor pada
+Permukaan Respon.
+</p>
+<p>
+Minta AI menjelaskan <strong>Optimasi Titik Faktor pada Permukaan
+Respon</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Fokus utama pertemuan ini adalah <strong>Optimasi Titik Faktor pada
 Permukaan Respon</strong>. Kata kunci yang harus dikuasai mahasiswa
 meliputi model orde kedua, titik stasioner, canonical analysis, ridge
@@ -9234,6 +10925,30 @@ apakah hasil eksperimen benar-benar dapat dipercaya.</p>
 <div id="contoh-kasus-terapan-14" class="section level2" number="16.5">
 <h2><span class="header-section-number">16.5</span> Contoh Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:c161f49acde4 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 15: Optimasi Titik Faktor pada
+Permukaan Respon.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Heterogeneous treatment
+effect, causal forest, optimasi desain dengan komputasi, dan
+pengendalian multiplicity. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-box">
 <p>Kasus yang digunakan pada pertemuan ini adalah <strong>penentuan
 kombinasi suhu, tekanan, dan konsentrasi yang memaksimalkan yield serta
@@ -9274,6 +10989,27 @@ tugas. 😄</p>
 </div>
 <div id="implementasi-r-14" class="section level2" number="16.6">
 <h2><span class="header-section-number">16.6</span> Implementasi R</h2>
+<!-- BEGIN AI-INLINE:d25caed67b8d -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 15: Optimasi Titik Faktor pada
+Permukaan Respon.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2025</span>)</span>
 <span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a>grid <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">x1 =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>,<span class="at">length=</span><span class="dv">40</span>), <span class="at">x2 =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>,<span class="at">length=</span><span class="dv">40</span>))</span>
 <span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a>grid<span class="sc">$</span>yhat <span class="ot">&lt;-</span> <span class="dv">55</span> <span class="sc">+</span> <span class="dv">6</span><span class="sc">*</span>grid<span class="sc">$</span>x1 <span class="sc">+</span> <span class="dv">4</span><span class="sc">*</span>grid<span class="sc">$</span>x2 <span class="sc">-</span> <span class="dv">5</span><span class="sc">*</span>grid<span class="sc">$</span>x1<span class="sc">^</span><span class="dv">2</span> <span class="sc">-</span> <span class="dv">3</span><span class="sc">*</span>grid<span class="sc">$</span>x2<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span><span class="sc">*</span>grid<span class="sc">$</span>x1<span class="sc">*</span>grid<span class="sc">$</span>x2</span>
@@ -9434,6 +11170,65 @@ desain mengizinkan.</p>
 <div id="pertemuan-16-interpretasi-kesimpulan-dan-komunikasi-hasil-eksperimen" class="section level1" number="17">
 <h1><span class="header-section-number">17</span> Pertemuan 16:
 Interpretasi, Kesimpulan, dan Komunikasi Hasil Eksperimen</h1>
+<!-- BEGIN AI-INLINE:c7ea57b3cb7c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 16</span>
+<h3>
+Generative dan Agentic AI untuk Interpretasi, Kesimpulan, dan Komunikasi
+Hasil Eksperimen
+</h3>
+<p><strong>Arah RPS.</strong> Audit akhir prompt, sumber, kode, hasil,
+ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila
+digunakan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek
+akhir.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="rps-box">
 <p><strong>Keterkaitan RPS:</strong> SubCPMK4 — materi ini mengikuti
 bahan kajian RPS pada pertemuan 16. Fokus pembelajaran adalah
@@ -9458,6 +11253,26 @@ dan komunikatif.</li>
 <div id="konsep-inti-dan-posisi-dalam-desain-eksperimen-15" class="section level2" number="17.2">
 <h2><span class="header-section-number">17.2</span> Konsep Inti dan
 Posisi dalam Desain Eksperimen</h2>
+<!-- BEGIN AI-INLINE:226b28ca021e -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti dan Posisi dalam Desain Eksperimen
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: Interpretasi, Kesimpulan, dan
+Komunikasi Hasil Eksperimen.
+</p>
+<p>
+Minta AI menjelaskan <strong>Interpretasi, Kesimpulan, dan Komunikasi
+Hasil Eksperimen</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Fokus utama pertemuan ini adalah <strong>Interpretasi, Kesimpulan,
 dan Komunikasi Hasil Eksperimen</strong>. Kata kunci yang harus dikuasai
 mahasiswa meliputi komunikasi hasil, critical appraisal,
@@ -9621,6 +11436,30 @@ apakah hasil eksperimen benar-benar dapat dipercaya.</p>
 <div id="contoh-kasus-terapan-15" class="section level2" number="17.5">
 <h2><span class="header-section-number">17.5</span> Contoh Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:cb76b8608792 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: Interpretasi, Kesimpulan, dan
+Komunikasi Hasil Eksperimen.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Audit akhir prompt,
+sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi,
+serta log agen bila digunakan. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="case-box">
 <p>Kasus yang digunakan pada pertemuan ini adalah <strong>penyusunan
 laporan akhir eksperimen RSM untuk mitra industri dan forum
@@ -9661,6 +11500,28 @@ tugas. 😄</p>
 </div>
 <div id="implementasi-r-15" class="section level2" number="17.6">
 <h2><span class="header-section-number">17.6</span> Implementasi R</h2>
+<!-- BEGIN AI-INLINE:8b88c4e86113 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: Interpretasi, Kesimpulan, dan
+Komunikasi Hasil Eksperimen.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="co"># Template tabel ringkasan rekomendasi eksperimen</span></span>
 <span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a>rekom <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
 <span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a>  <span class="at">Komponen =</span> <span class="fu">c</span>(<span class="st">&quot;Tujuan&quot;</span>, <span class="st">&quot;Faktor aktif&quot;</span>, <span class="st">&quot;Kombinasi disarankan&quot;</span>, <span class="st">&quot;Risiko&quot;</span>, <span class="st">&quot;Validasi&quot;</span>),</span>
@@ -9832,6 +11693,30 @@ analisis, serta interpretasi awal.</p>
 <div id="format-laporan-uts" class="section level2" number="18.1">
 <h2><span class="header-section-number">18.1</span> Format Laporan
 UTS</h2>
+<!-- BEGIN AI-INLINE:664d53eeaaaf -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Format Laporan UTS
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: Interpretasi, Kesimpulan, dan
+Komunikasi Hasil Eksperimen.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Audit akhir prompt,
+sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi,
+serta log agen bila digunakan. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <table>
 <colgroup>
 <col width="50%" />
@@ -9913,6 +11798,30 @@ rekomendasi.</p>
 <div id="format-laporan-uas" class="section level2" number="19.1">
 <h2><span class="header-section-number">19.1</span> Format Laporan
 UAS</h2>
+<!-- BEGIN AI-INLINE:df4be0811f3f -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Format Laporan UAS
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: Interpretasi, Kesimpulan, dan
+Komunikasi Hasil Eksperimen.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Audit akhir prompt,
+sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi,
+serta log agen bila digunakan. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <table>
 <thead>
 <tr class="header">
@@ -11726,6 +13635,74 @@ besar efeknya, apakah asumsi model cukup wajar, dan apa implikasinya
 bagi kasus. Dengan cara ini, mahasiswa tidak hanya menjadi operator
 perangkat lunak, tetapi analis eksperimen yang mampu memberi
 pertimbangan metodologis.</p>
+<!-- BEGIN ADOPSI AI RPS 2026 -->
+<div id="penyelarasan-materi-dengan-rps-revisi-ai-2026" class="section level2" number="24.1">
+<h2><span class="header-section-number">24.1</span> Penyelarasan Materi
+dengan RPS Revisi AI 2026</h2>
+<p>Materi <strong>Desain Eksperimen</strong> ini telah diselaraskan
+dengan RPS Revisi AI 2026. Rumusan CPL program studi tetap dan tidak
+diubah. Generative AI maupun agentic AI hanya digunakan sebagai alat
+bantu untuk mempercepat ketercapaian CPMK dan Sub-CPMK; penalaran
+statistika, keputusan metodologis, dan tanggung jawab akademik tetap
+berada pada mahasiswa.</p>
+<div id="integrasi-ai-kontekstual" class="section level3" number="24.1.1">
+<h3><span class="header-section-number">24.1.1</span> Integrasi AI
+kontekstual</h3>
+<ul>
+<li>A/B testing, sequential experiment, adaptive design, bandit sebagai
+pengayaan, serta randomization inference.</li>
+<li>Heterogeneous treatment effect, causal forest, optimasi desain
+dengan komputasi, dan pengendalian multiplicity.</li>
+<li>Proyek eksperimen nyata atau simulasi yang memuat preregistration,
+power analysis, ethical safeguards, dan pelaporan reproducible.</li>
+</ul>
+</div>
+<div id="protokol-penggunaan-ai" class="section level3" number="24.1.2">
+<h3><span class="header-section-number">24.1.2</span> Protokol
+penggunaan AI</h3>
+<ol style="list-style-type: decimal">
+<li>Nyatakan alat, tujuan penggunaan, dan bagian pekerjaan yang dibantu
+AI.</li>
+<li>Simpan prompt log ringkas, sumber, versi kode/notebook, dan
+perubahan yang dilakukan.</li>
+<li>Verifikasi keluaran terhadap asumsi metode, sumber primer, hasil
+numerik, diagnostik, ketidakpastian, robustness, bias/fairness, privasi,
+dan konteks.</li>
+<li>Jangan memasukkan data pribadi, rahasia, soal asesmen tertutup, atau
+kredensial ke layanan AI yang tidak disetujui.</li>
+<li>Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil
+secara mandiri.</li>
+</ol>
+</div>
+<div id="bukti-asesmen" class="section level3" number="24.1.3">
+<h3><span class="header-section-number">24.1.3</span> Bukti asesmen</h3>
+<!-- BEGIN AI-INLINE:7268fe123674 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Bukti asesmen
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: Interpretasi, Kesimpulan, dan
+Komunikasi Hasil Eksperimen.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
+<p>Penilaian berfokus pada ketepatan metode, validasi dan
+ketidakpastian, reproducibility, interpretasi, komunikasi, serta
+transparansi penggunaan AI. Keluaran AI tanpa verifikasi bukan bukti
+ketercapaian CPMK.</p>
+<!-- END ADOPSI AI RPS 2026 -->
 <div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
 <div id="ref-box2005" class="csl-entry">
 Box, George E. P., J. Stuart Hunter, and William G. Hunter. 2005.
@@ -11812,32 +13789,14 @@ Communication</em> 35.
 </div>
 </div>
 </div>
+</div>
+</div>
 
 
 
 </div>
 </div>
 
-
-
-
-
-
-<!-- BEGIN ADOPSI AI RPS 2026 -->
-<section id="penyelarasan-rps-ai-2026" style="margin:2rem 0;padding:1.5rem;border-left:8px solid #f2a51a;background:#eef5f8;border-radius:8px">
-  <h2>Penyelarasan Materi dengan RPS Revisi AI 2026</h2>
-  <p>Materi <strong>Desain Eksperimen</strong> ini mempertahankan rumusan CPL yang berlaku. AI ditempatkan sebagai alat bantu untuk mempercepat ketercapaian CPMK dan Sub-CPMK, bukan sebagai CPL baru atau pengganti penalaran statistika.</p>
-  <h3>Integrasi AI kontekstual</h3><ul><li>A/B testing, sequential experiment, adaptive design, bandit sebagai pengayaan, serta randomization inference.</li><li>Heterogeneous treatment effect, causal forest, optimasi desain dengan komputasi, dan pengendalian multiplicity.</li><li>Proyek eksperimen nyata atau simulasi yang memuat preregistration, power analysis, ethical safeguards, dan pelaporan reproducible.</li></ul>
-  <h3>Protokol penggunaan AI</h3>
-  <ol>
-    <li>Ungkapkan alat, tujuan, prompt log ringkas, sumber, dan perubahan yang dilakukan.</li>
-    <li>Verifikasi asumsi, kode, hasil numerik, diagnostik, ketidakpastian, robustness, bias/fairness, privasi, dan konteks.</li>
-    <li>Jangan mengunggah data pribadi, rahasia, asesmen tertutup, atau kredensial ke layanan yang tidak disetujui.</li>
-    <li>Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil secara mandiri.</li>
-  </ol>
-  <p><strong>Bukti asesmen:</strong> ketepatan metode, validasi, reproducibility, interpretasi, komunikasi, dan transparansi penggunaan AI. Keluaran AI tanpa verifikasi bukan bukti ketercapaian CPMK.</p>
-</section>
-<!-- END ADOPSI AI RPS 2026 -->
 </div>
 
 <script>
@@ -11902,6 +13861,16 @@ $(document).ready(function ()  {
     // tocify
     var toc = $("#TOC").tocify(options).data("toc-tocify");
 });
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
 </script>
 
 </body>

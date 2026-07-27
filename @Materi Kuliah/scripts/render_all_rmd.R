@@ -1,4 +1,10 @@
-root <- normalizePath(file.path(dirname(commandArgs(trailingOnly = FALSE)[grep("--file=", commandArgs(trailingOnly = FALSE))][1]), ".."), mustWork = FALSE)
+script_arg <- commandArgs(trailingOnly = FALSE)[grep("^--file=", commandArgs(trailingOnly = FALSE))][1]
+script_path <- sub("^--file=", "", script_arg)
+root <- normalizePath(file.path(dirname(script_path), ".."), mustWork = FALSE)
+workspace_materials <- normalizePath(file.path(getwd(), "@Materi Kuliah"), mustWork = FALSE)
+if (dir.exists(workspace_materials)) {
+  root <- workspace_materials
+}
 if (is.na(root) || !dir.exists(root)) {
   root <- getwd()
 }

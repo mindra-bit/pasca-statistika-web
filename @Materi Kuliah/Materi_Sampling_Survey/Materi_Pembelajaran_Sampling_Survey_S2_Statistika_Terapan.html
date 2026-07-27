@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="id" xml:lang="id">
+<html>
 
 <head>
 
@@ -3128,270 +3128,163 @@ serta komunikasi hasil secara ilmiah.</p>
 </div>
 <!-- END UNPAD MATERIAL ENHANCEMENT -->
 <style>
-html, body {
-  background: linear-gradient(135deg, #f8fbfd 0%, #fffdf8 48%, #f3f6ee 100%) !important;
-  color: #172033 !important;
+:root{
+--brown-950:#2a1408;
+--brown-900:#3b1f10;
+--brown-800:#5a321d;
+--brown-700:#7b4729;
+--brown-600:#9a5a2e;
+--brown-500:#bd7a48;
+--brown-300:#e5c29d;
+--brown-200:#f0dbc3;
+--brown-100:#faefe3;
+--cream:#fffaf3;
+--ink:#1f130c;
+--gold:#f4b24a;
+--teal:#2d6f73;
+--rose:#b65b6b;
 }
-body {
-  font-family: "Segoe UI", Arial, sans-serif !important;
-  font-size: 17px !important;
-  line-height: 1.72 !important;
-  margin: 0 !important;
-  overflow-x: hidden !important;
+html{scroll-behavior:smooth;}
+body{
+margin:0;
+color:var(--ink);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+line-height:1.72;
+background:
+radial-gradient(circle at top right, rgba(244,178,74,.18), transparent 34%),
+linear-gradient(135deg,#fffaf3 0%,#f8ead8 38%,#ead2b8 100%);
+max-width:none;
+padding:32px 54px 64px 354px;
 }
-.main-container {
-  max-width: 1180px !important;
-  margin-top: 18px !important;
-  margin-bottom: 38px !important;
-  padding: 34px 46px 54px !important;
-  background: rgba(255, 253, 248, 0.98) !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  box-shadow: 0 18px 42px rgba(23, 57, 92, 0.12) !important;
-  overflow-x: hidden !important;
+#TOC{
+position:fixed;
+top:0; left:0; bottom:0;
+width:292px;
+padding:24px 22px 40px 24px;
+overflow-y:auto;
+background:linear-gradient(180deg,var(--brown-950) 0%,var(--brown-800) 44%,var(--brown-500) 100%);
+color:white;
+box-shadow:10px 0 30px rgba(42,20,8,.22);
+z-index:1000;
 }
-h1, h2, h3, h4 {
-  color: #17395c !important;
-  font-weight: 800 !important;
-  letter-spacing: 0 !important;
-  line-height: 1.24 !important;
+#TOC::before{
+content:"Daftar Isi";
+display:block;
+font-size:1.35rem;
+font-weight:800;
+letter-spacing:.4px;
+margin-bottom:12px;
+color:#fff6e8;
 }
-h1.title {
-  color: #17395c !important;
-  -webkit-text-fill-color: #17395c !important;
-  background: none !important;
-  border-bottom: 4px solid #f2a51a !important;
-  padding-bottom: 14px !important;
+#TOC ul{padding-left:1.1rem;margin:.25rem 0;}
+#TOC li{margin:.28rem 0;}
+#TOC a{color:#fff6e8;text-decoration:none;font-weight:520;}
+#TOC a:hover{color:#ffe0a6;text-decoration:underline;}
+h1,h2,h3,h4{line-height:1.25;color:var(--brown-900);}
+h1{font-size:2.25rem;margin-top:2rem;border-bottom:4px solid var(--brown-300);padding-bottom:.35rem;}
+h2{font-size:1.68rem;margin-top:2.4rem;padding-left:.65rem;border-left:8px solid var(--brown-600);}
+h3{font-size:1.25rem;margin-top:1.7rem;color:var(--brown-800);}
+h4{font-size:1.07rem;color:#6f3f22;}
+a{color:#7b3f18;}
+.title-card{
+background:linear-gradient(135deg,#3b1f10 0%,#8c522f 45%,#e3b477 100%);
+color:#fff9ef;
+border-radius:28px;
+padding:48px 52px;
+box-shadow:0 24px 60px rgba(71,39,21,.26);
+margin:4px 0 38px;
+position:relative;
+overflow:hidden;
 }
-h2 {
-  margin-top: 46px !important;
-  padding: 12px 18px !important;
-  border-left: 8px solid #f2a51a !important;
-  border-radius: 8px !important;
-  background: linear-gradient(90deg, #eef8f6, #fff8e7) !important;
+.title-card::after{
+content:"";
+position:absolute;
+right:-90px;top:-110px;
+width:310px;height:310px;
+background:radial-gradient(circle,rgba(255,255,255,.23),transparent 66%);
 }
-.unpad-cover h2 {
-  color: #111827 !important;
-  -webkit-text-fill-color: #111827 !important;
-  background: #fffdf8 !important;
-  border-left: 8px solid #f2a51a !important;
-  border-bottom: 0 !important;
+.title-card h1{color:white;border:0;margin:0 0 14px;padding:0;font-size:2.65rem;}
+.title-card p{font-size:1.08rem;margin:.35rem 0;}
+.badge{
+display:inline-block;
+background:rgba(255,255,255,.18);
+border:1px solid rgba(255,255,255,.34);
+color:#fff8e9;
+padding:.42rem .75rem;
+border-radius:999px;
+margin:.2rem .35rem .2rem 0;
+font-size:.92rem;
 }
-h3 {
-  margin-top: 30px !important;
+.callout,.tip,.warning,.casebox,.formula,.rpsbox{
+border-radius:18px;
+padding:18px 22px;
+margin:18px 0;
+box-shadow:0 10px 24px rgba(59,31,16,.08);
 }
-a {
-  color: #0b5c86 !important;
+.callout{background:linear-gradient(135deg,#fff6ea,#f2ddc6);border-left:7px solid var(--brown-600);}
+.tip{background:linear-gradient(135deg,#edf8f6,#fff7e8);border-left:7px solid var(--teal);}
+.warning{background:linear-gradient(135deg,#fff1ee,#f7d2c2);border-left:7px solid var(--rose);}
+.casebox{background:linear-gradient(135deg,#fffaf0,#efe0c9);border:1px solid #d4ad82;}
+.formula{background:#f4e3cf;color:#111;border:1px solid #d5aa7d;border-left:7px solid var(--gold);font-size:1.02rem;}
+.rpsbox{background:linear-gradient(135deg,#f7e1c5,#fff8eb);border-left:7px solid #bd7a48;}
+pre, code{
+font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
 }
-img, svg {
-  max-width: 100% !important;
-  height: auto !important;
+pre{
+background:#f4e3cf !important;
+color:#1f130c !important;
+border:1px solid #d7ad82;
+border-left:7px solid #9a5a2e;
+border-radius:16px;
+padding:18px 20px;
+overflow:auto;
+box-shadow:0 10px 22px rgba(59,31,16,.08);
 }
-table {
-  width: 100% !important;
-  border-collapse: collapse !important;
-  margin: 18px 0 26px !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
+code{background:#f3ddc4;color:#1f130c;border-radius:7px;padding:.12rem .34rem;}
+pre code{background:transparent;padding:0;}
+table{
+width:100%;
+border-collapse:collapse;
+background:#fffaf4;
+margin:18px 0;
+box-shadow:0 10px 22px rgba(59,31,16,.07);
+border-radius:14px;
+overflow:hidden;
 }
-.s2-table-scroll {
-  width: 100% !important;
-  max-width: 100% !important;
-  overflow-x: auto !important;
-  margin: 18px 0 26px !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
+th{background:linear-gradient(135deg,#6f3f22,#b06a3d);color:#fff7ea;text-align:left;}
+th,td{border:1px solid #d8b58e;padding:10px 12px;vertical-align:top;}
+tr:nth-child(even) td{background:#f8ead8;}
+blockquote{
+background:#fff6e8;
+border-left:7px solid #bd7a48;
+margin:20px 0;
+padding:12px 20px;
+border-radius:12px;
+color:#3c2415;
 }
-.s2-table-scroll table {
-  min-width: 680px !important;
-  margin: 0 !important;
-  border: 0 !important;
-  border-radius: 0 !important;
+.diagram{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:14px;
+margin:20px 0;
 }
-th {
-  background: #17395c !important;
-  color: #ffffff !important;
-  padding: 10px 12px !important;
+.node{
+padding:16px;
+border-radius:18px;
+text-align:center;
+background:linear-gradient(135deg,#fff7ec,#e9c7a0);
+border:1px solid #ca9a68;
+font-weight:700;
+box-shadow:0 8px 18px rgba(59,31,16,.08);
 }
-td {
-  background: #fffdf8 !important;
-  border: 1px solid #d7e2ea !important;
-  padding: 10px 12px !important;
-  vertical-align: top !important;
-}
-.main-container p, .main-container li, td, th {
-  overflow-wrap: anywhere !important;
-}
-pre {
-  overflow: auto !important;
-  padding: 16px !important;
-  background: #eef5f8 !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  color: #111827 !important;
-}
-code {
-  background: #eef5f8 !important;
-  border-radius: 6px !important;
-  color: #111827 !important;
-  padding: 2px 5px !important;
-}
-span.math.display, .math.display, .MathJax_Display, .MathJax, mjx-container {
-  display: block !important;
-  max-width: 100% !important;
-  overflow-x: auto !important;
-  overflow-y: hidden !important;
-}
-blockquote {
-  margin: 22px 0 !important;
-  padding: 16px 20px !important;
-  background: #fff8e7 !important;
-  border-left: 8px solid #0f766e !important;
-  border-radius: 0 8px 8px 0 !important;
-}
-#TOC, .tocify {
-  background: #ffffff !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  box-shadow: 0 12px 28px rgba(23, 57, 92, 0.10) !important;
-}
-.tocify {
-  max-height: calc(100vh - 40px) !important;
-}
-.tocify .active, #TOC .active {
-  background: linear-gradient(90deg, #17395c, #0f766e) !important;
-  color: #ffffff !important;
-  border-radius: 6px !important;
-}
-#TOC a, .tocify a {
-  color: #17395c !important;
-  text-decoration: none !important;
-}
-#TOC a:hover, .tocify a:hover {
-  color: #0f766e !important;
-  text-decoration: underline !important;
-}
-.hero, .rps-box, .rpsbox, .info-card, .card,
-.callout, .note, .casebox, .case-box, .examplebox, .exercise-box,
-.learning-box, .activitybox, .activity, .practice-box, .praktik-box,
-.praktikum, .tujuan, .interpretasi, .refleksi, .warning, .warningbox,
-.warning-box, .tip, .idea-box, .mathbox, .formula-box, .rumus-box,
-.contoh-box, .rubric-box {
-  margin: 22px 0 !important;
-  padding: 20px 24px !important;
-  background: #fffdf8 !important;
-  border: 1px solid #d7e2ea !important;
-  border-left: 8px solid #0f766e !important;
-  border-radius: 8px !important;
-  box-shadow: 0 10px 24px rgba(23, 57, 92, 0.10) !important;
-  color: #172033 !important;
-}
-.hero {
-  background: linear-gradient(135deg, #17395c 0%, #0f766e 62%, #f2a51a 100%) !important;
-  color: #ffffff !important;
-  border-left: 0 !important;
-}
-.hero h1, .hero h2, .hero h3, .hero h4, .hero p, .hero strong {
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-}
-.warning, .warningbox, .warning-box {
-  border-left-color: #b45309 !important;
-  background: #fff8e7 !important;
-}
-.rps-box, .rpsbox, .rubric-box {
-  border-left-color: #f2a51a !important;
-  background: linear-gradient(135deg, #fffdf8, #fff8e7) !important;
-}
-.mathbox, .formula-box, .rumus-box {
-  border-left-color: #17395c !important;
-  background: #eef5f8 !important;
-}
-.badge {
-  display: inline-block !important;
-  padding: 4px 10px !important;
-  border-radius: 999px !important;
-  background: #17395c !important;
-  color: #ffffff !important;
-  font-weight: 700 !important;
-  font-size: 0.85em !important;
-}
-.grid-2, .grid-3 {
-  display: grid !important;
-  gap: 18px !important;
-}
-.grid-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-}
-.grid-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-}
-hr {
-  border: 0 !important;
-  height: 2px !important;
-  background: linear-gradient(90deg, transparent, #d7e2ea, transparent) !important;
-  margin: 34px 0 !important;
-}
-@media (max-width: 980px) {
-  #TOC, .tocify {
-    position: relative !important;
-    width: auto !important;
-    max-height: 360px !important;
-    margin: 12px !important;
-  }
-  .main-container {
-    margin: 12px !important;
-    padding: 24px !important;
-  }
-  .grid-2, .grid-3 {
-    grid-template-columns: 1fr !important;
-  }
+.small{font-size:.92rem;color:#5d3a24;}
+hr{border:0;border-top:1px solid #d6af87;margin:34px 0;}
+@media(max-width:920px){
+body{padding:24px 20px 48px 20px;}
+#TOC{position:relative;width:auto;max-height:420px;border-radius:0 0 22px 22px;}
+.title-card{padding:34px 26px;}
 }
 </style>
-<script>
-window.MathJax = {
-  tex: {
-    inlineMath: [["\\(", "\\)"], ["$", "$"]],
-    displayMath: [["\\[", "\\]"], ["$$", "$$"]],
-    processEscapes: true,
-    processEnvironments: true,
-    tags: "ams"
-  },
-  options: {
-    skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"],
-    ignoreHtmlClass: "tex2jax_ignore"
-  },
-  chtml: {
-    fontURL: "../../assets/vendor/mathjax/output/chtml/fonts/woff-v2"
-  },
-  startup: {
-    typeset: true
-  }
-};
-
-(function () {
-  var script = document.createElement("script");
-  script.src = "../../assets/vendor/mathjax/tex-mml-chtml.js";
-  script.async = true;
-  script.onerror = function () {
-    var fallback = document.createElement("script");
-    fallback.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
-    fallback.async = true;
-    document.head.appendChild(fallback);
-  };
-  document.head.appendChild(script);
-})();
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll("table").forEach(function (table) {
-    if (table.parentElement && table.parentElement.classList.contains("s2-table-scroll")) return;
-    var wrapper = document.createElement("div");
-    wrapper.className = "s2-table-scroll";
-    table.parentNode.insertBefore(wrapper, table);
-    wrapper.appendChild(table);
-  });
-});
-</script>
 <div class="title-card">
 <h1>
 Materi Pembelajaran Sampling Survey
@@ -3410,6 +3303,28 @@ Matematika dan Ilmu Pengetahuan Alam, Universitas Padjadjaran
 Colorful Coklat Degradasi</span> <span class="badge">Daftar Isi di
 Sebelah Kiri</span> <span class="badge">Berbasis RPS OBE 2025</span></p>
 </div>
+<!-- BEGIN AI-INLINE-STYLE-2026 -->
+<style>
+.ai-inline {
+margin: 1rem 0 1.35rem;
+padding: 1rem 1.1rem;
+border: 1px solid #bfd9d5;
+border-left: 7px solid #0f766e;
+border-radius: 8px;
+background: linear-gradient(135deg, #eff9f7, #fffaf0);
+}
+.ai-inline--agentic { border-left-color: #17395c; background: linear-gradient(135deg, #eef5fb, #f5faf8); }
+.ai-inline--assessment { border-left-color: #a35d00; background: #fff8e8; }
+.ai-inline h3, .ai-inline h4 { margin-top: 0; color: #17395c; }
+.ai-inline p:last-child, .ai-inline ul:last-child { margin-bottom: 0; }
+.ai-inline__label {
+display: inline-block; margin-bottom: .45rem; padding: .2rem .55rem;
+border-radius: 999px; background: #17395c; color: white;
+font-size: .78rem; font-weight: 800;
+}
+.ai-inline table { width: 100%; margin: .6rem 0; background: white; }
+</style>
+<!-- END AI-INLINE-STYLE-2026 -->
 <div id="identitas-mata-kuliah-dan-arah-pembelajaran" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Identitas Mata Kuliah
 dan Arah Pembelajaran</h1>
@@ -3652,6 +3567,66 @@ et al. 2009</a>)</span>.</p>
 <div id="bab-1.-konsep-dasar-sampling-survey-dan-inferensi-berbasis-desain" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Bab 1. Konsep Dasar
 Sampling Survey dan Inferensi Berbasis Desain</h1>
+<!-- BEGIN AI-INLINE:55dd6d32c92f -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 1</span>
+<h3>
+Generative dan Agentic AI untuk Konsep Dasar Sampling Survey dan
+Inferensi Berbasis Desain
+</h3>
+<p><strong>Arah RPS.</strong> Machine learning untuk nonresponse
+adjustment, propensity modeling, imputation, prediksi berbasis auxiliary
+data, dan adaptive survey design sebagai pengayaan metode survei.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Pendahuluan Sampling Survey; Tujuan
+pembelajaran dan kontrak perkuliahan; Konsep populasi, sampel, dan
+parameter.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk mengurai notasi dan menawarkan langkah derivasi
+alternatif tanpa menggantikan pembuktian mahasiswa.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter; agen wajib berhenti pada checkpoint
+dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas,
+satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada bagian ini, fokus pembelajaran adalah <strong>Konsep Dasar
 Sampling Survey dan Inferensi Berbasis Desain</strong> yang ditempatkan
 dalam Pertemuan 1 dan terkait dengan SubCPMK1. Secara konseptual,
@@ -3721,6 +3696,26 @@ dipercaya.</p>
 <div id="rumus-inti-dan-penafsiran" class="section level3" number="2.0.2">
 <h3><span class="header-section-number">2.0.2</span> Rumus inti dan
 penafsiran</h3>
+<!-- BEGIN AI-INLINE:5c0ec0c0255c -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus inti dan penafsiran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Konsep Dasar Sampling Survey dan
+Inferensi Berbasis Desain.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Konsep Dasar Sampling Survey dan Inferensi Berbasis
+Desain</strong>, lalu periksa setiap langkah secara manual, uji kasus
+batas, dan cocokkan dengan rujukan primer. AI tidak boleh menjadi
+satu-satunya sumber rumus atau pembuktian; kesetaraan simbolik wajib
+dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula">
 <p><span class="math display">\[\hat{\theta}=g(y_s,d_s),\qquad
 E_p(\hat{\theta})\approx \theta,\qquad Var_p(\hat{\theta})\text{ diukur
@@ -3777,6 +3772,28 @@ desain survei, itu desain pembenaran.</p>
 </div>
 <div id="praktikum-r" class="section level3" number="2.0.4">
 <h3><span class="header-section-number">2.0.4</span> Praktikum R</h3>
+<!-- BEGIN AI-INLINE:17b7b3bd9798 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Konsep Dasar Sampling Survey dan
+Inferensi Berbasis Desain.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co"># Contoh kerangka populasi sederhana</span></span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">500</span></span>
@@ -3817,6 +3834,28 @@ inferensinya harus diturunkan derajatnya.</p>
 <div id="pertanyaan-reflektif-untuk-diskusi-kelas" class="section level3" number="2.0.6">
 <h3><span class="header-section-number">2.0.6</span> Pertanyaan
 reflektif untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:469d4885539c -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Pertanyaan reflektif untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Konsep Dasar Sampling Survey dan
+Inferensi Berbasis Desain.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Apa parameter populasi yang paling relevan untuk kasus ini:
 rata-rata, total, proporsi, rasio, atau estimasi domain?</li>
@@ -3900,6 +3939,66 @@ dimiliki.</p>
 <div id="bab-2.-distribusi-sampling-standard-error-dan-presisi-estimator" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Bab 2. Distribusi
 Sampling, Standard Error, dan Presisi Estimator</h1>
+<!-- BEGIN AI-INLINE:0466766526ac -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 2</span>
+<h3>
+Generative dan Agentic AI untuk Distribusi Sampling, Standard Error, dan
+Presisi Estimator
+</h3>
+<p><strong>Arah RPS.</strong> Pemanfaatan paradata, data linkage,
+web/sensor data, dan integrasi sumber data dengan evaluasi coverage
+error, measurement error, privasi, fairness, dan kualitas data.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Peran sampling dalam penelitian;
+Distribusi Sampling; Konsep distribusi sampling dan estimasi parameter;
+Standar error dan prinsip inferensi.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk mengurai notasi dan menawarkan langkah derivasi
+alternatif tanpa menggantikan pembuktian mahasiswa.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter; agen wajib berhenti pada checkpoint
+dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas,
+satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada bagian ini, fokus pembelajaran adalah <strong>Distribusi
 Sampling, Standard Error, dan Presisi Estimator</strong> yang
 ditempatkan dalam Pertemuan 2 dan terkait dengan SubCPMK1. Secara
@@ -3965,6 +4064,26 @@ yang tahu apakah angka itu layak dipercaya.</p>
 <div id="rumus-inti-dan-penafsiran-1" class="section level3" number="3.0.2">
 <h3><span class="header-section-number">3.0.2</span> Rumus inti dan
 penafsiran</h3>
+<!-- BEGIN AI-INLINE:1b98f7bbeb37 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus inti dan penafsiran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Distribusi Sampling, Standard
+Error, dan Presisi Estimator.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Distribusi Sampling, Standard Error, dan Presisi
+Estimator</strong>, lalu periksa setiap langkah secara manual, uji kasus
+batas, dan cocokkan dengan rujukan primer. AI tidak boleh menjadi
+satu-satunya sumber rumus atau pembuktian; kesetaraan simbolik wajib
+dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula">
 <p><span class="math display">\[SE(\hat{\theta})=\sqrt{Var(\hat{\theta})},\qquad
 CI_{95\%}:\ \hat{\theta}\pm 1.96\,SE(\hat{\theta}).\]</span></p>
@@ -4020,6 +4139,28 @@ survei, itu desain pembenaran.</p>
 </div>
 <div id="praktikum-r-1" class="section level3" number="3.0.4">
 <h3><span class="header-section-number">3.0.4</span> Praktikum R</h3>
+<!-- BEGIN AI-INLINE:350a2fc5c5ae -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Distribusi Sampling, Standard
+Error, dan Presisi Estimator.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
 <span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">rlnorm</span>(N, <span class="at">meanlog =</span> <span class="dv">10</span>, <span class="at">sdlog =</span> <span class="fl">0.5</span>)</span>
@@ -4061,6 +4202,28 @@ inferensinya harus diturunkan derajatnya.</p>
 <div id="pertanyaan-reflektif-untuk-diskusi-kelas-1" class="section level3" number="3.0.6">
 <h3><span class="header-section-number">3.0.6</span> Pertanyaan
 reflektif untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:2302c9028b8b -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Pertanyaan reflektif untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Distribusi Sampling, Standard
+Error, dan Presisi Estimator.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Apa parameter populasi yang paling relevan untuk kasus ini:
 rata-rata, total, proporsi, rasio, atau estimasi domain?</li>
@@ -4144,6 +4307,66 @@ dimiliki.</p>
 <div id="bab-3.-simple-random-sampling-srswor-dan-srswr" class="section level1" number="4">
 <h1><span class="header-section-number">4</span> Bab 3. Simple Random
 Sampling: SRSWOR dan SRSWR</h1>
+<!-- BEGIN AI-INLINE:74ecda4098ee -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 3</span>
+<h3>
+Generative dan Agentic AI untuk Simple Random Sampling: SRSWOR dan SRSWR
+</h3>
+<p><strong>Arah RPS.</strong> Proyek survei nyata yang membandingkan
+pendekatan design-based, model-assisted/model-based, dan AI, disertai
+estimasi ketidakpastian, dokumentasi reproducible, dan komunikasi kepada
+pengguna.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Sampling Acak Sederhana (Simple
+Random Sampling - SRS); Desain dan implementasi SRS; Estimasi rata-rata,
+total, dan proporsi.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk mengurai notasi dan menawarkan langkah derivasi
+alternatif tanpa menggantikan pembuktian mahasiswa.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter; agen wajib berhenti pada checkpoint
+dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas,
+satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada bagian ini, fokus pembelajaran adalah <strong>Simple Random
 Sampling: SRSWOR dan SRSWR</strong> yang ditempatkan dalam Pertemuan 3
 dan terkait dengan SubCPMK1. Secara konseptual, SRS memberi peluang yang
@@ -4210,6 +4433,25 @@ yang tahu apakah angka itu layak dipercaya.</p>
 <div id="rumus-inti-dan-penafsiran-2" class="section level3" number="4.0.2">
 <h3><span class="header-section-number">4.0.2</span> Rumus inti dan
 penafsiran</h3>
+<!-- BEGIN AI-INLINE:bf7c0c647b97 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus inti dan penafsiran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 3: Simple Random Sampling: SRSWOR
+dan SRSWR.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Simple Random Sampling: SRSWOR dan SRSWR</strong>, lalu periksa
+setiap langkah secara manual, uji kasus batas, dan cocokkan dengan
+rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula">
 <p><span class="math display">\[\bar{y}_s=\frac{1}{n}\sum_{i\in
 s}y_i,\qquad \hat{\bar{Y}}=\bar{y}_s,\qquad
@@ -4266,6 +4508,28 @@ survei, itu desain pembenaran.</p>
 </div>
 <div id="praktikum-r-2" class="section level3" number="4.0.4">
 <h3><span class="header-section-number">4.0.4</span> Praktikum R</h3>
+<!-- BEGIN AI-INLINE:d1073f346e9d -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 3: Simple Random Sampling: SRSWOR
+dan SRSWR.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">12</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">1200</span></span>
 <span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">120</span></span>
@@ -4304,6 +4568,28 @@ inferensinya harus diturunkan derajatnya.</p>
 <div id="pertanyaan-reflektif-untuk-diskusi-kelas-2" class="section level3" number="4.0.6">
 <h3><span class="header-section-number">4.0.6</span> Pertanyaan
 reflektif untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:3ddb2c769af4 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Pertanyaan reflektif untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 3: Simple Random Sampling: SRSWOR
+dan SRSWR.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Apa parameter populasi yang paling relevan untuk kasus ini:
 rata-rata, total, proporsi, rasio, atau estimasi domain?</li>
@@ -4387,6 +4673,66 @@ dimiliki.</p>
 <div id="bab-4.-sampling-sistematis-interval-random-start-dan-risiko-periodisitas" class="section level1" number="5">
 <h1><span class="header-section-number">5</span> Bab 4. Sampling
 Sistematis: Interval, Random Start, dan Risiko Periodisitas</h1>
+<!-- BEGIN AI-INLINE:dc19e1c3213c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 4</span>
+<h3>
+Generative dan Agentic AI untuk Sampling Sistematis: Interval, Random
+Start, dan Risiko Periodisitas
+</h3>
+<p><strong>Arah RPS.</strong> Machine learning untuk nonresponse
+adjustment, propensity modeling, imputation, prediksi berbasis auxiliary
+data, dan adaptive survey design sebagai pengayaan metode survei.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Sampling Sistematis; Prosedur
+pengambilan sampel sistematis; Estimasi dan perbandingan dengan
+SRS.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk mengurai notasi dan menawarkan langkah derivasi
+alternatif tanpa menggantikan pembuktian mahasiswa.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter; agen wajib berhenti pada checkpoint
+dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas,
+satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada bagian ini, fokus pembelajaran adalah <strong>Sampling
 Sistematis: Interval, Random Start, dan Risiko Periodisitas</strong>
 yang ditempatkan dalam Pertemuan 4 dan terkait dengan SubCPMK1. Secara
@@ -4453,6 +4799,26 @@ desain yang tahu apakah angka itu layak dipercaya.</p>
 <div id="rumus-inti-dan-penafsiran-3" class="section level3" number="5.0.2">
 <h3><span class="header-section-number">5.0.2</span> Rumus inti dan
 penafsiran</h3>
+<!-- BEGIN AI-INLINE:9dee927087b2 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus inti dan penafsiran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 4: Sampling Sistematis: Interval,
+Random Start, dan Risiko Periodisitas.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Sampling Sistematis: Interval, Random Start, dan Risiko
+Periodisitas</strong>, lalu periksa setiap langkah secara manual, uji
+kasus batas, dan cocokkan dengan rujukan primer. AI tidak boleh menjadi
+satu-satunya sumber rumus atau pembuktian; kesetaraan simbolik wajib
+dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula">
 <p><span class="math display">\[k=\frac{N}{n},\qquad
 s=\{r,r+k,r+2k,\ldots,r+(n-1)k\}.\]</span></p>
@@ -4508,6 +4874,28 @@ desain survei, itu desain pembenaran.</p>
 </div>
 <div id="praktikum-r-3" class="section level3" number="5.0.4">
 <h3><span class="header-section-number">5.0.4</span> Praktikum R</h3>
+<!-- BEGIN AI-INLINE:beefc2c2e33f -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 4: Sampling Sistematis: Interval,
+Random Start, dan Risiko Periodisitas.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">777</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">6000</span></span>
 <span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">300</span></span>
@@ -4545,6 +4933,28 @@ inferensinya harus diturunkan derajatnya.</p>
 <div id="pertanyaan-reflektif-untuk-diskusi-kelas-3" class="section level3" number="5.0.6">
 <h3><span class="header-section-number">5.0.6</span> Pertanyaan
 reflektif untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:934b8eff2c2e -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Pertanyaan reflektif untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 4: Sampling Sistematis: Interval,
+Random Start, dan Risiko Periodisitas.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Apa parameter populasi yang paling relevan untuk kasus ini:
 rata-rata, total, proporsi, rasio, atau estimasi domain?</li>
@@ -4629,6 +5039,66 @@ dimiliki.</p>
 <div id="bab-5.-sampling-stratifikasi-alokasi-proporsional-neyman-dan-optimal" class="section level1" number="6">
 <h1><span class="header-section-number">6</span> Bab 5. Sampling
 Stratifikasi: Alokasi Proporsional, Neyman, dan Optimal</h1>
+<!-- BEGIN AI-INLINE:b8ed3583786d -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 5</span>
+<h3>
+Generative dan Agentic AI untuk Sampling Stratifikasi: Alokasi
+Proporsional, Neyman, dan Optimal
+</h3>
+<p><strong>Arah RPS.</strong> Pemanfaatan paradata, data linkage,
+web/sensor data, dan integrasi sumber data dengan evaluasi coverage
+error, measurement error, privasi, fairness, dan kualitas data.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK2 melalui fokus: Sampling Stratifikasi (Stratified
+Sampling); Alasan stratifikasi; Alokasi proporsional dan optimal;
+Estimasi dan efisiensi.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk mengurai notasi dan menawarkan langkah derivasi
+alternatif tanpa menggantikan pembuktian mahasiswa.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter; agen wajib berhenti pada checkpoint
+dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas,
+satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada bagian ini, fokus pembelajaran adalah <strong>Sampling
 Stratifikasi: Alokasi Proporsional, Neyman, dan Optimal</strong> yang
 ditempatkan dalam Pertemuan 5 dan terkait dengan SubCPMK2. Secara
@@ -4695,6 +5165,26 @@ dipercaya.</p>
 <div id="rumus-inti-dan-penafsiran-4" class="section level3" number="6.0.2">
 <h3><span class="header-section-number">6.0.2</span> Rumus inti dan
 penafsiran</h3>
+<!-- BEGIN AI-INLINE:4005246e7e3f -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus inti dan penafsiran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Sampling Stratifikasi: Alokasi
+Proporsional, Neyman, dan Optimal.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Sampling Stratifikasi: Alokasi Proporsional, Neyman, dan
+Optimal</strong>, lalu periksa setiap langkah secara manual, uji kasus
+batas, dan cocokkan dengan rujukan primer. AI tidak boleh menjadi
+satu-satunya sumber rumus atau pembuktian; kesetaraan simbolik wajib
+dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula">
 <p><span class="math display">\[\hat{\bar{Y}}_{st}=\sum_{h=1}^{H}W_h\bar{y}_h,\qquad
 \widehat{Var}(\hat{\bar{Y}}_{st})=\sum_{h=1}^{H}W_h^2\left(1-f_h\right)\frac{s_h^2}{n_h}.\]</span></p>
@@ -4750,6 +5240,28 @@ desain survei, itu desain pembenaran.</p>
 </div>
 <div id="praktikum-r-4" class="section level3" number="6.0.4">
 <h3><span class="header-section-number">6.0.4</span> Praktikum R</h3>
+<!-- BEGIN AI-INLINE:37f50ccd77df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Sampling Stratifikasi: Alokasi
+Proporsional, Neyman, dan Optimal.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">45</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>N_h <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">A =</span> <span class="dv">3000</span>, <span class="at">B =</span> <span class="dv">2000</span>, <span class="at">C =</span> <span class="dv">1000</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>S_h <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">A =</span> <span class="dv">12</span>, <span class="at">B =</span> <span class="dv">20</span>, <span class="at">C =</span> <span class="dv">30</span>)</span>
@@ -4790,6 +5302,28 @@ inferensinya harus diturunkan derajatnya.</p>
 <div id="pertanyaan-reflektif-untuk-diskusi-kelas-4" class="section level3" number="6.0.6">
 <h3><span class="header-section-number">6.0.6</span> Pertanyaan
 reflektif untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:71dd39c94169 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Pertanyaan reflektif untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Sampling Stratifikasi: Alokasi
+Proporsional, Neyman, dan Optimal.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Apa parameter populasi yang paling relevan untuk kasus ini:
 rata-rata, total, proporsi, rasio, atau estimasi domain?</li>
@@ -4873,6 +5407,66 @@ dimiliki.</p>
 <div id="bab-6.-sampling-klaster-desain-satu-tahap-dua-tahap-dan-design-effect" class="section level1" number="7">
 <h1><span class="header-section-number">7</span> Bab 6. Sampling
 Klaster: Desain Satu Tahap, Dua Tahap, dan Design Effect</h1>
+<!-- BEGIN AI-INLINE:b1a33583ed8b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 6</span>
+<h3>
+Generative dan Agentic AI untuk Sampling Klaster: Desain Satu Tahap, Dua
+Tahap, dan Design Effect
+</h3>
+<p><strong>Arah RPS.</strong> Proyek survei nyata yang membandingkan
+pendekatan design-based, model-assisted/model-based, dan AI, disertai
+estimasi ketidakpastian, dokumentasi reproducible, dan komunikasi kepada
+pengguna.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK2 melalui fokus: Sampling Klaster (Cluster Sampling);
+Desain satu tahap dan dua tahap; Estimasi rata-rata dan total.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk mengurai notasi dan menawarkan langkah derivasi
+alternatif tanpa menggantikan pembuktian mahasiswa.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter; agen wajib berhenti pada checkpoint
+dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas,
+satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada bagian ini, fokus pembelajaran adalah <strong>Sampling Klaster:
 Desain Satu Tahap, Dua Tahap, dan Design Effect</strong> yang
 ditempatkan dalam Pertemuan 6 dan terkait dengan SubCPMK2. Secara
@@ -4940,6 +5534,26 @@ dipercaya.</p>
 <div id="rumus-inti-dan-penafsiran-5" class="section level3" number="7.0.2">
 <h3><span class="header-section-number">7.0.2</span> Rumus inti dan
 penafsiran</h3>
+<!-- BEGIN AI-INLINE:119c69e0e8fe -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus inti dan penafsiran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 6: Sampling Klaster: Desain Satu
+Tahap, Dua Tahap, dan Design Effect.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Sampling Klaster: Desain Satu Tahap, Dua Tahap, dan Design
+Effect</strong>, lalu periksa setiap langkah secara manual, uji kasus
+batas, dan cocokkan dengan rujukan primer. AI tidak boleh menjadi
+satu-satunya sumber rumus atau pembuktian; kesetaraan simbolik wajib
+dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula">
 <p><span class="math display">\[DEFF\approx 1+(m-1)\rho,\qquad
 \rho=\text{intraclass correlation},\quad m=\text{rata-rata ukuran
@@ -4996,6 +5610,28 @@ desain survei, itu desain pembenaran.</p>
 </div>
 <div id="praktikum-r-5" class="section level3" number="7.0.4">
 <h3><span class="header-section-number">7.0.4</span> Praktikum R</h3>
+<!-- BEGIN AI-INLINE:2b03a83d9072 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 6: Sampling Klaster: Desain Satu
+Tahap, Dua Tahap, dan Design Effect.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>rho <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="fl">0.2</span>, <span class="at">by =</span> <span class="fl">0.01</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="dv">20</span></span>
 <span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>deff <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">+</span> (m <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">*</span> rho</span>
@@ -5030,6 +5666,28 @@ inferensinya harus diturunkan derajatnya.</p>
 <div id="pertanyaan-reflektif-untuk-diskusi-kelas-5" class="section level3" number="7.0.6">
 <h3><span class="header-section-number">7.0.6</span> Pertanyaan
 reflektif untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:164590139b28 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Pertanyaan reflektif untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 6: Sampling Klaster: Desain Satu
+Tahap, Dua Tahap, dan Design Effect.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Apa parameter populasi yang paling relevan untuk kasus ini:
 rata-rata, total, proporsi, rasio, atau estimasi domain?</li>
@@ -5114,6 +5772,66 @@ dimiliki.</p>
 <div id="bab-7.-multistage-sampling-dan-desain-survei-kompleks" class="section level1" number="8">
 <h1><span class="header-section-number">8</span> Bab 7. Multistage
 Sampling dan Desain Survei Kompleks</h1>
+<!-- BEGIN AI-INLINE:d12bede3c259 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 7</span>
+<h3>
+Generative dan Agentic AI untuk Multistage Sampling dan Desain Survei
+Kompleks
+</h3>
+<p><strong>Arah RPS.</strong> Machine learning untuk nonresponse
+adjustment, propensity modeling, imputation, prediksi berbasis auxiliary
+data, dan adaptive survey design sebagai pengayaan metode survei.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK2 melalui fokus: Efisiensi relatif terhadap SRS;
+Multistage Sampling dan Complex Sampling Design; Desain bertingkat;
+Pertimbangan desain dalam survei besar.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menyusun data dictionary, mendeteksi potensi masalah
+kualitas data, dan mengusulkan aturan pemeriksaan.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa asal-usul data, unit observasi, coverage,
+kebocoran data, privasi, dan keputusan pembersihan; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada bagian ini, fokus pembelajaran adalah <strong>Multistage
 Sampling dan Desain Survei Kompleks</strong> yang ditempatkan dalam
 Pertemuan 7 dan terkait dengan SubCPMK2. Secara konseptual, multistage
@@ -5183,6 +5901,25 @@ dipercaya.</p>
 <div id="rumus-inti-dan-penafsiran-6" class="section level3" number="8.0.2">
 <h3><span class="header-section-number">8.0.2</span> Rumus inti dan
 penafsiran</h3>
+<!-- BEGIN AI-INLINE:91863d5a0247 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus inti dan penafsiran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 7: Multistage Sampling dan Desain
+Survei Kompleks.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Multistage Sampling dan Desain Survei Kompleks</strong>, lalu
+periksa setiap langkah secara manual, uji kasus batas, dan cocokkan
+dengan rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus
+atau pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula">
 <p><span class="math display">\[\pi_i=\pi_{1i}\pi_{2i|1}\cdots\pi_{Ki|1,\ldots,K-1},\qquad
 w_i=\frac{1}{\pi_i}.\]</span></p>
@@ -5238,6 +5975,28 @@ survei, itu desain pembenaran.</p>
 </div>
 <div id="praktikum-r-6" class="section level3" number="8.0.4">
 <h3><span class="header-section-number">8.0.4</span> Praktikum R</h3>
+<!-- BEGIN AI-INLINE:dfdf9c30d609 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 7: Multistage Sampling dan Desain
+Survei Kompleks.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="co"># Ilustrasi bobot desain dua tahap</span></span>
 <span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">17</span>)</span>
 <span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>psu <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">psu =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">50</span>, <span class="at">size =</span> <span class="fu">sample</span>(<span class="dv">80</span><span class="sc">:</span><span class="dv">200</span>, <span class="dv">50</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>))</span>
@@ -5276,6 +6035,28 @@ inferensinya harus diturunkan derajatnya.</p>
 <div id="pertanyaan-reflektif-untuk-diskusi-kelas-6" class="section level3" number="8.0.6">
 <h3><span class="header-section-number">8.0.6</span> Pertanyaan
 reflektif untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:737a0b20dc84 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Pertanyaan reflektif untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 7: Multistage Sampling dan Desain
+Survei Kompleks.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Apa parameter populasi yang paling relevan untuk kasus ini:
 rata-rata, total, proporsi, rasio, atau estimasi domain?</li>
@@ -5359,6 +6140,62 @@ dimiliki.</p>
 <div id="bab-8.-penaksir-rasio-difference-dan-regresi" class="section level1" number="9">
 <h1><span class="header-section-number">9</span> Bab 8. Penaksir Rasio,
 Difference, dan Regresi</h1>
+<!-- BEGIN AI-INLINE:3008d4e050f6 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 8</span>
+<h3>
+Generative dan Agentic AI untuk Penaksir Rasio, Difference, dan Regresi
+</h3>
+<p><strong>Arah RPS.</strong> Penggunaan AI hanya sesuai instruksi
+dosen; seluruh bantuan harus diungkapkan dan hasil diverifikasi.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1–2 melalui fokus: Ujian Tengah Semester.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada bagian ini, fokus pembelajaran adalah <strong>Penaksir Rasio,
 Difference, dan Regresi</strong> yang ditempatkan dalam Pertemuan 9 dan
 terkait dengan SubCPMK3. Secara konseptual, estimator berbantuan
@@ -5427,6 +6264,25 @@ itu layak dipercaya.</p>
 <div id="rumus-inti-dan-penafsiran-7" class="section level3" number="9.0.2">
 <h3><span class="header-section-number">9.0.2</span> Rumus inti dan
 penafsiran</h3>
+<!-- BEGIN AI-INLINE:8994b90b6fe0 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus inti dan penafsiran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 8: Penaksir Rasio, Difference, dan
+Regresi.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Penaksir Rasio, Difference, dan Regresi</strong>, lalu periksa
+setiap langkah secara manual, uji kasus batas, dan cocokkan dengan
+rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula">
 <p><span class="math display">\[\hat{Y}_{R}=X_U\frac{\bar{y}_s}{\bar{x}_s},\qquad
 \hat{Y}_{reg}=\hat{Y}_{HT}+\hat{B}(X_U-\hat{X}_{HT}).\]</span></p>
@@ -5482,6 +6338,29 @@ survei, itu desain pembenaran.</p>
 </div>
 <div id="praktikum-r-7" class="section level3" number="9.0.4">
 <h3><span class="header-section-number">9.0.4</span> Praktikum R</h3>
+<!-- BEGIN AI-INLINE:4e0c8724a531 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 8: Penaksir Rasio, Difference, dan
+Regresi.
+</p>
+<p>
+Agen dapat memasang kandidat model, menjalankan diagnostik,
+membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau
+konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+spesifikasi model, data leakage, konvergensi, residual, kalibrasi,
+ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">19</span>)</span>
 <span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">3000</span></span>
 <span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(N, <span class="dv">100</span>, <span class="dv">20</span>)</span>
@@ -5523,6 +6402,28 @@ inferensinya harus diturunkan derajatnya.</p>
 <div id="pertanyaan-reflektif-untuk-diskusi-kelas-7" class="section level3" number="9.0.6">
 <h3><span class="header-section-number">9.0.6</span> Pertanyaan
 reflektif untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:78c6d58f9484 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Pertanyaan reflektif untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 8: Penaksir Rasio, Difference, dan
+Regresi.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Apa parameter populasi yang paling relevan untuk kasus ini:
 rata-rata, total, proporsi, rasio, atau estimasi domain?</li>
@@ -5606,6 +6507,65 @@ dimiliki.</p>
 <div id="bab-9.-analisis-data-complex-survey-dengan-r" class="section level1" number="10">
 <h1><span class="header-section-number">10</span> Bab 9. Analisis Data
 Complex Survey dengan R</h1>
+<!-- BEGIN AI-INLINE:d79c24eda9ce -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 9</span>
+<h3>
+Generative dan Agentic AI untuk Analisis Data Complex Survey dengan R
+</h3>
+<p><strong>Arah RPS.</strong> Pemanfaatan paradata, data linkage,
+web/sensor data, dan integrasi sumber data dengan evaluasi coverage
+error, measurement error, privasi, fairness, dan kualitas data.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Kombinasi teknik sampling; Penaksir
+Rasio, Difference, dan Regresi; Rasio estimator dan regresi
+estimator.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada bagian ini, fokus pembelajaran adalah <strong>Analisis Data
 Complex Survey dengan R</strong> yang ditempatkan dalam Pertemuan 10 dan
 terkait dengan SubCPMK3. Secara konseptual, analisis complex survey
@@ -5672,6 +6632,25 @@ dipercaya.</p>
 <div id="rumus-inti-dan-penafsiran-8" class="section level3" number="10.0.2">
 <h3><span class="header-section-number">10.0.2</span> Rumus inti dan
 penafsiran</h3>
+<!-- BEGIN AI-INLINE:779e6c05d9c4 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus inti dan penafsiran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 9: Analisis Data Complex Survey
+dengan R.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Analisis Data Complex Survey dengan R</strong>, lalu periksa
+setiap langkah secara manual, uji kasus batas, dan cocokkan dengan
+rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula">
 <p><span class="math display">\[\hat{\bar{Y}}_w=\frac{\sum_{i\in s} w_i
 y_i}{\sum_{i\in s}w_i},\qquad w_i=w_i^{design}\times a_i^{nr}\times
@@ -5728,6 +6707,28 @@ survei, itu desain pembenaran.</p>
 </div>
 <div id="praktikum-r-8" class="section level3" number="10.0.4">
 <h3><span class="header-section-number">10.0.4</span> Praktikum R</h3>
+<!-- BEGIN AI-INLINE:7aa6d5958ad0 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 9: Analisis Data Complex Survey
+dengan R.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="fu">library</span>(survey)</span>
 <span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="co"># data_survei memuat variabel: y, weight, strata, psu</span></span>
 <span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>des <span class="ot">&lt;-</span> <span class="fu">svydesign</span>(<span class="at">ids =</span> <span class="sc">~</span>psu, <span class="at">strata =</span> <span class="sc">~</span>strata, <span class="at">weights =</span> <span class="sc">~</span>weight, <span class="at">data =</span> data_survei, <span class="at">nest =</span> <span class="cn">TRUE</span>)</span>
@@ -5766,6 +6767,28 @@ inferensinya harus diturunkan derajatnya.</p>
 <div id="pertanyaan-reflektif-untuk-diskusi-kelas-8" class="section level3" number="10.0.6">
 <h3><span class="header-section-number">10.0.6</span> Pertanyaan
 reflektif untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:124bf018a2a4 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Pertanyaan reflektif untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 9: Analisis Data Complex Survey
+dengan R.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Apa parameter populasi yang paling relevan untuk kasus ini:
 rata-rata, total, proporsi, rasio, atau estimasi domain?</li>
@@ -5849,6 +6872,66 @@ dimiliki.</p>
 <div id="bab-10.-penanganan-non-response-dan-missing-data-dalam-survei" class="section level1" number="11">
 <h1><span class="header-section-number">11</span> Bab 10. Penanganan
 Non-response dan Missing Data dalam Survei</h1>
+<!-- BEGIN AI-INLINE:ce1104225078 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 10</span>
+<h3>
+Generative dan Agentic AI untuk Penanganan Non-response dan Missing Data
+dalam Survei
+</h3>
+<p><strong>Arah RPS.</strong> Proyek survei nyata yang membandingkan
+pendekatan design-based, model-assisted/model-based, dan AI, disertai
+estimasi ketidakpastian, dokumentasi reproducible, dan komunikasi kepada
+pengguna.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Efisiensi dan bias; Aplikasi pada
+data nyata; Analisis Data dari Complex Survey.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada bagian ini, fokus pembelajaran adalah <strong>Penanganan
 Non-response dan Missing Data dalam Survei</strong> yang ditempatkan
 dalam Pertemuan 11 dan terkait dengan SubCPMK3. Secara konseptual,
@@ -5914,6 +6997,25 @@ yang tahu apakah angka itu layak dipercaya.</p>
 <div id="rumus-inti-dan-penafsiran-9" class="section level3" number="11.0.2">
 <h3><span class="header-section-number">11.0.2</span> Rumus inti dan
 penafsiran</h3>
+<!-- BEGIN AI-INLINE:147e2dba3f65 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus inti dan penafsiran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 10: Penanganan Non-response dan
+Missing Data dalam Survei.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Penanganan Non-response dan Missing Data dalam Survei</strong>,
+lalu periksa setiap langkah secara manual, uji kasus batas, dan cocokkan
+dengan rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus
+atau pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula">
 <p><span class="math display">\[w_i^{adj}=w_i\times \frac{\sum_{j\in
 C_h}w_j}{\sum_{j\in R_h}w_j},\qquad R_h\subset C_h.\]</span></p>
@@ -5969,6 +7071,28 @@ survei, itu desain pembenaran.</p>
 </div>
 <div id="praktikum-r-9" class="section level3" number="11.0.4">
 <h3><span class="header-section-number">11.0.4</span> Praktikum R</h3>
+<!-- BEGIN AI-INLINE:b0a3254ee447 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 10: Penanganan Non-response dan
+Missing Data dalam Survei.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="co"># Penyesuaian bobot non-response per kelas respon</span></span>
 <span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a>adjust_nr <span class="ot">&lt;-</span> <span class="cf">function</span>(weight, response, class){</span>
 <span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a>  ave_total <span class="ot">&lt;-</span> <span class="fu">ave</span>(weight, class, <span class="at">FUN =</span> sum)</span>
@@ -6007,6 +7131,28 @@ inferensinya harus diturunkan derajatnya.</p>
 <div id="pertanyaan-reflektif-untuk-diskusi-kelas-9" class="section level3" number="11.0.6">
 <h3><span class="header-section-number">11.0.6</span> Pertanyaan
 reflektif untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:141f0f320c0d -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Pertanyaan reflektif untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 10: Penanganan Non-response dan
+Missing Data dalam Survei.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Apa parameter populasi yang paling relevan untuk kasus ini:
 rata-rata, total, proporsi, rasio, atau estimasi domain?</li>
@@ -6090,6 +7236,65 @@ dimiliki.</p>
 <div id="bab-11.-double-sampling-atau-two-phase-sampling" class="section level1" number="12">
 <h1><span class="header-section-number">12</span> Bab 11. Double
 Sampling atau Two-Phase Sampling</h1>
+<!-- BEGIN AI-INLINE:9ed853399396 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 11</span>
+<h3>
+Generative dan Agentic AI untuk Double Sampling atau Two-Phase Sampling
+</h3>
+<p><strong>Arah RPS.</strong> Machine learning untuk nonresponse
+adjustment, propensity modeling, imputation, prediksi berbasis auxiliary
+data, dan adaptive survey design sebagai pengayaan metode survei.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Penanganan weight, strata, dan PSU;
+Penggunaan perangkat lunak statistika (misalnya R: survey package);
+Penanganan Non-Response; Tipe non-response.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menyusun data dictionary, mendeteksi potensi masalah
+kualitas data, dan mengusulkan aturan pemeriksaan.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa asal-usul data, unit observasi, coverage,
+kebocoran data, privasi, dan keputusan pembersihan; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada bagian ini, fokus pembelajaran adalah <strong>Double Sampling
 atau Two-Phase Sampling</strong> yang ditempatkan dalam Pertemuan 12 dan
 terkait dengan SubCPMK2 dan SubCPMK3. Secara konseptual, double sampling
@@ -6156,6 +7361,25 @@ dipercaya.</p>
 <div id="rumus-inti-dan-penafsiran-10" class="section level3" number="12.0.2">
 <h3><span class="header-section-number">12.0.2</span> Rumus inti dan
 penafsiran</h3>
+<!-- BEGIN AI-INLINE:88e92431f625 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus inti dan penafsiran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 11: Double Sampling atau Two-Phase
+Sampling.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Double Sampling atau Two-Phase Sampling</strong>, lalu periksa
+setiap langkah secara manual, uji kasus batas, dan cocokkan dengan
+rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula">
 <p><span class="math display">\[s_1\subset U,\quad s_2\subset s_1,\qquad
 \pi_i=\pi_{1i}\pi_{2i|1},\qquad w_i=1/\pi_i.\]</span></p>
@@ -6211,6 +7435,28 @@ survei, itu desain pembenaran.</p>
 </div>
 <div id="praktikum-r-10" class="section level3" number="12.0.4">
 <h3><span class="header-section-number">12.0.4</span> Praktikum R</h3>
+<!-- BEGIN AI-INLINE:567cbc74d9cd -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 11: Double Sampling atau Two-Phase
+Sampling.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">33</span>)</span>
 <span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">5000</span></span>
 <span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a>phase1 <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span>N, <span class="dv">1000</span>)</span>
@@ -6251,6 +7497,28 @@ inferensinya harus diturunkan derajatnya.</p>
 <div id="pertanyaan-reflektif-untuk-diskusi-kelas-10" class="section level3" number="12.0.6">
 <h3><span class="header-section-number">12.0.6</span> Pertanyaan
 reflektif untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:8eb92cd7c0ec -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Pertanyaan reflektif untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 11: Double Sampling atau Two-Phase
+Sampling.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Apa parameter populasi yang paling relevan untuk kasus ini:
 rata-rata, total, proporsi, rasio, atau estimasi domain?</li>
@@ -6334,6 +7602,65 @@ dimiliki.</p>
 <div id="bab-12.-sampling-error-nonsampling-error-dan-total-survey-error" class="section level1" number="13">
 <h1><span class="header-section-number">13</span> Bab 12. Sampling
 Error, Nonsampling Error, dan Total Survey Error</h1>
+<!-- BEGIN AI-INLINE:18f03293a127 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 12</span>
+<h3>
+Generative dan Agentic AI untuk Sampling Error, Nonsampling Error, dan
+Total Survey Error
+</h3>
+<p><strong>Arah RPS.</strong> Pemanfaatan paradata, data linkage,
+web/sensor data, dan integrasi sumber data dengan evaluasi coverage
+error, measurement error, privasi, fairness, dan kualitas data.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Metode imputasi dan penyesuaian
+bobot; Double Sampling; Konsep dan penerapan.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menyusun data dictionary, mendeteksi potensi masalah
+kualitas data, dan mengusulkan aturan pemeriksaan.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa asal-usul data, unit observasi, coverage,
+kebocoran data, privasi, dan keputusan pembersihan; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada bagian ini, fokus pembelajaran adalah <strong>Sampling Error,
 Nonsampling Error, dan Total Survey Error</strong> yang ditempatkan
 dalam Pertemuan 13 dan terkait dengan SubCPMK4. Secara konseptual,
@@ -6401,6 +7728,26 @@ dipercaya.</p>
 <div id="rumus-inti-dan-penafsiran-11" class="section level3" number="13.0.2">
 <h3><span class="header-section-number">13.0.2</span> Rumus inti dan
 penafsiran</h3>
+<!-- BEGIN AI-INLINE:9b5fde5e8c1a -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus inti dan penafsiran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 12: Sampling Error, Nonsampling
+Error, dan Total Survey Error.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Sampling Error, Nonsampling Error, dan Total Survey
+Error</strong>, lalu periksa setiap langkah secara manual, uji kasus
+batas, dan cocokkan dengan rujukan primer. AI tidak boleh menjadi
+satu-satunya sumber rumus atau pembuktian; kesetaraan simbolik wajib
+dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula">
 <p><span class="math display">\[MSE(\hat{\theta})=Var(\hat{\theta})+Bias(\hat{\theta})^2.\]</span></p>
 </div>
@@ -6455,6 +7802,28 @@ desain survei, itu desain pembenaran.</p>
 </div>
 <div id="praktikum-r-11" class="section level3" number="13.0.4">
 <h3><span class="header-section-number">13.0.4</span> Praktikum R</h3>
+<!-- BEGIN AI-INLINE:cbf58340f54c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 12: Sampling Error, Nonsampling
+Error, dan Total Survey Error.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="co"># Ilustrasi MSE sebagai kombinasi variansi dan bias</span></span>
 <span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>bias <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">5</span>, <span class="at">by =</span> .<span class="dv">1</span>)</span>
 <span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>variance <span class="ot">&lt;-</span> <span class="dv">4</span></span>
@@ -6490,6 +7859,28 @@ inferensinya harus diturunkan derajatnya.</p>
 <div id="pertanyaan-reflektif-untuk-diskusi-kelas-11" class="section level3" number="13.0.6">
 <h3><span class="header-section-number">13.0.6</span> Pertanyaan
 reflektif untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:68376cdfba3b -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Pertanyaan reflektif untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 12: Sampling Error, Nonsampling
+Error, dan Total Survey Error.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Apa parameter populasi yang paling relevan untuk kasus ini:
 rata-rata, total, proporsi, rasio, atau estimasi domain?</li>
@@ -6573,6 +7964,66 @@ dimiliki.</p>
 <div id="bab-13.-pps-systematic-sampling-dan-adaptive-sampling" class="section level1" number="14">
 <h1><span class="header-section-number">14</span> Bab 13. PPS Systematic
 Sampling dan Adaptive Sampling</h1>
+<!-- BEGIN AI-INLINE:cdf4b1f6a206 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 13</span>
+<h3>
+Generative dan Agentic AI untuk PPS Systematic Sampling dan Adaptive
+Sampling
+</h3>
+<p><strong>Arah RPS.</strong> Proyek survei nyata yang membandingkan
+pendekatan design-based, model-assisted/model-based, dan AI, disertai
+estimasi ketidakpastian, dokumentasi reproducible, dan komunikasi kepada
+pengguna.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK4 melalui fokus: Estimasi dalam two-phase sampling;
+Kesalahan dalam Sampling; Sampling error dan nonsampling error.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk mengurai notasi dan menawarkan langkah derivasi
+alternatif tanpa menggantikan pembuktian mahasiswa.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter; agen wajib berhenti pada checkpoint
+dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas,
+satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada bagian ini, fokus pembelajaran adalah <strong>PPS Systematic
 Sampling dan Adaptive Sampling</strong> yang ditempatkan dalam Pertemuan
 14 dan terkait dengan SubCPMK4. Secara konseptual, PPS memberi peluang
@@ -6640,6 +8091,25 @@ desain yang tahu apakah angka itu layak dipercaya.</p>
 <div id="rumus-inti-dan-penafsiran-12" class="section level3" number="14.0.2">
 <h3><span class="header-section-number">14.0.2</span> Rumus inti dan
 penafsiran</h3>
+<!-- BEGIN AI-INLINE:e9c27ac4d8ce -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus inti dan penafsiran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 13: PPS Systematic Sampling dan
+Adaptive Sampling.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>PPS Systematic Sampling dan Adaptive Sampling</strong>, lalu
+periksa setiap langkah secara manual, uji kasus batas, dan cocokkan
+dengan rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus
+atau pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula">
 <p><span class="math display">\[\pi_i\propto M_i,\qquad
 \hat{Y}_{HT}=\sum_{i\in s}\frac{y_i}{\pi_i}.\]</span></p>
@@ -6695,6 +8165,28 @@ survei, itu desain pembenaran.</p>
 </div>
 <div id="praktikum-r-12" class="section level3" number="14.0.4">
 <h3><span class="header-section-number">14.0.4</span> Praktikum R</h3>
+<!-- BEGIN AI-INLINE:760d7f5af460 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 13: PPS Systematic Sampling dan
+Adaptive Sampling.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2025</span>)</span>
 <span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>M <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">50</span><span class="sc">:</span><span class="dv">500</span>, <span class="dv">30</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>size <span class="ot">&lt;-</span> <span class="dv">8</span></span>
@@ -6731,6 +8223,28 @@ inferensinya harus diturunkan derajatnya.</p>
 <div id="pertanyaan-reflektif-untuk-diskusi-kelas-12" class="section level3" number="14.0.6">
 <h3><span class="header-section-number">14.0.6</span> Pertanyaan
 reflektif untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:f9afdc6ade83 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Pertanyaan reflektif untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 13: PPS Systematic Sampling dan
+Adaptive Sampling.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Apa parameter populasi yang paling relevan untuk kasus ini:
 rata-rata, total, proporsi, rasio, atau estimasi domain?</li>
@@ -6814,6 +8328,66 @@ dimiliki.</p>
 <div id="bab-14.-non-probability-sampling-dan-batas-inferensi" class="section level1" number="15">
 <h1><span class="header-section-number">15</span> Bab 14.
 Non-Probability Sampling dan Batas Inferensi</h1>
+<!-- BEGIN AI-INLINE:f03f21ca6807 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 14</span>
+<h3>
+Generative dan Agentic AI untuk Non-Probability Sampling dan Batas
+Inferensi
+</h3>
+<p><strong>Arah RPS.</strong> Machine learning untuk nonresponse
+adjustment, propensity modeling, imputation, prediksi berbasis auxiliary
+data, dan adaptive survey design sebagai pengayaan metode survei.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK4 melalui fokus: Evaluasi kualitas survei; Teknik
+Sampling Lainnya; Systematic PPS sampling; Adaptive sampling (jika
+relevan).</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk mengurai notasi dan menawarkan langkah derivasi
+alternatif tanpa menggantikan pembuktian mahasiswa.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter; agen wajib berhenti pada checkpoint
+dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas,
+satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada bagian ini, fokus pembelajaran adalah <strong>Non-Probability
 Sampling dan Batas Inferensi</strong> yang ditempatkan dalam Pertemuan
 15 dan terkait dengan SubCPMK4. Secara konseptual, non-probability
@@ -6881,6 +8455,25 @@ itu layak dipercaya.</p>
 <div id="rumus-inti-dan-penafsiran-13" class="section level3" number="15.0.2">
 <h3><span class="header-section-number">15.0.2</span> Rumus inti dan
 penafsiran</h3>
+<!-- BEGIN AI-INLINE:49a6d51fd2c5 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus inti dan penafsiran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Non-Probability Sampling dan
+Batas Inferensi.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Non-Probability Sampling dan Batas Inferensi</strong>, lalu
+periksa setiap langkah secara manual, uji kasus batas, dan cocokkan
+dengan rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus
+atau pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula">
 <p><span class="math display">\[Bias(\hat{\bar{Y}})\approx
 \bar{Y}_{respondent}-\bar{Y}_{population},\quad \text{ketika mekanisme
@@ -6937,6 +8530,28 @@ survei, itu desain pembenaran.</p>
 </div>
 <div id="praktikum-r-13" class="section level3" number="15.0.4">
 <h3><span class="header-section-number">15.0.4</span> Praktikum R</h3>
+<!-- BEGIN AI-INLINE:9a4916472e08 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Non-Probability Sampling dan
+Batas Inferensi.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="co"># Contoh perbandingan sampel probabilitas dan volunteer sample</span></span>
 <span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">8</span>)</span>
 <span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
@@ -6975,6 +8590,28 @@ inferensinya harus diturunkan derajatnya.</p>
 <div id="pertanyaan-reflektif-untuk-diskusi-kelas-13" class="section level3" number="15.0.6">
 <h3><span class="header-section-number">15.0.6</span> Pertanyaan
 reflektif untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:99eef22dd121 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Pertanyaan reflektif untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Non-Probability Sampling dan
+Batas Inferensi.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Apa parameter populasi yang paling relevan untuk kasus ini:
 rata-rata, total, proporsi, rasio, atau estimasi domain?</li>
@@ -7058,6 +8695,65 @@ dimiliki.</p>
 <div id="bab-15.-integrasi-proyek-akhir-desain-implementasi-evaluasi-dan-inovasi" class="section level1" number="16">
 <h1><span class="header-section-number">16</span> Bab 15. Integrasi
 Proyek Akhir: Desain, Implementasi, Evaluasi, dan Inovasi</h1>
+<!-- BEGIN AI-INLINE:88efb399abe8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 15</span>
+<h3>
+Generative dan Agentic AI untuk Integrasi Proyek Akhir: Desain,
+Implementasi, Evaluasi, dan Inovasi
+</h3>
+<p><strong>Arah RPS.</strong> Pemanfaatan paradata, data linkage,
+web/sensor data, dan integrasi sumber data dengan evaluasi coverage
+error, measurement error, privasi, fairness, dan kualitas data.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK4 melalui fokus: Non-Probability Sampling; Purposive,
+quota, dan snowball sampling; Keterbatasan inferensi.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pada bagian ini, fokus pembelajaran adalah <strong>Integrasi Proyek
 Akhir: Desain, Implementasi, Evaluasi, dan Inovasi</strong> yang
 ditempatkan dalam Pertemuan 16 dan terkait dengan CPMK1-CPMK4. Secara
@@ -7125,6 +8821,26 @@ yang tahu apakah angka itu layak dipercaya.</p>
 <div id="rumus-inti-dan-penafsiran-14" class="section level3" number="16.0.2">
 <h3><span class="header-section-number">16.0.2</span> Rumus inti dan
 penafsiran</h3>
+<!-- BEGIN AI-INLINE:7c66824223ff -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus inti dan penafsiran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 15: Integrasi Proyek Akhir: Desain,
+Implementasi, Evaluasi, dan Inovasi.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Integrasi Proyek Akhir: Desain, Implementasi, Evaluasi, dan
+Inovasi</strong>, lalu periksa setiap langkah secara manual, uji kasus
+batas, dan cocokkan dengan rujukan primer. AI tidak boleh menjadi
+satu-satunya sumber rumus atau pembuktian; kesetaraan simbolik wajib
+dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula">
 <p><span class="math display">\[\text{Desain baik}=\text{tujuan
 jelas}+\text{frame memadai}+\text{randomisasi
@@ -7181,6 +8897,28 @@ Itu bukan desain survei, itu desain pembenaran.</p>
 </div>
 <div id="praktikum-r-14" class="section level3" number="16.0.4">
 <h3><span class="header-section-number">16.0.4</span> Praktikum R</h3>
+<!-- BEGIN AI-INLINE:0b3c6127e8e0 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 15: Integrasi Proyek Akhir: Desain,
+Implementasi, Evaluasi, dan Inovasi.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="co"># Kerangka sederhana pipeline proyek survei</span></span>
 <span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a><span class="co"># 1. Definisikan populasi dan frame</span></span>
 <span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a><span class="co"># 2. Pilih desain sampling</span></span>
@@ -7220,6 +8958,28 @@ inferensinya harus diturunkan derajatnya.</p>
 <div id="pertanyaan-reflektif-untuk-diskusi-kelas-14" class="section level3" number="16.0.6">
 <h3><span class="header-section-number">16.0.6</span> Pertanyaan
 reflektif untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:0bc3e62ea437 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Pertanyaan reflektif untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 15: Integrasi Proyek Akhir: Desain,
+Implementasi, Evaluasi, dan Inovasi.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Apa parameter populasi yang paling relevan untuk kasus ini:
 rata-rata, total, proporsi, rasio, atau estimasi domain?</li>
@@ -7303,6 +9063,65 @@ dimiliki.</p>
 <div id="bab-17.-studi-kasus-terpadu-merancang-survei-literasi-digital-rumah-tangga" class="section level1" number="17">
 <h1><span class="header-section-number">17</span> Bab 17. Studi Kasus
 Terpadu: Merancang Survei Literasi Digital Rumah Tangga</h1>
+<!-- BEGIN AI-INLINE:225f42a31eec -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 17</span>
+<h3>
+Generative dan Agentic AI untuk Studi Kasus Terpadu: Merancang Survei
+Literasi Digital Rumah Tangga
+</h3>
+<p><strong>Arah RPS.</strong> Audit akhir prompt, sumber, kode, hasil,
+ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila
+digunakan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek
+akhir.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Pemerintah daerah ingin mengetahui tingkat
 literasi digital rumah tangga, akses perangkat, keamanan digital, dan
@@ -7382,6 +9201,30 @@ dengan R</h2>
 <div id="analisis-dan-pelaporan" class="section level2" number="17.4">
 <h2><span class="header-section-number">17.4</span> Analisis dan
 pelaporan</h2>
+<!-- BEGIN AI-INLINE:213598dd2525 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Analisis dan pelaporan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: Studi Kasus Terpadu: Merancang
+Survei Literasi Digital Rumah Tangga.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Audit akhir prompt,
+sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi,
+serta log agen bila digunakan. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Analisis harus mencerminkan desain. Jika kecamatan adalah strata dan
 klaster adalah PSU, maka deklarasi desain pada R harus menggunakan
 <code>strata = ~kecamatan</code>, <code>ids = ~cluster</code>, dan
@@ -7422,6 +9265,65 @@ estimasi dan rencana mitigasinya.</p>
 <div id="bab-18.-studi-kasus-terpadu-survei-kesehatan-dengan-oversampling-kelompok-risiko" class="section level1" number="18">
 <h1><span class="header-section-number">18</span> Bab 18. Studi Kasus
 Terpadu: Survei Kesehatan dengan Oversampling Kelompok Risiko</h1>
+<!-- BEGIN AI-INLINE:3bb00f0509f3 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 18</span>
+<h3>
+Generative dan Agentic AI untuk Studi Kasus Terpadu: Survei Kesehatan
+dengan Oversampling Kelompok Risiko
+</h3>
+<p><strong>Arah RPS.</strong> Audit akhir prompt, sumber, kode, hasil,
+ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila
+digunakan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek
+akhir.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Tim peneliti ingin mengestimasi prevalensi
 faktor risiko penyakit kronis pada penduduk dewasa. Kelompok usia lanjut
@@ -7464,6 +9366,65 @@ sampling survey <span class="citation">(<a href="#ref-deville1992">Deville and S
 <div id="bab-19.-studi-kasus-terpadu-audit-mutu-data-administratif-dengan-sampling" class="section level1" number="19">
 <h1><span class="header-section-number">19</span> Bab 19. Studi Kasus
 Terpadu: Audit Mutu Data Administratif dengan Sampling</h1>
+<!-- BEGIN AI-INLINE:468c5f56e649 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 19</span>
+<h3>
+Generative dan Agentic AI untuk Studi Kasus Terpadu: Audit Mutu Data
+Administratif dengan Sampling
+</h3>
+<p><strong>Arah RPS.</strong> Audit akhir prompt, sumber, kode, hasil,
+ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila
+digunakan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek
+akhir.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Audit data administratif sering memerlukan sampling karena jumlah
 record besar. Misalnya, universitas ingin memeriksa kelengkapan data
 akademik mahasiswa, konsistensi kode mata kuliah, dan kecocokan status
@@ -7496,9 +9457,91 @@ proses bisnis.</p>
 <div id="bab-20.-template-laporan-proyek-sampling-survey" class="section level1" number="20">
 <h1><span class="header-section-number">20</span> Bab 20. Template
 Laporan Proyek Sampling Survey</h1>
+<!-- BEGIN AI-INLINE:4e167bfd8908 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 20</span>
+<h3>
+Generative dan Agentic AI untuk Template Laporan Proyek Sampling Survey
+</h3>
+<p><strong>Arah RPS.</strong> Audit akhir prompt, sumber, kode, hasil,
+ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila
+digunakan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek
+akhir.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="struktur-laporan-yang-disarankan" class="section level2" number="20.1">
 <h2><span class="header-section-number">20.1</span> Struktur laporan
 yang disarankan</h2>
+<!-- BEGIN AI-INLINE:a6abb68ba4a3 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Struktur laporan yang disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: Template Laporan Proyek Sampling
+Survey.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Audit akhir prompt,
+sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi,
+serta log agen bila digunakan. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li><strong>Judul dan ringkasan eksekutif.</strong> Ringkasan memuat
 tujuan, desain, ukuran sampel, estimator utama, hasil inti, dan
@@ -7581,6 +9624,65 @@ SubCPMK4, evaluasi error dan inovasi desain menjadi indikator utama.</p>
 <div id="bab-21.-panduan-praktikum-r-dari-simulasi-sampai-survey-package" class="section level1" number="21">
 <h1><span class="header-section-number">21</span> Bab 21. Panduan
 Praktikum R: Dari Simulasi sampai <code>survey</code> Package</h1>
+<!-- BEGIN AI-INLINE:80477cccfb61 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 21</span>
+<h3>
+Generative dan Agentic AI untuk Panduan Praktikum R: Dari Simulasi
+sampai <code>survey</code> Package
+</h3>
+<p><strong>Arah RPS.</strong> Audit akhir prompt, sumber, kode, hasil,
+ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila
+digunakan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek
+akhir.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="instalasi-paket" class="section level2" number="21.1">
 <h2><span class="header-section-number">21.1</span> Instalasi paket</h2>
 <div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">&quot;survey&quot;</span>, <span class="st">&quot;srvyr&quot;</span>, <span class="st">&quot;dplyr&quot;</span>, <span class="st">&quot;ggplot2&quot;</span>, <span class="st">&quot;sampling&quot;</span>, <span class="st">&quot;PracTools&quot;</span>))</span></code></pre></div>
@@ -7670,6 +9772,64 @@ langkah manual yang tidak terdokumentasi.</p>
 <div id="bab-22.-glosarium-sampling-survey" class="section level1" number="22">
 <h1><span class="header-section-number">22</span> Bab 22. Glosarium
 Sampling Survey</h1>
+<!-- BEGIN AI-INLINE:2de094b8ffbd -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 22</span>
+<h3>
+Generative dan Agentic AI untuk Glosarium Sampling Survey
+</h3>
+<p><strong>Arah RPS.</strong> Audit akhir prompt, sumber, kode, hasil,
+ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila
+digunakan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek
+akhir.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <table>
 <colgroup>
 <col width="50%" />
@@ -7769,8 +9929,84 @@ merespons</td>
 <div id="bab-23.-bank-soal-reflektif-dan-latihan" class="section level1" number="23">
 <h1><span class="header-section-number">23</span> Bab 23. Bank Soal
 Reflektif dan Latihan</h1>
+<!-- BEGIN AI-INLINE:468594a0057e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 23</span>
+<h3>
+Generative dan Agentic AI untuk Bank Soal Reflektif dan Latihan
+</h3>
+<p><strong>Arah RPS.</strong> Audit akhir prompt, sumber, kode, hasil,
+ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila
+digunakan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek
+akhir.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="latihan-konsep" class="section level2" number="23.1">
 <h2><span class="header-section-number">23.1</span> Latihan konsep</h2>
+<!-- BEGIN AI-INLINE:e04eb63ef912 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Latihan konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: Bank Soal Reflektif dan Latihan.
+</p>
+<p>
+Minta AI menjelaskan <strong>Bank Soal Reflektif dan Latihan</strong>
+melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa
+kemudian membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Jelaskan perbedaan populasi target, populasi survei, dan kerangka
 sampel menggunakan contoh survei alumni.</li>
@@ -7830,6 +10066,65 @@ dengan pengukuran laboratorium mahal.</li>
 <div id="bab-24.-checklist-kualitas-sebelum-survei-dilaksanakan" class="section level1" number="24">
 <h1><span class="header-section-number">24</span> Bab 24. Checklist
 Kualitas Sebelum Survei Dilaksanakan</h1>
+<!-- BEGIN AI-INLINE:abf9597c0869 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 24</span>
+<h3>
+Generative dan Agentic AI untuk Checklist Kualitas Sebelum Survei
+Dilaksanakan
+</h3>
+<p><strong>Arah RPS.</strong> Audit akhir prompt, sumber, kode, hasil,
+ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila
+digunakan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek
+akhir.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="tip">
 <p><strong>Checklist cepat.</strong> Checklist ini digunakan sebelum
 enumerator turun lapangan atau sebelum tautan survei disebar. Tujuannya
@@ -7916,6 +10211,64 @@ ikut-ikutan dramatis.</p>
 </div>
 <div id="bab-25.-penutup" class="section level1" number="25">
 <h1><span class="header-section-number">25</span> Bab 25. Penutup</h1>
+<!-- BEGIN AI-INLINE:d9a3b4cb7f92 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 25</span>
+<h3>
+Generative dan Agentic AI untuk Penutup
+</h3>
+<p><strong>Arah RPS.</strong> Audit akhir prompt, sumber, kode, hasil,
+ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila
+digunakan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek
+akhir.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Sampling Survey adalah mata kuliah yang menyatukan teori
 probabilitas, desain penelitian, komputasi statistik, dan kepekaan
 lapangan. Mahasiswa yang menguasai mata kuliah ini tidak hanya mampu
@@ -8108,6 +10461,30 @@ dibaca dengan sangat hati-hati.</p>
 <div id="catatan-pengayaan-5-estimasi-domain-dan-pelaporan-kebijakan" class="section level2" number="26.5">
 <h2><span class="header-section-number">26.5</span> Catatan pengayaan 5:
 estimasi domain dan pelaporan kebijakan</h2>
+<!-- BEGIN AI-INLINE:00a33760abab -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Catatan pengayaan 5: estimasi domain dan pelaporan
+kebijakan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: Penutup.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Audit akhir prompt,
+sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi,
+serta log agen bila digunakan. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam desain survei nyata, keputusan metodologis jarang berdiri
 sendiri. Keputusan tentang ukuran sampel berkaitan dengan biaya,
 keputusan tentang strata berkaitan dengan kebutuhan domain, keputusan
@@ -8780,6 +11157,30 @@ dibaca dengan sangat hati-hati.</p>
 <div id="catatan-pengayaan-21-estimasi-domain-dan-pelaporan-kebijakan" class="section level2" number="26.21">
 <h2><span class="header-section-number">26.21</span> Catatan pengayaan
 21: estimasi domain dan pelaporan kebijakan</h2>
+<!-- BEGIN AI-INLINE:1bfb484550be -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Catatan pengayaan 21: estimasi domain dan pelaporan
+kebijakan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: Penutup.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Audit akhir prompt,
+sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi,
+serta log agen bila digunakan. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam desain survei nyata, keputusan metodologis jarang berdiri
 sendiri. Keputusan tentang ukuran sampel berkaitan dengan biaya,
 keputusan tentang strata berkaitan dengan kebutuhan domain, keputusan
@@ -9452,6 +11853,30 @@ dibaca dengan sangat hati-hati.</p>
 <div id="catatan-pengayaan-37-estimasi-domain-dan-pelaporan-kebijakan" class="section level2" number="26.37">
 <h2><span class="header-section-number">26.37</span> Catatan pengayaan
 37: estimasi domain dan pelaporan kebijakan</h2>
+<!-- BEGIN AI-INLINE:7b8f6f2f0d5d -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Catatan pengayaan 37: estimasi domain dan pelaporan
+kebijakan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: Penutup.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Audit akhir prompt,
+sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi,
+serta log agen bila digunakan. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam desain survei nyata, keputusan metodologis jarang berdiri
 sendiri. Keputusan tentang ukuran sampel berkaitan dengan biaya,
 keputusan tentang strata berkaitan dengan kebutuhan domain, keputusan
@@ -10124,6 +12549,30 @@ dibaca dengan sangat hati-hati.</p>
 <div id="catatan-pengayaan-53-estimasi-domain-dan-pelaporan-kebijakan" class="section level2" number="26.53">
 <h2><span class="header-section-number">26.53</span> Catatan pengayaan
 53: estimasi domain dan pelaporan kebijakan</h2>
+<!-- BEGIN AI-INLINE:74e9f4f6432b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Catatan pengayaan 53: estimasi domain dan pelaporan
+kebijakan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: Penutup.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Audit akhir prompt,
+sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi,
+serta log agen bila digunakan. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam desain survei nyata, keputusan metodologis jarang berdiri
 sendiri. Keputusan tentang ukuran sampel berkaitan dengan biaya,
 keputusan tentang strata berkaitan dengan kebutuhan domain, keputusan
@@ -10796,6 +13245,30 @@ dibaca dengan sangat hati-hati.</p>
 <div id="catatan-pengayaan-69-estimasi-domain-dan-pelaporan-kebijakan" class="section level2" number="26.69">
 <h2><span class="header-section-number">26.69</span> Catatan pengayaan
 69: estimasi domain dan pelaporan kebijakan</h2>
+<!-- BEGIN AI-INLINE:0cf089029074 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Catatan pengayaan 69: estimasi domain dan pelaporan
+kebijakan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: Penutup.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Audit akhir prompt,
+sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi,
+serta log agen bila digunakan. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam desain survei nyata, keputusan metodologis jarang berdiri
 sendiri. Keputusan tentang ukuran sampel berkaitan dengan biaya,
 keputusan tentang strata berkaitan dengan kebutuhan domain, keputusan
@@ -10834,6 +13307,78 @@ berguna untuk pembaca laporan yang ingin cepat mengetahui apakah hasil
 survei dapat dipercaya. Jika audit desain kuat, hasil analisis memiliki
 fondasi. Jika audit desain lemah, tabel hasil secantik apa pun perlu
 dibaca dengan sangat hati-hati.</p>
+<!-- BEGIN ADOPSI AI RPS 2026 -->
+</div>
+<div id="penyelarasan-materi-dengan-rps-revisi-ai-2026" class="section level2" number="26.70">
+<h2><span class="header-section-number">26.70</span> Penyelarasan Materi
+dengan RPS Revisi AI 2026</h2>
+<p>Materi <strong>Sampling Survey</strong> ini telah diselaraskan dengan
+RPS Revisi AI 2026. Rumusan CPL program studi tetap dan tidak diubah.
+Generative AI maupun agentic AI hanya digunakan sebagai alat bantu untuk
+mempercepat ketercapaian CPMK dan Sub-CPMK; penalaran statistika,
+keputusan metodologis, dan tanggung jawab akademik tetap berada pada
+mahasiswa.</p>
+<div id="integrasi-ai-kontekstual" class="section level3" number="26.70.1">
+<h3><span class="header-section-number">26.70.1</span> Integrasi AI
+kontekstual</h3>
+<ul>
+<li>Machine learning untuk nonresponse adjustment, propensity modeling,
+imputation, prediksi berbasis auxiliary data, dan adaptive survey design
+sebagai pengayaan metode survei.</li>
+<li>Pemanfaatan paradata, data linkage, web/sensor data, dan integrasi
+sumber data dengan evaluasi coverage error, measurement error, privasi,
+fairness, dan kualitas data.</li>
+<li>Proyek survei nyata yang membandingkan pendekatan design-based,
+model-assisted/model-based, dan AI, disertai estimasi ketidakpastian,
+dokumentasi reproducible, dan komunikasi kepada pengguna.</li>
+</ul>
+</div>
+<div id="protokol-penggunaan-ai" class="section level3" number="26.70.2">
+<h3><span class="header-section-number">26.70.2</span> Protokol
+penggunaan AI</h3>
+<ol style="list-style-type: decimal">
+<li>Nyatakan alat, tujuan penggunaan, dan bagian pekerjaan yang dibantu
+AI.</li>
+<li>Simpan prompt log ringkas, sumber, versi kode/notebook, dan
+perubahan yang dilakukan.</li>
+<li>Verifikasi keluaran terhadap asumsi metode, sumber primer, hasil
+numerik, diagnostik, ketidakpastian, robustness, bias/fairness, privasi,
+dan konteks.</li>
+<li>Jangan memasukkan data pribadi, rahasia, soal asesmen tertutup, atau
+kredensial ke layanan AI yang tidak disetujui.</li>
+<li>Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil
+secara mandiri.</li>
+</ol>
+</div>
+<div id="bukti-asesmen" class="section level3" number="26.70.3">
+<h3><span class="header-section-number">26.70.3</span> Bukti
+asesmen</h3>
+<!-- BEGIN AI-INLINE:0b9fb6a812f1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Bukti asesmen
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: Penutup.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
+<p>Penilaian berfokus pada ketepatan metode, validasi dan
+ketidakpastian, reproducibility, interpretasi, komunikasi, serta
+transparansi penggunaan AI. Keluaran AI tanpa verifikasi bukan bukti
+ketercapaian CPMK.</p>
+<!-- END ADOPSI AI RPS 2026 -->
 <div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
 <div id="ref-bethlehem2009" class="csl-entry">
 Bethlehem, Jelke. 2009. <em>Applied Survey Methods: A Statistical
@@ -10910,32 +13455,13 @@ York: Springer.
 </div>
 </div>
 </div>
+</div>
 
 
 
 </div>
 </div>
 
-
-
-
-
-
-<!-- BEGIN ADOPSI AI RPS 2026 -->
-<section id="penyelarasan-rps-ai-2026" style="margin:2rem 0;padding:1.5rem;border-left:8px solid #f2a51a;background:#eef5f8;border-radius:8px">
-  <h2>Penyelarasan Materi dengan RPS Revisi AI 2026</h2>
-  <p>Materi <strong>Sampling Survey</strong> ini mempertahankan rumusan CPL yang berlaku. AI ditempatkan sebagai alat bantu untuk mempercepat ketercapaian CPMK dan Sub-CPMK, bukan sebagai CPL baru atau pengganti penalaran statistika.</p>
-  <h3>Integrasi AI kontekstual</h3><ul><li>Machine learning untuk nonresponse adjustment, propensity modeling, imputation, prediksi berbasis auxiliary data, dan adaptive survey design sebagai pengayaan metode survei.</li><li>Pemanfaatan paradata, data linkage, web/sensor data, dan integrasi sumber data dengan evaluasi coverage error, measurement error, privasi, fairness, dan kualitas data.</li><li>Proyek survei nyata yang membandingkan pendekatan design-based, model-assisted/model-based, dan AI, disertai estimasi ketidakpastian, dokumentasi reproducible, dan komunikasi kepada pengguna.</li></ul>
-  <h3>Protokol penggunaan AI</h3>
-  <ol>
-    <li>Ungkapkan alat, tujuan, prompt log ringkas, sumber, dan perubahan yang dilakukan.</li>
-    <li>Verifikasi asumsi, kode, hasil numerik, diagnostik, ketidakpastian, robustness, bias/fairness, privasi, dan konteks.</li>
-    <li>Jangan mengunggah data pribadi, rahasia, asesmen tertutup, atau kredensial ke layanan yang tidak disetujui.</li>
-    <li>Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil secara mandiri.</li>
-  </ol>
-  <p><strong>Bukti asesmen:</strong> ketepatan metode, validasi, reproducibility, interpretasi, komunikasi, dan transparansi penggunaan AI. Keluaran AI tanpa verifikasi bukan bukti ketercapaian CPMK.</p>
-</section>
-<!-- END ADOPSI AI RPS 2026 -->
 </div>
 
 <script>
@@ -11000,6 +13526,16 @@ $(document).ready(function ()  {
     // tocify
     var toc = $("#TOC").tocify(options).data("toc-tocify");
 });
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
 </script>
 
 </body>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="id" xml:lang="id">
+<html>
 
 <head>
 
@@ -3128,270 +3128,106 @@ serta komunikasi hasil secara ilmiah.</p>
 </div>
 <!-- END UNPAD MATERIAL ENHANCEMENT -->
 <style>
-html, body {
-  background: linear-gradient(135deg, #f8fbfd 0%, #fffdf8 48%, #f3f6ee 100%) !important;
-  color: #172033 !important;
+:root{
+--brown-dark:#3B2415;
+--brown:#7A4A28;
+--brown-mid:#A5693D;
+--brown-soft:#C89562;
+--cream:#FFF8EE;
+--cream-2:#F7E6D0;
+--gold:#D8A23B;
+--mint:#DDEEDB;
+--rose:#F2D6C9;
+--blue:#D7E5F5;
+--ink:#1E1712;
 }
-body {
-  font-family: "Segoe UI", Arial, sans-serif !important;
-  font-size: 17px !important;
-  line-height: 1.72 !important;
-  margin: 0 !important;
-  overflow-x: hidden !important;
+body{
+font-family: "Source Sans Pro", "Segoe UI", Arial, sans-serif;
+color: var(--ink);
+background: linear-gradient(135deg,#fffaf2 0%,#f6e4ce 38%,#e1b47e 72%,#8a5634 100%);
+line-height: 1.68;
+font-size: 17px;
 }
-.main-container {
-  max-width: 1180px !important;
-  margin-top: 18px !important;
-  margin-bottom: 38px !important;
-  padding: 34px 46px 54px !important;
-  background: rgba(255, 253, 248, 0.98) !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  box-shadow: 0 18px 42px rgba(23, 57, 92, 0.12) !important;
-  overflow-x: hidden !important;
+main, .main-container, .container-fluid{
+max-width: 1180px !important;
+background: rgba(255,250,242,0.96);
+border-radius: 26px;
+box-shadow: 0 28px 80px rgba(71,39,19,0.22);
+padding: 42px 56px 64px 56px !important;
+margin: 28px auto 50px auto;
 }
-h1, h2, h3, h4 {
-  color: #17395c !important;
-  font-weight: 800 !important;
-  letter-spacing: 0 !important;
-  line-height: 1.24 !important;
+#TOC{
+position: fixed;
+left: 18px;
+top: 18px;
+bottom: 18px;
+width: 285px;
+overflow-y: auto;
+background: linear-gradient(180deg,#4b2c19,#8b552e 48%,#d8a35a);
+color: #fff;
+border-radius: 22px;
+padding: 22px 18px;
+box-shadow: 0 18px 45px rgba(48,26,12,0.35);
+z-index: 999;
 }
-h1.title {
-  color: #17395c !important;
-  -webkit-text-fill-color: #17395c !important;
-  background: none !important;
-  border-bottom: 4px solid #f2a51a !important;
-  padding-bottom: 14px !important;
+#TOC a{color:#fff7e6;text-decoration:none;font-size:14px;}
+#TOC a:hover{color:#ffe08a;text-decoration:underline;}
+body{padding-left: 335px;}
+h1, h2, h3, h4{color:var(--brown-dark);font-weight:800;letter-spacing:-0.02em;}
+h1{font-size:2.45rem;border-bottom:4px solid var(--gold);padding-bottom:12px;margin-top:22px;}
+h2{font-size:2.0rem;margin-top:54px;padding:16px 20px;border-radius:18px;background:linear-gradient(90deg,#ead0b2,#fff7ec);border-left:10px solid var(--brown-mid);}
+h3{font-size:1.45rem;margin-top:34px;color:#57321b;}
+h4{font-size:1.13rem;margin-top:26px;color:#6c3f23;}
+.title{font-size:3rem !important;color:#351d0f;font-weight:900;}
+.subtitle{font-size:1.5rem;color:#6a3e23;}
+a{color:#8a4f20;font-weight:700;}
+blockquote{
+border-left:8px solid var(--gold);
+background:linear-gradient(90deg,#fff2d9,#fffaf2);
+padding:18px 24px;
+border-radius:16px;
 }
-h2 {
-  margin-top: 46px !important;
-  padding: 12px 18px !important;
-  border-left: 8px solid #f2a51a !important;
-  border-radius: 8px !important;
-  background: linear-gradient(90deg, #eef8f6, #fff8e7) !important;
+table{width:100%;border-collapse:separate;border-spacing:0;margin:22px 0;background:#fffdf8;box-shadow:0 8px 22px rgba(91,52,21,0.09);border-radius:14px;overflow:hidden;}
+th{background:#6d4328;color:white;padding:12px;border:1px solid #6d4328;}
+td{padding:11px;border:1px solid #e5c9a7;vertical-align:top;}
+tr:nth-child(even) td{background:#fff5e6;}
+.formula-box{
+background: linear-gradient(135deg,#F7E6D0,#FFF7EB);
+color:#000000;
+border:2px solid #d5a46e;
+border-left:10px solid #9c6538;
+border-radius:20px;
+padding:22px 26px;
+margin:24px 0;
+box-shadow:0 12px 25px rgba(91,48,16,0.13);
 }
-.unpad-cover h2 {
-  color: #111827 !important;
-  -webkit-text-fill-color: #111827 !important;
-  background: #fffdf8 !important;
-  border-left: 8px solid #f2a51a !important;
-  border-bottom: 0 !important;
+.formula-box strong{color:#3b2415;}
+.callout-note,.callout-case,.callout-warning,.callout-practice{
+border-radius:20px;
+padding:20px 24px;
+margin:22px 0;
+box-shadow:0 10px 22px rgba(0,0,0,0.06);
 }
-h3 {
-  margin-top: 30px !important;
+.callout-note{background:#eef4ff;border-left:9px solid #668fc0;}
+.callout-case{background:#eff7ea;border-left:9px solid #78a866;}
+.callout-warning{background:#fff2dd;border-left:9px solid #d28b2a;}
+.callout-practice{background:#fbe7df;border-left:9px solid #c46e4d;}
+.badge{display:inline-block;background:#6d4328;color:#fff;padding:4px 10px;border-radius:999px;font-size:0.85em;margin-right:4px;}
+.figure-box{
+background:#fffaf2;border:2px dashed #b5814f;border-radius:22px;padding:18px 22px;margin:22px 0;text-align:center;
 }
-a {
-  color: #0b5c86 !important;
+.figure-box .sketch{font-family:monospace;white-space:pre;line-height:1.15;text-align:left;display:inline-block;background:#f9ead8;padding:18px;border-radius:16px;color:#2e1a0f;}
+pre, code, .sourceCode{
+background-color:#F7E6D0 !important;
+color:#000 !important;
+border-radius:14px;
 }
-img, svg {
-  max-width: 100% !important;
-  height: auto !important;
-}
-table {
-  width: 100% !important;
-  border-collapse: collapse !important;
-  margin: 18px 0 26px !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-}
-.s2-table-scroll {
-  width: 100% !important;
-  max-width: 100% !important;
-  overflow-x: auto !important;
-  margin: 18px 0 26px !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-}
-.s2-table-scroll table {
-  min-width: 680px !important;
-  margin: 0 !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-}
-th {
-  background: #17395c !important;
-  color: #ffffff !important;
-  padding: 10px 12px !important;
-}
-td {
-  background: #fffdf8 !important;
-  border: 1px solid #d7e2ea !important;
-  padding: 10px 12px !important;
-  vertical-align: top !important;
-}
-.main-container p, .main-container li, td, th {
-  overflow-wrap: anywhere !important;
-}
-pre {
-  overflow: auto !important;
-  padding: 16px !important;
-  background: #eef5f8 !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  color: #111827 !important;
-}
-code {
-  background: #eef5f8 !important;
-  border-radius: 6px !important;
-  color: #111827 !important;
-  padding: 2px 5px !important;
-}
-span.math.display, .math.display, .MathJax_Display, .MathJax, mjx-container {
-  display: block !important;
-  max-width: 100% !important;
-  overflow-x: auto !important;
-  overflow-y: hidden !important;
-}
-blockquote {
-  margin: 22px 0 !important;
-  padding: 16px 20px !important;
-  background: #fff8e7 !important;
-  border-left: 8px solid #0f766e !important;
-  border-radius: 0 8px 8px 0 !important;
-}
-#TOC, .tocify {
-  background: #ffffff !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  box-shadow: 0 12px 28px rgba(23, 57, 92, 0.10) !important;
-}
-.tocify {
-  max-height: calc(100vh - 40px) !important;
-}
-.tocify .active, #TOC .active {
-  background: linear-gradient(90deg, #17395c, #0f766e) !important;
-  color: #ffffff !important;
-  border-radius: 6px !important;
-}
-#TOC a, .tocify a {
-  color: #17395c !important;
-  text-decoration: none !important;
-}
-#TOC a:hover, .tocify a:hover {
-  color: #0f766e !important;
-  text-decoration: underline !important;
-}
-.hero, .rps-box, .rpsbox, .info-card, .card,
-.callout, .note, .casebox, .case-box, .examplebox, .exercise-box,
-.learning-box, .activitybox, .activity, .practice-box, .praktik-box,
-.praktikum, .tujuan, .interpretasi, .refleksi, .warning, .warningbox,
-.warning-box, .tip, .idea-box, .mathbox, .formula-box, .rumus-box,
-.contoh-box, .rubric-box {
-  margin: 22px 0 !important;
-  padding: 20px 24px !important;
-  background: #fffdf8 !important;
-  border: 1px solid #d7e2ea !important;
-  border-left: 8px solid #0f766e !important;
-  border-radius: 8px !important;
-  box-shadow: 0 10px 24px rgba(23, 57, 92, 0.10) !important;
-  color: #172033 !important;
-}
-.hero {
-  background: linear-gradient(135deg, #17395c 0%, #0f766e 62%, #f2a51a 100%) !important;
-  color: #ffffff !important;
-  border-left: 0 !important;
-}
-.hero h1, .hero h2, .hero h3, .hero h4, .hero p, .hero strong {
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-}
-.warning, .warningbox, .warning-box {
-  border-left-color: #b45309 !important;
-  background: #fff8e7 !important;
-}
-.rps-box, .rpsbox, .rubric-box {
-  border-left-color: #f2a51a !important;
-  background: linear-gradient(135deg, #fffdf8, #fff8e7) !important;
-}
-.mathbox, .formula-box, .rumus-box {
-  border-left-color: #17395c !important;
-  background: #eef5f8 !important;
-}
-.badge {
-  display: inline-block !important;
-  padding: 4px 10px !important;
-  border-radius: 999px !important;
-  background: #17395c !important;
-  color: #ffffff !important;
-  font-weight: 700 !important;
-  font-size: 0.85em !important;
-}
-.grid-2, .grid-3 {
-  display: grid !important;
-  gap: 18px !important;
-}
-.grid-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-}
-.grid-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-}
-hr {
-  border: 0 !important;
-  height: 2px !important;
-  background: linear-gradient(90deg, transparent, #d7e2ea, transparent) !important;
-  margin: 34px 0 !important;
-}
-@media (max-width: 980px) {
-  #TOC, .tocify {
-    position: relative !important;
-    width: auto !important;
-    max-height: 360px !important;
-    margin: 12px !important;
-  }
-  .main-container {
-    margin: 12px !important;
-    padding: 24px !important;
-  }
-  .grid-2, .grid-3 {
-    grid-template-columns: 1fr !important;
-  }
-}
+pre{padding:18px 20px;border:1px solid #e2bd8e;box-shadow:inset 0 0 0 1px #fff5e8;}
+code{padding:2px 5px;}
+hr{border:0;height:3px;background:linear-gradient(90deg,#7a4a28,#d8a23b,#fff1c7);border-radius:4px;margin:36px 0;}
+.smallcaps{font-variant:small-caps;letter-spacing:.05em;}
+@media(max-width:1100px){body{padding-left:0;}#TOC{position:relative;width:auto;left:auto;top:auto;bottom:auto;margin:12px;}main,.main-container,.container-fluid{margin:12px;padding:28px !important;}}
 </style>
-<script>
-window.MathJax = {
-  tex: {
-    inlineMath: [["\\(", "\\)"], ["$", "$"]],
-    displayMath: [["\\[", "\\]"], ["$$", "$$"]],
-    processEscapes: true,
-    processEnvironments: true,
-    tags: "ams"
-  },
-  options: {
-    skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"],
-    ignoreHtmlClass: "tex2jax_ignore"
-  },
-  chtml: {
-    fontURL: "../../assets/vendor/mathjax/output/chtml/fonts/woff-v2"
-  },
-  startup: {
-    typeset: true
-  }
-};
-
-(function () {
-  var script = document.createElement("script");
-  script.src = "../../assets/vendor/mathjax/tex-mml-chtml.js";
-  script.async = true;
-  script.onerror = function () {
-    var fallback = document.createElement("script");
-    fallback.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
-    fallback.async = true;
-    document.head.appendChild(fallback);
-  };
-  document.head.appendChild(script);
-})();
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll("table").forEach(function (table) {
-    if (table.parentElement && table.parentElement.classList.contains("s2-table-scroll")) return;
-    var wrapper = document.createElement("div");
-    wrapper.className = "s2-table-scroll";
-    table.parentNode.insertBefore(wrapper, table);
-    wrapper.appendChild(table);
-  });
-});
-</script>
 <div class="callout-case">
 <p><strong>Identitas Mata Kuliah.</strong> Materi ini disusun sebagai
 bahan ajar utama mata kuliah <strong>Analisis Image</strong> pada
@@ -3546,10 +3382,92 @@ diterjemahkan menjadi keputusan metodologis. Dengan kata lain, mata
 kuliah ini menggabungkan mata, matematika, dan mesin. Ketiganya harus
 kompak; kalau satu tertinggal, hasilnya bisa seperti foto KTP: ada
 datanya, tetapi sering kurang membahagiakan.</p>
+<!-- BEGIN AI-INLINE-STYLE-2026 -->
+<style>
+.ai-inline {
+margin: 1rem 0 1.35rem;
+padding: 1rem 1.1rem;
+border: 1px solid #bfd9d5;
+border-left: 7px solid #0f766e;
+border-radius: 8px;
+background: linear-gradient(135deg, #eff9f7, #fffaf0);
+}
+.ai-inline--agentic { border-left-color: #17395c; background: linear-gradient(135deg, #eef5fb, #f5faf8); }
+.ai-inline--assessment { border-left-color: #a35d00; background: #fff8e8; }
+.ai-inline h3, .ai-inline h4 { margin-top: 0; color: #17395c; }
+.ai-inline p:last-child, .ai-inline ul:last-child { margin-bottom: 0; }
+.ai-inline__label {
+display: inline-block; margin-bottom: .45rem; padding: .2rem .55rem;
+border-radius: 999px; background: #17395c; color: white;
+font-size: .78rem; font-weight: 800;
+}
+.ai-inline table { width: 100%; margin: .6rem 0; background: white; }
+</style>
+<!-- END AI-INLINE-STYLE-2026 -->
 </div>
 <div id="pendahuluan-analisis-citra-digital" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Pendahuluan Analisis
 Citra Digital</h1>
+<!-- BEGIN AI-INLINE:4296968b883b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 1</span>
+<h3>
+Generative dan Agentic AI untuk Pendahuluan Analisis Citra Digital
+</h3>
+<p><strong>Arah RPS.</strong> Convolutional neural network, transfer
+learning, vision transformer, segmentation, detection, dan multimodal
+image analysis sebagai pengayaan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Pendahuluan Analisis Citra Digital;
+Pengertian dan ruang lingkup analisis citra; Peran analisis citra dalam
+statistik, industri, biostatistika, dan sains data; Studi kasus aplikasi
+lintas bidang.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">Pertemuan 1</span> <span class="badge">SubCPMK1</span></p>
 <p>Bab ini mendukung capaian SubCPMK1 dalam RPS Analisis Image. Fokusnya
 adalah pengertian citra digital, pixel dan intensitas, domain aplikasi,
@@ -3583,6 +3501,25 @@ citra</strong> dalam analisis citra digital.</li>
 </div>
 <div id="konsep-inti" class="section level2" number="1.2">
 <h2><span class="header-section-number">1.2</span> Konsep Inti</h2>
+<!-- BEGIN AI-INLINE:cc90907a7c47 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Pendahuluan Analisis Citra
+Digital.
+</p>
+<p>
+Minta AI menjelaskan <strong>Pendahuluan Analisis Citra Digital</strong>
+melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa
+kemudian membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="pengertian-citra-digital" class="section level3" number="1.2.1">
 <h3><span class="header-section-number">1.2.1</span> Pengertian Citra
 Digital</h3>
@@ -3688,6 +3625,30 @@ laporan ilmiah tetap perlu angka.</p>
 <div id="domain-aplikasi" class="section level3" number="1.2.3">
 <h3><span class="header-section-number">1.2.3</span> Domain
 Aplikasi</h3>
+<!-- BEGIN AI-INLINE:8089bf6a62f2 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Domain Aplikasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Pendahuluan Analisis Citra
+Digital.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Convolutional neural
+network, transfer learning, vision transformer, segmentation, detection,
+dan multimodal image analysis sebagai pengayaan. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam perspektif statistika terapan, domain aplikasi tidak cukup
 dipahami sebagai teknik komputasi semata. Konsep ini perlu ditempatkan
 sebagai bagian dari proses inferensi atas objek visual. Ketika mahasiswa
@@ -3789,6 +3750,28 @@ boleh terpukau, tetapi laporan ilmiah tetap perlu angka.</p>
 <div id="workflow-analisis-citra" class="section level3" number="1.2.5">
 <h3><span class="header-section-number">1.2.5</span> Workflow Analisis
 Citra</h3>
+<!-- BEGIN AI-INLINE:6df245400d86 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Workflow Analisis Citra
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Pendahuluan Analisis Citra
+Digital.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam perspektif statistika terapan, workflow analisis citra tidak
 cukup dipahami sebagai teknik komputasi semata. Konsep ini perlu
 ditempatkan sebagai bagian dari proses inferensi atas objek visual.
@@ -3841,6 +3824,30 @@ boleh terpukau, tetapi laporan ilmiah tetap perlu angka.</p>
 <div id="studi-kasus-terapan" class="section level2" number="1.3">
 <h2><span class="header-section-number">1.3</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:0098c61ac38a -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Pendahuluan Analisis Citra
+Digital.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Convolutional neural
+network, transfer learning, vision transformer, segmentation, detection,
+dan multimodal image analysis sebagai pengayaan. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Studi kasus yang direkomendasikan untuk bab ini adalah klasifikasi
 kualitas produk industri berdasarkan citra permukaan, deteksi area
 berisiko pada citra medis, serta pemetaan tutupan lahan dari citra
@@ -3893,6 +3900,28 @@ lebih mudah dipahami oleh pengguna non-teknis.</p>
 <div id="contoh-kode-praktikum" class="section level2" number="1.4">
 <h2><span class="header-section-number">1.4</span> Contoh Kode
 Praktikum</h2>
+<!-- BEGIN AI-INLINE:523624f2166e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Contoh Kode Praktikum
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Pendahuluan Analisis Citra
+Digital.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a></span>
@@ -3908,6 +3937,25 @@ Praktikum</h2>
 <div id="ilustrasi-konseptual" class="section level3" number="1.4.1">
 <h3><span class="header-section-number">1.4.1</span> Ilustrasi
 konseptual</h3>
+<!-- BEGIN AI-INLINE:603afe1c7ddd -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Ilustrasi konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Pendahuluan Analisis Citra
+Digital.
+</p>
+<p>
+Minta AI menjelaskan <strong>Pendahuluan Analisis Citra Digital</strong>
+melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa
+kemudian membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="figure-box">
 <div class="sketch">
 Data citra nyata ↓ Akuisisi dan metadata ↓ Praproses dan standardisasi ↓
@@ -3919,6 +3967,28 @@ komunikasi hasil
 <div id="alur-praktikum-yang-disarankan" class="section level3" number="1.4.2">
 <h3><span class="header-section-number">1.4.2</span> Alur praktikum yang
 disarankan</h3>
+<!-- BEGIN AI-INLINE:cc2307298546 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Alur praktikum yang disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Pendahuluan Analisis Citra
+Digital.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih minimal satu dataset citra yang sesuai dengan tema
 aplikasi.</li>
@@ -3990,6 +4060,68 @@ berdampak.</p>
 <div id="representasi-dan-karakteristik-data-citra" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Representasi dan
 Karakteristik Data Citra</h1>
+<!-- BEGIN AI-INLINE:733345510d9c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 2</span>
+<h3>
+Generative dan Agentic AI untuk Representasi dan Karakteristik Data
+Citra
+</h3>
+<p><strong>Arah RPS.</strong> Data augmentation, class imbalance,
+spatial leakage, external validation, explainability citra, uncertainty,
+dan robustness terhadap domain shift.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Representasi dan Karakteristik Data
+Citra; Representasi citra digital (grayscale, RGB, multi-channel, dan
+lain-lain); Sifat dan karakteristik data citra (dimensi, resolusi,
+histogram, dan statistik dasar); Exploratory Data Analysis (EDA) pada
+data citra.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">Pertemuan 2–3</span> <span class="badge">SubCPMK1</span></p>
 <p>Bab ini mendukung capaian SubCPMK1 dalam RPS Analisis Image. Fokusnya
 adalah grayscale, RGB, multi-channel, resolusi spasial, serta
@@ -4025,6 +4157,25 @@ analisis citra digital.</li>
 </div>
 <div id="konsep-inti-1" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> Konsep Inti</h2>
+<!-- BEGIN AI-INLINE:7a9fdff011e1 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Representasi dan Karakteristik
+Data Citra.
+</p>
+<p>
+Minta AI menjelaskan <strong>Representasi dan Karakteristik Data
+Citra</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="grayscale" class="section level3" number="2.2.1">
 <h3><span class="header-section-number">2.2.1</span> Grayscale</h3>
 <p>Dalam perspektif statistika terapan, grayscale tidak cukup dipahami
@@ -4425,6 +4576,30 @@ laporan ilmiah tetap perlu angka.</p>
 <div id="studi-kasus-terapan-1" class="section level2" number="2.3">
 <h2><span class="header-section-number">2.3</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:c95b577403da -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Representasi dan Karakteristik
+Data Citra.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Data augmentation, class
+imbalance, spatial leakage, external validation, explainability citra,
+uncertainty, dan robustness terhadap domain shift. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Studi kasus yang direkomendasikan untuk bab ini adalah eksplorasi
 foto histopatologi, citra buah, citra permukaan jalan, dan citra
 lingkungan untuk melihat distribusi intensitas, dominasi warna, serta
@@ -4477,6 +4652,28 @@ lebih mudah dipahami oleh pengguna non-teknis.</p>
 <div id="contoh-kode-praktikum-1" class="section level2" number="2.4">
 <h2><span class="header-section-number">2.4</span> Contoh Kode
 Praktikum</h2>
+<!-- BEGIN AI-INLINE:3d82da19755b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Contoh Kode Praktikum
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Representasi dan Karakteristik
+Data Citra.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="im">from</span> skimage <span class="im">import</span> io</span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -4496,6 +4693,25 @@ Praktikum</h2>
 <div id="ilustrasi-konseptual-1" class="section level3" number="2.4.1">
 <h3><span class="header-section-number">2.4.1</span> Ilustrasi
 konseptual</h3>
+<!-- BEGIN AI-INLINE:da3a3ac2d753 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Ilustrasi konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Representasi dan Karakteristik
+Data Citra.
+</p>
+<p>
+Minta AI menjelaskan <strong>Representasi dan Karakteristik Data
+Citra</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="figure-box">
 <div class="sketch">
 Data citra nyata ↓ Akuisisi dan metadata ↓ Praproses dan standardisasi ↓
@@ -4507,6 +4723,28 @@ komunikasi hasil
 <div id="alur-praktikum-yang-disarankan-1" class="section level3" number="2.4.2">
 <h3><span class="header-section-number">2.4.2</span> Alur praktikum yang
 disarankan</h3>
+<!-- BEGIN AI-INLINE:93f7dcbb82cd -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Alur praktikum yang disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Representasi dan Karakteristik
+Data Citra.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih minimal satu dataset citra yang sesuai dengan tema
 aplikasi.</li>
@@ -4578,6 +4816,66 @@ berdampak.</p>
 <div id="operasi-dasar-pada-data-citra" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Operasi Dasar pada Data
 Citra</h1>
+<!-- BEGIN AI-INLINE:286034dc8bdb -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 3</span>
+<h3>
+Generative dan Agentic AI untuk Operasi Dasar pada Data Citra
+</h3>
+<p><strong>Arah RPS.</strong> Etika citra: privasi, consent, bias
+representasi, keamanan, serta pembatasan penggunaan pada konteks medis,
+biometrik, atau pengawasan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Operasi Dasar pada Data Citra;
+Operasi aljabar citra (penjumlahan, pengurangan, perkalian,
+normalisasi); Operasi geometri (rotasi, translasi, scaling); Operasi
+himpunan (union, intersection, complement pada citra biner).</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menyusun data dictionary, mendeteksi potensi masalah
+kualitas data, dan mengusulkan aturan pemeriksaan.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa asal-usul data, unit observasi, coverage,
+kebocoran data, privasi, dan keputusan pembersihan; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">Pertemuan 4</span> <span class="badge">SubCPMK2</span></p>
 <p>Bab ini mendukung capaian SubCPMK2 dalam RPS Analisis Image. Fokusnya
 adalah operasi aljabar citra, normalisasi, rotasi, translasi, serta
@@ -4611,6 +4909,24 @@ citra biner</strong> dalam analisis citra digital.</li>
 </div>
 <div id="konsep-inti-2" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> Konsep Inti</h2>
+<!-- BEGIN AI-INLINE:ff6443760964 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 3: Operasi Dasar pada Data Citra.
+</p>
+<p>
+Minta AI menjelaskan <strong>Operasi Dasar pada Data Citra</strong>
+melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa
+kemudian membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="operasi-aljabar-citra" class="section level3" number="3.2.1">
 <h3><span class="header-section-number">3.2.1</span> Operasi Aljabar
 Citra</h3>
@@ -4962,6 +5278,29 @@ laporan ilmiah tetap perlu angka.</p>
 <div id="studi-kasus-terapan-2" class="section level2" number="3.3">
 <h2><span class="header-section-number">3.3</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:05f84a147de5 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 3: Operasi Dasar pada Data Citra.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Etika citra: privasi,
+consent, bias representasi, keamanan, serta pembatasan penggunaan pada
+konteks medis, biometrik, atau pengawasan. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Studi kasus yang direkomendasikan untuk bab ini adalah peningkatan
 kecerahan citra medis, registrasi sederhana citra sebelum-sesudah
 intervensi, dan pembuatan mask objek pada citra biner. Dalam kelas S2
@@ -5014,6 +5353,27 @@ lebih mudah dipahami oleh pengguna non-teknis.</p>
 <div id="contoh-kode-praktikum-2" class="section level2" number="3.4">
 <h2><span class="header-section-number">3.4</span> Contoh Kode
 Praktikum</h2>
+<!-- BEGIN AI-INLINE:7eb7b6e2bf59 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Contoh Kode Praktikum
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 3: Operasi Dasar pada Data Citra.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="im">from</span> skimage <span class="im">import</span> io, transform, exposure</span>
 <span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -5032,6 +5392,24 @@ Praktikum</h2>
 <div id="ilustrasi-konseptual-2" class="section level3" number="3.4.1">
 <h3><span class="header-section-number">3.4.1</span> Ilustrasi
 konseptual</h3>
+<!-- BEGIN AI-INLINE:5744ba531da9 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Ilustrasi konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 3: Operasi Dasar pada Data Citra.
+</p>
+<p>
+Minta AI menjelaskan <strong>Operasi Dasar pada Data Citra</strong>
+melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa
+kemudian membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="figure-box">
 <div class="sketch">
 Data citra nyata ↓ Akuisisi dan metadata ↓ Praproses dan standardisasi ↓
@@ -5043,6 +5421,27 @@ komunikasi hasil
 <div id="alur-praktikum-yang-disarankan-2" class="section level3" number="3.4.2">
 <h3><span class="header-section-number">3.4.2</span> Alur praktikum yang
 disarankan</h3>
+<!-- BEGIN AI-INLINE:d6cbf6edc38c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Alur praktikum yang disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 3: Operasi Dasar pada Data Citra.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih minimal satu dataset citra yang sesuai dengan tema
 aplikasi.</li>
@@ -5114,6 +5513,66 @@ berdampak.</p>
 <div id="histogram-dan-transformasi-histogram" class="section level1" number="4">
 <h1><span class="header-section-number">4</span> Histogram dan
 Transformasi Histogram</h1>
+<!-- BEGIN AI-INLINE:ca1162672634 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 4</span>
+<h3>
+Generative dan Agentic AI untuk Histogram dan Transformasi Histogram
+</h3>
+<p><strong>Arah RPS.</strong> Convolutional neural network, transfer
+learning, vision transformer, segmentation, detection, dan multimodal
+image analysis sebagai pengayaan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Histogram dan Transformasi Histogram;
+Analisis histogram citra; Stretching, equalization, dan thresholding;
+Studi kasus transformasi histogram pada analisis citra
+medis/industri.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">Pertemuan 5</span> <span class="badge">SubCPMK2</span></p>
 <p>Bab ini mendukung capaian SubCPMK2 dalam RPS Analisis Image. Fokusnya
 adalah histogram intensitas, contrast stretching, histogram
@@ -5148,6 +5607,26 @@ analisis citra digital.</li>
 </div>
 <div id="konsep-inti-3" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> Konsep Inti</h2>
+<!-- BEGIN AI-INLINE:73000ef9f2ed -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 4: Histogram dan Transformasi
+Histogram.
+</p>
+<p>
+Minta AI menjelaskan <strong>Histogram dan Transformasi
+Histogram</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="histogram-intensitas" class="section level3" number="4.2.1">
 <h3><span class="header-section-number">4.2.1</span> Histogram
 Intensitas</h3>
@@ -5452,6 +5931,30 @@ laporan ilmiah tetap perlu angka.</p>
 <div id="studi-kasus-terapan-3" class="section level2" number="4.3">
 <h2><span class="header-section-number">4.3</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:48841e971f48 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 4: Histogram dan Transformasi
+Histogram.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Convolutional neural
+network, transfer learning, vision transformer, segmentation, detection,
+dan multimodal image analysis sebagai pengayaan. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Studi kasus yang direkomendasikan untuk bab ini adalah membedakan
 objek terang dan gelap pada citra mikroskopis, memperjelas area kontras
 rendah, serta segmentasi awal objek industri. Dalam kelas S2 Statistika
@@ -5504,6 +6007,27 @@ lebih mudah dipahami oleh pengguna non-teknis.</p>
 <div id="contoh-kode-praktikum-3" class="section level2" number="4.4">
 <h2><span class="header-section-number">4.4</span> Contoh Kode
 Praktikum</h2>
+<!-- BEGIN AI-INLINE:f2ac460483cf -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Contoh Kode Praktikum
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 4: Histogram dan Transformasi
+Histogram.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="im">from</span> skimage <span class="im">import</span> io, exposure, filters</span>
 <span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a></span>
@@ -5521,6 +6045,26 @@ Praktikum</h2>
 <div id="ilustrasi-konseptual-3" class="section level3" number="4.4.1">
 <h3><span class="header-section-number">4.4.1</span> Ilustrasi
 konseptual</h3>
+<!-- BEGIN AI-INLINE:7fd59e219708 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Ilustrasi konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 4: Histogram dan Transformasi
+Histogram.
+</p>
+<p>
+Minta AI menjelaskan <strong>Histogram dan Transformasi
+Histogram</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="figure-box">
 <div class="sketch">
 Data citra nyata ↓ Akuisisi dan metadata ↓ Praproses dan standardisasi ↓
@@ -5532,6 +6076,27 @@ komunikasi hasil
 <div id="alur-praktikum-yang-disarankan-3" class="section level3" number="4.4.2">
 <h3><span class="header-section-number">4.4.2</span> Alur praktikum yang
 disarankan</h3>
+<!-- BEGIN AI-INLINE:f1df15abe0fc -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Alur praktikum yang disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 4: Histogram dan Transformasi
+Histogram.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih minimal satu dataset citra yang sesuai dengan tema
 aplikasi.</li>
@@ -5603,6 +6168,64 @@ berdampak.</p>
 <div id="filtering-dan-konvolusi" class="section level1" number="5">
 <h1><span class="header-section-number">5</span> Filtering dan
 Konvolusi</h1>
+<!-- BEGIN AI-INLINE:c3ea6f62ad64 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 5</span>
+<h3>
+Generative dan Agentic AI untuk Filtering dan Konvolusi
+</h3>
+<p><strong>Arah RPS.</strong> Data augmentation, class imbalance,
+spatial leakage, external validation, explainability citra, uncertainty,
+dan robustness terhadap domain shift.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK2 melalui fokus: Filtering dan Konvolusi; Konsep
+filtering spasial (mean, median, Gaussian); Kernel dan proses konvolusi;
+Implementasi filtering untuk denoising dan enhancement.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk merumuskan alternatif penjelasan, contoh, dan
+hipotesis awal.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara
+bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik,
+dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti
+kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">Pertemuan 6</span> <span class="badge">SubCPMK2</span></p>
 <p>Bab ini mendukung capaian SubCPMK2 dalam RPS Analisis Image. Fokusnya
 adalah spatial filtering, mean filter, median filter, Gaussian filter,
@@ -5635,6 +6258,24 @@ analisis citra digital.</li>
 </div>
 <div id="konsep-inti-4" class="section level2" number="5.2">
 <h2><span class="header-section-number">5.2</span> Konsep Inti</h2>
+<!-- BEGIN AI-INLINE:40b2abdef0c6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Filtering dan Konvolusi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Filtering dan Konvolusi</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="spatial-filtering" class="section level3" number="5.2.1">
 <h3><span class="header-section-number">5.2.1</span> Spatial
 Filtering</h3>
@@ -6034,6 +6675,29 @@ laporan ilmiah tetap perlu angka.</p>
 <div id="studi-kasus-terapan-4" class="section level2" number="5.3">
 <h2><span class="header-section-number">5.3</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:93be9d66ca0c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Filtering dan Konvolusi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Data augmentation, class
+imbalance, spatial leakage, external validation, explainability citra,
+uncertainty, dan robustness terhadap domain shift. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Studi kasus yang direkomendasikan untuk bab ini adalah denoising
 citra sensor, peningkatan tepi pada citra industri, dan praproses citra
 medis sebelum segmentasi. Dalam kelas S2 Statistika Terapan, studi kasus
@@ -6085,6 +6749,26 @@ lebih mudah dipahami oleh pengguna non-teknis.</p>
 <div id="contoh-kode-praktikum-4" class="section level2" number="5.4">
 <h2><span class="header-section-number">5.4</span> Contoh Kode
 Praktikum</h2>
+<!-- BEGIN AI-INLINE:3542ecb9129b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Contoh Kode Praktikum
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Filtering dan Konvolusi.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="im">from</span> skimage <span class="im">import</span> io, filters, util</span>
 <span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="im">from</span> scipy <span class="im">import</span> ndimage <span class="im">as</span> ndi</span>
 <span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -6104,6 +6788,24 @@ Praktikum</h2>
 <div id="ilustrasi-konseptual-4" class="section level3" number="5.4.1">
 <h3><span class="header-section-number">5.4.1</span> Ilustrasi
 konseptual</h3>
+<!-- BEGIN AI-INLINE:8cf48621aaaa -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Ilustrasi konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Filtering dan Konvolusi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Filtering dan Konvolusi</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="figure-box">
 <div class="sketch">
 Data citra nyata ↓ Akuisisi dan metadata ↓ Praproses dan standardisasi ↓
@@ -6115,6 +6817,26 @@ komunikasi hasil
 <div id="alur-praktikum-yang-disarankan-4" class="section level3" number="5.4.2">
 <h3><span class="header-section-number">5.4.2</span> Alur praktikum yang
 disarankan</h3>
+<!-- BEGIN AI-INLINE:86078157e694 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Alur praktikum yang disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Filtering dan Konvolusi.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih minimal satu dataset citra yang sesuai dengan tema
 aplikasi.</li>
@@ -6185,6 +6907,65 @@ berdampak.</p>
 </div>
 <div id="morfologi-citra" class="section level1" number="6">
 <h1><span class="header-section-number">6</span> Morfologi Citra</h1>
+<!-- BEGIN AI-INLINE:7fa1aab694c2 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 6</span>
+<h3>
+Generative dan Agentic AI untuk Morfologi Citra
+</h3>
+<p><strong>Arah RPS.</strong> Etika citra: privasi, consent, bias
+representasi, keamanan, serta pembatasan penggunaan pada konteks medis,
+biometrik, atau pengawasan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK2 melalui fokus: Morfologi Citra; Operasi morfologi
+dasar (dilation, erosion, opening, closing); Aplikasi morfologi pada
+citra biner dan grayscale; Studi kasus segmentasi objek sederhana.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">Pertemuan 7</span> <span class="badge">SubCPMK2</span></p>
 <p>Bab ini mendukung capaian SubCPMK2 dalam RPS Analisis Image. Fokusnya
 adalah structuring element, dilation, erosion, opening, serta
@@ -6219,6 +7000,24 @@ grayscale</strong> dalam analisis citra digital.</li>
 </div>
 <div id="konsep-inti-5" class="section level2" number="6.2">
 <h2><span class="header-section-number">6.2</span> Konsep Inti</h2>
+<!-- BEGIN AI-INLINE:8503c180e4dd -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 6: Morfologi Citra.
+</p>
+<p>
+Minta AI menjelaskan <strong>Morfologi Citra</strong> melalui definisi,
+analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan
+penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru,
+dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh
+menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="structuring-element" class="section level3" number="6.2.1">
 <h3><span class="header-section-number">6.2.1</span> Structuring
 Element</h3>
@@ -6571,6 +7370,29 @@ laporan ilmiah tetap perlu angka.</p>
 <div id="studi-kasus-terapan-5" class="section level2" number="6.3">
 <h2><span class="header-section-number">6.3</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:d964bdbe4edf -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 6: Morfologi Citra.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Etika citra: privasi,
+consent, bias representasi, keamanan, serta pembatasan penggunaan pada
+konteks medis, biometrik, atau pengawasan. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Studi kasus yang direkomendasikan untuk bab ini adalah membersihkan
 noise kecil pada citra biner, menyambungkan komponen objek yang
 terputus, dan menghitung area objek pada citra mikroskopis. Dalam kelas
@@ -6623,6 +7445,27 @@ lebih mudah dipahami oleh pengguna non-teknis.</p>
 <div id="contoh-kode-praktikum-5" class="section level2" number="6.4">
 <h2><span class="header-section-number">6.4</span> Contoh Kode
 Praktikum</h2>
+<!-- BEGIN AI-INLINE:682c58a8a4b2 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Contoh Kode Praktikum
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 6: Morfologi Citra.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="im">from</span> skimage <span class="im">import</span> io, morphology, filters</span>
 <span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a></span>
@@ -6641,6 +7484,24 @@ Praktikum</h2>
 <div id="ilustrasi-konseptual-5" class="section level3" number="6.4.1">
 <h3><span class="header-section-number">6.4.1</span> Ilustrasi
 konseptual</h3>
+<!-- BEGIN AI-INLINE:17b418a672c9 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Ilustrasi konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 6: Morfologi Citra.
+</p>
+<p>
+Minta AI menjelaskan <strong>Morfologi Citra</strong> melalui definisi,
+analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan
+penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru,
+dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh
+menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="figure-box">
 <div class="sketch">
 Data citra nyata ↓ Akuisisi dan metadata ↓ Praproses dan standardisasi ↓
@@ -6652,6 +7513,27 @@ komunikasi hasil
 <div id="alur-praktikum-yang-disarankan-5" class="section level3" number="6.4.2">
 <h3><span class="header-section-number">6.4.2</span> Alur praktikum yang
 disarankan</h3>
+<!-- BEGIN AI-INLINE:3ab8e8f46650 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Alur praktikum yang disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 6: Morfologi Citra.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih minimal satu dataset citra yang sesuai dengan tema
 aplikasi.</li>
@@ -6722,6 +7604,67 @@ lebih kompleks dan merancang riset berbasis citra yang berdampak.</p>
 <div id="konsep-dan-struktur-convolutional-neural-network" class="section level1" number="7">
 <h1><span class="header-section-number">7</span> Konsep dan Struktur
 Convolutional Neural Network</h1>
+<!-- BEGIN AI-INLINE:e1aa0f71bef5 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 7</span>
+<h3>
+Generative dan Agentic AI untuk Konsep dan Struktur Convolutional Neural
+Network
+</h3>
+<p><strong>Arah RPS.</strong> Convolutional neural network, transfer
+learning, vision transformer, segmentation, detection, dan multimodal
+image analysis sebagai pengayaan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK2 melalui fokus: Konsep dan Struktur Convolutional
+Neural Network (CNN); Pengenalan deep learning untuk citra; Arsitektur
+dasar CNN (convolution, pooling, fully connected); Persiapan data untuk
+model CNN.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">Pertemuan 9</span> <span class="badge">SubCPMK3</span></p>
 <p>Bab ini mendukung capaian SubCPMK3 dalam RPS Analisis Image. Fokusnya
 adalah deep learning untuk citra, convolutional layer, feature map,
@@ -6758,6 +7701,26 @@ dalam analisis citra digital.</li>
 </div>
 <div id="konsep-inti-6" class="section level2" number="7.2">
 <h2><span class="header-section-number">7.2</span> Konsep Inti</h2>
+<!-- BEGIN AI-INLINE:709af76bffe2 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 7: Konsep dan Struktur Convolutional
+Neural Network.
+</p>
+<p>
+Minta AI menjelaskan <strong>Konsep dan Struktur Convolutional Neural
+Network</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="deep-learning-untuk-citra" class="section level3" number="7.2.1">
 <h3><span class="header-section-number">7.2.1</span> Deep Learning Untuk
 Citra</h3>
@@ -7160,6 +8123,30 @@ laporan ilmiah tetap perlu angka.</p>
 <div id="studi-kasus-terapan-6" class="section level2" number="7.3">
 <h2><span class="header-section-number">7.3</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:920b17d9269f -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 7: Konsep dan Struktur Convolutional
+Neural Network.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Convolutional neural
+network, transfer learning, vision transformer, segmentation, detection,
+dan multimodal image analysis sebagai pengayaan. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Studi kasus yang direkomendasikan untuk bab ini adalah klasifikasi
 citra buah, deteksi kelainan pada citra medis, dan pengenalan pola
 tekstur produk industri menggunakan CNN sederhana. Dalam kelas S2
@@ -7212,6 +8199,29 @@ lebih mudah dipahami oleh pengguna non-teknis.</p>
 <div id="contoh-kode-praktikum-6" class="section level2" number="7.4">
 <h2><span class="header-section-number">7.4</span> Contoh Kode
 Praktikum</h2>
+<!-- BEGIN AI-INLINE:ad9a42d617b9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Contoh Kode Praktikum
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 7: Konsep dan Struktur Convolutional
+Neural Network.
+</p>
+<p>
+Agen dapat memasang kandidat model, menjalankan diagnostik,
+membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau
+konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+spesifikasi model, data leakage, konvergensi, residual, kalibrasi,
+ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="im">import</span> tensorflow <span class="im">as</span> tf</span>
 <span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="im">from</span> tensorflow.keras <span class="im">import</span> layers, models</span>
 <span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a></span>
@@ -7230,6 +8240,26 @@ Praktikum</h2>
 <div id="ilustrasi-konseptual-6" class="section level3" number="7.4.1">
 <h3><span class="header-section-number">7.4.1</span> Ilustrasi
 konseptual</h3>
+<!-- BEGIN AI-INLINE:60cf002e2dbd -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Ilustrasi konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 7: Konsep dan Struktur Convolutional
+Neural Network.
+</p>
+<p>
+Minta AI menjelaskan <strong>Konsep dan Struktur Convolutional Neural
+Network</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="figure-box">
 <div class="sketch">
 Data citra nyata ↓ Akuisisi dan metadata ↓ Praproses dan standardisasi ↓
@@ -7241,6 +8271,29 @@ komunikasi hasil
 <div id="alur-praktikum-yang-disarankan-6" class="section level3" number="7.4.2">
 <h3><span class="header-section-number">7.4.2</span> Alur praktikum yang
 disarankan</h3>
+<!-- BEGIN AI-INLINE:b778dbb6f26a -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Alur praktikum yang disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 7: Konsep dan Struktur Convolutional
+Neural Network.
+</p>
+<p>
+Agen dapat memasang kandidat model, menjalankan diagnostik,
+membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau
+konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+spesifikasi model, data leakage, konvergensi, residual, kalibrasi,
+ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih minimal satu dataset citra yang sesuai dengan tema
 aplikasi.</li>
@@ -7312,6 +8365,62 @@ yang berdampak.</p>
 <div id="matematika-cnn-dan-arsitektur-populer" class="section level1" number="8">
 <h1><span class="header-section-number">8</span> Matematika CNN dan
 Arsitektur Populer</h1>
+<!-- BEGIN AI-INLINE:8e0f7567638d -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 8</span>
+<h3>
+Generative dan Agentic AI untuk Matematika CNN dan Arsitektur Populer
+</h3>
+<p><strong>Arah RPS.</strong> Penggunaan AI hanya sesuai instruksi
+dosen; seluruh bantuan harus diungkapkan dan hasil diverifikasi.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1–2 melalui fokus: Ujian Tengah Semester.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">Pertemuan 10</span> <span class="badge">SubCPMK3</span></p>
 <p>Bab ini mendukung capaian SubCPMK3 dalam RPS Analisis Image. Fokusnya
 adalah fungsi aktivasi, backpropagation, gradient descent, Adam, serta
@@ -7345,6 +8454,26 @@ analisis citra digital.</li>
 </div>
 <div id="konsep-inti-7" class="section level2" number="8.2">
 <h2><span class="header-section-number">8.2</span> Konsep Inti</h2>
+<!-- BEGIN AI-INLINE:e92035d1cad5 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 8: Matematika CNN dan Arsitektur
+Populer.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika CNN dan Arsitektur
+Populer</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="fungsi-aktivasi" class="section level3" number="8.2.1">
 <h3><span class="header-section-number">8.2.1</span> Fungsi
 Aktivasi</h3>
@@ -7944,6 +9073,30 @@ laporan ilmiah tetap perlu angka.</p>
 <div id="studi-kasus-terapan-7" class="section level2" number="8.3">
 <h2><span class="header-section-number">8.3</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:dcd1dd977c8a -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 8: Matematika CNN dan Arsitektur
+Populer.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Penggunaan AI hanya
+sesuai instruksi dosen; seluruh bantuan harus diungkapkan dan hasil
+diverifikasi. Generative AI dapat menghasilkan beberapa skenario
+pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap
+hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Studi kasus yang direkomendasikan untuk bab ini adalah fine-tuning
 ResNet pada dataset kecil citra kesehatan atau industri agar model tidak
 harus dilatih dari nol. Dalam kelas S2 Statistika Terapan, studi kasus
@@ -7995,6 +9148,27 @@ lebih mudah dipahami oleh pengguna non-teknis.</p>
 <div id="contoh-kode-praktikum-7" class="section level2" number="8.4">
 <h2><span class="header-section-number">8.4</span> Contoh Kode
 Praktikum</h2>
+<!-- BEGIN AI-INLINE:2235f9b0fd5a -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Contoh Kode Praktikum
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 8: Matematika CNN dan Arsitektur
+Populer.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="im">import</span> tensorflow <span class="im">as</span> tf</span>
 <span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="im">from</span> tensorflow.keras <span class="im">import</span> layers, models</span>
 <span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a></span>
@@ -8016,6 +9190,26 @@ Praktikum</h2>
 <div id="ilustrasi-konseptual-7" class="section level3" number="8.4.1">
 <h3><span class="header-section-number">8.4.1</span> Ilustrasi
 konseptual</h3>
+<!-- BEGIN AI-INLINE:3863f0e13de7 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Ilustrasi konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 8: Matematika CNN dan Arsitektur
+Populer.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika CNN dan Arsitektur
+Populer</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="figure-box">
 <div class="sketch">
 Data citra nyata ↓ Akuisisi dan metadata ↓ Praproses dan standardisasi ↓
@@ -8027,6 +9221,27 @@ komunikasi hasil
 <div id="alur-praktikum-yang-disarankan-7" class="section level3" number="8.4.2">
 <h3><span class="header-section-number">8.4.2</span> Alur praktikum yang
 disarankan</h3>
+<!-- BEGIN AI-INLINE:1fdda849d397 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Alur praktikum yang disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 8: Matematika CNN dan Arsitektur
+Populer.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih minimal satu dataset citra yang sesuai dengan tema
 aplikasi.</li>
@@ -8098,6 +9313,67 @@ berdampak.</p>
 <div id="klasifikasi-citra-dengan-cnn-dan-metode-statistik" class="section level1" number="9">
 <h1><span class="header-section-number">9</span> Klasifikasi Citra
 dengan CNN dan Metode Statistik</h1>
+<!-- BEGIN AI-INLINE:65b134d0e637 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 9</span>
+<h3>
+Generative dan Agentic AI untuk Klasifikasi Citra dengan CNN dan Metode
+Statistik
+</h3>
+<p><strong>Arah RPS.</strong> Data augmentation, class imbalance,
+spatial leakage, external validation, explainability citra, uncertainty,
+dan robustness terhadap domain shift.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Matematika dalam CNN dan Berbagai
+Arsitektur; Fungsi aktivasi, backpropagation, optimisasi; Arsitektur
+populer: LeNet, AlexNet, VGG, ResNet, dsb.; Transfer learning dan
+fine-tuning model CNN.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">Pertemuan 11</span> <span class="badge">SubCPMK3</span></p>
 <p>Bab ini mendukung capaian SubCPMK3 dalam RPS Analisis Image. Fokusnya
 adalah klasifikasi supervised, confusion matrix, akurasi, precision,
@@ -8132,6 +9408,26 @@ analisis citra digital.</li>
 </div>
 <div id="konsep-inti-8" class="section level2" number="9.2">
 <h2><span class="header-section-number">9.2</span> Konsep Inti</h2>
+<!-- BEGIN AI-INLINE:75f02b14bc83 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 9: Klasifikasi Citra dengan CNN dan
+Metode Statistik.
+</p>
+<p>
+Minta AI menjelaskan <strong>Klasifikasi Citra dengan CNN dan Metode
+Statistik</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="klasifikasi-supervised" class="section level3" number="9.2.1">
 <h3><span class="header-section-number">9.2.1</span> Klasifikasi
 Supervised</h3>
@@ -8729,6 +10025,30 @@ boleh terpukau, tetapi laporan ilmiah tetap perlu angka.</p>
 <div id="studi-kasus-terapan-8" class="section level2" number="9.3">
 <h2><span class="header-section-number">9.3</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:419965195d35 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 9: Klasifikasi Citra dengan CNN dan
+Metode Statistik.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Data augmentation, class
+imbalance, spatial leakage, external validation, explainability citra,
+uncertainty, dan robustness terhadap domain shift. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Studi kasus yang direkomendasikan untuk bab ini adalah membandingkan
 CNN dengan pipeline statistik klasik berbasis fitur warna, tekstur, PCA,
 dan classifier pada dataset citra kecil. Dalam kelas S2 Statistika
@@ -8781,6 +10101,28 @@ lebih mudah dipahami oleh pengguna non-teknis.</p>
 <div id="contoh-kode-praktikum-8" class="section level2" number="9.4">
 <h2><span class="header-section-number">9.4</span> Contoh Kode
 Praktikum</h2>
+<!-- BEGIN AI-INLINE:606305018341 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Contoh Kode Praktikum
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 9: Klasifikasi Citra dengan CNN dan
+Metode Statistik.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="im">from</span> sklearn.decomposition <span class="im">import</span> PCA</span>
 <span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="im">from</span> sklearn.discriminant_analysis <span class="im">import</span> LinearDiscriminantAnalysis</span>
 <span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="im">from</span> sklearn.pipeline <span class="im">import</span> Pipeline</span>
@@ -8799,6 +10141,26 @@ Praktikum</h2>
 <div id="ilustrasi-konseptual-8" class="section level3" number="9.4.1">
 <h3><span class="header-section-number">9.4.1</span> Ilustrasi
 konseptual</h3>
+<!-- BEGIN AI-INLINE:5719b8a5904c -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Ilustrasi konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 9: Klasifikasi Citra dengan CNN dan
+Metode Statistik.
+</p>
+<p>
+Minta AI menjelaskan <strong>Klasifikasi Citra dengan CNN dan Metode
+Statistik</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="figure-box">
 <div class="sketch">
 Data citra nyata ↓ Akuisisi dan metadata ↓ Praproses dan standardisasi ↓
@@ -8810,6 +10172,28 @@ komunikasi hasil
 <div id="alur-praktikum-yang-disarankan-8" class="section level3" number="9.4.2">
 <h3><span class="header-section-number">9.4.2</span> Alur praktikum yang
 disarankan</h3>
+<!-- BEGIN AI-INLINE:f4da42698d50 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Alur praktikum yang disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 9: Klasifikasi Citra dengan CNN dan
+Metode Statistik.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih minimal satu dataset citra yang sesuai dengan tema
 aplikasi.</li>
@@ -8880,6 +10264,66 @@ yang berdampak.</p>
 </div>
 <div id="segmentasi-citra" class="section level1" number="10">
 <h1><span class="header-section-number">10</span> Segmentasi Citra</h1>
+<!-- BEGIN AI-INLINE:7f1881e6a605 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 10</span>
+<h3>
+Generative dan Agentic AI untuk Segmentasi Citra
+</h3>
+<p><strong>Arah RPS.</strong> Etika citra: privasi, consent, bias
+representasi, keamanan, serta pembatasan penggunaan pada konteks medis,
+biometrik, atau pengawasan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Klasifikasi Citra dengan CNN dan
+Metode Statistik; Implementasi model klasifikasi citra; Evaluasi
+performa (akurasi, confusion matrix, ROC); Perbandingan dengan metode
+statistik klasik (misal, PCA, LDA).</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">Pertemuan 12</span> <span class="badge">SubCPMK3</span></p>
 <p>Bab ini mendukung capaian SubCPMK3 dalam RPS Analisis Image. Fokusnya
 adalah threshold segmentation, edge-based segmentation, region growing,
@@ -8914,6 +10358,24 @@ segmentation</strong> dalam analisis citra digital.</li>
 </div>
 <div id="konsep-inti-9" class="section level2" number="10.2">
 <h2><span class="header-section-number">10.2</span> Konsep Inti</h2>
+<!-- BEGIN AI-INLINE:c5e39732cc18 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 10: Segmentasi Citra.
+</p>
+<p>
+Minta AI menjelaskan <strong>Segmentasi Citra</strong> melalui definisi,
+analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan
+penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru,
+dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh
+menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="threshold-segmentation" class="section level3" number="10.2.1">
 <h3><span class="header-section-number">10.2.1</span> Threshold
 Segmentation</h3>
@@ -9418,6 +10880,29 @@ laporan ilmiah tetap perlu angka.</p>
 <div id="studi-kasus-terapan-9" class="section level2" number="10.3">
 <h2><span class="header-section-number">10.3</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:8115f8606f81 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 10: Segmentasi Citra.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Etika citra: privasi,
+consent, bias representasi, keamanan, serta pembatasan penggunaan pada
+konteks medis, biometrik, atau pengawasan. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Studi kasus yang direkomendasikan untuk bab ini adalah segmentasi
 tumor pada citra medis, segmentasi retakan pada citra infrastruktur, dan
 segmentasi objek tanaman pada citra pertanian. Dalam kelas S2 Statistika
@@ -9470,6 +10955,27 @@ lebih mudah dipahami oleh pengguna non-teknis.</p>
 <div id="contoh-kode-praktikum-9" class="section level2" number="10.4">
 <h2><span class="header-section-number">10.4</span> Contoh Kode
 Praktikum</h2>
+<!-- BEGIN AI-INLINE:e6c02f19dbaa -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Contoh Kode Praktikum
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 10: Segmentasi Citra.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a></span>
 <span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a><span class="kw">def</span> dice_coef(y_true, y_pred, eps<span class="op">=</span><span class="fl">1e-7</span>):</span>
@@ -9487,6 +10993,24 @@ Praktikum</h2>
 <div id="ilustrasi-konseptual-9" class="section level3" number="10.4.1">
 <h3><span class="header-section-number">10.4.1</span> Ilustrasi
 konseptual</h3>
+<!-- BEGIN AI-INLINE:8b23e9ff7a52 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Ilustrasi konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 10: Segmentasi Citra.
+</p>
+<p>
+Minta AI menjelaskan <strong>Segmentasi Citra</strong> melalui definisi,
+analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan
+penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru,
+dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh
+menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="figure-box">
 <div class="sketch">
 Data citra nyata ↓ Akuisisi dan metadata ↓ Praproses dan standardisasi ↓
@@ -9498,6 +11022,27 @@ komunikasi hasil
 <div id="alur-praktikum-yang-disarankan-9" class="section level3" number="10.4.2">
 <h3><span class="header-section-number">10.4.2</span> Alur praktikum
 yang disarankan</h3>
+<!-- BEGIN AI-INLINE:357026d1660c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Alur praktikum yang disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 10: Segmentasi Citra.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih minimal satu dataset citra yang sesuai dengan tema
 aplikasi.</li>
@@ -9569,6 +11114,66 @@ lebih kompleks dan merancang riset berbasis citra yang berdampak.</p>
 <div id="object-detection-dan-advanced-applications" class="section level1" number="11">
 <h1><span class="header-section-number">11</span> Object Detection dan
 Advanced Applications</h1>
+<!-- BEGIN AI-INLINE:1e3274681e46 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 11</span>
+<h3>
+Generative dan Agentic AI untuk Object Detection dan Advanced
+Applications
+</h3>
+<p><strong>Arah RPS.</strong> Convolutional neural network, transfer
+learning, vision transformer, segmentation, detection, dan multimodal
+image analysis sebagai pengayaan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Segmentasi Citra; Segmentasi berbasis
+threshold, edge detection; Segmentasi berbasis clustering dan region
+growing; Segmentasi berbasis deep learning (U-Net, Mask R-CNN).</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menyusun data dictionary, mendeteksi potensi masalah
+kualitas data, dan mengusulkan aturan pemeriksaan.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa asal-usul data, unit observasi, coverage,
+kebocoran data, privasi, dan keputusan pembersihan; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">Pertemuan 13</span> <span class="badge">SubCPMK4</span></p>
 <p>Bab ini mendukung capaian SubCPMK4 dalam RPS Analisis Image. Fokusnya
 adalah object detection, bounding box, anchor box, non-maximum
@@ -9605,6 +11210,26 @@ analisis citra digital.</li>
 </div>
 <div id="konsep-inti-10" class="section level2" number="11.2">
 <h2><span class="header-section-number">11.2</span> Konsep Inti</h2>
+<!-- BEGIN AI-INLINE:3a5d1e83dbee -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 11: Object Detection dan Advanced
+Applications.
+</p>
+<p>
+Minta AI menjelaskan <strong>Object Detection dan Advanced
+Applications</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="object-detection" class="section level3" number="11.2.1">
 <h3><span class="header-section-number">11.2.1</span> Object
 Detection</h3>
@@ -10055,6 +11680,30 @@ boleh terpukau, tetapi laporan ilmiah tetap perlu angka.</p>
 <div id="studi-kasus-terapan-10" class="section level2" number="11.3">
 <h2><span class="header-section-number">11.3</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:2567e46b2804 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 11: Object Detection dan Advanced
+Applications.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Convolutional neural
+network, transfer learning, vision transformer, segmentation, detection,
+dan multimodal image analysis sebagai pengayaan. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Studi kasus yang direkomendasikan untuk bab ini adalah deteksi cacat
 produk, deteksi kendaraan pada citra jalan, deteksi sel pada citra
 mikroskopis, dan pemantauan objek lingkungan. Dalam kelas S2 Statistika
@@ -10107,6 +11756,27 @@ lebih mudah dipahami oleh pengguna non-teknis.</p>
 <div id="contoh-kode-praktikum-10" class="section level2" number="11.4">
 <h2><span class="header-section-number">11.4</span> Contoh Kode
 Praktikum</h2>
+<!-- BEGIN AI-INLINE:7d44c73619bf -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Contoh Kode Praktikum
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 11: Object Detection dan Advanced
+Applications.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="co"># Ilustrasi sederhana non-maximum suppression menggunakan torchvision</span></span>
 <span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="im">import</span> torch</span>
 <span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="im">from</span> torchvision.ops <span class="im">import</span> nms</span>
@@ -10122,6 +11792,26 @@ Praktikum</h2>
 <div id="ilustrasi-konseptual-10" class="section level3" number="11.4.1">
 <h3><span class="header-section-number">11.4.1</span> Ilustrasi
 konseptual</h3>
+<!-- BEGIN AI-INLINE:eeed3e53ed9e -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Ilustrasi konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 11: Object Detection dan Advanced
+Applications.
+</p>
+<p>
+Minta AI menjelaskan <strong>Object Detection dan Advanced
+Applications</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="figure-box">
 <div class="sketch">
 Data citra nyata ↓ Akuisisi dan metadata ↓ Praproses dan standardisasi ↓
@@ -10133,6 +11823,27 @@ komunikasi hasil
 <div id="alur-praktikum-yang-disarankan-10" class="section level3" number="11.4.2">
 <h3><span class="header-section-number">11.4.2</span> Alur praktikum
 yang disarankan</h3>
+<!-- BEGIN AI-INLINE:df8753c3ba73 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Alur praktikum yang disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 11: Object Detection dan Advanced
+Applications.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih minimal satu dataset citra yang sesuai dengan tema
 aplikasi.</li>
@@ -10205,6 +11916,67 @@ berdampak.</p>
 <div id="identifikasi-dan-analisis-gap-riset-dalam-image-analysis" class="section level1" number="12">
 <h1><span class="header-section-number">12</span> Identifikasi dan
 Analisis Gap Riset dalam Image Analysis</h1>
+<!-- BEGIN AI-INLINE:7011d1d872cc -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 12</span>
+<h3>
+Generative dan Agentic AI untuk Identifikasi dan Analisis Gap Riset
+dalam Image Analysis
+</h3>
+<p><strong>Arah RPS.</strong> Data augmentation, class imbalance,
+spatial leakage, external validation, explainability citra, uncertainty,
+dan robustness terhadap domain shift.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Object Detection dan Advanced
+Applications; Konsep object detection dan bounding box; Metode modern:
+YOLO, SSD, Faster R-CNN; Aplikasi deteksi objek di
+industri/biomedis.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">Pertemuan 14</span> <span class="badge">SubCPMK4</span></p>
 <p>Bab ini mendukung capaian SubCPMK4 dalam RPS Analisis Image. Fokusnya
 adalah review literatur, research gap, novelty, benchmark dataset, serta
@@ -10239,6 +12011,26 @@ dalam analisis citra digital.</li>
 </div>
 <div id="konsep-inti-11" class="section level2" number="12.2">
 <h2><span class="header-section-number">12.2</span> Konsep Inti</h2>
+<!-- BEGIN AI-INLINE:4b8a6d2fed6f -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 12: Identifikasi dan Analisis Gap
+Riset dalam Image Analysis.
+</p>
+<p>
+Minta AI menjelaskan <strong>Identifikasi dan Analisis Gap Riset dalam
+Image Analysis</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="review-literatur" class="section level3" number="12.2.1">
 <h3><span class="header-section-number">12.2.1</span> Review
 Literatur</h3>
@@ -10692,6 +12484,30 @@ laporan ilmiah tetap perlu angka.</p>
 <div id="studi-kasus-terapan-11" class="section level2" number="12.3">
 <h2><span class="header-section-number">12.3</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:75513995282c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 12: Identifikasi dan Analisis Gap
+Riset dalam Image Analysis.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Data augmentation, class
+imbalance, spatial leakage, external validation, explainability citra,
+uncertainty, dan robustness terhadap domain shift. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Studi kasus yang direkomendasikan untuk bab ini adalah menyusun gap
 riset untuk analisis citra medis dengan dataset terbatas, citra
 lingkungan dengan variasi lokasi, atau citra industri dengan kelas cacat
@@ -10744,6 +12560,28 @@ lebih mudah dipahami oleh pengguna non-teknis.</p>
 <div id="contoh-kode-praktikum-11" class="section level2" number="12.4">
 <h2><span class="header-section-number">12.4</span> Contoh Kode
 Praktikum</h2>
+<!-- BEGIN AI-INLINE:b7b6c468def4 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Contoh Kode Praktikum
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 12: Identifikasi dan Analisis Gap
+Riset dalam Image Analysis.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="fu">library</span>(tibble)</span>
 <span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>literature_matrix <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
@@ -10756,6 +12594,26 @@ Praktikum</h2>
 <div id="ilustrasi-konseptual-11" class="section level3" number="12.4.1">
 <h3><span class="header-section-number">12.4.1</span> Ilustrasi
 konseptual</h3>
+<!-- BEGIN AI-INLINE:fe3eaec106bf -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Ilustrasi konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 12: Identifikasi dan Analisis Gap
+Riset dalam Image Analysis.
+</p>
+<p>
+Minta AI menjelaskan <strong>Identifikasi dan Analisis Gap Riset dalam
+Image Analysis</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="figure-box">
 <div class="sketch">
 Data citra nyata ↓ Akuisisi dan metadata ↓ Praproses dan standardisasi ↓
@@ -10767,6 +12625,28 @@ komunikasi hasil
 <div id="alur-praktikum-yang-disarankan-11" class="section level3" number="12.4.2">
 <h3><span class="header-section-number">12.4.2</span> Alur praktikum
 yang disarankan</h3>
+<!-- BEGIN AI-INLINE:e6797c204086 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Alur praktikum yang disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 12: Identifikasi dan Analisis Gap
+Riset dalam Image Analysis.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih minimal satu dataset citra yang sesuai dengan tema
 aplikasi.</li>
@@ -10839,6 +12719,67 @@ berbasis citra yang berdampak.</p>
 <div id="perancangan-proposal-riset-analisis-citra" class="section level1" number="13">
 <h1><span class="header-section-number">13</span> Perancangan Proposal
 Riset Analisis Citra</h1>
+<!-- BEGIN AI-INLINE:38691fa7070b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 13</span>
+<h3>
+Generative dan Agentic AI untuk Perancangan Proposal Riset Analisis
+Citra
+</h3>
+<p><strong>Arah RPS.</strong> Etika citra: privasi, consent, bias
+representasi, keamanan, serta pembatasan penggunaan pada konteks medis,
+biometrik, atau pengawasan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK4 melalui fokus: Identifikasi dan Analisis Gap Riset
+dalam Image Analysis; Review literatur riset terbaru; Identifikasi
+tantangan dan peluang riset citra digital; Penyusunan pertanyaan
+riset.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menyusun data dictionary, mendeteksi potensi masalah
+kualitas data, dan mengusulkan aturan pemeriksaan.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa asal-usul data, unit observasi, coverage,
+kebocoran data, privasi, dan keputusan pembersihan; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">Pertemuan 15</span> <span class="badge">SubCPMK4</span></p>
 <p>Bab ini mendukung capaian SubCPMK4 dalam RPS Analisis Image. Fokusnya
 adalah latar belakang, rumusan masalah, tujuan riset, roadmap
@@ -10874,6 +12815,25 @@ keberhasilan</strong> dalam analisis citra digital.</li>
 </div>
 <div id="konsep-inti-12" class="section level2" number="13.2">
 <h2><span class="header-section-number">13.2</span> Konsep Inti</h2>
+<!-- BEGIN AI-INLINE:97350d4d5dfe -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 13: Perancangan Proposal Riset
+Analisis Citra.
+</p>
+<p>
+Minta AI menjelaskan <strong>Perancangan Proposal Riset Analisis
+Citra</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="latar-belakang" class="section level3" number="13.2.1">
 <h3><span class="header-section-number">13.2.1</span> Latar
 Belakang</h3>
@@ -10927,6 +12887,25 @@ laporan ilmiah tetap perlu angka.</p>
 <div id="rumusan-masalah" class="section level3" number="13.2.2">
 <h3><span class="header-section-number">13.2.2</span> Rumusan
 Masalah</h3>
+<!-- BEGIN AI-INLINE:6bec83aa4b21 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumusan Masalah
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 13: Perancangan Proposal Riset
+Analisis Citra.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Perancangan Proposal Riset Analisis Citra</strong>, lalu periksa
+setiap langkah secara manual, uji kasus batas, dan cocokkan dengan
+rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam perspektif statistika terapan, rumusan masalah tidak cukup
 dipahami sebagai teknik komputasi semata. Konsep ini perlu ditempatkan
 sebagai bagian dari proses inferensi atas objek visual. Ketika mahasiswa
@@ -11279,6 +13258,30 @@ laporan ilmiah tetap perlu angka.</p>
 <div id="studi-kasus-terapan-12" class="section level2" number="13.3">
 <h2><span class="header-section-number">13.3</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:28104398effb -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 13: Perancangan Proposal Riset
+Analisis Citra.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Etika citra: privasi,
+consent, bias representasi, keamanan, serta pembatasan penggunaan pada
+konteks medis, biometrik, atau pengawasan. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Studi kasus yang direkomendasikan untuk bab ini adalah proposal riset
 deteksi dini kualitas produk pangan, segmentasi area risiko pada citra
 kesehatan, atau klasifikasi kerusakan infrastruktur berbasis citra
@@ -11331,6 +13334,28 @@ lebih mudah dipahami oleh pengguna non-teknis.</p>
 <div id="contoh-kode-praktikum-12" class="section level2" number="13.4">
 <h2><span class="header-section-number">13.4</span> Contoh Kode
 Praktikum</h2>
+<!-- BEGIN AI-INLINE:8f9ccc7691d5 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Contoh Kode Praktikum
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 13: Perancangan Proposal Riset
+Analisis Citra.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="fu">library</span>(tibble)</span>
 <span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a></span>
 <span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>roadmap <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
@@ -11345,6 +13370,25 @@ Praktikum</h2>
 <div id="ilustrasi-konseptual-12" class="section level3" number="13.4.1">
 <h3><span class="header-section-number">13.4.1</span> Ilustrasi
 konseptual</h3>
+<!-- BEGIN AI-INLINE:6adcbed28837 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Ilustrasi konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 13: Perancangan Proposal Riset
+Analisis Citra.
+</p>
+<p>
+Minta AI menjelaskan <strong>Perancangan Proposal Riset Analisis
+Citra</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="figure-box">
 <div class="sketch">
 Data citra nyata ↓ Akuisisi dan metadata ↓ Praproses dan standardisasi ↓
@@ -11356,6 +13400,28 @@ komunikasi hasil
 <div id="alur-praktikum-yang-disarankan-12" class="section level3" number="13.4.2">
 <h3><span class="header-section-number">13.4.2</span> Alur praktikum
 yang disarankan</h3>
+<!-- BEGIN AI-INLINE:48af8f586563 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Alur praktikum yang disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 13: Perancangan Proposal Riset
+Analisis Citra.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih minimal satu dataset citra yang sesuai dengan tema
 aplikasi.</li>
@@ -11428,6 +13494,66 @@ berdampak.</p>
 <div id="presentasi-proposal-riset-dan-peer-review" class="section level1" number="14">
 <h1><span class="header-section-number">14</span> Presentasi Proposal
 Riset dan Peer Review</h1>
+<!-- BEGIN AI-INLINE:10bdf1bbc377 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 14</span>
+<h3>
+Generative dan Agentic AI untuk Presentasi Proposal Riset dan Peer
+Review
+</h3>
+<p><strong>Arah RPS.</strong> Convolutional neural network, transfer
+learning, vision transformer, segmentation, detection, dan multimodal
+image analysis sebagai pengayaan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK4 melalui fokus: Perancangan Proposal Riset Analisis
+Citra; Penulisan proposal riset inovatif; Penyusunan metodologi dan
+roadmap penelitian; Review dan diskusi proposal.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p><span class="badge">Pertemuan 16</span> <span class="badge">SubCPMK4</span></p>
 <p>Bab ini mendukung capaian SubCPMK4 dalam RPS Analisis Image. Fokusnya
 adalah komunikasi ilmiah, struktur presentasi, visualisasi hasil,
@@ -11463,6 +13589,25 @@ dalam analisis citra digital.</li>
 </div>
 <div id="konsep-inti-13" class="section level2" number="14.2">
 <h2><span class="header-section-number">14.2</span> Konsep Inti</h2>
+<!-- BEGIN AI-INLINE:a290775256e2 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Presentasi Proposal Riset dan
+Peer Review.
+</p>
+<p>
+Minta AI menjelaskan <strong>Presentasi Proposal Riset dan Peer
+Review</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="komunikasi-ilmiah" class="section level3" number="14.2.1">
 <h3><span class="header-section-number">14.2.1</span> Komunikasi
 Ilmiah</h3>
@@ -11517,6 +13662,30 @@ laporan ilmiah tetap perlu angka.</p>
 <div id="struktur-presentasi" class="section level3" number="14.2.2">
 <h3><span class="header-section-number">14.2.2</span> Struktur
 Presentasi</h3>
+<!-- BEGIN AI-INLINE:fac826abac93 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Struktur Presentasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Presentasi Proposal Riset dan
+Peer Review.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Convolutional neural
+network, transfer learning, vision transformer, segmentation, detection,
+dan multimodal image analysis sebagai pengayaan. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam perspektif statistika terapan, struktur presentasi tidak cukup
 dipahami sebagai teknik komputasi semata. Konsep ini perlu ditempatkan
 sebagai bagian dari proses inferensi atas objek visual. Ketika mahasiswa
@@ -11821,6 +13990,30 @@ boleh terpukau, tetapi laporan ilmiah tetap perlu angka.</p>
 <div id="studi-kasus-terapan-13" class="section level2" number="14.3">
 <h2><span class="header-section-number">14.3</span> Studi Kasus
 Terapan</h2>
+<!-- BEGIN AI-INLINE:9b50237c8544 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Presentasi Proposal Riset dan
+Peer Review.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Convolutional neural
+network, transfer learning, vision transformer, segmentation, detection,
+dan multimodal image analysis sebagai pengayaan. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Studi kasus yang direkomendasikan untuk bab ini adalah simulasi
 seminar proposal mini di kelas dengan penilaian sejawat berbasis rubrik
 relevansi, inovasi, metodologi, evaluasi, dan keterbacaan. Dalam kelas
@@ -11873,6 +14066,28 @@ lebih mudah dipahami oleh pengguna non-teknis.</p>
 <div id="contoh-kode-praktikum-13" class="section level2" number="14.4">
 <h2><span class="header-section-number">14.4</span> Contoh Kode
 Praktikum</h2>
+<!-- BEGIN AI-INLINE:92cd8d38d830 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Contoh Kode Praktikum
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Presentasi Proposal Riset dan
+Peer Review.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="fu">library</span>(tibble)</span>
 <span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a></span>
 <span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a>rubrik_peer_review <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
@@ -11886,6 +14101,25 @@ Praktikum</h2>
 <div id="ilustrasi-konseptual-13" class="section level3" number="14.4.1">
 <h3><span class="header-section-number">14.4.1</span> Ilustrasi
 konseptual</h3>
+<!-- BEGIN AI-INLINE:4c7a12384446 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Ilustrasi konseptual
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Presentasi Proposal Riset dan
+Peer Review.
+</p>
+<p>
+Minta AI menjelaskan <strong>Presentasi Proposal Riset dan Peer
+Review</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="figure-box">
 <div class="sketch">
 Data citra nyata ↓ Akuisisi dan metadata ↓ Praproses dan standardisasi ↓
@@ -11897,6 +14131,28 @@ komunikasi hasil
 <div id="alur-praktikum-yang-disarankan-13" class="section level3" number="14.4.2">
 <h3><span class="header-section-number">14.4.2</span> Alur praktikum
 yang disarankan</h3>
+<!-- BEGIN AI-INLINE:a05e0415d821 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Alur praktikum yang disarankan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Presentasi Proposal Riset dan
+Peer Review.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih minimal satu dataset citra yang sesuai dengan tema
 aplikasi.</li>
@@ -12042,6 +14298,28 @@ Mata Kuliah</h2>
 <div id="rencana-tugas-subcpmk1" class="section level2" number="15.2">
 <h2><span class="header-section-number">15.2</span> Rencana Tugas
 SubCPMK1</h2>
+<!-- BEGIN AI-INLINE:841b50faf427 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Rencana Tugas SubCPMK1
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Presentasi Proposal Riset dan
+Peer Review.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Mahasiswa diminta menganalisis satu set data citra digital dari
 bidang medis, industri, lingkungan, sosial, aktuaria, atau sains data.
 Luaran utama adalah laporan maksimal delapan halaman yang memuat latar
@@ -12063,6 +14341,28 @@ menjelaskan konsekuensi analitisnya.</p>
 <div id="rencana-tugas-subcpmk2" class="section level2" number="15.3">
 <h2><span class="header-section-number">15.3</span> Rencana Tugas
 SubCPMK2</h2>
+<!-- BEGIN AI-INLINE:d4cc66d6a2e2 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Rencana Tugas SubCPMK2
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Presentasi Proposal Riset dan
+Peer Review.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Mahasiswa melakukan eksperimen filtering, konvolusi, dan morfologi
 pada dataset citra nyata. Minimal tiga teknik filtering harus
 dibandingkan, misalnya mean, median, dan Gaussian. Minimal dua operasi
@@ -12084,6 +14384,28 @@ kode.</p>
 <div id="rencana-tugas-subcpmk3" class="section level2" number="15.4">
 <h2><span class="header-section-number">15.4</span> Rencana Tugas
 SubCPMK3</h2>
+<!-- BEGIN AI-INLINE:320056093140 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Rencana Tugas SubCPMK3
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Presentasi Proposal Riset dan
+Peer Review.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Mahasiswa membangun model klasifikasi atau segmentasi citra
 menggunakan CNN dan, jika memungkinkan, membandingkannya dengan metode
 statistik klasik. Dataset dapat berupa dataset terbuka atau dataset yang
@@ -12106,6 +14428,28 @@ waras.</p>
 <div id="rencana-tugas-subcpmk4" class="section level2" number="15.5">
 <h2><span class="header-section-number">15.5</span> Rencana Tugas
 SubCPMK4</h2>
+<!-- BEGIN AI-INLINE:fe5e9d7e227b -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Rencana Tugas SubCPMK4
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Presentasi Proposal Riset dan
+Peer Review.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Mahasiswa merancang proposal riset inovatif berbasis analisis citra
 digital. Proposal maksimal dua belas halaman memuat latar belakang dan
 urgensi, rumusan masalah, tujuan, tinjauan literatur, gap riset,
@@ -12125,6 +14469,28 @@ jadi inspirasi, tetapi bukan pengganti pertanyaan ilmiah.</p>
 <div id="template-laporan-praktikum" class="section level2" number="15.6">
 <h2><span class="header-section-number">15.6</span> Template Laporan
 Praktikum</h2>
+<!-- BEGIN AI-INLINE:2560e406ef30 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Template Laporan Praktikum
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Presentasi Proposal Riset dan
+Peer Review.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Judul dan identitas kelompok.</li>
 <li>Latar belakang singkat.</li>
@@ -12195,6 +14561,30 @@ dicatat?</td>
 <div id="contoh-rubrik-presentasi-proposal" class="section level2" number="15.8">
 <h2><span class="header-section-number">15.8</span> Contoh Rubrik
 Presentasi Proposal</h2>
+<!-- BEGIN AI-INLINE:4dfc43b5db4b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh Rubrik Presentasi Proposal
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Presentasi Proposal Riset dan
+Peer Review.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Convolutional neural
+network, transfer learning, vision transformer, segmentation, detection,
+dan multimodal image analysis sebagai pengayaan. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <table>
 <colgroup>
 <col width="30%" />
@@ -12279,6 +14669,25 @@ Soal</h1>
 <div id="soal-konsep-dasar" class="section level2" number="17.1">
 <h2><span class="header-section-number">17.1</span> Soal Konsep
 Dasar</h2>
+<!-- BEGIN AI-INLINE:59ed22bf30b7 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Soal Konsep Dasar
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Presentasi Proposal Riset dan
+Peer Review.
+</p>
+<p>
+Minta AI menjelaskan <strong>Presentasi Proposal Riset dan Peer
+Review</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Jelaskan perbedaan citra grayscale, RGB, dan multi-channel. Berikan
 contoh aplikasi untuk masing-masing.</li>
@@ -12455,6 +14864,79 @@ bermanfaat secara sosial dan ilmiah.</p>
 </div>
 <div id="daftar-pustaka" class="section level1 unnumbered">
 <h1 class="unnumbered">Daftar Pustaka</h1>
+<!-- BEGIN ADOPSI AI RPS 2026 -->
+<div id="penyelarasan-materi-dengan-rps-revisi-ai-2026" class="section level2" number="20.1">
+<h2><span class="header-section-number">20.1</span> Penyelarasan Materi
+dengan RPS Revisi AI 2026</h2>
+<p>Materi <strong>Analisis Image</strong> ini telah diselaraskan dengan
+RPS Revisi AI 2026. Rumusan CPL program studi tetap dan tidak diubah.
+Generative AI maupun agentic AI hanya digunakan sebagai alat bantu untuk
+mempercepat ketercapaian CPMK dan Sub-CPMK; penalaran statistika,
+keputusan metodologis, dan tanggung jawab akademik tetap berada pada
+mahasiswa.</p>
+<div id="integrasi-ai-kontekstual" class="section level3" number="20.1.1">
+<h3><span class="header-section-number">20.1.1</span> Integrasi AI
+kontekstual</h3>
+<ul>
+<li>Convolutional neural network, transfer learning, vision transformer,
+segmentation, detection, dan multimodal image analysis sebagai
+pengayaan.</li>
+<li>Data augmentation, class imbalance, spatial leakage, external
+validation, explainability citra, uncertainty, dan robustness terhadap
+domain shift.</li>
+<li>Etika citra: privasi, consent, bias representasi, keamanan, serta
+pembatasan penggunaan pada konteks medis, biometrik, atau
+pengawasan.</li>
+</ul>
+</div>
+<div id="protokol-penggunaan-ai" class="section level3" number="20.1.2">
+<h3><span class="header-section-number">20.1.2</span> Protokol
+penggunaan AI</h3>
+<ol style="list-style-type: decimal">
+<li>Nyatakan alat, tujuan penggunaan, dan bagian pekerjaan yang dibantu
+AI.</li>
+<li>Simpan prompt log ringkas, sumber, versi kode/notebook, dan
+perubahan yang dilakukan.</li>
+<li>Verifikasi keluaran terhadap asumsi metode, sumber primer, hasil
+numerik, diagnostik, ketidakpastian, robustness, bias/fairness, privasi,
+dan konteks.</li>
+<li>Jangan memasukkan data pribadi, rahasia, soal asesmen tertutup, atau
+kredensial ke layanan AI yang tidak disetujui.</li>
+<li>Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil
+secara mandiri.</li>
+</ol>
+</div>
+<div id="bukti-asesmen" class="section level3" number="20.1.3">
+<h3><span class="header-section-number">20.1.3</span> Bukti asesmen</h3>
+<!-- BEGIN AI-INLINE:5a4c3d974e63 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Bukti asesmen
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Presentasi Proposal Riset dan
+Peer Review.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
+<p>Penilaian berfokus pada ketepatan metode, validasi dan
+ketidakpastian, reproducibility, interpretasi, komunikasi, serta
+transparansi penggunaan AI. Keluaran AI tanpa verifikasi bukan bukti
+ketercapaian CPMK.</p>
+<!-- END ADOPSI AI RPS 2026 -->
+</div>
+</div>
 </div>
 <div id="bibliography" class="section level1 unnumbered">
 <h1 class="unnumbered">Daftar Pustaka</h1>
@@ -12600,27 +15082,6 @@ Segmentation.”</span> <em>Medical Image Analysis</em> 63: 101693. <a href="htt
 </div>
 </div>
 
-
-
-
-
-
-
-<!-- BEGIN ADOPSI AI RPS 2026 -->
-<section id="penyelarasan-rps-ai-2026" style="margin:2rem 0;padding:1.5rem;border-left:8px solid #f2a51a;background:#eef5f8;border-radius:8px">
-  <h2>Penyelarasan Materi dengan RPS Revisi AI 2026</h2>
-  <p>Materi <strong>Analisis Image</strong> ini mempertahankan rumusan CPL yang berlaku. AI ditempatkan sebagai alat bantu untuk mempercepat ketercapaian CPMK dan Sub-CPMK, bukan sebagai CPL baru atau pengganti penalaran statistika.</p>
-  <h3>Integrasi AI kontekstual</h3><ul><li>Convolutional neural network, transfer learning, vision transformer, segmentation, detection, dan multimodal image analysis sebagai pengayaan.</li><li>Data augmentation, class imbalance, spatial leakage, external validation, explainability citra, uncertainty, dan robustness terhadap domain shift.</li><li>Etika citra: privasi, consent, bias representasi, keamanan, serta pembatasan penggunaan pada konteks medis, biometrik, atau pengawasan.</li></ul>
-  <h3>Protokol penggunaan AI</h3>
-  <ol>
-    <li>Ungkapkan alat, tujuan, prompt log ringkas, sumber, dan perubahan yang dilakukan.</li>
-    <li>Verifikasi asumsi, kode, hasil numerik, diagnostik, ketidakpastian, robustness, bias/fairness, privasi, dan konteks.</li>
-    <li>Jangan mengunggah data pribadi, rahasia, asesmen tertutup, atau kredensial ke layanan yang tidak disetujui.</li>
-    <li>Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil secara mandiri.</li>
-  </ol>
-  <p><strong>Bukti asesmen:</strong> ketepatan metode, validasi, reproducibility, interpretasi, komunikasi, dan transparansi penggunaan AI. Keluaran AI tanpa verifikasi bukan bukti ketercapaian CPMK.</p>
-</section>
-<!-- END ADOPSI AI RPS 2026 -->
 </div>
 
 <script>
@@ -12685,6 +15146,16 @@ $(document).ready(function ()  {
     // tocify
     var toc = $("#TOC").tocify(options).data("toc-tocify");
 });
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
 </script>
 
 </body>

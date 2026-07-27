@@ -3128,270 +3128,72 @@ serta komunikasi hasil secara ilmiah.</p>
 </div>
 <!-- END UNPAD MATERIAL ENHANCEMENT -->
 <style>
-html, body {
-  background: linear-gradient(135deg, #f8fbfd 0%, #fffdf8 48%, #f3f6ee 100%) !important;
-  color: #172033 !important;
+:root{
+--brown:#6f3f20; --brown2:#9b6137; --brown3:#c99055; --cream:#fff8ec;
+--light:#f7e6c7; --pale:#fff2db; --ink:#20170f; --muted:#5c4839; --gold:#cf9a3d;
 }
-body {
-  font-family: "Segoe UI", Arial, sans-serif !important;
-  font-size: 17px !important;
-  line-height: 1.72 !important;
-  margin: 0 !important;
-  overflow-x: hidden !important;
+html{scroll-behavior:smooth;}
+body{
+color:var(--ink);
+background:linear-gradient(135deg,#fffaf0 0%,#f6dfbd 38%,#d0a06c 100%);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+line-height:1.72;
+font-size:17px;
+max-width:1180px;
+margin:0 auto;
+padding:0 2rem 4rem 18rem;
 }
-.main-container {
-  max-width: 1180px !important;
-  margin-top: 18px !important;
-  margin-bottom: 38px !important;
-  padding: 34px 46px 54px !important;
-  background: rgba(255, 253, 248, 0.98) !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  box-shadow: 0 18px 42px rgba(23, 57, 92, 0.12) !important;
-  overflow-x: hidden !important;
+#TOC{
+position:fixed; left:1.1rem; top:1.1rem; bottom:1.1rem; width:15rem;
+overflow-y:auto; padding:1rem 1rem 1.2rem 1rem;
+background:linear-gradient(180deg,#fff6e8 0%,#e5bd86 100%);
+border:1px solid rgba(111,63,32,.28); border-radius:18px;
+box-shadow:0 12px 35px rgba(78,44,20,.22);
+font-size:.86rem;
 }
-h1, h2, h3, h4 {
-  color: #17395c !important;
-  font-weight: 800 !important;
-  letter-spacing: 0 !important;
-  line-height: 1.24 !important;
+#TOC:before{content:"Daftar Isi"; display:block; font-size:1.15rem; font-weight:800; color:var(--brown); margin-bottom:.5rem;}
+#TOC ul{padding-left:1rem;}
+#TOC li{margin:.26rem 0;}
+#TOC a{color:#4b2a16; text-decoration:none;}
+#TOC a:hover{color:#8a4d23; text-decoration:underline;}
+h1,h2,h3,h4{color:var(--brown); line-height:1.25; font-weight:850;}
+h1.title{font-size:2.9rem; color:#fff; padding:2rem; border-radius:28px;
+background:linear-gradient(135deg,#4b2a16 0%,#8c532b 45%,#d3a15d 100%);
+box-shadow:0 18px 45px rgba(75,42,22,.32);}
+h1{font-size:2.2rem; margin-top:2.4rem; border-bottom:4px solid rgba(156,93,47,.28); padding-bottom:.55rem;}
+h2{font-size:1.65rem; margin-top:2rem;}
+h3{font-size:1.25rem; margin-top:1.5rem; color:#7c4a29;}
+a{color:#7b421e;}
+blockquote{background:rgba(255,248,236,.83); border-left:7px solid var(--gold); padding:1rem 1.25rem; border-radius:0 18px 18px 0; box-shadow:0 8px 22px rgba(95,52,24,.08);}
+table{border-collapse:collapse; width:100%; background:rgba(255,255,255,.72); margin:1rem 0 1.6rem 0; border-radius:14px; overflow:hidden;}
+th{background:linear-gradient(90deg,#70401f,#b7793e); color:white; padding:.75rem;}
+td{padding:.68rem; border-bottom:1px solid rgba(115,65,31,.18); vertical-align:top;}
+tr:nth-child(even){background:rgba(250,232,198,.48);}
+pre, pre.sourceCode{
+background:#f7e4c4 !important; color:#16100b !important; border:1px solid #c79256;
+border-radius:16px; padding:1rem; box-shadow:inset 0 0 0 1px rgba(255,255,255,.35), 0 8px 20px rgba(102,58,28,.12);
+overflow-x:auto;
 }
-h1.title {
-  color: #17395c !important;
-  -webkit-text-fill-color: #17395c !important;
-  background: none !important;
-  border-bottom: 4px solid #f2a51a !important;
-  padding-bottom: 14px !important;
+code{background:#f3ddba; color:#111; padding:.12rem .28rem; border-radius:6px;}
+pre code{background:transparent; padding:0; color:#111;}
+img{max-width:100%; border-radius:18px; box-shadow:0 12px 30px rgba(75,42,22,.18); margin:1rem auto; display:block;}
+.figure-caption, figcaption{font-size:.92rem; color:var(--muted); text-align:center;}
+.callout, .rpsbox, .formula, .praktik, .assessment, .reflection{
+padding:1rem 1.15rem; margin:1.1rem 0; border-radius:18px; border:1px solid rgba(111,63,32,.25);
+box-shadow:0 10px 28px rgba(82,45,22,.12);
 }
-h2 {
-  margin-top: 46px !important;
-  padding: 12px 18px !important;
-  border-left: 8px solid #f2a51a !important;
-  border-radius: 8px !important;
-  background: linear-gradient(90deg, #eef8f6, #fff8e7) !important;
-}
-.unpad-cover h2 {
-  color: #111827 !important;
-  -webkit-text-fill-color: #111827 !important;
-  background: #fffdf8 !important;
-  border-left: 8px solid #f2a51a !important;
-  border-bottom: 0 !important;
-}
-h3 {
-  margin-top: 30px !important;
-}
-a {
-  color: #0b5c86 !important;
-}
-img, svg {
-  max-width: 100% !important;
-  height: auto !important;
-}
-table {
-  width: 100% !important;
-  border-collapse: collapse !important;
-  margin: 18px 0 26px !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-}
-.s2-table-scroll {
-  width: 100% !important;
-  max-width: 100% !important;
-  overflow-x: auto !important;
-  margin: 18px 0 26px !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-}
-.s2-table-scroll table {
-  min-width: 680px !important;
-  margin: 0 !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-}
-th {
-  background: #17395c !important;
-  color: #ffffff !important;
-  padding: 10px 12px !important;
-}
-td {
-  background: #fffdf8 !important;
-  border: 1px solid #d7e2ea !important;
-  padding: 10px 12px !important;
-  vertical-align: top !important;
-}
-.main-container p, .main-container li, td, th {
-  overflow-wrap: anywhere !important;
-}
-pre {
-  overflow: auto !important;
-  padding: 16px !important;
-  background: #eef5f8 !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  color: #111827 !important;
-}
-code {
-  background: #eef5f8 !important;
-  border-radius: 6px !important;
-  color: #111827 !important;
-  padding: 2px 5px !important;
-}
-span.math.display, .math.display, .MathJax_Display, .MathJax, mjx-container {
-  display: block !important;
-  max-width: 100% !important;
-  overflow-x: auto !important;
-  overflow-y: hidden !important;
-}
-blockquote {
-  margin: 22px 0 !important;
-  padding: 16px 20px !important;
-  background: #fff8e7 !important;
-  border-left: 8px solid #0f766e !important;
-  border-radius: 0 8px 8px 0 !important;
-}
-#TOC, .tocify {
-  background: #ffffff !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  box-shadow: 0 12px 28px rgba(23, 57, 92, 0.10) !important;
-}
-.tocify {
-  max-height: calc(100vh - 40px) !important;
-}
-.tocify .active, #TOC .active {
-  background: linear-gradient(90deg, #17395c, #0f766e) !important;
-  color: #ffffff !important;
-  border-radius: 6px !important;
-}
-#TOC a, .tocify a {
-  color: #17395c !important;
-  text-decoration: none !important;
-}
-#TOC a:hover, .tocify a:hover {
-  color: #0f766e !important;
-  text-decoration: underline !important;
-}
-.hero, .rps-box, .rpsbox, .info-card, .card,
-.callout, .note, .casebox, .case-box, .examplebox, .exercise-box,
-.learning-box, .activitybox, .activity, .practice-box, .praktik-box,
-.praktikum, .tujuan, .interpretasi, .refleksi, .warning, .warningbox,
-.warning-box, .tip, .idea-box, .mathbox, .formula-box, .rumus-box,
-.contoh-box, .rubric-box {
-  margin: 22px 0 !important;
-  padding: 20px 24px !important;
-  background: #fffdf8 !important;
-  border: 1px solid #d7e2ea !important;
-  border-left: 8px solid #0f766e !important;
-  border-radius: 8px !important;
-  box-shadow: 0 10px 24px rgba(23, 57, 92, 0.10) !important;
-  color: #172033 !important;
-}
-.hero {
-  background: linear-gradient(135deg, #17395c 0%, #0f766e 62%, #f2a51a 100%) !important;
-  color: #ffffff !important;
-  border-left: 0 !important;
-}
-.hero h1, .hero h2, .hero h3, .hero h4, .hero p, .hero strong {
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-}
-.warning, .warningbox, .warning-box {
-  border-left-color: #b45309 !important;
-  background: #fff8e7 !important;
-}
-.rps-box, .rpsbox, .rubric-box {
-  border-left-color: #f2a51a !important;
-  background: linear-gradient(135deg, #fffdf8, #fff8e7) !important;
-}
-.mathbox, .formula-box, .rumus-box {
-  border-left-color: #17395c !important;
-  background: #eef5f8 !important;
-}
-.badge {
-  display: inline-block !important;
-  padding: 4px 10px !important;
-  border-radius: 999px !important;
-  background: #17395c !important;
-  color: #ffffff !important;
-  font-weight: 700 !important;
-  font-size: 0.85em !important;
-}
-.grid-2, .grid-3 {
-  display: grid !important;
-  gap: 18px !important;
-}
-.grid-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-}
-.grid-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-}
-hr {
-  border: 0 !important;
-  height: 2px !important;
-  background: linear-gradient(90deg, transparent, #d7e2ea, transparent) !important;
-  margin: 34px 0 !important;
-}
-@media (max-width: 980px) {
-  #TOC, .tocify {
-    position: relative !important;
-    width: auto !important;
-    max-height: 360px !important;
-    margin: 12px !important;
-  }
-  .main-container {
-    margin: 12px !important;
-    padding: 24px !important;
-  }
-  .grid-2, .grid-3 {
-    grid-template-columns: 1fr !important;
-  }
-}
+.callout{background:linear-gradient(135deg,#fff8ec,#f1d1a2);}
+.rpsbox{background:linear-gradient(135deg,#fff1d6,#e4b677);}
+.formula{background:#f8e8cc; color:#111; border-left:8px solid #b77435; font-size:1.04rem;}
+.praktik{background:linear-gradient(135deg,#fff7ea,#edd0a3); border-left:8px solid #8d572d;}
+.assessment{background:linear-gradient(135deg,#fff9ee,#e9c08c); border-left:8px solid #cf9a3d;}
+.reflection{background:linear-gradient(135deg,#fff4df,#f6d8af); border-left:8px solid #a85d35;}
+.badge{display:inline-block; padding:.25rem .65rem; border-radius:999px; background:#7a4523; color:#fff; font-weight:700; font-size:.82rem; margin:.1rem .15rem;}
+.header-card{padding:1.4rem 1.6rem; border-radius:24px; background:linear-gradient(135deg,#fff7e6,#e9bf82); box-shadow:0 12px 32px rgba(83,48,24,.16); margin:1rem 0 2rem 0;}
+.small{font-size:.93rem;color:#5c4839;}
+hr{border:0; border-top:2px dashed rgba(111,63,32,.28); margin:2rem 0;}
+@media(max-width:980px){body{padding:1rem; font-size:16px;} #TOC{position:relative; width:auto; left:auto; top:auto; bottom:auto; margin:1rem 0 2rem 0;} h1.title{font-size:2.1rem;}}
 </style>
-<script>
-window.MathJax = {
-  tex: {
-    inlineMath: [["\\(", "\\)"], ["$", "$"]],
-    displayMath: [["\\[", "\\]"], ["$$", "$$"]],
-    processEscapes: true,
-    processEnvironments: true,
-    tags: "ams"
-  },
-  options: {
-    skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"],
-    ignoreHtmlClass: "tex2jax_ignore"
-  },
-  chtml: {
-    fontURL: "../../assets/vendor/mathjax/output/chtml/fonts/woff-v2"
-  },
-  startup: {
-    typeset: true
-  }
-};
-
-(function () {
-  var script = document.createElement("script");
-  script.src = "../../assets/vendor/mathjax/tex-mml-chtml.js";
-  script.async = true;
-  script.onerror = function () {
-    var fallback = document.createElement("script");
-    fallback.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
-    fallback.async = true;
-    document.head.appendChild(fallback);
-  };
-  document.head.appendChild(script);
-})();
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll("table").forEach(function (table) {
-    if (table.parentElement && table.parentElement.classList.contains("s2-table-scroll")) return;
-    var wrapper = document.createElement("div");
-    wrapper.className = "s2-table-scroll";
-    table.parentNode.insertBefore(wrapper, table);
-    wrapper.appendChild(table);
-  });
-});
-</script>
 <div class="header-card">
 <p><span class="badge">S2 Statistika Terapan</span> <span class="badge">FMIPA UNPAD</span> <span class="badge">Semester 2</span>
 <span class="badge">3 SKS: T = 2, P = 1</span> <span class="badge">RPS-OBE 2025</span></p>
@@ -3403,6 +3205,28 @@ mengikuti RPS mata kuliah Epidemiologi tahun 2025 yang memuat capaian
 pembelajaran, bahan kajian, kegiatan sinkron-asinkron, tugas, proyek,
 UTS, UAS, dan rubrik penilaian <span class="citation">(<a href="#ref-rps2025">I Gede Nyoman Mindra Jaya 2025</a>)</span>.</p>
 </div>
+<!-- BEGIN AI-INLINE-STYLE-2026 -->
+<style>
+.ai-inline {
+margin: 1rem 0 1.35rem;
+padding: 1rem 1.1rem;
+border: 1px solid #bfd9d5;
+border-left: 7px solid #0f766e;
+border-radius: 8px;
+background: linear-gradient(135deg, #eff9f7, #fffaf0);
+}
+.ai-inline--agentic { border-left-color: #17395c; background: linear-gradient(135deg, #eef5fb, #f5faf8); }
+.ai-inline--assessment { border-left-color: #a35d00; background: #fff8e8; }
+.ai-inline h3, .ai-inline h4 { margin-top: 0; color: #17395c; }
+.ai-inline p:last-child, .ai-inline ul:last-child { margin-bottom: 0; }
+.ai-inline__label {
+display: inline-block; margin-bottom: .45rem; padding: .2rem .55rem;
+border-radius: 999px; background: #17395c; color: white;
+font-size: .78rem; font-weight: 800;
+}
+.ai-inline table { width: 100%; margin: .6rem 0; background: white; }
+</style>
+<!-- END AI-INLINE-STYLE-2026 -->
 <div id="prakata" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Prakata</h1>
 <p>Epidemiologi adalah bahasa kerja untuk memahami mengapa penyakit
@@ -3437,6 +3261,63 @@ bahan awal penulisan proposal penelitian epidemiologi.</p>
 <div id="peta-rps-dan-desain-pembelajaran" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Peta RPS dan Desain
 Pembelajaran</h1>
+<!-- BEGIN AI-INLINE:104b86915c25 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 1</span>
+<h3>
+Generative dan Agentic AI untuk Peta RPS dan Desain Pembelajaran
+</h3>
+<p><strong>Arah RPS.</strong> AI untuk surveillance, outbreak detection,
+risk prediction, phenotyping, dan integrasi data kesehatan
+multisisumber.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Pendahuluan Epidemiologi; Sejarah dan
+perkembangan epidemiologi; Definisi dan ruang lingkup epidemiologi.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk merumuskan alternatif penjelasan, contoh, dan
+hipotesis awal.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara
+bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik,
+dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti
+kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div id="identitas-mata-kuliah" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> Identitas Mata
 Kuliah</h2>
@@ -3667,6 +3548,64 @@ terlihat ilmiah, tetapi bisa salah sasaran.</p>
 <div id="pertemuan-1-pendahuluan-epidemiologi-sejarah-definisi-dan-ruang-lingkup" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Pertemuan 1:
 Pendahuluan Epidemiologi: Sejarah, Definisi, dan Ruang Lingkup</h1>
+<!-- BEGIN AI-INLINE:e322c33dcea1 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 1</span>
+<h3>
+Generative dan Agentic AI untuk Pendahuluan Epidemiologi: Sejarah,
+Definisi, dan Ruang Lingkup
+</h3>
+<p><strong>Arah RPS.</strong> AI untuk surveillance, outbreak detection,
+risk prediction, phenotyping, dan integrasi data kesehatan
+multisisumber.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Pendahuluan Epidemiologi; Sejarah dan
+perkembangan epidemiologi; Definisi dan ruang lingkup epidemiologi.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk merumuskan alternatif penjelasan, contoh, dan
+hipotesis awal.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara
+bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik,
+dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti
+kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <p><strong>Fokus pertemuan.</strong> Sejarah epidemiologi, definisi,
 ruang lingkup, dan peran epidemiologi dalam kesehatan masyarakat. Topik
@@ -3679,6 +3618,26 @@ Lash 2021</a>; <a href="#ref-gordis2014">Gordis 2014</a>; <a href="#ref-porta201
 <div id="pendalaman-konsep" class="section level3" number="3.0.1">
 <h3><span class="header-section-number">3.0.1</span> Pendalaman
 konsep</h3>
+<!-- BEGIN AI-INLINE:c0d695b4f4f1 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pendalaman konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Pendahuluan Epidemiologi:
+Sejarah, Definisi, dan Ruang Lingkup.
+</p>
+<p>
+Minta AI menjelaskan <strong>Pendahuluan Epidemiologi: Sejarah,
+Definisi, dan Ruang Lingkup</strong> melalui definisi, analogi, contoh,
+dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu
+dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis
+kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi
+satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pendahuluan Epidemiologi perlu dipahami sebagai bagian dari rantai
 penalaran epidemiologi yang menghubungkan kejadian penyakit, populasi
 berisiko, waktu pengamatan, ruang geografis, serta mekanisme
@@ -3828,6 +3787,30 @@ masuk utama menuju kualitas inferensi.</p>
 <div id="contoh-kasus-pembelajaran" class="section level3" number="3.0.2">
 <h3><span class="header-section-number">3.0.2</span> Contoh kasus
 pembelajaran</h3>
+<!-- BEGIN AI-INLINE:2844762ecc2f -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus pembelajaran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Pendahuluan Epidemiologi:
+Sejarah, Definisi, dan Ruang Lingkup.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI untuk surveillance,
+outbreak detection, risk prediction, phenotyping, dan integrasi data
+kesehatan multisisumber. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bayangkan sebuah dinas kesehatan kabupaten menerima laporan
 peningkatan kasus <strong>dengue fever</strong> pada beberapa kecamatan
 selama empat minggu terakhir. Data awal berasal dari puskesmas, rumah
@@ -3874,6 +3857,27 @@ jauh lebih berguna daripada tabel panjang tanpa narasi.</p>
 <div id="praktikum-r-pendahuluan-epidemiologi" class="section level3" number="3.0.3">
 <h3><span class="header-section-number">3.0.3</span> Praktikum R:
 Pendahuluan Epidemiologi</h3>
+<!-- BEGIN AI-INLINE:329846b6c539 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R: Pendahuluan Epidemiologi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Pendahuluan Epidemiologi:
+Sejarah, Definisi, dan Ruang Lingkup.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co"># Contoh struktur awal analisis epidemiologi</span></span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>kasus <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>,</span>
@@ -3958,6 +3962,65 @@ ketidakpastian secara jujur dan tetap memberi arah tindakan.</p>
 <div id="pertemuan-2-proses-terjadinya-penyakit-agent-host-environment-dan-natural-history" class="section level1" number="4">
 <h1><span class="header-section-number">4</span> Pertemuan 2: Proses
 Terjadinya Penyakit: Agent, Host, Environment, dan Natural History</h1>
+<!-- BEGIN AI-INLINE:4a6e04b08856 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 2</span>
+<h3>
+Generative dan Agentic AI untuk Proses Terjadinya Penyakit: Agent, Host,
+Environment, dan Natural History
+</h3>
+<p><strong>Arah RPS.</strong> Causal inference, confounding, target
+trial emulation, transportability, calibration, subgroup fairness, dan
+bias data kesehatan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Peran epidemiologi dalam kesehatan
+masyarakat; Proses Terjadinya Penyakit; Konsep
+agent–host–environment.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk merumuskan alternatif penjelasan, contoh, dan
+hipotesis awal.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara
+bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik,
+dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti
+kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <p><strong>Fokus pertemuan.</strong> Interaksi agent, host, environment,
 proses transmisi, dan riwayat alamiah penyakit. Topik ini mendukung
@@ -3980,6 +4043,26 @@ Penyakit: Agent, Host, Environment, dan Natural History</div>
 <div id="pendalaman-konsep-1" class="section level3" number="4.0.1">
 <h3><span class="header-section-number">4.0.1</span> Pendalaman
 konsep</h3>
+<!-- BEGIN AI-INLINE:3718eb2f954a -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pendalaman konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Proses Terjadinya Penyakit:
+Agent, Host, Environment, dan Natural History.
+</p>
+<p>
+Minta AI menjelaskan <strong>Proses Terjadinya Penyakit: Agent, Host,
+Environment, dan Natural History</strong> melalui definisi, analogi,
+contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan
+penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru,
+dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh
+menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Proses Terjadinya Penyakit perlu dipahami sebagai bagian dari rantai
 penalaran epidemiologi yang menghubungkan kejadian penyakit, populasi
 berisiko, waktu pengamatan, ruang geografis, serta mekanisme
@@ -4128,6 +4211,30 @@ masuk utama menuju kualitas inferensi.</p>
 <div id="contoh-kasus-pembelajaran-1" class="section level3" number="4.0.2">
 <h3><span class="header-section-number">4.0.2</span> Contoh kasus
 pembelajaran</h3>
+<!-- BEGIN AI-INLINE:9bba97c43a35 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus pembelajaran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Proses Terjadinya Penyakit:
+Agent, Host, Environment, dan Natural History.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Causal inference,
+confounding, target trial emulation, transportability, calibration,
+subgroup fairness, dan bias data kesehatan. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bayangkan sebuah dinas kesehatan kabupaten menerima laporan
 peningkatan kasus <strong>influenza</strong> pada beberapa kecamatan
 selama empat minggu terakhir. Data awal berasal dari puskesmas, rumah
@@ -4174,6 +4281,27 @@ jauh lebih berguna daripada tabel panjang tanpa narasi.</p>
 <div id="praktikum-r-proses-terjadinya-penyakit" class="section level3" number="4.0.3">
 <h3><span class="header-section-number">4.0.3</span> Praktikum R: Proses
 Terjadinya Penyakit</h3>
+<!-- BEGIN AI-INLINE:c6c8e4ed628b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R: Proses Terjadinya Penyakit
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 2: Proses Terjadinya Penyakit:
+Agent, Host, Environment, dan Natural History.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="co"># Membuat tabel sederhana faktor agent-host-environment</span></span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>triad <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
 <span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>  <span class="at">komponen =</span> <span class="fu">c</span>(<span class="st">&quot;Agent&quot;</span>, <span class="st">&quot;Host&quot;</span>, <span class="st">&quot;Environment&quot;</span>),</span>
@@ -4257,6 +4385,66 @@ ketidakpastian secara jujur dan tetap memberi arah tindakan.</p>
 <h1><span class="header-section-number">5</span> Pertemuan 3: Ukuran
 Statistik Epidemiologi: Prevalensi, Insidensi, Attack Rate, dan
 Mortalitas</h1>
+<!-- BEGIN AI-INLINE:b7d0348fb762 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 3</span>
+<h3>
+Generative dan Agentic AI untuk Ukuran Statistik Epidemiologi:
+Prevalensi, Insidensi, Attack Rate, dan Mortalitas
+</h3>
+<p><strong>Arah RPS.</strong> Proyek berbasis data kesehatan yang memuat
+data governance, perlindungan privasi, interpretasi klinis/kebijakan,
+dan komunikasi risiko.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Model penyebab penyakit
+(multifaktor); Proses transmisi dan dinamika penyakit; Jenis Kejadian
+Penyakit dalam Masyarakat.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <p><strong>Fokus pertemuan.</strong> Ukuran frekuensi penyakit dan
 ukuran dampak kesehatan masyarakat. Topik ini mendukung CPMK/SubCPMK
@@ -4270,6 +4458,26 @@ Greenland, dan Lash 2021</a>; <a href="#ref-jewell2004">Jewell
 <div id="pendalaman-konsep-2" class="section level3" number="5.0.1">
 <h3><span class="header-section-number">5.0.1</span> Pendalaman
 konsep</h3>
+<!-- BEGIN AI-INLINE:e54aa8039edc -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pendalaman konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 3: Ukuran Statistik Epidemiologi:
+Prevalensi, Insidensi, Attack Rate, dan Mortalitas.
+</p>
+<p>
+Minta AI menjelaskan <strong>Ukuran Statistik Epidemiologi: Prevalensi,
+Insidensi, Attack Rate, dan Mortalitas</strong> melalui definisi,
+analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan
+penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru,
+dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh
+menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Ukuran Statistik Epidemiologi perlu dipahami sebagai bagian dari
 rantai penalaran epidemiologi yang menghubungkan kejadian penyakit,
 populasi berisiko, waktu pengamatan, ruang geografis, serta mekanisme
@@ -4419,6 +4627,30 @@ masuk utama menuju kualitas inferensi.</p>
 <div id="contoh-kasus-pembelajaran-2" class="section level3" number="5.0.2">
 <h3><span class="header-section-number">5.0.2</span> Contoh kasus
 pembelajaran</h3>
+<!-- BEGIN AI-INLINE:27abffc944be -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus pembelajaran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 3: Ukuran Statistik Epidemiologi:
+Prevalensi, Insidensi, Attack Rate, dan Mortalitas.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Proyek berbasis data
+kesehatan yang memuat data governance, perlindungan privasi,
+interpretasi klinis/kebijakan, dan komunikasi risiko. Generative AI
+dapat menghasilkan beberapa skenario pemangku kepentingan dan draf
+narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat
+merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti
+sebelum laporan disetujui manusia. Checkpoint manusia mencakup
+kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness,
+dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bayangkan sebuah dinas kesehatan kabupaten menerima laporan
 peningkatan kasus <strong>tuberkulosis</strong> pada beberapa kecamatan
 selama empat minggu terakhir. Data awal berasal dari puskesmas, rumah
@@ -4465,6 +4697,27 @@ jauh lebih berguna daripada tabel panjang tanpa narasi.</p>
 <div id="praktikum-r-ukuran-statistik-epidemiologi" class="section level3" number="5.0.3">
 <h3><span class="header-section-number">5.0.3</span> Praktikum R: Ukuran
 Statistik Epidemiologi</h3>
+<!-- BEGIN AI-INLINE:afffb2502498 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R: Ukuran Statistik Epidemiologi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 3: Ukuran Statistik Epidemiologi:
+Prevalensi, Insidensi, Attack Rate, dan Mortalitas.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="co"># Menghitung ukuran epidemiologi dasar</span></span>
 <span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>populasi <span class="ot">&lt;-</span> <span class="dv">125000</span></span>
 <span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>kasus_lama_baru <span class="ot">&lt;-</span> <span class="dv">850</span></span>
@@ -4552,6 +4805,65 @@ jujur dan tetap memberi arah tindakan.</p>
 <div id="pertemuan-4-visualisasi-distribusi-penyakit-dan-pemetaan-spasial-dasar" class="section level1" number="6">
 <h1><span class="header-section-number">6</span> Pertemuan 4:
 Visualisasi Distribusi Penyakit dan Pemetaan Spasial Dasar</h1>
+<!-- BEGIN AI-INLINE:54a14e8c9a7e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 4</span>
+<h3>
+Generative dan Agentic AI untuk Visualisasi Distribusi Penyakit dan
+Pemetaan Spasial Dasar
+</h3>
+<p><strong>Arah RPS.</strong> AI untuk surveillance, outbreak detection,
+risk prediction, phenotyping, dan integrasi data kesehatan
+multisisumber.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Epidemi, endemi, pandemi, outbreak;
+Kasus, insiden, prevalensi; Ukuran-ukuran Statistik Epidemiologi.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <p><strong>Fokus pertemuan.</strong> Pembuatan peta distribusi spasial
 penyakit dan interpretasi pola geografis. Topik ini mendukung
@@ -4569,6 +4881,26 @@ Distribusi Penyakit dan Pemetaan Spasial Dasar</div>
 <div id="pendalaman-konsep-3" class="section level3" number="6.0.1">
 <h3><span class="header-section-number">6.0.1</span> Pendalaman
 konsep</h3>
+<!-- BEGIN AI-INLINE:82e26e3dd49f -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pendalaman konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 4: Visualisasi Distribusi Penyakit
+dan Pemetaan Spasial Dasar.
+</p>
+<p>
+Minta AI menjelaskan <strong>Visualisasi Distribusi Penyakit dan
+Pemetaan Spasial Dasar</strong> melalui definisi, analogi, contoh, dan
+contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Visualisasi Distribusi Penyakit dan Pemetaan Spasial Dasar perlu
 dipahami sebagai bagian dari rantai penalaran epidemiologi yang
 menghubungkan kejadian penyakit, populasi berisiko, waktu pengamatan,
@@ -4720,6 +5052,30 @@ masuk utama menuju kualitas inferensi.</p>
 <div id="contoh-kasus-pembelajaran-3" class="section level3" number="6.0.2">
 <h3><span class="header-section-number">6.0.2</span> Contoh kasus
 pembelajaran</h3>
+<!-- BEGIN AI-INLINE:afefa47dd0d3 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus pembelajaran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 4: Visualisasi Distribusi Penyakit
+dan Pemetaan Spasial Dasar.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI untuk surveillance,
+outbreak detection, risk prediction, phenotyping, dan integrasi data
+kesehatan multisisumber. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bayangkan sebuah dinas kesehatan kabupaten menerima laporan
 peningkatan kasus <strong>stunting</strong> pada beberapa kecamatan
 selama empat minggu terakhir. Data awal berasal dari puskesmas, rumah
@@ -4766,6 +5122,28 @@ jauh lebih berguna daripada tabel panjang tanpa narasi.</p>
 <div id="praktikum-r-visualisasi-distribusi-penyakit-dan-pemetaan-spasial-dasar" class="section level3" number="6.0.3">
 <h3><span class="header-section-number">6.0.3</span> Praktikum R:
 Visualisasi Distribusi Penyakit dan Pemetaan Spasial Dasar</h3>
+<!-- BEGIN AI-INLINE:2c58f91b942c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R: Visualisasi Distribusi Penyakit dan Pemetaan
+Spasial Dasar
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 4: Visualisasi Distribusi Penyakit
+dan Pemetaan Spasial Dasar.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="co"># Contoh peta sederhana dengan data simulasi</span></span>
 <span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="co"># install.packages(c(&quot;sf&quot;, &quot;ggplot2&quot;, &quot;dplyr&quot;))</span></span>
 <span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
@@ -4854,6 +5232,66 @@ ketidakpastian secara jujur dan tetap memberi arah tindakan.</p>
 <div id="pertemuan-5-metode-pengumpulan-data-epidemiologi-dan-surveilans" class="section level1" number="7">
 <h1><span class="header-section-number">7</span> Pertemuan 5: Metode
 Pengumpulan Data Epidemiologi dan Surveilans</h1>
+<!-- BEGIN AI-INLINE:dda56d67ecda -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 5</span>
+<h3>
+Generative dan Agentic AI untuk Metode Pengumpulan Data Epidemiologi dan
+Surveilans
+</h3>
+<p><strong>Arah RPS.</strong> Causal inference, confounding, target
+trial emulation, transportability, calibration, subgroup fairness, dan
+bias data kesehatan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK2 melalui fokus: Prevalensi, insidensi, attack rate;
+Risk ratio, odds ratio, attributable risk; Ukuran mortalitas dan
+morbiditas.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menyusun data dictionary, mendeteksi potensi masalah
+kualitas data, dan mengusulkan aturan pemeriksaan.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa asal-usul data, unit observasi, coverage,
+kebocoran data, privasi, dan keputusan pembersihan; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <p><strong>Fokus pertemuan.</strong> Sumber data primer, data sekunder,
 registrasi kasus, surveilans aktif, dan surveilans pasif. Topik ini
@@ -4871,6 +5309,26 @@ Data Epidemiologi dan Surveilans</div>
 <div id="pendalaman-konsep-4" class="section level3" number="7.0.1">
 <h3><span class="header-section-number">7.0.1</span> Pendalaman
 konsep</h3>
+<!-- BEGIN AI-INLINE:989ea45abdb2 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pendalaman konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Metode Pengumpulan Data
+Epidemiologi dan Surveilans.
+</p>
+<p>
+Minta AI menjelaskan <strong>Metode Pengumpulan Data Epidemiologi dan
+Surveilans</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Metode Pengumpulan Data Epidemiologi dan Surveilans perlu dipahami
 sebagai bagian dari rantai penalaran epidemiologi yang menghubungkan
 kejadian penyakit, populasi berisiko, waktu pengamatan, ruang geografis,
@@ -5022,6 +5480,30 @@ masuk utama menuju kualitas inferensi.</p>
 <div id="contoh-kasus-pembelajaran-4" class="section level3" number="7.0.2">
 <h3><span class="header-section-number">7.0.2</span> Contoh kasus
 pembelajaran</h3>
+<!-- BEGIN AI-INLINE:3515a2d57054 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus pembelajaran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Metode Pengumpulan Data
+Epidemiologi dan Surveilans.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Causal inference,
+confounding, target trial emulation, transportability, calibration,
+subgroup fairness, dan bias data kesehatan. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bayangkan sebuah dinas kesehatan kabupaten menerima laporan
 peningkatan kasus <strong>campak</strong> pada beberapa kecamatan selama
 empat minggu terakhir. Data awal berasal dari puskesmas, rumah sakit,
@@ -5067,6 +5549,29 @@ jauh lebih berguna daripada tabel panjang tanpa narasi.</p>
 <div id="praktikum-r-metode-pengumpulan-data-epidemiologi-dan-surveilans" class="section level3" number="7.0.3">
 <h3><span class="header-section-number">7.0.3</span> Praktikum R: Metode
 Pengumpulan Data Epidemiologi dan Surveilans</h3>
+<!-- BEGIN AI-INLINE:2800ceafe360 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R: Metode Pengumpulan Data Epidemiologi dan
+Surveilans
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 5: Metode Pengumpulan Data
+Epidemiologi dan Surveilans.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="co"># Contoh format data surveilans mingguan</span></span>
 <span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>surv <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
 <span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>  <span class="at">minggu =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>,</span>
@@ -5152,6 +5657,66 @@ jujur dan tetap memberi arah tindakan.</p>
 <div id="pertemuan-6-jenis-kejadian-penyakit-endemi-epidemi-pandemi-outbreak-dan-klaster" class="section level1" number="8">
 <h1><span class="header-section-number">8</span> Pertemuan 6: Jenis
 Kejadian Penyakit: Endemi, Epidemi, Pandemi, Outbreak, dan Klaster</h1>
+<!-- BEGIN AI-INLINE:4cb3421362d5 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 6</span>
+<h3>
+Generative dan Agentic AI untuk Jenis Kejadian Penyakit: Endemi,
+Epidemi, Pandemi, Outbreak, dan Klaster
+</h3>
+<p><strong>Arah RPS.</strong> Proyek berbasis data kesehatan yang memuat
+data governance, perlindungan privasi, interpretasi klinis/kebijakan,
+dan komunikasi risiko.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK2 melalui fokus: Metode Pengumpulan Data Epidemiologi;
+Surveilans epidemiologi (aktif &amp; pasif); Sumber data primer dan
+sekunder.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menyusun data dictionary, mendeteksi potensi masalah
+kualitas data, dan mengusulkan aturan pemeriksaan.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa asal-usul data, unit observasi, coverage,
+kebocoran data, privasi, dan keputusan pembersihan; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <p><strong>Fokus pertemuan.</strong> Klasifikasi kejadian penyakit dalam
 masyarakat dan implikasinya untuk respons kesehatan publik. Topik ini
@@ -5169,6 +5734,26 @@ Penyakit: Endemi, Epidemi, Pandemi, Outbreak, dan Klaster</div>
 <div id="pendalaman-konsep-5" class="section level3" number="8.0.1">
 <h3><span class="header-section-number">8.0.1</span> Pendalaman
 konsep</h3>
+<!-- BEGIN AI-INLINE:9b3dc8fc51cd -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pendalaman konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 6: Jenis Kejadian Penyakit: Endemi,
+Epidemi, Pandemi, Outbreak, dan Klaster.
+</p>
+<p>
+Minta AI menjelaskan <strong>Jenis Kejadian Penyakit: Endemi, Epidemi,
+Pandemi, Outbreak, dan Klaster</strong> melalui definisi, analogi,
+contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan
+penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru,
+dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh
+menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Jenis Kejadian Penyakit perlu dipahami sebagai bagian dari rantai
 penalaran epidemiologi yang menghubungkan kejadian penyakit, populasi
 berisiko, waktu pengamatan, ruang geografis, serta mekanisme
@@ -5318,6 +5903,30 @@ masuk utama menuju kualitas inferensi.</p>
 <div id="contoh-kasus-pembelajaran-5" class="section level3" number="8.0.2">
 <h3><span class="header-section-number">8.0.2</span> Contoh kasus
 pembelajaran</h3>
+<!-- BEGIN AI-INLINE:eaa40bfcc49b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus pembelajaran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 6: Jenis Kejadian Penyakit: Endemi,
+Epidemi, Pandemi, Outbreak, dan Klaster.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Proyek berbasis data
+kesehatan yang memuat data governance, perlindungan privasi,
+interpretasi klinis/kebijakan, dan komunikasi risiko. Generative AI
+dapat menghasilkan beberapa skenario pemangku kepentingan dan draf
+narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat
+merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti
+sebelum laporan disetujui manusia. Checkpoint manusia mencakup
+kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness,
+dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bayangkan sebuah dinas kesehatan kabupaten menerima laporan
 peningkatan kasus <strong>keracunan makanan</strong> pada beberapa
 kecamatan selama empat minggu terakhir. Data awal berasal dari
@@ -5363,6 +5972,27 @@ jauh lebih berguna daripada tabel panjang tanpa narasi.</p>
 <div id="praktikum-r-jenis-kejadian-penyakit" class="section level3" number="8.0.3">
 <h3><span class="header-section-number">8.0.3</span> Praktikum R: Jenis
 Kejadian Penyakit</h3>
+<!-- BEGIN AI-INLINE:403cb695a6fd -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R: Jenis Kejadian Penyakit
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 6: Jenis Kejadian Penyakit: Endemi,
+Epidemi, Pandemi, Outbreak, dan Klaster.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="co"># Deteksi ambang sederhana outbreak</span></span>
 <span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>kasus <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">7</span>,<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">7</span>,<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">20</span>,<span class="dv">28</span>,<span class="dv">31</span>,<span class="dv">22</span>,<span class="dv">10</span>)</span>
 <span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>baseline <span class="ot">&lt;-</span> kasus[<span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>]</span>
@@ -5444,6 +6074,67 @@ memberi arah tindakan.</p>
 <div id="pertemuan-7-analisis-data-surveilans-dan-penyusunan-laporan-kejadian-penyakit" class="section level1" number="9">
 <h1><span class="header-section-number">9</span> Pertemuan 7: Analisis
 Data Surveilans dan Penyusunan Laporan Kejadian Penyakit</h1>
+<!-- BEGIN AI-INLINE:d63a13a51246 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 7</span>
+<h3>
+Generative dan Agentic AI untuk Analisis Data Surveilans dan Penyusunan
+Laporan Kejadian Penyakit
+</h3>
+<p><strong>Arah RPS.</strong> AI untuk surveillance, outbreak detection,
+risk prediction, phenotyping, dan integrasi data kesehatan
+multisisumber.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK2 melalui fokus: Teknik pengumpulan data lapangan dan
+registrasi kasus; Desain Studi Epidemiologi; Studi observasional
+(cross-sectional, case-control, cohort); Studi eksperimental/intervensi
+(randomized controlled trial).</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <p><strong>Fokus pertemuan.</strong> Analisis tren, evaluasi faktor
 risiko, interpretasi sinyal, dan penulisan rekomendasi berbasis data.
@@ -5457,6 +6148,26 @@ Prevention 2012</a>; <a href="#ref-friis2020">Friis dan Sellers
 <div id="pendalaman-konsep-6" class="section level3" number="9.0.1">
 <h3><span class="header-section-number">9.0.1</span> Pendalaman
 konsep</h3>
+<!-- BEGIN AI-INLINE:955846ac7a75 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pendalaman konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 7: Analisis Data Surveilans dan
+Penyusunan Laporan Kejadian Penyakit.
+</p>
+<p>
+Minta AI menjelaskan <strong>Analisis Data Surveilans dan Penyusunan
+Laporan Kejadian Penyakit</strong> melalui definisi, analogi, contoh,
+dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu
+dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis
+kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi
+satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Analisis Data Surveilans dan Penyusunan Laporan Kejadian Penyakit
 perlu dipahami sebagai bagian dari rantai penalaran epidemiologi yang
 menghubungkan kejadian penyakit, populasi berisiko, waktu pengamatan,
@@ -5610,6 +6321,30 @@ masuk utama menuju kualitas inferensi.</p>
 <div id="contoh-kasus-pembelajaran-6" class="section level3" number="9.0.2">
 <h3><span class="header-section-number">9.0.2</span> Contoh kasus
 pembelajaran</h3>
+<!-- BEGIN AI-INLINE:10462ea59204 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus pembelajaran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 7: Analisis Data Surveilans dan
+Penyusunan Laporan Kejadian Penyakit.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI untuk surveillance,
+outbreak detection, risk prediction, phenotyping, dan integrasi data
+kesehatan multisisumber. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bayangkan sebuah dinas kesehatan kabupaten menerima laporan
 peningkatan kasus <strong>demam berdarah dengue</strong> pada beberapa
 kecamatan selama empat minggu terakhir. Data awal berasal dari
@@ -5655,6 +6390,29 @@ jauh lebih berguna daripada tabel panjang tanpa narasi.</p>
 <div id="praktikum-r-analisis-data-surveilans-dan-penyusunan-laporan-kejadian-penyakit" class="section level3" number="9.0.3">
 <h3><span class="header-section-number">9.0.3</span> Praktikum R:
 Analisis Data Surveilans dan Penyusunan Laporan Kejadian Penyakit</h3>
+<!-- BEGIN AI-INLINE:6ab79aef0ee2 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R: Analisis Data Surveilans dan Penyusunan
+Laporan Kejadian Penyakit
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 7: Analisis Data Surveilans dan
+Penyusunan Laporan Kejadian Penyakit.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="co"># Stratifikasi sederhana faktor risiko</span></span>
 <span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
@@ -5739,6 +6497,63 @@ jujur dan tetap memberi arah tindakan.</p>
 <div id="pertemuan-8-uts-berbasis-proyek-integrasi-ukuran-peta-dan-surveilans" class="section level1" number="10">
 <h1><span class="header-section-number">10</span> Pertemuan 8: UTS
 Berbasis Proyek: Integrasi Ukuran, Peta, dan Surveilans</h1>
+<!-- BEGIN AI-INLINE:25763bdb2619 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 8</span>
+<h3>
+Generative dan Agentic AI untuk UTS Berbasis Proyek: Integrasi Ukuran,
+Peta, dan Surveilans
+</h3>
+<p><strong>Arah RPS.</strong> Penggunaan AI hanya sesuai instruksi
+dosen; seluruh bantuan harus diungkapkan dan hasil diverifikasi.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1–2 melalui fokus: Ujian Tengah Semester.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <p><strong>Fokus pertemuan.</strong> Integrasi subcpmk1 dan subcpmk2
 melalui proyek tengah semester. Topik ini mendukung CPMK/SubCPMK dalam
@@ -5751,6 +6566,26 @@ presentasi, dan laporan tertulis. Referensi utama bagian ini adalah
 <div id="pendalaman-konsep-7" class="section level3" number="10.0.1">
 <h3><span class="header-section-number">10.0.1</span> Pendalaman
 konsep</h3>
+<!-- BEGIN AI-INLINE:615e4475f1de -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pendalaman konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 8: UTS Berbasis Proyek: Integrasi
+Ukuran, Peta, dan Surveilans.
+</p>
+<p>
+Minta AI menjelaskan <strong>UTS Berbasis Proyek: Integrasi Ukuran,
+Peta, dan Surveilans</strong> melalui definisi, analogi, contoh, dan
+contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>UTS Berbasis Proyek perlu dipahami sebagai bagian dari rantai
 penalaran epidemiologi yang menghubungkan kejadian penyakit, populasi
 berisiko, waktu pengamatan, ruang geografis, serta mekanisme
@@ -5898,6 +6733,30 @@ masuk utama menuju kualitas inferensi.</p>
 <div id="contoh-kasus-pembelajaran-7" class="section level3" number="10.0.2">
 <h3><span class="header-section-number">10.0.2</span> Contoh kasus
 pembelajaran</h3>
+<!-- BEGIN AI-INLINE:0b6839b7aa65 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus pembelajaran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 8: UTS Berbasis Proyek: Integrasi
+Ukuran, Peta, dan Surveilans.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Penggunaan AI hanya
+sesuai instruksi dosen; seluruh bantuan harus diungkapkan dan hasil
+diverifikasi. Generative AI dapat menghasilkan beberapa skenario
+pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap
+hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bayangkan sebuah dinas kesehatan kabupaten menerima laporan
 peningkatan kasus <strong>penyakit potensial wabah</strong> pada
 beberapa kecamatan selama empat minggu terakhir. Data awal berasal dari
@@ -5942,6 +6801,28 @@ jauh lebih berguna daripada tabel panjang tanpa narasi.</p>
 <div id="praktikum-r-uts-berbasis-proyek" class="section level3" number="10.0.3">
 <h3><span class="header-section-number">10.0.3</span> Praktikum R: UTS
 Berbasis Proyek</h3>
+<!-- BEGIN AI-INLINE:698f689ec247 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R: UTS Berbasis Proyek
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 8: UTS Berbasis Proyek: Integrasi
+Ukuran, Peta, dan Surveilans.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="co"># Template folder proyek UTS</span></span>
 <span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>folders <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;data_raw&quot;</span>, <span class="st">&quot;data_clean&quot;</span>, <span class="st">&quot;script&quot;</span>, <span class="st">&quot;output&quot;</span>, <span class="st">&quot;report&quot;</span>, <span class="st">&quot;slides&quot;</span>)</span>
 <span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="co"># dir.create(&quot;UTS_Epidemiologi&quot;)</span></span>
@@ -6021,6 +6902,66 @@ ketidakpastian secara jujur dan tetap memberi arah tindakan.</p>
 <div id="pertemuan-9-manajemen-data-epidemiologi-dengan-r-struktur-data-dan-data-dictionary" class="section level1" number="11">
 <h1><span class="header-section-number">11</span> Pertemuan 9: Manajemen
 Data Epidemiologi dengan R: Struktur Data dan Data Dictionary</h1>
+<!-- BEGIN AI-INLINE:22689aed0633 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 9</span>
+<h3>
+Generative dan Agentic AI untuk Manajemen Data Epidemiologi dengan R:
+Struktur Data dan Data Dictionary
+</h3>
+<p><strong>Arah RPS.</strong> Causal inference, confounding, target
+trial emulation, transportability, calibration, subgroup fairness, dan
+bias data kesehatan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Kelebihan dan kelemahan masing-masing
+desain; Analisis Data Epidemiologi; Pengolahan dan pembersihan data
+epidemiologi.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menyusun data dictionary, mendeteksi potensi masalah
+kualitas data, dan mengusulkan aturan pemeriksaan.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa asal-usul data, unit observasi, coverage,
+kebocoran data, privasi, dan keputusan pembersihan; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <p><strong>Fokus pertemuan.</strong> Struktur data epidemiologi, kamus
 data, skema input-output, dan prinsip tidy data. Topik ini mendukung
@@ -6039,6 +6980,26 @@ Epidemiologi dengan R: Struktur Data dan Data Dictionary</div>
 <div id="pendalaman-konsep-8" class="section level3" number="11.0.1">
 <h3><span class="header-section-number">11.0.1</span> Pendalaman
 konsep</h3>
+<!-- BEGIN AI-INLINE:a7189f950ae7 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pendalaman konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 9: Manajemen Data Epidemiologi
+dengan R: Struktur Data dan Data Dictionary.
+</p>
+<p>
+Minta AI menjelaskan <strong>Manajemen Data Epidemiologi dengan R:
+Struktur Data dan Data Dictionary</strong> melalui definisi, analogi,
+contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan
+penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru,
+dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh
+menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Manajemen Data Epidemiologi dengan R perlu dipahami sebagai bagian
 dari rantai penalaran epidemiologi yang menghubungkan kejadian penyakit,
 populasi berisiko, waktu pengamatan, ruang geografis, serta mekanisme
@@ -6188,6 +7149,30 @@ masuk utama menuju kualitas inferensi.</p>
 <div id="contoh-kasus-pembelajaran-8" class="section level3" number="11.0.2">
 <h3><span class="header-section-number">11.0.2</span> Contoh kasus
 pembelajaran</h3>
+<!-- BEGIN AI-INLINE:2d8f70fd884b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus pembelajaran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 9: Manajemen Data Epidemiologi
+dengan R: Struktur Data dan Data Dictionary.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Causal inference,
+confounding, target trial emulation, transportability, calibration,
+subgroup fairness, dan bias data kesehatan. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bayangkan sebuah dinas kesehatan kabupaten menerima laporan
 peningkatan kasus <strong>infeksi saluran pernapasan akut</strong> pada
 beberapa kecamatan selama empat minggu terakhir. Data awal berasal dari
@@ -6234,6 +7219,28 @@ jauh lebih berguna daripada tabel panjang tanpa narasi.</p>
 <div id="praktikum-r-manajemen-data-epidemiologi-dengan-r" class="section level3" number="11.0.3">
 <h3><span class="header-section-number">11.0.3</span> Praktikum R:
 Manajemen Data Epidemiologi dengan R</h3>
+<!-- BEGIN AI-INLINE:9aad87e83a19 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R: Manajemen Data Epidemiologi dengan R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 9: Manajemen Data Epidemiologi
+dengan R: Struktur Data dan Data Dictionary.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="co"># Contoh data dictionary sederhana</span></span>
 <span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>data_dictionary <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
 <span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>  <span class="at">nama_variabel =</span> <span class="fu">c</span>(<span class="st">&quot;id_kasus&quot;</span>, <span class="st">&quot;tanggal_onset&quot;</span>, <span class="st">&quot;kode_wilayah&quot;</span>, <span class="st">&quot;umur&quot;</span>, <span class="st">&quot;jenis_kelamin&quot;</span>, <span class="st">&quot;status_kasus&quot;</span>),</span>
@@ -6316,6 +7323,66 @@ memberi arah tindakan.</p>
 <div id="pertemuan-10-cleaning-validasi-dan-transformasi-data-epidemiologi" class="section level1" number="12">
 <h1><span class="header-section-number">12</span> Pertemuan 10:
 Cleaning, Validasi, dan Transformasi Data Epidemiologi</h1>
+<!-- BEGIN AI-INLINE:50ccfb9eb34c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 10</span>
+<h3>
+Generative dan Agentic AI untuk Cleaning, Validasi, dan Transformasi
+Data Epidemiologi
+</h3>
+<p><strong>Arah RPS.</strong> Proyek berbasis data kesehatan yang memuat
+data governance, perlindungan privasi, interpretasi klinis/kebijakan,
+dan komunikasi risiko.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Analisis deskriptif dan inferensial
+pada data epidemiologi; Uji hipotesis dalam epidemiologi; Visualisasi
+Distribusi Penyakit.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk mengurai notasi dan menawarkan langkah derivasi
+alternatif tanpa menggantikan pembuktian mahasiswa.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter; agen wajib berhenti pada checkpoint
+dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa setiap langkah aljabar, syarat regularitas,
+satuan, kasus batas, dan makna parameter; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <p><strong>Fokus pertemuan.</strong> Pembersihan data, deteksi
 duplikasi, missing values, nilai tidak logis, dan transformasi variabel.
@@ -6329,6 +7396,26 @@ Prevention 2012</a>)</span>.</p>
 <div id="pendalaman-konsep-9" class="section level3" number="12.0.1">
 <h3><span class="header-section-number">12.0.1</span> Pendalaman
 konsep</h3>
+<!-- BEGIN AI-INLINE:1cfbd3f16faf -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pendalaman konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 10: Cleaning, Validasi, dan
+Transformasi Data Epidemiologi.
+</p>
+<p>
+Minta AI menjelaskan <strong>Cleaning, Validasi, dan Transformasi Data
+Epidemiologi</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Cleaning, Validasi, dan Transformasi Data Epidemiologi perlu dipahami
 sebagai bagian dari rantai penalaran epidemiologi yang menghubungkan
 kejadian penyakit, populasi berisiko, waktu pengamatan, ruang geografis,
@@ -6480,6 +7567,30 @@ masuk utama menuju kualitas inferensi.</p>
 <div id="contoh-kasus-pembelajaran-9" class="section level3" number="12.0.2">
 <h3><span class="header-section-number">12.0.2</span> Contoh kasus
 pembelajaran</h3>
+<!-- BEGIN AI-INLINE:9607bac677d4 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus pembelajaran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 10: Cleaning, Validasi, dan
+Transformasi Data Epidemiologi.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Proyek berbasis data
+kesehatan yang memuat data governance, perlindungan privasi,
+interpretasi klinis/kebijakan, dan komunikasi risiko. Generative AI
+dapat menghasilkan beberapa skenario pemangku kepentingan dan draf
+narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat
+merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti
+sebelum laporan disetujui manusia. Checkpoint manusia mencakup
+kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness,
+dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bayangkan sebuah dinas kesehatan kabupaten menerima laporan
 peningkatan kasus <strong>malaria</strong> pada beberapa kecamatan
 selama empat minggu terakhir. Data awal berasal dari puskesmas, rumah
@@ -6526,6 +7637,29 @@ jauh lebih berguna daripada tabel panjang tanpa narasi.</p>
 <div id="praktikum-r-cleaning-validasi-dan-transformasi-data-epidemiologi" class="section level3" number="12.0.3">
 <h3><span class="header-section-number">12.0.3</span> Praktikum R:
 Cleaning, Validasi, dan Transformasi Data Epidemiologi</h3>
+<!-- BEGIN AI-INLINE:545a1afc79d1 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R: Cleaning, Validasi, dan Transformasi Data
+Epidemiologi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 10: Cleaning, Validasi, dan
+Transformasi Data Epidemiologi.
+</p>
+<p>
+Agen dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data.
+Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan
+penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong> asal-usul
+data, unit observasi, coverage, kebocoran data, privasi, dan keputusan
+pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="co"># Validasi sederhana data epidemiologi</span></span>
 <span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a>validasi_epi <span class="ot">&lt;-</span> <span class="cf">function</span>(df){</span>
 <span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a>  df<span class="sc">$</span>flag_umur <span class="ot">&lt;-</span> <span class="fu">is.na</span>(df<span class="sc">$</span>umur) <span class="sc">|</span> df<span class="sc">$</span>umur <span class="sc">&lt;</span> <span class="dv">0</span> <span class="sc">|</span> df<span class="sc">$</span>umur <span class="sc">&gt;</span> <span class="dv">120</span></span>
@@ -6615,6 +7749,66 @@ tindakan.</p>
 <div id="pertemuan-11-algoritma-input-output-dokumentasi-dan-reproducible-epidemiology" class="section level1" number="13">
 <h1><span class="header-section-number">13</span> Pertemuan 11:
 Algoritma Input-Output, Dokumentasi, dan Reproducible Epidemiology</h1>
+<!-- BEGIN AI-INLINE:f326cc9056e3 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 11</span>
+<h3>
+Generative dan Agentic AI untuk Algoritma Input-Output, Dokumentasi, dan
+Reproducible Epidemiology
+</h3>
+<p><strong>Arah RPS.</strong> AI untuk surveillance, outbreak detection,
+risk prediction, phenotyping, dan integrasi data kesehatan
+multisisumber.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Pembuatan dan interpretasi peta
+distribusi spasial penyakit; Aplikasi perangkat lunak statistika dan GIS
+(misal: R, QGIS); Manajemen Data Epidemiologi dengan R.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <p><strong>Fokus pertemuan.</strong> Pengembangan algoritma manajemen
 data epidemiologi menggunakan r dan dokumentasi proses. Topik ini
@@ -6628,6 +7822,26 @@ Referensi utama bagian ini adalah <span class="citation">(<a href="#ref-wickham2
 <div id="pendalaman-konsep-10" class="section level3" number="13.0.1">
 <h3><span class="header-section-number">13.0.1</span> Pendalaman
 konsep</h3>
+<!-- BEGIN AI-INLINE:39b5b95bcc37 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pendalaman konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 11: Algoritma Input-Output,
+Dokumentasi, dan Reproducible Epidemiology.
+</p>
+<p>
+Minta AI menjelaskan <strong>Algoritma Input-Output, Dokumentasi, dan
+Reproducible Epidemiology</strong> melalui definisi, analogi, contoh,
+dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu
+dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis
+kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi
+satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Algoritma Input-Output, Dokumentasi, dan Reproducible Epidemiology
 perlu dipahami sebagai bagian dari rantai penalaran epidemiologi yang
 menghubungkan kejadian penyakit, populasi berisiko, waktu pengamatan,
@@ -6781,6 +7995,30 @@ masuk utama menuju kualitas inferensi.</p>
 <div id="contoh-kasus-pembelajaran-10" class="section level3" number="13.0.2">
 <h3><span class="header-section-number">13.0.2</span> Contoh kasus
 pembelajaran</h3>
+<!-- BEGIN AI-INLINE:f5d199cee5c1 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus pembelajaran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 11: Algoritma Input-Output,
+Dokumentasi, dan Reproducible Epidemiology.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI untuk surveillance,
+outbreak detection, risk prediction, phenotyping, dan integrasi data
+kesehatan multisisumber. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bayangkan sebuah dinas kesehatan kabupaten menerima laporan
 peningkatan kasus <strong>diabetes mellitus</strong> pada beberapa
 kecamatan selama empat minggu terakhir. Data awal berasal dari
@@ -6827,6 +8065,28 @@ jauh lebih berguna daripada tabel panjang tanpa narasi.</p>
 <div id="praktikum-r-algoritma-input-output-dokumentasi-dan-reproducible-epidemiology" class="section level3" number="13.0.3">
 <h3><span class="header-section-number">13.0.3</span> Praktikum R:
 Algoritma Input-Output, Dokumentasi, dan Reproducible Epidemiology</h3>
+<!-- BEGIN AI-INLINE:8489cb7f55d6 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R: Algoritma Input-Output, Dokumentasi, dan
+Reproducible Epidemiology
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 11: Algoritma Input-Output,
+Dokumentasi, dan Reproducible Epidemiology.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="co"># Fungsi modular untuk membuat data siap analisis</span></span>
 <span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>clean_epi <span class="ot">&lt;-</span> <span class="cf">function</span>(df){</span>
 <span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a>  df <span class="sc">|&gt;</span></span>
@@ -6916,6 +8176,66 @@ tindakan.</p>
 <div id="pertemuan-12-sistem-peringatan-dini-tren-ambang-dan-deteksi-sinyal" class="section level1" number="14">
 <h1><span class="header-section-number">14</span> Pertemuan 12: Sistem
 Peringatan Dini: Tren, Ambang, dan Deteksi Sinyal</h1>
+<!-- BEGIN AI-INLINE:6564cab71695 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 12</span>
+<h3>
+Generative dan Agentic AI untuk Sistem Peringatan Dini: Tren, Ambang,
+dan Deteksi Sinyal
+</h3>
+<p><strong>Arah RPS.</strong> Causal inference, confounding, target
+trial emulation, transportability, calibration, subgroup fairness, dan
+bias data kesehatan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3 melalui fokus: Struktur data epidemiologi; Cleaning,
+validasi, dan transformasi data menggunakan R; Surveilans dan Sistem
+Peringatan Dini.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menyusun data dictionary, mendeteksi potensi masalah
+kualitas data, dan mengusulkan aturan pemeriksaan.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa asal-usul data, unit observasi, coverage,
+kebocoran data, privasi, dan keputusan pembersihan; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <p><strong>Fokus pertemuan.</strong> Early warning system, deteksi dini
 outbreak, interpretasi ambang, dan evaluasi performa sinyal. Topik ini
@@ -6934,6 +8254,26 @@ Dini: Tren, Ambang, dan Deteksi Sinyal</div>
 <div id="pendalaman-konsep-11" class="section level3" number="14.0.1">
 <h3><span class="header-section-number">14.0.1</span> Pendalaman
 konsep</h3>
+<!-- BEGIN AI-INLINE:f43fceb8945f -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pendalaman konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 12: Sistem Peringatan Dini: Tren,
+Ambang, dan Deteksi Sinyal.
+</p>
+<p>
+Minta AI menjelaskan <strong>Sistem Peringatan Dini: Tren, Ambang, dan
+Deteksi Sinyal</strong> melalui definisi, analogi, contoh, dan contoh
+tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Sistem Peringatan Dini perlu dipahami sebagai bagian dari rantai
 penalaran epidemiologi yang menghubungkan kejadian penyakit, populasi
 berisiko, waktu pengamatan, ruang geografis, serta mekanisme
@@ -7084,6 +8424,30 @@ masuk utama menuju kualitas inferensi.</p>
 <div id="contoh-kasus-pembelajaran-11" class="section level3" number="14.0.2">
 <h3><span class="header-section-number">14.0.2</span> Contoh kasus
 pembelajaran</h3>
+<!-- BEGIN AI-INLINE:2177b5781f1c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus pembelajaran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 12: Sistem Peringatan Dini: Tren,
+Ambang, dan Deteksi Sinyal.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Causal inference,
+confounding, target trial emulation, transportability, calibration,
+subgroup fairness, dan bias data kesehatan. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bayangkan sebuah dinas kesehatan kabupaten menerima laporan
 peningkatan kasus <strong>diare akut</strong> pada beberapa kecamatan
 selama empat minggu terakhir. Data awal berasal dari puskesmas, rumah
@@ -7129,6 +8493,27 @@ jauh lebih berguna daripada tabel panjang tanpa narasi.</p>
 <div id="praktikum-r-sistem-peringatan-dini" class="section level3" number="14.0.3">
 <h3><span class="header-section-number">14.0.3</span> Praktikum R:
 Sistem Peringatan Dini</h3>
+<!-- BEGIN AI-INLINE:d3f00289b07e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R: Sistem Peringatan Dini
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 12: Sistem Peringatan Dini: Tren,
+Ambang, dan Deteksi Sinyal.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="co"># Moving average dan z-score baseline</span></span>
 <span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">22</span>)</span>
 <span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rpois</span>(<span class="dv">20</span>, <span class="dv">8</span>), <span class="dv">18</span>, <span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">19</span>, <span class="fu">rpois</span>(<span class="dv">6</span>, <span class="dv">9</span>))</span>
@@ -7213,6 +8598,66 @@ memberi arah tindakan.</p>
 <h1><span class="header-section-number">15</span> Pertemuan 13: Desain
 Studi Epidemiologi: Cross-sectional, Case-control, Cohort, dan
 Trial</h1>
+<!-- BEGIN AI-INLINE:b3bf6b707517 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 13</span>
+<h3>
+Generative dan Agentic AI untuk Desain Studi Epidemiologi:
+Cross-sectional, Case-control, Cohort, dan Trial
+</h3>
+<p><strong>Arah RPS.</strong> Proyek berbasis data kesehatan yang memuat
+data governance, perlindungan privasi, interpretasi klinis/kebijakan,
+dan komunikasi risiko.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK4 melalui fokus: Konsep dan implementasi surveilans;
+Deteksi dini outbreak dan analisis tren kejadian penyakit; Penelitian
+dan Publikasi Epidemiologi.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menyusun data dictionary, mendeteksi potensi masalah
+kualitas data, dan mengusulkan aturan pemeriksaan.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memprofilkan data, menjalankan validasi skema, menandai
+missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa asal-usul data, unit observasi, coverage,
+kebocoran data, privasi, dan keputusan pembersihan; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <p><strong>Fokus pertemuan.</strong> Pemilihan desain studi epidemiologi
 dan konsekuensi inferensialnya. Topik ini mendukung CPMK/SubCPMK dalam
@@ -7231,6 +8676,26 @@ Epidemiologi: Cross-sectional, Case-control, Cohort, dan Trial</div>
 <div id="pendalaman-konsep-12" class="section level3" number="15.0.1">
 <h3><span class="header-section-number">15.0.1</span> Pendalaman
 konsep</h3>
+<!-- BEGIN AI-INLINE:2645c5b0d737 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pendalaman konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 13: Desain Studi Epidemiologi:
+Cross-sectional, Case-control, Cohort, dan Trial.
+</p>
+<p>
+Minta AI menjelaskan <strong>Desain Studi Epidemiologi: Cross-sectional,
+Case-control, Cohort, dan Trial</strong> melalui definisi, analogi,
+contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan
+penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru,
+dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh
+menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Desain Studi Epidemiologi perlu dipahami sebagai bagian dari rantai
 penalaran epidemiologi yang menghubungkan kejadian penyakit, populasi
 berisiko, waktu pengamatan, ruang geografis, serta mekanisme
@@ -7378,6 +8843,30 @@ masuk utama menuju kualitas inferensi.</p>
 <div id="contoh-kasus-pembelajaran-12" class="section level3" number="15.0.2">
 <h3><span class="header-section-number">15.0.2</span> Contoh kasus
 pembelajaran</h3>
+<!-- BEGIN AI-INLINE:1f018b18d5f9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus pembelajaran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 13: Desain Studi Epidemiologi:
+Cross-sectional, Case-control, Cohort, dan Trial.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Proyek berbasis data
+kesehatan yang memuat data governance, perlindungan privasi,
+interpretasi klinis/kebijakan, dan komunikasi risiko. Generative AI
+dapat menghasilkan beberapa skenario pemangku kepentingan dan draf
+narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat
+merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti
+sebelum laporan disetujui manusia. Checkpoint manusia mencakup
+kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness,
+dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bayangkan sebuah dinas kesehatan kabupaten menerima laporan
 peningkatan kasus <strong>hipertensi</strong> pada beberapa kecamatan
 selama empat minggu terakhir. Data awal berasal dari puskesmas, rumah
@@ -7424,6 +8913,27 @@ jauh lebih berguna daripada tabel panjang tanpa narasi.</p>
 <div id="praktikum-r-desain-studi-epidemiologi" class="section level3" number="15.0.3">
 <h3><span class="header-section-number">15.0.3</span> Praktikum R:
 Desain Studi Epidemiologi</h3>
+<!-- BEGIN AI-INLINE:0fb661d81cc5 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R: Desain Studi Epidemiologi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 13: Desain Studi Epidemiologi:
+Cross-sectional, Case-control, Cohort, dan Trial.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="co"># Menghitung odds ratio dari tabel 2x2</span></span>
 <span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="co">#              Kasus Kontrol</span></span>
 <span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a><span class="co"># Terpapar        a       b</span></span>
@@ -7509,6 +9019,66 @@ tindakan.</p>
 <div id="pertemuan-14-analisis-statistik-lanjut-regresi-spasial-survival-dan-penalaran-kausal" class="section level1" number="16">
 <h1><span class="header-section-number">16</span> Pertemuan 14: Analisis
 Statistik Lanjut: Regresi, Spasial, Survival, dan Penalaran Kausal</h1>
+<!-- BEGIN AI-INLINE:32c0be971f78 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 14</span>
+<h3>
+Generative dan Agentic AI untuk Analisis Statistik Lanjut: Regresi,
+Spasial, Survival, dan Penalaran Kausal
+</h3>
+<p><strong>Arah RPS.</strong> AI untuk surveillance, outbreak detection,
+risk prediction, phenotyping, dan integrasi data kesehatan
+multisisumber.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK4 melalui fokus: Penyusunan proposal penelitian
+epidemiologi; Pengembangan hipotesis dan metodologi riset; Etika
+penelitian dan penulisan ilmiah di bidang epidemiologi.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk membandingkan kandidat model, menuliskan alasan
+pemilihan, dan mengusulkan diagnostik.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat memasang kandidat model, menjalankan diagnostik, membandingkan
+metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi;
+agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi,
+residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak
+diterima sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <p><strong>Fokus pertemuan.</strong> Regresi logistik, poisson, cox,
 model spasial, dan diagram kausal dalam epidemiologi. Topik ini
@@ -7527,6 +9097,26 @@ Lanjut: Regresi, Spasial, Survival, dan Penalaran Kausal</div>
 <div id="pendalaman-konsep-13" class="section level3" number="16.0.1">
 <h3><span class="header-section-number">16.0.1</span> Pendalaman
 konsep</h3>
+<!-- BEGIN AI-INLINE:f971f5f58be8 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pendalaman konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Analisis Statistik Lanjut:
+Regresi, Spasial, Survival, dan Penalaran Kausal.
+</p>
+<p>
+Minta AI menjelaskan <strong>Analisis Statistik Lanjut: Regresi,
+Spasial, Survival, dan Penalaran Kausal</strong> melalui definisi,
+analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan
+penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru,
+dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh
+menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Analisis Statistik Lanjut perlu dipahami sebagai bagian dari rantai
 penalaran epidemiologi yang menghubungkan kejadian penyakit, populasi
 berisiko, waktu pengamatan, ruang geografis, serta mekanisme
@@ -7675,6 +9265,30 @@ masuk utama menuju kualitas inferensi.</p>
 <div id="contoh-kasus-pembelajaran-13" class="section level3" number="16.0.2">
 <h3><span class="header-section-number">16.0.2</span> Contoh kasus
 pembelajaran</h3>
+<!-- BEGIN AI-INLINE:a2eede6a639b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus pembelajaran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Analisis Statistik Lanjut:
+Regresi, Spasial, Survival, dan Penalaran Kausal.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI untuk surveillance,
+outbreak detection, risk prediction, phenotyping, dan integrasi data
+kesehatan multisisumber. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bayangkan sebuah dinas kesehatan kabupaten menerima laporan
 peningkatan kasus <strong>kematian ibu</strong> pada beberapa kecamatan
 selama empat minggu terakhir. Data awal berasal dari puskesmas, rumah
@@ -7721,6 +9335,29 @@ jauh lebih berguna daripada tabel panjang tanpa narasi.</p>
 <div id="praktikum-r-analisis-statistik-lanjut" class="section level3" number="16.0.3">
 <h3><span class="header-section-number">16.0.3</span> Praktikum R:
 Analisis Statistik Lanjut</h3>
+<!-- BEGIN AI-INLINE:9b2e807fcb83 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R: Analisis Statistik Lanjut
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 14: Analisis Statistik Lanjut:
+Regresi, Spasial, Survival, dan Penalaran Kausal.
+</p>
+<p>
+Agen dapat memasang kandidat model, menjalankan diagnostik,
+membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau
+konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+spesifikasi model, data leakage, konvergensi, residual, kalibrasi,
+ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="co"># Model Poisson dengan offset populasi</span></span>
 <span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">7</span>)</span>
 <span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
@@ -7807,6 +9444,67 @@ tindakan.</p>
 <h1><span class="header-section-number">17</span> Pertemuan 15:
 Epidemiologi Digital, Machine Learning, dan Bayesian Disease
 Mapping</h1>
+<!-- BEGIN AI-INLINE:8f3e5486e0b4 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 15</span>
+<h3>
+Generative dan Agentic AI untuk Epidemiologi Digital, Machine Learning,
+dan Bayesian Disease Mapping
+</h3>
+<p><strong>Arah RPS.</strong> Causal inference, confounding, target
+trial emulation, transportability, calibration, subgroup fairness, dan
+bias data kesehatan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK4 melalui fokus: Aplikasi Statistik Lanjut pada
+Epidemiologi; Analisis regresi, spasial, dan machine learning pada data
+epidemiologi; Studi kasus aplikasi data besar (big data) dan
+epidemiologi digital.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <p><strong>Fokus pertemuan.</strong> Analisis big data, machine
 learning, pemetaan penyakit bayesian, dan interpretabilitas model. Topik
@@ -7823,6 +9521,26 @@ Digital, Machine Learning, dan Bayesian Disease Mapping</div>
 <div id="pendalaman-konsep-14" class="section level3" number="17.0.1">
 <h3><span class="header-section-number">17.0.1</span> Pendalaman
 konsep</h3>
+<!-- BEGIN AI-INLINE:0b5aabcedac7 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pendalaman konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 15: Epidemiologi Digital, Machine
+Learning, dan Bayesian Disease Mapping.
+</p>
+<p>
+Minta AI menjelaskan <strong>Epidemiologi Digital, Machine Learning, dan
+Bayesian Disease Mapping</strong> melalui definisi, analogi, contoh, dan
+contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Epidemiologi Digital, Machine Learning, dan Bayesian Disease Mapping
 perlu dipahami sebagai bagian dari rantai penalaran epidemiologi yang
 menghubungkan kejadian penyakit, populasi berisiko, waktu pengamatan,
@@ -7976,6 +9694,30 @@ masuk utama menuju kualitas inferensi.</p>
 <div id="contoh-kasus-pembelajaran-14" class="section level3" number="17.0.2">
 <h3><span class="header-section-number">17.0.2</span> Contoh kasus
 pembelajaran</h3>
+<!-- BEGIN AI-INLINE:bbea0e2b4c87 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus pembelajaran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 15: Epidemiologi Digital, Machine
+Learning, dan Bayesian Disease Mapping.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Causal inference,
+confounding, target trial emulation, transportability, calibration,
+subgroup fairness, dan bias data kesehatan. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bayangkan sebuah dinas kesehatan kabupaten menerima laporan
 peningkatan kasus <strong>stunting dan DBD</strong> pada beberapa
 kecamatan selama empat minggu terakhir. Data awal berasal dari
@@ -8023,6 +9765,28 @@ jauh lebih berguna daripada tabel panjang tanpa narasi.</p>
 <h3><span class="header-section-number">17.0.3</span> Praktikum R:
 Epidemiologi Digital, Machine Learning, dan Bayesian Disease
 Mapping</h3>
+<!-- BEGIN AI-INLINE:4f1ad8f1e3ea -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R: Epidemiologi Digital, Machine Learning, dan
+Bayesian Disease Mapping
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 15: Epidemiologi Digital, Machine
+Learning, dan Bayesian Disease Mapping.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="co"># Kerangka validasi prediksi sederhana</span></span>
 <span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">10</span>)</span>
 <span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
@@ -8116,6 +9880,65 @@ jujur dan tetap memberi arah tindakan.</p>
 <div id="pertemuan-16-uas-proposal-penelitian-etika-publikasi-dan-komunikasi-ilmiah" class="section level1" number="18">
 <h1><span class="header-section-number">18</span> Pertemuan 16: UAS,
 Proposal Penelitian, Etika, Publikasi, dan Komunikasi Ilmiah</h1>
+<!-- BEGIN AI-INLINE:5108fadb2815 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 16</span>
+<h3>
+Generative dan Agentic AI untuk UAS, Proposal Penelitian, Etika,
+Publikasi, dan Komunikasi Ilmiah
+</h3>
+<p><strong>Arah RPS.</strong> Audit akhir prompt, sumber, kode, hasil,
+ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila
+digunakan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek
+akhir.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada
+checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian,
+keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima
+sebagai bukti kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <p><strong>Fokus pertemuan.</strong> Penyusunan proposal inovatif
 epidemiologi dan presentasi ilmiah berbasis pendekatan statistik
@@ -8127,6 +9950,26 @@ publikasi. Referensi utama bagian ini adalah <span class="citation">(<a href="#r
 <div id="pendalaman-konsep-15" class="section level3" number="18.0.1">
 <h3><span class="header-section-number">18.0.1</span> Pendalaman
 konsep</h3>
+<!-- BEGIN AI-INLINE:804ee32a4e26 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pendalaman konsep
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: UAS, Proposal Penelitian, Etika,
+Publikasi, dan Komunikasi Ilmiah.
+</p>
+<p>
+Minta AI menjelaskan <strong>UAS, Proposal Penelitian, Etika, Publikasi,
+dan Komunikasi Ilmiah</strong> melalui definisi, analogi, contoh, dan
+contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan
+rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali
+konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya
+sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>UAS, Proposal Penelitian, Etika, Publikasi, dan Komunikasi Ilmiah
 perlu dipahami sebagai bagian dari rantai penalaran epidemiologi yang
 menghubungkan kejadian penyakit, populasi berisiko, waktu pengamatan,
@@ -8278,6 +10121,30 @@ masuk utama menuju kualitas inferensi.</p>
 <div id="contoh-kasus-pembelajaran-15" class="section level3" number="18.0.2">
 <h3><span class="header-section-number">18.0.2</span> Contoh kasus
 pembelajaran</h3>
+<!-- BEGIN AI-INLINE:ad41378bf243 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus pembelajaran
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: UAS, Proposal Penelitian, Etika,
+Publikasi, dan Komunikasi Ilmiah.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Audit akhir prompt,
+sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi,
+serta log agen bila digunakan. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bayangkan sebuah dinas kesehatan kabupaten menerima laporan
 peningkatan kasus <strong>masalah kesehatan prioritas daerah</strong>
 pada beberapa kecamatan selama empat minggu terakhir. Data awal berasal
@@ -8324,6 +10191,29 @@ jauh lebih berguna daripada tabel panjang tanpa narasi.</p>
 <div id="praktikum-r-uas-proposal-penelitian-etika-publikasi-dan-komunikasi-ilmiah" class="section level3" number="18.0.3">
 <h3><span class="header-section-number">18.0.3</span> Praktikum R: UAS,
 Proposal Penelitian, Etika, Publikasi, dan Komunikasi Ilmiah</h3>
+<!-- BEGIN AI-INLINE:919eccd92fdf -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Praktikum R: UAS, Proposal Penelitian, Etika, Publikasi,
+dan Komunikasi Ilmiah
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: UAS, Proposal Penelitian, Etika,
+Publikasi, dan Komunikasi Ilmiah.
+</p>
+<p>
+Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint
+sebelum perubahan data, pemilihan model, dan penerbitan hasil.
+<strong>Mahasiswa wajib memeriksa:</strong> kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="co"># Kerangka tabel proposal akhir</span></span>
 <span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a>proposal <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
 <span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a>  <span class="at">bagian =</span> <span class="fu">c</span>(<span class="st">&quot;Latar belakang&quot;</span>, <span class="st">&quot;Gap&quot;</span>, <span class="st">&quot;Tujuan&quot;</span>, <span class="st">&quot;Data&quot;</span>, <span class="st">&quot;Metode&quot;</span>, <span class="st">&quot;Etika&quot;</span>, <span class="st">&quot;Kontribusi&quot;</span>),</span>
@@ -11209,6 +13099,78 @@ interpretasi, keterbatasan, serta rekomendasi yang dapat diuji atau
 ditindaklanjuti. Kebiasaan ini membuat analisis epidemiologi tidak
 berhenti sebagai latihan teknis, tetapi menjadi kontribusi nyata bagi
 kesehatan masyarakat.</p>
+<!-- BEGIN ADOPSI AI RPS 2026 -->
+</div>
+<div id="penyelarasan-materi-dengan-rps-revisi-ai-2026" class="section level2" number="25.174">
+<h2><span class="header-section-number">25.174</span> Penyelarasan
+Materi dengan RPS Revisi AI 2026</h2>
+<p>Materi <strong>Epidemiologi</strong> ini telah diselaraskan dengan
+RPS Revisi AI 2026. Rumusan CPL program studi tetap dan tidak diubah.
+Generative AI maupun agentic AI hanya digunakan sebagai alat bantu untuk
+mempercepat ketercapaian CPMK dan Sub-CPMK; penalaran statistika,
+keputusan metodologis, dan tanggung jawab akademik tetap berada pada
+mahasiswa.</p>
+<div id="integrasi-ai-kontekstual" class="section level3" number="25.174.1">
+<h3><span class="header-section-number">25.174.1</span> Integrasi AI
+kontekstual</h3>
+<ul>
+<li>AI untuk surveillance, outbreak detection, risk prediction,
+phenotyping, dan integrasi data kesehatan multisisumber.</li>
+<li>Causal inference, confounding, target trial emulation,
+transportability, calibration, subgroup fairness, dan bias data
+kesehatan.</li>
+<li>Proyek berbasis data kesehatan yang memuat data governance,
+perlindungan privasi, interpretasi klinis/kebijakan, dan komunikasi
+risiko.</li>
+</ul>
+</div>
+<div id="protokol-penggunaan-ai" class="section level3" number="25.174.2">
+<h3><span class="header-section-number">25.174.2</span> Protokol
+penggunaan AI</h3>
+<ol style="list-style-type: decimal">
+<li>Nyatakan alat, tujuan penggunaan, dan bagian pekerjaan yang dibantu
+AI.</li>
+<li>Simpan prompt log ringkas, sumber, versi kode/notebook, dan
+perubahan yang dilakukan.</li>
+<li>Verifikasi keluaran terhadap asumsi metode, sumber primer, hasil
+numerik, diagnostik, ketidakpastian, robustness, bias/fairness, privasi,
+dan konteks.</li>
+<li>Jangan memasukkan data pribadi, rahasia, soal asesmen tertutup, atau
+kredensial ke layanan AI yang tidak disetujui.</li>
+<li>Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil
+secara mandiri.</li>
+</ol>
+</div>
+<div id="bukti-asesmen" class="section level3" number="25.174.3">
+<h3><span class="header-section-number">25.174.3</span> Bukti
+asesmen</h3>
+<!-- BEGIN AI-INLINE:6245f6d51576 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Bukti asesmen
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 16: UAS, Proposal Penelitian, Etika,
+Publikasi, dan Komunikasi Ilmiah.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
+<p>Penilaian berfokus pada ketepatan metode, validasi dan
+ketidakpastian, reproducibility, interpretasi, komunikasi, serta
+transparansi penggunaan AI. Keluaran AI tanpa verifikasi bukan bukti
+ketercapaian CPMK.</p>
+<!-- END ADOPSI AI RPS 2026 -->
 <div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
 <div id="ref-bailey1995" class="csl-entry">
 Bailey, Trevor C., dan Anthony C. Gatrell. 1995. <em>Interactive Spatial
@@ -11296,32 +13258,13 @@ major deadly diseases</em>. World Health Organization.
 </div>
 </div>
 </div>
+</div>
 
 
 
 </div>
 </div>
 
-
-
-
-
-
-<!-- BEGIN ADOPSI AI RPS 2026 -->
-<section id="penyelarasan-rps-ai-2026" style="margin:2rem 0;padding:1.5rem;border-left:8px solid #f2a51a;background:#eef5f8;border-radius:8px">
-  <h2>Penyelarasan Materi dengan RPS Revisi AI 2026</h2>
-  <p>Materi <strong>Epidemiologi</strong> ini mempertahankan rumusan CPL yang berlaku. AI ditempatkan sebagai alat bantu untuk mempercepat ketercapaian CPMK dan Sub-CPMK, bukan sebagai CPL baru atau pengganti penalaran statistika.</p>
-  <h3>Integrasi AI kontekstual</h3><ul><li>AI untuk surveillance, outbreak detection, risk prediction, phenotyping, dan integrasi data kesehatan multisisumber.</li><li>Causal inference, confounding, target trial emulation, transportability, calibration, subgroup fairness, dan bias data kesehatan.</li><li>Proyek berbasis data kesehatan yang memuat data governance, perlindungan privasi, interpretasi klinis/kebijakan, dan komunikasi risiko.</li></ul>
-  <h3>Protokol penggunaan AI</h3>
-  <ol>
-    <li>Ungkapkan alat, tujuan, prompt log ringkas, sumber, dan perubahan yang dilakukan.</li>
-    <li>Verifikasi asumsi, kode, hasil numerik, diagnostik, ketidakpastian, robustness, bias/fairness, privasi, dan konteks.</li>
-    <li>Jangan mengunggah data pribadi, rahasia, asesmen tertutup, atau kredensial ke layanan yang tidak disetujui.</li>
-    <li>Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil secara mandiri.</li>
-  </ol>
-  <p><strong>Bukti asesmen:</strong> ketepatan metode, validasi, reproducibility, interpretasi, komunikasi, dan transparansi penggunaan AI. Keluaran AI tanpa verifikasi bukan bukti ketercapaian CPMK.</p>
-</section>
-<!-- END ADOPSI AI RPS 2026 -->
 </div>
 
 <script>
@@ -11386,6 +13329,16 @@ $(document).ready(function ()  {
     // tocify
     var toc = $("#TOC").tocify(options).data("toc-tocify");
 });
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
 </script>
 
 </body>

@@ -146,7 +146,6 @@ table {
 </style>
 <!-- END UNPAD MATERIAL STYLE -->
 
-
 <!-- BEGIN UNPAD MATERIAL ENHANCEMENT -->
 
 ```{r setup-unpad-render, include=FALSE}
@@ -163,7 +162,6 @@ knitr::opts_chunk$set(
 )
 set.seed(2025)
 ```
-
 
 <div class="unpad-cover">
 <div class="unpad-cover__brand">
@@ -364,6 +362,31 @@ hr{border-top:2px dashed #dfbd8f;}
 <span class="badge">Mixed Models</span>
 </div>
 </div>
+
+
+<!-- BEGIN AI-INLINE-STYLE-2026 -->
+<style>
+.ai-inline {
+  margin: 1rem 0 1.35rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid #bfd9d5;
+  border-left: 7px solid #0f766e;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #eff9f7, #fffaf0);
+}
+.ai-inline--agentic { border-left-color: #17395c; background: linear-gradient(135deg, #eef5fb, #f5faf8); }
+.ai-inline--assessment { border-left-color: #a35d00; background: #fff8e8; }
+.ai-inline h3, .ai-inline h4 { margin-top: 0; color: #17395c; }
+.ai-inline p:last-child, .ai-inline ul:last-child { margin-bottom: 0; }
+.ai-inline__label {
+  display: inline-block; margin-bottom: .45rem; padding: .2rem .55rem;
+  border-radius: 999px; background: #17395c; color: white;
+  font-size: .78rem; font-weight: 800;
+}
+.ai-inline table { width: 100%; margin: .6rem 0; background: white; }
+</style>
+<!-- END AI-INLINE-STYLE-2026 -->
+
 # Identitas Mata Kuliah dan Orientasi Modul
 
 Modul ini dikembangkan untuk mata kuliah **Analisis Multilevel dan Longitudinal** pada Program Studi **S2 Statistika Terapan, Fakultas Matematika dan Ilmu Pengetahuan Alam, Universitas Padjadjaran**. Mata kuliah ini berada pada semester 2 dengan bobot 3 SKS, terdiri dari 2 SKS teori dan 1 SKS praktikum. Sesuai rancangan pembelajaran semester, mata kuliah diarahkan agar mahasiswa tidak hanya memahami model secara matematis, tetapi juga mampu membaca struktur data nyata, memilih model yang tepat, menjalankan analisis dengan perangkat lunak statistik, menafsirkan hasil secara substantif, dan merancang proposal riset yang inovatif.
@@ -416,6 +439,29 @@ Karena mata kuliah ini berada pada jenjang magister, mahasiswa diharapkan tidak 
 
 # Kerangka Berpikir Analisis Multilevel dan Longitudinal
 
+<!-- BEGIN AI-INLINE:30c36f6fee75 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 1</span>
+<h3>Generative dan Agentic AI untuk Kerangka Berpikir Analisis Multilevel dan Longitudinal</h3>
+
+**Arah RPS.** Hierarchical machine learning, mixed-effects trees/boosting, dynamic prediction, dan integrasi model multilevel dengan Bayesian computation.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK1 melalui fokus: Pendahuluan Analisis Multilevel dan Longitudinal; Konsep dasar data bertingkat (multilevel) dan longitudinal; Contoh aplikasi di berbagai bidang. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 Analisis multilevel dan longitudinal memiliki akar konseptual yang sama: observasi tidak selalu independen. Dalam analisis multilevel, ketergantungan muncul karena unit level bawah berada dalam unit level atas yang sama. Siswa dalam sekolah yang sama cenderung lebih mirip dibanding siswa dari sekolah berbeda karena berbagi guru, kurikulum, lingkungan sosial, fasilitas, dan kebijakan sekolah. Pasien dari rumah sakit yang sama dapat memiliki pola luaran kesehatan yang mirip karena berbagi protokol pelayanan, kualitas fasilitas, dan karakteristik populasi rujukan. Dalam analisis longitudinal, ketergantungan muncul karena pengukuran berulang pada subjek yang sama membawa jejak karakteristik individu yang relatif stabil dari waktu ke waktu.
 
 Konsekuensi dari ketergantungan adalah pelanggaran asumsi independensi error. Jika pelanggaran ini diabaikan, standard error dapat bias, p-value dapat terlalu optimistis, interval kepercayaan menjadi terlalu sempit, dan kesimpulan inferensial dapat keliru. Pada tingkat substantif, mengabaikan clustering juga dapat menutupi heterogenitas antar kelompok. Misalnya, sebuah program pendidikan mungkin tampak efektif secara rata-rata, tetapi efeknya sangat berbeda antar sekolah. Sebuah intervensi kesehatan mungkin menaikkan probabilitas kesembuhan secara umum, tetapi efeknya bergantung pada karakteristik fasilitas kesehatan. Model multilevel dan longitudinal membantu memisahkan variasi dalam unit dan variasi antar unit, sekaligus memungkinkan koefisien regresi bervariasi antar kelompok atau antar individu.
@@ -442,6 +488,29 @@ $$
 
 # Pertemuan 1: Pengantar Analisis Multilevel dan Longitudinal
 
+<!-- BEGIN AI-INLINE:13c1731d6f5a -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 1</span>
+<h3>Generative dan Agentic AI untuk Pengantar Analisis Multilevel dan Longitudinal</h3>
+
+**Arah RPS.** Hierarchical machine learning, mixed-effects trees/boosting, dynamic prediction, dan integrasi model multilevel dengan Bayesian computation.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK1 melalui fokus: Pendahuluan Analisis Multilevel dan Longitudinal; Konsep dasar data bertingkat (multilevel) dan longitudinal; Contoh aplikasi di berbagai bidang. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class='week-card'>
 <h3>Fokus pertemuan</h3>
 <p><strong>SubCPMK1 - Menganalisis jenis data dan permasalahan pada data multilevel dan longitudinal.</strong></p>
@@ -458,6 +527,16 @@ $$
 - Menulis interpretasi hasil yang menghubungkan output statistik dengan masalah substantif.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:879f5341e329 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Pengantar Analisis Multilevel dan Longitudinal.</p>
+<p>Minta AI menjelaskan **Pengantar Analisis Multilevel dan Longitudinal** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pada tahap ini, fokus utama bukan hanya mengenal istilah pengantar analisis multilevel dan longitudinal, tetapi memahami logika desain data yang membuat metode tersebut diperlukan. Dalam pendidikan, kesehatan masyarakat, survei sosial, dan evaluasi kebijakan, peneliti sering menghadapi situasi ketika observasi memiliki kedekatan karena berada pada kelompok yang sama atau diukur pada individu yang sama dari waktu ke waktu. Ketika kedekatan ini diabaikan, model dapat menghasilkan kesimpulan yang tampak meyakinkan secara numerik tetapi rapuh secara metodologis. Literatur Goldstein (2011), Snijders dan Bosker (2012), Singer dan Willett (2003) menekankan bahwa pemodelan harus dimulai dari pertanyaan substantif, kemudian diterjemahkan ke dalam struktur level, komponen variasi, dan asumsi inferensial.
 
@@ -499,6 +578,16 @@ $$
 
 ## Contoh Kasus Terapan
 
+<!-- BEGIN AI-INLINE:e056b3f0bd0d -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh Kasus Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Pengantar Analisis Multilevel dan Longitudinal.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Hierarchical machine learning, mixed-effects trees/boosting, dynamic prediction, dan integrasi model multilevel dengan Bayesian computation. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Misalkan peneliti ingin mengevaluasi faktor yang memengaruhi skor literasi mahasiswa. Data dikumpulkan dari banyak kelas, dan setiap kelas berada pada program studi tertentu. Jika semua observasi dianggap independen, model mengabaikan kemungkinan bahwa mahasiswa dalam kelas yang sama memiliki pengalaman belajar yang lebih mirip. Dengan pengantar analisis multilevel dan longitudinal, peneliti dapat memisahkan variasi antar mahasiswa, antar kelas, dan antar program studi. Hasilnya bukan hanya koefisien prediktor, tetapi juga ukuran seberapa besar konteks kelas berkontribusi pada variasi skor.
 
 Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa kali pada pasien yang sama. Setiap pasien memiliki status awal berbeda dan laju perubahan berbeda setelah intervensi. Pendekatan pengantar analisis multilevel dan longitudinal memungkinkan peneliti memodelkan status awal sebagai random intercept dan perubahan waktu sebagai random slope. Interpretasinya sangat berguna: intervensi mungkin menurunkan tekanan darah secara rata-rata, tetapi laju penurunan bisa lebih cepat pada pasien dengan karakteristik tertentu.
@@ -506,6 +595,16 @@ Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa k
 Pada survei sosial ekonomi, rumah tangga sering diamati berulang dalam beberapa gelombang survei. Perubahan pendapatan dapat dipengaruhi oleh karakteristik rumah tangga, wilayah, dan kondisi waktu. Model longitudinal membantu membedakan variasi antar rumah tangga dan perubahan dalam rumah tangga. Bila rumah tangga juga berada dalam desa atau kabupaten, pendekatan multilevel longitudinal dapat digunakan untuk menggabungkan dimensi hierarki dan waktu secara simultan.
 
 ## Implementasi Komputasi
+
+<!-- BEGIN AI-INLINE:7d27306f0dae -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi Komputasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 1: Pengantar Analisis Multilevel dan Longitudinal.</p>
+<p>Agen dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r pertemuan_1, eval=FALSE}
 # Struktur sederhana data multilevel: siswa di dalam sekolah
@@ -546,6 +645,29 @@ Pertemuan ini menempatkan pengantar analisis multilevel dan longitudinal sebagai
 
 # Pertemuan 2: Identifikasi Level Data, Unit Analisis, dan Desain Penelitian
 
+<!-- BEGIN AI-INLINE:404b0bb279a8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 2</span>
+<h3>Generative dan Agentic AI untuk Identifikasi Level Data, Unit Analisis, dan Desain Penelitian</h3>
+
+**Arah RPS.** Missing data, informative dropout, time-varying confounding, causal longitudinal analysis, dan evaluasi heterogenitas efek.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK1 melalui fokus: Eksplorasi Data Multilevel dan Longitudinal; Identifikasi struktur data hierarkis dan repeated measures; Masalah dependency, missing data, dan outlier. |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class='week-card'>
 <h3>Fokus pertemuan</h3>
 <p><strong>SubCPMK1 - Menganalisis struktur data dan level hierarki.</strong></p>
@@ -562,6 +684,16 @@ Pertemuan ini menempatkan pengantar analisis multilevel dan longitudinal sebagai
 - Menulis interpretasi hasil yang menghubungkan output statistik dengan masalah substantif.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:71a254a07203 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 2: Identifikasi Level Data, Unit Analisis, dan Desain Penelitian.</p>
+<p>Minta AI menjelaskan **Identifikasi Level Data, Unit Analisis, dan Desain Penelitian** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pada tahap ini, fokus utama bukan hanya mengenal istilah identifikasi level data, unit analisis, dan desain penelitian, tetapi memahami logika desain data yang membuat metode tersebut diperlukan. Dalam siswa-kelas-sekolah, pasien-dokter-rumah sakit, individu-rumah tangga-desa, peneliti sering menghadapi situasi ketika observasi memiliki kedekatan karena berada pada kelompok yang sama atau diukur pada individu yang sama dari waktu ke waktu. Ketika kedekatan ini diabaikan, model dapat menghasilkan kesimpulan yang tampak meyakinkan secara numerik tetapi rapuh secara metodologis. Literatur Raudenbush dan Bryk (2002), Hox et al. (2018), Goldstein (2011) menekankan bahwa pemodelan harus dimulai dari pertanyaan substantif, kemudian diterjemahkan ke dalam struktur level, komponen variasi, dan asumsi inferensial.
 
@@ -603,6 +735,16 @@ $$
 
 ## Contoh Kasus Terapan
 
+<!-- BEGIN AI-INLINE:f210d13eafde -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh Kasus Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 2: Identifikasi Level Data, Unit Analisis, dan Desain Penelitian.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Missing data, informative dropout, time-varying confounding, causal longitudinal analysis, dan evaluasi heterogenitas efek. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Misalkan peneliti ingin mengevaluasi faktor yang memengaruhi skor literasi mahasiswa. Data dikumpulkan dari banyak kelas, dan setiap kelas berada pada program studi tertentu. Jika semua observasi dianggap independen, model mengabaikan kemungkinan bahwa mahasiswa dalam kelas yang sama memiliki pengalaman belajar yang lebih mirip. Dengan identifikasi level data, unit analisis, dan desain penelitian, peneliti dapat memisahkan variasi antar mahasiswa, antar kelas, dan antar program studi. Hasilnya bukan hanya koefisien prediktor, tetapi juga ukuran seberapa besar konteks kelas berkontribusi pada variasi skor.
 
 Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa kali pada pasien yang sama. Setiap pasien memiliki status awal berbeda dan laju perubahan berbeda setelah intervensi. Pendekatan identifikasi level data, unit analisis, dan desain penelitian memungkinkan peneliti memodelkan status awal sebagai random intercept dan perubahan waktu sebagai random slope. Interpretasinya sangat berguna: intervensi mungkin menurunkan tekanan darah secara rata-rata, tetapi laju penurunan bisa lebih cepat pada pasien dengan karakteristik tertentu.
@@ -610,6 +752,16 @@ Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa k
 Pada survei sosial ekonomi, rumah tangga sering diamati berulang dalam beberapa gelombang survei. Perubahan pendapatan dapat dipengaruhi oleh karakteristik rumah tangga, wilayah, dan kondisi waktu. Model longitudinal membantu membedakan variasi antar rumah tangga dan perubahan dalam rumah tangga. Bila rumah tangga juga berada dalam desa atau kabupaten, pendekatan multilevel longitudinal dapat digunakan untuk menggabungkan dimensi hierarki dan waktu secara simultan.
 
 ## Implementasi Komputasi
+
+<!-- BEGIN AI-INLINE:b1817bd18d79 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi Komputasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 2: Identifikasi Level Data, Unit Analisis, dan Desain Penelitian.</p>
+<p>Agen dapat memprofilkan data, menjalankan validasi skema, menandai missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** asal-usul data, unit observasi, coverage, kebocoran data, privasi, dan keputusan pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r pertemuan_2, eval=FALSE}
 # Pemeriksaan struktur level: berapa observasi per kelompok?
@@ -644,6 +796,29 @@ Pertemuan ini menempatkan identifikasi level data, unit analisis, dan desain pen
 
 # Pertemuan 3: Dependency, Missing Data, Outlier, dan Eksplorasi Awal
 
+<!-- BEGIN AI-INLINE:6c4555a51663 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 3</span>
+<h3>Generative dan Agentic AI untuk Dependency, Missing Data, Outlier, dan Eksplorasi Awal</h3>
+
+**Arah RPS.** Asesmen proyek longitudinal atau multilevel yang melaporkan validasi lintas kelompok/waktu, uncertainty, dan fairness antarsubpopulasi.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK1 melalui fokus: Model Linier Sederhana dan Keterbatasannya; Model regresi linier klasik; Mengapa model linier tidak memadai untuk data multilevel/longitudinal. |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class='week-card'>
 <h3>Fokus pertemuan</h3>
 <p><strong>SubCPMK1 - Mengidentifikasi dependency, missing data, clustering, dan outlier.</strong></p>
@@ -660,6 +835,16 @@ Pertemuan ini menempatkan identifikasi level data, unit analisis, dan desain pen
 - Menulis interpretasi hasil yang menghubungkan output statistik dengan masalah substantif.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:904c1970005f -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 3: Dependency, Missing Data, Outlier, dan Eksplorasi Awal.</p>
+<p>Minta AI menjelaskan **Dependency, Missing Data, Outlier, dan Eksplorasi Awal** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pada tahap ini, fokus utama bukan hanya mengenal istilah dependency, missing data, outlier, dan eksplorasi awal, tetapi memahami logika desain data yang membuat metode tersebut diperlukan. Dalam studi longitudinal kesehatan, survei panel rumah tangga, dan evaluasi pendidikan, peneliti sering menghadapi situasi ketika observasi memiliki kedekatan karena berada pada kelompok yang sama atau diukur pada individu yang sama dari waktu ke waktu. Ketika kedekatan ini diabaikan, model dapat menghasilkan kesimpulan yang tampak meyakinkan secara numerik tetapi rapuh secara metodologis. Literatur Little dan Rubin (2019), Fitzmaurice et al. (2011), Diggle et al. (2002) menekankan bahwa pemodelan harus dimulai dari pertanyaan substantif, kemudian diterjemahkan ke dalam struktur level, komponen variasi, dan asumsi inferensial.
 
@@ -701,6 +886,16 @@ $$
 
 ## Contoh Kasus Terapan
 
+<!-- BEGIN AI-INLINE:b9fac687f5e1 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh Kasus Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 3: Dependency, Missing Data, Outlier, dan Eksplorasi Awal.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Asesmen proyek longitudinal atau multilevel yang melaporkan validasi lintas kelompok/waktu, uncertainty, dan fairness antarsubpopulasi. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Misalkan peneliti ingin mengevaluasi faktor yang memengaruhi skor literasi mahasiswa. Data dikumpulkan dari banyak kelas, dan setiap kelas berada pada program studi tertentu. Jika semua observasi dianggap independen, model mengabaikan kemungkinan bahwa mahasiswa dalam kelas yang sama memiliki pengalaman belajar yang lebih mirip. Dengan dependency, missing data, outlier, dan eksplorasi awal, peneliti dapat memisahkan variasi antar mahasiswa, antar kelas, dan antar program studi. Hasilnya bukan hanya koefisien prediktor, tetapi juga ukuran seberapa besar konteks kelas berkontribusi pada variasi skor.
 
 Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa kali pada pasien yang sama. Setiap pasien memiliki status awal berbeda dan laju perubahan berbeda setelah intervensi. Pendekatan dependency, missing data, outlier, dan eksplorasi awal memungkinkan peneliti memodelkan status awal sebagai random intercept dan perubahan waktu sebagai random slope. Interpretasinya sangat berguna: intervensi mungkin menurunkan tekanan darah secara rata-rata, tetapi laju penurunan bisa lebih cepat pada pasien dengan karakteristik tertentu.
@@ -708,6 +903,16 @@ Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa k
 Pada survei sosial ekonomi, rumah tangga sering diamati berulang dalam beberapa gelombang survei. Perubahan pendapatan dapat dipengaruhi oleh karakteristik rumah tangga, wilayah, dan kondisi waktu. Model longitudinal membantu membedakan variasi antar rumah tangga dan perubahan dalam rumah tangga. Bila rumah tangga juga berada dalam desa atau kabupaten, pendekatan multilevel longitudinal dapat digunakan untuk menggabungkan dimensi hierarki dan waktu secara simultan.
 
 ## Implementasi Komputasi
+
+<!-- BEGIN AI-INLINE:a0db3c0fe3b3 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi Komputasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 3: Dependency, Missing Data, Outlier, dan Eksplorasi Awal.</p>
+<p>Agen dapat memprofilkan data, menjalankan validasi skema, menandai missing value/outlier/duplikasi, lalu berhenti sebelum perubahan data. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** asal-usul data, unit observasi, coverage, kebocoran data, privasi, dan keputusan pembersihan. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r pertemuan_3, eval=FALSE}
 # Membuat missingness artifisial untuk contoh eksplorasi
@@ -746,6 +951,29 @@ Pertemuan ini menempatkan dependency, missing data, outlier, dan eksplorasi awal
 
 # Pertemuan 4: Model Linier Klasik dan Keterbatasannya pada Data Kompleks
 
+<!-- BEGIN AI-INLINE:24c97a100f98 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 4</span>
+<h3>Generative dan Agentic AI untuk Model Linier Klasik dan Keterbatasannya pada Data Kompleks</h3>
+
+**Arah RPS.** Hierarchical machine learning, mixed-effects trees/boosting, dynamic prediction, dan integrasi model multilevel dengan Bayesian computation.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK1 melalui fokus: Model Multilevel Dasar; Model two-level (random intercept); Model random slope. |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class='week-card'>
 <h3>Fokus pertemuan</h3>
 <p><strong>SubCPMK1 - Menjelaskan mengapa regresi klasik tidak memadai untuk data multilevel/longitudinal.</strong></p>
@@ -762,6 +990,16 @@ Pertemuan ini menempatkan dependency, missing data, outlier, dan eksplorasi awal
 - Menulis interpretasi hasil yang menghubungkan output statistik dengan masalah substantif.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:f4de5a971ae7 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 4: Model Linier Klasik dan Keterbatasannya pada Data Kompleks.</p>
+<p>Minta AI menjelaskan **Model Linier Klasik dan Keterbatasannya pada Data Kompleks** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pada tahap ini, fokus utama bukan hanya mengenal istilah model linier klasik dan keterbatasannya pada data kompleks, tetapi memahami logika desain data yang membuat metode tersebut diperlukan. Dalam perbandingan model OLS dengan model mixed effects, peneliti sering menghadapi situasi ketika observasi memiliki kedekatan karena berada pada kelompok yang sama atau diukur pada individu yang sama dari waktu ke waktu. Ketika kedekatan ini diabaikan, model dapat menghasilkan kesimpulan yang tampak meyakinkan secara numerik tetapi rapuh secara metodologis. Literatur Snijders dan Bosker (2012), Goldstein (2011), Gelman dan Hill (2007) menekankan bahwa pemodelan harus dimulai dari pertanyaan substantif, kemudian diterjemahkan ke dalam struktur level, komponen variasi, dan asumsi inferensial.
 
@@ -803,6 +1041,16 @@ $$
 
 ## Contoh Kasus Terapan
 
+<!-- BEGIN AI-INLINE:1d6a0728bf34 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh Kasus Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 4: Model Linier Klasik dan Keterbatasannya pada Data Kompleks.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Hierarchical machine learning, mixed-effects trees/boosting, dynamic prediction, dan integrasi model multilevel dengan Bayesian computation. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Misalkan peneliti ingin mengevaluasi faktor yang memengaruhi skor literasi mahasiswa. Data dikumpulkan dari banyak kelas, dan setiap kelas berada pada program studi tertentu. Jika semua observasi dianggap independen, model mengabaikan kemungkinan bahwa mahasiswa dalam kelas yang sama memiliki pengalaman belajar yang lebih mirip. Dengan model linier klasik dan keterbatasannya pada data kompleks, peneliti dapat memisahkan variasi antar mahasiswa, antar kelas, dan antar program studi. Hasilnya bukan hanya koefisien prediktor, tetapi juga ukuran seberapa besar konteks kelas berkontribusi pada variasi skor.
 
 Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa kali pada pasien yang sama. Setiap pasien memiliki status awal berbeda dan laju perubahan berbeda setelah intervensi. Pendekatan model linier klasik dan keterbatasannya pada data kompleks memungkinkan peneliti memodelkan status awal sebagai random intercept dan perubahan waktu sebagai random slope. Interpretasinya sangat berguna: intervensi mungkin menurunkan tekanan darah secara rata-rata, tetapi laju penurunan bisa lebih cepat pada pasien dengan karakteristik tertentu.
@@ -810,6 +1058,16 @@ Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa k
 Pada survei sosial ekonomi, rumah tangga sering diamati berulang dalam beberapa gelombang survei. Perubahan pendapatan dapat dipengaruhi oleh karakteristik rumah tangga, wilayah, dan kondisi waktu. Model longitudinal membantu membedakan variasi antar rumah tangga dan perubahan dalam rumah tangga. Bila rumah tangga juga berada dalam desa atau kabupaten, pendekatan multilevel longitudinal dapat digunakan untuk menggabungkan dimensi hierarki dan waktu secara simultan.
 
 ## Implementasi Komputasi
+
+<!-- BEGIN AI-INLINE:1c9e494aa713 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi Komputasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 4: Model Linier Klasik dan Keterbatasannya pada Data Kompleks.</p>
+<p>Agen dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r pertemuan_4, eval=FALSE}
 # Regresi OLS mengabaikan clustering
@@ -843,6 +1101,29 @@ Pertemuan ini menempatkan model linier klasik dan keterbatasannya pada data komp
 
 # Pertemuan 5: Model Multilevel Dasar: Random Intercept
 
+<!-- BEGIN AI-INLINE:170ec970c702 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 5</span>
+<h3>Generative dan Agentic AI untuk Model Multilevel Dasar: Random Intercept</h3>
+
+**Arah RPS.** Missing data, informative dropout, time-varying confounding, causal longitudinal analysis, dan evaluasi heterogenitas efek.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK2 melalui fokus: Estimasi parameter dan interpretasi; Pengembangan Model Multilevel; Model three-level. |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class='week-card'>
 <h3>Fokus pertemuan</h3>
 <p><strong>SubCPMK2 - Mengevaluasi dan memilih model multilevel yang sesuai.</strong></p>
@@ -859,6 +1140,16 @@ Pertemuan ini menempatkan model linier klasik dan keterbatasannya pada data komp
 - Menulis interpretasi hasil yang menghubungkan output statistik dengan masalah substantif.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:ee9f0bd95796 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 5: Model Multilevel Dasar: Random Intercept.</p>
+<p>Minta AI menjelaskan **Model Multilevel Dasar: Random Intercept** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pada tahap ini, fokus utama bukan hanya mengenal istilah model multilevel dasar: random intercept, tetapi memahami logika desain data yang membuat metode tersebut diperlukan. Dalam skor siswa yang dikelompokkan berdasarkan sekolah atau kelas, peneliti sering menghadapi situasi ketika observasi memiliki kedekatan karena berada pada kelompok yang sama atau diukur pada individu yang sama dari waktu ke waktu. Ketika kedekatan ini diabaikan, model dapat menghasilkan kesimpulan yang tampak meyakinkan secara numerik tetapi rapuh secara metodologis. Literatur Goldstein (2011), Raudenbush dan Bryk (2002), Snijders dan Bosker (2012) menekankan bahwa pemodelan harus dimulai dari pertanyaan substantif, kemudian diterjemahkan ke dalam struktur level, komponen variasi, dan asumsi inferensial.
 
@@ -900,6 +1191,16 @@ $$
 
 ## Contoh Kasus Terapan
 
+<!-- BEGIN AI-INLINE:d216e49b2169 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh Kasus Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 5: Model Multilevel Dasar: Random Intercept.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Missing data, informative dropout, time-varying confounding, causal longitudinal analysis, dan evaluasi heterogenitas efek. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Misalkan peneliti ingin mengevaluasi faktor yang memengaruhi skor literasi mahasiswa. Data dikumpulkan dari banyak kelas, dan setiap kelas berada pada program studi tertentu. Jika semua observasi dianggap independen, model mengabaikan kemungkinan bahwa mahasiswa dalam kelas yang sama memiliki pengalaman belajar yang lebih mirip. Dengan model multilevel dasar: random intercept, peneliti dapat memisahkan variasi antar mahasiswa, antar kelas, dan antar program studi. Hasilnya bukan hanya koefisien prediktor, tetapi juga ukuran seberapa besar konteks kelas berkontribusi pada variasi skor.
 
 Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa kali pada pasien yang sama. Setiap pasien memiliki status awal berbeda dan laju perubahan berbeda setelah intervensi. Pendekatan model multilevel dasar: random intercept memungkinkan peneliti memodelkan status awal sebagai random intercept dan perubahan waktu sebagai random slope. Interpretasinya sangat berguna: intervensi mungkin menurunkan tekanan darah secara rata-rata, tetapi laju penurunan bisa lebih cepat pada pasien dengan karakteristik tertentu.
@@ -907,6 +1208,16 @@ Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa k
 Pada survei sosial ekonomi, rumah tangga sering diamati berulang dalam beberapa gelombang survei. Perubahan pendapatan dapat dipengaruhi oleh karakteristik rumah tangga, wilayah, dan kondisi waktu. Model longitudinal membantu membedakan variasi antar rumah tangga dan perubahan dalam rumah tangga. Bila rumah tangga juga berada dalam desa atau kabupaten, pendekatan multilevel longitudinal dapat digunakan untuk menggabungkan dimensi hierarki dan waktu secara simultan.
 
 ## Implementasi Komputasi
+
+<!-- BEGIN AI-INLINE:0e602b0b85c1 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi Komputasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 5: Model Multilevel Dasar: Random Intercept.</p>
+<p>Agen dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r pertemuan_5, eval=FALSE}
 # Contoh kode random intercept dengan lme4
@@ -942,6 +1253,29 @@ Pertemuan ini menempatkan model multilevel dasar: random intercept sebagai bagia
 
 # Pertemuan 6: Random Slope dan Interaksi Lintas Level
 
+<!-- BEGIN AI-INLINE:aa6fb956bf51 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 6</span>
+<h3>Generative dan Agentic AI untuk Random Slope dan Interaksi Lintas Level</h3>
+
+**Arah RPS.** Asesmen proyek longitudinal atau multilevel yang melaporkan validasi lintas kelompok/waktu, uncertainty, dan fairness antarsubpopulasi.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK2 melalui fokus: Variance components; Intraclass correlation coefficient (ICC); Diagnosis dan evaluasi model multilevel. |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class='week-card'>
 <h3>Fokus pertemuan</h3>
 <p><strong>SubCPMK2 - Membandingkan random intercept dan random slope.</strong></p>
@@ -958,6 +1292,16 @@ Pertemuan ini menempatkan model multilevel dasar: random intercept sebagai bagia
 - Menulis interpretasi hasil yang menghubungkan output statistik dengan masalah substantif.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:e21bc4fa453a -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 6: Random Slope dan Interaksi Lintas Level.</p>
+<p>Minta AI menjelaskan **Random Slope dan Interaksi Lintas Level** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pada tahap ini, fokus utama bukan hanya mengenal istilah random slope dan interaksi lintas level, tetapi memahami logika desain data yang membuat metode tersebut diperlukan. Dalam efek status sosial ekonomi yang berbeda antar sekolah atau wilayah, peneliti sering menghadapi situasi ketika observasi memiliki kedekatan karena berada pada kelompok yang sama atau diukur pada individu yang sama dari waktu ke waktu. Ketika kedekatan ini diabaikan, model dapat menghasilkan kesimpulan yang tampak meyakinkan secara numerik tetapi rapuh secara metodologis. Literatur Snijders dan Bosker (2012), Hox et al. (2018), Gelman dan Hill (2007) menekankan bahwa pemodelan harus dimulai dari pertanyaan substantif, kemudian diterjemahkan ke dalam struktur level, komponen variasi, dan asumsi inferensial.
 
@@ -999,6 +1343,16 @@ $$
 
 ## Contoh Kasus Terapan
 
+<!-- BEGIN AI-INLINE:861d35469246 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh Kasus Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 6: Random Slope dan Interaksi Lintas Level.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Asesmen proyek longitudinal atau multilevel yang melaporkan validasi lintas kelompok/waktu, uncertainty, dan fairness antarsubpopulasi. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Misalkan peneliti ingin mengevaluasi faktor yang memengaruhi skor literasi mahasiswa. Data dikumpulkan dari banyak kelas, dan setiap kelas berada pada program studi tertentu. Jika semua observasi dianggap independen, model mengabaikan kemungkinan bahwa mahasiswa dalam kelas yang sama memiliki pengalaman belajar yang lebih mirip. Dengan random slope dan interaksi lintas level, peneliti dapat memisahkan variasi antar mahasiswa, antar kelas, dan antar program studi. Hasilnya bukan hanya koefisien prediktor, tetapi juga ukuran seberapa besar konteks kelas berkontribusi pada variasi skor.
 
 Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa kali pada pasien yang sama. Setiap pasien memiliki status awal berbeda dan laju perubahan berbeda setelah intervensi. Pendekatan random slope dan interaksi lintas level memungkinkan peneliti memodelkan status awal sebagai random intercept dan perubahan waktu sebagai random slope. Interpretasinya sangat berguna: intervensi mungkin menurunkan tekanan darah secara rata-rata, tetapi laju penurunan bisa lebih cepat pada pasien dengan karakteristik tertentu.
@@ -1006,6 +1360,16 @@ Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa k
 Pada survei sosial ekonomi, rumah tangga sering diamati berulang dalam beberapa gelombang survei. Perubahan pendapatan dapat dipengaruhi oleh karakteristik rumah tangga, wilayah, dan kondisi waktu. Model longitudinal membantu membedakan variasi antar rumah tangga dan perubahan dalam rumah tangga. Bila rumah tangga juga berada dalam desa atau kabupaten, pendekatan multilevel longitudinal dapat digunakan untuk menggabungkan dimensi hierarki dan waktu secara simultan.
 
 ## Implementasi Komputasi
+
+<!-- BEGIN AI-INLINE:9e704ee00d88 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi Komputasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 6: Random Slope dan Interaksi Lintas Level.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r pertemuan_6, eval=FALSE}
 # Simulasi random slope sederhana
@@ -1050,6 +1414,29 @@ Pertemuan ini menempatkan random slope dan interaksi lintas level sebagai bagian
 
 # Pertemuan 7: Evaluasi, Perbandingan, dan Diagnosis Model
 
+<!-- BEGIN AI-INLINE:1f93daa00081 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 7</span>
+<h3>Generative dan Agentic AI untuk Evaluasi, Perbandingan, dan Diagnosis Model</h3>
+
+**Arah RPS.** Hierarchical machine learning, mixed-effects trees/boosting, dynamic prediction, dan integrasi model multilevel dengan Bayesian computation.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK2 melalui fokus: Model Longitudinal (Growth Curve Modeling); Model pertumbuhan linier sederhana; Model pertumbuhan non-linier. |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class='week-card'>
 <h3>Fokus pertemuan</h3>
 <p><strong>SubCPMK2 - Mengevaluasi model, asumsi, goodness-of-fit, dan argumentasi pemilihan model.</strong></p>
@@ -1066,6 +1453,16 @@ Pertemuan ini menempatkan random slope dan interaksi lintas level sebagai bagian
 - Menulis interpretasi hasil yang menghubungkan output statistik dengan masalah substantif.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:30b2e0f22b27 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 7: Evaluasi, Perbandingan, dan Diagnosis Model.</p>
+<p>Minta AI menjelaskan **Evaluasi, Perbandingan, dan Diagnosis Model** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pada tahap ini, fokus utama bukan hanya mengenal istilah evaluasi, perbandingan, dan diagnosis model, tetapi memahami logika desain data yang membuat metode tersebut diperlukan. Dalam pemilihan antara random intercept, random slope, dan model dengan prediktor level-2, peneliti sering menghadapi situasi ketika observasi memiliki kedekatan karena berada pada kelompok yang sama atau diukur pada individu yang sama dari waktu ke waktu. Ketika kedekatan ini diabaikan, model dapat menghasilkan kesimpulan yang tampak meyakinkan secara numerik tetapi rapuh secara metodologis. Literatur Pinheiro dan Bates (2000), Verbeke dan Molenberghs (2000), Bates et al. (2015) menekankan bahwa pemodelan harus dimulai dari pertanyaan substantif, kemudian diterjemahkan ke dalam struktur level, komponen variasi, dan asumsi inferensial.
 
@@ -1107,6 +1504,16 @@ $$
 
 ## Contoh Kasus Terapan
 
+<!-- BEGIN AI-INLINE:73f5f00e4bfe -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh Kasus Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 7: Evaluasi, Perbandingan, dan Diagnosis Model.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Hierarchical machine learning, mixed-effects trees/boosting, dynamic prediction, dan integrasi model multilevel dengan Bayesian computation. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Misalkan peneliti ingin mengevaluasi faktor yang memengaruhi skor literasi mahasiswa. Data dikumpulkan dari banyak kelas, dan setiap kelas berada pada program studi tertentu. Jika semua observasi dianggap independen, model mengabaikan kemungkinan bahwa mahasiswa dalam kelas yang sama memiliki pengalaman belajar yang lebih mirip. Dengan evaluasi, perbandingan, dan diagnosis model, peneliti dapat memisahkan variasi antar mahasiswa, antar kelas, dan antar program studi. Hasilnya bukan hanya koefisien prediktor, tetapi juga ukuran seberapa besar konteks kelas berkontribusi pada variasi skor.
 
 Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa kali pada pasien yang sama. Setiap pasien memiliki status awal berbeda dan laju perubahan berbeda setelah intervensi. Pendekatan evaluasi, perbandingan, dan diagnosis model memungkinkan peneliti memodelkan status awal sebagai random intercept dan perubahan waktu sebagai random slope. Interpretasinya sangat berguna: intervensi mungkin menurunkan tekanan darah secara rata-rata, tetapi laju penurunan bisa lebih cepat pada pasien dengan karakteristik tertentu.
@@ -1114,6 +1521,16 @@ Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa k
 Pada survei sosial ekonomi, rumah tangga sering diamati berulang dalam beberapa gelombang survei. Perubahan pendapatan dapat dipengaruhi oleh karakteristik rumah tangga, wilayah, dan kondisi waktu. Model longitudinal membantu membedakan variasi antar rumah tangga dan perubahan dalam rumah tangga. Bila rumah tangga juga berada dalam desa atau kabupaten, pendekatan multilevel longitudinal dapat digunakan untuk menggabungkan dimensi hierarki dan waktu secara simultan.
 
 ## Implementasi Komputasi
+
+<!-- BEGIN AI-INLINE:386eb952dc5c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi Komputasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 7: Evaluasi, Perbandingan, dan Diagnosis Model.</p>
+<p>Agen dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r pertemuan_7, eval=FALSE}
 if (requireNamespace("lme4", quietly = TRUE)) {
@@ -1150,6 +1567,29 @@ Pertemuan ini menempatkan evaluasi, perbandingan, dan diagnosis model sebagai ba
 
 # Pertemuan 8: UTS: Proyek Pendahuluan, Laporan, dan Presentasi
 
+<!-- BEGIN AI-INLINE:c34f2f393cbc -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 8</span>
+<h3>Generative dan Agentic AI untuk UTS: Proyek Pendahuluan, Laporan, dan Presentasi</h3>
+
+**Arah RPS.** Penggunaan AI hanya sesuai instruksi dosen; seluruh bantuan harus diungkapkan dan hasil diverifikasi.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK1–2 melalui fokus: Ujian Tengah Semester. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class='week-card'>
 <h3>Fokus pertemuan</h3>
 <p><strong>Integrasi SubCPMK1 dan SubCPMK2.</strong></p>
@@ -1166,6 +1606,16 @@ Pertemuan ini menempatkan evaluasi, perbandingan, dan diagnosis model sebagai ba
 - Menulis interpretasi hasil yang menghubungkan output statistik dengan masalah substantif.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:9beee7e1e106 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 8: UTS: Proyek Pendahuluan, Laporan, dan Presentasi.</p>
+<p>Minta AI menjelaskan **UTS: Proyek Pendahuluan, Laporan, dan Presentasi** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pada tahap ini, fokus utama bukan hanya mengenal istilah uts: proyek pendahuluan, laporan, dan presentasi, tetapi memahami logika desain data yang membuat metode tersebut diperlukan. Dalam proyek mini berbasis dataset nyata atau simulasi yang realistis, peneliti sering menghadapi situasi ketika observasi memiliki kedekatan karena berada pada kelompok yang sama atau diukur pada individu yang sama dari waktu ke waktu. Ketika kedekatan ini diabaikan, model dapat menghasilkan kesimpulan yang tampak meyakinkan secara numerik tetapi rapuh secara metodologis. Literatur Goldstein (2011), Singer dan Willett (2003), Hox et al. (2018) menekankan bahwa pemodelan harus dimulai dari pertanyaan substantif, kemudian diterjemahkan ke dalam struktur level, komponen variasi, dan asumsi inferensial.
 
@@ -1207,6 +1657,16 @@ $$
 
 ## Contoh Kasus Terapan
 
+<!-- BEGIN AI-INLINE:52398b1d9f23 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh Kasus Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 8: UTS: Proyek Pendahuluan, Laporan, dan Presentasi.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Penggunaan AI hanya sesuai instruksi dosen; seluruh bantuan harus diungkapkan dan hasil diverifikasi. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Misalkan peneliti ingin mengevaluasi faktor yang memengaruhi skor literasi mahasiswa. Data dikumpulkan dari banyak kelas, dan setiap kelas berada pada program studi tertentu. Jika semua observasi dianggap independen, model mengabaikan kemungkinan bahwa mahasiswa dalam kelas yang sama memiliki pengalaman belajar yang lebih mirip. Dengan uts: proyek pendahuluan, laporan, dan presentasi, peneliti dapat memisahkan variasi antar mahasiswa, antar kelas, dan antar program studi. Hasilnya bukan hanya koefisien prediktor, tetapi juga ukuran seberapa besar konteks kelas berkontribusi pada variasi skor.
 
 Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa kali pada pasien yang sama. Setiap pasien memiliki status awal berbeda dan laju perubahan berbeda setelah intervensi. Pendekatan uts: proyek pendahuluan, laporan, dan presentasi memungkinkan peneliti memodelkan status awal sebagai random intercept dan perubahan waktu sebagai random slope. Interpretasinya sangat berguna: intervensi mungkin menurunkan tekanan darah secara rata-rata, tetapi laju penurunan bisa lebih cepat pada pasien dengan karakteristik tertentu.
@@ -1214,6 +1674,16 @@ Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa k
 Pada survei sosial ekonomi, rumah tangga sering diamati berulang dalam beberapa gelombang survei. Perubahan pendapatan dapat dipengaruhi oleh karakteristik rumah tangga, wilayah, dan kondisi waktu. Model longitudinal membantu membedakan variasi antar rumah tangga dan perubahan dalam rumah tangga. Bila rumah tangga juga berada dalam desa atau kabupaten, pendekatan multilevel longitudinal dapat digunakan untuk menggabungkan dimensi hierarki dan waktu secara simultan.
 
 ## Implementasi Komputasi
+
+<!-- BEGIN AI-INLINE:61f03f6bb120 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi Komputasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 8: UTS: Proyek Pendahuluan, Laporan, dan Presentasi.</p>
+<p>Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r pertemuan_8, eval=FALSE}
 # Template ringkas struktur laporan UTS di R
@@ -1251,6 +1721,29 @@ Pertemuan ini menempatkan uts: proyek pendahuluan, laporan, dan presentasi sebag
 
 # Pertemuan 9: Model Longitudinal: Growth Curve Modeling
 
+<!-- BEGIN AI-INLINE:13a7efe9c26d -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 9</span>
+<h3>Generative dan Agentic AI untuk Model Longitudinal: Growth Curve Modeling</h3>
+
+**Arah RPS.** Missing data, informative dropout, time-varying confounding, causal longitudinal analysis, dan evaluasi heterogenitas efek.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3 melalui fokus: Fixed vs random effects; Generalized Linear Mixed Models (GLMM); Model multilevel untuk data non-normal (binomial, Poisson, dll). |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class='week-card'>
 <h3>Fokus pertemuan</h3>
 <p><strong>SubCPMK3 - Mengimplementasikan analisis longitudinal menggunakan software statistik.</strong></p>
@@ -1267,6 +1760,16 @@ Pertemuan ini menempatkan uts: proyek pendahuluan, laporan, dan presentasi sebag
 - Menulis interpretasi hasil yang menghubungkan output statistik dengan masalah substantif.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:e933ff6a5c98 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 9: Model Longitudinal: Growth Curve Modeling.</p>
+<p>Minta AI menjelaskan **Model Longitudinal: Growth Curve Modeling** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pada tahap ini, fokus utama bukan hanya mengenal istilah model longitudinal: growth curve modeling, tetapi memahami logika desain data yang membuat metode tersebut diperlukan. Dalam perkembangan skor pasien, pertumbuhan anak, atau perubahan indeks kesejahteraan, peneliti sering menghadapi situasi ketika observasi memiliki kedekatan karena berada pada kelompok yang sama atau diukur pada individu yang sama dari waktu ke waktu. Ketika kedekatan ini diabaikan, model dapat menghasilkan kesimpulan yang tampak meyakinkan secara numerik tetapi rapuh secara metodologis. Literatur Singer dan Willett (2003), Fitzmaurice et al. (2011), Diggle et al. (2002) menekankan bahwa pemodelan harus dimulai dari pertanyaan substantif, kemudian diterjemahkan ke dalam struktur level, komponen variasi, dan asumsi inferensial.
 
@@ -1308,6 +1811,16 @@ $$
 
 ## Contoh Kasus Terapan
 
+<!-- BEGIN AI-INLINE:199ac3ba2d29 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh Kasus Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 9: Model Longitudinal: Growth Curve Modeling.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Missing data, informative dropout, time-varying confounding, causal longitudinal analysis, dan evaluasi heterogenitas efek. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Misalkan peneliti ingin mengevaluasi faktor yang memengaruhi skor literasi mahasiswa. Data dikumpulkan dari banyak kelas, dan setiap kelas berada pada program studi tertentu. Jika semua observasi dianggap independen, model mengabaikan kemungkinan bahwa mahasiswa dalam kelas yang sama memiliki pengalaman belajar yang lebih mirip. Dengan model longitudinal: growth curve modeling, peneliti dapat memisahkan variasi antar mahasiswa, antar kelas, dan antar program studi. Hasilnya bukan hanya koefisien prediktor, tetapi juga ukuran seberapa besar konteks kelas berkontribusi pada variasi skor.
 
 Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa kali pada pasien yang sama. Setiap pasien memiliki status awal berbeda dan laju perubahan berbeda setelah intervensi. Pendekatan model longitudinal: growth curve modeling memungkinkan peneliti memodelkan status awal sebagai random intercept dan perubahan waktu sebagai random slope. Interpretasinya sangat berguna: intervensi mungkin menurunkan tekanan darah secara rata-rata, tetapi laju penurunan bisa lebih cepat pada pasien dengan karakteristik tertentu.
@@ -1315,6 +1828,16 @@ Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa k
 Pada survei sosial ekonomi, rumah tangga sering diamati berulang dalam beberapa gelombang survei. Perubahan pendapatan dapat dipengaruhi oleh karakteristik rumah tangga, wilayah, dan kondisi waktu. Model longitudinal membantu membedakan variasi antar rumah tangga dan perubahan dalam rumah tangga. Bila rumah tangga juga berada dalam desa atau kabupaten, pendekatan multilevel longitudinal dapat digunakan untuk menggabungkan dimensi hierarki dan waktu secara simultan.
 
 ## Implementasi Komputasi
+
+<!-- BEGIN AI-INLINE:3fbccf37f9a3 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi Komputasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 9: Model Longitudinal: Growth Curve Modeling.</p>
+<p>Agen dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r pertemuan_9, eval=FALSE}
 # Simulasi data longitudinal growth curve
@@ -1355,6 +1878,29 @@ Pertemuan ini menempatkan model longitudinal: growth curve modeling sebagai bagi
 
 # Pertemuan 10: Pertumbuhan Non-Linear, Waktu Tidak Seimbang, dan Korelasi Residual
 
+<!-- BEGIN AI-INLINE:f8513c7a0307 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 10</span>
+<h3>Generative dan Agentic AI untuk Pertumbuhan Non-Linear, Waktu Tidak Seimbang, dan Korelasi Residual</h3>
+
+**Arah RPS.** Asesmen proyek longitudinal atau multilevel yang melaporkan validasi lintas kelompok/waktu, uncertainty, dan fairness antarsubpopulasi.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3 melalui fokus: Link function dan penerapannya; Estimasi Parameter dan Uji Model; Maximum likelihood & restricted maximum likelihood (REML). |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class='week-card'>
 <h3>Fokus pertemuan</h3>
 <p><strong>SubCPMK3 - Mengembangkan model longitudinal yang lebih fleksibel.</strong></p>
@@ -1371,6 +1917,16 @@ Pertemuan ini menempatkan model longitudinal: growth curve modeling sebagai bagi
 - Menulis interpretasi hasil yang menghubungkan output statistik dengan masalah substantif.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:008abbcb111c -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 10: Pertumbuhan Non-Linear, Waktu Tidak Seimbang, dan Korelasi Residual.</p>
+<p>Minta AI menjelaskan **Pertumbuhan Non-Linear, Waktu Tidak Seimbang, dan Korelasi Residual** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pada tahap ini, fokus utama bukan hanya mengenal istilah pertumbuhan non-linear, waktu tidak seimbang, dan korelasi residual, tetapi memahami logika desain data yang membuat metode tersebut diperlukan. Dalam trajektori klinis yang melambat, proses belajar yang meningkat cepat lalu stabil, dan respons intervensi, peneliti sering menghadapi situasi ketika observasi memiliki kedekatan karena berada pada kelompok yang sama atau diukur pada individu yang sama dari waktu ke waktu. Ketika kedekatan ini diabaikan, model dapat menghasilkan kesimpulan yang tampak meyakinkan secara numerik tetapi rapuh secara metodologis. Literatur Verbeke dan Molenberghs (2000), Fitzmaurice et al. (2011), Pinheiro dan Bates (2000) menekankan bahwa pemodelan harus dimulai dari pertanyaan substantif, kemudian diterjemahkan ke dalam struktur level, komponen variasi, dan asumsi inferensial.
 
@@ -1412,6 +1968,16 @@ $$
 
 ## Contoh Kasus Terapan
 
+<!-- BEGIN AI-INLINE:659e75fe5881 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh Kasus Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 10: Pertumbuhan Non-Linear, Waktu Tidak Seimbang, dan Korelasi Residual.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Asesmen proyek longitudinal atau multilevel yang melaporkan validasi lintas kelompok/waktu, uncertainty, dan fairness antarsubpopulasi. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Misalkan peneliti ingin mengevaluasi faktor yang memengaruhi skor literasi mahasiswa. Data dikumpulkan dari banyak kelas, dan setiap kelas berada pada program studi tertentu. Jika semua observasi dianggap independen, model mengabaikan kemungkinan bahwa mahasiswa dalam kelas yang sama memiliki pengalaman belajar yang lebih mirip. Dengan pertumbuhan non-linear, waktu tidak seimbang, dan korelasi residual, peneliti dapat memisahkan variasi antar mahasiswa, antar kelas, dan antar program studi. Hasilnya bukan hanya koefisien prediktor, tetapi juga ukuran seberapa besar konteks kelas berkontribusi pada variasi skor.
 
 Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa kali pada pasien yang sama. Setiap pasien memiliki status awal berbeda dan laju perubahan berbeda setelah intervensi. Pendekatan pertumbuhan non-linear, waktu tidak seimbang, dan korelasi residual memungkinkan peneliti memodelkan status awal sebagai random intercept dan perubahan waktu sebagai random slope. Interpretasinya sangat berguna: intervensi mungkin menurunkan tekanan darah secara rata-rata, tetapi laju penurunan bisa lebih cepat pada pasien dengan karakteristik tertentu.
@@ -1419,6 +1985,16 @@ Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa k
 Pada survei sosial ekonomi, rumah tangga sering diamati berulang dalam beberapa gelombang survei. Perubahan pendapatan dapat dipengaruhi oleh karakteristik rumah tangga, wilayah, dan kondisi waktu. Model longitudinal membantu membedakan variasi antar rumah tangga dan perubahan dalam rumah tangga. Bila rumah tangga juga berada dalam desa atau kabupaten, pendekatan multilevel longitudinal dapat digunakan untuk menggabungkan dimensi hierarki dan waktu secara simultan.
 
 ## Implementasi Komputasi
+
+<!-- BEGIN AI-INLINE:2749ea576a3a -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi Komputasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 10: Pertumbuhan Non-Linear, Waktu Tidak Seimbang, dan Korelasi Residual.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r pertemuan_10, eval=FALSE}
 # Model growth curve dengan komponen kuadratik
@@ -1455,6 +2031,29 @@ Pertemuan ini menempatkan pertumbuhan non-linear, waktu tidak seimbang, dan kore
 
 # Pertemuan 11: Generalized Linear Mixed Models untuk Data Non-Normal
 
+<!-- BEGIN AI-INLINE:a49a323f5b45 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 11</span>
+<h3>Generative dan Agentic AI untuk Generalized Linear Mixed Models untuk Data Non-Normal</h3>
+
+**Arah RPS.** Hierarchical machine learning, mixed-effects trees/boosting, dynamic prediction, dan integrasi model multilevel dengan Bayesian computation.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3 melalui fokus: Goodness-of-fit, AIC/BIC; Uji signifikansi efek tetap dan acak; Implementasi dengan Perangkat Lunak Statistik. |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class='week-card'>
 <h3>Fokus pertemuan</h3>
 <p><strong>SubCPMK3 - Mengimplementasikan GLMM untuk respons biner, hitung, dan proporsi.</strong></p>
@@ -1471,6 +2070,16 @@ Pertemuan ini menempatkan pertumbuhan non-linear, waktu tidak seimbang, dan kore
 - Menulis interpretasi hasil yang menghubungkan output statistik dengan masalah substantif.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:af46ab8051c1 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 11: Generalized Linear Mixed Models untuk Data Non-Normal.</p>
+<p>Minta AI menjelaskan **Generalized Linear Mixed Models untuk Data Non-Normal** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pada tahap ini, fokus utama bukan hanya mengenal istilah generalized linear mixed models untuk data non-normal, tetapi memahami logika desain data yang membuat metode tersebut diperlukan. Dalam kelulusan siswa, kejadian penyakit, jumlah kunjungan pasien, dan hitungan kasus wilayah, peneliti sering menghadapi situasi ketika observasi memiliki kedekatan karena berada pada kelompok yang sama atau diukur pada individu yang sama dari waktu ke waktu. Ketika kedekatan ini diabaikan, model dapat menghasilkan kesimpulan yang tampak meyakinkan secara numerik tetapi rapuh secara metodologis. Literatur McCulloch et al. (2008), Gelman dan Hill (2007), Bates et al. (2015) menekankan bahwa pemodelan harus dimulai dari pertanyaan substantif, kemudian diterjemahkan ke dalam struktur level, komponen variasi, dan asumsi inferensial.
 
@@ -1512,6 +2121,16 @@ $$
 
 ## Contoh Kasus Terapan
 
+<!-- BEGIN AI-INLINE:795e123f7b37 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh Kasus Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 11: Generalized Linear Mixed Models untuk Data Non-Normal.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Hierarchical machine learning, mixed-effects trees/boosting, dynamic prediction, dan integrasi model multilevel dengan Bayesian computation. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Misalkan peneliti ingin mengevaluasi faktor yang memengaruhi skor literasi mahasiswa. Data dikumpulkan dari banyak kelas, dan setiap kelas berada pada program studi tertentu. Jika semua observasi dianggap independen, model mengabaikan kemungkinan bahwa mahasiswa dalam kelas yang sama memiliki pengalaman belajar yang lebih mirip. Dengan generalized linear mixed models untuk data non-normal, peneliti dapat memisahkan variasi antar mahasiswa, antar kelas, dan antar program studi. Hasilnya bukan hanya koefisien prediktor, tetapi juga ukuran seberapa besar konteks kelas berkontribusi pada variasi skor.
 
 Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa kali pada pasien yang sama. Setiap pasien memiliki status awal berbeda dan laju perubahan berbeda setelah intervensi. Pendekatan generalized linear mixed models untuk data non-normal memungkinkan peneliti memodelkan status awal sebagai random intercept dan perubahan waktu sebagai random slope. Interpretasinya sangat berguna: intervensi mungkin menurunkan tekanan darah secara rata-rata, tetapi laju penurunan bisa lebih cepat pada pasien dengan karakteristik tertentu.
@@ -1519,6 +2138,16 @@ Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa k
 Pada survei sosial ekonomi, rumah tangga sering diamati berulang dalam beberapa gelombang survei. Perubahan pendapatan dapat dipengaruhi oleh karakteristik rumah tangga, wilayah, dan kondisi waktu. Model longitudinal membantu membedakan variasi antar rumah tangga dan perubahan dalam rumah tangga. Bila rumah tangga juga berada dalam desa atau kabupaten, pendekatan multilevel longitudinal dapat digunakan untuk menggabungkan dimensi hierarki dan waktu secara simultan.
 
 ## Implementasi Komputasi
+
+<!-- BEGIN AI-INLINE:bfdd5ea408b6 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi Komputasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 11: Generalized Linear Mixed Models untuk Data Non-Normal.</p>
+<p>Agen dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r pertemuan_11, eval=FALSE}
 # Simulasi GLMM biner dengan random intercept
@@ -1565,6 +2194,29 @@ Pertemuan ini menempatkan generalized linear mixed models untuk data non-normal 
 
 # Pertemuan 12: Estimasi Parameter, ML, REML, Uji Model, dan Ketidakpastian
 
+<!-- BEGIN AI-INLINE:dcc5fe885b06 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 12</span>
+<h3>Generative dan Agentic AI untuk Estimasi Parameter, ML, REML, Uji Model, dan Ketidakpastian</h3>
+
+**Arah RPS.** Missing data, informative dropout, time-varying confounding, causal longitudinal analysis, dan evaluasi heterogenitas efek.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3 melalui fokus: Analisis dengan R (lme4, nlme), SPSS, atau SAS; Simulasi data multilevel/longitudinal; Interpretasi output perangkat lunak. |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class='week-card'>
 <h3>Fokus pertemuan</h3>
 <p><strong>SubCPMK3 - Memahami estimasi parameter dan interpretasi output perangkat lunak.</strong></p>
@@ -1581,6 +2233,16 @@ Pertemuan ini menempatkan generalized linear mixed models untuk data non-normal 
 - Menulis interpretasi hasil yang menghubungkan output statistik dengan masalah substantif.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:0644155bb8f0 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 12: Estimasi Parameter, ML, REML, Uji Model, dan Ketidakpastian.</p>
+<p>Minta AI menjelaskan **Estimasi Parameter, ML, REML, Uji Model, dan Ketidakpastian** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pada tahap ini, fokus utama bukan hanya mengenal istilah estimasi parameter, ml, reml, uji model, dan ketidakpastian, tetapi memahami logika desain data yang membuat metode tersebut diperlukan. Dalam pemahaman output lmer, glmer, nlme, MIXED SPSS, dan PROC MIXED SAS, peneliti sering menghadapi situasi ketika observasi memiliki kedekatan karena berada pada kelompok yang sama atau diukur pada individu yang sama dari waktu ke waktu. Ketika kedekatan ini diabaikan, model dapat menghasilkan kesimpulan yang tampak meyakinkan secara numerik tetapi rapuh secara metodologis. Literatur Pinheiro dan Bates (2000), Verbeke dan Molenberghs (2000), Bates et al. (2015) menekankan bahwa pemodelan harus dimulai dari pertanyaan substantif, kemudian diterjemahkan ke dalam struktur level, komponen variasi, dan asumsi inferensial.
 
@@ -1622,6 +2284,16 @@ $$
 
 ## Contoh Kasus Terapan
 
+<!-- BEGIN AI-INLINE:1ce203a2e2df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh Kasus Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 12: Estimasi Parameter, ML, REML, Uji Model, dan Ketidakpastian.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Missing data, informative dropout, time-varying confounding, causal longitudinal analysis, dan evaluasi heterogenitas efek. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Misalkan peneliti ingin mengevaluasi faktor yang memengaruhi skor literasi mahasiswa. Data dikumpulkan dari banyak kelas, dan setiap kelas berada pada program studi tertentu. Jika semua observasi dianggap independen, model mengabaikan kemungkinan bahwa mahasiswa dalam kelas yang sama memiliki pengalaman belajar yang lebih mirip. Dengan estimasi parameter, ml, reml, uji model, dan ketidakpastian, peneliti dapat memisahkan variasi antar mahasiswa, antar kelas, dan antar program studi. Hasilnya bukan hanya koefisien prediktor, tetapi juga ukuran seberapa besar konteks kelas berkontribusi pada variasi skor.
 
 Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa kali pada pasien yang sama. Setiap pasien memiliki status awal berbeda dan laju perubahan berbeda setelah intervensi. Pendekatan estimasi parameter, ml, reml, uji model, dan ketidakpastian memungkinkan peneliti memodelkan status awal sebagai random intercept dan perubahan waktu sebagai random slope. Interpretasinya sangat berguna: intervensi mungkin menurunkan tekanan darah secara rata-rata, tetapi laju penurunan bisa lebih cepat pada pasien dengan karakteristik tertentu.
@@ -1629,6 +2301,16 @@ Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa k
 Pada survei sosial ekonomi, rumah tangga sering diamati berulang dalam beberapa gelombang survei. Perubahan pendapatan dapat dipengaruhi oleh karakteristik rumah tangga, wilayah, dan kondisi waktu. Model longitudinal membantu membedakan variasi antar rumah tangga dan perubahan dalam rumah tangga. Bila rumah tangga juga berada dalam desa atau kabupaten, pendekatan multilevel longitudinal dapat digunakan untuk menggabungkan dimensi hierarki dan waktu secara simultan.
 
 ## Implementasi Komputasi
+
+<!-- BEGIN AI-INLINE:1154d91a4362 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi Komputasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 12: Estimasi Parameter, ML, REML, Uji Model, dan Ketidakpastian.</p>
+<p>Agen dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r pertemuan_12, eval=FALSE}
 # Interval kepercayaan parameter fixed effects jika lme4 tersedia
@@ -1663,6 +2345,29 @@ Pertemuan ini menempatkan estimasi parameter, ml, reml, uji model, dan ketidakpa
 
 # Pertemuan 13: Implementasi Komputasi dengan R, SPSS, dan SAS
 
+<!-- BEGIN AI-INLINE:bc4a72250253 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 13</span>
+<h3>Generative dan Agentic AI untuk Implementasi Komputasi dengan R, SPSS, dan SAS</h3>
+
+**Arah RPS.** Asesmen proyek longitudinal atau multilevel yang melaporkan validasi lintas kelompok/waktu, uncertainty, dan fairness antarsubpopulasi.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK4 melalui fokus: Aplikasi Kasus Nyata; Studi kasus di bidang pendidikan, kesehatan, dan sosial; Pelaporan hasil analisis. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class='week-card'>
 <h3>Fokus pertemuan</h3>
 <p><strong>SubCPMK4 - Menyusun proposal dan menyiapkan analisis komputasi yang dapat direproduksi.</strong></p>
@@ -1679,6 +2384,16 @@ Pertemuan ini menempatkan estimasi parameter, ml, reml, uji model, dan ketidakpa
 - Menulis interpretasi hasil yang menghubungkan output statistik dengan masalah substantif.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:b939c065785f -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 13: Implementasi Komputasi dengan R, SPSS, dan SAS.</p>
+<p>Minta AI menjelaskan **Implementasi Komputasi dengan R, SPSS, dan SAS** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pada tahap ini, fokus utama bukan hanya mengenal istilah implementasi komputasi dengan r, spss, dan sas, tetapi memahami logika desain data yang membuat metode tersebut diperlukan. Dalam praktikum pemrograman analisis multilevel dan longitudinal, peneliti sering menghadapi situasi ketika observasi memiliki kedekatan karena berada pada kelompok yang sama atau diukur pada individu yang sama dari waktu ke waktu. Ketika kedekatan ini diabaikan, model dapat menghasilkan kesimpulan yang tampak meyakinkan secara numerik tetapi rapuh secara metodologis. Literatur Bates et al. (2015), Pinheiro dan Bates (2000), Hox et al. (2018) menekankan bahwa pemodelan harus dimulai dari pertanyaan substantif, kemudian diterjemahkan ke dalam struktur level, komponen variasi, dan asumsi inferensial.
 
@@ -1720,6 +2435,16 @@ $$
 
 ## Contoh Kasus Terapan
 
+<!-- BEGIN AI-INLINE:deb74308e5ab -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh Kasus Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 13: Implementasi Komputasi dengan R, SPSS, dan SAS.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Asesmen proyek longitudinal atau multilevel yang melaporkan validasi lintas kelompok/waktu, uncertainty, dan fairness antarsubpopulasi. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Misalkan peneliti ingin mengevaluasi faktor yang memengaruhi skor literasi mahasiswa. Data dikumpulkan dari banyak kelas, dan setiap kelas berada pada program studi tertentu. Jika semua observasi dianggap independen, model mengabaikan kemungkinan bahwa mahasiswa dalam kelas yang sama memiliki pengalaman belajar yang lebih mirip. Dengan implementasi komputasi dengan r, spss, dan sas, peneliti dapat memisahkan variasi antar mahasiswa, antar kelas, dan antar program studi. Hasilnya bukan hanya koefisien prediktor, tetapi juga ukuran seberapa besar konteks kelas berkontribusi pada variasi skor.
 
 Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa kali pada pasien yang sama. Setiap pasien memiliki status awal berbeda dan laju perubahan berbeda setelah intervensi. Pendekatan implementasi komputasi dengan r, spss, dan sas memungkinkan peneliti memodelkan status awal sebagai random intercept dan perubahan waktu sebagai random slope. Interpretasinya sangat berguna: intervensi mungkin menurunkan tekanan darah secara rata-rata, tetapi laju penurunan bisa lebih cepat pada pasien dengan karakteristik tertentu.
@@ -1727,6 +2452,16 @@ Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa k
 Pada survei sosial ekonomi, rumah tangga sering diamati berulang dalam beberapa gelombang survei. Perubahan pendapatan dapat dipengaruhi oleh karakteristik rumah tangga, wilayah, dan kondisi waktu. Model longitudinal membantu membedakan variasi antar rumah tangga dan perubahan dalam rumah tangga. Bila rumah tangga juga berada dalam desa atau kabupaten, pendekatan multilevel longitudinal dapat digunakan untuk menggabungkan dimensi hierarki dan waktu secara simultan.
 
 ## Implementasi Komputasi
+
+<!-- BEGIN AI-INLINE:725c8831f86d -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi Komputasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 13: Implementasi Komputasi dengan R, SPSS, dan SAS.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r pertemuan_13, eval=FALSE}
 # Skeleton workflow analisis multilevel/longitudinal
@@ -1768,6 +2503,29 @@ Pertemuan ini menempatkan implementasi komputasi dengan r, spss, dan sas sebagai
 
 # Pertemuan 14: Aplikasi Kasus Nyata di Pendidikan, Kesehatan, dan Sosial
 
+<!-- BEGIN AI-INLINE:72826d152858 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 14</span>
+<h3>Generative dan Agentic AI untuk Aplikasi Kasus Nyata di Pendidikan, Kesehatan, dan Sosial</h3>
+
+**Arah RPS.** Hierarchical machine learning, mixed-effects trees/boosting, dynamic prediction, dan integrasi model multilevel dengan Bayesian computation.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK4 melalui fokus: Rancangan Riset Multilevel/Longitudinal; Penentuan desain penelitian yang sesuai; Penyusunan proposal riset. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class='week-card'>
 <h3>Fokus pertemuan</h3>
 <p><strong>SubCPMK4 - Mengintegrasikan metode dengan masalah terapan nyata.</strong></p>
@@ -1784,6 +2542,16 @@ Pertemuan ini menempatkan implementasi komputasi dengan r, spss, dan sas sebagai
 - Menulis interpretasi hasil yang menghubungkan output statistik dengan masalah substantif.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:88fcbe0be15c -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 14: Aplikasi Kasus Nyata di Pendidikan, Kesehatan, dan Sosial.</p>
+<p>Minta AI menjelaskan **Aplikasi Kasus Nyata di Pendidikan, Kesehatan, dan Sosial** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pada tahap ini, fokus utama bukan hanya mengenal istilah aplikasi kasus nyata di pendidikan, kesehatan, dan sosial, tetapi memahami logika desain data yang membuat metode tersebut diperlukan. Dalam pendidikan, kesehatan masyarakat, sosial ekonomi, survei panel, dan evaluasi program, peneliti sering menghadapi situasi ketika observasi memiliki kedekatan karena berada pada kelompok yang sama atau diukur pada individu yang sama dari waktu ke waktu. Ketika kedekatan ini diabaikan, model dapat menghasilkan kesimpulan yang tampak meyakinkan secara numerik tetapi rapuh secara metodologis. Literatur Goldstein (2011), Singer dan Willett (2003), Gelman dan Hill (2007) menekankan bahwa pemodelan harus dimulai dari pertanyaan substantif, kemudian diterjemahkan ke dalam struktur level, komponen variasi, dan asumsi inferensial.
 
@@ -1825,6 +2593,16 @@ $$
 
 ## Contoh Kasus Terapan
 
+<!-- BEGIN AI-INLINE:5f58d43bcb7f -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh Kasus Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 14: Aplikasi Kasus Nyata di Pendidikan, Kesehatan, dan Sosial.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Hierarchical machine learning, mixed-effects trees/boosting, dynamic prediction, dan integrasi model multilevel dengan Bayesian computation. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Misalkan peneliti ingin mengevaluasi faktor yang memengaruhi skor literasi mahasiswa. Data dikumpulkan dari banyak kelas, dan setiap kelas berada pada program studi tertentu. Jika semua observasi dianggap independen, model mengabaikan kemungkinan bahwa mahasiswa dalam kelas yang sama memiliki pengalaman belajar yang lebih mirip. Dengan aplikasi kasus nyata di pendidikan, kesehatan, dan sosial, peneliti dapat memisahkan variasi antar mahasiswa, antar kelas, dan antar program studi. Hasilnya bukan hanya koefisien prediktor, tetapi juga ukuran seberapa besar konteks kelas berkontribusi pada variasi skor.
 
 Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa kali pada pasien yang sama. Setiap pasien memiliki status awal berbeda dan laju perubahan berbeda setelah intervensi. Pendekatan aplikasi kasus nyata di pendidikan, kesehatan, dan sosial memungkinkan peneliti memodelkan status awal sebagai random intercept dan perubahan waktu sebagai random slope. Interpretasinya sangat berguna: intervensi mungkin menurunkan tekanan darah secara rata-rata, tetapi laju penurunan bisa lebih cepat pada pasien dengan karakteristik tertentu.
@@ -1832,6 +2610,16 @@ Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa k
 Pada survei sosial ekonomi, rumah tangga sering diamati berulang dalam beberapa gelombang survei. Perubahan pendapatan dapat dipengaruhi oleh karakteristik rumah tangga, wilayah, dan kondisi waktu. Model longitudinal membantu membedakan variasi antar rumah tangga dan perubahan dalam rumah tangga. Bila rumah tangga juga berada dalam desa atau kabupaten, pendekatan multilevel longitudinal dapat digunakan untuk menggabungkan dimensi hierarki dan waktu secara simultan.
 
 ## Implementasi Komputasi
+
+<!-- BEGIN AI-INLINE:79c6f9422ff4 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi Komputasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 14: Aplikasi Kasus Nyata di Pendidikan, Kesehatan, dan Sosial.</p>
+<p>Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r pertemuan_14, eval=FALSE}
 # Contoh tabel ringkasan pelaporan model
@@ -1866,6 +2654,29 @@ Pertemuan ini menempatkan aplikasi kasus nyata di pendidikan, kesehatan, dan sos
 
 # Pertemuan 15: Penyusunan Proposal Riset Multilevel/Longitudinal
 
+<!-- BEGIN AI-INLINE:6e28e54c8ae0 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 15</span>
+<h3>Generative dan Agentic AI untuk Penyusunan Proposal Riset Multilevel/Longitudinal</h3>
+
+**Arah RPS.** Missing data, informative dropout, time-varying confounding, causal longitudinal analysis, dan evaluasi heterogenitas efek.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK4 melalui fokus: Presentasi dan Komunikasi Ilmiah; Penulisan laporan penelitian; Presentasi hasil riset. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class='week-card'>
 <h3>Fokus pertemuan</h3>
 <p><strong>SubCPMK4 - Merancang proposal riset inovatif dan berdampak.</strong></p>
@@ -1882,6 +2693,16 @@ Pertemuan ini menempatkan aplikasi kasus nyata di pendidikan, kesehatan, dan sos
 - Menulis interpretasi hasil yang menghubungkan output statistik dengan masalah substantif.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:00dc53da14bb -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 15: Penyusunan Proposal Riset Multilevel/Longitudinal.</p>
+<p>Minta AI menjelaskan **Penyusunan Proposal Riset Multilevel/Longitudinal** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pada tahap ini, fokus utama bukan hanya mengenal istilah penyusunan proposal riset multilevel/longitudinal, tetapi memahami logika desain data yang membuat metode tersebut diperlukan. Dalam proposal tesis, artikel ilmiah, dan proyek kebijakan berbasis data, peneliti sering menghadapi situasi ketika observasi memiliki kedekatan karena berada pada kelompok yang sama atau diukur pada individu yang sama dari waktu ke waktu. Ketika kedekatan ini diabaikan, model dapat menghasilkan kesimpulan yang tampak meyakinkan secara numerik tetapi rapuh secara metodologis. Literatur Hox et al. (2018), Singer dan Willett (2003), Raudenbush dan Bryk (2002) menekankan bahwa pemodelan harus dimulai dari pertanyaan substantif, kemudian diterjemahkan ke dalam struktur level, komponen variasi, dan asumsi inferensial.
 
@@ -1923,6 +2744,16 @@ $$
 
 ## Contoh Kasus Terapan
 
+<!-- BEGIN AI-INLINE:72f35ee67d55 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh Kasus Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 15: Penyusunan Proposal Riset Multilevel/Longitudinal.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Missing data, informative dropout, time-varying confounding, causal longitudinal analysis, dan evaluasi heterogenitas efek. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Misalkan peneliti ingin mengevaluasi faktor yang memengaruhi skor literasi mahasiswa. Data dikumpulkan dari banyak kelas, dan setiap kelas berada pada program studi tertentu. Jika semua observasi dianggap independen, model mengabaikan kemungkinan bahwa mahasiswa dalam kelas yang sama memiliki pengalaman belajar yang lebih mirip. Dengan penyusunan proposal riset multilevel/longitudinal, peneliti dapat memisahkan variasi antar mahasiswa, antar kelas, dan antar program studi. Hasilnya bukan hanya koefisien prediktor, tetapi juga ukuran seberapa besar konteks kelas berkontribusi pada variasi skor.
 
 Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa kali pada pasien yang sama. Setiap pasien memiliki status awal berbeda dan laju perubahan berbeda setelah intervensi. Pendekatan penyusunan proposal riset multilevel/longitudinal memungkinkan peneliti memodelkan status awal sebagai random intercept dan perubahan waktu sebagai random slope. Interpretasinya sangat berguna: intervensi mungkin menurunkan tekanan darah secara rata-rata, tetapi laju penurunan bisa lebih cepat pada pasien dengan karakteristik tertentu.
@@ -1930,6 +2761,16 @@ Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa k
 Pada survei sosial ekonomi, rumah tangga sering diamati berulang dalam beberapa gelombang survei. Perubahan pendapatan dapat dipengaruhi oleh karakteristik rumah tangga, wilayah, dan kondisi waktu. Model longitudinal membantu membedakan variasi antar rumah tangga dan perubahan dalam rumah tangga. Bila rumah tangga juga berada dalam desa atau kabupaten, pendekatan multilevel longitudinal dapat digunakan untuk menggabungkan dimensi hierarki dan waktu secara simultan.
 
 ## Implementasi Komputasi
+
+<!-- BEGIN AI-INLINE:f09f4e49904d -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi Komputasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 15: Penyusunan Proposal Riset Multilevel/Longitudinal.</p>
+<p>Agen dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r pertemuan_15, eval=FALSE}
 # Template elemen proposal dalam bentuk list
@@ -1968,6 +2809,29 @@ Pertemuan ini menempatkan penyusunan proposal riset multilevel/longitudinal seba
 
 # Pertemuan 16: UAS: Proyek Akhir, Laporan, Presentasi, dan Refleksi Ilmiah
 
+<!-- BEGIN AI-INLINE:74c4780f0eac -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Pertemuan 16</span>
+<h3>Generative dan Agentic AI untuk UAS: Proyek Akhir, Laporan, Presentasi, dan Refleksi Ilmiah</h3>
+
+**Arah RPS.** Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK3–4 melalui fokus: Ujian Akhir Semester / proyek akhir. |
+| Generative AI | Digunakan untuk menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis. |
+| Agentic AI | Dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 <div class='week-card'>
 <h3>Fokus pertemuan</h3>
 <p><strong>Integrasi seluruh SubCPMK - dari eksplorasi hingga proposal riset.</strong></p>
@@ -1984,6 +2848,16 @@ Pertemuan ini menempatkan penyusunan proposal riset multilevel/longitudinal seba
 - Menulis interpretasi hasil yang menghubungkan output statistik dengan masalah substantif.
 
 ## Konsep Inti
+
+<!-- BEGIN AI-INLINE:eeb2404fd226 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>Penerapan pada Konsep Inti</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: UAS: Proyek Akhir, Laporan, Presentasi, dan Refleksi Ilmiah.</p>
+<p>Minta AI menjelaskan **UAS: Proyek Akhir, Laporan, Presentasi, dan Refleksi Ilmiah** melalui definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer, menandai simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Pada tahap ini, fokus utama bukan hanya mengenal istilah uas: proyek akhir, laporan, presentasi, dan refleksi ilmiah, tetapi memahami logika desain data yang membuat metode tersebut diperlukan. Dalam presentasi akhir berbasis model dan proposal riset, peneliti sering menghadapi situasi ketika observasi memiliki kedekatan karena berada pada kelompok yang sama atau diukur pada individu yang sama dari waktu ke waktu. Ketika kedekatan ini diabaikan, model dapat menghasilkan kesimpulan yang tampak meyakinkan secara numerik tetapi rapuh secara metodologis. Literatur Goldstein (2011), Fitzmaurice et al. (2011), Hox et al. (2018) menekankan bahwa pemodelan harus dimulai dari pertanyaan substantif, kemudian diterjemahkan ke dalam struktur level, komponen variasi, dan asumsi inferensial.
 
@@ -2025,6 +2899,16 @@ $$
 
 ## Contoh Kasus Terapan
 
+<!-- BEGIN AI-INLINE:9dcc870cc852 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>Penerapan pada Contoh Kasus Terapan</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: UAS: Proyek Akhir, Laporan, Presentasi, dan Refleksi Ilmiah.</p>
+<p>Terapkan arahan RPS berikut pada kasus bab ini: Audit akhir prompt, sumber, kode, hasil, ketidakpastian, keterbatasan, fairness/privasi, serta log agen bila digunakan. Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat diperiksa.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Misalkan peneliti ingin mengevaluasi faktor yang memengaruhi skor literasi mahasiswa. Data dikumpulkan dari banyak kelas, dan setiap kelas berada pada program studi tertentu. Jika semua observasi dianggap independen, model mengabaikan kemungkinan bahwa mahasiswa dalam kelas yang sama memiliki pengalaman belajar yang lebih mirip. Dengan uas: proyek akhir, laporan, presentasi, dan refleksi ilmiah, peneliti dapat memisahkan variasi antar mahasiswa, antar kelas, dan antar program studi. Hasilnya bukan hanya koefisien prediktor, tetapi juga ukuran seberapa besar konteks kelas berkontribusi pada variasi skor.
 
 Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa kali pada pasien yang sama. Setiap pasien memiliki status awal berbeda dan laju perubahan berbeda setelah intervensi. Pendekatan uas: proyek akhir, laporan, presentasi, dan refleksi ilmiah memungkinkan peneliti memodelkan status awal sebagai random intercept dan perubahan waktu sebagai random slope. Interpretasinya sangat berguna: intervensi mungkin menurunkan tekanan darah secara rata-rata, tetapi laju penurunan bisa lebih cepat pada pasien dengan karakteristik tertentu.
@@ -2032,6 +2916,16 @@ Dalam studi kesehatan, outcome dapat berupa tekanan darah yang diukur beberapa k
 Pada survei sosial ekonomi, rumah tangga sering diamati berulang dalam beberapa gelombang survei. Perubahan pendapatan dapat dipengaruhi oleh karakteristik rumah tangga, wilayah, dan kondisi waktu. Model longitudinal membantu membedakan variasi antar rumah tangga dan perubahan dalam rumah tangga. Bila rumah tangga juga berada dalam desa atau kabupaten, pendekatan multilevel longitudinal dapat digunakan untuk menggabungkan dimensi hierarki dan waktu secara simultan.
 
 ## Implementasi Komputasi
+
+<!-- BEGIN AI-INLINE:c6a948624d0a -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Implementasi Komputasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: UAS: Proyek Akhir, Laporan, Presentasi, dan Refleksi Ilmiah.</p>
+<p>Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r pertemuan_16, eval=FALSE}
 # Checklist reproducibility proyek akhir
@@ -2087,6 +2981,16 @@ Workflow yang disarankan adalah: mulai dari audit data, eksplorasi struktur kelo
 | Dependensi | Apa sumber korelasi observasi? | ICC, plot trajektori, plot mean kelompok |
 
 ## Template Kode Analisis Bertahap
+
+<!-- BEGIN AI-INLINE:dc9eff20e868 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Template Kode Analisis Bertahap</h4>
+<p><strong>Konteks:</strong> Pertemuan 16: UAS: Proyek Akhir, Laporan, Presentasi, dan Refleksi Ilmiah.</p>
+<p>Agen dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 ```{r template_lmm, eval=FALSE}
 # 0. Persiapan
@@ -2164,23 +3068,109 @@ Narasi tersebut lebih informatif dibanding hanya menulis "model lmer signifikan"
 
 # Rubrik Tugas Sesuai RPS
 
+<!-- BEGIN AI-INLINE:28f1dbab6420 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 2</span>
+<h3>Generative dan Agentic AI untuk Rubrik Tugas Sesuai RPS</h3>
+
+**Arah RPS.** Missing data, informative dropout, time-varying confounding, causal longitudinal analysis, dan evaluasi heterogenitas efek.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK1 melalui fokus: Eksplorasi Data Multilevel dan Longitudinal; Identifikasi struktur data hierarkis dan repeated measures; Masalah dependency, missing data, dan outlier. |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 ## Tugas SubCPMK1: Eksplorasi Struktur Data
+
+<!-- BEGIN AI-INLINE:bf774f0ecb3d -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Tugas SubCPMK1: Eksplorasi Struktur Data</h4>
+<p><strong>Konteks:</strong> Pertemuan 2: Rubrik Tugas Sesuai RPS.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Mahasiswa diminta melakukan eksplorasi satu dataset multilevel atau longitudinal. Laporan maksimal lima halaman dan memuat struktur data, level hierarki, pola dependency, missing data, clustering, dan ringkasan visual. Script analisis harus disertakan agar hasil dapat direproduksi. Penilaian menekankan ketepatan identifikasi struktur data, kedalaman analisis karakteristik data, kualitas laporan, dan kualitas script.
 
 ## Tugas SubCPMK2: Pemodelan dan Diagnosis
 
+<!-- BEGIN AI-INLINE:cee58c7968a7 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Tugas SubCPMK2: Pemodelan dan Diagnosis</h4>
+<p><strong>Konteks:</strong> Pertemuan 2: Rubrik Tugas Sesuai RPS.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Mahasiswa membangun beberapa model, misalnya random intercept, random slope, growth curve, atau mixed effects. Tugas mencakup perbandingan model, evaluasi asumsi, interpretasi hasil, dan argumentasi pemilihan model terbaik. Laporan perlu menunjukkan bukan hanya hasil akhir, tetapi juga proses pemodelan. Kriteria penilaian meliputi proses pemodelan dan diagnostik, evaluasi dan perbandingan model, interpretasi, argumentasi, serta kualitas presentasi.
 
 ## Tugas SubCPMK3: Implementasi Komputasi
+
+<!-- BEGIN AI-INLINE:9a8d4cd65a9e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>Penerapan pada Tugas SubCPMK3: Implementasi Komputasi</h4>
+<p><strong>Konteks:</strong> Pertemuan 2: Rubrik Tugas Sesuai RPS.</p>
+<p>Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan model, dan penerbitan hasil. **Mahasiswa wajib memeriksa:** ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Mahasiswa menjalankan analisis multilevel atau longitudinal dengan R, SPSS, atau SAS. Hasil minimal mencakup script, output utama, visualisasi, interpretasi fixed effects dan random effects, serta catatan troubleshooting. Penilaian menekankan script yang lengkap dan bebas error, visualisasi yang informatif, laporan yang sistematis, dan kemampuan menjawab pertanyaan saat presentasi.
 
 ## Tugas SubCPMK4: Proposal Riset Inovatif
 
+<!-- BEGIN AI-INLINE:f99d59a80f30 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Tugas SubCPMK4: Proposal Riset Inovatif</h4>
+<p><strong>Konteks:</strong> Pertemuan 2: Rubrik Tugas Sesuai RPS.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
+
 Mahasiswa menyusun proposal penelitian yang menggunakan analisis multilevel atau longitudinal untuk menjawab permasalahan aktual. Proposal mencakup latar belakang, novelty, tujuan, desain data, model, rencana analisis, rencana validasi, dan luaran. Penilaian menekankan inovasi dan relevansi proposal, kualitas perumusan masalah, desain metodologi, kualitas laporan, serta komunikasi ilmiah.
 
 # Bank Topik Proposal Riset
+
+<!-- BEGIN AI-INLINE:3b891a24f650 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 3</span>
+<h3>Generative dan Agentic AI untuk Bank Topik Proposal Riset</h3>
+
+**Arah RPS.** Asesmen proyek longitudinal atau multilevel yang melaporkan validasi lintas kelompok/waktu, uncertainty, dan fairness antarsubpopulasi.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK1 melalui fokus: Model Linier Sederhana dan Keterbatasannya; Model regresi linier klasik; Mengapa model linier tidak memadai untuk data multilevel/longitudinal. |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 Berikut contoh topik yang dapat dikembangkan mahasiswa:
 
@@ -2203,6 +3193,29 @@ Berikut contoh topik yang dapat dikembangkan mahasiswa:
 Setiap topik harus diubah menjadi pertanyaan riset yang tajam. Misalnya, bukan hanya "menganalisis stunting", tetapi "mengestimasi variasi antar kabupaten dalam perubahan prevalensi stunting dan menilai apakah cakupan layanan kesehatan ibu-anak menjelaskan perbedaan laju penurunan". Formulasi seperti ini langsung mengarah pada struktur longitudinal dan multilevel.
 
 # Catatan Pengayaan Tematik
+
+<!-- BEGIN AI-INLINE:2c38ccc56cbe -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 4</span>
+<h3>Generative dan Agentic AI untuk Catatan Pengayaan Tematik</h3>
+
+**Arah RPS.** Hierarchical machine learning, mixed-effects trees/boosting, dynamic prediction, dan integrasi model multilevel dengan Bayesian computation.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK1 melalui fokus: Model Multilevel Dasar; Model two-level (random intercept); Model random slope. |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 ## Centering Variabel dalam Model Multilevel
 
@@ -2446,6 +3459,29 @@ Kesalahan umum mahasiswa adalah langsung menjalankan model tanpa eksplorasi stru
 
 # Contoh Sintaks SPSS dan SAS
 
+<!-- BEGIN AI-INLINE:3c48827fd555 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 5</span>
+<h3>Generative dan Agentic AI untuk Contoh Sintaks SPSS dan SAS</h3>
+
+**Arah RPS.** Missing data, informative dropout, time-varying confounding, causal longitudinal analysis, dan evaluasi heterogenitas efek.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK2 melalui fokus: Estimasi parameter dan interpretasi; Pengembangan Model Multilevel; Model three-level. |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
+
 Bagian ini disediakan agar mahasiswa yang menggunakan SPSS atau SAS dapat memahami padanan dasar model. Sintaks perlu disesuaikan dengan nama variabel, struktur data, dan versi perangkat lunak. Prinsipnya tetap sama: identifikasi outcome, prediktor tetap, unit efek acak, metode estimasi, dan struktur kovarians.
 
 ## SPSS MIXED Random Intercept
@@ -2489,6 +3525,29 @@ RUN;
 ```
 
 # Mini Glossary
+
+<!-- BEGIN AI-INLINE:a633d76f2be5 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 6</span>
+<h3>Generative dan Agentic AI untuk Mini Glossary</h3>
+
+**Arah RPS.** Asesmen proyek longitudinal atau multilevel yang melaporkan validasi lintas kelompok/waktu, uncertainty, dan fairness antarsubpopulasi.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK2 melalui fokus: Variance components; Intraclass correlation coefficient (ICC); Diagnosis dan evaluasi model multilevel. |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 **Cluster** adalah kelompok observasi yang memiliki kedekatan karena desain sampling, lokasi, institusi, atau subjek yang sama. **Level-1** adalah unit observasi paling rendah dalam model hierarkis, sedangkan **level-2** adalah unit pengelompokan di atasnya. **Random intercept** memungkinkan rata-rata outcome berbeda antar kelompok. **Random slope** memungkinkan pengaruh prediktor berbeda antar kelompok. **ICC** mengukur proporsi variasi total yang berada pada level kelompok. **Fixed effects** menggambarkan parameter rata-rata populasi. **Random effects** menggambarkan deviasi kelompok atau individu dari rata-rata populasi. **Growth curve** adalah model longitudinal yang menafsirkan waktu sebagai prediktor perubahan. **GLMM** adalah generalisasi mixed model untuk outcome non-normal. **REML** adalah metode estimasi yang umum digunakan untuk komponen varians pada linear mixed model. **AIC/BIC** adalah kriteria informasi untuk membandingkan model. **BLUP** adalah prediksi efek acak kelompok atau individu yang memanfaatkan partial pooling.
 
@@ -2539,6 +3598,29 @@ Verbeke, G., & Molenberghs, G. (2000). *Linear Mixed Models for Longitudinal Dat
 Zuur, A. F., Ieno, E. N., Walker, N. J., Saveliev, A. A., & Smith, G. M. (2009). *Mixed Effects Models and Extensions in Ecology with R*. Springer.
 
 # Pengayaan Tambahan untuk Diskusi Mandiri
+
+<!-- BEGIN AI-INLINE:03f06c4619df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 7</span>
+<h3>Generative dan Agentic AI untuk Pengayaan Tambahan untuk Diskusi Mandiri</h3>
+
+**Arah RPS.** Hierarchical machine learning, mixed-effects trees/boosting, dynamic prediction, dan integrasi model multilevel dengan Bayesian computation.
+
+| Komponen | Implementasi pada bab ini |
+|---|---|
+| Target pembelajaran | Mendukung CPMK2 melalui fokus: Model Longitudinal (Growth Curve Modeling); Model pertumbuhan linier sederhana; Model pertumbuhan non-linier. |
+| Generative AI | Digunakan untuk membandingkan kandidat model, menuliskan alasan pemilihan, dan mengusulkan diagnostik. |
+| Agentic AI | Dapat memasang kandidat model, menjalankan diagnostik, membandingkan metrik, dan menghentikan proses pada kegagalan asumsi atau konvergensi; agen wajib berhenti pada checkpoint dosen/mahasiswa. |
+| Human checkpoint | Mahasiswa memeriksa spesifikasi model, data leakage, konvergensi, residual, kalibrasi, ketidakpastian, dan overfitting; keluaran AI tidak diterima sebagai bukti kebenaran. |
+| Artefak wajib | prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia. |
+
+**Batas penggunaan.** AI tidak boleh mengerjakan asesmen tertutup, menetapkan
+kesimpulan akhir, atau menerima/mengirim data sensitif ke layanan yang tidak
+disetujui. Mahasiswa wajib mampu mengulang dan menjelaskan analisis tanpa
+bergantung pada percakapan AI.
+</div>
+<!-- END AI-INLINE -->
+
 
 Bagian ini berisi pengayaan tambahan agar modul dapat digunakan sebagai bahan baca mandiri yang lebih luas. Setiap catatan dapat dijadikan bahan diskusi, topik mini review, atau landasan tugas reflektif.
 
@@ -2857,6 +3939,16 @@ berada pada mahasiswa.
 5. Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil secara mandiri.
 
 ### Bukti asesmen
+
+<!-- BEGIN AI-INLINE:ab248b2f950d -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan asesmen</span>
+<h4>Penerapan pada Bukti asesmen</h4>
+<p><strong>Konteks:</strong> Pertemuan 7: Pengayaan Tambahan untuk Diskusi Mandiri.</p>
+<p>Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan akhir manusia.</p>
+</div>
+<!-- END AI-INLINE -->
+
 
 Penilaian berfokus pada ketepatan metode, validasi dan ketidakpastian,
 reproducibility, interpretasi, komunikasi, serta transparansi penggunaan AI.

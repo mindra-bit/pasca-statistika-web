@@ -3128,270 +3128,73 @@ serta komunikasi hasil secara ilmiah.</p>
 </div>
 <!-- END UNPAD MATERIAL ENHANCEMENT -->
 <style>
-html, body {
-  background: linear-gradient(135deg, #f8fbfd 0%, #fffdf8 48%, #f3f6ee 100%) !important;
-  color: #172033 !important;
+:root{
+--brown-900:#3b210f; --brown-800:#5a3519; --brown-700:#7a4a24; --brown-600:#9a6738;
+--brown-500:#b98652; --brown-300:#dfbf91; --brown-200:#f0d9b8; --brown-100:#fbf0df;
+--cream:#fffaf3; --ink:#20140d; --muted:#6e5a4a; --gold:#c48a2c; --unpad:#f0b429;
 }
-body {
-  font-family: "Segoe UI", Arial, sans-serif !important;
-  font-size: 17px !important;
-  line-height: 1.72 !important;
-  margin: 0 !important;
-  overflow-x: hidden !important;
+html, body { scroll-behavior:smooth; }
+body{
+color:var(--ink); font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.7;
+background:linear-gradient(135deg,#fff8ef 0%,#f1d3ab 38%,#bb8752 100%);
+background-attachment:fixed; font-size:16px;
 }
-.main-container {
-  max-width: 1180px !important;
-  margin-top: 18px !important;
-  margin-bottom: 38px !important;
-  padding: 34px 46px 54px !important;
-  background: rgba(255, 253, 248, 0.98) !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  box-shadow: 0 18px 42px rgba(23, 57, 92, 0.12) !important;
-  overflow-x: hidden !important;
+.main-container, .container-fluid, .container{
+max-width:1120px !important; margin-left:310px !important; margin-right:38px !important;
+background:rgba(255,250,243,.96); padding:38px 52px; border-radius:26px;
+box-shadow:0 18px 45px rgba(59,33,15,.18); border:1px solid rgba(122,74,36,.18);
 }
-h1, h2, h3, h4 {
-  color: #17395c !important;
-  font-weight: 800 !important;
-  letter-spacing: 0 !important;
-  line-height: 1.24 !important;
+#TOC{
+position:fixed; left:18px; top:18px; bottom:18px; width:260px; overflow:auto; z-index:1000;
+padding:20px 18px; background:linear-gradient(180deg,#4a2812 0%,#8b5528 55%,#bd8650 100%);
+color:#fff; border-radius:24px; box-shadow:0 12px 32px rgba(59,33,15,.35);
 }
-h1.title {
-  color: #17395c !important;
-  -webkit-text-fill-color: #17395c !important;
-  background: none !important;
-  border-bottom: 4px solid #f2a51a !important;
-  padding-bottom: 14px !important;
+#TOC::before{content:"DAFTAR ISI"; display:block; font-weight:800; letter-spacing:.08em; margin-bottom:12px; color:#ffe7ba;}
+#TOC a{color:#fff6e5 !important; text-decoration:none; border-bottom:0 !important; font-size:.92rem;}
+#TOC a:hover{color:#ffe08a !important; text-decoration:underline;}
+#TOC ul{padding-left:1.05rem;}
+h1,h2,h3,h4{font-weight:800; color:var(--brown-900); line-height:1.2;}
+h1{font-size:2.45rem; border-bottom:4px solid #d3a064; padding-bottom:.35rem;}
+h2{font-size:1.8rem; margin-top:2.5rem; padding:16px 20px; color:white; border-radius:18px;
+background:linear-gradient(100deg,#4a2812 0%,#8a5428 50%,#c39156 100%); box-shadow:0 8px 18px rgba(90,53,25,.22);}
+h3{font-size:1.35rem; border-left:7px solid var(--brown-600); padding-left:14px; margin-top:1.8rem;}
+h4{font-size:1.12rem; color:var(--brown-800);}
+a{color:#7b411c; font-weight:600;} strong{color:#442412;}
+.hero{
+padding:42px 38px; border-radius:30px; margin:0 0 30px 0; color:white;
+background:linear-gradient(135deg,rgba(59,33,15,.98),rgba(126,74,31,.95),rgba(205,151,83,.9)), radial-gradient(circle at top right,#f8d99d,transparent 35%);
+box-shadow:0 22px 48px rgba(59,33,15,.28); border:1px solid rgba(255,230,185,.55);
 }
-h2 {
-  margin-top: 46px !important;
-  padding: 12px 18px !important;
-  border-left: 8px solid #f2a51a !important;
-  border-radius: 8px !important;
-  background: linear-gradient(90deg, #eef8f6, #fff8e7) !important;
+.hero h1{color:white; border:0; font-size:3rem; margin:0 0 .4rem 0;}
+.hero .subtitle{font-size:1.2rem; color:#ffeac4; font-weight:700;}
+.badge{display:inline-block; padding:.25rem .62rem; border-radius:999px; color:#3b210f; background:#ffe2a3; margin:.15rem; font-weight:700;}
+.callout, .tujuan, .casebox, .activity, .warning, .rpsbox{
+border-radius:20px; padding:20px 24px; margin:20px 0; box-shadow:0 6px 18px rgba(59,33,15,.08);
 }
-.unpad-cover h2 {
-  color: #111827 !important;
-  -webkit-text-fill-color: #111827 !important;
-  background: #fffdf8 !important;
-  border-left: 8px solid #f2a51a !important;
-  border-bottom: 0 !important;
+.callout{background:linear-gradient(135deg,#fff7ea,#f2d7b1); border-left:8px solid #9a6738;}
+.tujuan{background:linear-gradient(135deg,#fdf5e8,#ead0aa); border:1px solid #d2a16d;}
+.casebox{background:#fffdf8; border:1px solid #e1bf92; border-left:8px solid #c48a2c;}
+.activity{background:linear-gradient(135deg,#f4e5ce,#fff9ee); border-left:8px solid #6b3e1e;}
+.warning{background:#fff2e0; border-left:8px solid #b45309;}
+.rpsbox{background:linear-gradient(135deg,#f9ead1,#fff7ea); border:1px dashed #9a6738;}
+.formula-box{
+background:linear-gradient(135deg,#f7e7cc 0%,#f3d7ad 100%); color:#1c1209; border:1px solid #d5ad7a;
+border-left:8px solid #8b5e34; padding:18px 20px; border-radius:18px; margin:18px 0;
+box-shadow:inset 0 0 0 1px rgba(255,255,255,.55),0 8px 18px rgba(59,33,15,.08);
 }
-h3 {
-  margin-top: 30px !important;
-}
-a {
-  color: #0b5c86 !important;
-}
-img, svg {
-  max-width: 100% !important;
-  height: auto !important;
-}
-table {
-  width: 100% !important;
-  border-collapse: collapse !important;
-  margin: 18px 0 26px !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-}
-.s2-table-scroll {
-  width: 100% !important;
-  max-width: 100% !important;
-  overflow-x: auto !important;
-  margin: 18px 0 26px !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-}
-.s2-table-scroll table {
-  min-width: 680px !important;
-  margin: 0 !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-}
-th {
-  background: #17395c !important;
-  color: #ffffff !important;
-  padding: 10px 12px !important;
-}
-td {
-  background: #fffdf8 !important;
-  border: 1px solid #d7e2ea !important;
-  padding: 10px 12px !important;
-  vertical-align: top !important;
-}
-.main-container p, .main-container li, td, th {
-  overflow-wrap: anywhere !important;
-}
-pre {
-  overflow: auto !important;
-  padding: 16px !important;
-  background: #eef5f8 !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  color: #111827 !important;
-}
-code {
-  background: #eef5f8 !important;
-  border-radius: 6px !important;
-  color: #111827 !important;
-  padding: 2px 5px !important;
-}
-span.math.display, .math.display, .MathJax_Display, .MathJax, mjx-container {
-  display: block !important;
-  max-width: 100% !important;
-  overflow-x: auto !important;
-  overflow-y: hidden !important;
-}
-blockquote {
-  margin: 22px 0 !important;
-  padding: 16px 20px !important;
-  background: #fff8e7 !important;
-  border-left: 8px solid #0f766e !important;
-  border-radius: 0 8px 8px 0 !important;
-}
-#TOC, .tocify {
-  background: #ffffff !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  box-shadow: 0 12px 28px rgba(23, 57, 92, 0.10) !important;
-}
-.tocify {
-  max-height: calc(100vh - 40px) !important;
-}
-.tocify .active, #TOC .active {
-  background: linear-gradient(90deg, #17395c, #0f766e) !important;
-  color: #ffffff !important;
-  border-radius: 6px !important;
-}
-#TOC a, .tocify a {
-  color: #17395c !important;
-  text-decoration: none !important;
-}
-#TOC a:hover, .tocify a:hover {
-  color: #0f766e !important;
-  text-decoration: underline !important;
-}
-.hero, .rps-box, .rpsbox, .info-card, .card,
-.callout, .note, .casebox, .case-box, .examplebox, .exercise-box,
-.learning-box, .activitybox, .activity, .practice-box, .praktik-box,
-.praktikum, .tujuan, .interpretasi, .refleksi, .warning, .warningbox,
-.warning-box, .tip, .idea-box, .mathbox, .formula-box, .rumus-box,
-.contoh-box, .rubric-box {
-  margin: 22px 0 !important;
-  padding: 20px 24px !important;
-  background: #fffdf8 !important;
-  border: 1px solid #d7e2ea !important;
-  border-left: 8px solid #0f766e !important;
-  border-radius: 8px !important;
-  box-shadow: 0 10px 24px rgba(23, 57, 92, 0.10) !important;
-  color: #172033 !important;
-}
-.hero {
-  background: linear-gradient(135deg, #17395c 0%, #0f766e 62%, #f2a51a 100%) !important;
-  color: #ffffff !important;
-  border-left: 0 !important;
-}
-.hero h1, .hero h2, .hero h3, .hero h4, .hero p, .hero strong {
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-}
-.warning, .warningbox, .warning-box {
-  border-left-color: #b45309 !important;
-  background: #fff8e7 !important;
-}
-.rps-box, .rpsbox, .rubric-box {
-  border-left-color: #f2a51a !important;
-  background: linear-gradient(135deg, #fffdf8, #fff8e7) !important;
-}
-.mathbox, .formula-box, .rumus-box {
-  border-left-color: #17395c !important;
-  background: #eef5f8 !important;
-}
-.badge {
-  display: inline-block !important;
-  padding: 4px 10px !important;
-  border-radius: 999px !important;
-  background: #17395c !important;
-  color: #ffffff !important;
-  font-weight: 700 !important;
-  font-size: 0.85em !important;
-}
-.grid-2, .grid-3 {
-  display: grid !important;
-  gap: 18px !important;
-}
-.grid-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-}
-.grid-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-}
-hr {
-  border: 0 !important;
-  height: 2px !important;
-  background: linear-gradient(90deg, transparent, #d7e2ea, transparent) !important;
-  margin: 34px 0 !important;
-}
-@media (max-width: 980px) {
-  #TOC, .tocify {
-    position: relative !important;
-    width: auto !important;
-    max-height: 360px !important;
-    margin: 12px !important;
-  }
-  .main-container {
-    margin: 12px !important;
-    padding: 24px !important;
-  }
-  .grid-2, .grid-3 {
-    grid-template-columns: 1fr !important;
-  }
-}
+.formula-box *{color:#1c1209 !important;}
+pre, code{background:#f7e3c2 !important; color:#111 !important; border-radius:12px;}
+pre{border:1px solid #d3a064; padding:16px; overflow:auto;}
+blockquote{background:#fff4df; border-left:8px solid #9a6738; padding:14px 18px; border-radius:14px; color:#3b210f;}
+table{border-collapse:collapse; width:100%; margin:16px 0; background:#fffdf8;}
+th{background:linear-gradient(90deg,#5a3519,#9a6738); color:white; padding:10px;}
+td{border:1px solid #e5c49c; padding:9px; vertical-align:top;}
+tr:nth-child(even) td{background:#fff7ea;}
+.figurebox{text-align:center; padding:16px; background:#fff7ea; border-radius:20px; border:1px solid #dfbf91; margin:18px 0;}
+.small{font-size:.92rem;color:var(--muted);}
+hr{border:0; height:2px; background:linear-gradient(90deg,transparent,#a87340,transparent); margin:34px 0;}
+@media(max-width:1000px){#TOC{position:relative; width:auto; left:auto; top:auto; bottom:auto;} .main-container,.container,.container-fluid{margin:20px !important; padding:26px !important;}}
 </style>
-<script>
-window.MathJax = {
-  tex: {
-    inlineMath: [["\\(", "\\)"], ["$", "$"]],
-    displayMath: [["\\[", "\\]"], ["$$", "$$"]],
-    processEscapes: true,
-    processEnvironments: true,
-    tags: "ams"
-  },
-  options: {
-    skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"],
-    ignoreHtmlClass: "tex2jax_ignore"
-  },
-  chtml: {
-    fontURL: "../../assets/vendor/mathjax/output/chtml/fonts/woff-v2"
-  },
-  startup: {
-    typeset: true
-  }
-};
-
-(function () {
-  var script = document.createElement("script");
-  script.src = "../../assets/vendor/mathjax/tex-mml-chtml.js";
-  script.async = true;
-  script.onerror = function () {
-    var fallback = document.createElement("script");
-    fallback.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
-    fallback.async = true;
-    document.head.appendChild(fallback);
-  };
-  document.head.appendChild(script);
-})();
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll("table").forEach(function (table) {
-    if (table.parentElement && table.parentElement.classList.contains("s2-table-scroll")) return;
-    var wrapper = document.createElement("div");
-    wrapper.className = "s2-table-scroll";
-    table.parentNode.insertBefore(wrapper, table);
-    wrapper.appendChild(table);
-  });
-});
-</script>
 <div class="hero">
 <h1>
 Materi Pembelajaran Teori Antrian
@@ -3423,6 +3226,28 @@ komputer, serta inovasi model/algoritma teori antrian. Struktur materi
 dibagi ke dalam empat blok SubCPMK: konsep dasar, pemodelan data,
 simulasi komputer, dan inovasi/komunikasi ilmiah.</p>
 </div>
+<!-- BEGIN AI-INLINE-STYLE-2026 -->
+<style>
+.ai-inline {
+margin: 1rem 0 1.35rem;
+padding: 1rem 1.1rem;
+border: 1px solid #bfd9d5;
+border-left: 7px solid #0f766e;
+border-radius: 8px;
+background: linear-gradient(135deg, #eff9f7, #fffaf0);
+}
+.ai-inline--agentic { border-left-color: #17395c; background: linear-gradient(135deg, #eef5fb, #f5faf8); }
+.ai-inline--assessment { border-left-color: #a35d00; background: #fff8e8; }
+.ai-inline h3, .ai-inline h4 { margin-top: 0; color: #17395c; }
+.ai-inline p:last-child, .ai-inline ul:last-child { margin-bottom: 0; }
+.ai-inline__label {
+display: inline-block; margin-bottom: .45rem; padding: .2rem .55rem;
+border-radius: 999px; background: #17395c; color: white;
+font-size: .78rem; font-weight: 800;
+}
+.ai-inline table { width: 100%; margin: .6rem 0; background: white; }
+</style>
+<!-- END AI-INLINE-STYLE-2026 -->
 <div id="identitas-mata-kuliah-dan-peta-pembelajaran" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Identitas Mata Kuliah
 dan Peta Pembelajaran</h1>
@@ -3622,6 +3447,62 @@ pada literatur queueing networks dan performance modeling <span class="citation"
 <div id="landasan-teori-dan-cara-berpikir-sistem" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Landasan Teori dan Cara
 Berpikir Sistem</h1>
+<!-- BEGIN AI-INLINE:5ac43468cc9b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 1</span>
+<h3>
+Generative dan Agentic AI untuk Landasan Teori dan Cara Berpikir Sistem
+</h3>
+<p><strong>Arah RPS.</strong> Simulasi discrete-event, digital twin,
+estimasi parameter berbasis data, dan optimasi kebijakan layanan.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Pendahuluan dan Konsep Dasar Teori
+Antrian; Definisi, sejarah, dan ruang lingkup teori antrian.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk merumuskan alternatif penjelasan, contoh, dan
+hipotesis awal.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara
+bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik,
+dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti
+kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Teori antrian lahir dari kebutuhan praktis untuk memahami mengapa
 layanan dengan kapasitas yang tampaknya cukup tetap dapat menghasilkan
 antrean panjang. Pada level magister, fokus pembelajaran tidak berhenti
@@ -3706,6 +3587,27 @@ sebagai analis sistem pelayanan.</p>
 <div id="alur-analisis-umum" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> Alur analisis
 umum</h2>
+<!-- BEGIN AI-INLINE:c99d7abd1ed0 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Alur analisis umum
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pahami konteks layanan dan tentukan batas sistem.</li>
 <li>Buat diagram proses dari kedatangan sampai keluar sistem.</li>
@@ -3723,6 +3625,25 @@ lapangan.</li>
 <div id="pertemuan-1-pendahuluan-dan-konsep-dasar-teori-antrian" class="section level2" number="2.3">
 <h2><span class="header-section-number">2.3</span> Pertemuan 1:
 Pendahuluan dan Konsep Dasar Teori Antrian</h2>
+<!-- BEGIN AI-INLINE:7c34fa76fdb0 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Pertemuan 1: Pendahuluan dan Konsep Dasar Teori Antrian
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Minta AI menjelaskan <strong>Landasan Teori dan Cara Berpikir
+Sistem</strong> melalui definisi, analogi, contoh, dan contoh tandingan.
+Mahasiswa kemudian membandingkan penjelasan itu dengan rujukan primer,
+menandai simplifikasi yang keliru, dan menulis kembali konsep dengan
+bahasanya sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="tujuan">
 <p><strong>Tujuan pembelajaran.</strong> Setelah mempelajari bagian ini,
 mahasiswa diharapkan mampu menjelaskan konsep utama pendahuluan dan
@@ -3863,6 +3784,25 @@ penyederhanaan tidak boleh hilang.</p>
 <div id="rumus-dan-interpretasi-inti" class="section level3" number="2.3.1">
 <h3><span class="header-section-number">2.3.1</span> Rumus dan
 interpretasi inti</h3>
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus dan interpretasi inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Landasan Teori dan Cara Berpikir Sistem</strong>, lalu periksa
+setiap langkah secara manual, uji kasus batas, dan cocokkan dengan
+rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p><span class="math display">\[L=\lambda W\]</span></p>
 <p>Hukum Little menyatakan bahwa rata-rata jumlah entitas dalam sistem
@@ -3874,6 +3814,30 @@ distribusi kedatangan dan pelayanan tidak harus selalu eksponensial.</p>
 <div id="contoh-kasus-terapan" class="section level3" number="2.3.2">
 <h3><span class="header-section-number">2.3.2</span> Contoh kasus
 terapan</h3>
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event,
+digital twin, estimasi parameter berbasis data, dan optimasi kebijakan
+layanan. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Pertimbangkan pelayanan administrasi
 kampus, bank, rumah sakit, kasir minimarket, dan helpdesk digital.
@@ -4039,6 +4003,28 @@ dijelaskan, bukan disembunyikan seperti typo di laporan akhir.</p>
 <div id="latihan-dan-tugas-mini" class="section level3" number="2.3.5">
 <h3><span class="header-section-number">2.3.5</span> Latihan dan tugas
 mini</h3>
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Latihan dan tugas mini
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat
 diagram alur layanan, lalu tentukan batas sistem dan definisi
@@ -4066,6 +4052,28 @@ dasar penyusunan laporan.</p>
 <div id="catatan-pendalaman-untuk-diskusi-kelas" class="section level3" number="2.3.6">
 <h3><span class="header-section-number">2.3.6</span> Catatan pendalaman
 untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Catatan pendalaman untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pendekatan terbaik dalam teori antrian adalah berpikir seperti
 konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa
 harus peka terhadap kebutuhan pengambil keputusan: seberapa lama
@@ -4259,6 +4267,25 @@ penyederhanaan tidak boleh hilang.</p>
 <div id="rumus-dan-interpretasi-inti-1" class="section level3" number="2.4.1">
 <h3><span class="header-section-number">2.4.1</span> Rumus dan
 interpretasi inti</h3>
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus dan interpretasi inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Landasan Teori dan Cara Berpikir Sistem</strong>, lalu periksa
+setiap langkah secara manual, uji kasus batas, dan cocokkan dengan
+rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p><span class="math display">\[\rho=\frac{\lambda}{c\mu}\]</span></p>
 <p>Utilisasi menggambarkan proporsi kapasitas pelayanan yang terpakai.
@@ -4270,6 +4297,30 @@ dapat membuat waktu tunggu melonjak tajam.</p>
 <div id="contoh-kasus-terapan-1" class="section level3" number="2.4.2">
 <h3><span class="header-section-number">2.4.2</span> Contoh kasus
 terapan</h3>
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event,
+digital twin, estimasi parameter berbasis data, dan optimasi kebijakan
+layanan. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Pertimbangkan loket layanan publik dengan
 jam sibuk pagi dan jeda siang. Pengelola ingin mengetahui apakah sistem
@@ -4437,6 +4488,28 @@ typo di laporan akhir.</p>
 <div id="latihan-dan-tugas-mini-1" class="section level3" number="2.4.5">
 <h3><span class="header-section-number">2.4.5</span> Latihan dan tugas
 mini</h3>
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Latihan dan tugas mini
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat
 diagram alur layanan, lalu tentukan batas sistem dan definisi
@@ -4464,6 +4537,28 @@ dasar penyusunan laporan.</p>
 <div id="catatan-pendalaman-untuk-diskusi-kelas-1" class="section level3" number="2.4.6">
 <h3><span class="header-section-number">2.4.6</span> Catatan pendalaman
 untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Catatan pendalaman untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pendekatan terbaik dalam teori antrian adalah berpikir seperti
 konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa
 harus peka terhadap kebutuhan pengambil keputusan: seberapa lama
@@ -4654,6 +4749,25 @@ penyederhanaan tidak boleh hilang.</p>
 <div id="rumus-dan-interpretasi-inti-2" class="section level3" number="2.5.1">
 <h3><span class="header-section-number">2.5.1</span> Rumus dan
 interpretasi inti</h3>
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus dan interpretasi inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Landasan Teori dan Cara Berpikir Sistem</strong>, lalu periksa
+setiap langkah secara manual, uji kasus batas, dan cocokkan dengan
+rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p><span class="math display">\[A/S/c/K/N/D\]</span></p>
 <p>Notasi Kendall meringkas asumsi model: distribusi kedatangan,
@@ -4664,6 +4778,30 @@ dan disiplin antrean.</p>
 <div id="contoh-kasus-terapan-2" class="section level3" number="2.5.2">
 <h3><span class="header-section-number">2.5.2</span> Contoh kasus
 terapan</h3>
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event,
+digital twin, estimasi parameter berbasis data, dan optimasi kebijakan
+layanan. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Pertimbangkan klinik rawat jalan dengan
 pendaftaran, triase, dan pemeriksaan dokter. Pengelola ingin mengetahui
@@ -4830,6 +4968,28 @@ laporan akhir.</p>
 <div id="latihan-dan-tugas-mini-2" class="section level3" number="2.5.5">
 <h3><span class="header-section-number">2.5.5</span> Latihan dan tugas
 mini</h3>
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Latihan dan tugas mini
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat
 diagram alur layanan, lalu tentukan batas sistem dan definisi
@@ -4856,6 +5016,28 @@ dasar penyusunan laporan.</p>
 <div id="catatan-pendalaman-untuk-diskusi-kelas-2" class="section level3" number="2.5.6">
 <h3><span class="header-section-number">2.5.6</span> Catatan pendalaman
 untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Catatan pendalaman untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pendekatan terbaik dalam teori antrian adalah berpikir seperti
 konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa
 harus peka terhadap kebutuhan pengambil keputusan: seberapa lama
@@ -5044,6 +5226,25 @@ penyederhanaan tidak boleh hilang.</p>
 <div id="rumus-dan-interpretasi-inti-3" class="section level3" number="2.6.1">
 <h3><span class="header-section-number">2.6.1</span> Rumus dan
 interpretasi inti</h3>
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus dan interpretasi inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Landasan Teori dan Cara Berpikir Sistem</strong>, lalu periksa
+setiap langkah secara manual, uji kasus batas, dan cocokkan dengan
+rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p><span class="math display">\[L_q=\lambda W_q,\qquad L_s=\lambda
 W_s\]</span></p>
@@ -5054,6 +5255,30 @@ konsistensi hasil analitik, hasil data, dan hasil simulasi.</p>
 <div id="contoh-kasus-terapan-3" class="section level3" number="2.6.2">
 <h3><span class="header-section-number">2.6.2</span> Contoh kasus
 terapan</h3>
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event,
+digital twin, estimasi parameter berbasis data, dan optimasi kebijakan
+layanan. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Pertimbangkan antrian tiket transportasi
 dan layanan call center sederhana. Pengelola ingin mengetahui apakah
@@ -5219,6 +5444,28 @@ dijelaskan, bukan disembunyikan seperti typo di laporan akhir.</p>
 <div id="latihan-dan-tugas-mini-3" class="section level3" number="2.6.5">
 <h3><span class="header-section-number">2.6.5</span> Latihan dan tugas
 mini</h3>
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Latihan dan tugas mini
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat
 diagram alur layanan, lalu tentukan batas sistem dan definisi
@@ -5245,6 +5492,28 @@ dasar penyusunan laporan.</p>
 <div id="catatan-pendalaman-untuk-diskusi-kelas-3" class="section level3" number="2.6.6">
 <h3><span class="header-section-number">2.6.6</span> Catatan pendalaman
 untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Catatan pendalaman untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pendekatan terbaik dalam teori antrian adalah berpikir seperti
 konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa
 harus peka terhadap kebutuhan pengambil keputusan: seberapa lama
@@ -5433,6 +5702,25 @@ penyederhanaan tidak boleh hilang.</p>
 <div id="rumus-dan-interpretasi-inti-4" class="section level3" number="2.7.1">
 <h3><span class="header-section-number">2.7.1</span> Rumus dan
 interpretasi inti</h3>
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus dan interpretasi inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Landasan Teori dan Cara Berpikir Sistem</strong>, lalu periksa
+setiap langkah secara manual, uji kasus batas, dan cocokkan dengan
+rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p><span class="math display">\[\rho=\frac{\lambda}{\mu},\quad
 P_0=1-\rho,\quad L_s=\frac{\rho}{1-\rho},\quad
@@ -5445,6 +5733,30 @@ efek nonlinier yang sering dilupakan oleh pengelola layanan.</p>
 <div id="contoh-kasus-terapan-4" class="section level3" number="2.7.2">
 <h3><span class="header-section-number">2.7.2</span> Contoh kasus
 terapan</h3>
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event,
+digital twin, estimasi parameter berbasis data, dan optimasi kebijakan
+layanan. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Pertimbangkan satu loket administrasi atau
 satu kanal layanan daring. Pengelola ingin mengetahui apakah sistem saat
@@ -5572,6 +5884,27 @@ mungkin karena analis belum cukup keras menguji asumsi.</p>
 <div id="implementasi-komputasi" class="section level3" number="2.7.4">
 <h3><span class="header-section-number">2.7.4</span> Implementasi
 komputasi</h3>
+<!-- BEGIN AI-INLINE:7519f67823a9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi komputasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut dapat digunakan sebagai titik awal praktikum. Chunk
 diberi <code>eval=FALSE</code> agar aman saat dokumen pertama kali
 dibuka. Mahasiswa dapat mengubah parameter sesuai data kasus, lalu
@@ -5633,6 +5966,28 @@ typo di laporan akhir.</p>
 <div id="latihan-dan-tugas-mini-4" class="section level3" number="2.7.6">
 <h3><span class="header-section-number">2.7.6</span> Latihan dan tugas
 mini</h3>
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Latihan dan tugas mini
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat
 diagram alur layanan, lalu tentukan batas sistem dan definisi
@@ -5659,6 +6014,28 @@ dasar penyusunan laporan.</p>
 <div id="catatan-pendalaman-untuk-diskusi-kelas-4" class="section level3" number="2.7.7">
 <h3><span class="header-section-number">2.7.7</span> Catatan pendalaman
 untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Catatan pendalaman untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pendekatan terbaik dalam teori antrian adalah berpikir seperti
 konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa
 harus peka terhadap kebutuhan pengambil keputusan: seberapa lama
@@ -5846,6 +6223,25 @@ penyederhanaan tidak boleh hilang.</p>
 <div id="rumus-dan-interpretasi-inti-5" class="section level3" number="2.8.1">
 <h3><span class="header-section-number">2.8.1</span> Rumus dan
 interpretasi inti</h3>
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus dan interpretasi inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Landasan Teori dan Cara Berpikir Sistem</strong>, lalu periksa
+setiap langkah secara manual, uji kasus batas, dan cocokkan dengan
+rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p><span class="math display">\[a=\frac{\lambda}{\mu},\quad
 \rho=\frac{a}{c},\quad P(W_q&gt;0)=C(c,a)\]</span></p>
@@ -5857,6 +6253,30 @@ pelayanan eksponensial.</p>
 <div id="contoh-kasus-terapan-5" class="section level3" number="2.8.2">
 <h3><span class="header-section-number">2.8.2</span> Contoh kasus
 terapan</h3>
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event,
+digital twin, estimasi parameter berbasis data, dan optimasi kebijakan
+layanan. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Pertimbangkan call center, farmasi rumah
 sakit, gerbang tol, dan helpdesk multi-agen. Pengelola ingin mengetahui
@@ -5984,6 +6404,27 @@ mungkin karena analis belum cukup keras menguji asumsi.</p>
 <div id="implementasi-komputasi-1" class="section level3" number="2.8.4">
 <h3><span class="header-section-number">2.8.4</span> Implementasi
 komputasi</h3>
+<!-- BEGIN AI-INLINE:7519f67823a9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi komputasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut dapat digunakan sebagai titik awal praktikum. Chunk
 diberi <code>eval=FALSE</code> agar aman saat dokumen pertama kali
 dibuka. Mahasiswa dapat mengubah parameter sesuai data kasus, lalu
@@ -6048,6 +6489,28 @@ dijelaskan, bukan disembunyikan seperti typo di laporan akhir.</p>
 <div id="latihan-dan-tugas-mini-5" class="section level3" number="2.8.6">
 <h3><span class="header-section-number">2.8.6</span> Latihan dan tugas
 mini</h3>
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Latihan dan tugas mini
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat
 diagram alur layanan, lalu tentukan batas sistem dan definisi
@@ -6074,6 +6537,28 @@ dasar penyusunan laporan.</p>
 <div id="catatan-pendalaman-untuk-diskusi-kelas-5" class="section level3" number="2.8.7">
 <h3><span class="header-section-number">2.8.7</span> Catatan pendalaman
 untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Catatan pendalaman untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pendekatan terbaik dalam teori antrian adalah berpikir seperti
 konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa
 harus peka terhadap kebutuhan pengambil keputusan: seberapa lama
@@ -6265,6 +6750,25 @@ penyederhanaan tidak boleh hilang.</p>
 <div id="rumus-dan-interpretasi-inti-6" class="section level3" number="2.9.1">
 <h3><span class="header-section-number">2.9.1</span> Rumus dan
 interpretasi inti</h3>
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus dan interpretasi inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Landasan Teori dan Cara Berpikir Sistem</strong>, lalu periksa
+setiap langkah secara manual, uji kasus batas, dan cocokkan dengan
+rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p><span class="math display">\[P_K=\frac{(1-\rho)\rho^K}{1-\rho^{K+1}},\qquad
 \lambda_{eff}=\lambda(1-P_K)\]</span></p>
@@ -6276,6 +6780,30 @@ dari laju kedatangan potensial.</p>
 <div id="contoh-kasus-terapan-6" class="section level3" number="2.9.2">
 <h3><span class="header-section-number">2.9.2</span> Contoh kasus
 terapan</h3>
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event,
+digital twin, estimasi parameter berbasis data, dan optimasi kebijakan
+layanan. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Pertimbangkan layanan cloud otomatis,
 ruang tunggu terbatas, dan mesin produksi yang memerlukan perbaikan.
@@ -6442,6 +6970,28 @@ typo di laporan akhir.</p>
 <div id="latihan-dan-tugas-mini-6" class="section level3" number="2.9.5">
 <h3><span class="header-section-number">2.9.5</span> Latihan dan tugas
 mini</h3>
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Latihan dan tugas mini
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat
 diagram alur layanan, lalu tentukan batas sistem dan definisi
@@ -6469,6 +7019,28 @@ dasar penyusunan laporan.</p>
 <div id="catatan-pendalaman-untuk-diskusi-kelas-6" class="section level3" number="2.9.6">
 <h3><span class="header-section-number">2.9.6</span> Catatan pendalaman
 untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Catatan pendalaman untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pendekatan terbaik dalam teori antrian adalah berpikir seperti
 konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa
 harus peka terhadap kebutuhan pengambil keputusan: seberapa lama
@@ -6520,6 +7092,30 @@ berikutnya.</p>
 <div id="pertemuan-8-uts-proyek-pendahuluan-pemodelan-data-nyata" class="section level2" number="2.10">
 <h2><span class="header-section-number">2.10</span> Pertemuan 8: UTS:
 Proyek Pendahuluan Pemodelan Data Nyata</h2>
+<!-- BEGIN AI-INLINE:182db7f29053 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Pertemuan 8: UTS: Proyek Pendahuluan Pemodelan Data Nyata
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event,
+digital twin, estimasi parameter berbasis data, dan optimasi kebijakan
+layanan. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="tujuan">
 <p><strong>Tujuan pembelajaran.</strong> Setelah mempelajari bagian ini,
 mahasiswa diharapkan mampu menjelaskan konsep utama uts: proyek
@@ -6659,6 +7255,25 @@ penyederhanaan tidak boleh hilang.</p>
 <div id="rumus-dan-interpretasi-inti-7" class="section level3" number="2.10.1">
 <h3><span class="header-section-number">2.10.1</span> Rumus dan
 interpretasi inti</h3>
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus dan interpretasi inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Landasan Teori dan Cara Berpikir Sistem</strong>, lalu periksa
+setiap langkah secara manual, uji kasus batas, dan cocokkan dengan
+rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p><span class="math display">\[L_q=\frac{\lambda^2\operatorname{Var}(S)+\rho^2}{2(1-\rho)}\]</span></p>
 <p>Rumus Pollaczek-Khinchine untuk M/G/1 menunjukkan bahwa variasi waktu
@@ -6669,6 +7284,30 @@ memiliki performa sangat berbeda jika variansnya berbeda.</p>
 <div id="contoh-kasus-terapan-7" class="section level3" number="2.10.2">
 <h3><span class="header-section-number">2.10.2</span> Contoh kasus
 terapan</h3>
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event,
+digital twin, estimasi parameter berbasis data, dan optimasi kebijakan
+layanan. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Pertimbangkan data kedatangan dan
 pelayanan dari layanan nyata yang dipilih mahasiswa. Pengelola ingin
@@ -6834,6 +7473,28 @@ dijelaskan, bukan disembunyikan seperti typo di laporan akhir.</p>
 <div id="latihan-dan-tugas-mini-7" class="section level3" number="2.10.5">
 <h3><span class="header-section-number">2.10.5</span> Latihan dan tugas
 mini</h3>
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Latihan dan tugas mini
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat
 diagram alur layanan, lalu tentukan batas sistem dan definisi
@@ -6862,6 +7523,28 @@ dasar penyusunan laporan.</p>
 <div id="catatan-pendalaman-untuk-diskusi-kelas-7" class="section level3" number="2.10.6">
 <h3><span class="header-section-number">2.10.6</span> Catatan pendalaman
 untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Catatan pendalaman untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pendekatan terbaik dalam teori antrian adalah berpikir seperti
 konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa
 harus peka terhadap kebutuhan pengambil keputusan: seberapa lama
@@ -7051,6 +7734,25 @@ penyederhanaan tidak boleh hilang.</p>
 <div id="rumus-dan-interpretasi-inti-8" class="section level3" number="2.11.1">
 <h3><span class="header-section-number">2.11.1</span> Rumus dan
 interpretasi inti</h3>
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus dan interpretasi inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Landasan Teori dan Cara Berpikir Sistem</strong>, lalu periksa
+setiap langkah secara manual, uji kasus batas, dan cocokkan dengan
+rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p><span class="math display">\[t_{next}=\min(t_{arrival},t_{departure})\]</span></p>
 <p>Dalam simulasi kejadian diskrit, waktu simulasi bergerak dari satu
@@ -7062,6 +7764,30 @@ pelanggan.</p>
 <div id="contoh-kasus-terapan-8" class="section level3" number="2.11.2">
 <h3><span class="header-section-number">2.11.2</span> Contoh kasus
 terapan</h3>
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event,
+digital twin, estimasi parameter berbasis data, dan optimasi kebijakan
+layanan. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Pertimbangkan sistem pelayanan yang tidak
 memenuhi asumsi analitik klasik. Pengelola ingin mengetahui apakah
@@ -7190,6 +7916,27 @@ mungkin karena analis belum cukup keras menguji asumsi.</p>
 <div id="implementasi-komputasi-2" class="section level3" number="2.11.4">
 <h3><span class="header-section-number">2.11.4</span> Implementasi
 komputasi</h3>
+<!-- BEGIN AI-INLINE:7519f67823a9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi komputasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut dapat digunakan sebagai titik awal praktikum. Chunk
 diberi <code>eval=FALSE</code> agar aman saat dokumen pertama kali
 dibuka. Mahasiswa dapat mengubah parameter sesuai data kasus, lalu
@@ -7259,6 +8006,28 @@ laporan akhir.</p>
 <div id="latihan-dan-tugas-mini-8" class="section level3" number="2.11.6">
 <h3><span class="header-section-number">2.11.6</span> Latihan dan tugas
 mini</h3>
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Latihan dan tugas mini
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat
 diagram alur layanan, lalu tentukan batas sistem dan definisi
@@ -7286,6 +8055,28 @@ dasar penyusunan laporan.</p>
 <div id="catatan-pendalaman-untuk-diskusi-kelas-8" class="section level3" number="2.11.7">
 <h3><span class="header-section-number">2.11.7</span> Catatan pendalaman
 untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Catatan pendalaman untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pendekatan terbaik dalam teori antrian adalah berpikir seperti
 konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa
 harus peka terhadap kebutuhan pengambil keputusan: seberapa lama
@@ -7477,6 +8268,25 @@ penyederhanaan tidak boleh hilang.</p>
 <div id="rumus-dan-interpretasi-inti-9" class="section level3" number="2.12.1">
 <h3><span class="header-section-number">2.12.1</span> Rumus dan
 interpretasi inti</h3>
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus dan interpretasi inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Landasan Teori dan Cara Berpikir Sistem</strong>, lalu periksa
+setiap langkah secara manual, uji kasus batas, dan cocokkan dengan
+rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p><span class="math display">\[\bar{Y}=\frac{1}{R}\sum_{r=1}^R
 Y_r,\qquad s_Y^2=\frac{1}{R-1}\sum_{r=1}^R(Y_r-\bar{Y})^2\]</span></p>
@@ -7488,6 +8298,30 @@ acak.</p>
 <div id="contoh-kasus-terapan-9" class="section level3" number="2.12.2">
 <h3><span class="header-section-number">2.12.2</span> Contoh kasus
 terapan</h3>
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event,
+digital twin, estimasi parameter berbasis data, dan optimasi kebijakan
+layanan. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Pertimbangkan pelayanan klinik dengan
 waktu pelayanan bervariasi dan jam kedatangan tidak homogen. Pengelola
@@ -7617,6 +8451,27 @@ mungkin karena analis belum cukup keras menguji asumsi.</p>
 <div id="implementasi-komputasi-3" class="section level3" number="2.12.4">
 <h3><span class="header-section-number">2.12.4</span> Implementasi
 komputasi</h3>
+<!-- BEGIN AI-INLINE:7519f67823a9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi komputasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut dapat digunakan sebagai titik awal praktikum. Chunk
 diberi <code>eval=FALSE</code> agar aman saat dokumen pertama kali
 dibuka. Mahasiswa dapat mengubah parameter sesuai data kasus, lalu
@@ -7689,6 +8544,28 @@ laporan akhir.</p>
 <div id="latihan-dan-tugas-mini-9" class="section level3" number="2.12.6">
 <h3><span class="header-section-number">2.12.6</span> Latihan dan tugas
 mini</h3>
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Latihan dan tugas mini
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat
 diagram alur layanan, lalu tentukan batas sistem dan definisi
@@ -7717,6 +8594,28 @@ dasar penyusunan laporan.</p>
 <div id="catatan-pendalaman-untuk-diskusi-kelas-9" class="section level3" number="2.12.7">
 <h3><span class="header-section-number">2.12.7</span> Catatan pendalaman
 untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Catatan pendalaman untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pendekatan terbaik dalam teori antrian adalah berpikir seperti
 konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa
 harus peka terhadap kebutuhan pengambil keputusan: seberapa lama
@@ -7767,6 +8666,27 @@ berikutnya.</p>
 <div id="pertemuan-11-implementasi-simulasi-dengan-r-dan-python" class="section level2" number="2.13">
 <h2><span class="header-section-number">2.13</span> Pertemuan 11:
 Implementasi Simulasi dengan R dan Python</h2>
+<!-- BEGIN AI-INLINE:ec0ab555571a -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Pertemuan 11: Implementasi Simulasi dengan R dan Python
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="tujuan">
 <p><strong>Tujuan pembelajaran.</strong> Setelah mempelajari bagian ini,
 mahasiswa diharapkan mampu menjelaskan konsep utama implementasi
@@ -7905,6 +8825,25 @@ penyederhanaan tidak boleh hilang.</p>
 <div id="rumus-dan-interpretasi-inti-10" class="section level3" number="2.13.1">
 <h3><span class="header-section-number">2.13.1</span> Rumus dan
 interpretasi inti</h3>
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus dan interpretasi inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Landasan Teori dan Cara Berpikir Sistem</strong>, lalu periksa
+setiap langkah secara manual, uji kasus batas, dan cocokkan dengan
+rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p><span class="math display">\[\bar{Y}\pm
 t_{R-1,0.975}\frac{s_Y}{\sqrt{R}}\]</span></p>
@@ -7915,6 +8854,30 @@ yang substantif dari variasi Monte Carlo.</p>
 <div id="contoh-kasus-terapan-10" class="section level3" number="2.13.2">
 <h3><span class="header-section-number">2.13.2</span> Contoh kasus
 terapan</h3>
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event,
+digital twin, estimasi parameter berbasis data, dan optimasi kebijakan
+layanan. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Pertimbangkan simulasi pengaruh jumlah
 server terhadap waktu tunggu. Pengelola ingin mengetahui apakah sistem
@@ -8044,6 +9007,27 @@ mungkin karena analis belum cukup keras menguji asumsi.</p>
 <div id="implementasi-komputasi-4" class="section level3" number="2.13.4">
 <h3><span class="header-section-number">2.13.4</span> Implementasi
 komputasi</h3>
+<!-- BEGIN AI-INLINE:7519f67823a9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi komputasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut dapat digunakan sebagai titik awal praktikum. Chunk
 diberi <code>eval=FALSE</code> agar aman saat dokumen pertama kali
 dibuka. Mahasiswa dapat mengubah parameter sesuai data kasus, lalu
@@ -8103,6 +9087,28 @@ dijelaskan, bukan disembunyikan seperti typo di laporan akhir.</p>
 <div id="latihan-dan-tugas-mini-10" class="section level3" number="2.13.6">
 <h3><span class="header-section-number">2.13.6</span> Latihan dan tugas
 mini</h3>
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Latihan dan tugas mini
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat
 diagram alur layanan, lalu tentukan batas sistem dan definisi
@@ -8131,6 +9137,28 @@ dasar penyusunan laporan.</p>
 <div id="catatan-pendalaman-untuk-diskusi-kelas-10" class="section level3" number="2.13.7">
 <h3><span class="header-section-number">2.13.7</span> Catatan pendalaman
 untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Catatan pendalaman untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pendekatan terbaik dalam teori antrian adalah berpikir seperti
 konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa
 harus peka terhadap kebutuhan pengambil keputusan: seberapa lama
@@ -8319,6 +9347,25 @@ penyederhanaan tidak boleh hilang.</p>
 <div id="rumus-dan-interpretasi-inti-11" class="section level3" number="2.14.1">
 <h3><span class="header-section-number">2.14.1</span> Rumus dan
 interpretasi inti</h3>
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus dan interpretasi inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Landasan Teori dan Cara Berpikir Sistem</strong>, lalu periksa
+setiap langkah secara manual, uji kasus batas, dan cocokkan dengan
+rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p><span class="math display">\[\Delta=E[Y_A]-E[Y_B]\]</span></p>
 <p>Perbandingan skenario sebaiknya dinyatakan sebagai estimasi selisih
@@ -8329,6 +9376,30 @@ server.</p>
 <div id="contoh-kasus-terapan-11" class="section level3" number="2.14.2">
 <h3><span class="header-section-number">2.14.2</span> Contoh kasus
 terapan</h3>
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event,
+digital twin, estimasi parameter berbasis data, dan optimasi kebijakan
+layanan. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Pertimbangkan penentuan kapasitas layanan
 pada jam sibuk dan jam normal. Pengelola ingin mengetahui apakah sistem
@@ -8457,6 +9528,27 @@ mungkin karena analis belum cukup keras menguji asumsi.</p>
 <div id="implementasi-komputasi-5" class="section level3" number="2.14.4">
 <h3><span class="header-section-number">2.14.4</span> Implementasi
 komputasi</h3>
+<!-- BEGIN AI-INLINE:7519f67823a9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi komputasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut dapat digunakan sebagai titik awal praktikum. Chunk
 diberi <code>eval=FALSE</code> agar aman saat dokumen pertama kali
 dibuka. Mahasiswa dapat mengubah parameter sesuai data kasus, lalu
@@ -8510,6 +9602,28 @@ typo di laporan akhir.</p>
 <div id="latihan-dan-tugas-mini-11" class="section level3" number="2.14.6">
 <h3><span class="header-section-number">2.14.6</span> Latihan dan tugas
 mini</h3>
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Latihan dan tugas mini
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat
 diagram alur layanan, lalu tentukan batas sistem dan definisi
@@ -8536,6 +9650,28 @@ dasar penyusunan laporan.</p>
 <div id="catatan-pendalaman-untuk-diskusi-kelas-11" class="section level3" number="2.14.7">
 <h3><span class="header-section-number">2.14.7</span> Catatan pendalaman
 untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Catatan pendalaman untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pendekatan terbaik dalam teori antrian adalah berpikir seperti
 konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa
 harus peka terhadap kebutuhan pengambil keputusan: seberapa lama
@@ -8725,6 +9861,25 @@ penyederhanaan tidak boleh hilang.</p>
 <div id="rumus-dan-interpretasi-inti-12" class="section level3" number="2.15.1">
 <h3><span class="header-section-number">2.15.1</span> Rumus dan
 interpretasi inti</h3>
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus dan interpretasi inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Landasan Teori dan Cara Berpikir Sistem</strong>, lalu periksa
+setiap langkah secara manual, uji kasus batas, dan cocokkan dengan
+rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p><span class="math display">\[\lambda_i=e_i+\sum_j\lambda_jp_{ji}\]</span></p>
 <p>Traffic equation pada jaringan antrian menyatakan bahwa kedatangan ke
@@ -8735,6 +9890,30 @@ lain.</p>
 <div id="contoh-kasus-terapan-12" class="section level3" number="2.15.2">
 <h3><span class="header-section-number">2.15.2</span> Contoh kasus
 terapan</h3>
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event,
+digital twin, estimasi parameter berbasis data, dan optimasi kebijakan
+layanan. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Pertimbangkan pasien rumah sakit:
 pendaftaran, triase, pemeriksaan, laboratorium, farmasi. Pengelola ingin
@@ -8863,6 +10042,27 @@ mungkin karena analis belum cukup keras menguji asumsi.</p>
 <div id="implementasi-komputasi-6" class="section level3" number="2.15.4">
 <h3><span class="header-section-number">2.15.4</span> Implementasi
 komputasi</h3>
+<!-- BEGIN AI-INLINE:7519f67823a9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi komputasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut dapat digunakan sebagai titik awal praktikum. Chunk
 diberi <code>eval=FALSE</code> agar aman saat dokumen pertama kali
 dibuka. Mahasiswa dapat mengubah parameter sesuai data kasus, lalu
@@ -8918,6 +10118,28 @@ dijelaskan, bukan disembunyikan seperti typo di laporan akhir.</p>
 <div id="latihan-dan-tugas-mini-12" class="section level3" number="2.15.6">
 <h3><span class="header-section-number">2.15.6</span> Latihan dan tugas
 mini</h3>
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Latihan dan tugas mini
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat
 diagram alur layanan, lalu tentukan batas sistem dan definisi
@@ -8945,6 +10167,28 @@ dasar penyusunan laporan.</p>
 <div id="catatan-pendalaman-untuk-diskusi-kelas-12" class="section level3" number="2.15.7">
 <h3><span class="header-section-number">2.15.7</span> Catatan pendalaman
 untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Catatan pendalaman untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pendekatan terbaik dalam teori antrian adalah berpikir seperti
 konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa
 harus peka terhadap kebutuhan pengambil keputusan: seberapa lama
@@ -9135,6 +10379,25 @@ penyederhanaan tidak boleh hilang.</p>
 <div id="rumus-dan-interpretasi-inti-13" class="section level3" number="2.16.1">
 <h3><span class="header-section-number">2.16.1</span> Rumus dan
 interpretasi inti</h3>
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus dan interpretasi inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Landasan Teori dan Cara Berpikir Sistem</strong>, lalu periksa
+setiap langkah secara manual, uji kasus batas, dan cocokkan dengan
+rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p><span class="math display">\[P(\text{abandon})=P(W_q&gt;\tau)\]</span></p>
 <p>Reneging dapat dimodelkan sebagai pelanggan meninggalkan antrean
@@ -9145,6 +10408,30 @@ ambang ini bukan sekadar teknis, tetapi juga etik.</p>
 <div id="contoh-kasus-terapan-13" class="section level3" number="2.16.2">
 <h3><span class="header-section-number">2.16.2</span> Contoh kasus
 terapan</h3>
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event,
+digital twin, estimasi parameter berbasis data, dan optimasi kebijakan
+layanan. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Pertimbangkan IGD, call center darurat,
 layanan pelanggan dengan pelanggan meninggalkan antrean. Pengelola ingin
@@ -9273,6 +10560,27 @@ mungkin karena analis belum cukup keras menguji asumsi.</p>
 <div id="implementasi-komputasi-7" class="section level3" number="2.16.4">
 <h3><span class="header-section-number">2.16.4</span> Implementasi
 komputasi</h3>
+<!-- BEGIN AI-INLINE:7519f67823a9 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi komputasi
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Kode berikut dapat digunakan sebagai titik awal praktikum. Chunk
 diberi <code>eval=FALSE</code> agar aman saat dokumen pertama kali
 dibuka. Mahasiswa dapat mengubah parameter sesuai data kasus, lalu
@@ -9328,6 +10636,28 @@ typo di laporan akhir.</p>
 <div id="latihan-dan-tugas-mini-13" class="section level3" number="2.16.6">
 <h3><span class="header-section-number">2.16.6</span> Latihan dan tugas
 mini</h3>
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Latihan dan tugas mini
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat
 diagram alur layanan, lalu tentukan batas sistem dan definisi
@@ -9355,6 +10685,28 @@ dasar penyusunan laporan.</p>
 <div id="catatan-pendalaman-untuk-diskusi-kelas-13" class="section level3" number="2.16.7">
 <h3><span class="header-section-number">2.16.7</span> Catatan pendalaman
 untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Catatan pendalaman untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pendekatan terbaik dalam teori antrian adalah berpikir seperti
 konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa
 harus peka terhadap kebutuhan pengambil keputusan: seberapa lama
@@ -9546,6 +10898,25 @@ penyederhanaan tidak boleh hilang.</p>
 <div id="rumus-dan-interpretasi-inti-14" class="section level3" number="2.17.1">
 <h3><span class="header-section-number">2.17.1</span> Rumus dan
 interpretasi inti</h3>
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus dan interpretasi inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Landasan Teori dan Cara Berpikir Sistem</strong>, lalu periksa
+setiap langkah secara manual, uji kasus batas, dan cocokkan dengan
+rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p><span class="math display">\[\min_c\ \{C_s c + C_w L_q(c)+C_l
 P_K(c)\}\]</span></p>
@@ -9557,6 +10928,30 @@ kehilangan permintaan.</p>
 <div id="contoh-kasus-terapan-14" class="section level3" number="2.17.2">
 <h3><span class="header-section-number">2.17.2</span> Contoh kasus
 terapan</h3>
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event,
+digital twin, estimasi parameter berbasis data, dan optimasi kebijakan
+layanan. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Pertimbangkan layanan modern:
 telemedicine, ride hailing, platform digital, manufaktur cerdas.
@@ -9723,6 +11118,28 @@ dijelaskan, bukan disembunyikan seperti typo di laporan akhir.</p>
 <div id="latihan-dan-tugas-mini-14" class="section level3" number="2.17.5">
 <h3><span class="header-section-number">2.17.5</span> Latihan dan tugas
 mini</h3>
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Latihan dan tugas mini
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat
 diagram alur layanan, lalu tentukan batas sistem dan definisi
@@ -9751,6 +11168,28 @@ dasar penyusunan laporan.</p>
 <div id="catatan-pendalaman-untuk-diskusi-kelas-14" class="section level3" number="2.17.6">
 <h3><span class="header-section-number">2.17.6</span> Catatan pendalaman
 untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Catatan pendalaman untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pendekatan terbaik dalam teori antrian adalah berpikir seperti
 konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa
 harus peka terhadap kebutuhan pengambil keputusan: seberapa lama
@@ -9801,6 +11240,31 @@ berikutnya.</p>
 <div id="pertemuan-16-uas-penulisan-ilmiah-dan-presentasi-hasil-analisis" class="section level2" number="2.18">
 <h2><span class="header-section-number">2.18</span> Pertemuan 16: UAS:
 Penulisan Ilmiah dan Presentasi Hasil Analisis</h2>
+<!-- BEGIN AI-INLINE:8cc589470df6 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Pertemuan 16: UAS: Penulisan Ilmiah dan Presentasi Hasil
+Analisis
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event,
+digital twin, estimasi parameter berbasis data, dan optimasi kebijakan
+layanan. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="tujuan">
 <p><strong>Tujuan pembelajaran.</strong> Setelah mempelajari bagian ini,
 mahasiswa diharapkan mampu menjelaskan konsep utama uas: penulisan
@@ -9942,6 +11406,25 @@ penyederhanaan tidak boleh hilang.</p>
 <div id="rumus-dan-interpretasi-inti-15" class="section level3" number="2.18.1">
 <h3><span class="header-section-number">2.18.1</span> Rumus dan
 interpretasi inti</h3>
+<!-- BEGIN AI-INLINE:a5dc0dd5351b -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Rumus dan interpretasi inti
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Gunakan AI untuk mengurai notasi dan menawarkan alternatif derivasi pada
+<strong>Landasan Teori dan Cara Berpikir Sistem</strong>, lalu periksa
+setiap langkah secara manual, uji kasus batas, dan cocokkan dengan
+rujukan primer. AI tidak boleh menjadi satu-satunya sumber rumus atau
+pembuktian; kesetaraan simbolik wajib dibuktikan mahasiswa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="formula-box">
 <p><span class="math display">\[\text{Klaim
 ilmiah}=\text{data}+\text{model}+\text{bukti}+\text{interpretasi}\]</span></p>
@@ -9953,6 +11436,30 @@ hasil diterjemahkan menjadi keputusan.</p>
 <div id="contoh-kasus-terapan-15" class="section level3" number="2.18.2">
 <h3><span class="header-section-number">2.18.2</span> Contoh kasus
 terapan</h3>
+<!-- BEGIN AI-INLINE:00dfefb1a1df -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Contoh kasus terapan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event,
+digital twin, estimasi parameter berbasis data, dan optimasi kebijakan
+layanan. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Pertimbangkan proyek akhir teori antrian
 berbasis data, simulasi, atau inovasi model. Pengelola ingin mengetahui
@@ -10120,6 +11627,28 @@ laporan akhir.</p>
 <div id="latihan-dan-tugas-mini-15" class="section level3" number="2.18.5">
 <h3><span class="header-section-number">2.18.5</span> Latihan dan tugas
 mini</h3>
+<!-- BEGIN AI-INLINE:2688f81358a1 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Latihan dan tugas mini
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <ol style="list-style-type: decimal">
 <li>Pilih satu sistem layanan di sekitar kampus atau tempat kerja. Buat
 diagram alur layanan, lalu tentukan batas sistem dan definisi
@@ -10148,6 +11677,28 @@ dasar penyusunan laporan.</p>
 <div id="catatan-pendalaman-untuk-diskusi-kelas-15" class="section level3" number="2.18.6">
 <h3><span class="header-section-number">2.18.6</span> Catatan pendalaman
 untuk diskusi kelas</h3>
+<!-- BEGIN AI-INLINE:a4d353aee745 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Catatan pendalaman untuk diskusi kelas
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pendekatan terbaik dalam teori antrian adalah berpikir seperti
 konsultan statistik sekaligus peneliti. Sebagai konsultan, mahasiswa
 harus peka terhadap kebutuhan pengambil keputusan: seberapa lama
@@ -10491,6 +12042,30 @@ Kasus Terapan</h1>
 <div id="studi-kasus-f.1-rumah-sakit-rawat-jalan" class="section level2" number="9.1">
 <h2><span class="header-section-number">9.1</span> Studi Kasus F.1:
 Rumah sakit rawat jalan</h2>
+<!-- BEGIN AI-INLINE:960c73d7aa3c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus F.1: Rumah sakit rawat jalan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event,
+digital twin, estimasi parameter berbasis data, dan optimasi kebijakan
+layanan. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Sistem rumah sakit rawat jalan dapat dipandang sebagai jaringan
 layanan dengan alur pendaftaran, triase, dokter, laboratorium, farmasi.
 Pelanggan utama dalam sistem ini adalah pasien umum dan prioritas
@@ -10533,6 +12108,30 @@ inovasi model atau riset lanjutan.</p>
 <div id="studi-kasus-f.2-call-center-layanan-publik" class="section level2" number="9.2">
 <h2><span class="header-section-number">9.2</span> Studi Kasus F.2: Call
 center layanan publik</h2>
+<!-- BEGIN AI-INLINE:9bb7e94ca17e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus F.2: Call center layanan publik
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event,
+digital twin, estimasi parameter berbasis data, dan optimasi kebijakan
+layanan. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Sistem call center layanan publik dapat dipandang sebagai jaringan
 layanan dengan alur panggilan masuk, IVR, agen, eskalasi supervisor.
 Pelanggan utama dalam sistem ini adalah pelanggan yang menunggu atau
@@ -10576,6 +12175,30 @@ inovasi model atau riset lanjutan.</p>
 <div id="studi-kasus-f.3-gerbang-tol" class="section level2" number="9.3">
 <h2><span class="header-section-number">9.3</span> Studi Kasus F.3:
 Gerbang tol</h2>
+<!-- BEGIN AI-INLINE:5dd3d45f028b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus F.3: Gerbang tol
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event,
+digital twin, estimasi parameter berbasis data, dan optimasi kebijakan
+layanan. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Sistem gerbang tol dapat dipandang sebagai jaringan layanan dengan
 alur kedatangan kendaraan, gardu, transaksi, keluar ruas. Pelanggan
 utama dalam sistem ini adalah kendaraan ringan dan berat. Analisis
@@ -10618,6 +12241,30 @@ inovasi model atau riset lanjutan.</p>
 <div id="studi-kasus-f.4-administrasi-akademik" class="section level2" number="9.4">
 <h2><span class="header-section-number">9.4</span> Studi Kasus F.4:
 Administrasi akademik</h2>
+<!-- BEGIN AI-INLINE:83ad7f5f5c96 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus F.4: Administrasi akademik
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event,
+digital twin, estimasi parameter berbasis data, dan optimasi kebijakan
+layanan. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Sistem administrasi akademik dapat dipandang sebagai jaringan layanan
 dengan alur pengambilan nomor, verifikasi berkas, validasi,
 penyelesaian. Pelanggan utama dalam sistem ini adalah mahasiswa dan
@@ -10660,6 +12307,30 @@ inovasi model atau riset lanjutan.</p>
 <div id="studi-kasus-f.5-manufaktur" class="section level2" number="9.5">
 <h2><span class="header-section-number">9.5</span> Studi Kasus F.5:
 Manufaktur</h2>
+<!-- BEGIN AI-INLINE:114adb9a2d41 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus F.5: Manufaktur
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event,
+digital twin, estimasi parameter berbasis data, dan optimasi kebijakan
+layanan. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Sistem manufaktur dapat dipandang sebagai jaringan layanan dengan
 alur mesin rusak, teknisi, perbaikan, kembali produksi. Pelanggan utama
 dalam sistem ini adalah mesin sebagai sumber terbatas. Analisis antrian
@@ -10702,6 +12373,30 @@ inovasi model atau riset lanjutan.</p>
 <div id="studi-kasus-f.6-restoran-cepat-saji" class="section level2" number="9.6">
 <h2><span class="header-section-number">9.6</span> Studi Kasus F.6:
 Restoran cepat saji</h2>
+<!-- BEGIN AI-INLINE:f55856d7c964 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus F.6: Restoran cepat saji
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event,
+digital twin, estimasi parameter berbasis data, dan optimasi kebijakan
+layanan. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Sistem restoran cepat saji dapat dipandang sebagai jaringan layanan
 dengan alur pesanan, pembayaran, persiapan, pengambilan. Pelanggan utama
 dalam sistem ini adalah pelanggan makan di tempat dan bawa pulang.
@@ -10744,6 +12439,30 @@ inovasi model atau riset lanjutan.</p>
 <div id="studi-kasus-f.7-bandara" class="section level2" number="9.7">
 <h2><span class="header-section-number">9.7</span> Studi Kasus F.7:
 Bandara</h2>
+<!-- BEGIN AI-INLINE:0e6a3056519c -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus F.7: Bandara
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event,
+digital twin, estimasi parameter berbasis data, dan optimasi kebijakan
+layanan. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Sistem bandara dapat dipandang sebagai jaringan layanan dengan alur
 check-in, bag drop, keamanan, boarding. Pelanggan utama dalam sistem ini
 adalah penumpang domestik dan internasional. Analisis antrian dimulai
@@ -10786,6 +12505,30 @@ inovasi model atau riset lanjutan.</p>
 <div id="studi-kasus-f.8-platform-digital" class="section level2" number="9.8">
 <h2><span class="header-section-number">9.8</span> Studi Kasus F.8:
 Platform digital</h2>
+<!-- BEGIN AI-INLINE:2fc8f3aa0d43 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus F.8: Platform digital
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Simulasi discrete-event,
+digital twin, estimasi parameter berbasis data, dan optimasi kebijakan
+layanan. Generative AI dapat menghasilkan beberapa skenario pemangku
+kepentingan dan draf narasi yang kemudian diperiksa terhadap hasil
+analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Sistem platform digital dapat dipandang sebagai jaringan layanan
 dengan alur request pengguna, server aplikasi, database, cache.
 Pelanggan utama dalam sistem ini adalah permintaan API. Analisis antrian
@@ -11085,6 +12828,27 @@ membutuhkan pertimbangan manusiawi.</p>
 <div id="catatan-pengayaan-7-platform-komputasi-awan" class="section level2" number="10.7">
 <h2><span class="header-section-number">10.7</span> Catatan pengayaan 7:
 platform komputasi awan</h2>
+<!-- BEGIN AI-INLINE:757b9e2bbfe7 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Catatan pengayaan 7: platform komputasi awan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Pengayaan ini memperdalam hubungan antara teori antrian dan praktik
 analisis data. Dalam konteks platform komputasi awan, analis perlu
 mengingat bahwa model tidak menggantikan observasi lapangan. Model
@@ -11417,6 +13181,76 @@ masyarakat. Oleh sebab itu, rekomendasi berbasis teori antrian harus
 mempertimbangkan dampak terhadap kelompok rentan, keadilan prioritas,
 dan kelayakan implementasi. Angka adalah bukti; keputusan tetap
 membutuhkan pertimbangan manusiawi.</p>
+<!-- BEGIN ADOPSI AI RPS 2026 -->
+</div>
+<div id="penyelarasan-materi-dengan-rps-revisi-ai-2026" class="section level2" number="10.15">
+<h2><span class="header-section-number">10.15</span> Penyelarasan Materi
+dengan RPS Revisi AI 2026</h2>
+<p>Materi <strong>Teori Antrian</strong> ini telah diselaraskan dengan
+RPS Revisi AI 2026. Rumusan CPL program studi tetap dan tidak diubah.
+Generative AI maupun agentic AI hanya digunakan sebagai alat bantu untuk
+mempercepat ketercapaian CPMK dan Sub-CPMK; penalaran statistika,
+keputusan metodologis, dan tanggung jawab akademik tetap berada pada
+mahasiswa.</p>
+<div id="integrasi-ai-kontekstual" class="section level3" number="10.15.1">
+<h3><span class="header-section-number">10.15.1</span> Integrasi AI
+kontekstual</h3>
+<ul>
+<li>Simulasi discrete-event, digital twin, estimasi parameter berbasis
+data, dan optimasi kebijakan layanan.</li>
+<li>Pengenalan reinforcement learning atau learning-based control untuk
+sistem antrian, disertai pembanding kebijakan analitik.</li>
+<li>Studi kasus layanan kesehatan, transportasi, atau industri dengan
+analisis sensitivitas, biaya, fairness layanan, dan robustness.</li>
+</ul>
+</div>
+<div id="protokol-penggunaan-ai" class="section level3" number="10.15.2">
+<h3><span class="header-section-number">10.15.2</span> Protokol
+penggunaan AI</h3>
+<ol style="list-style-type: decimal">
+<li>Nyatakan alat, tujuan penggunaan, dan bagian pekerjaan yang dibantu
+AI.</li>
+<li>Simpan prompt log ringkas, sumber, versi kode/notebook, dan
+perubahan yang dilakukan.</li>
+<li>Verifikasi keluaran terhadap asumsi metode, sumber primer, hasil
+numerik, diagnostik, ketidakpastian, robustness, bias/fairness, privasi,
+dan konteks.</li>
+<li>Jangan memasukkan data pribadi, rahasia, soal asesmen tertutup, atau
+kredensial ke layanan AI yang tidak disetujui.</li>
+<li>Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil
+secara mandiri.</li>
+</ol>
+</div>
+<div id="bukti-asesmen" class="section level3" number="10.15.3">
+<h3><span class="header-section-number">10.15.3</span> Bukti
+asesmen</h3>
+<!-- BEGIN AI-INLINE:962c6759c89e -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Bukti asesmen
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Landasan Teori dan Cara Berpikir
+Sistem.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
+<p>Penilaian berfokus pada ketepatan metode, validasi dan
+ketidakpastian, reproducibility, interpretasi, komunikasi, serta
+transparansi penggunaan AI. Keluaran AI tanpa verifikasi bukan bukti
+ketercapaian CPMK.</p>
+<!-- END ADOPSI AI RPS 2026 -->
 <div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
 <div id="ref-banks2010" class="csl-entry">
 Banks, Jerry, John S. Carson, Barry L. Nelson, dan David M. Nicol. 2010.
@@ -11490,31 +13324,13 @@ York: Springer.
 </div>
 </div>
 </div>
+</div>
 
 
 
 </div>
 </div>
 
-
-
-
-
-<!-- BEGIN ADOPSI AI RPS 2026 -->
-<section id="penyelarasan-rps-ai-2026" style="margin:2rem 0;padding:1.5rem;border-left:8px solid #f2a51a;background:#eef5f8;border-radius:8px">
-  <h2>Penyelarasan Materi dengan RPS Revisi AI 2026</h2>
-  <p>Materi <strong>Teori Antrian</strong> ini mempertahankan rumusan CPL yang berlaku. AI ditempatkan sebagai alat bantu untuk mempercepat ketercapaian CPMK dan Sub-CPMK, bukan sebagai CPL baru atau pengganti penalaran statistika.</p>
-  <h3>Integrasi AI kontekstual</h3><ul><li>Simulasi discrete-event, digital twin, estimasi parameter berbasis data, dan optimasi kebijakan layanan.</li><li>Pengenalan reinforcement learning atau learning-based control untuk sistem antrian, disertai pembanding kebijakan analitik.</li><li>Studi kasus layanan kesehatan, transportasi, atau industri dengan analisis sensitivitas, biaya, fairness layanan, dan robustness.</li></ul>
-  <h3>Protokol penggunaan AI</h3>
-  <ol>
-    <li>Ungkapkan alat, tujuan, prompt log ringkas, sumber, dan perubahan yang dilakukan.</li>
-    <li>Verifikasi asumsi, kode, hasil numerik, diagnostik, ketidakpastian, robustness, bias/fairness, privasi, dan konteks.</li>
-    <li>Jangan mengunggah data pribadi, rahasia, asesmen tertutup, atau kredensial ke layanan yang tidak disetujui.</li>
-    <li>Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil secara mandiri.</li>
-  </ol>
-  <p><strong>Bukti asesmen:</strong> ketepatan metode, validasi, reproducibility, interpretasi, komunikasi, dan transparansi penggunaan AI. Keluaran AI tanpa verifikasi bukan bukti ketercapaian CPMK.</p>
-</section>
-<!-- END ADOPSI AI RPS 2026 -->
 </div>
 
 <script>
@@ -11579,6 +13395,16 @@ $(document).ready(function ()  {
     // tocify
     var toc = $("#TOC").tocify(options).data("toc-tocify");
 });
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
 </script>
 
 </body>

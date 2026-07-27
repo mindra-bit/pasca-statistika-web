@@ -3130,270 +3130,34 @@ serta komunikasi hasil secara ilmiah.</p>
 </div>
 <!-- END UNPAD MATERIAL ENHANCEMENT -->
 <style>
-html, body {
-  background: linear-gradient(135deg, #f8fbfd 0%, #fffdf8 48%, #f3f6ee 100%) !important;
-  color: #172033 !important;
+:root{
+--brown-900:#3a1f0f; --brown-800:#5b351a; --brown-700:#7b4b26; --brown-600:#9c6b3d;
+--brown-500:#b98452; --brown-300:#e1c39b; --brown-200:#f0ddc2; --brown-100:#fbf3e8;
+--cream:#fffaf2; --gold:#d6a246; --ink:#1f1a17; --muted:#665246;
 }
-body {
-  font-family: "Segoe UI", Arial, sans-serif !important;
-  font-size: 17px !important;
-  line-height: 1.72 !important;
-  margin: 0 !important;
-  overflow-x: hidden !important;
+body{
+color:var(--ink);
+font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+background: linear-gradient(135deg, #fff8ed 0%, #f7e6cf 35%, #ead0aa 70%, #d8b17b 100%);
+line-height:1.68;
 }
-.main-container {
-  max-width: 1180px !important;
-  margin-top: 18px !important;
-  margin-bottom: 38px !important;
-  padding: 34px 46px 54px !important;
-  background: rgba(255, 253, 248, 0.98) !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  box-shadow: 0 18px 42px rgba(23, 57, 92, 0.12) !important;
-  overflow-x: hidden !important;
-}
-h1, h2, h3, h4 {
-  color: #17395c !important;
-  font-weight: 800 !important;
-  letter-spacing: 0 !important;
-  line-height: 1.24 !important;
-}
-h1.title {
-  color: #17395c !important;
-  -webkit-text-fill-color: #17395c !important;
-  background: none !important;
-  border-bottom: 4px solid #f2a51a !important;
-  padding-bottom: 14px !important;
-}
-h2 {
-  margin-top: 46px !important;
-  padding: 12px 18px !important;
-  border-left: 8px solid #f2a51a !important;
-  border-radius: 8px !important;
-  background: linear-gradient(90deg, #eef8f6, #fff8e7) !important;
-}
-.unpad-cover h2 {
-  color: #111827 !important;
-  -webkit-text-fill-color: #111827 !important;
-  background: #fffdf8 !important;
-  border-left: 8px solid #f2a51a !important;
-  border-bottom: 0 !important;
-}
-h3 {
-  margin-top: 30px !important;
-}
-a {
-  color: #0b5c86 !important;
-}
-img, svg {
-  max-width: 100% !important;
-  height: auto !important;
-}
-table {
-  width: 100% !important;
-  border-collapse: collapse !important;
-  margin: 18px 0 26px !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-}
-.s2-table-scroll {
-  width: 100% !important;
-  max-width: 100% !important;
-  overflow-x: auto !important;
-  margin: 18px 0 26px !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-}
-.s2-table-scroll table {
-  min-width: 680px !important;
-  margin: 0 !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-}
-th {
-  background: #17395c !important;
-  color: #ffffff !important;
-  padding: 10px 12px !important;
-}
-td {
-  background: #fffdf8 !important;
-  border: 1px solid #d7e2ea !important;
-  padding: 10px 12px !important;
-  vertical-align: top !important;
-}
-.main-container p, .main-container li, td, th {
-  overflow-wrap: anywhere !important;
-}
-pre {
-  overflow: auto !important;
-  padding: 16px !important;
-  background: #eef5f8 !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  color: #111827 !important;
-}
-code {
-  background: #eef5f8 !important;
-  border-radius: 6px !important;
-  color: #111827 !important;
-  padding: 2px 5px !important;
-}
-span.math.display, .math.display, .MathJax_Display, .MathJax, mjx-container {
-  display: block !important;
-  max-width: 100% !important;
-  overflow-x: auto !important;
-  overflow-y: hidden !important;
-}
-blockquote {
-  margin: 22px 0 !important;
-  padding: 16px 20px !important;
-  background: #fff8e7 !important;
-  border-left: 8px solid #0f766e !important;
-  border-radius: 0 8px 8px 0 !important;
-}
-#TOC, .tocify {
-  background: #ffffff !important;
-  border: 1px solid #d7e2ea !important;
-  border-radius: 8px !important;
-  box-shadow: 0 12px 28px rgba(23, 57, 92, 0.10) !important;
-}
-.tocify {
-  max-height: calc(100vh - 40px) !important;
-}
-.tocify .active, #TOC .active {
-  background: linear-gradient(90deg, #17395c, #0f766e) !important;
-  color: #ffffff !important;
-  border-radius: 6px !important;
-}
-#TOC a, .tocify a {
-  color: #17395c !important;
-  text-decoration: none !important;
-}
-#TOC a:hover, .tocify a:hover {
-  color: #0f766e !important;
-  text-decoration: underline !important;
-}
-.hero, .rps-box, .rpsbox, .info-card, .card,
-.callout, .note, .casebox, .case-box, .examplebox, .exercise-box,
-.learning-box, .activitybox, .activity, .practice-box, .praktik-box,
-.praktikum, .tujuan, .interpretasi, .refleksi, .warning, .warningbox,
-.warning-box, .tip, .idea-box, .mathbox, .formula-box, .rumus-box,
-.contoh-box, .rubric-box {
-  margin: 22px 0 !important;
-  padding: 20px 24px !important;
-  background: #fffdf8 !important;
-  border: 1px solid #d7e2ea !important;
-  border-left: 8px solid #0f766e !important;
-  border-radius: 8px !important;
-  box-shadow: 0 10px 24px rgba(23, 57, 92, 0.10) !important;
-  color: #172033 !important;
-}
-.hero {
-  background: linear-gradient(135deg, #17395c 0%, #0f766e 62%, #f2a51a 100%) !important;
-  color: #ffffff !important;
-  border-left: 0 !important;
-}
-.hero h1, .hero h2, .hero h3, .hero h4, .hero p, .hero strong {
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-}
-.warning, .warningbox, .warning-box {
-  border-left-color: #b45309 !important;
-  background: #fff8e7 !important;
-}
-.rps-box, .rpsbox, .rubric-box {
-  border-left-color: #f2a51a !important;
-  background: linear-gradient(135deg, #fffdf8, #fff8e7) !important;
-}
-.mathbox, .formula-box, .rumus-box {
-  border-left-color: #17395c !important;
-  background: #eef5f8 !important;
-}
-.badge {
-  display: inline-block !important;
-  padding: 4px 10px !important;
-  border-radius: 999px !important;
-  background: #17395c !important;
-  color: #ffffff !important;
-  font-weight: 700 !important;
-  font-size: 0.85em !important;
-}
-.grid-2, .grid-3 {
-  display: grid !important;
-  gap: 18px !important;
-}
-.grid-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-}
-.grid-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-}
-hr {
-  border: 0 !important;
-  height: 2px !important;
-  background: linear-gradient(90deg, transparent, #d7e2ea, transparent) !important;
-  margin: 34px 0 !important;
-}
-@media (max-width: 980px) {
-  #TOC, .tocify {
-    position: relative !important;
-    width: auto !important;
-    max-height: 360px !important;
-    margin: 12px !important;
-  }
-  .main-container {
-    margin: 12px !important;
-    padding: 24px !important;
-  }
-  .grid-2, .grid-3 {
-    grid-template-columns: 1fr !important;
-  }
-}
+.main-container{max-width:1120px;margin-left:320px;margin-right:auto;background:rgba(255,250,242,.92);padding:38px 46px;border-radius:24px;box-shadow:0 18px 55px rgba(58,31,15,.20);}
+h1,h2,h3,h4{font-weight:800;letter-spacing:.2px;color:var(--brown-900);} h1.title{font-size:2.3rem;text-align:left;padding:30px 34px;border-radius:26px;color:#fff;background:linear-gradient(135deg,#3a1f0f,#8c5a2e,#d6a246);box-shadow:0 14px 34px rgba(58,31,15,.26);} h2{border-left:9px solid var(--gold);padding-left:14px;margin-top:46px;background:linear-gradient(90deg,#f0ddc2,transparent);padding-top:10px;padding-bottom:10px;border-radius:12px;}
+h3{margin-top:30px;color:var(--brown-800);} a{color:#7a3e05;font-weight:700;} a:hover{color:#b26714;}
+#TOC{position:fixed;left:18px;top:18px;width:275px;max-height:94vh;overflow:auto;background:linear-gradient(180deg,#fff8ed,#edd5b2);border:1px solid #d8b17b;border-radius:22px;padding:18px;box-shadow:0 12px 35px rgba(58,31,15,.22);font-size:.91rem;}
+#TOC::before{content:"📚 Daftar Isi";display:block;font-weight:900;color:#4c2d17;font-size:1.15rem;margin-bottom:10px;}
+#TOC ul{padding-left:17px;} #TOC li{margin:5px 0;}
+pre, .sourceCode, pre.sourceCode{background:#f7ead8 !important;color:#111 !important;border:1px solid #dfc39f;border-radius:16px;padding:16px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.65);} code{background:#f7ead8;color:#111;border-radius:6px;padding:2px 5px;}
+.mathbox{background:#fff0d9;border-left:7px solid #c4863b;color:#111;border-radius:18px;padding:16px 20px;margin:20px 0;box-shadow:0 8px 18px rgba(83,48,22,.12);} .callout, .examplebox, .casebox, .rpsbox{border-radius:20px;padding:18px 22px;margin:21px 0;box-shadow:0 9px 28px rgba(58,31,15,.13);} .callout{background:linear-gradient(135deg,#fffaf2,#f3dfc1);border-left:8px solid #a86a2f;}
+.examplebox{background:linear-gradient(135deg,#fff3dd,#f7d7a8);border-left:8px solid #d28b32;}
+.casebox{background:linear-gradient(135deg,#f5e4cc,#ead0aa);border-left:8px solid #7b4b26;}
+.rpsbox{background:linear-gradient(135deg,#fdf7ed,#ecd0a7);border:1px solid #c59a62;}
+table{border-collapse:collapse;width:100%;margin:20px 0;background:#fffaf2;border-radius:15px;overflow:hidden;box-shadow:0 5px 18px rgba(58,31,15,.08);} th{background:#70411f;color:#fff;padding:10px;}td{padding:10px;border-bottom:1px solid #ead4b7;}tr:nth-child(even){background:#fbefdF;}
+blockquote{background:#fff0d9;border-left:8px solid #b98452;padding:14px 22px;border-radius:14px;color:#3a1f0f;}
+hr{border:none;border-top:2px dashed #caa272;margin:35px 0;}
+.figure-note{font-size:.92rem;color:var(--muted);font-style:italic;}
+@media(max-width:980px){.main-container{margin-left:auto;padding:25px;} #TOC{position:relative;width:auto;max-height:none;left:auto;top:auto;margin-bottom:18px;}}
 </style>
-<script>
-window.MathJax = {
-  tex: {
-    inlineMath: [["\\(", "\\)"], ["$", "$"]],
-    displayMath: [["\\[", "\\]"], ["$$", "$$"]],
-    processEscapes: true,
-    processEnvironments: true,
-    tags: "ams"
-  },
-  options: {
-    skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"],
-    ignoreHtmlClass: "tex2jax_ignore"
-  },
-  chtml: {
-    fontURL: "../../assets/vendor/mathjax/output/chtml/fonts/woff-v2"
-  },
-  startup: {
-    typeset: true
-  }
-};
-
-(function () {
-  var script = document.createElement("script");
-  script.src = "../../assets/vendor/mathjax/tex-mml-chtml.js";
-  script.async = true;
-  script.onerror = function () {
-    var fallback = document.createElement("script");
-    fallback.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
-    fallback.async = true;
-    document.head.appendChild(fallback);
-  };
-  document.head.appendChild(script);
-})();
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll("table").forEach(function (table) {
-    if (table.parentElement && table.parentElement.classList.contains("s2-table-scroll")) return;
-    var wrapper = document.createElement("div");
-    wrapper.className = "s2-table-scroll";
-    table.parentNode.insertBefore(wrapper, table);
-    wrapper.appendChild(table);
-  });
-});
-</script>
 <div class="rpsbox">
 <p><strong>Identitas Mata Kuliah.</strong> Materi ini disusun untuk
 <strong>Matematika Aktuaria 2</strong> pada <strong>Program Studi S2
@@ -3408,6 +3172,28 @@ dua kehidupan, konstruksi model komputasi <em>multiple decrement</em>,
 serta perancangan solusi <em>benefit premium</em> dan <em>benefit
 reserve</em> untuk produk aktuaria lanjut.</p>
 </div>
+<!-- BEGIN AI-INLINE-STYLE-2026 -->
+<style>
+.ai-inline {
+margin: 1rem 0 1.35rem;
+padding: 1rem 1.1rem;
+border: 1px solid #bfd9d5;
+border-left: 7px solid #0f766e;
+border-radius: 8px;
+background: linear-gradient(135deg, #eff9f7, #fffaf0);
+}
+.ai-inline--agentic { border-left-color: #17395c; background: linear-gradient(135deg, #eef5fb, #f5faf8); }
+.ai-inline--assessment { border-left-color: #a35d00; background: #fff8e8; }
+.ai-inline h3, .ai-inline h4 { margin-top: 0; color: #17395c; }
+.ai-inline p:last-child, .ai-inline ul:last-child { margin-bottom: 0; }
+.ai-inline__label {
+display: inline-block; margin-bottom: .45rem; padding: .2rem .55rem;
+border-radius: 999px; background: #17395c; color: white;
+font-size: .78rem; font-weight: 800;
+}
+.ai-inline table { width: 100%; margin: .6rem 0; background: white; }
+</style>
+<!-- END AI-INLINE-STYLE-2026 -->
 <div id="prakata" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Prakata</h1>
 <p>Materi pembelajaran ini dibuat sebagai e-book kuliah berbasis
@@ -3561,6 +3347,24 @@ asuransi keluarga</strong> dalam konteks Matematika Aktuaria 2.</li>
 </div>
 <div id="konsep-inti" class="section level3" number="1.4.1">
 <h3><span class="header-section-number">1.4.1</span> Konsep Inti</h3>
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis
 pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali
 simbol, indeks umur, periode proyeksi, status hidup, status meninggal,
@@ -3658,6 +3462,24 @@ tebak-tebakan.</p>
 <div id="contoh-konseptual-dan-interpretasi" class="section level3" number="1.4.3">
 <h3><span class="header-section-number">1.4.3</span> Contoh Konseptual
 dan Interpretasi</h3>
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Contoh Konseptual dan Interpretasi
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="examplebox">
 <p><strong>Contoh.</strong> Misalkan terdapat pasangan berumur 45 dan 43
 tahun yang hendak membeli produk asuransi keluarga. Produk pertama
@@ -3692,6 +3514,27 @@ melakukan analisis aktuaria.</p>
 </div>
 <div id="implementasi-r" class="section level3" number="1.4.4">
 <h3><span class="header-section-number">1.4.4</span> Implementasi R</h3>
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file
 R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar
 mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi
@@ -3750,6 +3593,28 @@ dan sisa kewajiban.</p>
 <div id="studi-kasus-mini" class="section level3" number="1.4.5">
 <h3><span class="header-section-number">1.4.5</span> Studi Kasus
 Mini</h3>
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Mini
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses
+belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Sebuah perusahaan asuransi sedang
 mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga
@@ -3914,6 +3779,24 @@ kehidupan</strong> dalam konteks Matematika Aktuaria 2.</li>
 </div>
 <div id="konsep-inti-1" class="section level3" number="1.5.1">
 <h3><span class="header-section-number">1.5.1</span> Konsep Inti</h3>
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis
 pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali
 simbol, indeks umur, periode proyeksi, status hidup, status meninggal,
@@ -4011,6 +3894,24 @@ tebak-tebakan.</p>
 <div id="contoh-konseptual-dan-interpretasi-1" class="section level3" number="1.5.3">
 <h3><span class="header-section-number">1.5.3</span> Contoh Konseptual
 dan Interpretasi</h3>
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Contoh Konseptual dan Interpretasi
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="examplebox">
 <p><strong>Contoh.</strong> Misalkan terdapat pasangan berumur 45 dan 43
 tahun yang hendak membeli produk asuransi keluarga. Produk pertama
@@ -4045,6 +3946,27 @@ melakukan analisis aktuaria.</p>
 </div>
 <div id="implementasi-r-1" class="section level3" number="1.5.4">
 <h3><span class="header-section-number">1.5.4</span> Implementasi R</h3>
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file
 R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar
 mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi
@@ -4083,6 +4005,28 @@ dan sisa kewajiban.</p>
 <div id="studi-kasus-mini-1" class="section level3" number="1.5.5">
 <h3><span class="header-section-number">1.5.5</span> Studi Kasus
 Mini</h3>
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Mini
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses
+belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Sebuah perusahaan asuransi sedang
 mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga
@@ -4249,6 +4193,24 @@ sederhana</strong> dalam konteks Matematika Aktuaria 2.</li>
 </div>
 <div id="konsep-inti-2" class="section level3" number="1.6.1">
 <h3><span class="header-section-number">1.6.1</span> Konsep Inti</h3>
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis
 pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali
 simbol, indeks umur, periode proyeksi, status hidup, status meninggal,
@@ -4346,6 +4308,24 @@ tebak-tebakan.</p>
 <div id="contoh-konseptual-dan-interpretasi-2" class="section level3" number="1.6.3">
 <h3><span class="header-section-number">1.6.3</span> Contoh Konseptual
 dan Interpretasi</h3>
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Contoh Konseptual dan Interpretasi
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="examplebox">
 <p><strong>Contoh.</strong> Misalkan terdapat pasangan berumur 45 dan 43
 tahun yang hendak membeli produk asuransi keluarga. Produk pertama
@@ -4380,6 +4360,27 @@ melakukan analisis aktuaria.</p>
 </div>
 <div id="implementasi-r-2" class="section level3" number="1.6.4">
 <h3><span class="header-section-number">1.6.4</span> Implementasi R</h3>
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file
 R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar
 mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi
@@ -4418,6 +4419,28 @@ dan sisa kewajiban.</p>
 <div id="studi-kasus-mini-2" class="section level3" number="1.6.5">
 <h3><span class="header-section-number">1.6.5</span> Studi Kasus
 Mini</h3>
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Mini
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses
+belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Sebuah perusahaan asuransi sedang
 mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga
@@ -4566,6 +4589,30 @@ untuk menyusun proyek akhir.</p>
 <div id="pertemuan-4-aplikasi-multiple-life-pada-asuransi-pasangan-dan-keluarga" class="section level2" number="1.7">
 <h2><span class="header-section-number">1.7</span> Pertemuan 4: Aplikasi
 Multiple Life pada Asuransi Pasangan dan Keluarga</h2>
+<!-- BEGIN AI-INLINE:f33e714cf763 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Pertemuan 4: Aplikasi Multiple Life pada Asuransi
+Pasangan dan Keluarga
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses
+belajar Matematika Aktuaria 2 Pertemuan 4: Aplikasi Multiple Life pada
+Asuransi Pasangan dan Keluarga secara terkontrol. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <p><strong>Capaian Bab (SubCPMK1).</strong> Setelah mempelajari bab ini,
 mahasiswa diharapkan mampu menghubungkan konsep teoritis, formulasi
@@ -4585,6 +4632,24 @@ sensitivitas</strong> dalam konteks Matematika Aktuaria 2.</li>
 </div>
 <div id="konsep-inti-3" class="section level3" number="1.7.1">
 <h3><span class="header-section-number">1.7.1</span> Konsep Inti</h3>
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis
 pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali
 simbol, indeks umur, periode proyeksi, status hidup, status meninggal,
@@ -4682,6 +4747,24 @@ tebak-tebakan.</p>
 <div id="contoh-konseptual-dan-interpretasi-3" class="section level3" number="1.7.3">
 <h3><span class="header-section-number">1.7.3</span> Contoh Konseptual
 dan Interpretasi</h3>
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Contoh Konseptual dan Interpretasi
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="examplebox">
 <p><strong>Contoh.</strong> Misalkan terdapat pasangan berumur 45 dan 43
 tahun yang hendak membeli produk asuransi keluarga. Produk pertama
@@ -4716,6 +4799,27 @@ melakukan analisis aktuaria.</p>
 </div>
 <div id="implementasi-r-3" class="section level3" number="1.7.4">
 <h3><span class="header-section-number">1.7.4</span> Implementasi R</h3>
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file
 R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar
 mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi
@@ -4754,6 +4858,28 @@ dan sisa kewajiban.</p>
 <div id="studi-kasus-mini-3" class="section level3" number="1.7.5">
 <h3><span class="header-section-number">1.7.5</span> Studi Kasus
 Mini</h3>
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Mini
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses
+belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Sebuah perusahaan asuransi sedang
 mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga
@@ -4919,6 +5045,24 @@ pasangan</strong> dalam konteks Matematika Aktuaria 2.</li>
 </div>
 <div id="konsep-inti-4" class="section level3" number="1.8.1">
 <h3><span class="header-section-number">1.8.1</span> Konsep Inti</h3>
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis
 pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali
 simbol, indeks umur, periode proyeksi, status hidup, status meninggal,
@@ -5024,6 +5168,24 @@ tebak-tebakan.</p>
 <div id="contoh-konseptual-dan-interpretasi-4" class="section level3" number="1.8.3">
 <h3><span class="header-section-number">1.8.3</span> Contoh Konseptual
 dan Interpretasi</h3>
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Contoh Konseptual dan Interpretasi
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="examplebox">
 <p><strong>Contoh.</strong> Misalkan terdapat pasangan berumur 45 dan 43
 tahun yang hendak membeli produk asuransi keluarga. Produk pertama
@@ -5058,6 +5220,27 @@ melakukan analisis aktuaria.</p>
 </div>
 <div id="implementasi-r-4" class="section level3" number="1.8.4">
 <h3><span class="header-section-number">1.8.4</span> Implementasi R</h3>
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file
 R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar
 mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi
@@ -5096,6 +5279,28 @@ dan sisa kewajiban.</p>
 <div id="studi-kasus-mini-4" class="section level3" number="1.8.5">
 <h3><span class="header-section-number">1.8.5</span> Studi Kasus
 Mini</h3>
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Mini
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses
+belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Sebuah perusahaan asuransi sedang
 mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga
@@ -5260,6 +5465,24 @@ satu hidup</strong> dalam konteks Matematika Aktuaria 2.</li>
 </div>
 <div id="konsep-inti-5" class="section level3" number="1.9.1">
 <h3><span class="header-section-number">1.9.1</span> Konsep Inti</h3>
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis
 pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali
 simbol, indeks umur, periode proyeksi, status hidup, status meninggal,
@@ -5364,6 +5587,24 @@ tebak-tebakan.</p>
 <div id="contoh-konseptual-dan-interpretasi-5" class="section level3" number="1.9.3">
 <h3><span class="header-section-number">1.9.3</span> Contoh Konseptual
 dan Interpretasi</h3>
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Contoh Konseptual dan Interpretasi
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="examplebox">
 <p><strong>Contoh.</strong> Misalkan terdapat pasangan berumur 45 dan 43
 tahun yang hendak membeli produk asuransi keluarga. Produk pertama
@@ -5398,6 +5639,27 @@ melakukan analisis aktuaria.</p>
 </div>
 <div id="implementasi-r-5" class="section level3" number="1.9.4">
 <h3><span class="header-section-number">1.9.4</span> Implementasi R</h3>
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file
 R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar
 mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi
@@ -5432,6 +5694,28 @@ dan sisa kewajiban.</p>
 <div id="studi-kasus-mini-5" class="section level3" number="1.9.5">
 <h3><span class="header-section-number">1.9.5</span> Studi Kasus
 Mini</h3>
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Mini
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses
+belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Sebuah perusahaan asuransi sedang
 mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga
@@ -5598,6 +5882,24 @@ dalam konteks Matematika Aktuaria 2.</li>
 </div>
 <div id="konsep-inti-6" class="section level3" number="1.10.1">
 <h3><span class="header-section-number">1.10.1</span> Konsep Inti</h3>
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis
 pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali
 simbol, indeks umur, periode proyeksi, status hidup, status meninggal,
@@ -5703,6 +6005,24 @@ tebak-tebakan.</p>
 <div id="contoh-konseptual-dan-interpretasi-6" class="section level3" number="1.10.3">
 <h3><span class="header-section-number">1.10.3</span> Contoh Konseptual
 dan Interpretasi</h3>
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Contoh Konseptual dan Interpretasi
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="examplebox">
 <p><strong>Contoh.</strong> Misalkan terdapat pasangan berumur 45 dan 43
 tahun yang hendak membeli produk asuransi keluarga. Produk pertama
@@ -5738,6 +6058,27 @@ melakukan analisis aktuaria.</p>
 <div id="implementasi-r-6" class="section level3" number="1.10.4">
 <h3><span class="header-section-number">1.10.4</span> Implementasi
 R</h3>
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file
 R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar
 mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi
@@ -5776,6 +6117,28 @@ dan sisa kewajiban.</p>
 <div id="studi-kasus-mini-6" class="section level3" number="1.10.5">
 <h3><span class="header-section-number">1.10.5</span> Studi Kasus
 Mini</h3>
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Mini
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses
+belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Sebuah perusahaan asuransi sedang
 mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga
@@ -5924,6 +6287,30 @@ untuk menyusun proyek akhir.</p>
 <div id="pertemuan-8-uts-evaluasi-produk-dan-presentasi-proyek-pendahuluan" class="section level2" number="1.11">
 <h2><span class="header-section-number">1.11</span> Pertemuan 8: UTS:
 Evaluasi Produk dan Presentasi Proyek Pendahuluan</h2>
+<!-- BEGIN AI-INLINE:a7bdcb7d8e7a -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Pertemuan 8: UTS: Evaluasi Produk dan Presentasi Proyek
+Pendahuluan
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses
+belajar Matematika Aktuaria 2 Pertemuan 8: UTS: Evaluasi Produk dan
+Presentasi Proyek Pendahuluan secara terkontrol. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <p><strong>Capaian Bab (SubCPMK2).</strong> Setelah mempelajari bab ini,
 mahasiswa diharapkan mampu menghubungkan konsep teoritis, formulasi
@@ -5943,6 +6330,24 @@ aktuaria</strong> dalam konteks Matematika Aktuaria 2.</li>
 </div>
 <div id="konsep-inti-7" class="section level3" number="1.11.1">
 <h3><span class="header-section-number">1.11.1</span> Konsep Inti</h3>
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis
 pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali
 simbol, indeks umur, periode proyeksi, status hidup, status meninggal,
@@ -6035,6 +6440,24 @@ tebak-tebakan.</p>
 <div id="contoh-konseptual-dan-interpretasi-7" class="section level3" number="1.11.3">
 <h3><span class="header-section-number">1.11.3</span> Contoh Konseptual
 dan Interpretasi</h3>
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Contoh Konseptual dan Interpretasi
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="examplebox">
 <p><strong>Contoh.</strong> Misalkan terdapat pasangan berumur 45 dan 43
 tahun yang hendak membeli produk asuransi keluarga. Produk pertama
@@ -6070,6 +6493,27 @@ melakukan analisis aktuaria.</p>
 <div id="implementasi-r-7" class="section level3" number="1.11.4">
 <h3><span class="header-section-number">1.11.4</span> Implementasi
 R</h3>
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file
 R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar
 mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi
@@ -6104,6 +6548,28 @@ dan sisa kewajiban.</p>
 <div id="studi-kasus-mini-7" class="section level3" number="1.11.5">
 <h3><span class="header-section-number">1.11.5</span> Studi Kasus
 Mini</h3>
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Mini
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses
+belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Sebuah perusahaan asuransi sedang
 mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga
@@ -6272,6 +6738,24 @@ dalam konteks Matematika Aktuaria 2.</li>
 </div>
 <div id="konsep-inti-8" class="section level3" number="1.12.1">
 <h3><span class="header-section-number">1.12.1</span> Konsep Inti</h3>
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis
 pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali
 simbol, indeks umur, periode proyeksi, status hidup, status meninggal,
@@ -6356,6 +6840,24 @@ tebak-tebakan.</p>
 <div id="contoh-konseptual-dan-interpretasi-8" class="section level3" number="1.12.3">
 <h3><span class="header-section-number">1.12.3</span> Contoh Konseptual
 dan Interpretasi</h3>
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Contoh Konseptual dan Interpretasi
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="examplebox">
 <p><strong>Contoh.</strong> Misalkan terdapat pasangan berumur 45 dan 43
 tahun yang hendak membeli produk asuransi keluarga. Produk pertama
@@ -6391,6 +6893,27 @@ melakukan analisis aktuaria.</p>
 <div id="implementasi-r-8" class="section level3" number="1.12.4">
 <h3><span class="header-section-number">1.12.4</span> Implementasi
 R</h3>
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file
 R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar
 mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi
@@ -6435,6 +6958,28 @@ dan sisa kewajiban.</p>
 <div id="studi-kasus-mini-8" class="section level3" number="1.12.5">
 <h3><span class="header-section-number">1.12.5</span> Studi Kasus
 Mini</h3>
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Mini
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses
+belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Sebuah perusahaan asuransi sedang
 mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga
@@ -6601,6 +7146,24 @@ aktuarial</strong> dalam konteks Matematika Aktuaria 2.</li>
 </div>
 <div id="konsep-inti-9" class="section level3" number="1.13.1">
 <h3><span class="header-section-number">1.13.1</span> Konsep Inti</h3>
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis
 pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali
 simbol, indeks umur, periode proyeksi, status hidup, status meninggal,
@@ -6688,6 +7251,24 @@ tebak-tebakan.</p>
 <div id="contoh-konseptual-dan-interpretasi-9" class="section level3" number="1.13.3">
 <h3><span class="header-section-number">1.13.3</span> Contoh Konseptual
 dan Interpretasi</h3>
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Contoh Konseptual dan Interpretasi
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="examplebox">
 <p><strong>Contoh.</strong> Misalkan terdapat pasangan berumur 45 dan 43
 tahun yang hendak membeli produk asuransi keluarga. Produk pertama
@@ -6723,6 +7304,27 @@ melakukan analisis aktuaria.</p>
 <div id="implementasi-r-9" class="section level3" number="1.13.4">
 <h3><span class="header-section-number">1.13.4</span> Implementasi
 R</h3>
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file
 R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar
 mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi
@@ -6767,6 +7369,28 @@ dan sisa kewajiban.</p>
 <div id="studi-kasus-mini-9" class="section level3" number="1.13.5">
 <h3><span class="header-section-number">1.13.5</span> Studi Kasus
 Mini</h3>
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Mini
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses
+belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Sebuah perusahaan asuransi sedang
 mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga
@@ -6933,6 +7557,24 @@ dalam konteks Matematika Aktuaria 2.</li>
 </div>
 <div id="konsep-inti-10" class="section level3" number="1.14.1">
 <h3><span class="header-section-number">1.14.1</span> Konsep Inti</h3>
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis
 pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali
 simbol, indeks umur, periode proyeksi, status hidup, status meninggal,
@@ -7020,6 +7662,24 @@ tebak-tebakan.</p>
 <div id="contoh-konseptual-dan-interpretasi-10" class="section level3" number="1.14.3">
 <h3><span class="header-section-number">1.14.3</span> Contoh Konseptual
 dan Interpretasi</h3>
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Contoh Konseptual dan Interpretasi
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="examplebox">
 <p><strong>Contoh.</strong> Misalkan terdapat pasangan berumur 45 dan 43
 tahun yang hendak membeli produk asuransi keluarga. Produk pertama
@@ -7055,6 +7715,27 @@ melakukan analisis aktuaria.</p>
 <div id="implementasi-r-10" class="section level3" number="1.14.4">
 <h3><span class="header-section-number">1.14.4</span> Implementasi
 R</h3>
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file
 R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar
 mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi
@@ -7099,6 +7780,28 @@ dan sisa kewajiban.</p>
 <div id="studi-kasus-mini-10" class="section level3" number="1.14.5">
 <h3><span class="header-section-number">1.14.5</span> Studi Kasus
 Mini</h3>
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Mini
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses
+belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Sebuah perusahaan asuransi sedang
 mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga
@@ -7245,6 +7948,28 @@ untuk menyusun proyek akhir.</p>
 <div id="pertemuan-12-konstruksi-dan-implementasi-md-table-dengan-r" class="section level2" number="1.15">
 <h2><span class="header-section-number">1.15</span> Pertemuan 12:
 Konstruksi dan Implementasi MD Table dengan R</h2>
+<!-- BEGIN AI-INLINE:c6b54e3d3476 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Pertemuan 12: Konstruksi dan Implementasi MD Table dengan
+R
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="callout">
 <p><strong>Capaian Bab (SubCPMK3).</strong> Setelah mempelajari bab ini,
 mahasiswa diharapkan mampu menghubungkan konsep teoritis, formulasi
@@ -7264,6 +7989,24 @@ portofolio</strong> dalam konteks Matematika Aktuaria 2.</li>
 </div>
 <div id="konsep-inti-11" class="section level3" number="1.15.1">
 <h3><span class="header-section-number">1.15.1</span> Konsep Inti</h3>
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis
 pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali
 simbol, indeks umur, periode proyeksi, status hidup, status meninggal,
@@ -7350,6 +8093,24 @@ tebak-tebakan.</p>
 <div id="contoh-konseptual-dan-interpretasi-11" class="section level3" number="1.15.3">
 <h3><span class="header-section-number">1.15.3</span> Contoh Konseptual
 dan Interpretasi</h3>
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Contoh Konseptual dan Interpretasi
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="examplebox">
 <p><strong>Contoh.</strong> Misalkan terdapat pasangan berumur 45 dan 43
 tahun yang hendak membeli produk asuransi keluarga. Produk pertama
@@ -7385,6 +8146,27 @@ melakukan analisis aktuaria.</p>
 <div id="implementasi-r-11" class="section level3" number="1.15.4">
 <h3><span class="header-section-number">1.15.4</span> Implementasi
 R</h3>
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file
 R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar
 mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi
@@ -7429,6 +8211,28 @@ dan sisa kewajiban.</p>
 <div id="studi-kasus-mini-11" class="section level3" number="1.15.5">
 <h3><span class="header-section-number">1.15.5</span> Studi Kasus
 Mini</h3>
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Mini
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses
+belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Sebuah perusahaan asuransi sedang
 mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga
@@ -7594,6 +8398,24 @@ model</strong> dalam konteks Matematika Aktuaria 2.</li>
 </div>
 <div id="konsep-inti-12" class="section level3" number="1.16.1">
 <h3><span class="header-section-number">1.16.1</span> Konsep Inti</h3>
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis
 pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali
 simbol, indeks umur, periode proyeksi, status hidup, status meninggal,
@@ -7685,6 +8507,24 @@ tebak-tebakan.</p>
 <div id="contoh-konseptual-dan-interpretasi-12" class="section level3" number="1.16.3">
 <h3><span class="header-section-number">1.16.3</span> Contoh Konseptual
 dan Interpretasi</h3>
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Contoh Konseptual dan Interpretasi
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="examplebox">
 <p><strong>Contoh.</strong> Misalkan terdapat pasangan berumur 45 dan 43
 tahun yang hendak membeli produk asuransi keluarga. Produk pertama
@@ -7720,6 +8560,27 @@ melakukan analisis aktuaria.</p>
 <div id="implementasi-r-12" class="section level3" number="1.16.4">
 <h3><span class="header-section-number">1.16.4</span> Implementasi
 R</h3>
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file
 R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar
 mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi
@@ -7754,6 +8615,28 @@ dan sisa kewajiban.</p>
 <div id="studi-kasus-mini-12" class="section level3" number="1.16.5">
 <h3><span class="header-section-number">1.16.5</span> Studi Kasus
 Mini</h3>
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Mini
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses
+belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Sebuah perusahaan asuransi sedang
 mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga
@@ -7920,6 +8803,24 @@ premi</strong> dalam konteks Matematika Aktuaria 2.</li>
 </div>
 <div id="konsep-inti-13" class="section level3" number="1.17.1">
 <h3><span class="header-section-number">1.17.1</span> Konsep Inti</h3>
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis
 pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali
 simbol, indeks umur, periode proyeksi, status hidup, status meninggal,
@@ -8019,6 +8920,24 @@ tebak-tebakan.</p>
 <div id="contoh-konseptual-dan-interpretasi-13" class="section level3" number="1.17.3">
 <h3><span class="header-section-number">1.17.3</span> Contoh Konseptual
 dan Interpretasi</h3>
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Contoh Konseptual dan Interpretasi
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="examplebox">
 <p><strong>Contoh.</strong> Misalkan terdapat pasangan berumur 45 dan 43
 tahun yang hendak membeli produk asuransi keluarga. Produk pertama
@@ -8054,6 +8973,27 @@ melakukan analisis aktuaria.</p>
 <div id="implementasi-r-13" class="section level3" number="1.17.4">
 <h3><span class="header-section-number">1.17.4</span> Implementasi
 R</h3>
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file
 R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar
 mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi
@@ -8093,6 +9033,28 @@ dan sisa kewajiban.</p>
 <div id="studi-kasus-mini-13" class="section level3" number="1.17.5">
 <h3><span class="header-section-number">1.17.5</span> Studi Kasus
 Mini</h3>
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Mini
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses
+belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Sebuah perusahaan asuransi sedang
 mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga
@@ -8257,6 +9219,24 @@ dalam konteks Matematika Aktuaria 2.</li>
 </div>
 <div id="konsep-inti-14" class="section level3" number="1.18.1">
 <h3><span class="header-section-number">1.18.1</span> Konsep Inti</h3>
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis
 pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali
 simbol, indeks umur, periode proyeksi, status hidup, status meninggal,
@@ -8350,6 +9330,24 @@ tebak-tebakan.</p>
 <div id="contoh-konseptual-dan-interpretasi-14" class="section level3" number="1.18.3">
 <h3><span class="header-section-number">1.18.3</span> Contoh Konseptual
 dan Interpretasi</h3>
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Contoh Konseptual dan Interpretasi
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="examplebox">
 <p><strong>Contoh.</strong> Misalkan terdapat pasangan berumur 45 dan 43
 tahun yang hendak membeli produk asuransi keluarga. Produk pertama
@@ -8385,6 +9383,27 @@ melakukan analisis aktuaria.</p>
 <div id="implementasi-r-14" class="section level3" number="1.18.4">
 <h3><span class="header-section-number">1.18.4</span> Implementasi
 R</h3>
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file
 R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar
 mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi
@@ -8424,6 +9443,28 @@ dan sisa kewajiban.</p>
 <div id="studi-kasus-mini-14" class="section level3" number="1.18.5">
 <h3><span class="header-section-number">1.18.5</span> Studi Kasus
 Mini</h3>
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Mini
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses
+belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Sebuah perusahaan asuransi sedang
 mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga
@@ -8588,6 +9629,24 @@ implementasi</strong> dalam konteks Matematika Aktuaria 2.</li>
 </div>
 <div id="konsep-inti-15" class="section level3" number="1.19.1">
 <h3><span class="header-section-number">1.19.1</span> Konsep Inti</h3>
+<!-- BEGIN AI-INLINE:57ff615b73c3 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Konsep Inti
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Dalam membaca bab ini, mahasiswa perlu membedakan tiga lapis
 pemahaman. Lapis pertama adalah lapis notasi, yaitu kemampuan mengenali
 simbol, indeks umur, periode proyeksi, status hidup, status meninggal,
@@ -8683,6 +9742,24 @@ tebak-tebakan.</p>
 <div id="contoh-konseptual-dan-interpretasi-15" class="section level3" number="1.19.3">
 <h3><span class="header-section-number">1.19.3</span> Contoh Konseptual
 dan Interpretasi</h3>
+<!-- BEGIN AI-INLINE:2347f5ff5ae6 -->
+<div class="ai-inline">
+<span class="ai-inline__label">AI sebagai tutor kritis</span>
+<h4>
+Penerapan pada Contoh Konseptual dan Interpretasi
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Minta AI menjelaskan <strong>Matematika Aktuaria 2</strong> melalui
+definisi, analogi, contoh, dan contoh tandingan. Mahasiswa kemudian
+membandingkan penjelasan itu dengan rujukan primer, menandai
+simplifikasi yang keliru, dan menulis kembali konsep dengan bahasanya
+sendiri. AI tidak boleh menjadi satu-satunya sumber konsep.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="examplebox">
 <p><strong>Contoh.</strong> Misalkan terdapat pasangan berumur 45 dan 43
 tahun yang hendak membeli produk asuransi keluarga. Produk pertama
@@ -8718,6 +9795,27 @@ melakukan analisis aktuaria.</p>
 <div id="implementasi-r-15" class="section level3" number="1.19.4">
 <h3><span class="header-section-number">1.19.4</span> Implementasi
 R</h3>
+<!-- BEGIN AI-INLINE:238e946735e8 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Implementasi R
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Agen dapat menguji kasus batas, simulasi numerik, dan konsistensi hasil
+pada beberapa parameter. Tetapkan checkpoint sebelum perubahan data,
+pemilihan model, dan penerbitan hasil. <strong>Mahasiswa wajib
+memeriksa:</strong> setiap langkah aljabar, syarat regularitas, satuan,
+kasus batas, dan makna parameter. Simpan prompt log ringkas, keluaran
+awal, perubahan yang dilakukan mahasiswa, sumber pembanding,
+kode/notebook yang dapat dijalankan ulang, hasil validasi, dan keputusan
+akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Potongan kode berikut dapat dijalankan setelah mahasiswa membuka file
 R Markdown ini di RStudio atau Posit. Kode sengaja dibuat modular agar
 mahasiswa dapat mengganti umur, tingkat bunga, horizon, atau asumsi
@@ -8757,6 +9855,28 @@ dan sisa kewajiban.</p>
 <div id="studi-kasus-mini-15" class="section level3" number="1.19.5">
 <h3><span class="header-section-number">1.19.5</span> Studi Kasus
 Mini</h3>
+<!-- BEGIN AI-INLINE:8dfa21156ede -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Studi Kasus Mini
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses
+belajar Matematika Aktuaria 2 Studi Kasus Mini secara terkontrol.
+Generative AI dapat menghasilkan beberapa skenario pemangku kepentingan
+dan draf narasi yang kemudian diperiksa terhadap hasil analisis; Agentic
+AI dapat merakit tabel, grafik, pemeriksaan konsistensi, dan daftar
+klaim–bukti sebelum laporan disetujui manusia. Checkpoint manusia
+mencakup kesesuaian klaim dengan bukti, ketidakpastian, keterbatasan,
+fairness, dan dampak keputusan. Semua klaim harus ditautkan ke output,
+ketidakpastian, dan sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <div class="casebox">
 <p><strong>Skenario.</strong> Sebuah perusahaan asuransi sedang
 mengevaluasi produk dua kehidupan untuk keluarga muda dan keluarga
@@ -8908,6 +10028,29 @@ Semester</h1>
 <div id="proyek-1-analisis-multiple-life-functions" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> Proyek 1: Analisis
 Multiple Life Functions</h2>
+<!-- BEGIN AI-INLINE:89091fc0619b -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Proyek 1: Analisis Multiple Life Functions
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses
+belajar Matematika Aktuaria 2 Proyek 1: Analisis Multiple Life Functions
+secara terkontrol. Generative AI dapat menghasilkan beberapa skenario
+pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap
+hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Proyek pertama diarahkan untuk mengukur kemampuan mahasiswa pada
 SubCPMK1. Mahasiswa memilih kasus dua kehidupan, misalnya pasangan
 suami-istri, orang tua-anak, dua mitra bisnis, atau dua peserta dalam
@@ -8927,6 +10070,30 @@ untuk premi, manfaat, atau risiko produk.</p>
 <div id="proyek-2-evaluasi-produk-asuransi-dan-anuitas-dua-kehidupan" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> Proyek 2: Evaluasi
 Produk Asuransi dan Anuitas Dua Kehidupan</h2>
+<!-- BEGIN AI-INLINE:af1224c599af -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Proyek 2: Evaluasi Produk Asuransi dan Anuitas Dua
+Kehidupan
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses
+belajar Matematika Aktuaria 2 Proyek 2: Evaluasi Produk Asuransi dan
+Anuitas Dua Kehidupan secara terkontrol. Generative AI dapat
+menghasilkan beberapa skenario pemangku kepentingan dan draf narasi yang
+kemudian diperiksa terhadap hasil analisis; Agentic AI dapat merakit
+tabel, grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum
+laporan disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim
+dengan bukti, ketidakpastian, keterbatasan, fairness, dan dampak
+keputusan. Semua klaim harus ditautkan ke output, ketidakpastian, dan
+sumber yang dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Proyek kedua diarahkan untuk SubCPMK2. Mahasiswa membandingkan
 minimal dua desain produk. Contohnya adalah joint-life term insurance
 dan last-survivor whole life insurance, atau joint-life annuity dan
@@ -8946,6 +10113,29 @@ B” tanpa interpretasi, analisis belum cukup matang.</p>
 <div id="proyek-3-konstruksi-multiple-decrement-table" class="section level2" number="2.3">
 <h2><span class="header-section-number">2.3</span> Proyek 3: Konstruksi
 Multiple Decrement Table</h2>
+<!-- BEGIN AI-INLINE:769cbee0c280 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Proyek 3: Konstruksi Multiple Decrement Table
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses
+belajar Matematika Aktuaria 2 Proyek 3: Konstruksi Multiple Decrement
+Table secara terkontrol. Generative AI dapat menghasilkan beberapa
+skenario pemangku kepentingan dan draf narasi yang kemudian diperiksa
+terhadap hasil analisis; Agentic AI dapat merakit tabel, grafik,
+pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Proyek ketiga diarahkan untuk SubCPMK3. Mahasiswa membangun tabel
 multiple decrement dari data sintetik atau data nyata. Penyebab
 decrement dapat berupa kematian, disabilitas, lapse, pensiun, keluar
@@ -8963,6 +10153,29 @@ sangat menentukan keakuratan penilaian manfaat dan cadangan.</p>
 <div id="proyek-4-inovasi-benefit-premium-dan-benefit-reserve" class="section level2" number="2.4">
 <h2><span class="header-section-number">2.4</span> Proyek 4: Inovasi
 Benefit Premium dan Benefit Reserve</h2>
+<!-- BEGIN AI-INLINE:2f2ec985d6b5 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Proyek 4: Inovasi Benefit Premium dan Benefit Reserve
+</h4>
+<p>
+<strong>Konteks:</strong> Matematika Aktuaria 2.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: AI mendukung proses
+belajar Matematika Aktuaria 2 Proyek 4: Inovasi Benefit Premium dan
+Benefit Reserve secara terkontrol. Generative AI dapat menghasilkan
+beberapa skenario pemangku kepentingan dan draf narasi yang kemudian
+diperiksa terhadap hasil analisis; Agentic AI dapat merakit tabel,
+grafik, pemeriksaan konsistensi, dan daftar klaim–bukti sebelum laporan
+disetujui manusia. Checkpoint manusia mencakup kesesuaian klaim dengan
+bukti, ketidakpastian, keterbatasan, fairness, dan dampak keputusan.
+Semua klaim harus ditautkan ke output, ketidakpastian, dan sumber yang
+dapat diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Proyek akhir diarahkan untuk SubCPMK4. Mahasiswa merancang solusi
 inovatif terkait premi dan cadangan untuk produk dua kehidupan atau
 produk dengan multiple decrement. Inovasi dapat berupa desain produk
@@ -8983,6 +10196,63 @@ retina.</p>
 <div id="template-fungsi-r-tambahan" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Template Fungsi R
 Tambahan</h1>
+<!-- BEGIN AI-INLINE:25f70f218e5f -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Integrasi AI pada Bab 1</span>
+<h3>
+Generative dan Agentic AI untuk Template Fungsi R Tambahan
+</h3>
+<p><strong>Arah RPS.</strong> Machine learning untuk reserving, fraud
+detection, severity-frequency modeling, dan portfolio segmentation.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Komponen</th>
+<th>Implementasi pada bab ini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target pembelajaran</td>
+<td>Mendukung CPMK1 melalui fokus: Pendahuluan Multiple Life Functions;
+Pengantar dan ruang lingkup multiple life functions; Notasi dan definisi
+joint life dan last survivor status.</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>Digunakan untuk merumuskan alternatif penjelasan, contoh, dan
+hipotesis awal.</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>Dapat menjalankan rangkaian pemeriksaan data–model–diagnostik secara
+bertahap; agen wajib berhenti pada checkpoint dosen/mahasiswa.</td>
+</tr>
+<tr class="even">
+<td>Human checkpoint</td>
+<td>Mahasiswa memeriksa ketepatan konsep, asumsi metode, hasil numerik,
+dan interpretasi substantif; keluaran AI tidak diterima sebagai bukti
+kebenaran.</td>
+</tr>
+<tr class="odd">
+<td>Artefak wajib</td>
+<td>prompt log ringkas, keluaran awal, perubahan yang dilakukan
+mahasiswa, sumber pembanding, kode/notebook yang dapat dijalankan ulang,
+hasil validasi, dan keputusan akhir manusia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Batas penggunaan.</strong> AI tidak boleh mengerjakan asesmen
+tertutup, menetapkan kesimpulan akhir, atau menerima/mengirim data
+sensitif ke layanan yang tidak disetujui. Mahasiswa wajib mampu
+mengulang dan menjelaskan analisis tanpa bergantung pada percakapan
+AI.</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Bagian ini menyediakan kumpulan fungsi R yang dapat digunakan kembali
 untuk berbagai tugas. Mahasiswa dapat menyalin fungsi ini ke file R
 terpisah atau tetap menjalankannya di dalam R Markdown.</p>
@@ -9096,6 +10366,30 @@ waras.</p>
 <div id="catatan-tambahan-3-pendalaman-uts-evaluasi-produk-dan-presentasi-proyek-pendahuluan" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> Catatan Tambahan 3:
 Pendalaman UTS: Evaluasi Produk dan Presentasi Proyek Pendahuluan</h2>
+<!-- BEGIN AI-INLINE:1ece6144b952 -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Catatan Tambahan 3: Pendalaman UTS: Evaluasi Produk dan
+Presentasi Proyek Pendahuluan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Template Fungsi R Tambahan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Machine learning untuk
+reserving, fraud detection, severity-frequency modeling, dan portfolio
+segmentation. Generative AI dapat menghasilkan beberapa skenario
+pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap
+hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Catatan tambahan ini memperkuat pembahasan <strong>UTS: Evaluasi
 Produk dan Presentasi Proyek Pendahuluan</strong> dengan menekankan
 hubungan antara teori dan praktik. Dalam konteks desain proyek, rubrik
@@ -9143,6 +10437,30 @@ waras.</p>
 <div id="catatan-tambahan-6-pendalaman-uts-evaluasi-produk-dan-presentasi-proyek-pendahuluan" class="section level2" number="4.3">
 <h2><span class="header-section-number">4.3</span> Catatan Tambahan 6:
 Pendalaman UTS: Evaluasi Produk dan Presentasi Proyek Pendahuluan</h2>
+<!-- BEGIN AI-INLINE:29e4e2d357dc -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Catatan Tambahan 6: Pendalaman UTS: Evaluasi Produk dan
+Presentasi Proyek Pendahuluan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Template Fungsi R Tambahan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Machine learning untuk
+reserving, fraud detection, severity-frequency modeling, dan portfolio
+segmentation. Generative AI dapat menghasilkan beberapa skenario
+pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap
+hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Catatan tambahan ini memperkuat pembahasan <strong>UTS: Evaluasi
 Produk dan Presentasi Proyek Pendahuluan</strong> dengan menekankan
 hubungan antara teori dan praktik. Dalam konteks desain proyek, rubrik
@@ -9190,6 +10508,30 @@ waras.</p>
 <div id="catatan-tambahan-9-pendalaman-uts-evaluasi-produk-dan-presentasi-proyek-pendahuluan" class="section level2" number="4.4">
 <h2><span class="header-section-number">4.4</span> Catatan Tambahan 9:
 Pendalaman UTS: Evaluasi Produk dan Presentasi Proyek Pendahuluan</h2>
+<!-- BEGIN AI-INLINE:8958f2fb430a -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">AI untuk aplikasi dan komunikasi</span>
+<h4>
+Penerapan pada Catatan Tambahan 9: Pendalaman UTS: Evaluasi Produk dan
+Presentasi Proyek Pendahuluan
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Template Fungsi R Tambahan.
+</p>
+<p>
+Terapkan arahan RPS berikut pada kasus bab ini: Machine learning untuk
+reserving, fraud detection, severity-frequency modeling, dan portfolio
+segmentation. Generative AI dapat menghasilkan beberapa skenario
+pemangku kepentingan dan draf narasi yang kemudian diperiksa terhadap
+hasil analisis; Agentic AI dapat merakit tabel, grafik, pemeriksaan
+konsistensi, dan daftar klaim–bukti sebelum laporan disetujui manusia.
+Checkpoint manusia mencakup kesesuaian klaim dengan bukti,
+ketidakpastian, keterbatasan, fairness, dan dampak keputusan. Semua
+klaim harus ditautkan ke output, ketidakpastian, dan sumber yang dapat
+diperiksa.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Catatan tambahan ini memperkuat pembahasan <strong>UTS: Evaluasi
 Produk dan Presentasi Proyek Pendahuluan</strong> dengan menekankan
 hubungan antara teori dan praktik. Dalam konteks desain proyek, rubrik
@@ -9660,6 +11002,27 @@ waras.</p>
 <div id="catatan-tambahan-38-pendalaman-konstruksi-dan-implementasi-md-table-dengan-r" class="section level2" number="4.14">
 <h2><span class="header-section-number">4.14</span> Catatan Tambahan 38:
 Pendalaman Konstruksi dan Implementasi MD Table dengan R</h2>
+<!-- BEGIN AI-INLINE:4ddf7d944afc -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Catatan Tambahan 38: Pendalaman Konstruksi dan
+Implementasi MD Table dengan R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Template Fungsi R Tambahan.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Catatan tambahan ini memperkuat pembahasan <strong>Konstruksi dan
 Implementasi MD Table dengan R</strong> dengan menekankan hubungan
 antara teori dan praktik. Dalam konteks algoritma konstruksi, data
@@ -9707,6 +11070,27 @@ waras.</p>
 <div id="catatan-tambahan-41-pendalaman-konstruksi-dan-implementasi-md-table-dengan-r" class="section level2" number="4.15">
 <h2><span class="header-section-number">4.15</span> Catatan Tambahan 41:
 Pendalaman Konstruksi dan Implementasi MD Table dengan R</h2>
+<!-- BEGIN AI-INLINE:286b9c52e37e -->
+<div class="ai-inline ai-inline--agentic">
+<span class="ai-inline__label">Agentic AI dengan checkpoint</span>
+<h4>
+Penerapan pada Catatan Tambahan 41: Pendalaman Konstruksi dan
+Implementasi MD Table dengan R
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Template Fungsi R Tambahan.
+</p>
+<p>
+Agen dapat menjalankan rangkaian pemeriksaan data–model–diagnostik
+secara bertahap. Tetapkan checkpoint sebelum perubahan data, pemilihan
+model, dan penerbitan hasil. <strong>Mahasiswa wajib memeriksa:</strong>
+ketepatan konsep, asumsi metode, hasil numerik, dan interpretasi
+substantif. Simpan prompt log ringkas, keluaran awal, perubahan yang
+dilakukan mahasiswa, sumber pembanding, kode/notebook yang dapat
+dijalankan ulang, hasil validasi, dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
 <p>Catatan tambahan ini memperkuat pembahasan <strong>Konstruksi dan
 Implementasi MD Table dengan R</strong> dengan menekankan hubungan
 antara teori dan praktik. Dalam konteks algoritma konstruksi, data
@@ -10604,6 +11988,74 @@ yang selalu menghasilkan angka kecil agar produk tampak murah, melainkan
 orang yang mampu menyeimbangkan daya saing produk dan keberlanjutan
 kewajiban. Angka boleh elegan, tetapi solvabilitas harus tetap
 waras.</p>
+<!-- BEGIN ADOPSI AI RPS 2026 -->
+</div>
+<div id="penyelarasan-materi-dengan-rps-revisi-ai-2026" class="section level2" number="4.34">
+<h2><span class="header-section-number">4.34</span> Penyelarasan Materi
+dengan RPS Revisi AI 2026</h2>
+<p>Materi <strong>Matematika Aktuaria 2</strong> ini telah diselaraskan
+dengan RPS Revisi AI 2026. Rumusan CPL program studi tetap dan tidak
+diubah. Generative AI maupun agentic AI hanya digunakan sebagai alat
+bantu untuk mempercepat ketercapaian CPMK dan Sub-CPMK; penalaran
+statistika, keputusan metodologis, dan tanggung jawab akademik tetap
+berada pada mahasiswa.</p>
+<div id="integrasi-ai-kontekstual" class="section level3" number="4.34.1">
+<h3><span class="header-section-number">4.34.1</span> Integrasi AI
+kontekstual</h3>
+<ul>
+<li>Machine learning untuk reserving, fraud detection,
+severity-frequency modeling, dan portfolio segmentation.</li>
+<li>Model risk, stress testing, explainability, monitoring drift, dan
+tata kelola penggunaan model dalam keputusan aktuaria.</li>
+<li>Proyek data nyata/sintetik yang menghasilkan model card, laporan
+validasi, dan rekomendasi keputusan yang mempertimbangkan fairness.</li>
+</ul>
+</div>
+<div id="protokol-penggunaan-ai" class="section level3" number="4.34.2">
+<h3><span class="header-section-number">4.34.2</span> Protokol
+penggunaan AI</h3>
+<ol style="list-style-type: decimal">
+<li>Nyatakan alat, tujuan penggunaan, dan bagian pekerjaan yang dibantu
+AI.</li>
+<li>Simpan prompt log ringkas, sumber, versi kode/notebook, dan
+perubahan yang dilakukan.</li>
+<li>Verifikasi keluaran terhadap asumsi metode, sumber primer, hasil
+numerik, diagnostik, ketidakpastian, robustness, bias/fairness, privasi,
+dan konteks.</li>
+<li>Jangan memasukkan data pribadi, rahasia, soal asesmen tertutup, atau
+kredensial ke layanan AI yang tidak disetujui.</li>
+<li>Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil
+secara mandiri.</li>
+</ol>
+</div>
+<div id="bukti-asesmen" class="section level3" number="4.34.3">
+<h3><span class="header-section-number">4.34.3</span> Bukti asesmen</h3>
+<!-- BEGIN AI-INLINE:d875d9cfb331 -->
+<div class="ai-inline ai-inline--assessment">
+<span class="ai-inline__label">Aturan AI untuk latihan dan
+asesmen</span>
+<h4>
+Penerapan pada Bukti asesmen
+</h4>
+<p>
+<strong>Konteks:</strong> Pertemuan 1: Template Fungsi R Tambahan.
+</p>
+<p>
+Ikuti status asesmen yang ditetapkan dosen: tanpa AI, AI terbatas, atau
+AI terbuka. Jika diizinkan, AI hanya memberi kritik, pertanyaan
+tandingan, atau pemeriksaan awal; jawaban, keputusan metode, dan
+pembelaan lisan tetap karya mahasiswa. Bukti yang diserahkan: prompt log
+ringkas, keluaran awal, perubahan yang dilakukan mahasiswa, sumber
+pembanding, kode/notebook yang dapat dijalankan ulang, hasil validasi,
+dan keputusan akhir manusia.
+</p>
+</div>
+<!-- END AI-INLINE -->
+<p>Penilaian berfokus pada ketepatan metode, validasi dan
+ketidakpastian, reproducibility, interpretasi, komunikasi, serta
+transparansi penggunaan AI. Keluaran AI tanpa verifikasi bukan bukti
+ketercapaian CPMK.</p>
+<!-- END ADOPSI AI RPS 2026 -->
 <div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
 <div id="ref-Benjamin2012" class="csl-entry">
 Benjamin, Bernard, dan John H. Pollard. 2012. <em>The Analysis of
@@ -10641,32 +12093,13 @@ Mathematics</em>. 3 ed. Chichester: Wiley.
 </div>
 </div>
 </div>
+</div>
 
 
 
 </div>
 </div>
 
-
-
-
-
-
-<!-- BEGIN ADOPSI AI RPS 2026 -->
-<section id="penyelarasan-rps-ai-2026" style="margin:2rem 0;padding:1.5rem;border-left:8px solid #f2a51a;background:#eef5f8;border-radius:8px">
-  <h2>Penyelarasan Materi dengan RPS Revisi AI 2026</h2>
-  <p>Materi <strong>Matematika Aktuaria 2</strong> ini mempertahankan rumusan CPL yang berlaku. AI ditempatkan sebagai alat bantu untuk mempercepat ketercapaian CPMK dan Sub-CPMK, bukan sebagai CPL baru atau pengganti penalaran statistika.</p>
-  <h3>Integrasi AI kontekstual</h3><ul><li>Machine learning untuk reserving, fraud detection, severity-frequency modeling, dan portfolio segmentation.</li><li>Model risk, stress testing, explainability, monitoring drift, dan tata kelola penggunaan model dalam keputusan aktuaria.</li><li>Proyek data nyata/sintetik yang menghasilkan model card, laporan validasi, dan rekomendasi keputusan yang mempertimbangkan fairness.</li></ul>
-  <h3>Protokol penggunaan AI</h3>
-  <ol>
-    <li>Ungkapkan alat, tujuan, prompt log ringkas, sumber, dan perubahan yang dilakukan.</li>
-    <li>Verifikasi asumsi, kode, hasil numerik, diagnostik, ketidakpastian, robustness, bias/fairness, privasi, dan konteks.</li>
-    <li>Jangan mengunggah data pribadi, rahasia, asesmen tertutup, atau kredensial ke layanan yang tidak disetujui.</li>
-    <li>Mahasiswa wajib mampu menjelaskan dan mempertahankan seluruh hasil secara mandiri.</li>
-  </ol>
-  <p><strong>Bukti asesmen:</strong> ketepatan metode, validasi, reproducibility, interpretasi, komunikasi, dan transparansi penggunaan AI. Keluaran AI tanpa verifikasi bukan bukti ketercapaian CPMK.</p>
-</section>
-<!-- END ADOPSI AI RPS 2026 -->
 </div>
 
 <script>
@@ -10731,6 +12164,16 @@ $(document).ready(function ()  {
     // tocify
     var toc = $("#TOC").tocify(options).data("toc-tocify");
 });
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
 </script>
 
 </body>
