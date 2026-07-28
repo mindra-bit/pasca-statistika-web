@@ -5819,46 +5819,49 @@ tbody tr:hover td {
 
 .stakeholder-survey-secondary-action {
   display: grid;
-  gap: 16px;
+  gap: 22px;
   align-content: center;
-  padding: clamp(22px, 3vw, 32px);
+  min-height: 300px;
+  padding: clamp(28px, 3.5vw, 42px);
   border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 12px;
-  background: rgba(9, 45, 39, 0.36);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  background: linear-gradient(145deg, #17455e 0%, #0e6b58 64%, #708f32 130%);
+  box-shadow: 0 18px 38px rgba(6, 38, 32, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
 }
 
 .stakeholder-survey-secondary-action > span {
   width: max-content;
-  border: 1px solid rgba(255, 232, 167, 0.72);
-  border-radius: 999px;
-  padding: 7px 11px;
-  color: #fff4cf;
-  background: rgba(242, 169, 0, 0.18);
-  font-size: 12px;
+  border: 0;
+  border-radius: 9px;
+  padding: 11px 16px;
+  color: #171717;
+  background: linear-gradient(135deg, #ffbd22, #ffe39c);
+  font-size: 14px;
   font-weight: 950;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  box-shadow: 0 10px 22px rgba(20, 33, 28, 0.2);
 }
 
 .stakeholder-survey-secondary-action a {
   display: inline-flex;
-  min-height: 66px;
+  width: 100%;
+  min-height: 78px;
   gap: 14px;
   align-items: center;
   justify-content: center;
-  border: 2px solid #ffe19a;
+  border: 0;
   border-radius: 10px;
-  padding: 16px 20px;
-  color: #17372f;
-  background: linear-gradient(135deg, #f2a900, #ffe39c);
-  font-size: 16px;
+  padding: 18px 22px;
+  color: var(--blue);
+  background: #fff;
+  font-size: clamp(17px, 1.6vw, 21px);
   font-weight: 950;
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  box-shadow: 0 16px 32px rgba(16, 41, 35, 0.28);
+  box-shadow: 0 16px 32px rgba(4, 32, 27, 0.28);
   transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
 }
 

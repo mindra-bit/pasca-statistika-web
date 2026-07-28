@@ -12,7 +12,7 @@
 <script>
 (async()=>{
   try{
-    const response=await fetch('index-base.html?v=sains-data-survey-hero-20260728',{cache:'no-store'});
+    const response=await fetch('index-base.html?v=sains-data-large-button-20260728',{cache:'no-store'});
     if(!response.ok) throw new Error('Gagal memuat halaman utama');
     let html=await response.text();
     if(window.applyProgramProfileEnhancement) html=window.applyProgramProfileEnhancement(html);
