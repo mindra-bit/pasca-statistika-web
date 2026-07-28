@@ -7,7 +7,7 @@
   <meta name="description" content="Website profesional Pasca Sarjana Statistika FMIPA Universitas Padjadjaran untuk Program S2 Statistika Terapan dan S3 Statistika." />
   <link rel="preload" href="assets/campus-hero.jpg" as="image" />
   <style>:root{--blue:#143d5d;}</style>
-  <link rel="stylesheet" href="assets/site.css?v=sains-data-large-button-20260728" />
+  <link rel="stylesheet" href="assets/site.css?v=sains-data-survey-invitation-20260728" />
   <link rel="stylesheet" href="assets/project-evaluation.css?v=project-titles-20260704" />
   <link rel="stylesheet" href="assets/alumni-sharing.css?v=alumni-sharing-leivina-photo-20260715" />
   <link rel="stylesheet" href="assets/student-achievements.css?v=student-achievements-final-20260709" />
@@ -1653,22 +1653,6 @@
 
     <section class="section stakeholder-survey-section" id="stakeholder-survey">
       <div class="container">
-        <div class="stakeholder-survey-secondary">
-          <div class="stakeholder-survey-secondary-copy">
-            <p class="section-kicker">Kajian Pengembangan Program</p>
-            <h2>Survei Pendirian Sains Data</h2>
-            <p>Survei ini menghimpun masukan pemangku kepentingan sebagai bahan kajian kebutuhan dan pengembangan pendidikan Sains Data di Universitas Padjadjaran.</p>
-            <div class="stakeholder-survey-tags" aria-label="Cakupan survei pendirian Sains Data">
-              <span>Sains Data</span>
-              <span>Kajian Kebutuhan</span>
-              <span>Masukan Stakeholder</span>
-            </div>
-          </div>
-          <div class="stakeholder-survey-secondary-action">
-            <span>Form aktif</span>
-            <a href="https://script.google.com/a/macros/unpad.ac.id/s/AKfycbwEyw9QR7TkmIeAbIJa3IWaPe6r2BV6NxdgG5PJwcRIGytKbTD8pS26zAFYPJf2hofB/exec" target="_blank" rel="noopener">Buka Survei Pendirian Sains Data <b aria-hidden="true">→</b></a>
-          </div>
-        </div>
         <div class="stakeholder-survey-card">
           <div class="stakeholder-survey-copy">
             <p class="section-kicker" data-i18n="stakeholderSurveyKicker">Stakeholder Survey</p>
@@ -2069,6 +2053,31 @@
     </div>
   </main>
 
+  <dialog class="data-science-survey-dialog" id="dataScienceSurveyDialog" aria-labelledby="dataScienceSurveyTitle" aria-describedby="dataScienceSurveyDescription">
+    <div class="data-science-survey-dialog-panel">
+      <button class="data-science-survey-close" type="button" data-survey-dismiss aria-label="Tutup undangan survei">&#215;</button>
+      <div class="data-science-survey-copy">
+        <span class="data-science-survey-kicker">Kajian Pengembangan Program</span>
+        <h2 id="dataScienceSurveyTitle">Bersedia membantu kajian pendirian Sains Data?</h2>
+        <p id="dataScienceSurveyDescription">Masukan Anda akan menjadi bahan penting dalam kajian kebutuhan dan pengembangan pendidikan Sains Data di Universitas Padjadjaran.</p>
+        <div class="data-science-survey-tags" aria-label="Cakupan survei">
+          <span>Sains Data</span>
+          <span>Kajian Kebutuhan</span>
+          <span>Masukan Stakeholder</span>
+        </div>
+      </div>
+      <div class="data-science-survey-choice">
+        <span class="data-science-survey-status">Form aktif</span>
+        <a href="https://script.google.com/a/macros/unpad.ac.id/s/AKfycbwEyw9QR7TkmIeAbIJa3IWaPe6r2BV6NxdgG5PJwcRIGytKbTD8pS26zAFYPJf2hofB/exec" target="_blank" rel="noopener" data-survey-accept>
+          <span>Bersedia Mengisi Survei</span>
+          <b aria-hidden="true">→</b>
+        </a>
+        <button type="button" data-survey-dismiss>Tidak Sekarang</button>
+        <small>Survei dibuka di tab baru. Anda bebas memilih untuk berpartisipasi atau tidak.</small>
+      </div>
+    </div>
+  </dialog>
+
   <dialog class="admin-access-dialog" id="adminAccessDialog" aria-labelledby="adminAccessTitle">
     <div class="admin-access-dialog-panel">
       <button class="admin-access-dialog-close" type="button" data-admin-access-close aria-label="Tutup dialog" data-i18n-aria-label="adminAccessCloseLabel">&#215;</button>
@@ -2100,5 +2109,31 @@
 
   <script src="assets/app.js?v=stakeholder-data-20260716" defer></script>
   <script src="assets/chatbot-fix.js?v=pmb-hierarchy-20260725-2" defer></script>
+  <script>
+    (() => {
+      const dialog = document.getElementById("dataScienceSurveyDialog");
+      if (!dialog) return;
+      const sessionKey = "sains-data-survey-invitation-seen-v1";
+      const remember = () => {
+        try { sessionStorage.setItem(sessionKey, "true"); } catch (error) {}
+      };
+      const dismiss = () => {
+        remember();
+        if (dialog.open) dialog.close();
+      };
+      dialog.querySelectorAll("[data-survey-dismiss]").forEach(button => button.addEventListener("click", dismiss));
+      dialog.querySelector("[data-survey-accept]")?.addEventListener("click", dismiss);
+      dialog.addEventListener("cancel", event => {
+        event.preventDefault();
+        dismiss();
+      });
+      dialog.addEventListener("click", event => {
+        if (event.target === dialog) dismiss();
+      });
+      let seen = false;
+      try { seen = sessionStorage.getItem(sessionKey) === "true"; } catch (error) {}
+      if (!seen) window.setTimeout(() => dialog.showModal(), 500);
+    })();
+  </script>
 </body>
 </html>
