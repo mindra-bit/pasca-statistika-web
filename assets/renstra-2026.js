@@ -2,6 +2,8 @@
   "use strict";
 
   const PANEL_ID = "renstra-program-studi";
+  const UNIVERSITY_VISION = "Menjadi pusat pendidikan dan pengetahuan inklusif berkelanjutan yang berkelas dunia, untuk mendorong inovasi global dan menghasilkan dampak pada masyarakat.";
+  const FACULTY_VISION = "FMIPA Unpad menjadi fakultas yang unggul, inklusif berkelanjutan dan mendapat rekognisi internasional dalam penyelenggaraan pendidikan dan riset di bidang ilmu formal, sains, dan teknologi yang inovatif, terintegrasi serta berdampak bagi masyarakat.";
   let DATA = {};
 
   function esc(value) {
@@ -132,7 +134,11 @@
         </div>
 
         <div class="renstra-view" data-renstra-view="direction">
-          <div class="renstra-vision"><small>Visi Program Studi</small><p>${esc(DATA.vision)}</p></div>
+          <div class="renstra-vision-stack" aria-label="Keselarasan visi institusi dan program studi">
+            <div class="renstra-vision renstra-vision-university"><small>Visi Universitas Padjadjaran · Renstra 2025–2029</small><p>${esc(UNIVERSITY_VISION)}</p></div>
+            <div class="renstra-vision renstra-vision-faculty"><small>Visi Fakultas Matematika dan Ilmu Pengetahuan Alam</small><p>${esc(FACULTY_VISION)}</p></div>
+            <div class="renstra-vision renstra-vision-program"><small>Visi Program Studi S2 Statistika Terapan</small><p>${esc(DATA.vision)}</p></div>
+          </div>
 
           <section class="renstra-section-card">
             <div class="renstra-card-head"><div><h3>Misi</h3><p>Empat mandat penyelenggaraan pendidikan, penelitian, kerja sama, dan publikasi ilmiah.</p></div><span class="renstra-number">04</span></div>
@@ -250,7 +256,7 @@
     if (!document.querySelector('link[data-renstra-style]')) {
       const link = document.createElement("link");
       link.rel = "stylesheet";
-      link.href = "assets/renstra-2026.css?v=renstra-20260725";
+      link.href = "assets/renstra-2026.css?v=renstra-visi-institusi-20260728";
       link.dataset.renstraStyle = "true";
       document.head.appendChild(link);
     }
@@ -263,7 +269,7 @@
         "assets/renstra-activities-3.json"
       ];
       const [core, programs, ...activityParts] = await Promise.all(files.map(async (url) => {
-        const response = await fetch(`${url}?v=renstra-20260725`);
+        const response = await fetch(`${url}?v=renstra-visi-institusi-20260728`);
         if (!response.ok) throw new Error(`Gagal memuat ${url}`);
         return response.json();
       }));

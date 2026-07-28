@@ -36,7 +36,12 @@
 .renstra-strategy-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
 .renstra-strategy{display:grid;grid-template-columns:42px 1fr;gap:13px;padding:18px;border:1px solid #dde4e2;border-radius:9px;background:linear-gradient(140deg,#f8fbfa,#fff)}
 .renstra-strategy b{display:grid;place-items:center;width:42px;height:42px;border-radius:8px;color:#fff;background:#143d5d}.renstra-strategy h4{margin:0 0 5px;color:#143d5d}.renstra-strategy p{margin:0;color:#5c6965;line-height:1.52}
-.renstra-vision{padding:26px;border-left:6px solid #f2a900;border-radius:9px;color:#fff;background:linear-gradient(135deg,#143d5d,#0e6b58);box-shadow:0 15px 32px rgba(20,61,93,.12)}
+.renstra-vision-stack{display:grid;gap:14px}
+.renstra-vision{position:relative;overflow:hidden;padding:26px;border-left:6px solid #f2a900;border-radius:9px;color:#fff;background:linear-gradient(135deg,#143d5d,#0e6b58);box-shadow:0 15px 32px rgba(20,61,93,.12)}
+.renstra-vision:after{content:"";position:absolute;width:150px;height:150px;right:-78px;top:-82px;border:28px solid rgba(255,255,255,.045);border-radius:50%;pointer-events:none}
+.renstra-vision-university{border-left-color:#f2a900;background:linear-gradient(135deg,#102c48,#143d5d)}
+.renstra-vision-faculty{border-left-color:#58bda7;background:linear-gradient(135deg,#143d5d,#0d675a)}
+.renstra-vision-program{border-left-color:#f2a900;background:linear-gradient(135deg,#0e6b58,#155244)}
 #renstra-program-studi [data-renstra-view="direction"] .renstra-vision small{display:block;margin-bottom:9px;color:#fff!important;-webkit-text-fill-color:#fff!important;font-size:.72rem!important;font-weight:800!important;letter-spacing:.1em;text-transform:uppercase;opacity:.92}#renstra-program-studi [data-renstra-view="direction"] .renstra-vision p{max-width:1040px;margin:0!important;color:#fff!important;-webkit-text-fill-color:#fff!important;font-size:clamp(.95rem,1.1vw,1.1rem)!important;font-weight:500!important;line-height:1.62!important;text-shadow:0 1px 1px rgba(0,0,0,.12)}
 .renstra-list-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.renstra-list-card{padding:19px;border:1px solid #dce2de;border-radius:9px;background:#fff}.renstra-list-card h4{margin:0 0 7px;color:#0e6b58}.renstra-list-card p{margin:0;color:#58635f;line-height:1.55}
 .renstra-targets{display:grid;gap:10px}.renstra-target{display:grid;grid-template-columns:40px 1fr;gap:13px;align-items:flex-start;padding:15px;border:1px solid #e1ddd4;border-radius:9px;background:#fff}.renstra-target span{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;color:#211600;background:#f2a900;font-weight:950}.renstra-target p{margin:0;color:#58625f;line-height:1.55}
