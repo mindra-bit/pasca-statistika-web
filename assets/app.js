@@ -394,6 +394,7 @@ const workspacePanelIds = [
   "beasiswa",
   "lamsama",
   "pks-moa",
+  "fasilitas-pembelajaran",
   "kurikulum",
   "dokumen-kurikulum",
   "mata-kuliah",

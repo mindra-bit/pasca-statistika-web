@@ -1,0 +1,27 @@
+.learning-facilities-section{background:linear-gradient(180deg,#f5f9f8 0%,#fffaf0 100%)}
+.learning-facilities-section .container{display:grid;gap:20px}
+.learning-facilities-hero{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:34px;align-items:center;padding:clamp(28px,5vw,56px);border-radius:28px;background:linear-gradient(130deg,#062f51 0%,#08746a 72%,#8b842c 100%);color:#fff;box-shadow:0 24px 64px rgba(6,47,81,.18)}
+.learning-facilities-hero:before{position:absolute;right:-140px;top:-190px;width:430px;height:430px;border:74px solid rgba(255,209,89,.08);border-radius:50%;content:""}
+.learning-facilities-copy,.learning-facilities-feature-list{position:relative;z-index:1}
+.learning-facilities-hero .section-kicker{color:#f5cc65}
+.learning-facilities-hero h2{max-width:800px;margin:8px 0 14px;color:#fff;font-size:clamp(2rem,4.4vw,3.55rem);line-height:1.06}
+.learning-facilities-copy>p:not(.section-kicker){max-width:780px;margin:0;color:#dbeaec;font-size:1.02rem;line-height:1.72}
+.learning-facilities-metrics{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.learning-facilities-metrics span{min-width:132px;padding:14px 16px;border:1px solid rgba(255,255,255,.17);border-radius:15px;background:rgba(4,41,59,.22);backdrop-filter:blur(10px)}
+.learning-facilities-metrics strong{display:block;color:#f6cf68;font-size:1.65rem;line-height:1}
+.learning-facilities-metrics small{display:block;margin-top:5px;color:#e1edef;font-size:.76rem}
+.learning-facilities-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
+.learning-facilities-actions a{display:inline-flex;align-items:center;justify-content:center;gap:16px;min-height:50px;padding:0 18px;border-radius:13px;text-decoration:none;font-weight:850}
+.learning-facilities-primary{background:#f2bd4e;color:#173344;box-shadow:0 12px 28px rgba(242,189,78,.24)}
+.learning-facilities-primary b{font-size:1.25rem}
+.learning-facilities-secondary{border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);color:#fff}
+.learning-facilities-feature-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.learning-facilities-feature-list span{display:flex;min-height:68px;align-items:flex-end;padding:14px;border:1px solid rgba(255,255,255,.18);border-radius:15px;background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.04));color:#fff;font-size:.82rem;font-weight:800}
+.learning-facilities-preview{overflow:hidden;border:1px solid #d7e3e0;border-radius:22px;background:#fff;box-shadow:0 16px 42px rgba(13,58,79,.1)}
+.learning-facilities-preview-head{display:grid;grid-template-columns:90px minmax(0,1fr) auto;gap:14px;align-items:center;min-height:54px;padding:0 17px;border-bottom:1px solid #dde7e4;background:#f8faf9}
+.learning-facilities-preview-head>div{display:flex;gap:6px}.learning-facilities-preview-head>div span{width:9px;height:9px;border-radius:50%;background:#d6a83a}.learning-facilities-preview-head>div span:nth-child(2){background:#7fb9a9}.learning-facilities-preview-head>div span:nth-child(3){background:#6e8ba0}
+.learning-facilities-preview-head strong{overflow:hidden;color:#24485e;font-size:.84rem;text-align:center;text-overflow:ellipsis;white-space:nowrap}
+.learning-facilities-preview-head a{color:#0d7067;font-size:.8rem;font-weight:850;text-decoration:none}
+.learning-facilities-preview iframe{display:block;width:100%;height:min(68vh,720px);border:0;background:#f7faf9}
+@media(max-width:850px){.learning-facilities-hero{grid-template-columns:1fr}.learning-facilities-feature-list{grid-template-columns:repeat(3,1fr)}.learning-facilities-preview iframe{height:600px}}
+@media(max-width:600px){.learning-facilities-hero{padding:26px 20px;border-radius:20px}.learning-facilities-feature-list{grid-template-columns:1fr 1fr}.learning-facilities-metrics span{flex:1 1 120px}.learning-facilities-actions a{width:100%}.learning-facilities-preview-head{grid-template-columns:1fr auto}.learning-facilities-preview-head>div{display:none}.learning-facilities-preview-head strong{text-align:left}.learning-facilities-preview iframe{height:520px}}
