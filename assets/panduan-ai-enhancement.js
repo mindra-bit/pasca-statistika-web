@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = '20260727-1';
+  const VERSION = '20260728-2';
   const styleId = 'panduan-ai-portal-styles';
   const sectionId = 'panduan-ai';
   const styles = `
@@ -52,7 +52,12 @@
     const link=document.createElement('a');link.className='button panduan-ai-front-link';link.href='#panduan-ai';link.dataset.programSelect='s2';link.dataset.workspaceTarget='panduan-ai';link.textContent='Panduan AI';actions.appendChild(link);
   };
   const addSection = () => {
-    if(document.getElementById(sectionId))return true;const panels=document.querySelector('.workspace-panels');if(!panels)return false;
+    const existing=document.getElementById(sectionId);
+    if(existing){
+      if(!existing.classList.contains('panduan-ai-section'))existing.replaceWith(makeSection());
+      return true;
+    }
+    const panels=document.querySelector('.workspace-panels');if(!panels)return false;
     const section=makeSection();const marker=document.getElementById('special-moment')||document.getElementById('chatbot');if(marker)panels.insertBefore(section,marker);else panels.appendChild(section);return true;
   };
   const bind = () => {
