@@ -78,7 +78,7 @@
       if (html.includes(inspirationMarker)) html = html.replace(inspirationMarker, profileCards + "\n        " + inspirationMarker);
     }
     if (!html.includes("renstra-vmts-runtime")) html = html.replace("</body>", runtimeScript + "</body>");
-    if (!html.includes("panduan-ai-enhancement.js")) html = html.replace("</body>", '<script src="assets/panduan-ai-enhancement.js?v=20260728-2"></script></body>');
+    if (!html.includes("panduan-ai-enhancement.js")) html = html.replace("</body>", '<script src="assets/panduan-ai-enhancement.js?v=20260728-3"></script></body>');
     return html;
   };
 })();

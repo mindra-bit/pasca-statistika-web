@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = '20260728-2';
+  const VERSION = '20260728-3';
   const styleId = 'panduan-ai-portal-styles';
   const sectionId = 'panduan-ai';
   const styles = `
@@ -53,10 +53,7 @@
   };
   const addSection = () => {
     const existing=document.getElementById(sectionId);
-    if(existing){
-      if(!existing.classList.contains('panduan-ai-section'))existing.replaceWith(makeSection());
-      return true;
-    }
+    if(existing)return true;
     const panels=document.querySelector('.workspace-panels');if(!panels)return false;
     const section=makeSection();const marker=document.getElementById('special-moment')||document.getElementById('chatbot');if(marker)panels.insertBefore(section,marker);else panels.appendChild(section);return true;
   };
@@ -64,6 +61,6 @@
     document.addEventListener('click',event=>{const button=event.target.closest('[data-panduan-index]');if(!button)return;const index=button.dataset.panduanIndex;document.querySelectorAll('[data-panduan-index]').forEach(b=>b.classList.toggle('active',b===button));document.querySelectorAll('[data-panduan-chapter]').forEach(panel=>panel.classList.toggle('active',panel.dataset.panduanChapter===index));button.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});});
   };
   const activateHash = () => {if(location.hash!=='#panduan-ai')return;setTimeout(()=>{if(typeof window.setActiveWorkspacePanel==='function')window.setActiveWorkspacePanel('panduan-ai',true,'s2');else document.querySelector('[data-workspace-target="panduan-ai"]')?.click();},250)};
-  const init = () => {addStyle();addMenu();addFrontLink();if(addSection())activateHash();else{const observer=new MutationObserver(()=>{addMenu();addFrontLink();if(addSection()){observer.disconnect();activateHash()}});observer.observe(document.documentElement,{childList:true,subtree:true});setTimeout(()=>observer.disconnect(),20000)}bind()};
+  const init = () => {addStyle();addMenu();if(addSection())activateHash();else{const observer=new MutationObserver(()=>{addMenu();if(addSection()){observer.disconnect();activateHash()}});observer.observe(document.documentElement,{childList:true,subtree:true});setTimeout(()=>observer.disconnect(),20000)}bind()};
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
