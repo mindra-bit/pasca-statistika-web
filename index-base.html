@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="assets/project-evaluation.css?v=project-titles-20260704" />
   <link rel="stylesheet" href="assets/alumni-sharing.css?v=alumni-sharing-leivina-photo-20260715" />
   <link rel="stylesheet" href="assets/student-achievements.css?v=student-achievements-final-20260709" />
+  <link rel="stylesheet" href="assets/student-cohort.css?v=20260728" />
 </head>
 <body>
   <div class="topbar">
@@ -103,6 +104,7 @@
           <a class="workspace-menu-subitem" href="#lulusan" data-program-select="s2" data-workspace-target="lulusan" data-i18n="workspaceGraduates">Lulusan &amp; Tesis</a>
           <a class="workspace-menu-subitem" href="#tracer-studi" data-program-select="s2" data-workspace-target="tracer-studi" data-i18n="workspaceTracer">Tracer Studi</a>
           <a class="workspace-menu-subitem" href="#stakeholder-survey" data-program-select="s2" data-workspace-target="stakeholder-survey" data-i18n="workspaceStakeholderSurvey">Stakeholder Survey</a>
+          <a class="workspace-menu-subitem" href="#mahasiswa" data-program-select="s2" data-workspace-target="mahasiswa">Mahasiswa</a>
           <a class="workspace-menu-subitem" href="#prestasi-mahasiswa" data-program-select="s2" data-workspace-target="prestasi-mahasiswa" data-i18n="workspaceStudentAchievements">Prestasi Mahasiswa</a>
 
           <span class="workspace-menu-group-label">Program Penelitian</span>
@@ -1705,6 +1707,85 @@
       </div>
     </section>
 
+    <section class="section student-cohort-section" id="mahasiswa" aria-labelledby="student-cohort-title">
+      <div class="container">
+        <div class="student-cohort-shell">
+          <header class="student-cohort-hero">
+            <div>
+              <p class="section-kicker">Mahasiswa</p>
+              <h2 id="student-cohort-title">Dinamika mahasiswa lintas angkatan.</h2>
+              <p>Jelajahi profil mahasiswa berdasarkan angkatan, jalur masuk, dan status akhir. Seluruh informasi ditampilkan secara agregat untuk menjaga privasi.</p>
+            </div>
+            <label class="student-cohort-filter" for="studentCohortSelect">
+              <span>Pilih angkatan</span>
+              <select id="studentCohortSelect" aria-describedby="studentCohortSelection">
+                <option value="all">Semua angkatan</option>
+              </select>
+              <small id="studentCohortSelection" aria-live="polite">Ringkasan 2007–2026</small>
+            </label>
+          </header>
+
+          <div class="student-cohort-metrics" aria-label="Ringkasan mahasiswa">
+            <article>
+              <span>Total mahasiswa</span>
+              <strong id="studentTotal">463</strong>
+              <small id="studentPeriod">19 angkatan tercatat</small>
+            </article>
+            <article>
+              <span>Selesai atau lulus</span>
+              <strong id="studentCompleted">422</strong>
+              <small id="studentCompletedRate">91,1% dari seluruh mahasiswa</small>
+            </article>
+            <article>
+              <span>Jalur masuk</span>
+              <strong id="studentRouteCount">6</strong>
+              <small id="studentTopRoute">S2 merupakan jalur terbesar</small>
+            </article>
+          </div>
+
+          <div class="student-cohort-dashboard">
+            <article class="student-cohort-panel student-cohort-timeline-panel">
+              <div class="student-cohort-panel-head">
+                <div>
+                  <span>Tren angkatan</span>
+                  <h3>Jumlah mahasiswa per tahun</h3>
+                </div>
+                <small>Klik batang untuk memilih angkatan</small>
+              </div>
+              <div class="student-cohort-timeline" id="studentCohortTimeline" role="list" aria-label="Jumlah mahasiswa menurut angkatan"></div>
+            </article>
+
+            <article class="student-cohort-panel">
+              <div class="student-cohort-panel-head">
+                <div>
+                  <span>Komposisi</span>
+                  <h3>Jalur masuk</h3>
+                </div>
+              </div>
+              <div class="student-cohort-bars" id="studentRouteChart" aria-live="polite"></div>
+            </article>
+
+            <article class="student-cohort-panel student-cohort-status-panel">
+              <div class="student-cohort-panel-head">
+                <div>
+                  <span>Hasil akademik</span>
+                  <h3>Status akhir</h3>
+                </div>
+              </div>
+              <div class="student-status-layout">
+                <div class="student-status-ring" id="studentStatusRing" role="img" aria-label="Proporsi mahasiswa selesai atau lulus">
+                  <div><strong id="studentRingValue">91%</strong><span>selesai/lulus</span></div>
+                </div>
+                <div class="student-status-list" id="studentStatusChart" aria-live="polite"></div>
+              </div>
+            </article>
+          </div>
+
+          <p class="student-cohort-note"><strong>Catatan data:</strong> “Selesai” digunakan untuk peserta Student Exchange, sedangkan “Lulus” digunakan untuk mahasiswa program bergelar. Keduanya digabung hanya pada indikator tingkat penyelesaian.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="section alumni-sharing-section" id="sharing-session-alumni">
       <div class="container">
         <div class="alumni-sharing-hero">
@@ -2107,7 +2188,8 @@
     </div>
   </footer>
 
-  <script src="assets/app.js?v=stakeholder-data-20260716" defer></script>
+  <script src="assets/app.js?v=mahasiswa-dashboard-20260728" defer></script>
+  <script src="assets/student-cohort.js?v=20260728" defer></script>
   <script src="assets/chatbot-fix.js?v=pmb-hierarchy-20260725-2" defer></script>
   <script>
     (() => {

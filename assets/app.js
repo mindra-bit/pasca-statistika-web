@@ -411,6 +411,7 @@ const workspacePanelIds = [
   "lulusan",
   "tracer-studi",
   "stakeholder-survey",
+  "mahasiswa",
   "sharing-session-alumni",
   "prestasi-mahasiswa",
   "program-pengabdian",
