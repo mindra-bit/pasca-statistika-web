@@ -54,8 +54,8 @@
     Object.assign(I18N.id, {
       workspacePmb: "PMB",
       pmbKicker: "Penerimaan Mahasiswa Baru",
-      pmbTitle: "PMB",
-      pmbText: "Arsip penerimaan mahasiswa baru S2 Statistika Terapan disusun berdasarkan tahun agar laporan, dokumentasi, dan hasil survei mudah ditemukan.",
+      pmbTitle: "Daftar S2 Statistika Terapan",
+      pmbText: "Temukan jalur masuk yang sesuai, pelajari program Fast Track S1–S2, dan buka arsip penerimaan mahasiswa baru S2 Statistika Terapan.",
       pmbOpen: "Buka Arsip PMB",
       pmbYearLabel: "Tahun Penerimaan",
       pmbYearTitle: "PMB S2 Statistika Terapan Angkatan 2026",
@@ -70,8 +70,8 @@
     Object.assign(I18N.en, {
       workspacePmb: "Admissions",
       pmbKicker: "Student Admissions",
-      pmbTitle: "Admissions",
-      pmbText: "The Applied Statistics master's admissions archive is organized by year so reports, documentation, and survey results are easy to find.",
+      pmbTitle: "Apply to the Master of Applied Statistics",
+      pmbText: "Explore the available admission pathways, learn about the S1–S2 Fast Track program, and access the Applied Statistics master's admissions archive.",
       pmbOpen: "Open Admissions Archive",
       pmbYearLabel: "Admission Year",
       pmbYearTitle: "Applied Statistics Master's Admissions 2026",
@@ -99,7 +99,18 @@
         .pmb-resource-card h4{margin:15px 0 7px;color:#143d5d;font-size:1.15rem}
         .pmb-resource-card p{margin:0;color:#61747f}
         .pmb-resource-action{margin-top:auto;padding-top:17px;color:#087f6a;font-weight:900}
-        @media(max-width:720px){.pmb-resource-grid{grid-template-columns:1fr}.pmb-year-head{align-items:center}.pmb-year-badge{width:68px;height:68px}.pmb-year-block{padding:20px}}
+        .pmb-entry-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:24px}
+        .pmb-entry-card{position:relative;overflow:hidden;display:flex;flex-direction:column;min-height:230px;padding:26px;border-radius:22px;color:#fff;text-decoration:none;box-shadow:0 18px 38px rgba(15,58,78,.15);transition:transform .2s ease,box-shadow .2s ease}
+        .pmb-entry-card:first-child{background:linear-gradient(135deg,#0b3658,#087f6a)}
+        .pmb-entry-card:last-child{background:linear-gradient(135deg,#86610d,#e3a529)}
+        .pmb-entry-card:after{content:"";position:absolute;width:190px;height:190px;right:-78px;bottom:-94px;border:38px solid rgba(255,255,255,.09);border-radius:50%}
+        .pmb-entry-card:hover{transform:translateY(-4px);box-shadow:0 23px 44px rgba(15,58,78,.22)}
+        .pmb-entry-card>span,.pmb-entry-card h3,.pmb-entry-card p,.pmb-entry-card strong{position:relative;z-index:1}
+        .pmb-entry-card>span{align-self:flex-start;padding:6px 10px;border:1px solid rgba(255,255,255,.25);border-radius:999px;background:rgba(255,255,255,.12);font-size:.72rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase}
+        .pmb-entry-card h3{margin:18px 0 8px;color:#fff;font-size:clamp(1.35rem,2.3vw,1.85rem)}
+        .pmb-entry-card p{max-width:620px;margin:0;color:rgba(255,255,255,.86);line-height:1.65}
+        .pmb-entry-card strong{margin-top:auto;padding-top:20px;color:#fff;font-size:.92rem}
+        @media(max-width:720px){.pmb-resource-grid,.pmb-entry-grid{grid-template-columns:1fr}.pmb-year-head{align-items:center}.pmb-year-badge{width:68px;height:68px}.pmb-year-block{padding:20px}}
       `;
       document.head.appendChild(style);
     }
@@ -113,10 +124,12 @@
         <div class="pmb-profile-hero">
           <div class="pmb-profile-copy">
             <span class="pmb-profile-kicker" data-i18n="pmbKicker">Penerimaan Mahasiswa Baru</span>
-            <h2 data-i18n="pmbTitle">PMB</h2>
-            <p data-i18n="pmbText">Arsip penerimaan mahasiswa baru S2 Statistika Terapan disusun berdasarkan tahun agar laporan, dokumentasi, dan hasil survei mudah ditemukan.</p>
+            <h2 data-i18n="pmbTitle">Daftar S2 Statistika Terapan</h2>
+            <p data-i18n="pmbText">Temukan jalur masuk yang sesuai, pelajari program Fast Track S1–S2, dan buka arsip penerimaan mahasiswa baru S2 Statistika Terapan.</p>
             <div class="pmb-profile-actions">
-              <a href="pmb/" data-i18n="pmbOpen">Buka Arsip PMB</a>
+              <a href="jalur-masuk.html">Pilih Jalur Masuk</a>
+              <a class="secondary" href="fast-track.html">Program Fast Track</a>
+              <a class="secondary" href="pmb/" data-i18n="pmbOpen">Buka Arsip PMB</a>
             </div>
           </div>
           <div class="pmb-profile-summary" aria-label="Ringkasan PMB 2026">
@@ -125,6 +138,21 @@
             <div class="pmb-profile-stat"><strong>3</strong><span data-i18n="pmbSessions">sesi wawancara</span></div>
             <div class="pmb-profile-stat"><strong>5</strong><span data-i18n="pmbPathways">jalur penerimaan</span></div>
           </div>
+        </div>
+
+        <div class="pmb-entry-grid" aria-label="Pilihan informasi pendaftaran S2 Statistika Terapan">
+          <a class="pmb-entry-card" href="jalur-masuk.html">
+            <span>5 Jalur Penerimaan</span>
+            <h3>Jalur Masuk S2 Statistika Terapan</h3>
+            <p>Bandingkan jalur Reguler, RPL, Kerja Sama, Alumni Berprestasi dan Berkinerja, serta Fast Track untuk menemukan pilihan yang paling sesuai.</p>
+            <strong>Buka semua jalur masuk →</strong>
+          </a>
+          <a class="pmb-entry-card" href="fast-track.html">
+            <span>Program Percepatan</span>
+            <h3>Fast Track S1–S2</h3>
+            <p>Pelajari persyaratan, keunggulan, bidang konsentrasi, lingkungan akademik, dan skema biaya Fast Track Statistika Terapan.</p>
+            <strong>Buka halaman Fast Track →</strong>
+          </a>
         </div>
 
         <section class="pmb-year-block" aria-labelledby="pmb-year-2026-title">
