@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="assets/project-evaluation.css?v=project-titles-20260704" />
   <link rel="stylesheet" href="assets/alumni-sharing.css?v=alumni-sharing-leivina-photo-20260715" />
   <link rel="stylesheet" href="assets/student-achievements.css?v=student-achievements-final-20260709" />
-  <link rel="stylesheet" href="assets/student-cohort.css?v=exchange-bars-20260729" />
+  <link rel="stylesheet" href="assets/student-cohort.css?v=separate-exchange-gpa-20260729" />
   <link rel="stylesheet" href="assets/learning-facilities.css?v=20260728" />
 </head>
 <body>
@@ -1848,8 +1848,8 @@
             <div class="student-gpa-head">
               <div>
                 <span>Performa Akademik</span>
-                <h3 id="student-gpa-title">Rata-rata IPK mahasiswa terpilih</h3>
-                <p>Ringkasan membedakan mahasiswa berstatus Lulus, Selesai, dan Regulasi Akademik dengan SKS serta IPK yang valid.</p>
+                <h3 id="student-gpa-title">IPK mahasiswa program</h3>
+                <p>Ringkasan ini hanya mencakup mahasiswa program bergelar dengan status Lulus dan Regulasi Akademik serta SKS dan IPK yang valid.</p>
               </div>
               <span class="student-gpa-scope" id="studentGpaScope">Semua data IPK tersedia</span>
             </div>
@@ -1857,17 +1857,17 @@
             <div class="student-gpa-metrics">
               <article>
                 <span>Rata-rata IPK</span>
-                <strong id="studentGpaAverage">3,68</strong>
+                <strong id="studentGpaAverage">3,70</strong>
                 <small>Skala 4,00</small>
               </article>
               <article>
                 <span>Data valid</span>
-                <strong id="studentGpaCount">295</strong>
-                <small id="studentGpaStatusSummary">232 Lulus · 49 Selesai · 14 Regulasi Akademik</small>
+                <strong id="studentGpaCount">246</strong>
+                <small id="studentGpaStatusSummary">232 Lulus · 14 Regulasi Akademik</small>
               </article>
               <article>
                 <span>Rentang IPK</span>
-                <strong id="studentGpaRange">2,00–4,00</strong>
+                <strong id="studentGpaRange">3,00–4,00</strong>
                 <small>Minimum hingga maksimum</small>
               </article>
             </div>
@@ -1876,7 +1876,7 @@
               <article class="student-gpa-panel">
                 <div class="student-gpa-panel-head">
                   <span>Distribusi IPK</span>
-                  <strong id="studentGpaDistributionTitle">295 mahasiswa</strong>
+                  <strong id="studentGpaDistributionTitle">246 mahasiswa</strong>
                 </div>
                 <div class="student-gpa-distribution" id="studentGpaDistribution" aria-live="polite"></div>
               </article>
@@ -1894,7 +1894,46 @@
             </div>
           </div>
 
-          <p class="student-cohort-note"><strong>Catatan data:</strong> Mahasiswa program bergelar dan peserta Student Exchange dihitung terpisah. Grafik tren, jalur masuk, dan status mahasiswa hanya menggunakan mahasiswa program. Status “Selesai” khusus peserta Student Exchange tetap ditampilkan terpisah pada ringkasan IPK; SKS 0, IPK 0, Undur Diri, dan Meninggal tidak dimasukkan dalam perhitungan IPK.</p>
+          <div class="student-exchange-gpa-dashboard" id="studentExchangeGpaDashboard" aria-labelledby="student-exchange-gpa-title">
+            <div class="student-gpa-head">
+              <div>
+                <span>Student Exchange</span>
+                <h3 id="student-exchange-gpa-title">IPK peserta Student Exchange</h3>
+                <p>Peserta pertukaran ditampilkan terpisah dari mahasiswa program. Status akademiknya dicatat sebagai “Selesai”.</p>
+              </div>
+              <span class="student-gpa-scope student-exchange-gpa-scope" id="studentExchangeGpaScope">Angkatan 2021–2022</span>
+            </div>
+            <div class="student-gpa-metrics student-exchange-gpa-metrics">
+              <article>
+                <span>Rata-rata IPK</span>
+                <strong id="studentExchangeGpaAverage">3,57</strong>
+                <small>Skala 4,00</small>
+              </article>
+              <article>
+                <span>Data valid</span>
+                <strong id="studentExchangeGpaCount">49</strong>
+                <small>Status Selesai</small>
+              </article>
+              <article>
+                <span>Rentang IPK</span>
+                <strong id="studentExchangeGpaRange">2,00–4,00</strong>
+                <small>Minimum hingga maksimum</small>
+              </article>
+            </div>
+            <article class="student-gpa-panel student-exchange-gpa-panel">
+              <div class="student-gpa-panel-head">
+                <span>Distribusi IPK Student Exchange</span>
+                <strong id="studentExchangeGpaDistributionTitle">49 peserta</strong>
+              </div>
+              <div class="student-gpa-distribution" id="studentExchangeGpaDistribution" aria-live="polite"></div>
+            </article>
+            <div class="student-gpa-empty" id="studentExchangeGpaEmpty" hidden>
+              <strong>Tidak ada data Student Exchange pada angkatan ini.</strong>
+              <span>Data peserta pertukaran tersedia untuk angkatan 2021 dan 2022.</span>
+            </div>
+          </div>
+
+          <p class="student-cohort-note"><strong>Catatan data:</strong> Mahasiswa program bergelar dan peserta Student Exchange dihitung terpisah, termasuk seluruh ringkasan IPK. Grafik tren, jalur masuk, dan status mahasiswa hanya menggunakan mahasiswa program. SKS 0, IPK 0, Undur Diri, dan Meninggal tidak dimasukkan dalam perhitungan IPK.</p>
         </div>
       </div>
     </section>
@@ -2302,7 +2341,7 @@
   </footer>
 
   <script src="assets/app.js?v=mahasiswa-dashboard-20260728" defer></script>
-  <script src="assets/student-cohort.js?v=exchange-bars-20260729" defer></script>
+  <script src="assets/student-cohort.js?v=separate-exchange-gpa-20260729" defer></script>
   <script src="assets/chatbot-fix.js?v=jalur-masuk-fast-track-20260729" defer></script>
   <script>
     (() => {

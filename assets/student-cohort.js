@@ -46,7 +46,15 @@
     gpaDistributionTitle: document.getElementById("studentGpaDistributionTitle"),
     gpaDistribution: document.getElementById("studentGpaDistribution"),
     gpaStatusComparison: document.getElementById("studentGpaStatusComparison"),
-    gpaEmpty: document.getElementById("studentGpaEmpty")
+    gpaEmpty: document.getElementById("studentGpaEmpty"),
+    exchangeGpaDashboard: document.getElementById("studentExchangeGpaDashboard"),
+    exchangeGpaScope: document.getElementById("studentExchangeGpaScope"),
+    exchangeGpaAverage: document.getElementById("studentExchangeGpaAverage"),
+    exchangeGpaCount: document.getElementById("studentExchangeGpaCount"),
+    exchangeGpaRange: document.getElementById("studentExchangeGpaRange"),
+    exchangeGpaDistribution: document.getElementById("studentExchangeGpaDistribution"),
+    exchangeGpaDistributionTitle: document.getElementById("studentExchangeGpaDistributionTitle"),
+    exchangeGpaEmpty: document.getElementById("studentExchangeGpaEmpty")
   };
   if (!elements.select || !elements.timeline) return;
 
@@ -61,7 +69,7 @@
     "Meninggal": "#6b7f92"
   };
   const gpaData = {
-    all:{n:295,average:3.679,min:2,max:4,bins:{"3,75–4,00":150,"3,50–3,74":92,"3,00–3,49":48,"< 3,00":5},statuses:{"Lulus":{n:232,average:3.695},"Selesai":{n:49,average:3.571},"Regulasi Akademik":{n:14,average:3.776}}},
+    all:{n:246,average:3.7,min:3,max:4,bins:{"3,75–4,00":117,"3,50–3,74":92,"3,00–3,49":37,"< 3,00":0},statuses:{"Lulus":{n:232,average:3.695},"Regulasi Akademik":{n:14,average:3.776}}},
     2012:{n:12,average:3.438,min:3,max:4,bins:{"3,75–4,00":1,"3,50–3,74":4,"3,00–3,49":7,"< 3,00":0},statuses:{"Lulus":{n:12,average:3.438}}},
     2013:{n:27,average:3.487,min:3,max:3.78,bins:{"3,75–4,00":1,"3,50–3,74":15,"3,00–3,49":11,"< 3,00":0},statuses:{"Lulus":{n:27,average:3.487}}},
     2014:{n:24,average:3.724,min:3.3,max:3.93,bins:{"3,75–4,00":13,"3,50–3,74":9,"3,00–3,49":2,"< 3,00":0},statuses:{"Lulus":{n:24,average:3.724}}},
@@ -71,11 +79,16 @@
     2018:{n:18,average:3.825,min:3.51,max:4,bins:{"3,75–4,00":12,"3,50–3,74":6,"3,00–3,49":0,"< 3,00":0},statuses:{"Lulus":{n:18,average:3.825}}},
     2019:{n:11,average:3.749,min:3.51,max:4,bins:{"3,75–4,00":4,"3,50–3,74":7,"3,00–3,49":0,"< 3,00":0},statuses:{"Lulus":{n:11,average:3.749}}},
     2020:{n:20,average:3.788,min:3.22,max:4,bins:{"3,75–4,00":15,"3,50–3,74":3,"3,00–3,49":2,"< 3,00":0},statuses:{"Lulus":{n:20,average:3.788}}},
-    2021:{n:32,average:3.633,min:2,max:4,bins:{"3,75–4,00":21,"3,50–3,74":3,"3,00–3,49":6,"< 3,00":2},statuses:{"Lulus":{n:9,average:3.806},"Selesai":{n:23,average:3.565}}},
-    2022:{n:36,average:3.672,min:2,max:4,bins:{"3,75–4,00":27,"3,50–3,74":1,"3,00–3,49":5,"< 3,00":3},statuses:{"Lulus":{n:10,average:3.92},"Selesai":{n:26,average:3.577}}},
+    2021:{n:9,average:3.806,min:3.56,max:4,bins:{"3,75–4,00":6,"3,50–3,74":3,"3,00–3,49":0,"< 3,00":0},statuses:{"Lulus":{n:9,average:3.806}}},
+    2022:{n:10,average:3.92,min:3.66,max:4,bins:{"3,75–4,00":9,"3,50–3,74":1,"3,00–3,49":0,"< 3,00":0},statuses:{"Lulus":{n:10,average:3.92}}},
     2023:{n:21,average:3.719,min:3.49,max:3.93,bins:{"3,75–4,00":8,"3,50–3,74":12,"3,00–3,49":1,"< 3,00":0},statuses:{"Lulus":{n:21,average:3.719}}},
     2024:{n:13,average:3.708,min:3.51,max:3.83,bins:{"3,75–4,00":7,"3,50–3,74":6,"3,00–3,49":0,"< 3,00":0},statuses:{"Lulus":{n:13,average:3.708}}},
     2025:{n:14,average:3.776,min:3.61,max:3.92,bins:{"3,75–4,00":11,"3,50–3,74":3,"3,00–3,49":0,"< 3,00":0},statuses:{"Regulasi Akademik":{n:14,average:3.776}}}
+  };
+  const exchangeGpaData = {
+    all:{n:49,average:3.571,min:2,max:4,bins:{"3,75–4,00":33,"3,50–3,74":0,"3,00–3,49":11,"< 3,00":5}},
+    2021:{n:23,average:3.565,min:2,max:4,bins:{"3,75–4,00":15,"3,50–3,74":0,"3,00–3,49":6,"< 3,00":2}},
+    2022:{n:26,average:3.577,min:2,max:4,bins:{"3,75–4,00":18,"3,50–3,74":0,"3,00–3,49":5,"< 3,00":3}}
   };
 
   const merge = key => cohorts.reduce((all, cohort) => {
@@ -119,8 +132,32 @@
   };
 
   const decimal = value => new Intl.NumberFormat("id-ID", {minimumFractionDigits: 2, maximumFractionDigits: 2}).format(value);
+  const renderGpaBins = (target, data, colors = palette) => {
+    const maxBin = Math.max(...Object.values(data.bins), 1);
+    target.innerHTML = Object.entries(data.bins).map(([label,count],index) => `
+      <div class="student-gpa-bin">
+        <div class="student-gpa-bin-value"><strong>${number.format(count)}</strong><small>${percent(count / data.n * 100)}</small></div>
+        <div class="student-gpa-bin-column"><span style="height:${count / maxBin * 100}%;--gpa-color:${colors[index % colors.length]}"></span></div>
+        <span>${label}</span>
+      </div>`).join("");
+  };
+  const renderExchangeGpa = value => {
+    if (!elements.exchangeGpaDashboard) return;
+    const data = exchangeGpaData[value];
+    const hasData = Boolean(data);
+    elements.exchangeGpaDashboard.classList.toggle("has-no-exchange-gpa-data", !hasData);
+    elements.exchangeGpaEmpty.hidden = hasData;
+    elements.exchangeGpaScope.textContent = value === "all" ? "Angkatan 2021–2022" : `Angkatan ${value}`;
+    if (!hasData) return;
+    elements.exchangeGpaAverage.textContent = decimal(data.average);
+    elements.exchangeGpaCount.textContent = number.format(data.n);
+    elements.exchangeGpaRange.textContent = `${decimal(data.min)}–${decimal(data.max)}`;
+    elements.exchangeGpaDistributionTitle.textContent = `${number.format(data.n)} peserta`;
+    renderGpaBins(elements.exchangeGpaDistribution, data, ["#175a9c", "#2584bd", "#49add3", "#86d4eb"]);
+  };
   const renderGpa = value => {
     if (!elements.gpaDashboard) return;
+    renderExchangeGpa(value);
     const data = gpaData[value];
     const hasData = Boolean(data);
     elements.gpaEmpty.hidden = hasData;
@@ -139,13 +176,7 @@
       .map(([label,item]) => `${number.format(item.n)} ${label}`)
       .join(" · ");
 
-    const maxBin = Math.max(...Object.values(data.bins), 1);
-    elements.gpaDistribution.innerHTML = Object.entries(data.bins).map(([label,count],index) => `
-      <div class="student-gpa-bin">
-        <div class="student-gpa-bin-value"><strong>${number.format(count)}</strong><small>${percent(count / data.n * 100)}</small></div>
-        <div class="student-gpa-bin-column"><span style="height:${count / maxBin * 100}%;--gpa-color:${palette[index % palette.length]}"></span></div>
-        <span>${label}</span>
-      </div>`).join("");
+    renderGpaBins(elements.gpaDistribution, data);
 
     elements.gpaStatusComparison.innerHTML = Object.entries(data.statuses).map(([label,item]) => `
       <div class="student-gpa-status-card" style="--gpa-status-color:${statusColors[label] || "#6b7f92"}">
