@@ -59,29 +59,21 @@
     "Meninggal": "#6b7f92"
   };
   const gpaData = {
-    all: {
-      n: 63, average: 3.617, min: 2, max: 4,
-      bins: {"3,75–4,00":44,"3,50–3,74":3,"3,00–3,49":11,"< 3,00":5},
-      statuses: {
-        "Selesai": {n:49, average:3.571},
-        "Regulasi Akademik": {n:14, average:3.776}
-      }
-    },
-    2021: {
-      n: 23, average: 3.565, min: 2, max: 4,
-      bins: {"3,75–4,00":15,"3,50–3,74":0,"3,00–3,49":6,"< 3,00":2},
-      statuses: {"Selesai": {n:23, average:3.565}}
-    },
-    2022: {
-      n: 26, average: 3.577, min: 2, max: 4,
-      bins: {"3,75–4,00":18,"3,50–3,74":0,"3,00–3,49":5,"< 3,00":3},
-      statuses: {"Selesai": {n:26, average:3.577}}
-    },
-    2025: {
-      n: 14, average: 3.776, min: 3.61, max: 3.92,
-      bins: {"3,75–4,00":11,"3,50–3,74":3,"3,00–3,49":0,"< 3,00":0},
-      statuses: {"Regulasi Akademik": {n:14, average:3.776}}
-    }
+    all:{n:295,average:3.679,min:2,max:4,bins:{"3,75–4,00":150,"3,50–3,74":92,"3,00–3,49":48,"< 3,00":5},statuses:{"Lulus":{n:232,average:3.695},"Selesai":{n:49,average:3.571},"Regulasi Akademik":{n:14,average:3.776}}},
+    2012:{n:12,average:3.438,min:3,max:4,bins:{"3,75–4,00":1,"3,50–3,74":4,"3,00–3,49":7,"< 3,00":0},statuses:{"Lulus":{n:12,average:3.438}}},
+    2013:{n:27,average:3.487,min:3,max:3.78,bins:{"3,75–4,00":1,"3,50–3,74":15,"3,00–3,49":11,"< 3,00":0},statuses:{"Lulus":{n:27,average:3.487}}},
+    2014:{n:24,average:3.724,min:3.3,max:3.93,bins:{"3,75–4,00":13,"3,50–3,74":9,"3,00–3,49":2,"< 3,00":0},statuses:{"Lulus":{n:24,average:3.724}}},
+    2015:{n:26,average:3.651,min:3,max:4,bins:{"3,75–4,00":12,"3,50–3,74":6,"3,00–3,49":8,"< 3,00":0},statuses:{"Lulus":{n:26,average:3.651}}},
+    2016:{n:33,average:3.706,min:3.3,max:3.93,bins:{"3,75–4,00":15,"3,50–3,74":13,"3,00–3,49":5,"< 3,00":0},statuses:{"Lulus":{n:33,average:3.706}}},
+    2017:{n:8,average:3.716,min:3.41,max:4,bins:{"3,75–4,00":3,"3,50–3,74":4,"3,00–3,49":1,"< 3,00":0},statuses:{"Lulus":{n:8,average:3.716}}},
+    2018:{n:18,average:3.825,min:3.51,max:4,bins:{"3,75–4,00":12,"3,50–3,74":6,"3,00–3,49":0,"< 3,00":0},statuses:{"Lulus":{n:18,average:3.825}}},
+    2019:{n:11,average:3.749,min:3.51,max:4,bins:{"3,75–4,00":4,"3,50–3,74":7,"3,00–3,49":0,"< 3,00":0},statuses:{"Lulus":{n:11,average:3.749}}},
+    2020:{n:20,average:3.788,min:3.22,max:4,bins:{"3,75–4,00":15,"3,50–3,74":3,"3,00–3,49":2,"< 3,00":0},statuses:{"Lulus":{n:20,average:3.788}}},
+    2021:{n:32,average:3.633,min:2,max:4,bins:{"3,75–4,00":21,"3,50–3,74":3,"3,00–3,49":6,"< 3,00":2},statuses:{"Lulus":{n:9,average:3.806},"Selesai":{n:23,average:3.565}}},
+    2022:{n:36,average:3.672,min:2,max:4,bins:{"3,75–4,00":27,"3,50–3,74":1,"3,00–3,49":5,"< 3,00":3},statuses:{"Lulus":{n:10,average:3.92},"Selesai":{n:26,average:3.577}}},
+    2023:{n:21,average:3.719,min:3.49,max:3.93,bins:{"3,75–4,00":8,"3,50–3,74":12,"3,00–3,49":1,"< 3,00":0},statuses:{"Lulus":{n:21,average:3.719}}},
+    2024:{n:13,average:3.708,min:3.51,max:3.83,bins:{"3,75–4,00":7,"3,50–3,74":6,"3,00–3,49":0,"< 3,00":0},statuses:{"Lulus":{n:13,average:3.708}}},
+    2025:{n:14,average:3.776,min:3.61,max:3.92,bins:{"3,75–4,00":11,"3,50–3,74":3,"3,00–3,49":0,"< 3,00":0},statuses:{"Regulasi Akademik":{n:14,average:3.776}}}
   };
 
   const merge = key => cohorts.reduce((all, cohort) => {
@@ -146,7 +138,7 @@
       </div>`).join("");
 
     elements.gpaStatusComparison.innerHTML = Object.entries(data.statuses).map(([label,item]) => `
-      <div class="student-gpa-status-card">
+      <div class="student-gpa-status-card" style="--gpa-status-color:${statusColors[label] || "#6b7f92"}">
         <div><span>${label}</span><small>${number.format(item.n)} mahasiswa</small></div>
         <strong>${decimal(item.average)}</strong>
         <div class="student-gpa-scale"><span style="width:${item.average / 4 * 100}%"></span></div>
