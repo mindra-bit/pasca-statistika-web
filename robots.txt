@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://statistika-unpad.github.io/pasca-statistika-web/sitemap.xml
