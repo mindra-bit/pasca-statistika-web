@@ -34,7 +34,17 @@
     routes: document.getElementById("studentRouteChart"),
     statuses: document.getElementById("studentStatusChart"),
     ring: document.getElementById("studentStatusRing"),
-    ringValue: document.getElementById("studentRingValue")
+    ringValue: document.getElementById("studentRingValue"),
+    gpaDashboard: document.querySelector(".student-gpa-dashboard"),
+    gpaScope: document.getElementById("studentGpaScope"),
+    gpaAverage: document.getElementById("studentGpaAverage"),
+    gpaCount: document.getElementById("studentGpaCount"),
+    gpaStatusSummary: document.getElementById("studentGpaStatusSummary"),
+    gpaRange: document.getElementById("studentGpaRange"),
+    gpaDistributionTitle: document.getElementById("studentGpaDistributionTitle"),
+    gpaDistribution: document.getElementById("studentGpaDistribution"),
+    gpaStatusComparison: document.getElementById("studentGpaStatusComparison"),
+    gpaEmpty: document.getElementById("studentGpaEmpty")
   };
   if (!elements.select || !elements.timeline) return;
 
@@ -47,6 +57,31 @@
     "Regulasi Akademik": "#d9a72e",
     "Undur Diri": "#b76845",
     "Meninggal": "#6b7f92"
+  };
+  const gpaData = {
+    all: {
+      n: 63, average: 3.617, min: 2, max: 4,
+      bins: {"3,75–4,00":44,"3,50–3,74":3,"3,00–3,49":11,"< 3,00":5},
+      statuses: {
+        "Selesai": {n:49, average:3.571},
+        "Regulasi Akademik": {n:14, average:3.776}
+      }
+    },
+    2021: {
+      n: 23, average: 3.565, min: 2, max: 4,
+      bins: {"3,75–4,00":15,"3,50–3,74":0,"3,00–3,49":6,"< 3,00":2},
+      statuses: {"Selesai": {n:23, average:3.565}}
+    },
+    2022: {
+      n: 26, average: 3.577, min: 2, max: 4,
+      bins: {"3,75–4,00":18,"3,50–3,74":0,"3,00–3,49":5,"< 3,00":3},
+      statuses: {"Selesai": {n:26, average:3.577}}
+    },
+    2025: {
+      n: 14, average: 3.776, min: 3.61, max: 3.92,
+      bins: {"3,75–4,00":11,"3,50–3,74":3,"3,00–3,49":0,"< 3,00":0},
+      statuses: {"Regulasi Akademik": {n:14, average:3.776}}
+    }
   };
 
   const merge = key => cohorts.reduce((all, cohort) => {
@@ -81,6 +116,43 @@
       </div>`).join("");
   };
 
+  const decimal = value => new Intl.NumberFormat("id-ID", {minimumFractionDigits: 2, maximumFractionDigits: 2}).format(value);
+  const renderGpa = value => {
+    if (!elements.gpaDashboard) return;
+    const data = gpaData[value];
+    const hasData = Boolean(data);
+    elements.gpaEmpty.hidden = hasData;
+    elements.gpaDashboard.classList.toggle("has-no-gpa-data", !hasData);
+    if (!hasData) {
+      elements.gpaScope.textContent = `Angkatan ${value}`;
+      return;
+    }
+
+    elements.gpaScope.textContent = value === "all" ? "Semua data IPK tersedia" : `Angkatan ${value}`;
+    elements.gpaAverage.textContent = decimal(data.average);
+    elements.gpaCount.textContent = number.format(data.n);
+    elements.gpaRange.textContent = `${decimal(data.min)}–${decimal(data.max)}`;
+    elements.gpaDistributionTitle.textContent = `${number.format(data.n)} mahasiswa`;
+    elements.gpaStatusSummary.textContent = Object.entries(data.statuses)
+      .map(([label,item]) => `${number.format(item.n)} ${label}`)
+      .join(" · ");
+
+    const maxBin = Math.max(...Object.values(data.bins), 1);
+    elements.gpaDistribution.innerHTML = Object.entries(data.bins).map(([label,count],index) => `
+      <div class="student-gpa-bin">
+        <div class="student-gpa-bin-value"><strong>${number.format(count)}</strong><small>${percent(count / data.n * 100)}</small></div>
+        <div class="student-gpa-bin-column"><span style="height:${count / maxBin * 100}%;--gpa-color:${palette[index % palette.length]}"></span></div>
+        <span>${label}</span>
+      </div>`).join("");
+
+    elements.gpaStatusComparison.innerHTML = Object.entries(data.statuses).map(([label,item]) => `
+      <div class="student-gpa-status-card">
+        <div><span>${label}</span><small>${number.format(item.n)} mahasiswa</small></div>
+        <strong>${decimal(item.average)}</strong>
+        <div class="student-gpa-scale"><span style="width:${item.average / 4 * 100}%"></span></div>
+      </div>`).join("");
+  };
+
   const update = value => {
     const data = value === "all" ? overall : cohorts.find(item => String(item.year) === value) || overall;
     const completed = (data.statuses.Lulus || 0) + (data.statuses.Selesai || 0);
@@ -100,6 +172,7 @@
 
     renderBars(elements.routes, data.routes, data.total);
     renderStatuses(data.statuses, data.total);
+    renderGpa(value);
     elements.timeline.querySelectorAll("button").forEach(button => button.classList.toggle("is-active", button.dataset.year === value));
   };
 

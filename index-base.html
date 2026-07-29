@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="assets/project-evaluation.css?v=project-titles-20260704" />
   <link rel="stylesheet" href="assets/alumni-sharing.css?v=alumni-sharing-leivina-photo-20260715" />
   <link rel="stylesheet" href="assets/student-achievements.css?v=student-achievements-final-20260709" />
-  <link rel="stylesheet" href="assets/student-cohort.css?v=20260728" />
+  <link rel="stylesheet" href="assets/student-cohort.css?v=ipk-20260729" />
   <link rel="stylesheet" href="assets/learning-facilities.css?v=20260728" />
 </head>
 <body>
@@ -1821,7 +1821,57 @@
             </article>
           </div>
 
-          <p class="student-cohort-note"><strong>Catatan data:</strong> “Selesai” digunakan untuk peserta Student Exchange, sedangkan “Lulus” digunakan untuk mahasiswa program bergelar. Keduanya digabung hanya pada indikator tingkat penyelesaian.</p>
+          <div class="student-gpa-dashboard" aria-labelledby="student-gpa-title">
+            <div class="student-gpa-head">
+              <div>
+                <span>Performa Akademik</span>
+                <h3 id="student-gpa-title">Rata-rata IPK mahasiswa terpilih</h3>
+                <p>Ringkasan difokuskan pada mahasiswa berstatus Selesai dan Regulasi Akademik dengan SKS serta IPK yang valid.</p>
+              </div>
+              <span class="student-gpa-scope" id="studentGpaScope">Semua data IPK tersedia</span>
+            </div>
+
+            <div class="student-gpa-metrics">
+              <article>
+                <span>Rata-rata IPK</span>
+                <strong id="studentGpaAverage">3,62</strong>
+                <small>Skala 4,00</small>
+              </article>
+              <article>
+                <span>Data valid</span>
+                <strong id="studentGpaCount">63</strong>
+                <small id="studentGpaStatusSummary">49 Selesai · 14 Regulasi Akademik</small>
+              </article>
+              <article>
+                <span>Rentang IPK</span>
+                <strong id="studentGpaRange">2,00–4,00</strong>
+                <small>Minimum hingga maksimum</small>
+              </article>
+            </div>
+
+            <div class="student-gpa-visuals">
+              <article class="student-gpa-panel">
+                <div class="student-gpa-panel-head">
+                  <span>Distribusi IPK</span>
+                  <strong id="studentGpaDistributionTitle">63 mahasiswa</strong>
+                </div>
+                <div class="student-gpa-distribution" id="studentGpaDistribution" aria-live="polite"></div>
+              </article>
+              <article class="student-gpa-panel">
+                <div class="student-gpa-panel-head">
+                  <span>Perbandingan status</span>
+                  <strong>Rata-rata</strong>
+                </div>
+                <div class="student-gpa-status-comparison" id="studentGpaStatusComparison" aria-live="polite"></div>
+              </article>
+            </div>
+            <div class="student-gpa-empty" id="studentGpaEmpty" hidden>
+              <strong>Data IPK belum tersedia untuk angkatan ini.</strong>
+              <span>Pilih Semua Angkatan, 2021, 2022, atau 2025 untuk melihat ringkasan IPK.</span>
+            </div>
+          </div>
+
+          <p class="student-cohort-note"><strong>Catatan data:</strong> “Selesai” digunakan untuk peserta Student Exchange, sedangkan “Lulus” digunakan untuk mahasiswa program bergelar. Indikator IPK hanya menggunakan status Selesai dan Regulasi Akademik; SKS 0, IPK 0, Undur Diri, dan Meninggal tidak dimasukkan dalam perhitungan.</p>
         </div>
       </div>
     </section>
@@ -2229,7 +2279,7 @@
   </footer>
 
   <script src="assets/app.js?v=mahasiswa-dashboard-20260728" defer></script>
-  <script src="assets/student-cohort.js?v=20260728" defer></script>
+  <script src="assets/student-cohort.js?v=ipk-20260729" defer></script>
   <script src="assets/chatbot-fix.js?v=pmb-hierarchy-20260725-2" defer></script>
   <script>
     (() => {
