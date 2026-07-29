@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="assets/project-evaluation.css?v=project-titles-20260704" />
   <link rel="stylesheet" href="assets/alumni-sharing.css?v=alumni-sharing-leivina-photo-20260715" />
   <link rel="stylesheet" href="assets/student-achievements.css?v=student-achievements-final-20260709" />
-  <link rel="stylesheet" href="assets/student-cohort.css?v=separation-20260729" />
+  <link rel="stylesheet" href="assets/student-cohort.css?v=exchange-bars-20260729" />
   <link rel="stylesheet" href="assets/learning-facilities.css?v=20260728" />
 </head>
 <body>
@@ -1795,7 +1795,10 @@
                   <span>Tren angkatan</span>
                   <h3>Jumlah mahasiswa program per tahun</h3>
                 </div>
-                <small>Klik batang untuk memilih angkatan</small>
+                <div class="student-cohort-legend" aria-label="Legenda grafik">
+                  <span><i class="is-program"></i>Mahasiswa program</span>
+                  <span><i class="is-exchange"></i>Student Exchange</span>
+                </div>
               </div>
               <div class="student-cohort-timeline" id="studentCohortTimeline" role="list" aria-label="Jumlah mahasiswa program menurut angkatan; peserta Student Exchange diberi penanda SE"></div>
             </article>
@@ -2284,7 +2287,7 @@
   </footer>
 
   <script src="assets/app.js?v=mahasiswa-dashboard-20260728" defer></script>
-  <script src="assets/student-cohort.js?v=separation-20260729" defer></script>
+  <script src="assets/student-cohort.js?v=exchange-bars-20260729" defer></script>
   <script src="assets/chatbot-fix.js?v=jalur-masuk-fast-track-20260729" defer></script>
   <script>
     (() => {

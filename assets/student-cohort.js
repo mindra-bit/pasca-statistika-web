@@ -186,12 +186,17 @@
     elements.timeline.querySelectorAll("button").forEach(button => button.classList.toggle("is-active", button.dataset.year === value));
   };
 
-  const maxTotal = Math.max(...cohorts.map(programTotal));
+  const maxTotal = Math.max(...cohorts.flatMap(cohort => [programTotal(cohort), exchangeCount(cohort)]));
   elements.timeline.innerHTML = cohorts.map(cohort => `
     <button type="button" data-year="${cohort.year}" role="listitem" aria-label="Angkatan ${cohort.year}, ${programTotal(cohort)} mahasiswa program${exchangeCount(cohort) ? ` dan ${exchangeCount(cohort)} peserta Student Exchange` : ""}">
-      <strong>${programTotal(cohort)}</strong>
-      ${exchangeCount(cohort) ? `<em title="${exchangeCount(cohort)} peserta Student Exchange">+${exchangeCount(cohort)} SE</em>` : ""}
-      <span class="student-cohort-column" style="--column-height:${Math.max(12, programTotal(cohort) / maxTotal * 100)}%"></span>
+      <span class="student-cohort-values" aria-hidden="true">
+        <strong>${programTotal(cohort)}</strong>
+        ${exchangeCount(cohort) ? `<em>${exchangeCount(cohort)} SE</em>` : ""}
+      </span>
+      <span class="student-cohort-columns" aria-hidden="true">
+        <span class="student-cohort-column student-cohort-column-program" style="--column-height:${Math.max(12, programTotal(cohort) / maxTotal * 100)}%"></span>
+        ${exchangeCount(cohort) ? `<span class="student-cohort-column student-cohort-column-exchange" style="--column-height:${Math.max(12, exchangeCount(cohort) / maxTotal * 100)}%"></span>` : ""}
+      </span>
       <small>${String(cohort.year).slice(2)}</small>
     </button>`).join("");
 
