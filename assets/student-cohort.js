@@ -26,6 +26,8 @@
     selection: document.getElementById("studentCohortSelection"),
     total: document.getElementById("studentTotal"),
     period: document.getElementById("studentPeriod"),
+    exchange: document.getElementById("studentExchange"),
+    exchangeNote: document.getElementById("studentExchangeNote"),
     completed: document.getElementById("studentCompleted"),
     completedRate: document.getElementById("studentCompletedRate"),
     routeCount: document.getElementById("studentRouteCount"),
@@ -81,6 +83,14 @@
     return all;
   }, {});
   const overall = {year: "all", total: cohorts.reduce((sum,item) => sum + item.total, 0), routes: merge("routes"), statuses: merge("statuses")};
+  const exchangeCount = data => data.routes["Student Exchange S2"] || 0;
+  const programTotal = data => Math.max(0, data.total - exchangeCount(data));
+  const programRoutes = data => Object.fromEntries(
+    Object.entries(data.routes).filter(([label]) => label !== "Student Exchange S2")
+  );
+  const programStatuses = data => Object.fromEntries(
+    Object.entries(data.statuses).filter(([label]) => label !== "Selesai")
+  );
 
   cohorts.slice().reverse().forEach(cohort => {
     const option = document.createElement("option");
@@ -147,32 +157,41 @@
 
   const update = value => {
     const data = value === "all" ? overall : cohorts.find(item => String(item.year) === value) || overall;
-    const completed = (data.statuses.Lulus || 0) + (data.statuses.Selesai || 0);
-    const rate = data.total ? completed / data.total * 100 : 0;
-    const routes = Object.entries(data.routes).sort((a,b) => b[1] - a[1]);
+    const exchange = exchangeCount(data);
+    const enrolled = programTotal(data);
+    const completed = data.statuses.Lulus || 0;
+    const rate = enrolled ? completed / enrolled * 100 : 0;
+    const routesForProgram = programRoutes(data);
+    const statusesForProgram = programStatuses(data);
+    const routes = Object.entries(routesForProgram).sort((a,b) => b[1] - a[1]);
 
     elements.selection.textContent = value === "all" ? "Ringkasan 2007–2026" : `Ringkasan angkatan ${value}`;
-    elements.total.textContent = number.format(data.total);
+    elements.total.textContent = number.format(enrolled);
     elements.period.textContent = value === "all" ? `${cohorts.length} angkatan tercatat` : `Angkatan ${value}`;
+    elements.exchange.textContent = number.format(exchange);
+    elements.exchangeNote.textContent = exchange
+      ? (value === "all" ? "Peserta pertukaran, ditampilkan terpisah" : `Peserta pertukaran angkatan ${value}`)
+      : "Tidak ada peserta pertukaran";
     elements.completed.textContent = number.format(completed);
-    elements.completedRate.textContent = `${percent(rate)} dari mahasiswa terpilih`;
+    elements.completedRate.textContent = `${percent(rate)} dari mahasiswa program`;
     elements.routeCount.textContent = number.format(routes.length);
     elements.topRoute.textContent = routes.length ? `${routes[0][0]} merupakan jalur terbesar` : "Belum ada data";
     elements.ringValue.textContent = percent(rate);
     elements.ring.style.setProperty("--completion", `${rate * 3.6}deg`);
-    elements.ring.setAttribute("aria-label", `${percent(rate)} mahasiswa selesai atau lulus`);
+    elements.ring.setAttribute("aria-label", `${percent(rate)} mahasiswa program berstatus lulus`);
 
-    renderBars(elements.routes, data.routes, data.total);
-    renderStatuses(data.statuses, data.total);
+    renderBars(elements.routes, routesForProgram, enrolled);
+    renderStatuses(statusesForProgram, enrolled);
     renderGpa(value);
     elements.timeline.querySelectorAll("button").forEach(button => button.classList.toggle("is-active", button.dataset.year === value));
   };
 
-  const maxTotal = Math.max(...cohorts.map(item => item.total));
+  const maxTotal = Math.max(...cohorts.map(programTotal));
   elements.timeline.innerHTML = cohorts.map(cohort => `
-    <button type="button" data-year="${cohort.year}" role="listitem" aria-label="Angkatan ${cohort.year}, ${cohort.total} mahasiswa">
-      <strong>${cohort.total}</strong>
-      <span class="student-cohort-column" style="--column-height:${Math.max(12, cohort.total / maxTotal * 100)}%"></span>
+    <button type="button" data-year="${cohort.year}" role="listitem" aria-label="Angkatan ${cohort.year}, ${programTotal(cohort)} mahasiswa program${exchangeCount(cohort) ? ` dan ${exchangeCount(cohort)} peserta Student Exchange` : ""}">
+      <strong>${programTotal(cohort)}</strong>
+      ${exchangeCount(cohort) ? `<em title="${exchangeCount(cohort)} peserta Student Exchange">+${exchangeCount(cohort)} SE</em>` : ""}
+      <span class="student-cohort-column" style="--column-height:${Math.max(12, programTotal(cohort) / maxTotal * 100)}%"></span>
       <small>${String(cohort.year).slice(2)}</small>
     </button>`).join("");
 

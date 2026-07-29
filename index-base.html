@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="assets/project-evaluation.css?v=project-titles-20260704" />
   <link rel="stylesheet" href="assets/alumni-sharing.css?v=alumni-sharing-leivina-photo-20260715" />
   <link rel="stylesheet" href="assets/student-achievements.css?v=student-achievements-final-20260709" />
-  <link rel="stylesheet" href="assets/student-cohort.css?v=ipk-status-20260729" />
+  <link rel="stylesheet" href="assets/student-cohort.css?v=separation-20260729" />
   <link rel="stylesheet" href="assets/learning-facilities.css?v=20260728" />
 </head>
 <body>
@@ -1765,16 +1765,21 @@
             </label>
           </header>
 
-          <div class="student-cohort-metrics" aria-label="Ringkasan mahasiswa">
+          <div class="student-cohort-metrics" aria-label="Ringkasan mahasiswa dan peserta pertukaran">
             <article>
-              <span>Total mahasiswa</span>
-              <strong id="studentTotal">463</strong>
+              <span>Mahasiswa program</span>
+              <strong id="studentTotal">383</strong>
               <small id="studentPeriod">19 angkatan tercatat</small>
             </article>
             <article>
-              <span>Selesai atau lulus</span>
-              <strong id="studentCompleted">422</strong>
-              <small id="studentCompletedRate">91,1% dari seluruh mahasiswa</small>
+              <span>Student Exchange</span>
+              <strong id="studentExchange">80</strong>
+              <small id="studentExchangeNote">Peserta pertukaran, ditampilkan terpisah</small>
+            </article>
+            <article>
+              <span>Mahasiswa lulus</span>
+              <strong id="studentCompleted">342</strong>
+              <small id="studentCompletedRate">89,3% dari mahasiswa program</small>
             </article>
             <article>
               <span>Jalur masuk</span>
@@ -1788,18 +1793,18 @@
               <div class="student-cohort-panel-head">
                 <div>
                   <span>Tren angkatan</span>
-                  <h3>Jumlah mahasiswa per tahun</h3>
+                  <h3>Jumlah mahasiswa program per tahun</h3>
                 </div>
                 <small>Klik batang untuk memilih angkatan</small>
               </div>
-              <div class="student-cohort-timeline" id="studentCohortTimeline" role="list" aria-label="Jumlah mahasiswa menurut angkatan"></div>
+              <div class="student-cohort-timeline" id="studentCohortTimeline" role="list" aria-label="Jumlah mahasiswa program menurut angkatan; peserta Student Exchange diberi penanda SE"></div>
             </article>
 
             <article class="student-cohort-panel">
               <div class="student-cohort-panel-head">
                 <div>
                   <span>Komposisi</span>
-                  <h3>Jalur masuk</h3>
+                  <h3>Jalur masuk mahasiswa program</h3>
                 </div>
               </div>
               <div class="student-cohort-bars" id="studentRouteChart" aria-live="polite"></div>
@@ -1809,12 +1814,12 @@
               <div class="student-cohort-panel-head">
                 <div>
                   <span>Hasil akademik</span>
-                  <h3>Status akhir</h3>
+                  <h3>Status mahasiswa program</h3>
                 </div>
               </div>
               <div class="student-status-layout">
-                <div class="student-status-ring" id="studentStatusRing" role="img" aria-label="Proporsi mahasiswa selesai atau lulus">
-                  <div><strong id="studentRingValue">91%</strong><span>selesai/lulus</span></div>
+                <div class="student-status-ring" id="studentStatusRing" role="img" aria-label="Proporsi mahasiswa program berstatus lulus">
+                  <div><strong id="studentRingValue">89%</strong><span>lulus</span></div>
                 </div>
                 <div class="student-status-list" id="studentStatusChart" aria-live="polite"></div>
               </div>
@@ -1871,7 +1876,7 @@
             </div>
           </div>
 
-          <p class="student-cohort-note"><strong>Catatan data:</strong> “Selesai” digunakan untuk peserta Student Exchange, sedangkan “Lulus” digunakan untuk mahasiswa program bergelar. Ketiga status Lulus, Selesai, dan Regulasi Akademik ditampilkan terpisah; SKS 0, IPK 0, Undur Diri, dan Meninggal tidak dimasukkan dalam perhitungan.</p>
+          <p class="student-cohort-note"><strong>Catatan data:</strong> Mahasiswa program bergelar dan peserta Student Exchange dihitung terpisah. Grafik tren, jalur masuk, dan status mahasiswa hanya menggunakan mahasiswa program. Status “Selesai” khusus peserta Student Exchange tetap ditampilkan terpisah pada ringkasan IPK; SKS 0, IPK 0, Undur Diri, dan Meninggal tidak dimasukkan dalam perhitungan IPK.</p>
         </div>
       </div>
     </section>
@@ -2279,7 +2284,7 @@
   </footer>
 
   <script src="assets/app.js?v=mahasiswa-dashboard-20260728" defer></script>
-  <script src="assets/student-cohort.js?v=ipk-status-20260729" defer></script>
+  <script src="assets/student-cohort.js?v=separation-20260729" defer></script>
   <script src="assets/chatbot-fix.js?v=jalur-masuk-fast-track-20260729" defer></script>
   <script>
     (() => {
