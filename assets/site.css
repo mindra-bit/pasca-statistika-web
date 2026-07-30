@@ -7068,6 +7068,113 @@ tbody tr:hover td {
     var(--surface);
 }
 
+.special-moment-feature {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: center;
+  overflow: hidden;
+  margin: 0 0 22px;
+  border: 1px solid rgba(239, 194, 74, 0.58);
+  border-radius: 12px;
+  padding: 28px;
+  color: #fff;
+  background:
+    radial-gradient(circle at 92% 4%, rgba(239, 194, 74, 0.34), transparent 30%),
+    linear-gradient(125deg, #073c32 0%, #0a6653 66%, #718337 100%);
+  box-shadow: 0 20px 46px rgba(7, 60, 50, 0.18);
+}
+
+.special-moment-feature-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.special-moment-feature-meta span,
+.special-moment-feature-meta time {
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.special-moment-feature-meta span {
+  color: #17352d;
+  background: #efc24a;
+}
+
+.special-moment-feature-meta time {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.special-moment-feature-copy h3 {
+  max-width: 780px;
+  margin: 0 0 9px;
+  color: #fff;
+  font-size: clamp(23px, 2.5vw, 36px);
+  line-height: 1.12;
+}
+
+.special-moment-feature-copy p {
+  max-width: 780px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.84);
+  line-height: 1.65;
+}
+
+.special-moment-feature-action {
+  display: grid;
+  min-width: 230px;
+  gap: 9px;
+}
+
+.special-moment-feature-action a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  border-radius: 8px;
+  padding: 15px 17px;
+  color: #17352d;
+  font-weight: 950;
+  text-decoration: none;
+  background: linear-gradient(135deg, #efc24a, #ffe59b);
+  box-shadow: 0 12px 26px rgba(3, 42, 33, 0.25);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.special-moment-feature-action a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(3, 42, 33, 0.3);
+}
+
+.special-moment-feature-action small {
+  max-width: 230px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  .special-moment-feature {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 22px;
+  }
+
+  .special-moment-feature-action,
+  .special-moment-feature-action small {
+    min-width: 0;
+    max-width: none;
+  }
+}
+
 .special-moment-total {
   display: grid;
   align-content: center;
