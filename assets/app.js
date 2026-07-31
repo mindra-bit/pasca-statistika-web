@@ -6140,7 +6140,7 @@ document.getElementById("dataConsultationForm")?.addEventListener("submit", (eve
     "",
     "Terima kasih."
   ].join("\n");
-  window.location.href = `mailto:kaprodi.statistikaterapan.s2@unpad.ac.id?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = `mailto:mindra@unpad.ac.id?cc=kaprodi.statistikaterapan.s2%40unpad.ac.id&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
 
 chatForm.addEventListener("submit", (event) => {
