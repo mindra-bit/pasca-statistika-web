@@ -418,6 +418,7 @@ const workspacePanelIds = [
   "program-pengabdian",
   "hibah-riset",
   "publikasi-dosen",
+  "konsultasi-data-analysis",
   "special-moment",
   "video-testimoni",
   "web-s3",
@@ -6111,6 +6112,35 @@ pbmEvaluationRows?.addEventListener("click", (event) => {
   const button = event.target.closest("[data-pbm-evaluation-q]");
   if (!button) return;
   ask(button.dataset.pbmEvaluationQ);
+});
+
+document.getElementById("dataConsultationForm")?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const form = event.currentTarget;
+  if (!form.reportValidity()) return;
+  const formData = new FormData(form);
+  const identity = String(formData.get("identity") || "").trim();
+  const domain = String(formData.get("domain") || "").trim();
+  const stage = String(formData.get("stage") || "").trim();
+  const summary = String(formData.get("summary") || "").trim();
+  const subject = `Permohonan Konsultasi Data Analysis — ${domain}`;
+  const body = [
+    "Yth. Program Studi S2 Statistika Terapan FMIPA Universitas Padjadjaran,",
+    "",
+    "Saya ingin mengajukan konsultasi awal dengan ringkasan berikut:",
+    "",
+    `Nama/Institusi: ${identity}`,
+    `Bidang kebutuhan: ${domain}`,
+    `Tahap pekerjaan: ${stage}`,
+    "",
+    "Ringkasan kebutuhan:",
+    summary,
+    "",
+    "Saya memahami bahwa penjadwalan dan bentuk pendampingan akan disesuaikan dengan ruang lingkup serta ketersediaan bidang keahlian.",
+    "",
+    "Terima kasih."
+  ].join("\n");
+  window.location.href = `mailto:kaprodi.statistikaterapan.s2@unpad.ac.id?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
 
 chatForm.addEventListener("submit", (event) => {
