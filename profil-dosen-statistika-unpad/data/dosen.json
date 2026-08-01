@@ -434,10 +434,10 @@
     "no": 21,
     "slug": "hasna-afifah-rusyda",
     "name": "Hasna Afifah Rusyda",
-    "displayName": "Hasna Afifah Rusyda, S.Si., M.Stat.",
+    "displayName": "Hasna Afifah Rusyda, S.Si., M.Stat., Ph.D.",
     "nip": "19920508 201809 4 001",
     "nidn": "0008059205",
-    "degree": "S-2",
+    "degree": "S-3",
     "sintaId": "6742829",
     "scopusId": "57222314356",
     "scholarId": "dIgTl2AAAAAJ",
@@ -446,7 +446,7 @@
     "unit": "Departemen Statistika, FMIPA Universitas Padjadjaran",
     "expertise": ["Peramalan", "Copula", "Asuransi jiwa", "Asuransi umum"],
     "education": [
-      {"degree": "Program Doktor", "institution": "Macquarie University", "field": "2023–sekarang"},
+      {"degree": "Doktor (Ph.D.)", "institution": "Macquarie University", "field": "Program doktor telah diselesaikan"},
       {"degree": "Magister (S-2)", "institution": "Universitas Padjadjaran", "field": "2016–2018"},
       {"degree": "Sarjana (S-1)", "institution": "Universitas Padjadjaran", "field": "2009–2013"}
     ],
