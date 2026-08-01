@@ -204,7 +204,13 @@ function pageFor(person) {
 }
 
 function indexPage() {
-  const cards = data.map((person) => {
+  const academicRank = (person) => {
+    if (person.role.toLowerCase().includes('profesor')) return 0;
+    if (person.degree === 'S-3') return 1;
+    return 2;
+  };
+  const directoryData = [...data].sort((a, b) => academicRank(a) - academicRank(b));
+  const cards = directoryData.map((person) => {
     const publicationCount = (publicationsBySlug[person.slug] || []).length;
     const portrait = person.photo
       ? `<img src="assets/dosen/${esc(person.photo)}" alt="Foto ${esc(person.name)}">`
