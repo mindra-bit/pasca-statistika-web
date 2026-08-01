@@ -19,7 +19,7 @@
       {"degree": "Magister (S-2)", "institution": "KU Leuven", "field": "Statistics"},
       {"degree": "Sarjana (S-1)", "institution": "Universitas Padjadjaran", "field": "Statistika"}
     ],
-    "photo": null,
+    "photo": "toni-toharudin.png",
     "officialUrl": "https://statistics.unpad.ac.id/dosen/"
   },
   {
@@ -76,7 +76,7 @@
     "unit": "Departemen Statistika, FMIPA Universitas Padjadjaran",
     "expertise": ["Analisis multivariat", "Analisis korespondensi", "Regresi terapan", "Statistika sosial-ekonomi"],
     "education": [{"degree": "Pendidikan tertinggi", "institution": "Doktor (S-3)", "field": "Rincian tersedia pada profil akademik resmi"}],
-    "photo": null,
+    "photo": "titi-purwandari.png",
     "officialUrl": "https://statistics.unpad.ac.id/dosen/"
   },
   {
@@ -546,7 +546,7 @@
     "unit": "Departemen Statistika, FMIPA Universitas Padjadjaran",
     "expertise": ["Statistika finansial", "Optimisasi portofolio", "Deret waktu", "Statistika terapan"],
     "education": [{"degree": "Pendidikan tertinggi", "institution": "Magister Statistika (S-2)", "field": "Rincian tersedia pada profil akademik resmi"}],
-    "photo": null,
+    "photo": "adri-arisena.png",
     "officialUrl": "https://statistics.unpad.ac.id/dosen/"
   }
 ]
