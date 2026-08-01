@@ -217,9 +217,11 @@ function indexPage() {
       : `<span class="card-placeholder">${esc(initials(person.name))}</span>`;
     const type = person.role.toLowerCase().includes('aktuaria') ? 'aktuaria' : 'statistika';
     const tags = [type, person.role.toLowerCase().includes('profesor') ? 'profesor' : '', /kepala|ketua|wakil dekan/i.test(person.role) ? 'pimpinan' : ''].filter(Boolean).join(' ');
+    const profileUrl = person.cvUrl || `profil/${person.slug}.html`;
+    const profileLinkAttributes = person.cvUrl ? ' target="_blank" rel="noopener"' : '';
     return `<article class="person-card" data-name="${esc(`${person.name} ${person.displayName} ${person.expertise.join(' ')}`.toLowerCase())}" data-tags="${tags}">
-      <a class="photo-link" href="profil/${person.slug}.html">${portrait}</a>
-      <div class="person-content"><p class="person-kicker">${esc(person.role)}</p><h2><a href="profil/${person.slug}.html">${esc(person.displayName)}</a></h2><p class="person-focus">${person.expertise.slice(0, 3).map(esc).join(' · ')}</p><div class="person-ids"><span>${esc(person.degree)}</span>${person.sintaId ? `<span>SINTA ${esc(person.sintaId)}</span>` : '<span>SINTA —</span>'}<span>${publicationCount} publikasi</span></div><a class="profile-button" href="profil/${person.slug}.html">Lihat profil lengkap <span>→</span></a></div>
+      <a class="photo-link" href="${esc(profileUrl)}"${profileLinkAttributes}>${portrait}</a>
+      <div class="person-content"><p class="person-kicker">${esc(person.role)}</p><h2><a href="${esc(profileUrl)}"${profileLinkAttributes}>${esc(person.displayName)}</a></h2><p class="person-focus">${person.expertise.slice(0, 3).map(esc).join(' · ')}</p><div class="person-ids"><span>${esc(person.degree)}</span>${person.sintaId ? `<span>SINTA ${esc(person.sintaId)}</span>` : '<span>SINTA —</span>'}<span>${publicationCount} publikasi</span></div><a class="profile-button" href="${esc(profileUrl)}"${profileLinkAttributes}>Lihat CV terbaru <span>↗</span></a></div>
     </article>`;
   }).join('');
 
