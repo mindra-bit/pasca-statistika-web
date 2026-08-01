@@ -66,6 +66,7 @@
   <p>Portal resmi untuk profil program, pendaftaran dan jalur masuk, Kurikulum OBE, Fast Track S1–S2, fasilitas pembelajaran, tesis, penelitian, pengabdian, mahasiswa, dan alumni.</p>
   <nav aria-label="Tautan utama">
     <a href="jalur-masuk.html">Jalur Masuk</a>
+    <a href="profil-dosen-statistika-unpad/">Profil Dosen</a>
     <a href="fast-track.html">Program Fast Track</a>
     <a href="fasilitas-pembelajaran.html">Fasilitas Pembelajaran</a>
     <a href="panduan-ai.html">Panduan AI</a>
@@ -76,7 +77,7 @@
 <script>
 (async()=>{
   try{
-    const response=await fetch('index-base.html?v=sains-data-survey-invitation-20260728',{cache:'no-store'});
+    const response=await fetch('index-base.html?v=profil-dosen-20260801',{cache:'no-store'});
     if(!response.ok) throw new Error('Gagal memuat halaman utama');
     let html=await response.text();
     if(window.applyProgramProfileEnhancement) html=window.applyProgramProfileEnhancement(html);
