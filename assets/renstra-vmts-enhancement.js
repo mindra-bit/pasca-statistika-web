@@ -1,6 +1,6 @@
 (() => {
   const previousApply = window.applyProgramProfileEnhancement;
-  const VERSION = "20260726-vmts-fix-2";
+  const VERSION = "20260808-vmts-socialization-reports";
 
   const styles = `<style id="renstra-vmts-styles">
     .profile-strategic-docs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:22px 0 0}
@@ -16,8 +16,14 @@
     .renstra-vmts-bottom{margin-top:22px;padding:1px;border-radius:22px;background:linear-gradient(135deg,#0b3558,#c99a2e);box-shadow:0 16px 38px rgba(12,47,85,.12)}
     .renstra-vmts-bottom-inner{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:26px;align-items:center;padding:clamp(22px,4vw,34px);border-radius:21px;background:#fff}
     .renstra-vmts-bottom .kicker{display:inline-flex;padding:6px 10px;border-radius:999px;background:#e8f4ef;color:#11624f;font-size:.72rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase}.renstra-vmts-bottom h3{margin:9px 0 9px;color:#0b3556;font-size:clamp(1.25rem,2.2vw,1.7rem)}.renstra-vmts-bottom p{max-width:850px;margin:0;color:#5e6f7d;line-height:1.65}.renstra-vmts-bottom-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}.renstra-vmts-bottom-actions a{display:inline-flex;align-items:center;justify-content:center;padding:11px 16px;border-radius:999px;text-decoration:none;font-weight:850;white-space:nowrap}.renstra-vmts-bottom-actions .pdf{background:#c99a2e;color:#172c3d}.renstra-vmts-bottom-actions .html{background:#0c3b5e;color:#fff}
-    @media(max-width:850px){.profile-strategic-docs{grid-template-columns:1fr}.profile-vmts-detail,.renstra-vmts-bottom-inner{grid-template-columns:1fr}.profile-vmts-actions,.renstra-vmts-bottom-actions{justify-content:flex-start}}
-    @media(max-width:560px){.profile-strategic-card{grid-template-columns:44px minmax(0,1fr) 30px;padding:17px}.profile-strategic-icon{width:42px;height:42px}.profile-vmts-actions a,.renstra-vmts-bottom-actions a{flex:1 1 135px}}
+    .renstra-vmts-reports{position:relative;overflow:hidden;margin-top:22px;padding:clamp(22px,4vw,34px);border:1px solid #d8e5e2;border-radius:24px;background:linear-gradient(135deg,#f8fbfa 0%,#fff8e6 100%);box-shadow:0 18px 42px rgba(20,61,93,.10)}
+    .renstra-vmts-reports:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,48,79,.94),rgba(12,107,88,.82)),url("assets/vmts/cover-vmts-2023-2028.jpg") center/cover;clip-path:polygon(0 0,100% 0,100% 34%,0 46%);opacity:.98}
+    .renstra-vmts-reports>*{position:relative;z-index:1}.vmts-report-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:start;margin-bottom:22px;color:#fff}.vmts-report-kicker{display:inline-flex;width:max-content;max-width:100%;padding:7px 11px;border-radius:999px;background:rgba(242,169,0,.18);border:1px solid rgba(242,169,0,.38);color:#ffe3a2;font-size:.72rem;font-weight:950;letter-spacing:.08em;text-transform:uppercase}.vmts-report-head h3{margin:11px 0 9px;color:#fff;font-size:clamp(1.35rem,2.7vw,2rem);line-height:1.18}.vmts-report-head p{max-width:850px;margin:0;color:#e5f2f1;line-height:1.62}.vmts-report-count{display:grid;place-items:center;min-width:96px;min-height:96px;border:1px solid rgba(255,255,255,.24);border-radius:22px;background:rgba(255,255,255,.12);box-shadow:inset 0 0 0 1px rgba(255,255,255,.07);backdrop-filter:blur(8px);text-align:center}.vmts-report-count strong{display:block;color:#fff;font-size:2.1rem;line-height:1}.vmts-report-count span{display:block;margin-top:5px;color:#ffe0a1;font-size:.74rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase}
+    .vmts-report-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.vmts-report-card{display:flex;flex-direction:column;min-height:245px;padding:18px;border:1px solid #d8e2df;border-top:5px solid var(--vmts-accent,#0e6b58);border-radius:18px;background:rgba(255,255,255,.96);box-shadow:0 14px 30px rgba(20,61,93,.09);text-decoration:none;color:#1f2f3d;transition:transform .18s ease,box-shadow .18s ease}.vmts-report-card:hover{transform:translateY(-3px);box-shadow:0 18px 38px rgba(20,61,93,.15)}.vmts-report-card:nth-child(2){--vmts-accent:#f2a900}.vmts-report-card:nth-child(3){--vmts-accent:#1f7fbf}.vmts-report-card:nth-child(4){--vmts-accent:#c94b38}.vmts-report-year{display:inline-flex;width:max-content;max-width:100%;padding:6px 9px;border-radius:999px;background:#eef6f3;color:#0e6b58;font-size:.72rem;font-weight:950;letter-spacing:.08em;text-transform:uppercase}.vmts-report-card h4{margin:13px 0 9px;color:#0b3556;font-size:1.02rem;line-height:1.32}.vmts-report-card p{margin:0;color:#5b6c77;font-size:.87rem;line-height:1.55}.vmts-report-action{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:18px;color:#0c3b5e;font-weight:900}.vmts-report-action b{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#0c3b5e;color:#fff}
+    html[lang="en"] .vmts-lang-id{display:none!important}html:not([lang="en"]) .vmts-lang-en{display:none!important}
+    @media(max-width:1080px){.vmts-report-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:850px){.profile-strategic-docs{grid-template-columns:1fr}.profile-vmts-detail,.renstra-vmts-bottom-inner,.vmts-report-head{grid-template-columns:1fr}.profile-vmts-actions,.renstra-vmts-bottom-actions{justify-content:flex-start}.vmts-report-count{place-items:start;min-height:auto;min-width:0;width:max-content;padding:14px 18px}}
+    @media(max-width:560px){.profile-strategic-card{grid-template-columns:44px minmax(0,1fr) 30px;padding:17px}.profile-strategic-icon{width:42px;height:42px}.profile-vmts-actions a,.renstra-vmts-bottom-actions a{flex:1 1 135px}.vmts-report-grid{grid-template-columns:1fr}.renstra-vmts-reports:before{clip-path:polygon(0 0,100% 0,100% 28%,0 42%)}}
   </style>`;
 
   const profileCards = `<div class="profile-strategic-docs" id="profile-strategic-docs" aria-label="Dokumen strategis program studi">
@@ -39,6 +45,43 @@
 
   const bottomCard = `<section class="renstra-vmts-bottom" id="dokumen-vmts-2023-2028" aria-labelledby="dokumen-vmts-title"><div class="renstra-vmts-bottom-inner"><div><span class="kicker">Dokumen Pendukung Renstra</span><h3 id="dokumen-vmts-title">Naskah Akademik Penyusunan VMTS 2023–2028</h3><p>Dokumen ini melengkapi Renstra Program Studi dengan landasan filosofis, yuridis, sosiologis, akademik, dan institusional; proses penyusunan Januari–Mei 2023; analisis lingkungan strategis; matriks keselarasan; strategi implementasi; serta mekanisme monitoring dan evaluasi.</p></div><div class="renstra-vmts-bottom-actions"><a class="pdf" href="Naskah_Akademik_Penyusunan_VMTS_S2_Statistika_Terapan_2023-2028.pdf?v=${VERSION}" target="_blank" rel="noopener">Buka PDF Terbaru</a><a class="html" href="naskah-akademik-penyusunan-vmts-2023-2028.html?v=${VERSION}" target="_blank" rel="noopener">Buka Versi HTML</a></div></div></section>`;
 
+  const vmtsReportsCard = `<section class="renstra-vmts-reports" id="lampiran-sosialisasi-vmts" aria-labelledby="lampiran-sosialisasi-vmts-title">
+    <div class="vmts-report-head">
+      <div>
+        <span class="vmts-report-kicker"><span class="vmts-lang-id">Lampiran Sosialisasi VMTS</span><span class="vmts-lang-en" lang="en">VMTS Socialization Appendices</span></span>
+        <h3 id="lampiran-sosialisasi-vmts-title"><span class="vmts-lang-id">Laporan Sosialisasi VMTS S2 Statistika Terapan FMIPA UNPAD</span><span class="vmts-lang-en" lang="en">VMTS Socialization Reports for the Applied Statistics Master's Program</span></h3>
+        <p><span class="vmts-lang-id">Dokumen ini merekam sosialisasi visi, misi, tujuan, dan strategi kepada dosen, mahasiswa, serta pemangku kepentingan sebagai bukti pelaksanaan tata kelola dan penjaminan mutu program studi.</span><span class="vmts-lang-en" lang="en">These reports document the socialization of the program vision, mission, objectives, and strategy to lecturers, students, and stakeholders as evidence of governance and quality assurance implementation.</span></p>
+      </div>
+      <div class="vmts-report-count" aria-hidden="true"><strong>4</strong><span>HTML</span></div>
+    </div>
+    <div class="vmts-report-grid" aria-label="Lampiran laporan sosialisasi VMTS">
+      <a class="vmts-report-card" href="dokumen-vmts/sosialisasi-dosen-stakeholder-2023-2025.html?v=${VERSION}" target="_blank" rel="noopener">
+        <span class="vmts-report-year">2023-2025</span>
+        <h4><span class="vmts-lang-id">Sosialisasi Dosen dan Stakeholder</span><span class="vmts-lang-en" lang="en">Lecturer and Stakeholder Socialization</span></h4>
+        <p><span class="vmts-lang-id">Laporan gabungan pelaksanaan sosialisasi VMTS kepada dosen dan pemangku kepentingan dalam periode 2023-2025.</span><span class="vmts-lang-en" lang="en">A consolidated report on VMTS socialization for lecturers and stakeholders across 2023-2025.</span></p>
+        <span class="vmts-report-action"><span class="vmts-lang-id">Buka laporan</span><span class="vmts-lang-en" lang="en">Open report</span><b aria-hidden="true">→</b></span>
+      </a>
+      <a class="vmts-report-card" href="dokumen-vmts/sosialisasi-vmts-2023.html?v=${VERSION}" target="_blank" rel="noopener">
+        <span class="vmts-report-year">2023</span>
+        <h4><span class="vmts-lang-id">Sosialisasi VMTS 2023</span><span class="vmts-lang-en" lang="en">VMTS Socialization 2023</span></h4>
+        <p><span class="vmts-lang-id">Dokumentasi sosialisasi VMTS awal periode kepada sivitas akademika dan pemangku kepentingan.</span><span class="vmts-lang-en" lang="en">Documentation of the early-period VMTS socialization for the academic community and stakeholders.</span></p>
+        <span class="vmts-report-action"><span class="vmts-lang-id">Buka laporan</span><span class="vmts-lang-en" lang="en">Open report</span><b aria-hidden="true">→</b></span>
+      </a>
+      <a class="vmts-report-card" href="dokumen-vmts/sosialisasi-vmts-2024.html?v=${VERSION}" target="_blank" rel="noopener">
+        <span class="vmts-report-year">2024</span>
+        <h4><span class="vmts-lang-id">Sosialisasi VMTS 2024</span><span class="vmts-lang-en" lang="en">VMTS Socialization 2024</span></h4>
+        <p><span class="vmts-lang-id">Laporan pelaksanaan sosialisasi dan penguatan pemahaman VMTS pada tahun akademik berjalan.</span><span class="vmts-lang-en" lang="en">A report on VMTS socialization and reinforcement of shared understanding during the academic year.</span></p>
+        <span class="vmts-report-action"><span class="vmts-lang-id">Buka laporan</span><span class="vmts-lang-en" lang="en">Open report</span><b aria-hidden="true">→</b></span>
+      </a>
+      <a class="vmts-report-card" href="dokumen-vmts/sosialisasi-vmts-2025.html?v=${VERSION}" target="_blank" rel="noopener">
+        <span class="vmts-report-year">2025</span>
+        <h4><span class="vmts-lang-id">Sosialisasi VMTS 2025</span><span class="vmts-lang-en" lang="en">VMTS Socialization 2025</span></h4>
+        <p><span class="vmts-lang-id">Dokumentasi sosialisasi lanjutan untuk memastikan VMTS dipahami dan digunakan dalam pengembangan program studi.</span><span class="vmts-lang-en" lang="en">Follow-up documentation to ensure the VMTS is understood and used in the program's development agenda.</span></p>
+        <span class="vmts-report-action"><span class="vmts-lang-id">Buka laporan</span><span class="vmts-lang-en" lang="en">Open report</span><b aria-hidden="true">→</b></span>
+      </a>
+    </div>
+  </section>`;
+
   const runtimeScript = `<script id="renstra-vmts-runtime">
     (()=>{
       const activateRenstra=(event)=>{
@@ -50,19 +93,31 @@
         else document.getElementById('renstra-program-studi')?.scrollIntoView({behavior:'smooth'});
       };
       document.addEventListener('click',activateRenstra);
-      const appendBottomCard=()=>{
+      const appendStrategicAttachments=()=>{
         const panel=document.getElementById('renstra-program-studi');
-        if(!panel||panel.querySelector('#dokumen-vmts-2023-2028'))return false;
+        if(!panel)return false;
         const shell=panel.querySelector('.renstra-shell,.container')||panel;
         const source=shell.querySelector('.renstra-source');
-        const wrapper=document.createElement('div');
-        wrapper.innerHTML=${JSON.stringify(bottomCard)};
-        const card=wrapper.firstElementChild;
-        if(source)source.insertAdjacentElement('afterend',card);else shell.appendChild(card);
-        return true;
+        let changed=false;
+        let bottom=panel.querySelector('#dokumen-vmts-2023-2028');
+        if(!bottom){
+          const wrapper=document.createElement('div');
+          wrapper.innerHTML=${JSON.stringify(bottomCard)};
+          bottom=wrapper.firstElementChild;
+          if(source)source.insertAdjacentElement('afterend',bottom);else shell.appendChild(bottom);
+          changed=true;
+        }
+        if(!panel.querySelector('#lampiran-sosialisasi-vmts')){
+          const wrapper=document.createElement('div');
+          wrapper.innerHTML=${JSON.stringify(vmtsReportsCard)};
+          const reports=wrapper.firstElementChild;
+          bottom?.insertAdjacentElement('afterend',reports) || shell.appendChild(reports);
+          changed=true;
+        }
+        return Boolean(bottom)&&Boolean(panel.querySelector('#lampiran-sosialisasi-vmts'))||changed;
       };
-      if(!appendBottomCard()){
-        const observer=new MutationObserver(()=>{if(appendBottomCard())observer.disconnect()});
+      if(!appendStrategicAttachments()){
+        const observer=new MutationObserver(()=>{if(appendStrategicAttachments())observer.disconnect()});
         observer.observe(document.body,{childList:true,subtree:true});
         setTimeout(()=>observer.disconnect(),20000);
       }
