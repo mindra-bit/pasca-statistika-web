@@ -1,7 +1,7 @@
 {
   "source": "@Evaluasi PBM",
-  "generatedAt": "2026-06-14T08:24:44.522Z",
-  "total": 4,
+  "generatedAt": "2026-08-08T16:28:00.000Z",
+  "total": 5,
   "documents": [
     {
       "id": "evaluasi-pbm-genap-2023-2024",
@@ -69,6 +69,42 @@
       "file": "Ganjil 2025:2026.pdf",
       "href": "%40Evaluasi%20PBM/Ganjil%202025%3A2026.pdf",
       "sizeKb": 15802,
+      "source": "@Evaluasi PBM"
+    },
+    {
+      "id": "evaluasi-pbm-genap-2025-2026",
+      "period": "Genap 2025/2026",
+      "semester": "Genap",
+      "semesterEn": "Even",
+      "academicYear": "2025/2026",
+      "title": "Evaluasi PBM Semester Genap 2025/2026",
+      "titleId": "Evaluasi PBM Semester Genap 2025/2026",
+      "titleEn": "Learning Evaluation Even Semester 2025/2026",
+      "description": "Dokumen evaluasi pembelajaran semester Genap 2025/2026 sebagai arsip mutu akademik, dashboard evaluasi dosen, dan apresiasi evaluasi pembelajaran mahasiswa.",
+      "descriptionId": "Dokumen evaluasi pembelajaran semester Genap 2025/2026 sebagai arsip mutu akademik, dashboard evaluasi dosen, dan apresiasi evaluasi pembelajaran mahasiswa.",
+      "descriptionEn": "Learning evaluation resources for the even semester 2025/2026, provided as an academic quality archive, lecturer evaluation dashboard, and student learning evaluation appreciation document.",
+      "file": "Genap 2025-2026 Dashboard Evaluasi PBM-Dosen.html",
+      "href": "%40Evaluasi%20PBM/Genap%202025-2026%20Dashboard%20Evaluasi%20PBM-Dosen.html",
+      "format": "HTML + PDF",
+      "sizeKb": 6412,
+      "resources": [
+        {
+          "type": "HTML",
+          "labelId": "Buka Dashboard",
+          "labelEn": "Open Dashboard",
+          "href": "%40Evaluasi%20PBM/Genap%202025-2026%20Dashboard%20Evaluasi%20PBM-Dosen.html",
+          "file": "Genap 2025-2026 Dashboard Evaluasi PBM-Dosen.html",
+          "sizeKb": 2477
+        },
+        {
+          "type": "PDF",
+          "labelId": "Buka Apresiasi",
+          "labelEn": "Open Appreciation PDF",
+          "href": "%40Evaluasi%20PBM/Genap%202025-2026%20Apresiasi%20Evaluasi%20Pembelajaran%20Mahasiswa.pdf",
+          "file": "Genap 2025-2026 Apresiasi Evaluasi Pembelajaran Mahasiswa.pdf",
+          "sizeKb": 3935
+        }
+      ],
       "source": "@Evaluasi PBM"
     }
   ]

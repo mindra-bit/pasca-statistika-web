@@ -3208,6 +3208,31 @@ function pbmEvaluationDescription(doc) {
     : String(rawDescription).replace(/^Dokumen evaluasi pembelajaran/i, "Dokumen Evaluasi PBM-Dosen");
 }
 
+function pbmEvaluationResources(doc) {
+  if (Array.isArray(doc.resources) && doc.resources.length) return doc.resources;
+  return [{
+    type: doc.format || "PDF",
+    labelId: "Buka PDF",
+    labelEn: "Open PDF",
+    href: doc.href,
+    file: doc.file,
+    sizeKb: doc.sizeKb
+  }];
+}
+
+function pbmEvaluationResourceLabel(resource) {
+  return currentLang === "en"
+    ? resource.labelEn || resource.labelId || resource.label || resource.type || "Document"
+    : resource.labelId || resource.labelEn || resource.label || resource.type || "Dokumen";
+}
+
+function pbmEvaluationResourceLines(doc) {
+  return pbmEvaluationResources(doc).map((resource) => {
+    const size = resource.sizeKb ? ` (${formatFileSize(resource.sizeKb)})` : "";
+    return `${pbmEvaluationResourceLabel(resource)}${size}: ${resource.href}`;
+  });
+}
+
 function lectureEvaluationTitle(doc) {
   return currentLang === "en" ? doc.titleEn || doc.title : doc.titleId || doc.title;
 }
@@ -3661,28 +3686,32 @@ function buildPbmEvaluationAnswer(question, hits = []) {
 
   const answer = docs
     .map((doc) => {
+      const resourceLines = pbmEvaluationResourceLines(doc);
       if (currentLang === "en") {
         return [
           `${pbmEvaluationTitle(doc)}: ${pbmEvaluationDescription(doc)}`,
           `Semester: ${doc.semesterEn || doc.semester}.`,
           `Academic year: ${doc.academicYear}.`,
-          `File size: ${formatFileSize(doc.sizeKb)}.`,
-          `PDF: ${doc.href}`
+          `Resources:`,
+          ...resourceLines
         ].join("\n");
       }
       return [
         `${pbmEvaluationTitle(doc)}: ${pbmEvaluationDescription(doc)}`,
         `Semester: ${doc.semester}.`,
         `Tahun akademik: ${doc.academicYear}.`,
-        `Ukuran file: ${formatFileSize(doc.sizeKb)}.`,
-        `PDF: ${doc.href}`
+        `Dokumen:`,
+        ...resourceLines
       ].join("\n");
     })
     .join("\n\n");
 
   return {
     answer,
-    sources: docs.map((doc) => ({ title: pbmEvaluationTitle(doc), url: doc.href })),
+    sources: docs.flatMap((doc) => pbmEvaluationResources(doc).map((resource) => ({
+      title: `${pbmEvaluationTitle(doc)} - ${pbmEvaluationResourceLabel(resource)}`,
+      url: resource.href
+    }))),
     mode: "Local knowledge base"
   };
 }
@@ -5514,6 +5543,10 @@ function renderPbmEvaluations() {
   pbmEvaluationRows.innerHTML = docs
     .map((doc) => {
       const title = pbmEvaluationTitle(doc);
+      const resources = pbmEvaluationResources(doc);
+      const resourceLinks = resources
+        .map((resource) => `<a href="${escapeHTML(resource.href)}" target="_blank" rel="noopener">${escapeHTML(pbmEvaluationResourceLabel(resource))}</a>`)
+        .join("");
       return `
         <article class="pbm-evaluation-card">
           <span class="badge">${escapeHTML(t("pbmEvalArchive"))}</span>
@@ -5529,7 +5562,7 @@ function renderPbmEvaluations() {
             <span>${escapeHTML(formatFileSize(doc.sizeKb))}</span>
           </div>
           <div class="pbm-evaluation-actions">
-            <a href="${escapeHTML(doc.href)}" target="_blank" rel="noopener">${escapeHTML(t("openPdf"))}</a>
+            ${resourceLinks}
             <button type="button" data-pbm-evaluation-q="${currentLang === "en" ? `Open ${escapeHTML(title)}` : `Buka dokumen ${escapeHTML(title)}`}">${escapeHTML(t("askChatbot"))}</button>
           </div>
         </article>
