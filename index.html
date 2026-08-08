@@ -77,7 +77,7 @@
 <script>
 (async()=>{
   try{
-    const response=await fetch('index-base.html?v=profil-dosen-20260801',{cache:'no-store'});
+    const response=await fetch('index-base.html?v=vmts-popup-fastload-20260808',{cache:'default'});
     if(!response.ok) throw new Error('Gagal memuat halaman utama');
     let html=await response.text();
     if(window.applyProgramProfileEnhancement) html=window.applyProgramProfileEnhancement(html);

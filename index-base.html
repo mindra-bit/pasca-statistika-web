@@ -2463,23 +2463,23 @@
     </div>
   </main>
 
-  <dialog class="data-science-survey-dialog" id="dataScienceSurveyDialog" aria-labelledby="dataScienceSurveyTitle" aria-describedby="dataScienceSurveyDescription">
+  <dialog class="data-science-survey-dialog" id="vmtsSurveyDialog" aria-labelledby="vmtsSurveyTitle" aria-describedby="vmtsSurveyDescription">
     <div class="data-science-survey-dialog-panel">
       <button class="data-science-survey-close" type="button" data-survey-dismiss aria-label="Tutup undangan survei">&#215;</button>
       <div class="data-science-survey-copy">
-        <span class="data-science-survey-kicker">Kajian Pengembangan Program</span>
-        <h2 id="dataScienceSurveyTitle">Bersedia membantu kajian pendirian Sains Data?</h2>
-        <p id="dataScienceSurveyDescription">Masukan Anda akan menjadi bahan penting dalam kajian kebutuhan dan pengembangan pendidikan Sains Data di Universitas Padjadjaran.</p>
+        <span class="data-science-survey-kicker">Evaluasi VMTS 2023-2028</span>
+        <h2 id="vmtsSurveyTitle">Bersedia mengisi Survey Evaluasi VMTS?</h2>
+        <p id="vmtsSurveyDescription">Masukan Bapak/Ibu/Saudara menjadi bahan penting untuk menilai pemahaman, keterlaksanaan, dan penguatan Visi, Misi, Tujuan, dan Strategi Program Studi S2 Statistika Terapan FMIPA UNPAD.</p>
         <div class="data-science-survey-tags" aria-label="Cakupan survei">
-          <span>Sains Data</span>
-          <span>Kajian Kebutuhan</span>
+          <span>Visi Misi</span>
+          <span>Tujuan Strategi</span>
           <span>Masukan Stakeholder</span>
         </div>
       </div>
       <div class="data-science-survey-choice">
         <span class="data-science-survey-status">Form aktif</span>
-        <a href="https://script.google.com/a/macros/unpad.ac.id/s/AKfycbwEyw9QR7TkmIeAbIJa3IWaPe6r2BV6NxdgG5PJwcRIGytKbTD8pS26zAFYPJf2hofB/exec" target="_blank" rel="noopener" data-survey-accept>
-          <span>Bersedia Mengisi Survei</span>
+        <a href="https://script.google.com/a/macros/unpad.ac.id/s/AKfycbzNS1To-M522eVP-LFkl3sYfvB_xsKNCJ8fFhtd4ClzHxnjFoIVxqoiKPv0u6geG4yjow/exec" target="_blank" rel="noopener" data-survey-accept>
+          <span>Isi Survey VMTS</span>
           <b aria-hidden="true">→</b>
         </a>
         <button type="button" data-survey-dismiss>Tidak Sekarang</button>
@@ -2538,9 +2538,9 @@
   <script src="assets/chatbot-fix.js?v=jalur-masuk-fast-track-20260729" defer></script>
   <script>
     (() => {
-      const dialog = document.getElementById("dataScienceSurveyDialog");
+      const dialog = document.getElementById("vmtsSurveyDialog");
       if (!dialog) return;
-      const sessionKey = "sains-data-survey-invitation-seen-v1";
+      const sessionKey = "vmts-evaluation-survey-2023-2028-seen-v1";
       const remember = () => {
         try { sessionStorage.setItem(sessionKey, "true"); } catch (error) {}
       };
@@ -2559,7 +2559,17 @@
       });
       let seen = false;
       try { seen = sessionStorage.getItem(sessionKey) === "true"; } catch (error) {}
-      if (!seen) window.setTimeout(() => dialog.showModal(), 500);
+      const openSurveyDialog = () => {
+        if (!dialog.open) dialog.showModal();
+      };
+      const scheduleSurveyDialog = () => window.setTimeout(openSurveyDialog, 900);
+      if (!seen) {
+        if ("requestIdleCallback" in window) {
+          window.requestIdleCallback(scheduleSurveyDialog, { timeout: 2500 });
+        } else {
+          scheduleSurveyDialog();
+        }
+      }
     })();
   </script>
 </body>
