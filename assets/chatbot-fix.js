@@ -45,7 +45,7 @@
   }
 
   const baseScript = document.createElement("script");
-  baseScript.src = "assets/chatbot-fix-base.js?v=pmb-2026-hierarchy-diskusi-tesis-20260725";
+  baseScript.src = "assets/chatbot-fix-base.js?v=chatbot-page-knowledge-20260809";
   baseScript.async = false;
 
   baseScript.addEventListener("load", () => {

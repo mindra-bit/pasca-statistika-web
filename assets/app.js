@@ -276,6 +276,7 @@ let activeS3RpsFilter = "Semua";
 let activeSpecialMomentYear = "";
 let serverChatAvailable = false;
 let serverApiReady = false;
+let knowledgeLoadPromise = null;
 
 const COMMENT_INTEGRATION = {
   giscus: {
@@ -2490,6 +2491,24 @@ function expandQuestion(question) {
   if (/(dokumen kurikulum|file kurikulum|pdf kurikulum|arsip kurikulum|evaluasi kurikulum|survei kurikulum|survey kurikulum|hasil survei|kurikulum 2020|kurikulum 2021|kurikulum 2022|kurikulum 2023|kurikulum 2024|kurikulum 2025|kurikulum 2026|curriculum document|curriculum pdf|curriculum evaluation|curriculum survey)/.test(normalized)) {
     synonyms.push("dokumen kurikulum file kurikulum pdf kurikulum arsip kurikulum evaluasi kurikulum survei kurikulum survey kurikulum hasil survei curriculum document curriculum pdf curriculum evaluation curriculum survey 2020 2021 2022 2023 2024 2025 2026");
   }
+  if (/(lamsama|akreditasi|unggul|asesmen|persiapan akreditasi|accreditation)/.test(normalized)) {
+    synonyms.push("lamsama akreditasi unggul asesmen lapangan laporan tahunan persiapan akreditasi 2027 sertifikat mutu akademik accreditation assessment");
+  }
+  if (/(pks|moa|mou|kerja sama|kerjasama|mitra|kolaborator|partner|partnership)/.test(normalized)) {
+    synonyms.push("pks moa mou kerja sama kerjasama mitra kolaborator partner partnership nasional internasional dokumen kerja sama");
+  }
+  if (/(hibah|riset dosen|penelitian|roadmap|publikasi dosen|publikasi mahasiswa|kolaborasi dosen|research grant|publication)/.test(normalized)) {
+    synonyms.push("hibah riset dosen penelitian roadmap penelitian publikasi dosen publikasi mahasiswa kolaborasi dosen mahasiswa program penelitian research grant publication");
+  }
+  if (/(stakeholder|pemangku kepentingan|vmts|visi misi|renstra|survey vmts|evaluasi vmts)/.test(normalized)) {
+    synonyms.push("stakeholder pemangku kepentingan vmts visi misi tujuan strategi renstra survey evaluasi sosialisasi naskah akademik penyusunan visi misi");
+  }
+  if (/(prestasi|mahasiswa berprestasi|sharing session|alumni berprestasi|karya mahasiswa|project mahasiswa|datathon)/.test(normalized)) {
+    synonyms.push("prestasi mahasiswa mahasiswa berprestasi sharing session alumni berprestasi karya mahasiswa output project shiny rpubs datathon publikasi q1");
+  }
+  if (/(beasiswa|scholarship|lpdp|knb|brin|pendanaan|funding)/.test(normalized)) {
+    synonyms.push("beasiswa scholarship lpdp knb brin pendanaan mobilitas visiting grant asean scholarship funding");
+  }
   if (/(evaluasi pbm|pbm|pbm dosen|evaluasi dosen|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|lecturer evaluation|teaching learning evaluation)/.test(normalized)) {
     synonyms.push("evaluasi pbm dosen evaluasi pembelajaran evaluasi dosen proses belajar mengajar mutu akademik dokumen evaluasi semester ganjil genap learning evaluation lecturer evaluation teaching learning evaluation");
   }
@@ -2742,7 +2761,7 @@ function buildCapabilityAnswer(question) {
       "2. Course syllabi, RPS/course plan PDFs, topics, references, and HTML learning materials.",
       "3. Academic guides, thesis guides, SUR, SKR, and Master's Final Defense.",
       "4. S3 Statistics information: vision, mission, objectives, graduate profiles, CPL, academic documents, and doctoral RPS files.",
-      "5. Graduate thesis data, tracer study reports, graduate user satisfaction reports, LAMSAMA documents, Special Moment gallery, curriculum PDF archives, course delivery evaluation reports, PBM-Lecturer Evaluation documents, fees, and SMUP admissions.",
+      "5. Graduate thesis data, tracer study reports, graduate user satisfaction reports, LAMSAMA documents, scholarships, PKS-MoA, research roadmap, faculty grants, faculty/student publications, stakeholder survey, student achievements, alumni sharing sessions, Special Moment gallery, curriculum PDF archives, course delivery evaluation reports, PBM-Lecturer Evaluation documents, fees, and SMUP admissions.",
       "",
       serverApiReady
         ? "Generative API mode is active, but answers remain grounded in the program knowledge base."
@@ -2754,7 +2773,7 @@ function buildCapabilityAnswer(question) {
       "2. Silabus mata kuliah, PDF RPS, bahan kajian, referensi, dan materi HTML.",
       "3. Panduan akademik, panduan tesis, SUR, SKR, dan Sidang Akhir Magister.",
       "4. Informasi S3 Statistika: visi, misi, tujuan, profil lulusan, CPL, dokumen akademik, dan RPS doktoral.",
-      "5. Data tesis lulusan, tracer study, laporan kepuasan pengguna lulusan, dokumen LAMSAMA, Special Moment, arsip PDF kurikulum, Evaluasi Pelaksanaan Perkuliahan, dokumen Evaluasi PBM-Dosen, biaya, dan pendaftaran SMUP.",
+      "5. Data tesis lulusan, tracer study, laporan kepuasan pengguna lulusan, dokumen LAMSAMA, beasiswa, PKS-MoA, roadmap penelitian, hibah riset dosen, publikasi dosen/mahasiswa, survei stakeholder, prestasi mahasiswa, sharing session alumni, Special Moment, arsip PDF kurikulum, Evaluasi Pelaksanaan Perkuliahan, dokumen Evaluasi PBM-Dosen, biaya, dan pendaftaran SMUP.",
       "",
       serverApiReady
         ? "Mode API generatif sedang aktif, tetapi jawaban tetap ditambatkan pada knowledge base prodi."
@@ -4047,8 +4066,8 @@ function buildLocalAnswer(question) {
   if (!hits.length) {
     return {
       answer: currentLang === "en"
-        ? "I have not found that information in the program knowledge base. I can answer the curriculum, syllabi, RPS/course plan PDFs, HTML learning materials, academic guides, thesis guides, graduate data, tracer studies, graduate user satisfaction reports, LAMSAMA, community engagement reports, curriculum documents, course delivery evaluations, PBM-Lecturer Evaluation, fees, and admissions that have been indexed. Free-form answers outside this knowledge base require enabling a generative AI API on the server."
-        : "Saya belum menemukan informasi tersebut dalam knowledge base prodi. Saat ini saya bisa menjawab kurikulum, silabus, PDF RPS, materi HTML, panduan akademik, panduan tesis, data lulusan, tracer study, laporan kepuasan pengguna lulusan, LAMSAMA, laporan Program Pengabdian, dokumen kurikulum, Evaluasi Pelaksanaan Perkuliahan, Evaluasi PBM-Dosen, biaya, dan pendaftaran yang sudah terindeks. Jawaban bebas di luar knowledge base memerlukan API AI generatif yang aktif di server.",
+        ? "I have not found that information in the program knowledge base. I can answer indexed website information such as curriculum, syllabi, RPS PDFs, learning materials, academic and thesis guides, graduate data, tracer studies, graduate user reports, LAMSAMA, scholarships, partnerships, research, publications, stakeholder survey, student achievements, alumni sessions, evaluations, fees, and admissions. Free-form answers outside this knowledge base require enabling a generative AI API on the server."
+        : "Saya belum menemukan informasi tersebut dalam knowledge base prodi. Saat ini saya bisa menjawab informasi website yang sudah terindeks, seperti kurikulum, silabus, PDF RPS, materi, pedoman pendidikan, panduan tesis, data lulusan, tracer study, pengguna lulusan, LAMSAMA, beasiswa, kerja sama, penelitian, publikasi, survei stakeholder, prestasi mahasiswa, sharing alumni, evaluasi, biaya, dan pendaftaran. Jawaban bebas di luar knowledge base memerlukan API AI generatif yang aktif di server.",
       sources: [],
       mode: "Local knowledge base"
     };
@@ -4135,6 +4154,13 @@ function addMessage(role, text, sources = [], meta = "") {
 async function ask(question) {
   addMessage("user", question);
   const pending = addMessage("bot", t("searchingKnowledge"));
+
+  try {
+    await loadKnowledge();
+    mergeVisiblePageKnowledge();
+  } catch (error) {
+    mergeVisiblePageKnowledge();
+  }
 
   if (serverChatAvailable) {
     try {
@@ -5002,7 +5028,7 @@ function renderTestimonials() {
       return `
         <article class="testimonial-card ${escapeHTML(video.orientation || "landscape")}">
           <div class="testimonial-media">
-            <video controls playsinline preload="metadata" poster="${escapeHTML(video.poster || "")}" aria-label="${escapeHTML(t("testimonialPlay"))}: ${escapeHTML(title)}">
+            <video controls playsinline preload="none" poster="${escapeHTML(video.poster || "")}" aria-label="${escapeHTML(t("testimonialPlay"))}: ${escapeHTML(title)}">
               <source src="${escapeHTML(video.href)}" type="${escapeHTML(video.mimeType || "video/mp4")}" />
               ${escapeHTML(t("testimonialUnsupported"))}
             </video>
@@ -5706,9 +5732,49 @@ function renderAlumni() {
     .join("");
 }
 
+function isStaticGitHubHost() {
+  return location.protocol === "file:" || /(^|\.)github\.io$/i.test(location.hostname);
+}
+
+function mergeVisiblePageKnowledge() {
+  if (!document?.querySelectorAll) return;
+  const pageChunks = [...document.querySelectorAll("section[id]")]
+    .map((section) => {
+      const id = section.id;
+      if (!id) return null;
+      const title = section.querySelector("h1,h2,h3")?.textContent?.replace(/\s+/g, " ").trim() || id.replace(/-/g, " ");
+      const text = section.textContent.replace(/\s+/g, " ").trim();
+      if (text.length < 80) return null;
+      return {
+        id: `page-section-${id}`,
+        title,
+        sourceTitle: title,
+        sourceUrl: `#${id}`,
+        text: `${title}. ${text}`.slice(0, 1800)
+      };
+    })
+    .filter(Boolean);
+
+  if (!pageChunks.length) return;
+  const baseChunks = knowledge.filter((chunk) => !String(chunk.id || "").startsWith("page-section-"));
+  knowledge = [...baseChunks, ...pageChunks];
+  if (knowledgeCount) knowledgeCount.textContent = String(knowledge.length);
+}
+
+function scheduleKnowledgeLoad() {
+  const start = () => {
+    loadKnowledge().then(() => mergeVisiblePageKnowledge());
+  };
+  if ("requestIdleCallback" in window) {
+    window.requestIdleCallback(start, { timeout: 3500 });
+  } else {
+    window.setTimeout(start, 1400);
+  }
+}
+
 async function loadAlumni() {
   try {
-    const response = await fetch("data/alumni.json", { cache: "no-store" });
+    const response = await fetch("data/alumni.json", { cache: "default" });
     if (!response.ok) throw new Error("Data alumni tidak dapat dimuat.");
     const data = await response.json();
     if (!data?.records?.length) throw new Error("Data alumni kosong.");
@@ -5721,7 +5787,7 @@ async function loadAlumni() {
 
 async function loadSyllabus() {
   try {
-    const response = await fetch("data/syllabus.json", { cache: "no-store" });
+    const response = await fetch("data/syllabus.json", { cache: "default" });
     if (!response.ok) throw new Error("Silabus tidak dapat dimuat.");
     const entries = await response.json();
     if (!Array.isArray(entries) || !entries.length) throw new Error("Silabus kosong.");
@@ -5734,7 +5800,7 @@ async function loadSyllabus() {
 
 async function loadRpsDocs() {
   try {
-    const response = await fetch("data/rps_docs.json", { cache: "no-store" });
+    const response = await fetch("data/rps_docs.json", { cache: "default" });
     if (!response.ok) throw new Error("Dokumen RPS tidak dapat dimuat.");
     const data = await response.json();
     if (!data?.documents?.length) throw new Error("Dokumen RPS kosong.");
@@ -5747,7 +5813,7 @@ async function loadRpsDocs() {
 
 async function loadS3Site() {
   try {
-    const response = await fetch("data/s3_statistika.json", { cache: "no-store" });
+    const response = await fetch("data/s3_statistika.json", { cache: "default" });
     if (!response.ok) throw new Error("Data Web S3 tidak dapat dimuat.");
     const data = await response.json();
     if (!data?.rps?.documents?.length) throw new Error("Data Web S3 kosong.");
@@ -5760,7 +5826,7 @@ async function loadS3Site() {
 
 async function loadMaterials() {
   try {
-    const response = await fetch("data/materials.json", { cache: "no-store" });
+    const response = await fetch("data/materials.json", { cache: "default" });
     if (!response.ok) throw new Error("Katalog materi tidak dapat dimuat.");
     const data = await response.json();
     if (!data?.materials?.length) throw new Error("Katalog materi kosong.");
@@ -5773,7 +5839,7 @@ async function loadMaterials() {
 
 async function loadThesisGuides() {
   try {
-    const response = await fetch("data/thesis_guides.json", { cache: "no-store" });
+    const response = await fetch("data/thesis_guides.json", { cache: "default" });
     if (!response.ok) throw new Error("Panduan tesis tidak dapat dimuat.");
     const data = await response.json();
     if (!data?.guides?.length) throw new Error("Panduan tesis kosong.");
@@ -5786,7 +5852,7 @@ async function loadThesisGuides() {
 
 async function loadTracerStudies() {
   try {
-    const response = await fetch("data/tracer_studies.json", { cache: "no-store" });
+    const response = await fetch("data/tracer_studies.json", { cache: "default" });
     if (!response.ok) throw new Error("Tracer study tidak dapat dimuat.");
     const data = await response.json();
     if (!data?.reports?.length) throw new Error("Tracer study kosong.");
@@ -5795,7 +5861,7 @@ async function loadTracerStudies() {
     tracerStudiesData = { total: 0, reports: [], years: [] };
   }
   try {
-    const summaryResponse = await fetch("data/tracer_summary.json", { cache: "no-store" });
+    const summaryResponse = await fetch("data/tracer_summary.json", { cache: "default" });
     if (!summaryResponse.ok) throw new Error("Ringkasan tracer study tidak dapat dimuat.");
     tracerSummaryData = await summaryResponse.json();
   } catch (error) {
@@ -5807,7 +5873,7 @@ async function loadTracerStudies() {
 
 async function loadGraduateUserSatisfaction() {
   try {
-    const response = await fetch("data/graduate_user_satisfaction.json", { cache: "no-store" });
+    const response = await fetch("data/graduate_user_satisfaction.json", { cache: "default" });
     if (!response.ok) throw new Error("Laporan kepuasan pengguna lulusan tidak dapat dimuat.");
     const data = await response.json();
     if (!data?.reports?.length) throw new Error("Laporan kepuasan pengguna lulusan kosong.");
@@ -5820,7 +5886,7 @@ async function loadGraduateUserSatisfaction() {
 
 async function loadSpecialMoments() {
   try {
-    const response = await fetch("data/special_moments.json", { cache: "no-store" });
+    const response = await fetch("data/special_moments.json", { cache: "default" });
     if (!response.ok) throw new Error("Galeri Special Moment tidak dapat dimuat.");
     const data = await response.json();
     if (!data?.cohorts?.length) throw new Error("Galeri Special Moment kosong.");
@@ -5833,7 +5899,7 @@ async function loadSpecialMoments() {
 
 async function loadTestimonials() {
   try {
-    const response = await fetch("data/testimonials.json", { cache: "no-store" });
+    const response = await fetch("data/testimonials.json", { cache: "default" });
     if (!response.ok) throw new Error("Video testimoni tidak dapat dimuat.");
     const data = await response.json();
     if (!data?.videos?.length) throw new Error("Video testimoni kosong.");
@@ -5846,7 +5912,7 @@ async function loadTestimonials() {
 
 async function loadCurriculumDocs() {
   try {
-    const response = await fetch("data/curriculum_docs.json", { cache: "no-store" });
+    const response = await fetch("data/curriculum_docs.json", { cache: "default" });
     if (!response.ok) throw new Error("Dokumen kurikulum tidak dapat dimuat.");
     const data = await response.json();
     if (!data?.documents?.length) throw new Error("Dokumen kurikulum kosong.");
@@ -5859,7 +5925,7 @@ async function loadCurriculumDocs() {
 
 async function loadLamsamaReports() {
   try {
-    const response = await fetch("data/lamsama_reports.json", { cache: "no-store" });
+    const response = await fetch("data/lamsama_reports.json", { cache: "default" });
     if (!response.ok) throw new Error("Laporan tahunan LAMSAMA tidak dapat dimuat.");
     const data = await response.json();
     if (!data?.reports?.length) throw new Error("Laporan tahunan LAMSAMA kosong.");
@@ -5872,7 +5938,7 @@ async function loadLamsamaReports() {
 
 async function loadPkmReports() {
   try {
-    const response = await fetch("data/pkm_reports.json", { cache: "no-store" });
+    const response = await fetch("data/pkm_reports.json", { cache: "default" });
     if (!response.ok) throw new Error("Laporan Program Pengabdian tidak dapat dimuat.");
     const data = await response.json();
     if (!data?.reports?.length) throw new Error("Laporan Program Pengabdian kosong.");
@@ -5885,7 +5951,7 @@ async function loadPkmReports() {
 
 async function loadResearchGrants() {
   try {
-    const response = await fetch("data/research_grants.json", { cache: "no-store" });
+    const response = await fetch("data/research_grants.json", { cache: "default" });
     if (!response.ok) throw new Error("Data Hibah Riset Dosen tidak dapat dimuat.");
     const data = await response.json();
     if (!data?.grants?.length) throw new Error("Data Hibah Riset Dosen kosong.");
@@ -5905,7 +5971,7 @@ async function loadResearchGrants() {
 
 async function loadFacultyPublications() {
   try {
-    const response = await fetch("data/faculty_publications.json", { cache: "no-store" });
+    const response = await fetch("data/faculty_publications.json", { cache: "default" });
     if (!response.ok) throw new Error("Data Publikasi Dosen tidak dapat dimuat.");
     const data = await response.json();
     if (!data?.publications?.length || !data?.faculty?.length) throw new Error("Data Publikasi Dosen kosong.");
@@ -5928,7 +5994,7 @@ async function loadFacultyPublications() {
 
 async function loadPksMoa() {
   try {
-    const response = await fetch("data/pks_moa.json", { cache: "no-store" });
+    const response = await fetch("data/pks_moa.json", { cache: "default" });
     if (!response.ok) throw new Error("Data PKS-MoA tidak dapat dimuat.");
     const data = await response.json();
     if (!data?.agreements?.length) throw new Error("Data PKS-MoA kosong.");
@@ -5941,7 +6007,7 @@ async function loadPksMoa() {
 
 async function loadScholarships() {
   try {
-    const response = await fetch("data/scholarships.json", { cache: "no-store" });
+    const response = await fetch("data/scholarships.json", { cache: "default" });
     if (!response.ok) throw new Error("Informasi beasiswa tidak dapat dimuat.");
     const data = await response.json();
     if (!data?.scholarships?.length) throw new Error("Informasi beasiswa kosong.");
@@ -5954,7 +6020,7 @@ async function loadScholarships() {
 
 async function loadLectureEvaluations() {
   try {
-    const response = await fetch("data/lecture_evaluations.json", { cache: "no-store" });
+    const response = await fetch("data/lecture_evaluations.json", { cache: "default" });
     if (!response.ok) throw new Error("Laporan Evaluasi Pelaksanaan Perkuliahan tidak dapat dimuat.");
     const data = await response.json();
     if (!data?.documents?.length) throw new Error("Laporan Evaluasi Pelaksanaan Perkuliahan kosong.");
@@ -5967,7 +6033,7 @@ async function loadLectureEvaluations() {
 
 async function loadPbmEvaluations() {
   try {
-    const response = await fetch("data/pbm_evaluations.json", { cache: "no-store" });
+    const response = await fetch("data/pbm_evaluations.json", { cache: "default" });
     if (!response.ok) throw new Error("Dokumen Evaluasi PBM-Dosen tidak dapat dimuat.");
     const data = await response.json();
     if (!data?.documents?.length) throw new Error("Dokumen Evaluasi PBM-Dosen kosong.");
@@ -5979,37 +6045,46 @@ async function loadPbmEvaluations() {
 }
 
 async function loadKnowledge() {
-  try {
-    const response = await fetch("data/knowledge_chunks.json", { cache: "no-store" });
-    if (!response.ok) throw new Error("Knowledge base tidak dapat dimuat.");
-    const chunks = await response.json();
-    if (!Array.isArray(chunks) || !chunks.length) throw new Error("Knowledge base kosong.");
-    knowledge = chunks;
-    if (knowledgeCount) knowledgeCount.textContent = String(chunks.length);
-    if (location.protocol.startsWith("http")) {
-      try {
-        const healthResponse = await fetch("/api/health", { cache: "no-store" });
-        if (healthResponse.ok) {
-          const health = await healthResponse.json();
-          serverChatAvailable = true;
-          serverApiReady = Boolean(health.apiReady);
-        } else {
+  if (knowledgeLoadPromise) return knowledgeLoadPromise;
+  knowledgeLoadPromise = (async () => {
+    try {
+      const response = await fetch("data/knowledge_chunks.json", { cache: "default" });
+      if (!response.ok) throw new Error("Knowledge base tidak dapat dimuat.");
+      const chunks = await response.json();
+      if (!Array.isArray(chunks) || !chunks.length) throw new Error("Knowledge base kosong.");
+      knowledge = chunks;
+      if (knowledgeCount) knowledgeCount.textContent = String(chunks.length);
+      mergeVisiblePageKnowledge();
+      if (location.protocol.startsWith("http") && !isStaticGitHubHost()) {
+        try {
+          const healthResponse = await fetch("/api/health", { cache: "default" });
+          if (healthResponse.ok) {
+            const health = await healthResponse.json();
+            serverChatAvailable = true;
+            serverApiReady = Boolean(health.apiReady);
+          } else {
+            serverChatAvailable = false;
+            serverApiReady = false;
+          }
+        } catch (error) {
           serverChatAvailable = false;
           serverApiReady = false;
         }
-      } catch (error) {
+      } else {
         serverChatAvailable = false;
         serverApiReady = false;
       }
+      setMode(serverChatAvailable ? (serverApiReady ? "modeServerApi" : "modeServer") : "modeLocalStatic");
+    } catch (error) {
+      knowledge = FALLBACK_KNOWLEDGE;
+      serverChatAvailable = false;
+      serverApiReady = false;
+      mergeVisiblePageKnowledge();
+      if (knowledgeCount) knowledgeCount.textContent = String(knowledge.length || FALLBACK_KNOWLEDGE.length);
+      setMode("modeLocalFallback");
     }
-    setMode(serverChatAvailable ? (serverApiReady ? "modeServerApi" : "modeServer") : "modeLocalStatic");
-  } catch (error) {
-    knowledge = FALLBACK_KNOWLEDGE;
-    serverChatAvailable = false;
-    serverApiReady = false;
-    if (knowledgeCount) knowledgeCount.textContent = String(FALLBACK_KNOWLEDGE.length);
-    setMode("modeLocalFallback");
-  }
+  })();
+  return knowledgeLoadPromise;
 }
 
 document.querySelectorAll(".filter-tabs button").forEach((button) => {
@@ -6266,23 +6341,26 @@ setupInspirationVoices();
 applyLanguage();
 mountCommentIntegration();
 mountAnalyticsIntegration();
-loadKnowledge();
-loadSyllabus();
-loadRpsDocs();
-loadS3Site();
-loadMaterials();
-loadThesisGuides();
-loadTracerStudies();
-loadGraduateUserSatisfaction();
-loadSpecialMoments();
-loadTestimonials();
-loadCurriculumDocs();
-loadLamsamaReports();
-loadPkmReports();
-loadResearchGrants();
-loadFacultyPublications();
-loadPksMoa();
-loadScholarships();
-loadLectureEvaluations();
-loadPbmEvaluations();
-loadAlumni();
+const dataLoadTasks = [
+  loadSyllabus(),
+  loadRpsDocs(),
+  loadS3Site(),
+  loadMaterials(),
+  loadThesisGuides(),
+  loadTracerStudies(),
+  loadGraduateUserSatisfaction(),
+  loadSpecialMoments(),
+  loadTestimonials(),
+  loadCurriculumDocs(),
+  loadLamsamaReports(),
+  loadPkmReports(),
+  loadResearchGrants(),
+  loadFacultyPublications(),
+  loadPksMoa(),
+  loadScholarships(),
+  loadLectureEvaluations(),
+  loadPbmEvaluations(),
+  loadAlumni()
+];
+scheduleKnowledgeLoad();
+Promise.allSettled(dataLoadTasks).then(() => mergeVisiblePageKnowledge());

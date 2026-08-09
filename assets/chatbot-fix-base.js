@@ -21,7 +21,13 @@ function chatbotChunkMatchesIntent(question, chunk) {
   ];
 
   const rule = rules.find(([prefix]) => id.startsWith(prefix));
-  return !rule || rule[1].test(text);
+  if (!rule || rule[1].test(text)) return true;
+
+  const specificTokens = tokenize(text).filter((token) => token.length > 2 && !genericQueryTerms.has(token));
+  if (!specificTokens.length) return false;
+  const metadata = normalize([chunk.id, chunk.sourceTitle, chunk.title, chunk.text].join(" "));
+  const matchedTokens = specificTokens.filter((token) => hasWholeToken(metadata, token));
+  return matchedTokens.length >= Math.min(2, specificTokens.length);
 }
 
 retrieve = function retrieveRelevantChunks(question, limit = 5) {
