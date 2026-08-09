@@ -758,8 +758,8 @@ const I18N = {
     rpl3: "Mata kuliah tesis dan fondasi tertentu tetap ditempuh di prodi.",
     curriculumDocsKicker: "Dokumen Kurikulum",
     curriculumDocsTitle: "Arsip dokumen kurikulum 2020-2025 Revisi",
-    curriculumDocsText: "Dokumen kurikulum, naskah akademik, dan hasil survei evaluasi kurikulum ditempatkan sebagai rujukan resmi dan arsip akademik. Kurikulum terbaru tersedia sebagai PDF dan versi web.",
-    curriculumDocsCountLabel: "dokumen kurikulum/evaluasi",
+    curriculumDocsText: "Dokumen kurikulum dan naskah akademik ditempatkan sebagai rujukan resmi dan arsip akademik. Kurikulum terbaru tersedia sebagai PDF dan versi web.",
+    curriculumDocsCountLabel: "dokumen kurikulum/naskah akademik",
     curriculumDocsAsk: "Tanyakan dokumen ke chatbot",
     lamsamaKicker: "LAMSAMA",
     lamsamaTitle: "Dokumen akreditasi LAMSAMA S2 Statistika Terapan.",
@@ -1512,8 +1512,8 @@ const I18N = {
     rpl3: "Thesis courses and selected foundation courses are still taken in the program.",
     curriculumDocsKicker: "Curriculum Documents",
     curriculumDocsTitle: "Curriculum document archive 2020-2025 Revised",
-    curriculumDocsText: "Curriculum documents, academic papers, and curriculum evaluation survey results are provided as official references and academic archives. The latest curriculum is available as both PDF and web version.",
-    curriculumDocsCountLabel: "curriculum/evaluation documents",
+    curriculumDocsText: "Curriculum documents and academic papers are provided as official references and academic archives. The latest curriculum is available as both PDF and web version.",
+    curriculumDocsCountLabel: "curriculum/academic paper documents",
     curriculumDocsAsk: "Ask the chatbot about documents",
     lamsamaKicker: "LAMSAMA",
     lamsamaTitle: "LAMSAMA accreditation documents for the Applied Statistics Master's Program.",
@@ -5032,7 +5032,7 @@ function renderTestimonials() {
 
 function renderCurriculumDocs() {
   if (!curriculumDocRows) return;
-  const docs = curriculumDocsData?.documents || [];
+  const docs = (curriculumDocsData?.documents || []).filter((doc) => !doc.hideFromArchive);
 
   if (curriculumDocCount) curriculumDocCount.textContent = String(docs.length);
 

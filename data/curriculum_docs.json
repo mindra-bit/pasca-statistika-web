@@ -86,8 +86,10 @@
       "file": "Laporan Evaluasi Kurikulum 2023.pdf",
       "href": "evaluasi-kurikulum/laporan-evaluasi-kurikulum-2023.pdf",
       "sizeKb": 644,
-      "source": "Evaluasi Kurikulum",
-      "htmlHref": "evaluasi-kurikulum/laporan-evaluasi-kurikulum-2023.html"
+      "source": "Pendukung Naskah Akademik",
+      "htmlHref": "evaluasi-kurikulum/laporan-evaluasi-kurikulum-2023.html",
+      "placement": "naskah-akademik-obe-2023-2025",
+      "hideFromArchive": true
     }
   ]
 }
