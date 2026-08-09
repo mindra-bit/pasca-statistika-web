@@ -758,8 +758,8 @@ const I18N = {
     rpl3: "Mata kuliah tesis dan fondasi tertentu tetap ditempuh di prodi.",
     curriculumDocsKicker: "Dokumen Kurikulum",
     curriculumDocsTitle: "Arsip dokumen kurikulum 2020-2025 Revisi",
-    curriculumDocsText: "Empat dokumen kurikulum ditempatkan sebagai rujukan resmi dan arsip akademik. Kurikulum terbaru tersedia sebagai PDF dan versi web.",
-    curriculumDocsCountLabel: "dokumen kurikulum",
+    curriculumDocsText: "Dokumen kurikulum, naskah akademik, dan hasil survei evaluasi kurikulum ditempatkan sebagai rujukan resmi dan arsip akademik. Kurikulum terbaru tersedia sebagai PDF dan versi web.",
+    curriculumDocsCountLabel: "dokumen kurikulum/evaluasi",
     curriculumDocsAsk: "Tanyakan dokumen ke chatbot",
     lamsamaKicker: "LAMSAMA",
     lamsamaTitle: "Dokumen akreditasi LAMSAMA S2 Statistika Terapan.",
@@ -1512,8 +1512,8 @@ const I18N = {
     rpl3: "Thesis courses and selected foundation courses are still taken in the program.",
     curriculumDocsKicker: "Curriculum Documents",
     curriculumDocsTitle: "Curriculum document archive 2020-2025 Revised",
-    curriculumDocsText: "Four curriculum documents are provided as official references and academic archives. The latest curriculum is available as both PDF and web version.",
-    curriculumDocsCountLabel: "curriculum documents",
+    curriculumDocsText: "Curriculum documents, academic papers, and curriculum evaluation survey results are provided as official references and academic archives. The latest curriculum is available as both PDF and web version.",
+    curriculumDocsCountLabel: "curriculum/evaluation documents",
     curriculumDocsAsk: "Ask the chatbot about documents",
     lamsamaKicker: "LAMSAMA",
     lamsamaTitle: "LAMSAMA accreditation documents for the Applied Statistics Master's Program.",
@@ -2487,8 +2487,8 @@ function expandQuestion(question) {
   if (/(special moment|momen|foto angkatan|galeri|gallery|dokumentasi)/.test(normalized)) {
     synonyms.push("special moment momen galeri foto angkatan cohort dokumentasi kebersamaan mahasiswa");
   }
-  if (/(dokumen kurikulum|file kurikulum|pdf kurikulum|arsip kurikulum|kurikulum 2020|kurikulum 2021|kurikulum 2022|kurikulum 2023|kurikulum 2024|kurikulum 2025|kurikulum 2026|curriculum document|curriculum pdf)/.test(normalized)) {
-    synonyms.push("dokumen kurikulum file kurikulum pdf kurikulum arsip kurikulum curriculum document curriculum pdf 2020 2021 2022 2023 2024 2025 2026");
+  if (/(dokumen kurikulum|file kurikulum|pdf kurikulum|arsip kurikulum|evaluasi kurikulum|survei kurikulum|survey kurikulum|hasil survei|kurikulum 2020|kurikulum 2021|kurikulum 2022|kurikulum 2023|kurikulum 2024|kurikulum 2025|kurikulum 2026|curriculum document|curriculum pdf|curriculum evaluation|curriculum survey)/.test(normalized)) {
+    synonyms.push("dokumen kurikulum file kurikulum pdf kurikulum arsip kurikulum evaluasi kurikulum survei kurikulum survey kurikulum hasil survei curriculum document curriculum pdf curriculum evaluation curriculum survey 2020 2021 2022 2023 2024 2025 2026");
   }
   if (/(evaluasi pbm|pbm|pbm dosen|evaluasi dosen|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|lecturer evaluation|teaching learning evaluation)/.test(normalized)) {
     synonyms.push("evaluasi pbm dosen evaluasi pembelajaran evaluasi dosen proses belajar mengajar mutu akademik dokumen evaluasi semester ganjil genap learning evaluation lecturer evaluation teaching learning evaluation");
@@ -2514,7 +2514,7 @@ function scoreChunk(question, chunk) {
   const asksTracer = /tracer|tacer|waktu tunggu|pekerjaan pertama|serapan lulusan|bekerja sebelum lulus|gaji pertama|gaji sekarang|penghasilan pertama|penghasilan saat ini|pendapatan pertama|pendapatan sekarang/.test(normalizedQuestion);
   const asksGraduateUser = /kepuasan pengguna|pengguna lulusan|user satisfaction|graduate user|employer satisfaction|survei pengguna/.test(normalizedQuestion);
   const asksSpecialMoment = /special moment|momen|foto angkatan|galeri|gallery|dokumentasi/.test(normalizedQuestion);
-  const asksCurriculumDoc = /dokumen kurikulum|file kurikulum|pdf kurikulum|arsip kurikulum|curriculum document|curriculum pdf|buka kurikulum|download kurikulum|unduh kurikulum/.test(normalizedQuestion);
+  const asksCurriculumDoc = /dokumen kurikulum|file kurikulum|pdf kurikulum|arsip kurikulum|evaluasi kurikulum|survei kurikulum|survey kurikulum|hasil survei|curriculum document|curriculum pdf|curriculum evaluation|curriculum survey|buka kurikulum|download kurikulum|unduh kurikulum/.test(normalizedQuestion);
   const asksLectureEvaluation = /evaluasi pelaksanaan perkuliahan|evaluasi perkuliahan|monitoring perkuliahan|monitoring mahasiswa|pertemuan perkuliahan|sesi perkuliahan|course delivery evaluation|course evaluation|student monitoring/.test(normalizedQuestion);
   const asksPbmEvaluation = /evaluasi pbm|pbm|pbm dosen|evaluasi dosen|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|lecturer evaluation|teaching learning evaluation|buka evaluasi|download evaluasi|unduh evaluasi/.test(normalizedQuestion);
   const asksRpsDoc = /rps|rencana pembelajaran semester|course plan|semester learning plan|buka rps|download rps|unduh rps/.test(normalizedQuestion);
@@ -3311,6 +3311,11 @@ function findCurriculumDoc(question, hits = []) {
   const docs = curriculumDocsData?.documents || [];
   const text = normalize(question);
   const year = text.match(/\b(2020|2021|2022|2023|2024|2025|2026)\b/)?.[1];
+  const asksCurriculumEvaluation = /evaluasi kurikulum|survei kurikulum|survey kurikulum|hasil survei|curriculum evaluation|curriculum survey/.test(text);
+  if (asksCurriculumEvaluation) {
+    const evaluationDoc = docs.find((doc) => /evaluasi-kurikulum|curriculum evaluation|survey/.test(normalize([doc.id, doc.title, doc.titleId, doc.titleEn, doc.source].join(" "))));
+    if (evaluationDoc) return evaluationDoc;
+  }
   const revisedDoc = docs.find((doc) => doc.id === "kurikulum-2025-revisi" || /revisi|revised/.test(normalize([doc.period, doc.title, doc.titleId, doc.titleEn].join(" "))));
   if (year) {
     if (["2020", "2021", "2022"].includes(year)) {
@@ -3427,7 +3432,7 @@ function findPbmEvaluation(question, hits = []) {
 
 function buildCurriculumDocAnswer(question, hits = []) {
   const text = normalize(question);
-  const asksCurriculumDoc = /dokumen kurikulum|file kurikulum|pdf kurikulum|arsip kurikulum|curriculum document|curriculum pdf|buka kurikulum|download kurikulum|unduh kurikulum/.test(text);
+  const asksCurriculumDoc = /dokumen kurikulum|file kurikulum|pdf kurikulum|arsip kurikulum|evaluasi kurikulum|survei kurikulum|survey kurikulum|hasil survei|curriculum document|curriculum pdf|curriculum evaluation|curriculum survey|buka kurikulum|download kurikulum|unduh kurikulum/.test(text);
   if (!asksCurriculumDoc) return null;
 
   const selected = findCurriculumDoc(question, hits);
@@ -3441,21 +3446,26 @@ function buildCurriculumDocAnswer(question, hits = []) {
           `${curriculumDocTitle(doc)}: ${curriculumDocDescription(doc)}`,
           `Period: ${doc.period}.`,
           `File size: ${formatFileSize(doc.sizeKb)}.`,
-          `PDF: ${doc.href}`
-        ].join("\n");
+          `PDF: ${doc.href}`,
+          doc.htmlHref ? `Web version: ${doc.htmlHref}` : ""
+        ].filter(Boolean).join("\n");
       }
       return [
         `${curriculumDocTitle(doc)}: ${curriculumDocDescription(doc)}`,
         `Periode: ${doc.period}.`,
         `Ukuran file: ${formatFileSize(doc.sizeKb)}.`,
-        `PDF: ${doc.href}`
-      ].join("\n");
+        `PDF: ${doc.href}`,
+        doc.htmlHref ? `Versi web: ${doc.htmlHref}` : ""
+      ].filter(Boolean).join("\n");
     })
     .join("\n\n");
 
   return {
     answer,
-    sources: docs.map((doc) => ({ title: curriculumDocTitle(doc), url: doc.href })),
+    sources: docs.flatMap((doc) => [
+      { title: curriculumDocTitle(doc), url: doc.href },
+      ...(doc.htmlHref ? [{ title: `${curriculumDocTitle(doc)} - ${currentLang === "en" ? "web version" : "versi web"}`, url: doc.htmlHref }] : [])
+    ]),
     mode: "Local knowledge base"
   };
 }
@@ -3785,7 +3795,7 @@ function matchFact(question) {
   const asksMaterial = /materi|bahan ajar|modul|html|katalog|slide|pertemuan|file kuliah/.test(text);
   const asksTracer = /tracer|tacer|waktu tunggu|pekerjaan pertama|serapan lulusan|bekerja sebelum lulus|gaji pertama|gaji sekarang|penghasilan pertama|penghasilan saat ini|pendapatan pertama|pendapatan sekarang/.test(text);
   const asksGraduateUser = /kepuasan pengguna|pengguna lulusan|user satisfaction|graduate user|employer satisfaction|survei pengguna/.test(text);
-  const asksCurriculumDoc = /dokumen kurikulum|file kurikulum|pdf kurikulum|arsip kurikulum|curriculum document|curriculum pdf|buka kurikulum|download kurikulum|unduh kurikulum/.test(text);
+  const asksCurriculumDoc = /dokumen kurikulum|file kurikulum|pdf kurikulum|arsip kurikulum|evaluasi kurikulum|survei kurikulum|survey kurikulum|hasil survei|curriculum document|curriculum pdf|curriculum evaluation|curriculum survey|buka kurikulum|download kurikulum|unduh kurikulum/.test(text);
   const asksLectureEvaluation = /evaluasi pelaksanaan perkuliahan|evaluasi perkuliahan|monitoring perkuliahan|monitoring mahasiswa|pertemuan perkuliahan|sesi perkuliahan|course delivery evaluation|course evaluation|student monitoring/.test(text);
   const asksPbmEvaluation = /evaluasi pbm|pbm|pbm dosen|evaluasi dosen|evaluasi pembelajaran|proses belajar mengajar|mutu akademik|learning evaluation|lecturer evaluation|teaching learning evaluation|buka evaluasi|download evaluasi|unduh evaluasi/.test(text);
   const asksPkm = /pkm|pengabdian|program pengabdian|pengabdian masyarakat|community engagement|community service/.test(text);

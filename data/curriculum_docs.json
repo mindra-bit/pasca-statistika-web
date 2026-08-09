@@ -1,7 +1,7 @@
 {
   "source": "Dokumen Kurikulum dan Naskah Akademik",
   "generatedAt": "2026-07-21T11:05:00.000Z",
-  "total": 5,
+  "total": 6,
   "documents": [
     {
       "id": "kurikulum-2020-2022",
@@ -73,6 +73,21 @@
       "href": "Naskah%20Akademik%20Kurikulum%202025%20Revisi.pdf",
       "sizeKb": 1263,
       "source": "Naskah Akademik"
+    },
+    {
+      "id": "evaluasi-kurikulum-2023",
+      "period": "2023",
+      "title": "Hasil Survei Evaluasi Kurikulum 2023",
+      "titleId": "Hasil Survei Evaluasi Kurikulum 2023",
+      "titleEn": "2023 Curriculum Evaluation Survey Report",
+      "description": "Laporan hasil survei evaluasi kurikulum S2 Statistika Terapan UNPAD sebagai bahan refleksi, perbaikan kurikulum, dan penguatan mutu akademik program studi.",
+      "descriptionId": "Laporan hasil survei evaluasi kurikulum S2 Statistika Terapan UNPAD sebagai bahan refleksi, perbaikan kurikulum, dan penguatan mutu akademik program studi.",
+      "descriptionEn": "Survey report on the Applied Statistics Master's curriculum evaluation, used as evidence for curriculum reflection, improvement, and academic quality enhancement.",
+      "file": "Laporan Evaluasi Kurikulum 2023.pdf",
+      "href": "evaluasi-kurikulum/laporan-evaluasi-kurikulum-2023.pdf",
+      "sizeKb": 644,
+      "source": "Evaluasi Kurikulum",
+      "htmlHref": "evaluasi-kurikulum/laporan-evaluasi-kurikulum-2023.html"
     }
   ]
 }
