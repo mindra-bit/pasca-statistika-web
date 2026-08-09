@@ -4180,5 +4180,54 @@
     "sourceTitle": "Kolaborasi Dosen dan Mahasiswa - Kegiatan Akademik Kolaboratif",
     "sourceUrl": "kegiatan-workshop/berita-workshop-asuransi-gempa.html",
     "text": "Blok Kolaborasi Dosen dan Mahasiswa memuat dokumentasi kegiatan Workshop Pemodelan Asuransi Gempa dan Retensi Optimal. Kegiatan ini terkait earthquake insurance/reinsurance modeling, optimal retention, aktuaria risiko katastrofe, dan komputasi statistik. Workshop dilaksanakan pada 7 Agustus 2026 di éL Hotel Bandung sebagai bagian dari The 2026 International Actuarial Research Conference. Dokumen lengkap dapat dibuka melalui kegiatan-workshop/berita-workshop-asuransi-gempa.html."
+  },
+  {
+    "id": "student-advising-news-overview",
+    "title": "Berita Perwalian Mahasiswa",
+    "sourceTitle": "Mahasiswa - Berita Perwalian",
+    "sourceUrl": "#mahasiswa",
+    "text": "Blok Mahasiswa memuat Berita Perwalian Mahasiswa untuk angkatan 2024 dan 2025. Berita perwalian adalah dokumentasi kegiatan akademik, arahan studi, monitoring kesiapan tesis, dan komunikasi program studi dengan mahasiswa. Tersedia 6 berita: Angkatan 2025 semester 1, 2, 3 dan Angkatan 2024 semester 1, 2, 3. Semua berita dapat dibuka dari bagian Mahasiswa pada website."
+  },
+  {
+    "id": "student-advising-news-2025-s1",
+    "title": "Perwalian Semester 1 Ganjil 2025/2026",
+    "sourceTitle": "Berita Perwalian Angkatan 2025 Semester 1",
+    "sourceUrl": "berita-perwalian/angkatan-2025/semester-1/",
+    "text": "Berita Perwalian Semester 1 Ganjil 2025/2026 untuk mahasiswa Angkatan 2025 memuat arahan awal studi, adaptasi akademik, dan penguatan kesiapan mahasiswa baru S2 Statistika Terapan FMIPA Unpad."
+  },
+  {
+    "id": "student-advising-news-2025-s2",
+    "title": "Perwalian Semester 2 Genap 2025/2026",
+    "sourceTitle": "Berita Perwalian Angkatan 2025 Semester 2",
+    "sourceUrl": "berita-perwalian/angkatan-2025/semester-2/",
+    "text": "Berita Perwalian Semester 2 Genap 2025/2026 untuk mahasiswa Angkatan 2025 memuat evaluasi kemajuan belajar dan penyiapan strategi studi semester berikutnya."
+  },
+  {
+    "id": "student-advising-news-2025-s3",
+    "title": "Perwalian Bersama Semester 3 Ganjil 2026/2027",
+    "sourceTitle": "Berita Perwalian Angkatan 2025 Semester 3",
+    "sourceUrl": "berita-perwalian/angkatan-2025/semester-3/",
+    "text": "Berita Perwalian Bersama Semester 3 Ganjil 2026/2027 untuk mahasiswa Angkatan 2025 memuat penguatan rencana tesis, ritme penyelesaian studi, dan monitoring akademik."
+  },
+  {
+    "id": "student-advising-news-2024-s1",
+    "title": "Perwalian Semester 1 Ganjil 2024/2025",
+    "sourceTitle": "Berita Perwalian Angkatan 2024 Semester 1",
+    "sourceUrl": "berita-perwalian/angkatan-2024/semester-1/",
+    "text": "Berita Perwalian Semester 1 Ganjil 2024/2025 untuk mahasiswa Angkatan 2024 memuat pendampingan awal untuk memahami budaya akademik dan rencana studi magister."
+  },
+  {
+    "id": "student-advising-news-2024-s2",
+    "title": "Perwalian Semester 2 Genap 2024/2025",
+    "sourceTitle": "Berita Perwalian Angkatan 2024 Semester 2",
+    "sourceUrl": "berita-perwalian/angkatan-2024/semester-2/",
+    "text": "Berita Perwalian Semester 2 Genap 2024/2025 untuk mahasiswa Angkatan 2024 memuat refleksi capaian semester dan penajaman pilihan akademik menuju tahap riset."
+  },
+  {
+    "id": "student-advising-news-2024-s3",
+    "title": "Perwalian Angkatan 2024 Semester 3",
+    "sourceTitle": "Berita Perwalian Angkatan 2024 Semester 3",
+    "sourceUrl": "berita-perwalian/angkatan-2024/semester-3/",
+    "text": "Berita Perwalian Angkatan 2024 Semester 3 memuat monitoring kesiapan tesis, publikasi, dan penyelesaian studi tepat waktu."
   }
 ]
