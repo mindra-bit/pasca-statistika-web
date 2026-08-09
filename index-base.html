@@ -130,6 +130,7 @@
           <a class="workspace-menu-subitem" href="#pks-moa" data-program-select="s2" data-workspace-target="pks-moa" data-i18n="workspacePksMoa">PKS-MoA</a>
           <a class="workspace-menu-subitem" href="#hibah-riset" data-program-select="s2" data-workspace-target="hibah-riset" data-i18n="workspaceResearchGrants">Hibah Riset Dosen</a>
           <a class="workspace-menu-subitem" href="#publikasi-dosen" data-program-select="s2" data-workspace-target="publikasi-dosen" data-i18n="workspaceFacultyPublications">Publikasi Dosen</a>
+          <a class="workspace-menu-subitem" href="#kolaborasi-dosen-mahasiswa" data-program-select="s2" data-workspace-target="kolaborasi-dosen-mahasiswa" data-i18n="workspaceFacultyStudentCollaboration">Kolaborasi Dosen dan Mahasiswa</a>
 
           <span class="workspace-menu-group-label">Layanan Akademik</span>
           <a class="workspace-menu-subitem consultation-menu-link" href="#konsultasi-data-analysis" data-program-select="s2" data-workspace-target="konsultasi-data-analysis">Konsultasi Data Analysis</a>
@@ -780,6 +781,49 @@
           <span id="publicationVisibleLabel" data-i18n="publicationRecordsShown">publikasi ditampilkan</span>
         </div>
         <div class="faculty-publication-grid" id="publicationRows" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section collaboration-publication-section" id="kolaborasi-dosen-mahasiswa">
+      <div class="container">
+        <div class="collaboration-publication-hero">
+          <div class="collaboration-publication-copy">
+            <p class="section-kicker" data-i18n="collabPublicationKicker">Kolaborasi Dosen dan Mahasiswa</p>
+            <h2 data-i18n="collabPublicationTitle">Publikasi bersama sebagai budaya riset program studi.</h2>
+            <p data-i18n="collabPublicationText">Laporan ini merangkum publikasi bersama mahasiswa S2 Statistika Terapan dan dosen sebagai bukti penguatan ekosistem riset, publikasi ilmiah, dan pendampingan akademik.</p>
+          </div>
+          <div class="collaboration-publication-metrics" aria-label="Ringkasan dokumen publikasi bersama">
+            <div>
+              <strong>HTML</strong>
+              <span data-i18n="collabPublicationMetricInteractive">Laporan interaktif</span>
+            </div>
+            <div>
+              <strong>PDF</strong>
+              <span data-i18n="collabPublicationMetricArchive">Arsip dokumen</span>
+            </div>
+          </div>
+        </div>
+        <article class="collaboration-publication-card">
+          <div class="collaboration-publication-report">
+            <span class="collaboration-publication-badge" data-i18n="collabPublicationBadge">Laporan Publikasi Bersama</span>
+            <h3 data-i18n="collabPublicationReportTitle">Laporan Publikasi Bersama S2 Statistika Terapan Unpad</h3>
+            <p data-i18n="collabPublicationReportText">Gunakan versi HTML untuk membaca laporan secara interaktif. Versi PDF disediakan untuk arsip, dokumentasi, dan kebutuhan administrasi program studi.</p>
+            <div class="collaboration-publication-actions">
+              <a href="publikasi-mahasiswa-dosen/laporan-kolaborasi-dosen-mahasiswa.html" target="_blank" rel="noopener" data-i18n="collabPublicationOpenHtml">Buka Laporan HTML</a>
+              <a href="publikasi-mahasiswa-dosen/laporan-kolaborasi-dosen-mahasiswa.pdf" target="_blank" rel="noopener" data-i18n="collabPublicationOpenPdf">Buka PDF</a>
+            </div>
+          </div>
+          <div class="collaboration-publication-visual" aria-hidden="true">
+            <div class="collaboration-node faculty">Dosen</div>
+            <div class="collaboration-line"></div>
+            <div class="collaboration-node student">Mahasiswa</div>
+            <div class="collaboration-tags">
+              <span>Riset</span>
+              <span>Publikasi</span>
+              <span>Pendampingan</span>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -2537,7 +2581,7 @@
     </div>
   </footer>
 
-  <script src="assets/app.js?v=pbm-genap-20260808" defer></script>
+  <script src="assets/app.js?v=faculty-student-collab-20260809" defer></script>
   <script src="assets/student-cohort.js?v=separate-exchange-gpa-20260729" defer></script>
   <script src="assets/chatbot-fix.js?v=jalur-masuk-fast-track-20260729" defer></script>
   <script>
