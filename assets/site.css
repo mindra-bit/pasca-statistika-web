@@ -1429,6 +1429,7 @@ html[lang="en"] .inspiration-voice-lang-id {
 .workspace-panels > .scholarship-section,
 .workspace-panels > .lamsama-section,
 .workspace-panels > .pkm-section,
+.workspace-panels > .research-roadmap-section,
 .workspace-panels > .research-grant-section,
 .workspace-panels > .faculty-publication-section,
 .workspace-panels > .collaboration-publication-section,
@@ -10109,6 +10110,215 @@ tbody tr:hover td {
   background:
     radial-gradient(circle at 12% 18%, rgba(242, 189, 78, 0.18), transparent 32%),
     linear-gradient(180deg, #f7faf9 0%, #ffffff 100%);
+}
+
+.research-roadmap-section {
+  background:
+    radial-gradient(circle at 8% 14%, rgba(242, 179, 24, 0.2), transparent 34%),
+    radial-gradient(circle at 92% 18%, rgba(15, 118, 110, 0.18), transparent 30%),
+    linear-gradient(180deg, #f8fbfb 0%, #ffffff 100%);
+}
+
+.research-roadmap-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
+  gap: 24px;
+  align-items: stretch;
+  margin-bottom: 18px;
+}
+
+.research-roadmap-copy,
+.research-roadmap-summary,
+.research-roadmap-card {
+  border: 1px solid rgba(221, 210, 193, 0.92);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 18px 42px rgba(20, 61, 93, 0.1);
+}
+
+.research-roadmap-copy {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(24px, 4vw, 40px);
+}
+
+.research-roadmap-copy::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 7px;
+  background: linear-gradient(90deg, #143d5d, #0f766e, #f2b318, #d76b32);
+}
+
+.research-roadmap-copy h2 {
+  max-width: 860px;
+  margin-top: 8px;
+  color: var(--ink);
+  font-size: clamp(30px, 4vw, 50px);
+  line-height: 1.06;
+}
+
+.research-roadmap-copy p:last-of-type {
+  max-width: 900px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.research-roadmap-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.research-roadmap-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 15px;
+  border: 1px solid #143d5d;
+  border-radius: 7px;
+  background: #143d5d;
+  color: #fff;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.research-roadmap-actions a + a {
+  border-color: #f2b318;
+  background: #f2b318;
+  color: #172338;
+}
+
+.research-roadmap-summary {
+  display: grid;
+  gap: 0;
+  overflow: hidden;
+}
+
+.research-roadmap-summary div {
+  display: grid;
+  align-content: center;
+  gap: 8px;
+  padding: 24px;
+  background: linear-gradient(135deg, #143d5d, #0f766e);
+  color: #fff;
+}
+
+.research-roadmap-summary div:nth-child(2) {
+  background: linear-gradient(135deg, #0f766e, #7b9141);
+}
+
+.research-roadmap-summary div:nth-child(3) {
+  background: linear-gradient(135deg, #f2b318, #d76b32);
+  color: #172338;
+}
+
+.research-roadmap-summary span {
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.research-roadmap-summary strong {
+  font-size: clamp(24px, 3vw, 38px);
+  line-height: 1;
+}
+
+.research-roadmap-card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(320px, 1fr);
+  gap: 24px;
+  align-items: center;
+  padding: clamp(22px, 4vw, 34px);
+}
+
+.research-roadmap-badge {
+  display: inline-flex;
+  width: max-content;
+  max-width: 100%;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: #eef6f3;
+  color: #0f766e;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.research-roadmap-card h3 {
+  margin: 14px 0 0;
+  color: var(--ink);
+  font-size: clamp(22px, 3vw, 32px);
+  line-height: 1.18;
+}
+
+.research-roadmap-axis-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.research-roadmap-axis-grid div {
+  display: grid;
+  gap: 12px;
+  min-height: 136px;
+  padding: 18px;
+  border: 1px solid rgba(221, 210, 193, 0.9);
+  border-radius: 10px;
+  background:
+    linear-gradient(135deg, rgba(20, 61, 93, 0.06), rgba(15, 118, 110, 0.08)),
+    #fff;
+}
+
+.research-roadmap-axis-grid span {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: #143d5d;
+  color: #fff;
+  font-weight: 950;
+}
+
+.research-roadmap-axis-grid div:nth-child(2) span {
+  background: #0f766e;
+}
+
+.research-roadmap-axis-grid div:nth-child(3) span {
+  background: #d76b32;
+}
+
+.research-roadmap-axis-grid div:nth-child(4) span {
+  background: #f2b318;
+  color: #172338;
+}
+
+.research-roadmap-axis-grid strong {
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+@media (max-width: 900px) {
+  .research-roadmap-hero,
+  .research-roadmap-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .research-roadmap-actions a {
+    width: 100%;
+  }
+
+  .research-roadmap-axis-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .collaboration-publication-hero {
