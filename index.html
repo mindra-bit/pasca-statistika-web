@@ -77,7 +77,7 @@
 <script>
 (async()=>{
   try{
-    const response=await fetch('index-base.html?v=hki-collaboration-20260810',{cache:'default'});
+    const response=await fetch('index-base.html?v=lamsama-update-data-20260812',{cache:'default'});
     if(!response.ok) throw new Error('Gagal memuat halaman utama');
     let html=await response.text();
     if(window.applyProgramProfileEnhancement) html=window.applyProgramProfileEnhancement(html);

@@ -2879,6 +2879,14 @@ p {
   gap: 3px;
 }
 
+.lamsama-context-actions {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+  min-width: min(100%, 620px);
+}
+
 .lamsama-context span {
   color: var(--muted);
   font-size: 11px;
@@ -2893,6 +2901,7 @@ p {
 
 .lamsama-context button,
 .lamsama-accreditation-cta,
+.lamsama-update-cta,
 .lamsama-card-actions a,
 .lamsama-card-actions button {
   min-height: 40px;
@@ -2926,6 +2935,27 @@ p {
   box-shadow: 0 14px 28px rgba(200, 30, 58, 0.22);
 }
 
+.lamsama-update-cta {
+  position: relative;
+  isolation: isolate;
+  color: #fff;
+  border-color: transparent;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0) 36%),
+    linear-gradient(125deg, #143d5d 0%, #0f766e 58%, #74a33c 120%);
+  box-shadow: 0 14px 28px rgba(15, 118, 110, 0.18);
+}
+
+.lamsama-update-cta::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  border-radius: 999px;
+  background: #f2b318;
+  box-shadow: 0 0 0 4px rgba(242, 179, 24, 0.18);
+}
+
 .lamsama-accreditation-cta::after {
   content: "";
   position: absolute;
@@ -2936,6 +2966,7 @@ p {
 }
 
 .lamsama-login-note {
+  flex: 1 0 100%;
   margin: -3px 0 0;
   color: var(--muted);
   font-size: 12px;
@@ -3075,7 +3106,8 @@ p {
 .lamsama-card-actions a:hover,
 .lamsama-card-actions button:hover,
 .lamsama-context button:hover,
-.lamsama-accreditation-cta:hover {
+.lamsama-accreditation-cta:hover,
+.lamsama-update-cta:hover {
   filter: brightness(1.04);
 }
 
@@ -9493,6 +9525,11 @@ tbody tr:hover td {
     flex-direction: column;
   }
 
+  .lamsama-context-actions {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
   .pkm-context {
     align-items: flex-start;
     flex-direction: column;
@@ -9616,6 +9653,7 @@ tbody tr:hover td {
 
   .lamsama-context button,
   .lamsama-accreditation-cta,
+  .lamsama-update-cta,
   .pkm-context button,
   .scholarship-note button {
     width: 100%;
