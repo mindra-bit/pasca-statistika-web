@@ -170,15 +170,15 @@ const FACTS = {
     sources: [{ page: 23, title: "RPL Kurikulum 2025 Revisi" }]
   },
   visi: {
-    answer: "Visi Prodi Magister Statistika Terapan adalah menjadi pusat pendidikan Magister Statistika yang unggul dalam pendidikan dan riset, diakui secara internasional, serta memberikan dampak nyata bagi masyarakat, khususnya dalam bidang statistika bisnis dan industri, statistika sosial, aktuaria, biostatistika, dan sains data.",
+    answer: "Visi Prodi Magister Statistika Terapan adalah menjadi pusat pendidikan Magister Statistika yang unggul dalam pendidikan dan riset, diakui secara internasional, serta memberikan dampak nyata bagi masyarakat, khususnya dalam bidang statistika bisnis industri, statistika sosial, aktuaria, biostatistik, dan sains data.",
     sources: [{ page: 8, title: "Visi prodi" }]
   },
   misi: {
-    answer: "Misi prodi meliputi penyelenggaraan pendidikan dan pembelajaran magister dengan fokus pengembangan dan penerapan statistika di bisnis industri, sosial, aktuaria, biostatistika, dan sains data; pelaksanaan penelitian yang berdampak; kerja sama nasional dan internasional; serta publikasi ilmiah bereputasi.",
+    answer: "Misi prodi meliputi penyelenggaraan pendidikan dan pembelajaran Magister Statistika dengan fokus pada pengembangan dan penerapan statistika di bidang bisnis industri, sosial, aktuaria, biostatistik, dan sains data; pelaksanaan penelitian yang mendukung pengembangan statistika dan memberikan dampak positif bagi masyarakat; kerja sama nasional dan internasional; serta publikasi ilmiah bereputasi.",
     sources: [{ page: 8, title: "Misi prodi" }]
   },
   visiMisi: {
-    answer: "Visi Prodi Magister Statistika Terapan adalah menjadi pusat pendidikan Magister Statistika yang unggul dalam pendidikan dan riset, diakui secara internasional, serta memberikan dampak nyata bagi masyarakat, khususnya dalam bidang statistika bisnis dan industri, statistika sosial, aktuaria, biostatistika, dan sains data. Misinya meliputi pendidikan dan pembelajaran magister, penelitian yang berdampak, kerja sama nasional dan internasional, serta publikasi ilmiah bereputasi.",
+    answer: "Visi Prodi Magister Statistika Terapan adalah menjadi pusat pendidikan Magister Statistika yang unggul dalam pendidikan dan riset, diakui secara internasional, serta memberikan dampak nyata bagi masyarakat, khususnya dalam bidang statistika bisnis industri, statistika sosial, aktuaria, biostatistik, dan sains data. Misinya meliputi pendidikan dan pembelajaran Magister Statistika, penelitian yang mendukung pengembangan statistika dan berdampak positif bagi masyarakat, kerja sama nasional dan internasional, serta publikasi ilmiah bereputasi.",
     sources: [{ page: 8, title: "Visi dan misi prodi" }]
   },
   profil: {
@@ -642,12 +642,12 @@ const I18N = {
     visionMissionText: "Visi dan misi program studi dirangkum dari dokumen Kurikulum OBE 2025 Edisi Revisi sebagai dasar penyelenggaraan pendidikan, riset, kerja sama, dan publikasi ilmiah.",
     visionLabel: "Visi",
     visionTitle: "Menjadi pusat pendidikan Magister Statistika yang unggul.",
-    visionText: "Menjadi pusat pendidikan Magister Statistika yang unggul dalam pendidikan dan riset, diakui secara internasional, serta memberikan dampak nyata bagi masyarakat, khususnya dalam bidang statistika bisnis dan industri, statistika sosial, aktuaria, biostatistika, dan sains data.",
+    visionText: "Menjadi pusat pendidikan Magister Statistika yang unggul dalam pendidikan dan riset, diakui secara internasional, serta memberikan dampak nyata bagi masyarakat, khususnya dalam bidang statistika bisnis industri, statistika sosial, aktuaria, biostatistik, dan sains data.",
     missionLabel: "Misi",
     missionTitle: "Pendidikan, riset, kerja sama, dan publikasi ilmiah.",
-    mission1: "Menyelenggarakan pendidikan dan pembelajaran magister dengan fokus pengembangan dan penerapan statistika di bisnis dan industri, sosial, aktuaria, biostatistika, dan sains data.",
-    mission2: "Melaksanakan penelitian yang berdampak dan relevan dengan kebutuhan masyarakat serta perkembangan ilmu statistika.",
-    mission3: "Mengembangkan kerja sama nasional dan internasional untuk memperkuat pendidikan, riset, dan jejaring akademik.",
+    mission1: "Menyelenggarakan pendidikan dan pembelajaran Magister Statistika dengan fokus pada pengembangan dan penerapan statistika di bidang bisnis industri, sosial, aktuaria, biostatistik, dan sains data.",
+    mission2: "Melaksanakan penelitian yang mendukung pengembangan statistika dan memberikan dampak positif bagi masyarakat.",
+    mission3: "Menjalin kerja sama dalam bidang pendidikan dan penelitian dengan berbagai pihak di tingkat nasional maupun internasional.",
     mission4: "Mendorong publikasi ilmiah bereputasi sebagai kontribusi program studi pada pengembangan keilmuan.",
     visionSourceTitle: "Sumber",
     visionSourceText: "Dokumen Kurikulum OBE 2025 Edisi Revisi Program Magister Statistika Terapan.",
