@@ -190,7 +190,7 @@ const FACTS = {
     sources: [{ page: 8, title: "CPL 2026" }]
   },
   bahanKajian: {
-    answer: "Bahan kajian Kurikulum OBE 2025 Edisi Revisi meliputi BK1 Statistika Teoritis dan Parametrik, BK2 Statistika Komputasi dan Nonparametrik, BK3 Statistika Terapan Bisnis dan Industri, BK4 Statistika Terapan Sosial, BK5 Statistika Terapan Aktuaria, BK6 Statistika Terapan Biostatistika, BK7 Statistika Terapan Sains Data, dan BK8 Penelitian dan Publikasi.",
+    answer: "Bahan kajian Kurikulum OBE 2025 Edisi Revisi meliputi BK1 Statistika Teoritis dan Parametrik, BK2 Statistika Komputasi dan Nonparametrik, BK3 Statistika Terapan Bisnis dan Industri, BK4 Statistika Terapan Sosial, BK5 Statistika Terapan Aktuaria, BK6 Statistika Terapan Biostatistik, BK7 Statistika Terapan Sains Data, dan BK8 Penelitian dan Publikasi.",
     sources: [{ page: 12, title: "Bahan kajian 2025 Revisi" }]
   },
   mataKuliah: {
