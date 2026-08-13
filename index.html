@@ -17,7 +17,7 @@
 <meta property="og:url" content="https://statistika-unpad.github.io/pasca-statistika-web/">
 <meta property="og:image" content="https://statistika-unpad.github.io/pasca-statistika-web/assets/campus-hero.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preload" href="index-base.html?v=pbm-red-action-20260813" as="fetch">
+<link rel="preload" href="index-base.html?v=pbm-loader-stable-20260813" as="fetch">
 <link rel="preload" href="assets/site.css?v=pbm-red-action-20260813" as="style">
 <link rel="preload" href="assets/app.js?v=pbm-red-action-20260813" as="script">
 <script type="application/ld+json">
@@ -78,9 +78,41 @@
   <p aria-live="polite">Memuat portal akademik…</p>
 </main>
 <script>
+function mountFetchedDocument(html){
+  const parsed=new DOMParser().parseFromString(html,'text/html');
+  const executableScriptTypes=new Set(['','text/javascript','application/javascript','text/ecmascript','application/ecmascript','module']);
+  const scripts=[...parsed.querySelectorAll('script')].filter(script=>executableScriptTypes.has((script.getAttribute('type')||'').trim().toLowerCase()));
+  scripts.forEach(script=>script.remove());
+  document.documentElement.lang=parsed.documentElement.lang||document.documentElement.lang;
+  document.title=parsed.title||document.title;
+  [...document.body.attributes].forEach(attribute=>document.body.removeAttribute(attribute.name));
+  [...parsed.body.attributes].forEach(attribute=>document.body.setAttribute(attribute.name,attribute.value));
+  document.head.replaceChildren(...[...parsed.head.childNodes]);
+  document.body.replaceChildren(...[...parsed.body.childNodes]);
+  const scriptLoads=[];
+  scripts.forEach(script=>{
+    const nextScript=document.createElement('script');
+    [...script.attributes].forEach(attribute=>nextScript.setAttribute(attribute.name,attribute.value));
+    if(!nextScript.type||nextScript.type==='text/javascript') nextScript.async=false;
+    nextScript.textContent=script.textContent||'';
+    if(nextScript.src){
+      scriptLoads.push(new Promise(resolve=>{
+        nextScript.addEventListener('load',resolve,{once:true});
+        nextScript.addEventListener('error',resolve,{once:true});
+      }));
+    }
+    document.body.appendChild(nextScript);
+  });
+  if(document.readyState==='complete'){
+    Promise.race([
+      Promise.all(scriptLoads),
+      new Promise(resolve=>setTimeout(resolve,1800))
+    ]).then(()=>window.dispatchEvent(new Event('load')));
+  }
+}
 (async()=>{
   try{
-    const response=await fetch('index-base.html?v=pbm-red-action-20260813',{cache:'default'});
+    const response=await fetch('index-base.html?v=pbm-loader-stable-20260813',{cache:'default'});
     if(!response.ok) throw new Error('Gagal memuat halaman utama');
     let html=await response.text();
     if(window.applyProgramProfileEnhancement) html=window.applyProgramProfileEnhancement(html);
@@ -167,7 +199,7 @@
     <\/script>`;
     html=html.replace('</body>',enhancementScript+'<script src="assets/visit-us-enhancement.js?v=20260726-bilingual"><\/script><script src="assets/visit-us-image-fix.js?v=20260726-ethics-navigation-v2"><\/script></body>');
     html=html.replace(/assets\/chatbot-fix\.js\?v=[^"']+/,'assets/chatbot-fix.js?v=idle-enhancements-20260813');
-    document.open();document.write(html);document.close();
+    mountFetchedDocument(html);
   }catch(error){document.body.innerHTML='<main style="max-width:760px;margin:80px auto;padding:24px"><h1>Portal belum dapat dimuat</h1><p>'+error.message+'</p><p><a href="index-base.html">Buka halaman utama</a></p></main>'}
 })();
 </script></body></html>
