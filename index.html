@@ -17,9 +17,9 @@
 <meta property="og:url" content="https://statistika-unpad.github.io/pasca-statistika-web/">
 <meta property="og:image" content="https://statistika-unpad.github.io/pasca-statistika-web/assets/campus-hero.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preload" href="index-base.html?v=performance-lazy-load-20260813" as="fetch">
-<link rel="preload" href="assets/site.css?v=pbm-menu-20260813" as="style">
-<link rel="preload" href="assets/app.js?v=performance-lazy-load-20260813" as="script">
+<link rel="preload" href="index-base.html?v=pbm-tree-20260813" as="fetch">
+<link rel="preload" href="assets/site.css?v=pbm-tree-20260813" as="style">
+<link rel="preload" href="assets/app.js?v=pbm-tree-20260813" as="script">
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -80,14 +80,10 @@
 <script>
 (async()=>{
   try{
-    const response=await fetch('index-base.html?v=performance-lazy-load-20260813',{cache:'default'});
+    const response=await fetch('index-base.html?v=pbm-tree-20260813',{cache:'default'});
     if(!response.ok) throw new Error('Gagal memuat halaman utama');
     let html=await response.text();
     if(window.applyProgramProfileEnhancement) html=window.applyProgramProfileEnhancement(html);
-
-    const guideMarker='<a class="curriculum-hub-card thesis-online-guide-hub-card" href="panduan-tesis-online.html" target="_blank" rel="noopener">';
-    const existingCards='<a class="curriculum-hub-card pbm-2024-hub-card" href="dokumen-pbm-2024.html"><span>Dokumen PBM 2024</span><small>289 dokumen per semester dan mata kuliah dalam HTML</small></a><a class="curriculum-hub-card diskusi-tesis-hub-card" href="laporan-diskusi-tesis-ai.html" target="_blank" rel="noopener"><span>Diskusi Tesis</span><small>Laporan HTML, materi kegiatan, dan video dokumentasi tesis</small></a>';
-    if(!html.includes('pbm-2024-hub-card')&&html.includes(guideMarker)) html=html.replace(guideMarker,existingCards+guideMarker);
 
     const academicStyles=`<style>
       .curriculum-featured-stack{display:grid;gap:18px;margin:22px 0 28px}.curriculum-featured-doc{--feature-a:#0c2f55;--feature-b:#c99a2e;--feature-soft:#f8fbff;margin:0;padding:1px;border-radius:22px;background:linear-gradient(135deg,var(--feature-a),var(--feature-b));box-shadow:0 18px 42px rgba(12,47,85,.12)}.curriculum-featured-doc-inner{position:relative;overflow:hidden;background:linear-gradient(135deg,#fff 0%,var(--feature-soft) 100%);border-radius:21px;padding:clamp(20px,4vw,34px);display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,auto);gap:24px;align-items:center}.curriculum-featured-doc-inner:after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:linear-gradient(90deg,var(--feature-a),var(--feature-b));opacity:.72}.curriculum-featured-doc .doc-badge{display:inline-flex;width:max-content;max-width:100%;padding:7px 11px;border-radius:999px;background:color-mix(in srgb,var(--feature-a) 12%,#fff);color:var(--feature-a);font-weight:800;font-size:.78rem;letter-spacing:.05em}.curriculum-featured-doc h3{margin:10px 0 8px;color:#0c2f55;font-size:clamp(1.25rem,2.4vw,1.75rem);line-height:1.25}.curriculum-featured-doc p{margin:0;color:#526274;max-width:850px}.curriculum-featured-actions{display:grid;gap:10px;justify-items:end;align-content:center}.curriculum-featured-actions .featured-action-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}.curriculum-featured-actions a,.curriculum-featured-actions button{display:inline-flex;align-items:center;justify-content:center;padding:11px 15px;border-radius:999px;text-decoration:none;font:inherit;font-weight:800;white-space:nowrap;cursor:pointer}.curriculum-featured-actions .open-pdf{background:#c99a2e;color:#172338;border:1px solid #c99a2e}.curriculum-featured-actions .open-html{background:#0c2f55;color:#fff;border:1px solid #0c2f55}.curriculum-featured-actions .support-link{background:#eef6f3;color:#075343;border:1px solid rgba(7,83,67,.22)}.curriculum-featured-actions .ask-chatbot{background:#fff;color:#0c2f55;border:1px solid #b7c7d5}.curriculum-featured-doc.historical{--feature-a:#0b5f59;--feature-b:#d2a13d;--feature-soft:#f6fbf8}.curriculum-featured-doc.transition{--feature-a:#0c3b5f;--feature-b:#d0a02e;--feature-soft:#fbfaf4}.curriculum-featured-doc.revised{--feature-a:#0c2f55;--feature-b:#1b806b;--feature-soft:#f5fbf9}.curriculum-featured-doc.revised .doc-badge{background:#e4f5ef;color:#11624f}@media(max-width:900px){.curriculum-featured-doc-inner{grid-template-columns:1fr}.curriculum-featured-actions{justify-items:start}.curriculum-featured-actions .featured-action-row{justify-content:flex-start}.curriculum-featured-actions a,.curriculum-featured-actions button{flex:1 1 145px}}@supports not (background:color-mix(in srgb,#000 10%,#fff)){.curriculum-featured-doc .doc-badge{background:#eaf2f8}}
