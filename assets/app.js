@@ -6263,6 +6263,15 @@ function loadScriptOnce(key, src) {
   return promise;
 }
 
+function scheduleIdleTask(task, timeout = 1800) {
+  if (typeof task !== "function") return;
+  if ("requestIdleCallback" in window) {
+    window.requestIdleCallback(task, { timeout });
+  } else {
+    window.setTimeout(task, Math.min(timeout, 900));
+  }
+}
+
 const WORKSPACE_DATA_LOADERS = {
   beasiswa: [["scholarships", loadScholarships]],
   lamsama: [["lamsama-reports", loadLamsamaReports]],
@@ -6285,10 +6294,7 @@ const WORKSPACE_DATA_LOADERS = {
   "special-moment": [["special-moments", loadSpecialMoments]],
   "video-testimoni": [["testimonials", loadTestimonials]],
   "web-s3": [["s3-site", loadS3Site]],
-  komentar: [
-    ["comment-integration", mountCommentIntegration],
-    ["analytics-integration", mountAnalyticsIntegration]
-  ],
+  komentar: [["comment-integration", mountCommentIntegration]],
   mahasiswa: [
     [
       "student-cohort-script",
@@ -6607,3 +6613,4 @@ setActiveWorkspacePanel(
 );
 setupInspirationVoices();
 applyLanguage();
+scheduleIdleTask(() => runLazyDataLoader("analytics-integration", mountAnalyticsIntegration), 2400);
