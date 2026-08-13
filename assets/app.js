@@ -2251,6 +2251,16 @@ function scrollWithinWorkspacePanel(anchorId) {
   activePanel.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
 }
 
+function hydrateWorkspaceFrames(panelId) {
+  const panel = document.getElementById(panelId);
+  if (!panel) return;
+  panel.querySelectorAll("iframe[data-src]").forEach((frame) => {
+    if (!frame.getAttribute("src")) {
+      frame.setAttribute("src", frame.dataset.src || "");
+    }
+  });
+}
+
 function setActiveWorkspacePanel(
   panelId = activeWorkspaceIdFromHash(),
   shouldScroll = false,
@@ -2266,6 +2276,7 @@ function setActiveWorkspacePanel(
   document.querySelectorAll(".workspace-panels > .section").forEach((section) => {
     section.classList.toggle("active-panel", section.id === activeId);
   });
+  hydrateWorkspaceFrames(activeId);
   document.querySelectorAll(".workspace-menu-list [data-workspace-target]").forEach((link) => {
     const linkProgram = link.dataset.programSelect || activeWorkspaceProgram;
     const linkPanelScrollTarget = link.dataset.panelScroll || "";
@@ -2298,6 +2309,7 @@ function setActiveWorkspacePanel(
     window.setTimeout(scrollSubPanel, 180);
     window.setTimeout(scrollSubPanel, 760);
   }
+  loadWorkspacePanelData(activeId);
 }
 
 function placeStudentAchievementsInsideStudentPanel() {
@@ -5942,17 +5954,6 @@ function mergeVisiblePageKnowledge() {
   if (knowledgeCount) knowledgeCount.textContent = String(knowledge.length);
 }
 
-function scheduleKnowledgeLoad() {
-  const start = () => {
-    loadKnowledge().then(() => mergeVisiblePageKnowledge());
-  };
-  if ("requestIdleCallback" in window) {
-    window.requestIdleCallback(start, { timeout: 3500 });
-  } else {
-    window.setTimeout(start, 1400);
-  }
-}
-
 async function loadAlumni() {
   try {
     const response = await fetch("data/alumni.json", { cache: "default" });
@@ -6223,6 +6224,84 @@ async function loadPbmEvaluations() {
     pbmEvaluationsData = { total: 0, documents: [] };
   }
   renderPbmEvaluations();
+}
+
+const lazyDataPromises = new Map();
+
+function runLazyDataLoader(key, loader) {
+  if (!key || typeof loader !== "function") return Promise.resolve();
+  if (lazyDataPromises.has(key)) return lazyDataPromises.get(key);
+  const promise = Promise.resolve()
+    .then(loader)
+    .catch((error) => {
+      console.warn(`Gagal memuat data ${key}:`, error);
+    });
+  lazyDataPromises.set(key, promise);
+  return promise;
+}
+
+function loadScriptOnce(key, src) {
+  if (lazyDataPromises.has(key)) return lazyDataPromises.get(key);
+  const existing = document.querySelector(`script[data-lazy-script="${key}"]`);
+  if (existing) {
+    const resolved = Promise.resolve();
+    lazyDataPromises.set(key, resolved);
+    return resolved;
+  }
+  const promise = new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = src;
+    script.defer = true;
+    script.dataset.lazyScript = key;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`Skrip ${src} tidak dapat dimuat.`));
+    document.body.appendChild(script);
+  }).catch((error) => {
+    console.warn(error.message || error);
+  });
+  lazyDataPromises.set(key, promise);
+  return promise;
+}
+
+const WORKSPACE_DATA_LOADERS = {
+  beasiswa: [["scholarships", loadScholarships]],
+  lamsama: [["lamsama-reports", loadLamsamaReports]],
+  "pks-moa": [["pks-moa", loadPksMoa]],
+  "dokumen-kurikulum": [["curriculum-docs", loadCurriculumDocs]],
+  silabus: [["syllabus", loadSyllabus]],
+  rps: [["rps-docs", loadRpsDocs]],
+  materi: [["materials", loadMaterials]],
+  "panduan-tesis": [["thesis-guides", loadThesisGuides]],
+  "evaluasi-perkuliahan": [["lecture-evaluations", loadLectureEvaluations]],
+  "evaluasi-pbm": [["pbm-evaluations", loadPbmEvaluations]],
+  lulusan: [["alumni", loadAlumni]],
+  "tracer-studi": [
+    ["tracer-studies", loadTracerStudies],
+    ["graduate-user-satisfaction", loadGraduateUserSatisfaction]
+  ],
+  "program-pengabdian": [["pkm-reports", loadPkmReports]],
+  "hibah-riset": [["research-grants", loadResearchGrants]],
+  "publikasi-dosen": [["faculty-publications", loadFacultyPublications]],
+  "special-moment": [["special-moments", loadSpecialMoments]],
+  "video-testimoni": [["testimonials", loadTestimonials]],
+  "web-s3": [["s3-site", loadS3Site]],
+  komentar: [
+    ["comment-integration", mountCommentIntegration],
+    ["analytics-integration", mountAnalyticsIntegration]
+  ],
+  mahasiswa: [
+    [
+      "student-cohort-script",
+      () => loadScriptOnce("student-cohort-script", "assets/student-cohort.js?v=lazy-student-cohort-20260813")
+    ]
+  ],
+  chatbot: [["knowledge-base", loadKnowledge]]
+};
+
+function loadWorkspacePanelData(panelId) {
+  const loaders = WORKSPACE_DATA_LOADERS[panelId];
+  if (!loaders?.length) return Promise.resolve([]);
+  return Promise.allSettled(loaders.map(([key, loader]) => runLazyDataLoader(key, loader)));
 }
 
 async function loadKnowledge() {
@@ -6528,28 +6607,3 @@ setActiveWorkspacePanel(
 );
 setupInspirationVoices();
 applyLanguage();
-mountCommentIntegration();
-mountAnalyticsIntegration();
-const dataLoadTasks = [
-  loadSyllabus(),
-  loadRpsDocs(),
-  loadS3Site(),
-  loadMaterials(),
-  loadThesisGuides(),
-  loadTracerStudies(),
-  loadGraduateUserSatisfaction(),
-  loadSpecialMoments(),
-  loadTestimonials(),
-  loadCurriculumDocs(),
-  loadLamsamaReports(),
-  loadPkmReports(),
-  loadResearchGrants(),
-  loadFacultyPublications(),
-  loadPksMoa(),
-  loadScholarships(),
-  loadLectureEvaluations(),
-  loadPbmEvaluations(),
-  loadAlumni()
-];
-scheduleKnowledgeLoad();
-Promise.allSettled(dataLoadTasks).then(() => mergeVisiblePageKnowledge());
