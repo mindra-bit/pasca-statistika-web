@@ -417,7 +417,6 @@ const workspacePanelIds = [
   "stakeholder-survey",
   "mahasiswa",
   "sharing-session-alumni",
-  "prestasi-mahasiswa",
   "program-pengabdian",
   "hibah-riset",
   "publikasi-dosen",
@@ -447,6 +446,7 @@ const evaluationPanelIds = [
   "evaluasi-project-mahasiswa-2026",
   "output-project-mahasiswa-2026"
 ];
+const learningProcessPanelIds = [...curriculumPanelIds, ...evaluationPanelIds, "lulusan"];
 let activeWorkspaceProgram = "none";
 let activePanelScrollTarget = "";
 let pendingWorkspaceSelection = null;
@@ -488,6 +488,7 @@ const I18N = {
     workspacePksMoa: "PKS-MoA",
     workspaceVisionMission: "Visi dan Misi",
     workspaceGraduateProfile: "Profil Lulusan",
+    workspaceLearningProcess: "Proses Belajar Mengajar",
     programProfileCombinedTitle: "Profil lengkap S2 Statistika Terapan.",
     programProfileCombinedText: "Ringkasan profil program, visi misi, dan profil lulusan ditempatkan dalam satu panel agar informasi awal S2 langsung utuh saat dibuka.",
     milestoneKicker: "Milestone Program",
@@ -506,6 +507,8 @@ const I18N = {
     inspirationOpenOriginal: "Buka pesan asli",
     inspirationRegionLabel: "Kumpulan pesan dan inspirasi",
     workspaceCurriculum: "Kurikulum",
+    workspaceGraduatesOnly: "Lulusan",
+    workspaceThesis: "Tesis",
     workspaceCurriculumDocs: "Dokumen Kurikulum",
     workspaceCourses: "Daftar Mata Kuliah",
     workspaceSyllabus: "Silabus Mata Kuliah",
@@ -525,6 +528,13 @@ const I18N = {
     workspaceTracer: "Tracer Studi",
     workspaceStakeholderSurvey: "Stakeholder Survey",
     workspaceAlumniSharing: "Sharing Session Alumni",
+    learningProcessKicker: "Proses Belajar Mengajar",
+    learningProcessTitle: "Pusat akses proses belajar mengajar S2 Statistika Terapan.",
+    learningProcessText: "Kurikulum, evaluasi akademik, data lulusan, dan layanan tesis ditempatkan dalam satu pintu akses agar perjalanan akademik mahasiswa lebih mudah ditelusuri.",
+    learningProcessCurriculumText: "Struktur, dokumen, mata kuliah, silabus, RPS, materi, pedoman pendidikan, dan panduan AI",
+    learningProcessEvaluationText: "Evaluasi perkuliahan, PBM-Dosen, project mahasiswa, dan output pembelajaran",
+    learningProcessGraduatesText: "Data lulusan, tesis, ringkasan kelulusan, dan capaian studi",
+    learningProcessThesisText: "Panduan tesis, Tesis Online, pedoman sistem, log book, dan penilaian SUR-SKR-SAM",
     stakeholderSurveyKicker: "Stakeholder Survey",
     stakeholderSurveyTitle: "Masukan pemangku kepentingan untuk penguatan kurikulum dan mutu prodi.",
     stakeholderSurveyText: "Survey ini disiapkan untuk menghimpun pandangan dosen, mahasiswa, alumni, pengguna lulusan, mitra, dan pemangku kepentingan lain sebagai bahan evaluasi berkelanjutan Program S2 Statistika Terapan.",
@@ -996,6 +1006,8 @@ const I18N = {
     thesisGuideText: "Rujukan resmi untuk penyusunan naskah tesis, Seminar Usulan Riset, Seminar Kemajuan Riset, dan Sidang Akhir Magister.",
     thesisGuideCountLabel: "dokumen panduan",
     thesisGuideAsk: "Tanyakan panduan ke chatbot",
+    thesisOnlineAccessTitle: "Tesis Online dan Pedoman Sistem",
+    thesisOnlineAccessText: "Akses sistem Tesis Online untuk log book, dokumen, jadwal, dan penilaian SUR-SKR-SAM, serta pedoman penggunaan dua bahasa.",
     academicGuideKicker: "Panduan Akademik",
     academicGuideTitle: "Dokumen akademik S2 Statistika Terapan.",
     academicGuideText: "Dokumen ini ditempatkan sebagai rujukan cepat untuk ketentuan akademik dan SOP penyelenggaraan Program S2 Statistika Terapan.",
@@ -1321,6 +1333,7 @@ const I18N = {
     workspacePksMoa: "Partnerships",
     workspaceVisionMission: "Vision and Mission",
     workspaceGraduateProfile: "Graduate Profile",
+    workspaceLearningProcess: "Teaching and Learning Process",
     programProfileCombinedTitle: "Complete profile of the Applied Statistics Master's Program.",
     programProfileCombinedText: "Program profile, vision and mission, and graduate profile are combined in one panel so the first S2 view feels complete.",
     milestoneKicker: "Program Milestone",
@@ -1339,6 +1352,8 @@ const I18N = {
     inspirationOpenOriginal: "Open original message",
     inspirationRegionLabel: "Messages and inspiration collection",
     workspaceCurriculum: "Curriculum",
+    workspaceGraduatesOnly: "Graduates",
+    workspaceThesis: "Thesis",
     workspaceCurriculumDocs: "Curriculum Documents",
     workspaceCourses: "Course List",
     workspaceSyllabus: "Course Syllabus",
@@ -1364,6 +1379,13 @@ const I18N = {
     workspaceTracer: "Tracer Studies",
     workspaceStakeholderSurvey: "Stakeholder Survey",
     workspaceAlumniSharing: "Alumni Sharing Sessions",
+    learningProcessKicker: "Teaching and Learning Process",
+    learningProcessTitle: "Central access for the Applied Statistics Master's teaching and learning process.",
+    learningProcessText: "Curriculum, academic evaluation, graduate data, and thesis services are organized in one entry point so the student academic journey is easier to follow.",
+    learningProcessCurriculumText: "Structure, documents, courses, syllabi, RPS, materials, education guide, and AI guide",
+    learningProcessEvaluationText: "Course evaluation, PBM-Lecturer evaluation, student projects, and learning outputs",
+    learningProcessGraduatesText: "Graduate data, theses, completion summary, and study achievements",
+    learningProcessThesisText: "Thesis guides, Online Thesis, system guide, log book, and SUR-SKR-SAM assessment",
     stakeholderSurveyKicker: "Stakeholder Survey",
     stakeholderSurveyTitle: "Stakeholder input to strengthen curriculum and program quality.",
     stakeholderSurveyText: "This survey collects perspectives from lecturers, students, alumni, graduate users, partners, and other stakeholders as part of continuous evaluation for the Applied Statistics Master's Program.",
@@ -1829,6 +1851,8 @@ const I18N = {
     thesisGuideText: "Official references for thesis writing, Research Proposal Seminar, Research Progress Seminar, and Master's Final Defense.",
     thesisGuideCountLabel: "guide documents",
     thesisGuideAsk: "Ask the chatbot about guides",
+    thesisOnlineAccessTitle: "Online Thesis and System Guide",
+    thesisOnlineAccessText: "Access the Online Thesis system for log books, documents, schedules, and SUR-SKR-SAM assessment, together with the bilingual user guide.",
     academicGuideKicker: "Academic Guide",
     academicGuideTitle: "Academic documents for the Applied Statistics Master's Program.",
     academicGuideText: "This document is provided as a quick reference for academic regulations and SOPs for the Applied Statistics Master's Program.",
@@ -2175,7 +2199,13 @@ function t(key) {
 }
 
 function normalizeWorkspacePanelId(id) {
-  return id === "panduan-akademik" ? "pedoman-pendidikan" : id;
+  if (id === "panduan-akademik") return "pedoman-pendidikan";
+  if (id === "prestasi-mahasiswa") return "mahasiswa";
+  return id;
+}
+
+function workspacePanelScrollTargetFromHash(id) {
+  return id === "prestasi-mahasiswa" ? "prestasi-mahasiswa" : "";
 }
 
 function groupLabel(value) {
@@ -2240,11 +2270,11 @@ function setActiveWorkspacePanel(
     const linkProgram = link.dataset.programSelect || activeWorkspaceProgram;
     const linkPanelScrollTarget = link.dataset.panelScroll || "";
     const linkTarget = link.dataset.workspaceTarget;
-    const parentCurriculumMatch = linkTarget === "kurikulum" && curriculumPanelIds.includes(activeId);
+    const parentLearningProcessMatch = linkTarget === "kurikulum" && learningProcessPanelIds.includes(activeId);
     const parentEvaluationMatch = linkTarget === "evaluasi" && evaluationPanelIds.includes(activeId);
     const sameProgram = linkProgram === activeWorkspaceProgram;
-    const samePanel = linkTarget === activeId || parentCurriculumMatch || parentEvaluationMatch;
-    const sameSubPanel = parentCurriculumMatch || parentEvaluationMatch
+    const samePanel = linkTarget === activeId || parentLearningProcessMatch || parentEvaluationMatch;
+    const sameSubPanel = parentLearningProcessMatch || parentEvaluationMatch
       ? true
       : activePanelScrollTarget
       ? linkPanelScrollTarget === activePanelScrollTarget
@@ -2268,6 +2298,20 @@ function setActiveWorkspacePanel(
     window.setTimeout(scrollSubPanel, 180);
     window.setTimeout(scrollSubPanel, 760);
   }
+}
+
+function placeStudentAchievementsInsideStudentPanel() {
+  const studentPanel = document.getElementById("mahasiswa");
+  const achievementSection = document.getElementById("prestasi-mahasiswa");
+  if (!studentPanel || !achievementSection || studentPanel.contains(achievementSection)) return;
+  const achievementContainer = achievementSection.querySelector(".container");
+  if (!achievementContainer) return;
+  const wrapper = document.createElement("div");
+  wrapper.className = "student-achievement-embedded";
+  wrapper.id = "prestasi-mahasiswa";
+  wrapper.append(...Array.from(achievementContainer.childNodes));
+  achievementSection.remove();
+  studentPanel.querySelector(".student-cohort-shell")?.appendChild(wrapper);
 }
 
 function setMode(key) {
@@ -6263,12 +6307,13 @@ window.addEventListener("hashchange", () => {
   const id = normalizeWorkspacePanelId(decodeURIComponent(location.hash.replace(/^#/, "")));
   if (workspacePanelIds.includes(id)) {
     const pending = pendingWorkspaceSelection?.target === id ? pendingWorkspaceSelection : null;
+    const rawHashId = decodeURIComponent(location.hash.replace(/^#/, ""));
     pendingWorkspaceSelection = null;
     setActiveWorkspacePanel(
       id,
       true,
       pending?.program || workspaceProgramForPanel(id),
-      pending?.panelScrollTarget || ""
+      pending?.panelScrollTarget || workspacePanelScrollTargetFromHash(rawHashId)
     );
   } else if (id === "home" || !id) {
     pendingWorkspaceSelection = null;
@@ -6470,10 +6515,17 @@ chatForm.addEventListener("submit", (event) => {
 
 const initialWorkspaceHash = decodeURIComponent(location.hash.replace(/^#/, ""));
 const initialWorkspaceId = activeWorkspaceIdFromHash();
-const initialWorkspaceProgram = workspacePanelIds.includes(initialWorkspaceHash)
+placeStudentAchievementsInsideStudentPanel();
+
+const initialWorkspaceProgram = workspacePanelIds.includes(initialWorkspaceId)
   ? workspaceProgramForPanel(initialWorkspaceId, "s2")
   : "none";
-setActiveWorkspacePanel(initialWorkspaceId, workspacePanelIds.includes(initialWorkspaceHash), initialWorkspaceProgram);
+setActiveWorkspacePanel(
+  initialWorkspaceId,
+  workspacePanelIds.includes(initialWorkspaceId),
+  initialWorkspaceProgram,
+  workspacePanelScrollTargetFromHash(initialWorkspaceHash)
+);
 setupInspirationVoices();
 applyLanguage();
 mountCommentIntegration();

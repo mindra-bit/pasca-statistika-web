@@ -22,7 +22,7 @@
   </script>
   <link rel="preload" href="assets/campus-hero.jpg" as="image" />
   <style>:root{--blue:#143d5d;}</style>
-  <link rel="stylesheet" href="assets/site.css?v=pmb-20260813" />
+  <link rel="stylesheet" href="assets/site.css?v=pbm-menu-20260813" />
   <link rel="stylesheet" href="assets/project-evaluation.css?v=project-titles-20260704" />
   <link rel="stylesheet" href="assets/alumni-sharing.css?v=alumni-sharing-leivina-photo-20260715" />
   <link rel="stylesheet" href="assets/student-achievements.css?v=student-achievements-final-20260709" />
@@ -116,15 +116,12 @@
 
           <span class="workspace-menu-group-label">Program Pendidikan</span>
           <a class="workspace-menu-subitem" href="#fasilitas-pembelajaran" data-program-select="s2" data-workspace-target="fasilitas-pembelajaran">Fasilitas Pembelajaran</a>
-          <a class="workspace-menu-subitem" href="#kurikulum" data-program-select="s2" data-workspace-target="kurikulum" data-i18n="workspaceCurriculum">Kurikulum</a>
+          <a class="workspace-menu-subitem" href="#kurikulum" data-program-select="s2" data-workspace-target="kurikulum" data-i18n="workspaceLearningProcess">Proses Belajar Mengajar</a>
           <a class="workspace-menu-subitem" href="#beasiswa" data-program-select="s2" data-workspace-target="beasiswa" data-i18n="workspaceScholarships">Beasiswa</a>
           <a class="workspace-menu-subitem" href="#pmb" data-program-select="s2" data-workspace-target="pmb" data-i18n="workspacePmb">PMB</a>
-          <a class="workspace-menu-subitem" href="#evaluasi" data-program-select="s2" data-workspace-target="evaluasi" data-i18n="workspaceEvaluation">Evaluasi</a>
-          <a class="workspace-menu-subitem" href="#lulusan" data-program-select="s2" data-workspace-target="lulusan" data-i18n="workspaceGraduates">Lulusan &amp; Tesis</a>
+          <a class="workspace-menu-subitem" href="#mahasiswa" data-program-select="s2" data-workspace-target="mahasiswa">Mahasiswa</a>
           <a class="workspace-menu-subitem" href="#tracer-studi" data-program-select="s2" data-workspace-target="tracer-studi" data-i18n="workspaceTracer">Tracer Studi</a>
           <a class="workspace-menu-subitem" href="#stakeholder-survey" data-program-select="s2" data-workspace-target="stakeholder-survey" data-i18n="workspaceStakeholderSurvey">Stakeholder Survey</a>
-          <a class="workspace-menu-subitem" href="#mahasiswa" data-program-select="s2" data-workspace-target="mahasiswa">Mahasiswa</a>
-          <a class="workspace-menu-subitem" href="#prestasi-mahasiswa" data-program-select="s2" data-workspace-target="prestasi-mahasiswa" data-i18n="workspaceStudentAchievements">Prestasi Mahasiswa</a>
 
           <span class="workspace-menu-group-label">Program Penelitian</span>
           <a class="workspace-menu-subitem" href="#roadmap-penelitian" data-program-select="s2" data-workspace-target="roadmap-penelitian" data-i18n="workspaceResearchRoadmap">Roadmap Penelitian</a>
@@ -1358,9 +1355,9 @@
     <section class="section section-muted curriculum-section" id="kurikulum">
       <div class="container">
         <div class="section-head">
-          <p class="section-kicker" data-i18n="curriculumHubKicker">Kurikulum</p>
-          <h2 data-i18n="curriculumHubTitle">Pusat akses Kurikulum S2 Statistika Terapan.</h2>
-          <p data-i18n="curriculumHubText">Struktur kurikulum, dokumen resmi, daftar mata kuliah, silabus, RPS, materi, dan panduan akademik ditempatkan dalam satu pintu akses agar lebih mudah ditelusuri.</p>
+          <p class="section-kicker" data-i18n="learningProcessKicker">Proses Belajar Mengajar</p>
+          <h2 data-i18n="learningProcessTitle">Pusat akses proses belajar mengajar S2 Statistika Terapan.</h2>
+          <p data-i18n="learningProcessText">Kurikulum, evaluasi akademik, data lulusan, dan layanan tesis ditempatkan dalam satu pintu akses agar perjalanan akademik mahasiswa lebih mudah ditelusuri.</p>
         </div>
         <article class="curriculum-activity-feature" aria-labelledby="curriculum-ai-discussion-title">
           <div class="curriculum-activity-copy">
@@ -1376,7 +1373,25 @@
             <small>Dokumentasi kegiatan, bukan dokumen kurikulum resmi.</small>
           </div>
         </article>
-        <div class="curriculum-hub-grid" aria-label="Menu Kurikulum S2">
+        <div class="curriculum-hub-grid learning-process-grid" aria-label="Menu Proses Belajar Mengajar S2">
+          <a class="curriculum-hub-card learning-process-card primary" href="#kurikulum" data-program-select="s2" data-workspace-target="kurikulum" data-panel-scroll="curriculum-structure-overview">
+            <span data-i18n="workspaceCurriculum">Kurikulum</span>
+            <small data-i18n="learningProcessCurriculumText">Struktur, dokumen, mata kuliah, silabus, RPS, materi, pedoman pendidikan, dan panduan AI</small>
+          </a>
+          <a class="curriculum-hub-card learning-process-card evaluation" href="#evaluasi" data-program-select="s2" data-workspace-target="evaluasi">
+            <span data-i18n="workspaceEvaluation">Evaluasi</span>
+            <small data-i18n="learningProcessEvaluationText">Evaluasi perkuliahan, PBM-Dosen, project mahasiswa, dan output pembelajaran</small>
+          </a>
+          <a class="curriculum-hub-card learning-process-card graduates" href="#lulusan" data-program-select="s2" data-workspace-target="lulusan">
+            <span data-i18n="workspaceGraduatesOnly">Lulusan</span>
+            <small data-i18n="learningProcessGraduatesText">Data lulusan, tesis, ringkasan kelulusan, dan capaian studi</small>
+          </a>
+          <a class="curriculum-hub-card learning-process-card thesis" href="#panduan-tesis" data-program-select="s2" data-workspace-target="panduan-tesis">
+            <span data-i18n="workspaceThesis">Tesis</span>
+            <small data-i18n="learningProcessThesisText">Panduan tesis, Tesis Online, pedoman sistem, log book, dan penilaian SUR-SKR-SAM</small>
+          </a>
+        </div>
+        <div class="curriculum-hub-grid curriculum-detail-grid" aria-label="Detail Kurikulum S2">
           <a class="curriculum-hub-card primary" href="#kurikulum" data-program-select="s2" data-workspace-target="kurikulum" data-panel-scroll="curriculum-structure-overview">
             <span data-i18n="curriculumHubStructure">Struktur Kurikulum</span>
             <small data-i18n="curriculumHubStructureText">Jalur kuliah, riset, RPL, dan beban SKS</small>
@@ -1401,17 +1416,9 @@
             <span data-i18n="workspaceMaterials">Materi Mata Kuliah</span>
             <small data-i18n="curriculumHubMaterialsText">Materi HTML, ringkasan, dan kontrak</small>
           </a>
-          <a class="curriculum-hub-card" href="#panduan-tesis" data-program-select="s2" data-workspace-target="panduan-tesis">
-            <span data-i18n="workspaceThesisGuide">Panduan Tesis</span>
-            <small data-i18n="curriculumHubThesisText">Penulisan dan pelaksanaan tesis</small>
-          </a>
           <a class="curriculum-hub-card accent" href="#pedoman-pendidikan" data-program-select="s2" data-workspace-target="pedoman-pendidikan">
             <span data-i18n="workspaceEducationGuide">Pedoman Pendidikan</span>
             <small data-i18n="curriculumHubEducationGuideText">Pedoman Akademik 2022-2025 dan Pedoman Pendidikan 2026-2030</small>
-          </a>
-          <a class="curriculum-hub-card thesis-online-hub-card" href="https://script.google.com/a/macros/unpad.ac.id/s/AKfycbwW6WI3A8VNTg9sAsmncazNXyXj63MawuzJBOhbS4J4FCsO9vH0NCLkHyWLq_zN8Un7/exec" target="_blank" rel="noopener">
-            <span data-i18n="workspaceThesisOnline">Tesis Online</span>
-            <small data-i18n="curriculumHubThesisOnlineText">Log book, dokumen, jadwal, dan penilaian SUR-SKR-SAM</small>
           </a>
           <a class="curriculum-hub-card pbm-2024-hub-card" href="dokumen-pbm-2024.html">
             <span>Dokumen PBM 2024</span>
@@ -1424,10 +1431,6 @@
           <a class="curriculum-hub-card obe-report-hub-card" href="https://drive.google.com/file/d/1G5isyXG-R-pPwo51lRBCdc2A2OhPHsou/view?usp=sharing" target="_blank" rel="noopener">
             <span data-i18n="workspaceObeReport">Laporan OBE</span>
             <small data-i18n="curriculumHubObeReportText">Laporan pendukung implementasi Kurikulum OBE</small>
-          </a>
-          <a class="curriculum-hub-card thesis-online-guide-hub-card" href="panduan-tesis-online.html" target="_blank" rel="noopener">
-            <span data-i18n="workspaceThesisOnlineGuide">Pedoman Tesis Online</span>
-            <small data-i18n="curriculumHubThesisOnlineGuideText">Panduan penggunaan sistem Tesis Online dua bahasa</small>
           </a>
         </div>
         <div class="curriculum-structure-panel" id="curriculum-structure-overview">
@@ -1599,6 +1602,20 @@
         <div class="guide-toolbar">
           <span><strong id="thesisGuideCount">2</strong> <span data-i18n="thesisGuideCountLabel">dokumen panduan</span></span>
           <a href="#chatbot" data-i18n="thesisGuideAsk">Tanyakan panduan ke chatbot</a>
+        </div>
+        <div class="thesis-service-grid" aria-label="Layanan Tesis Online">
+          <article class="guide-card thesis-service-card">
+            <div class="guide-card-head">
+              <span class="badge">ONLINE</span>
+              <span>SUR · SKR · SAM</span>
+            </div>
+            <h3 data-i18n="thesisOnlineAccessTitle">Tesis Online dan Pedoman Sistem</h3>
+            <p data-i18n="thesisOnlineAccessText">Akses sistem Tesis Online untuk log book, dokumen, jadwal, dan penilaian SUR-SKR-SAM, serta pedoman penggunaan dua bahasa.</p>
+            <div class="guide-actions">
+              <a href="https://script.google.com/a/macros/unpad.ac.id/s/AKfycbwW6WI3A8VNTg9sAsmncazNXyXj63MawuzJBOhbS4J4FCsO9vH0NCLkHyWLq_zN8Un7/exec" target="_blank" rel="noopener" data-i18n="openThesisOnline">Buka Tesis Online</a>
+              <a href="panduan-tesis-online.html" target="_blank" rel="noopener" data-i18n="workspaceThesisOnlineGuide">Pedoman Tesis Online</a>
+            </div>
+          </article>
         </div>
         <div class="guide-grid" id="thesisGuideRows" aria-live="polite"></div>
       </div>
@@ -2847,7 +2864,7 @@
     </div>
   </footer>
 
-  <script src="assets/app.js?v=pmb-20260813" defer></script>
+  <script src="assets/app.js?v=pbm-menu-20260813" defer></script>
   <script src="assets/student-cohort.js?v=separate-exchange-gpa-20260729" defer></script>
   <script src="assets/chatbot-fix.js?v=chatbot-page-knowledge-20260809" defer></script>
 </body>
