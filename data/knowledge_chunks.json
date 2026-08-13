@@ -4186,7 +4186,7 @@
     "title": "Berita Perwalian Mahasiswa",
     "sourceTitle": "Mahasiswa - Berita Perwalian",
     "sourceUrl": "#mahasiswa",
-    "text": "Blok Mahasiswa memuat Berita Perwalian Mahasiswa untuk angkatan 2024 dan 2025. Berita perwalian adalah dokumentasi kegiatan akademik, arahan studi, monitoring kesiapan tesis, dan komunikasi program studi dengan mahasiswa. Tersedia 6 berita: Angkatan 2025 semester 1, 2, 3 dan Angkatan 2024 semester 1, 2, 3. Semua berita dapat dibuka dari bagian Mahasiswa pada website."
+    "text": "Blok Mahasiswa memuat Berita Perwalian Mahasiswa untuk angkatan 2024, 2025, dan 2026. Berita perwalian adalah dokumentasi kegiatan akademik, arahan studi, monitoring kesiapan tesis, dan komunikasi program studi dengan mahasiswa. Tersedia 7 berita: Angkatan 2026 semester 1; Angkatan 2025 semester 1, 2, 3; serta Angkatan 2024 semester 1, 2, 3. Semua berita dapat dibuka dari bagian Mahasiswa pada website."
   },
   {
     "id": "student-advising-news-2025-s1",
@@ -4229,5 +4229,19 @@
     "sourceTitle": "Berita Perwalian Angkatan 2024 Semester 3",
     "sourceUrl": "berita-perwalian/angkatan-2024/semester-3/",
     "text": "Berita Perwalian Angkatan 2024 Semester 3 memuat monitoring kesiapan tesis, publikasi, dan penyelesaian studi tepat waktu."
+  },
+  {
+    "id": "pmb-2026-main-document",
+    "title": "PMB S2 Statistika Terapan Angkatan 2026",
+    "sourceTitle": "Dokumen PMB 2026",
+    "sourceUrl": "pmb/pmb-s2-statistika-unpad-2026.html",
+    "text": "Dokumen PMB S2 Statistika Terapan Angkatan 2026 tersedia di blok PMB. Dokumen ini berjudul S2 Statistika Terapan FMIPA Unpad Sambut Mahasiswa Baru Angkatan 2026 dan memuat rangkaian penerimaan mahasiswa baru tingkat fakultas, orientasi Program Studi, strategi studi 1,5 tahun, serta dokumentasi ramah tamah mahasiswa baru di Kiara Payung. Link dokumen: pmb/pmb-s2-statistika-unpad-2026.html."
+  },
+  {
+    "id": "student-advising-news-2026-s1",
+    "title": "Perwalian Semester 1 Ganjil 2026/2027",
+    "sourceTitle": "Berita Perwalian Angkatan 2026 Semester 1",
+    "sourceUrl": "berita-perwalian/angkatan-2026/semester-1/",
+    "text": "Berita Perwalian Semester 1 Ganjil 2026/2027 untuk mahasiswa Angkatan 2026 memuat perwalian mahasiswa baru, penguatan kesiapan studi, pemahaman kurikulum, dan ritme akademik semester pertama. Kegiatan ini berlangsung pada 13 Agustus 2026 dan tersedia di blok Mahasiswa."
   }
 ]

@@ -77,7 +77,7 @@
 <script>
 (async()=>{
   try{
-    const response=await fetch('index-base.html?v=academic-calendar-pdf-20260812',{cache:'default'});
+    const response=await fetch('index-base.html?v=pmb-perwalian-20260813',{cache:'default'});
     if(!response.ok) throw new Error('Gagal memuat halaman utama');
     let html=await response.text();
     if(window.applyProgramProfileEnhancement) html=window.applyProgramProfileEnhancement(html);

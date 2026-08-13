@@ -2834,6 +2834,227 @@ p {
   filter: brightness(1.04);
 }
 
+.pmb-section {
+  background:
+    radial-gradient(circle at 8% 18%, rgba(242, 169, 0, 0.12), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, #f3f8f7 54%, #ffffff 100%);
+}
+
+.pmb-hero {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 250px;
+  gap: 24px;
+  align-items: end;
+  border-radius: 8px;
+  padding: 28px;
+  color: #fff;
+  background:
+    linear-gradient(135deg, rgba(20, 61, 93, 0.99), rgba(14, 107, 88, 0.95) 62%, rgba(242, 169, 0, 0.96) 138%),
+    #143d5d;
+  box-shadow: 0 20px 42px rgba(20, 61, 93, 0.18);
+}
+
+.pmb-hero::after {
+  content: "";
+  position: absolute;
+  right: -110px;
+  top: -160px;
+  width: 320px;
+  height: 320px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  box-shadow:
+    0 0 0 58px rgba(255, 255, 255, 0.045),
+    0 0 0 116px rgba(255, 255, 255, 0.028);
+}
+
+.pmb-hero-copy,
+.pmb-summary {
+  position: relative;
+  z-index: 1;
+}
+
+.pmb-hero .section-kicker {
+  color: #15334a;
+  background: #ffe091;
+}
+
+.pmb-hero h2 {
+  max-width: 880px;
+  margin-bottom: 12px;
+  color: #fff;
+  font-size: clamp(30px, 3.2vw, 46px);
+}
+
+.pmb-hero p:not(.section-kicker) {
+  max-width: 850px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 15px;
+}
+
+.pmb-summary {
+  display: grid;
+  gap: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.11);
+  backdrop-filter: blur(10px);
+}
+
+.pmb-summary span,
+.pmb-summary small {
+  color: #ffe091;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pmb-summary strong {
+  color: #fff;
+  font-size: 48px;
+  line-height: 0.95;
+}
+
+.pmb-quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.pmb-quick-actions a,
+.pmb-quick-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  border: 1px solid #143d5d;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 900;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pmb-quick-actions button {
+  color: #143d5d;
+  background: #fff;
+}
+
+.pmb-quick-actions a {
+  color: #fff;
+  background: #143d5d;
+}
+
+.pmb-grid {
+  display: grid;
+  grid-template-columns: 1.24fr repeat(2, minmax(0, 0.88fr));
+  gap: 15px;
+}
+
+.pmb-card {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  gap: 12px;
+  min-height: 252px;
+  border: 1px solid rgba(221, 210, 193, 0.92);
+  border-radius: 8px;
+  padding: 22px;
+  background: #fff;
+  box-shadow: 0 15px 32px rgba(23, 23, 23, 0.08);
+}
+
+.pmb-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 5px;
+  background: linear-gradient(90deg, #143d5d, #0e6b58, #f2a900);
+}
+
+.pmb-card-featured {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(242, 169, 0, 0.13), transparent 38%),
+    linear-gradient(145deg, #ffffff, #f3faf8);
+}
+
+.pmb-card-head,
+.pmb-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.pmb-card-head {
+  justify-content: space-between;
+}
+
+.pmb-card-head .badge {
+  color: #fff;
+  background: #143d5d;
+}
+
+.pmb-card h3 {
+  margin: 0;
+  color: #143d5d;
+  font-size: clamp(22px, 2.2vw, 30px);
+  line-height: 1.18;
+}
+
+.pmb-card:not(.pmb-card-featured) h3 {
+  font-size: 21px;
+}
+
+.pmb-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.pmb-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-self: end;
+  margin-top: auto;
+}
+
+.pmb-card-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  border: 1px solid var(--green);
+  border-radius: 6px;
+  padding: 9px 12px;
+  color: #fff;
+  background: var(--green);
+  font-size: 12px;
+  font-weight: 900;
+  text-align: center;
+  text-decoration: none;
+}
+
+.pmb-quick-actions a:hover,
+.pmb-quick-actions button:hover,
+.pmb-card-actions a:hover {
+  filter: brightness(1.04);
+}
+
 .lamsama-section {
   background:
     linear-gradient(180deg, #ffffff 0%, #f4f8f8 52%, #ffffff 100%),
@@ -9256,6 +9477,7 @@ tbody tr:hover td {
   .stakeholder-dashboard-panel,
   .curriculum-infographic-card,
   .scholarship-hero,
+  .pmb-hero,
   .lamsama-hero,
   .pkm-hero,
   .research-grant-hero,
@@ -9295,6 +9517,7 @@ tbody tr:hover td {
   .guide-grid,
   .curriculum-doc-grid,
   .scholarship-grid,
+  .pmb-grid,
   .lamsama-grid,
   .pkm-grid,
   .research-grant-grid,
@@ -9494,6 +9717,7 @@ tbody tr:hover td {
   .guide-grid,
   .curriculum-doc-grid,
   .scholarship-grid,
+  .pmb-grid,
   .lamsama-grid,
   .pkm-grid,
   .research-grant-grid,
@@ -9525,6 +9749,21 @@ tbody tr:hover td {
 
   .program-profile-block .role-grid {
     grid-template-columns: 1fr;
+  }
+
+  .pmb-hero,
+  .pmb-card {
+    padding: 20px;
+  }
+
+  .pmb-summary strong {
+    font-size: 40px;
+  }
+
+  .pmb-quick-actions a,
+  .pmb-quick-actions button,
+  .pmb-card-actions a {
+    width: 100%;
   }
 
   .testimonial-card.portrait {
