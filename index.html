@@ -3034,7 +3034,8 @@
         if(captionId) captionId.hidden=lang==='en';
         if(captionEn) captionEn.hidden=lang!=='en';
         const pmbLink=document.querySelector('.workspace-menu-s2 [data-workspace-target="pmb"]');
-        if(pmbLink) pmbLink.textContent=lang==='en'?'Admissions':'PMB';
+        const pmbLabel=lang==='en'?'Admissions':'PMB';
+        if(pmbLink&&pmbLink.textContent!==pmbLabel) pmbLink.textContent=pmbLabel;
       };
       const ensurePmbMainMenu=()=>{
         const menu=document.querySelector('.workspace-menu-s2');
