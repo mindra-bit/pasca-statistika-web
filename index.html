@@ -777,6 +777,7 @@
             <button type="button" data-q-id="Apa saja dokumen akreditasi LAMSAMA yang tersedia?" data-q-en="Which LAMSAMA accreditation documents are available?" data-i18n="lamsamaAsk">Tanyakan LAMSAMA ke chatbot</button>
             <a class="lamsama-accreditation-cta" href="https://script.google.com/a/macros/unpad.ac.id/s/AKfycbxxXHMYypnfILy56pnZLaHq8r-UtssYvmC9ke0jG3Snr6pwkPwfkrpbyVee5XTvKLbj/exec" target="_blank" rel="noopener" data-i18n="lamsamaAccreditation2027">Persiapan Akreditasi 2027</a>
             <a class="lamsama-update-cta" href="https://script.google.com/a/macros/unpad.ac.id/s/AKfycby86guOT1S2aGnB6HyFKr12LQBdloaUY81wqygfoGDZvRA0zOCg0HM2AceZiTVzvNFPnA/exec" target="_blank" rel="noopener" data-i18n="lamsamaUpdateData">Update Data LAMSAMA</a>
+            <a class="lamsama-update-cta" href="https://script.google.com/a/macros/unpad.ac.id/s/AKfycbz3uAz8txjskrTT3VcsV4vB1kzBibCiFfMSS7QUd483VssUUl_NdyNl_3Hx3W-P7uSgOA/exec" target="_blank" rel="noopener">Dokumen Sumber LAMSAMA</a>
             <p class="lamsama-login-note" data-i18n="lamsamaLoginNote">Akses internal: halaman berikutnya akan meminta email dan password khusus.</p>
           </div>
         </div>
@@ -1141,6 +1142,25 @@
               <span>Risiko Gempa</span>
               <span>Reasuransi</span>
             </div>
+          </div>
+        </article>
+        <article class="collaboration-publication-card collaboration-workshop-card">
+          <div class="collaboration-publication-report">
+            <span class="collaboration-publication-badge">Coaching Riset</span>
+            <h3>Penguatan Kompetensi Riset S2 Statistika Terapan</h3>
+            <p>Berita dan dokumentasi kegiatan coaching riset tanggal 15 Agustus 2026 untuk membantu mahasiswa mematangkan metodologi, kontribusi ilmiah, dan kesiapan menuju Seminar Usulan Riset.</p>
+            <div class="collaboration-workshop-meta" aria-label="Ringkasan coaching riset">
+              <span><strong>Tanggal</strong>15 Agustus 2026</span>
+              <span><strong>Kegiatan</strong>Coaching Riset</span>
+              <span><strong>Program</strong>S2 Statistika Terapan</span>
+            </div>
+            <div class="collaboration-publication-actions">
+              <a href="berita-coaching-riset-15-agustus-2026.html" target="_blank" rel="noopener">Buka Berita Coaching Riset</a>
+            </div>
+          </div>
+          <div class="collaboration-publication-visual collaboration-workshop-visual" aria-hidden="true">
+            <div class="workshop-risk-orbit"><span>Riset</span><strong>2026</strong></div>
+            <div class="workshop-risk-tags"><span>Metodologi</span><span>Kontribusi Ilmiah</span><span>SUR</span></div>
           </div>
         </article>
       </div>
@@ -1538,6 +1558,10 @@
                   <span data-i18n="workspacePbmEvaluation">Evaluasi PBM-Dosen</span>
                   <small data-i18n="evaluationHubPbmText">Arsip evaluasi proses belajar mengajar dan kinerja dosen per semester</small>
                 </a>
+                <a class="learning-tree-link" href="https://script.google.com/a/macros/unpad.ac.id/s/AKfycbxiiVM0AD64V3ch5ZUjD2yGV8WIUDxfK09omTOIo11ICQNBWF6V_EvWWZruCltVLqTy/exec" target="_blank" rel="noopener">
+                  <span>Evaluasi PBM Per Pertemuan</span>
+                  <small>Form monitoring pelaksanaan perkuliahan sesi 1–16</small>
+                </a>
               </div>
             </article>
 
@@ -1886,6 +1910,10 @@
           <a class="curriculum-hub-card evaluation-hub-card accent" href="#evaluasi-pbm" data-program-select="s2" data-workspace-target="evaluasi-pbm">
             <span data-i18n="workspacePbmEvaluation">Evaluasi PBM-Dosen</span>
             <small data-i18n="evaluationHubPbmText">Arsip evaluasi proses belajar mengajar dan kinerja dosen per semester</small>
+          </a>
+          <a class="curriculum-hub-card evaluation-hub-card primary" href="https://script.google.com/a/macros/unpad.ac.id/s/AKfycbxiiVM0AD64V3ch5ZUjD2yGV8WIUDxfK09omTOIo11ICQNBWF6V_EvWWZruCltVLqTy/exec" target="_blank" rel="noopener">
+            <span>Evaluasi PBM Per Pertemuan</span>
+            <small>Form monitoring dan evaluasi pelaksanaan perkuliahan sesi 1–16</small>
           </a>
           <a class="curriculum-hub-card evaluation-hub-card project" href="#evaluasi-project-mahasiswa-2026" data-program-select="s2" data-workspace-target="evaluasi-project-mahasiswa-2026">
             <span data-i18n="workspaceProjectEvaluation">Evaluasi Project Mahasiswa 2026</span>
@@ -3003,7 +3031,8 @@
     </div>
   </footer>
 
-  <script src="assets/app.js?v=pbm-red-action-20260813" defer></script>
+  <script src="assets/student-cohort.js?v=student-stats-interactive-20260815" data-lazy-script="student-cohort-script" defer></script>
+  <script src="assets/app.js?v=student-stats-interactive-20260815" defer></script>
   <script>
     window.addEventListener("load", () => {
       const loadEnhancements = () => {
