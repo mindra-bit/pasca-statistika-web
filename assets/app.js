@@ -6334,7 +6334,7 @@ const WORKSPACE_DATA_LOADERS = {
   mahasiswa: [
     [
       "student-cohort-script",
-      () => loadScriptOnce("student-cohort-script", "assets/student-cohort.js?v=lazy-student-cohort-20260813")
+      () => loadScriptOnce("student-cohort-script", "assets/student-cohort.js?v=student-stats-20260815")
     ]
   ],
   chatbot: [["knowledge-base", loadKnowledge]]
