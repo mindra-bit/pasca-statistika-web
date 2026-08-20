@@ -1,0 +1,822 @@
+{
+  "version": 1,
+  "iterations": 250000,
+  "records": [
+    {
+      "npmHash": "b8c8d22d2fd6c3af9f31aa79b0632d42cc907cee6b7d737d0b89021b5f3e5876",
+      "cohort": 2022,
+      "file": "Angkatan_2022/b8c8d22d2fd6c3af9f31aa79.portfolio",
+      "salt": "idKSgXh6sqS7c7iXuJLSkw==",
+      "iv": "7DWdeTUmf3bByYYY",
+      "size": 696336
+    },
+    {
+      "npmHash": "28186f91f36e5e84bd75aa7d9d434122426b0a42f1822b16a981795b7c3f3ef7",
+      "cohort": 2022,
+      "file": "Angkatan_2022/28186f91f36e5e84bd75aa7d.portfolio",
+      "salt": "LNUwbyDbFeBCbC3vZ0OsBQ==",
+      "iv": "XrnAE2Z+YqO4lKkv",
+      "size": 693440
+    },
+    {
+      "npmHash": "8b74889e25cd5d6be2fc9bd75704b0be4e4ea530f512ed219c195acf3168d82f",
+      "cohort": 2022,
+      "file": "Angkatan_2022/8b74889e25cd5d6be2fc9bd7.portfolio",
+      "salt": "jafEDiIPl1YGWu4iqzm4Jw==",
+      "iv": "KbYHNiy4RFLNgJK9",
+      "size": 691455
+    },
+    {
+      "npmHash": "9de3c49bb2932aef7a8c8fa6827bd06ec7545d19a284096bd96fe1716811f867",
+      "cohort": 2022,
+      "file": "Angkatan_2022/9de3c49bb2932aef7a8c8fa6.portfolio",
+      "salt": "izD3X/AElkOUvdDXLyePsw==",
+      "iv": "G3yAkWrrEY9Mvice",
+      "size": 684169
+    },
+    {
+      "npmHash": "e03efd44539224f88d95591ab1bbf9771053aae9a8cbebd859e665ef0696659b",
+      "cohort": 2022,
+      "file": "Angkatan_2022/e03efd44539224f88d95591a.portfolio",
+      "salt": "6575874vEYprZ9LQntbHgg==",
+      "iv": "Aos9aZGOcnjo7srp",
+      "size": 674410
+    },
+    {
+      "npmHash": "2d38a09b25e73b5a5857cbc6cbd95f458c71a8474d97c0bdb58df229e3e8acbb",
+      "cohort": 2022,
+      "file": "Angkatan_2022/2d38a09b25e73b5a5857cbc6.portfolio",
+      "salt": "ky65DBLat++x9Rx5lp7bjA==",
+      "iv": "H/mbwlX1qSAg4+Fg",
+      "size": 666625
+    },
+    {
+      "npmHash": "b0e54b9e45af846e204c171634c3862ea04cc36f35981069a253e250bbb3c6ce",
+      "cohort": 2022,
+      "file": "Angkatan_2022/b0e54b9e45af846e204c1716.portfolio",
+      "salt": "k8xkvck1lJUA9DLeJZ2gqg==",
+      "iv": "oRBtADaFw35djqfj",
+      "size": 669233
+    },
+    {
+      "npmHash": "5577a9b7ba425a7d884c089c58edae1e491fbde00cf6a3c58b642093a4884555",
+      "cohort": 2022,
+      "file": "Angkatan_2022/5577a9b7ba425a7d884c089c.portfolio",
+      "salt": "jwx5igZAUgPtvV7KC3k6SA==",
+      "iv": "z2MkH4RwWmqWkpTw",
+      "size": 672560
+    },
+    {
+      "npmHash": "75f0b2117ce878d91b55ce39633583dc9efecb10bcd74de8de3aba4c4de7c820",
+      "cohort": 2022,
+      "file": "Angkatan_2022/75f0b2117ce878d91b55ce39.portfolio",
+      "salt": "9YHcZGpzDkFA0Yd/q85HxQ==",
+      "iv": "FNXNVI5iGyFSIih9",
+      "size": 704485
+    },
+    {
+      "npmHash": "b5af570bc69233e9919ec7cf4565e3673626283158d2b2ec87fe68cfa2df2c47",
+      "cohort": 2022,
+      "file": "Angkatan_2022/b5af570bc69233e9919ec7cf.portfolio",
+      "salt": "QmP7TB1iARtk7pWjljqLYw==",
+      "iv": "TCS0/a+Al+1NY0Lf",
+      "size": 680207
+    },
+    {
+      "npmHash": "43e57764233eed7fd8cfe3e2b01caac6f8e79f00fac91b90abd4f6e338fdd04e",
+      "cohort": 2022,
+      "file": "Angkatan_2022/43e57764233eed7fd8cfe3e2.portfolio",
+      "salt": "3+3LFGwVayGfShZsSP1tug==",
+      "iv": "YRbmjMhznoKxcbmY",
+      "size": 306766
+    },
+    {
+      "npmHash": "b1a9943f336b37633a23943a39dc30782b02545447f27024e86d9db94cca89c0",
+      "cohort": 2022,
+      "file": "Angkatan_2022/b1a9943f336b37633a23943a.portfolio",
+      "salt": "UmuqizXBmkptYJJY4x1IDw==",
+      "iv": "DRHoRmA3MJJuAqmk",
+      "size": 307692
+    },
+    {
+      "npmHash": "f86c439fddfaee9b98def99c758897fc6f5c74b3e9af8256b5456e0e6bc77453",
+      "cohort": 2022,
+      "file": "Angkatan_2022/f86c439fddfaee9b98def99c.portfolio",
+      "salt": "rWqjumiLdlwUtfKt+jpdNA==",
+      "iv": "0J4bXvGEbRgLGE+7",
+      "size": 196973
+    },
+    {
+      "npmHash": "6fad08c5666e51a8a3d0ddd204a43c5ff9d21023f22ba2ea8c758cad19767498",
+      "cohort": 2022,
+      "file": "Angkatan_2022/6fad08c5666e51a8a3d0ddd2.portfolio",
+      "salt": "IPrnHicXtrIN1bUfpmgJ3Q==",
+      "iv": "nEiIgk9350OESZ/o",
+      "size": 195485
+    },
+    {
+      "npmHash": "0cbeb9d7aae2ec917968e37194e14f31bb4c79ddb42fb463b43a251f305ca0d9",
+      "cohort": 2022,
+      "file": "Angkatan_2022/0cbeb9d7aae2ec917968e371.portfolio",
+      "salt": "5Rzo+iPbw9cZxj/5hOdO9g==",
+      "iv": "T0hOPQno7F0HoQTP",
+      "size": 309459
+    },
+    {
+      "npmHash": "6b25ab06c86c1232078318e168710c688e5e424bc70125aacbc5c31d4a76137a",
+      "cohort": 2022,
+      "file": "Angkatan_2022/6b25ab06c86c1232078318e1.portfolio",
+      "salt": "VNrd2qGBpVjzIFsWo4ITZg==",
+      "iv": "nOWD+Si9Ijzlr7qN",
+      "size": 307441
+    },
+    {
+      "npmHash": "804aed30199dcab37ac5ada00883f3c60f354ea6eb74a78383941a52c02e907d",
+      "cohort": 2022,
+      "file": "Angkatan_2022/804aed30199dcab37ac5ada0.portfolio",
+      "salt": "gXNPX70BsjqnMwkhCbspeQ==",
+      "iv": "l4wruOGOScfJ2rVx",
+      "size": 307426
+    },
+    {
+      "npmHash": "563d68bdfcf61b566d21800b0947e4d7399bcab42649e285178c97d676d0d8d7",
+      "cohort": 2022,
+      "file": "Angkatan_2022/563d68bdfcf61b566d21800b.portfolio",
+      "salt": "RirhPvSVAfRh7VtRnIcUuQ==",
+      "iv": "KZ5w3ouiUn1TF2BH",
+      "size": 195520
+    },
+    {
+      "npmHash": "d1555c556a59b48df437b2b1d8d73c9fa05c13a24dffe1e85c62f06ca230c283",
+      "cohort": 2022,
+      "file": "Angkatan_2022/d1555c556a59b48df437b2b1.portfolio",
+      "salt": "MhXgqB9w8NLqmjVcb66JKw==",
+      "iv": "HPq2AbaiJY6QUc/e",
+      "size": 306786
+    },
+    {
+      "npmHash": "a52df532c40e5352079f6f016120e19a5972639f96943dd6ac709283a9c611f4",
+      "cohort": 2022,
+      "file": "Angkatan_2022/a52df532c40e5352079f6f01.portfolio",
+      "salt": "t401k/pZOBSwVEF/4omajA==",
+      "iv": "8LL+LopL0sPOataU",
+      "size": 306478
+    },
+    {
+      "npmHash": "6ecb853fb940d617f463487971c756e41ac5f7f38223b5be5f4b9b38fa94ca99",
+      "cohort": 2022,
+      "file": "Angkatan_2022/6ecb853fb940d617f4634879.portfolio",
+      "salt": "an0IKlhp3C1ZfK9twU3WGw==",
+      "iv": "LfQUiLq7DKMAZBcY",
+      "size": 194059
+    },
+    {
+      "npmHash": "421c3d5c7b89a1a72fe0a234c6e742c4ef2631f997253586fce70bb766172de3",
+      "cohort": 2022,
+      "file": "Angkatan_2022/421c3d5c7b89a1a72fe0a234.portfolio",
+      "salt": "qqiucK1vZ7QEWRVbPORZXw==",
+      "iv": "Mk3XqlDyrhA9ZHqI",
+      "size": 306613
+    },
+    {
+      "npmHash": "f997434aea329908f4c221b05156337607a904b13d1b810df30b30a5baf4693b",
+      "cohort": 2022,
+      "file": "Angkatan_2022/f997434aea329908f4c221b0.portfolio",
+      "salt": "ifXLhiAnbHO+2w/OSBbxuw==",
+      "iv": "4rMrMy1R1/IIx2Bs",
+      "size": 195934
+    },
+    {
+      "npmHash": "dbbd52c273fbd08e6f7a8eaca9d97122424cdadf4f7c082841cd3881629e55c9",
+      "cohort": 2022,
+      "file": "Angkatan_2022/dbbd52c273fbd08e6f7a8eac.portfolio",
+      "salt": "cO5owTBWIz7JY+cGW2z74A==",
+      "iv": "YJFePimIU7T4Z6g4",
+      "size": 196469
+    },
+    {
+      "npmHash": "2374b13a475f79706d857f785847789bbd61df3fb82d06991c22fec8db876fb2",
+      "cohort": 2022,
+      "file": "Angkatan_2022/2374b13a475f79706d857f78.portfolio",
+      "salt": "aSmt2t4M+/G4Mo5SYvRcSA==",
+      "iv": "iJF8OiV/wBvhkG5l",
+      "size": 198215
+    },
+    {
+      "npmHash": "a87bb8989e01e10599f067f393a680db1881bbe9d1bf58fe10253707d3be7a3b",
+      "cohort": 2022,
+      "file": "Angkatan_2022/a87bb8989e01e10599f067f3.portfolio",
+      "salt": "qxzKJABy2RjRwjTWDSQlrA==",
+      "iv": "Wsi78vUuktEeSPF6",
+      "size": 307393
+    },
+    {
+      "npmHash": "e826be6a14cca8dca2b24070a38214e8dcfc40ddc3b63af15ef3478ccff02ccb",
+      "cohort": 2022,
+      "file": "Angkatan_2022/e826be6a14cca8dca2b24070.portfolio",
+      "salt": "q6O4kxmh+j6WFL2gicjJNQ==",
+      "iv": "BgldNBRmYmxu1DqQ",
+      "size": 195852
+    },
+    {
+      "npmHash": "ab0db42b7fd4fce1606ca140a4b55e322ab5eaf58cf23dd30be43c4ee28b32a4",
+      "cohort": 2022,
+      "file": "Angkatan_2022/ab0db42b7fd4fce1606ca140.portfolio",
+      "salt": "v+l3bkPLD62Bca02jS4Cvw==",
+      "iv": "sxsGDYztynnq9971",
+      "size": 307331
+    },
+    {
+      "npmHash": "4c1c222d2118e5460aa4734fa389651f6c0ed00fbaae8f4e4f6fec4a9cdafca5",
+      "cohort": 2022,
+      "file": "Angkatan_2022/4c1c222d2118e5460aa4734f.portfolio",
+      "salt": "AS1Rh8qAt+3LgUruLW0qVA==",
+      "iv": "lJhZLdgIGw+sbvnI",
+      "size": 307160
+    },
+    {
+      "npmHash": "0503b1545faba879988c3aaa045cf818f19870b477ced181ec4823cb54ffb7a0",
+      "cohort": 2022,
+      "file": "Angkatan_2022/0503b1545faba879988c3aaa.portfolio",
+      "salt": "NNHUS3UbhcKrHablKUwPow==",
+      "iv": "HCnDi4wXBTBsCkFB",
+      "size": 306341
+    },
+    {
+      "npmHash": "4db293deed4a963904b939d18c23caf043b852f0c8a7ede5731167126320ad0b",
+      "cohort": 2022,
+      "file": "Angkatan_2022/4db293deed4a963904b939d1.portfolio",
+      "salt": "Si8n8d3VqLhgDownkaKMtA==",
+      "iv": "aGi4gBI3h4ZlsuZg",
+      "size": 196924
+    },
+    {
+      "npmHash": "1f31280ef28f8a8abed44aa315f1b1dce966c56b77912bae0b0f57ae48802d78",
+      "cohort": 2022,
+      "file": "Angkatan_2022/1f31280ef28f8a8abed44aa3.portfolio",
+      "salt": "Q1gnPOfo4rymb2OtxZLj3A==",
+      "iv": "KXq/s+OC/Fmjz4IK",
+      "size": 194323
+    },
+    {
+      "npmHash": "bfd5cb778321b309436ca858e1b599763cb761ed6b68ac1b8918288170537d17",
+      "cohort": 2022,
+      "file": "Angkatan_2022/bfd5cb778321b309436ca858.portfolio",
+      "salt": "N6c4UNxP+gQTrg2Z0Fjjog==",
+      "iv": "seLPb0GfL61Ruodv",
+      "size": 307657
+    },
+    {
+      "npmHash": "de48d59f56863c11d9a4b02f388b2ff797619ca27a51b674dcd21e3d1f21750b",
+      "cohort": 2022,
+      "file": "Angkatan_2022/de48d59f56863c11d9a4b02f.portfolio",
+      "salt": "MxesCgX/ztiuKvnDwD4GZw==",
+      "iv": "N8yWv75Kkwr4IAKy",
+      "size": 197825
+    },
+    {
+      "npmHash": "9e7f8dd27b633fd10ed6fdaea96942609e35ed906523f3bc97a706165b6719ce",
+      "cohort": 2022,
+      "file": "Angkatan_2022/9e7f8dd27b633fd10ed6fdae.portfolio",
+      "salt": "TEEf72RwNRzgfsrsrSkJ6A==",
+      "iv": "gfxApg23obJwgcD1",
+      "size": 308934
+    },
+    {
+      "npmHash": "7be4931f25f347a898db28f2d4440db5e45d604a5791fb216d42186e813ea0a5",
+      "cohort": 2022,
+      "file": "Angkatan_2022/7be4931f25f347a898db28f2.portfolio",
+      "salt": "J//SAuWJC9Y/ODYEQafyag==",
+      "iv": "GXxsCHlwtMttPgLg",
+      "size": 308421
+    },
+    {
+      "npmHash": "b8354d16388f425432a52785f550f17c4a12e3acb4ec2e9d98524a0933d35666",
+      "cohort": 2022,
+      "file": "Angkatan_2022/b8354d16388f425432a52785.portfolio",
+      "salt": "IvsjkGO7Ee8SLkNi5HB5uw==",
+      "iv": "zXVRIPFDd+keyiHV",
+      "size": 308599
+    },
+    {
+      "npmHash": "66339717b782d191bdc5100319376814fbec3fdfa583d4b6cdb6c802e06f581f",
+      "cohort": 2022,
+      "file": "Angkatan_2022/66339717b782d191bdc51003.portfolio",
+      "salt": "0rvxq1wC9jQ6XhDW7cJp1w==",
+      "iv": "GSRDSQj3JvsMiYX2",
+      "size": 306620
+    },
+    {
+      "npmHash": "0afabbc772a81f6664d82aa93aeef6b61481398fb4404e0d0d49ada6c8a478e0",
+      "cohort": 2022,
+      "file": "Angkatan_2022/0afabbc772a81f6664d82aa9.portfolio",
+      "salt": "bh70VbpTSsf5HzklrDeTZQ==",
+      "iv": "FzJbLNaU1a//Bf1E",
+      "size": 196915
+    },
+    {
+      "npmHash": "d8805762aa938ef3605c05068339ec2fc00326330e321269ef1e8c120c40538c",
+      "cohort": 2022,
+      "file": "Angkatan_2022/d8805762aa938ef3605c0506.portfolio",
+      "salt": "zyetbxWDgs6smYXAquex7A==",
+      "iv": "37vHc3eilpf5BPxO",
+      "size": 305970
+    },
+    {
+      "npmHash": "66dc6d46638214ffda0e5478cdf6bebe26e7b494740864cec4b3057fc2523396",
+      "cohort": 2022,
+      "file": "Angkatan_2022/66dc6d46638214ffda0e5478.portfolio",
+      "salt": "bTUJDY/B/YR+Sfx9SLnAQQ==",
+      "iv": "+IZjz3xdPYCTWTDU",
+      "size": 197685
+    },
+    {
+      "npmHash": "d65055b8029cf6101d69731c35dbc577a6b2268af21f883100c67f903a8db0f6",
+      "cohort": 2022,
+      "file": "Angkatan_2022/d65055b8029cf6101d69731c.portfolio",
+      "salt": "a3ca9/lKbBQc+bDUwsxJ3g==",
+      "iv": "vXNvkM8pLo2roih/",
+      "size": 196338
+    },
+    {
+      "npmHash": "f11cd05416002dd3bceed26b18b1265bcb8fbcaf0658ff43ed316d44af008bc8",
+      "cohort": 2022,
+      "file": "Angkatan_2022/f11cd05416002dd3bceed26b.portfolio",
+      "salt": "fkmKOWhzbR3npFGSeLdekg==",
+      "iv": "+hrLXHR/UgqK5Jk7",
+      "size": 305537
+    },
+    {
+      "npmHash": "69cb7950ce525065138d4454c0bf33738aeae6860bb87a5e1f1f8ea8c0438d33",
+      "cohort": 2022,
+      "file": "Angkatan_2022/69cb7950ce525065138d4454.portfolio",
+      "salt": "Wh3yQ8oPdJ0DQ5aVgKCl7g==",
+      "iv": "jFsLpLBxXoSAqfOp",
+      "size": 309434
+    },
+    {
+      "npmHash": "e22b21787c2ea4cad020e62af6d8d9748470104ee4e18caa93ef940a6cef0dd5",
+      "cohort": 2022,
+      "file": "Angkatan_2022/e22b21787c2ea4cad020e62a.portfolio",
+      "salt": "eq7kF4hZdK4pjY4f7FR7bA==",
+      "iv": "ojo9WB0fWX8/EjSD",
+      "size": 307083
+    },
+    {
+      "npmHash": "de4361c5f6f1c03c8a03ffbfa8012091a3eae9ab0376a8d113673cf92dfd6567",
+      "cohort": 2022,
+      "file": "Angkatan_2022/de4361c5f6f1c03c8a03ffbf.portfolio",
+      "salt": "HCGx9tjtd73oR2ADU1orhg==",
+      "iv": "LqWYak7erCsXnQBJ",
+      "size": 308070
+    },
+    {
+      "npmHash": "ed8b1cc6f11269f467868f4337c5703d69667ed27c5e91480e12dff2f9cd9c84",
+      "cohort": 2022,
+      "file": "Angkatan_2022/ed8b1cc6f11269f467868f43.portfolio",
+      "salt": "xKHhBdGygtkEvHl7ucLQvg==",
+      "iv": "xuSH3hncl73uF6GA",
+      "size": 306458
+    },
+    {
+      "npmHash": "c36a7ac8df47bb6a723ef5465b961501a2c6884f0dc6771bb65affd29bdc5870",
+      "cohort": 2022,
+      "file": "Angkatan_2022/c36a7ac8df47bb6a723ef546.portfolio",
+      "salt": "7W8pddgm3RKaB5f8f8atCw==",
+      "iv": "QMc2JWlmg+zb4ooy",
+      "size": 198986
+    },
+    {
+      "npmHash": "70b5921661d95bd6fe7deafd075131c666defdc827acf4e761d104beb11e76ba",
+      "cohort": 2022,
+      "file": "Angkatan_2022/70b5921661d95bd6fe7deafd.portfolio",
+      "salt": "ifDw4Mzc4XRhmKDFAQxYCA==",
+      "iv": "6LT8H6TbozEgCUUa",
+      "size": 306219
+    },
+    {
+      "npmHash": "e815414f6940a3be324cc5d96c2137507be9a8a826507f1916d777dc99969c9f",
+      "cohort": 2022,
+      "file": "Angkatan_2022/e815414f6940a3be324cc5d9.portfolio",
+      "salt": "uIisulZ70j2O+Athmo0PXg==",
+      "iv": "b/Mvb7HNU/vdiH1n",
+      "size": 196050
+    },
+    {
+      "npmHash": "211adb4ee0fd666162cefa9a12d1fbc01a9e58e874a375e0295f7a6e4e219d24",
+      "cohort": 2022,
+      "file": "Angkatan_2022/211adb4ee0fd666162cefa9a.portfolio",
+      "salt": "3+1QzbQgSY3eeKTCfzZxjg==",
+      "iv": "FxgR8pl5QGyfHgjp",
+      "size": 307481
+    },
+    {
+      "npmHash": "91d23427b36509b013609bbbc9d7144f2144a340929a5ff23edb6c641b215ce2",
+      "cohort": 2023,
+      "file": "Angkatan_2023/91d23427b36509b013609bbb.portfolio",
+      "salt": "htn/EqAhiB8Da9Y0fbVjBQ==",
+      "iv": "meGmgKcO8t64xL0H",
+      "size": 770021
+    },
+    {
+      "npmHash": "9a77811ba4b5ce037606f593154ef056efef8434ae04086bf58c2c33c7489b97",
+      "cohort": 2023,
+      "file": "Angkatan_2023/9a77811ba4b5ce037606f593.portfolio",
+      "salt": "FBzIikt8nJoQlByZ7YUFCQ==",
+      "iv": "1hXm9FzAWdg3UunX",
+      "size": 751373
+    },
+    {
+      "npmHash": "f0ee728c23f51c02728457c705b9e388e912fa557cb1d325c47d147581ce7ac3",
+      "cohort": 2023,
+      "file": "Angkatan_2023/f0ee728c23f51c02728457c7.portfolio",
+      "salt": "yPSVhvoA2+Mnpn7WTBdU8Q==",
+      "iv": "ug9zG8ELIQGVI0Lv",
+      "size": 200941
+    },
+    {
+      "npmHash": "ba30b6aea4d883d92fa13d81eaa9a1613f44d31ba03e82a9933434f1bf2a8bd5",
+      "cohort": 2023,
+      "file": "Angkatan_2023/ba30b6aea4d883d92fa13d81.portfolio",
+      "salt": "XpxEL50W1XYWppWMmDUh5Q==",
+      "iv": "uqmtqn1D75AtwWSC",
+      "size": 752972
+    },
+    {
+      "npmHash": "6ee0c25e3c9c4420f8077b84ec3d805fce3f8ba97d77e08fdc6a55648ed15f92",
+      "cohort": 2023,
+      "file": "Angkatan_2023/6ee0c25e3c9c4420f8077b84.portfolio",
+      "salt": "4p8b9p0aynVjc0tCKk3bGg==",
+      "iv": "hUvG9zdXt8WTOt1r",
+      "size": 761583
+    },
+    {
+      "npmHash": "e7f7706cec82d47a0898b984104417f168f19f28ae320979ff15bb4afe22f262",
+      "cohort": 2023,
+      "file": "Angkatan_2023/e7f7706cec82d47a0898b984.portfolio",
+      "salt": "5GrNeZBLcoxQ+Uw3EUc24g==",
+      "iv": "aL08N47TixEU1sg/",
+      "size": 754843
+    },
+    {
+      "npmHash": "a62f4021977f049cbc02716c2dd5398a7a35ae2109e4347ae4b03f7c2810376c",
+      "cohort": 2023,
+      "file": "Angkatan_2023/a62f4021977f049cbc02716c.portfolio",
+      "salt": "jq+ii1p7DpbqnyVwfiNKbQ==",
+      "iv": "4sJ8SRbOn9kTcaUH",
+      "size": 763112
+    },
+    {
+      "npmHash": "26ba0f83ea2e61a1749a8b7822eb59fe69ddad00699c1a5c0be1253681b20b8f",
+      "cohort": 2023,
+      "file": "Angkatan_2023/26ba0f83ea2e61a1749a8b78.portfolio",
+      "salt": "/Is/98xJww+VuSxZGvLP+Q==",
+      "iv": "D91uZ5bJJQUiIP5C",
+      "size": 755121
+    },
+    {
+      "npmHash": "8ca991271cceb88d4b013d79dfd896145f5008d5a34d493954190ae78a172164",
+      "cohort": 2023,
+      "file": "Angkatan_2023/8ca991271cceb88d4b013d79.portfolio",
+      "salt": "CKbI8gv7bLWzjCRh3QIkpQ==",
+      "iv": "WbKcb1dfZ8n7CZSG",
+      "size": 744075
+    },
+    {
+      "npmHash": "f776b0f2f0a391fbeac0416ddcd6b23c48bb60f3590cf009076a3527fdb96b59",
+      "cohort": 2023,
+      "file": "Angkatan_2023/f776b0f2f0a391fbeac0416d.portfolio",
+      "salt": "nSAzmX2mM6W8zGUvxwTRPQ==",
+      "iv": "zDvhHVu3/UWcHjBD",
+      "size": 764956
+    },
+    {
+      "npmHash": "ac5ab6096ed109748507069c2bae08b2f8a8ee6f4bd5a7201bb41ccd03072af4",
+      "cohort": 2023,
+      "file": "Angkatan_2023/ac5ab6096ed109748507069c.portfolio",
+      "salt": "+xO0JvBKrYqn3b9TDTWkRA==",
+      "iv": "BJeQXJ8L/wQB8Qij",
+      "size": 758357
+    },
+    {
+      "npmHash": "b63632e541366a4c362c01a213c502a16de8c52dc5ea3ed12ce3fc673ec211a0",
+      "cohort": 2023,
+      "file": "Angkatan_2023/b63632e541366a4c362c01a2.portfolio",
+      "salt": "VeN+++yjAuOv5XWGbp2SVQ==",
+      "iv": "fH3PMx8LG4o2KwIt",
+      "size": 767345
+    },
+    {
+      "npmHash": "ee220f519176311f2b74db51116f6e00906d5925733f27153aa31f64bff3f965",
+      "cohort": 2023,
+      "file": "Angkatan_2023/ee220f519176311f2b74db51.portfolio",
+      "salt": "ubvkNCgZddan8nU3SX4MCw==",
+      "iv": "QUf1roCpxl7i01ta",
+      "size": 760015
+    },
+    {
+      "npmHash": "4c6d792e9aec1ca3f867849b2ae8c9d738f1c47ef6a18615282d57b5a1d1b107",
+      "cohort": 2023,
+      "file": "Angkatan_2023/4c6d792e9aec1ca3f867849b.portfolio",
+      "salt": "Y9njZvxetcsOWE+Xvx6d+g==",
+      "iv": "oKlM2Zy03CSgQZ+h",
+      "size": 759130
+    },
+    {
+      "npmHash": "f996465a5164aace5dff3bb1a6af1578df07d0b56ae34635d4f2edd1b3018aae",
+      "cohort": 2023,
+      "file": "Angkatan_2023/f996465a5164aace5dff3bb1.portfolio",
+      "salt": "g4Hqu+36SvDtGHtMmYL0jA==",
+      "iv": "CvN9w0dsEgcX+jLR",
+      "size": 754040
+    },
+    {
+      "npmHash": "c42a0760ab4ceb1f3986ce8b001fcb60e36dff59ef333a4c82456783728feba3",
+      "cohort": 2023,
+      "file": "Angkatan_2023/c42a0760ab4ceb1f3986ce8b.portfolio",
+      "salt": "GyZMYcaAHNE4ubWxhYwcSw==",
+      "iv": "4VrwZlwz/+wyaVs+",
+      "size": 781756
+    },
+    {
+      "npmHash": "bf0c6f17a1d4cd914083acac60b119df03f364f3603b71fc55f9c675e3272603",
+      "cohort": 2023,
+      "file": "Angkatan_2023/bf0c6f17a1d4cd914083acac.portfolio",
+      "salt": "AEeYJupZrArNELhcIwfiUA==",
+      "iv": "h5ACywHAnyiH5E7F",
+      "size": 766671
+    },
+    {
+      "npmHash": "561bdb37e571e880546845492f58568c30dfccfff733c25beb0c159f0c7cdf33",
+      "cohort": 2023,
+      "file": "Angkatan_2023/561bdb37e571e88054684549.portfolio",
+      "salt": "ka4K5pkQZL8tXEsHhO3+8A==",
+      "iv": "dSAyH5Mar3bSrc7I",
+      "size": 756002
+    },
+    {
+      "npmHash": "99879a9aa2f44e85670108d2c848a66cf4f69eac139987847e5ebaca22394fbb",
+      "cohort": 2023,
+      "file": "Angkatan_2023/99879a9aa2f44e85670108d2.portfolio",
+      "salt": "pGwlUMwlL0mcI2tIa1P5fw==",
+      "iv": "0wjUdTyKz8mMz3lP",
+      "size": 761808
+    },
+    {
+      "npmHash": "3e9b72b7b0c6a849538bac9858f7407a1eb088ae7d2f4534d2adcc5340f6896f",
+      "cohort": 2023,
+      "file": "Angkatan_2023/3e9b72b7b0c6a849538bac98.portfolio",
+      "salt": "pyYqxiNQ/qHWHgrkjJY+Hg==",
+      "iv": "dBwRDWEsr5c9D88w",
+      "size": 756154
+    },
+    {
+      "npmHash": "a7cc7736398d194d6da6c118e5b1758ad5145a8ad3a2a41a784d7392e9165ee9",
+      "cohort": 2023,
+      "file": "Angkatan_2023/a7cc7736398d194d6da6c118.portfolio",
+      "salt": "Ad20u6BGBDycCiAqrp6J9w==",
+      "iv": "KP2RqIVlnzhbXX7B",
+      "size": 757550
+    },
+    {
+      "npmHash": "1f942997ede9abdd5cdefde5019a3f09093df4515a1f682fb885501ea3a6debb",
+      "cohort": 2023,
+      "file": "Angkatan_2023/1f942997ede9abdd5cdefde5.portfolio",
+      "salt": "5AXQDRNfWNftdr8oMDjILQ==",
+      "iv": "+l+b6Wh5tcOlm722",
+      "size": 760138
+    },
+    {
+      "npmHash": "4bda1c2d0ef065731b26be11f882aecf9521442faa7453bd3d3064e42f09d20e",
+      "cohort": 2024,
+      "file": "Angkatan_2024/4bda1c2d0ef065731b26be11.portfolio",
+      "salt": "8b9E3gcrCehVAHnhzNdNMw==",
+      "iv": "EpJ+C23QnXSjHv6z",
+      "size": 770105
+    },
+    {
+      "npmHash": "e2862106546bd50c4ef719c01bded7300f30b7a2d7f14a137481f74a96b70859",
+      "cohort": 2024,
+      "file": "Angkatan_2024/e2862106546bd50c4ef719c0.portfolio",
+      "salt": "72TmSwKNJdEd12KtqvEiMg==",
+      "iv": "Lu/95zgFuUZ2iSkA",
+      "size": 576258
+    },
+    {
+      "npmHash": "88411bafdbe1ff848a9cc0bfd56a3057fabbc9d6a863a9df6df539d55f1e768c",
+      "cohort": 2024,
+      "file": "Angkatan_2024/88411bafdbe1ff848a9cc0bf.portfolio",
+      "salt": "Qmgkj6Ffqs8QAXAtEATYjg==",
+      "iv": "hujV5mCDmiWkrh4j",
+      "size": 761790
+    },
+    {
+      "npmHash": "4ba189e2f56a53a1661fb58fb5e14c440edba8892b9c791a2fa05a978d23f922",
+      "cohort": 2024,
+      "file": "Angkatan_2024/4ba189e2f56a53a1661fb58f.portfolio",
+      "salt": "mvYUhoDllSgZOYWOOxAIoA==",
+      "iv": "j/F6ui/q+pC2vUM3",
+      "size": 760044
+    },
+    {
+      "npmHash": "a165c648638201cad5f655aeb2eeaf60bcf37a559106e51afeee4391b4a80e08",
+      "cohort": 2024,
+      "file": "Angkatan_2024/a165c648638201cad5f655ae.portfolio",
+      "salt": "DzejMtEQrplAacviPTeFvA==",
+      "iv": "CDeAVFqo7lg+yAud",
+      "size": 760447
+    },
+    {
+      "npmHash": "7ffed9079b5f2d5a21cd577b9c8eb6d9ca5663c3370afb8d4de3a2c55f9f5ceb",
+      "cohort": 2024,
+      "file": "Angkatan_2024/7ffed9079b5f2d5a21cd577b.portfolio",
+      "salt": "FfHyEuzAKm+vUZ9Wy7X1OA==",
+      "iv": "bQvV2tUVvXvCK/8K",
+      "size": 755419
+    },
+    {
+      "npmHash": "a42d850074931a34593ca1d71c579084aad855eb16c469fc55932b87aa1b9168",
+      "cohort": 2024,
+      "file": "Angkatan_2024/a42d850074931a34593ca1d7.portfolio",
+      "salt": "qL/1zi8prIE2p3qCmRM7BQ==",
+      "iv": "q8NAkddPHlfxFHKv",
+      "size": 750032
+    },
+    {
+      "npmHash": "e45a6710d6552e28275b5aed745e8f1b3394b95c05e2dd337b9a5336cf76e3f5",
+      "cohort": 2024,
+      "file": "Angkatan_2024/e45a6710d6552e28275b5aed.portfolio",
+      "salt": "hVJ/SJ5rsM2gOUUM/Pwd3w==",
+      "iv": "T2AJqd63hBjm5s5N",
+      "size": 750091
+    },
+    {
+      "npmHash": "7f81cb5d73cdb9b8a78f12bae91b4021fbe4ea96a6a07958afef130e511bb7e4",
+      "cohort": 2024,
+      "file": "Angkatan_2024/7f81cb5d73cdb9b8a78f12ba.portfolio",
+      "salt": "e11g7AJImE5Qwc2nyQSFJg==",
+      "iv": "bjlf19vTJikHxlcw",
+      "size": 758695
+    },
+    {
+      "npmHash": "cdd70c72041b62f0ba92bf72a543946cf4f76e32f9bc457e41118f9f02298dea",
+      "cohort": 2024,
+      "file": "Angkatan_2024/cdd70c72041b62f0ba92bf72.portfolio",
+      "salt": "iPgQcEnpO0tuoHavZA1zcA==",
+      "iv": "aRQLcrTHaEb5hTaX",
+      "size": 754777
+    },
+    {
+      "npmHash": "1708407b6e06c24582b879e62dbf1ef29d269a55513e7b46b3030b62792421f9",
+      "cohort": 2024,
+      "file": "Angkatan_2024/1708407b6e06c24582b879e6.portfolio",
+      "salt": "glUVVKaTBg8T50nex+guvg==",
+      "iv": "j1qfIphXiqZmJwZ3",
+      "size": 749457
+    },
+    {
+      "npmHash": "66c1c2d091861540944a7e9818ded33d4e6e2c090aba71dd16dc2f48e821d692",
+      "cohort": 2024,
+      "file": "Angkatan_2024/66c1c2d091861540944a7e98.portfolio",
+      "salt": "XqsY6sL9rHKUiV+zoPQ7aw==",
+      "iv": "rMUEHNmacjRLtkgp",
+      "size": 748373
+    },
+    {
+      "npmHash": "813f9688a18c46356331d5b3505cef2be026d3995a79e0c3e2ce51cde54aaa37",
+      "cohort": 2024,
+      "file": "Angkatan_2024/813f9688a18c46356331d5b3.portfolio",
+      "salt": "u77bJOwjS8mDHT4gtBoMkg==",
+      "iv": "Xc2n+iyqwKEzfUq5",
+      "size": 668346
+    },
+    {
+      "npmHash": "254525aa89d520755f166521f6bbea4e3c37230c0356ca7349defecc70c32691",
+      "cohort": 2024,
+      "file": "Angkatan_2024/254525aa89d520755f166521.portfolio",
+      "salt": "lrNnljBQbpRT2NI/svGOBA==",
+      "iv": "lZ+zVTYSsYb6Q+fw",
+      "size": 756534
+    },
+    {
+      "npmHash": "f437cbecef021037e09b7efddd53fb02d03bf3433eabcc5e1ee6776e43187779",
+      "cohort": 2024,
+      "file": "Angkatan_2024/f437cbecef021037e09b7efd.portfolio",
+      "salt": "rUoOQR339WzYLPMnlyBfNQ==",
+      "iv": "SVx5wq6WvFdIgntz",
+      "size": 759302
+    },
+    {
+      "npmHash": "97280a2747b09da875be2feef0c4ae15420b614d6ca76970d66417bb8102fabe",
+      "cohort": 2025,
+      "file": "Angkatan_2025/97280a2747b09da875be2fee.portfolio",
+      "salt": "bCwE7FG1rbbnAyWWTw7GZw==",
+      "iv": "Cd8PL3xVzwwrXrc1",
+      "size": 705059
+    },
+    {
+      "npmHash": "4596651bab0987ad008c9f5c1a14e4c186932fc0012553c028910c09bd4868f4",
+      "cohort": 2025,
+      "file": "Angkatan_2025/4596651bab0987ad008c9f5c.portfolio",
+      "salt": "vQA3ZwgMxNT1sV6kGPq4vw==",
+      "iv": "jIUEW+qxgOLKcg3e",
+      "size": 748533
+    },
+    {
+      "npmHash": "2df858a57eaab553d722235972ddc38c58f8b4cf1d7302ee121e7ef09c87f077",
+      "cohort": 2025,
+      "file": "Angkatan_2025/2df858a57eaab553d7222359.portfolio",
+      "salt": "Vp1T1Cy/3EQHyq6yTHMcLA==",
+      "iv": "aqhXHf13Y/gcU84K",
+      "size": 709369
+    },
+    {
+      "npmHash": "2bf6effea5f28ceeb68e82abdb6c0f4d9c0674be6c6432b7d35db38a38945d7f",
+      "cohort": 2025,
+      "file": "Angkatan_2025/2bf6effea5f28ceeb68e82ab.portfolio",
+      "salt": "epclFhvWrvcF/GeqOqjiNg==",
+      "iv": "JFA5IJAnGR85le2V",
+      "size": 710814
+    },
+    {
+      "npmHash": "b3a38bd6815ecceb1b895c6f775f9351dad74ab5e4f05ed5a1b626bc42138b0a",
+      "cohort": 2025,
+      "file": "Angkatan_2025/b3a38bd6815ecceb1b895c6f.portfolio",
+      "salt": "3V48HP4mmLnB3a0yxq/onw==",
+      "iv": "WQZjggZuOCxz5S6S",
+      "size": 710865
+    },
+    {
+      "npmHash": "32a0c32efbb624ab1cfd305baa2f510450bde224132d9bcb5e1aabdd69833472",
+      "cohort": 2025,
+      "file": "Angkatan_2025/32a0c32efbb624ab1cfd305b.portfolio",
+      "salt": "2YID35uEgIOWvuQpm557IA==",
+      "iv": "5CCOSyA9+44vUe3p",
+      "size": 704195
+    },
+    {
+      "npmHash": "8918dc1b7aa8dcb479d9d56b363464944625a59b3a183af51ac7fec7b82be1ee",
+      "cohort": 2025,
+      "file": "Angkatan_2025/8918dc1b7aa8dcb479d9d56b.portfolio",
+      "salt": "WsbXh9U9FvTTHmM7UkOE/Q==",
+      "iv": "0wOlUdAbNZmKcGS/",
+      "size": 701939
+    },
+    {
+      "npmHash": "cead575e959c56d697910161d901ebcf513a24bd3d175e29336520078ef268f7",
+      "cohort": 2025,
+      "file": "Angkatan_2025/cead575e959c56d697910161.portfolio",
+      "salt": "GYKHwfK49FbKaNesV5fTjw==",
+      "iv": "M+s77q/alALCK8nq",
+      "size": 710174
+    },
+    {
+      "npmHash": "36c3b12d6a2ae7388ed7566628c9b5cc8a135fb42dabf5065dc3289603ee0b7b",
+      "cohort": 2025,
+      "file": "Angkatan_2025/36c3b12d6a2ae7388ed75666.portfolio",
+      "salt": "TVV79f8+w1j4l2+fptZa5Q==",
+      "iv": "aVkBcuQSurVuS7DY",
+      "size": 697937
+    },
+    {
+      "npmHash": "eee4f2edf3fa39dfe64344aca919d12d78c38ca4ffbe325ffab823830f8ee1be",
+      "cohort": 2025,
+      "file": "Angkatan_2025/eee4f2edf3fa39dfe64344ac.portfolio",
+      "salt": "eeme9GCcgiS8FCEGxckwbA==",
+      "iv": "W39yUX+oCaKesKRB",
+      "size": 709246
+    },
+    {
+      "npmHash": "8bfae4338b756676bc183a42df5cecaa5eecf6289d43286ea478173353dca1c2",
+      "cohort": 2025,
+      "file": "Angkatan_2025/8bfae4338b756676bc183a42.portfolio",
+      "salt": "gDun6kOtu8WyTqFw/wsPkA==",
+      "iv": "zTQu8WlAeCSTekYE",
+      "size": 721530
+    },
+    {
+      "npmHash": "88d7da0173479636202a4d71bd6175a59299014d1fcc7e178ba87b8053566af7",
+      "cohort": 2025,
+      "file": "Angkatan_2025/88d7da0173479636202a4d71.portfolio",
+      "salt": "S4oixQEfeSAsf6PeK3Scew==",
+      "iv": "SecaiKD+JOreYC7h",
+      "size": 708240
+    },
+    {
+      "npmHash": "23f9b7574113b4c2c09ebe49a975617f84743318ebd7566750032f57f06a40ff",
+      "cohort": 2025,
+      "file": "Angkatan_2025/23f9b7574113b4c2c09ebe49.portfolio",
+      "salt": "gqeVTD7YYCihJ5gzhKuMTA==",
+      "iv": "OuwitsWrlG7Xijsd",
+      "size": 701819
+    },
+    {
+      "npmHash": "afc131423c0d5acc384e410b2dae487df8508f03037162affe3cf2c088025be0",
+      "cohort": 2025,
+      "file": "Angkatan_2025/afc131423c0d5acc384e410b.portfolio",
+      "salt": "EZ4wmrS167mmg6sVxrYjfg==",
+      "iv": "53WYi4qUBw45N06E",
+      "size": 708849
+    }
+  ]
+}

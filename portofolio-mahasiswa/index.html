@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#123e56">
+  <title>Portofolio Mahasiswa | S2 Statistika Terapan FMIPA UNPAD</title>
+  <link rel="stylesheet" href="portfolio.css?v=20260820">
+</head>
+<body>
+  <header class="portfolio-header">
+    <a href="../#mahasiswa" class="portfolio-brand" aria-label="Kembali ke blok Mahasiswa">
+      <img src="../assets/logo-unpad.png" alt="Logo Universitas Padjadjaran">
+      <span><strong>Portofolio Mahasiswa</strong><small>S2 Statistika Terapan · FMIPA UNPAD</small></span>
+    </a>
+  </header>
+  <main>
+    <section class="portfolio-hero">
+      <div>
+        <p class="eyebrow">Dokumen Akademik Terlindungi</p>
+        <h1>Akses Portofolio Mahasiswa</h1>
+        <p>Masukkan NPM dan nama lengkap tanpa gelar. Data digunakan di perangkat Anda untuk membuka PDF terenkripsi dan tidak dikirim ke server.</p>
+      </div>
+      <dl>
+        <div><dt>2022</dt><dd>51 portofolio</dd></div>
+        <div><dt>2023</dt><dd>22 portofolio</dd></div>
+        <div><dt>2024</dt><dd>15 portofolio</dd></div>
+        <div><dt>2025</dt><dd>14 portofolio</dd></div>
+      </dl>
+    </section>
+
+    <section class="access-card" aria-labelledby="access-title">
+      <div class="access-copy">
+        <p class="eyebrow">Akses Mahasiswa</p>
+        <h2 id="access-title">Buka PDF portofolio Anda</h2>
+        <p>Gunakan nama lengkap sesuai data akademik. Jangan menambahkan gelar akademik.</p>
+      </div>
+      <form id="portfolioAccessForm">
+        <label for="portfolioNpm">NPM</label>
+        <input id="portfolioNpm" name="npm" inputmode="numeric" autocomplete="username" pattern="[0-9]{12}" maxlength="12" required placeholder="Contoh: 140720240001">
+        <label for="portfolioName">Nama lengkap tanpa gelar</label>
+        <input id="portfolioName" name="name" autocomplete="name" required placeholder="Contoh: Syahla Anisah">
+        <button type="submit">Verifikasi dan Buka Portofolio</button>
+      </form>
+      <div id="portfolioStatus" class="portfolio-status" aria-live="polite"></div>
+    </section>
+
+    <section class="portfolio-links" aria-label="Akses pendukung portofolio">
+      <a href="Modul_Perhitungan_Portofolio_CPL_S2_Statistika_Terapan_UNPAD.html" target="_blank" rel="noopener">
+        <span>Modul Perhitungan Portofolio CPL</span>
+        <small>Buka modul metodologi dan perhitungan</small>
+      </a>
+      <a href="../verifikasi-portofolio/">
+        <span>Verifikasi Nomor Sertifikat</span>
+        <small>Periksa keaslian sertifikat melalui QR atau nomor sertifikat</small>
+      </a>
+    </section>
+  </main>
+  <footer>Program Studi Magister Statistika Terapan · FMIPA Universitas Padjadjaran</footer>
+  <script src="portfolio.js?v=20260820" defer></script>
+</body>
+</html>
