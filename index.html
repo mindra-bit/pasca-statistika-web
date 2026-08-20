@@ -154,7 +154,6 @@
         <a class="workspace-home-link" href="#home" data-i18n="workspaceBackHome">Kembali ke Tampilan Awal</a>
         <nav class="workspace-menu-list workspace-menu-s2">
           <a href="#program-profile" data-program-select="s2" data-workspace-target="program-profile" data-i18n="workspaceProgramProfile">Program Profile</a>
-          <a class="academic-news-menu-link" href="#berita-akademik" data-program-select="s2" data-workspace-target="berita-akademik">Berita Akademik</a>
           <a class="faculty-profile-menu-link" href="profil-dosen-statistika-unpad/">Profil Dosen</a>
           <a href="#etika-akademik-dosen" data-program-select="s2" data-workspace-target="etika-akademik-dosen">Etika Akademik Dosen</a>
           <a href="#panduan-ai" data-program-select="s2" data-workspace-target="panduan-ai">Panduan AI</a>
@@ -3134,6 +3133,14 @@
       <a href="#home" data-i18n="backTop">Kembali ke atas</a>
     </div>
   </footer>
+
+  <script>
+    (() => {
+      const academicNews = document.getElementById("berita-akademik");
+      const footer = document.querySelector("footer");
+      if (academicNews && footer) footer.before(academicNews);
+    })();
+  </script>
 
   <script src="assets/student-cohort.js?v=student-stats-interactive-20260815" data-lazy-script="student-cohort-script" defer></script>
   <script src="assets/app.js?v=student-stats-interactive-20260815" defer></script>
