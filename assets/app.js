@@ -399,6 +399,7 @@ const workspacePanelIds = [
   "pks-moa",
   "fasilitas-pembelajaran",
   "kurikulum",
+  "kolaborasi-pengajaran",
   "dokumen-kurikulum",
   "mata-kuliah",
   "silabus",
