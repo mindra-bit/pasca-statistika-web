@@ -90,4 +90,10 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://statistika-unpad.github.io/pasca-statistika-web/berita-coaching-riset-sesi-2-22-agustus-2026.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
