@@ -6,3 +6,4 @@
 @media(max-width:700px){.academic-news-section{padding-top:18px}.academic-news-showcase{padding:20px 14px;border-radius:18px}.academic-news-heading{align-items:start;flex-direction:column}.academic-news-motion{align-self:flex-start}.academic-news-card{min-height:398px}.academic-news-photo{height:158px}.academic-news-track{animation-duration:34s}}
 @media(prefers-reduced-motion:reduce){.academic-news-motion{display:none}.academic-news-viewport{overflow-x:auto;mask-image:none;-webkit-mask-image:none;scroll-snap-type:x mandatory}.academic-news-track{animation:none}.academic-news-group[aria-hidden="true"]{display:none}.academic-news-card{scroll-snap-align:start;transition:none}.academic-news-photo img{transition:none}}
 @supports not (background:color-mix(in srgb,#000 10%,#fff)){.academic-news-card:before{border-color:rgba(15,118,110,.08)}.academic-news-type{background:#edf5f3}}
+.news-together{--news-accent:#9f2539}
