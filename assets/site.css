@@ -2421,6 +2421,68 @@ p {
     linear-gradient(135deg, rgba(242, 169, 0, 0.18), rgba(14, 107, 88, 0.14));
 }
 
+.ai-ethics-guide-card {
+  position: relative;
+  overflow: hidden;
+  border-color: rgba(14, 107, 88, 0.22);
+  color: #fff;
+  background:
+    radial-gradient(circle at 88% 8%, rgba(242, 169, 0, 0.42), transparent 30%),
+    linear-gradient(135deg, #0b3556 0%, #0e6b58 58%, #9b7a22 100%);
+  box-shadow: 0 20px 46px rgba(12, 47, 85, 0.18);
+}
+
+.ai-ethics-guide-card::before {
+  content: "";
+  position: absolute;
+  inset: auto -48px -82px auto;
+  width: 190px;
+  height: 190px;
+  border: 34px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+}
+
+.ai-ethics-guide-card .guide-card-head,
+.ai-ethics-guide-card p,
+.ai-ethics-guide-card h3 {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.ai-ethics-guide-card .guide-card-head {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.ai-ethics-guide-card .badge {
+  color: #112941;
+  background: #ffd36a;
+}
+
+.ai-ethics-guide-card .guide-actions {
+  position: relative;
+  z-index: 1;
+}
+
+.ai-ethics-guide-card .guide-actions a {
+  color: #10243b;
+  background: #ffd36a;
+}
+
+.ai-ethics-guide-card .guide-actions button {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.42);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+html[lang="en"] .ai-guide-lang-id {
+  display: none !important;
+}
+
+html:not([lang="en"]) .ai-guide-lang-en {
+  display: none !important;
+}
+
 .evaluation-section {
   background:
     linear-gradient(180deg, #f7fbf9, #ffffff 46%, #fff8eb),
