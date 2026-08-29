@@ -616,6 +616,259 @@
       vertical-align: 1px;
     }
 
+    .rpubs-showcase {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, .95fr) minmax(0, 1.25fr);
+      gap: 24px;
+      overflow: hidden;
+      padding: 28px;
+      background:
+        radial-gradient(circle at 16% 18%, rgba(244,180,26,.19), transparent 27%),
+        radial-gradient(circle at 95% 8%, rgba(19,122,90,.13), transparent 25%),
+        linear-gradient(135deg, #f8fbfc 0%, #fff 48%, #eef7f3 100%);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: 0 18px 42px rgba(11,36,65,.08);
+    }
+    .rpubs-showcase::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      pointer-events: none;
+      border: 1px solid rgba(20,64,96,.06);
+      border-radius: 18px;
+    }
+    .rpubs-visual {
+      position: relative;
+      min-height: 328px;
+      overflow: hidden;
+      border-radius: 19px;
+      background:
+        linear-gradient(135deg, rgba(7,23,41,.97), rgba(19,122,90,.88)),
+        repeating-linear-gradient(90deg, rgba(255,255,255,.06) 0 1px, transparent 1px 34px);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.14), 0 18px 34px rgba(7,23,41,.16);
+    }
+    .rpubs-visual::before {
+      content: "";
+      position: absolute;
+      width: 210px;
+      height: 210px;
+      right: -62px;
+      top: -72px;
+      border: 28px solid rgba(244,180,26,.19);
+      border-radius: 50%;
+    }
+    .rpubs-visual::after {
+      content: "";
+      position: absolute;
+      left: 34px;
+      right: 34px;
+      bottom: 68px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), rgba(255,255,255,.28), transparent);
+      border-radius: 999px;
+    }
+    .rpubs-hero-card {
+      position: absolute;
+      left: 28px;
+      top: 30px;
+      width: 160px;
+      padding: 18px;
+      color: #fff;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 18px;
+      backdrop-filter: blur(10px);
+    }
+    .rpubs-hero-card strong {
+      display: block;
+      color: var(--gold);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 48px;
+      line-height: .9;
+    }
+    .rpubs-hero-card span {
+      display: block;
+      margin-top: 10px;
+      color: #dbe7f2;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .rpubs-bars {
+      position: absolute;
+      right: 34px;
+      bottom: 34px;
+      display: flex;
+      align-items: end;
+      gap: 9px;
+      height: 132px;
+    }
+    .rpubs-bars i {
+      display: block;
+      width: 23px;
+      border-radius: 9px 9px 3px 3px;
+      background: linear-gradient(180deg, var(--gold), #f59e0b);
+      box-shadow: 0 10px 24px rgba(244,180,26,.2);
+    }
+    .rpubs-bars i:nth-child(1) { height: 48px; opacity: .78; }
+    .rpubs-bars i:nth-child(2) { height: 92px; }
+    .rpubs-bars i:nth-child(3) { height: 72px; opacity: .88; }
+    .rpubs-bars i:nth-child(4) { height: 118px; background: linear-gradient(180deg, #fff, #dbe7f2); }
+    .rpubs-node {
+      position: absolute;
+      display: grid;
+      place-items: center;
+      width: 74px;
+      height: 74px;
+      color: var(--navy-900);
+      background: #fff;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 900;
+      box-shadow: 0 18px 35px rgba(7,23,41,.18);
+    }
+    .rpubs-node.ml { right: 138px; top: 86px; transform: rotate(-6deg); }
+    .rpubs-node.bayes { left: 92px; bottom: 64px; transform: rotate(5deg); }
+    .rpubs-node small {
+      display: block;
+      color: var(--success);
+      font-size: 9px;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+    .rpubs-copy {
+      position: relative;
+      z-index: 1;
+      align-self: center;
+    }
+    .rpubs-copy .label {
+      display: inline-flex;
+      margin-bottom: 13px;
+      padding: 7px 11px;
+      color: var(--navy-900);
+      background: var(--gold-soft);
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .rpubs-copy h3 {
+      margin: 0;
+      color: var(--navy-900);
+      font-size: clamp(24px, 2.4vw, 34px);
+      line-height: 1.12;
+      letter-spacing: -.02em;
+    }
+    .rpubs-copy p {
+      margin: 13px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+    .rpubs-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .rpubs-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 74px;
+      padding: 15px 16px;
+      color: var(--navy-900);
+      text-decoration: none;
+      background: rgba(255,255,255,.84);
+      border: 1px solid #dbe6ef;
+      border-radius: 14px;
+      box-shadow: 0 10px 24px rgba(11,36,65,.06);
+      transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+    }
+    .rpubs-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(19,122,90,.34);
+      box-shadow: 0 18px 30px rgba(11,36,65,.11);
+    }
+    .rpubs-card strong { display: block; font-size: 14px; line-height: 1.3; }
+    .rpubs-card > span { display: block; }
+    .rpubs-card > span > span { display: block; margin-top: 4px; color: var(--muted); font-size: 11px; font-weight: 700; }
+    .rpubs-card em {
+      display: grid;
+      place-items: center;
+      flex: 0 0 32px;
+      width: 32px;
+      height: 32px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--navy-900), var(--success));
+      border-radius: 10px;
+      font-style: normal;
+      font-size: 14px;
+      font-weight: 900;
+    }
+    .rpubs-teaching-panel {
+      position: relative;
+      z-index: 1;
+      margin-top: 22px;
+      padding: 24px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 92% 0%, rgba(244,180,26,.18), transparent 26%),
+        linear-gradient(135deg, rgba(255,255,255,.94), rgba(246,250,252,.9));
+      border: 1px solid rgba(16,70,102,.13);
+      border-radius: 20px;
+      box-shadow: 0 14px 32px rgba(11,36,65,.08);
+    }
+    .rpubs-teaching-panel::before {
+      content: "R";
+      position: absolute;
+      right: 22px;
+      top: -22px;
+      color: rgba(19,122,90,.07);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 156px;
+      font-weight: 900;
+      line-height: 1;
+      pointer-events: none;
+    }
+    .rpubs-teaching-panel h3 {
+      position: relative;
+      margin: 0;
+      color: var(--navy-900);
+      font-size: 22px;
+      line-height: 1.25;
+      letter-spacing: -.01em;
+    }
+    .rpubs-teaching-panel p {
+      position: relative;
+      max-width: 760px;
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+    .rpubs-teaching-label {
+      position: relative;
+      display: inline-flex;
+      margin-bottom: 10px;
+      padding: 6px 10px;
+      color: var(--success);
+      background: #e8f5f0;
+      border: 1px solid rgba(19,122,90,.15);
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
     .compact-table-wrap {
       overflow-x: auto;
       border: 1px solid var(--line);
@@ -700,6 +953,9 @@
       .record-meta { grid-column: 2; text-align: left; }
       .filters { align-items: stretch; flex-direction: column; }
       .search-box { max-width: none; }
+      .rpubs-showcase { grid-template-columns: 1fr; }
+      .rpubs-visual { min-height: 250px; }
+      .rpubs-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 640px) {
@@ -730,6 +986,14 @@
       .record-meta { grid-column: auto; }
       .publication { grid-template-columns: 38px minmax(0, 1fr); gap: 10px; }
       .pub-year { grid-column: 2; justify-self: start; }
+      .rpubs-showcase { padding: 18px; border-radius: 18px; }
+      .rpubs-visual { min-height: 220px; }
+      .rpubs-hero-card { left: 18px; top: 20px; width: 136px; padding: 15px; }
+      .rpubs-hero-card strong { font-size: 40px; }
+      .rpubs-node { width: 60px; height: 60px; border-radius: 16px; font-size: 12px; }
+      .rpubs-node.ml { right: 82px; top: 84px; }
+      .rpubs-node.bayes { left: 55px; bottom: 46px; }
+      .rpubs-bars { right: 20px; bottom: 24px; height: 105px; }
       .footer { grid-template-columns: 1fr; }
     }
 
@@ -775,6 +1039,10 @@
       .publication h3 { font-size: 8.6pt; }
       .publication p { font-size: 7.6pt; }
       .publication[hidden] { display: grid !important; }
+      .rpubs-showcase { grid-template-columns: 1fr; padding: 5mm; box-shadow: none; }
+      .rpubs-visual { display: none; }
+      .rpubs-grid { grid-template-columns: repeat(2, 1fr); gap: 2.5mm; }
+      .rpubs-card { min-height: 0; padding: 3mm; box-shadow: none; }
       .compact-table th, .compact-table td { padding: 2.5mm 3mm; font-size: 8pt; }
       .award-list { gap: 3mm; }
       .award { padding: 4mm 4mm 4mm 13mm; }
@@ -844,6 +1112,7 @@
       <a href="#pendidikan">Pendidikan</a>
       <a href="#penelitian">Penelitian</a>
       <a href="#publikasi">Publikasi</a>
+      <a href="#rpubs">Materi RPubs</a>
       <a href="#buku-hki">Buku &amp; HKI</a>
       <a href="#presentasi">Presentasi</a>
       <a href="#penghargaan">Penghargaan</a>
@@ -910,6 +1179,21 @@
             <article class="teaching-card teaching-card-met"><span class="teaching-symbol" aria-hidden="true">β</span><span class="teaching-level">MET</span><h3>Sains Data</h3><p>Magister Ekonomi Terapan</p><a href="../../kolaborasi-pengajaran/Ekonometrika.html" target="_blank" rel="noopener">Buka materi pembelajaran <span>↗</span></a></article>
             <article class="teaching-card teaching-card-s2"><span class="teaching-symbol" aria-hidden="true">R²</span><span class="teaching-level">S2 Statistika Terapan</span><h3>Analisis Regresi Tingkat Lanjut</h3><p>Program Magister Statistika Terapan</p><a href="https://script.google.com/macros/s/AKfycbyqT90iqePRsXo0K1_orIhxgGu5VbrmLYHohz0jlEsbKwJtJwJq5p9q_1qC1QITqgDSxw/exec" target="_blank" rel="noopener">Buka ruang pembelajaran <span>↗</span></a></article>
           </div>
+          <div class="rpubs-teaching-panel">
+            <span class="rpubs-teaching-label">Materi RPubs Mindra</span>
+            <h3>Kumpulan materi ajar dan komputasi statistik</h3>
+            <p>Seluruh tautan RPubs berikut disiapkan sebagai bahan belajar terbuka untuk mendukung kuliah, latihan analisis data, dan penguatan metodologi riset.</p>
+            <div class="rpubs-grid" aria-label="Tautan materi RPubs di bagian kolaborasi pengajaran">
+              <a class="rpubs-card" href="https://rpubs.com/mindra/DataKategori" target="_blank" rel="noopener"><span><strong>Data Kategorik</strong><span>RPubs / mindra</span></span><em>01</em></a>
+              <a class="rpubs-card" href="https://rpubs.com/mindra/MachineLearning" target="_blank" rel="noopener"><span><strong>Machine Learning</strong><span>RPubs / mindra</span></span><em>02</em></a>
+              <a class="rpubs-card" href="https://rpubs.com/mindra/1365004" target="_blank" rel="noopener"><span><strong>Modul RPubs 1365004</strong><span>RPubs / mindra</span></span><em>03</em></a>
+              <a class="rpubs-card" href="https://rpubs.com/mindra/1368400" target="_blank" rel="noopener"><span><strong>Modul RPubs 1368400</strong><span>RPubs / mindra</span></span><em>04</em></a>
+              <a class="rpubs-card" href="https://rpubs.com/mindra/RegresiLanjutan" target="_blank" rel="noopener"><span><strong>Regresi Tingkat Lanjut</strong><span>RPubs / mindra</span></span><em>05</em></a>
+              <a class="rpubs-card" href="https://rpubs.com/mindra/Ekonometrika" target="_blank" rel="noopener"><span><strong>Ekonometrika Terapan</strong><span>RPubs / mindra</span></span><em>06</em></a>
+              <a class="rpubs-card" href="https://rpubs.com/mindra/CleaningData" target="_blank" rel="noopener"><span><strong>Cleaning Data</strong><span>RPubs / mindra</span></span><em>07</em></a>
+              <a class="rpubs-card" href="https://rpubs.com/mindra/Sains_Data_MIR" target="_blank" rel="noopener"><span><strong>Sains Data MIR</strong><span>RPubs / mindra</span></span><em>08</em></a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -964,9 +1248,43 @@
         <noscript><p>Aktifkan JavaScript untuk menampilkan dan menyaring daftar publikasi.</p></noscript>
       </section>
 
-      <section class="section" id="buku-hki">
+      <section class="section" id="rpubs">
         <div class="section-heading">
           <span class="section-number">07</span>
+          <h2>Ruang Materi RPubs</h2>
+          <p>Kumpulan materi terbuka untuk pembelajaran statistika terapan, komputasi, dan praktik analisis data.</p>
+        </div>
+        <div class="rpubs-showcase">
+          <div class="rpubs-visual" role="img" aria-label="Ilustrasi komputasi statistik dan pembelajaran data">
+            <div class="rpubs-hero-card">
+              <strong>R</strong>
+              <span>Open learning resources</span>
+            </div>
+            <div class="rpubs-node ml"><div>ML<small>Model</small></div></div>
+            <div class="rpubs-node bayes"><div>Bayes<small>Data</small></div></div>
+            <div class="rpubs-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="rpubs-copy">
+            <span class="label">Materi ajar digital</span>
+            <h3>Repositori pembelajaran berbasis RPubs</h3>
+            <p>Materi ini dapat digunakan mahasiswa untuk memperkuat praktik analisis, pemodelan, pembersihan data, ekonometrika, regresi tingkat lanjut, machine learning, dan sains data.</p>
+            <div class="rpubs-grid" aria-label="Daftar tautan materi RPubs">
+              <a class="rpubs-card" href="https://rpubs.com/mindra/DataKategori" target="_blank" rel="noopener"><span><strong>Data Kategorik</strong><span>RPubs / mindra</span></span><em>01</em></a>
+              <a class="rpubs-card" href="https://rpubs.com/mindra/MachineLearning" target="_blank" rel="noopener"><span><strong>Machine Learning</strong><span>RPubs / mindra</span></span><em>02</em></a>
+              <a class="rpubs-card" href="https://rpubs.com/mindra/1365004" target="_blank" rel="noopener"><span><strong>Modul RPubs 1365004</strong><span>RPubs / mindra</span></span><em>03</em></a>
+              <a class="rpubs-card" href="https://rpubs.com/mindra/1368400" target="_blank" rel="noopener"><span><strong>Modul RPubs 1368400</strong><span>RPubs / mindra</span></span><em>04</em></a>
+              <a class="rpubs-card" href="https://rpubs.com/mindra/RegresiLanjutan" target="_blank" rel="noopener"><span><strong>Regresi Tingkat Lanjut</strong><span>RPubs / mindra</span></span><em>05</em></a>
+              <a class="rpubs-card" href="https://rpubs.com/mindra/Ekonometrika" target="_blank" rel="noopener"><span><strong>Ekonometrika Terapan</strong><span>RPubs / mindra</span></span><em>06</em></a>
+              <a class="rpubs-card" href="https://rpubs.com/mindra/CleaningData" target="_blank" rel="noopener"><span><strong>Cleaning Data</strong><span>RPubs / mindra</span></span><em>07</em></a>
+              <a class="rpubs-card" href="https://rpubs.com/mindra/Sains_Data_MIR" target="_blank" rel="noopener"><span><strong>Sains Data MIR</strong><span>RPubs / mindra</span></span><em>08</em></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="buku-hki">
+        <div class="section-heading">
+          <span class="section-number">08</span>
           <h2>Buku &amp; Kekayaan Intelektual</h2>
           <p>Karya buku, perangkat lunak, dan HKI yang mendukung pembelajaran serta penelitian.</p>
         </div>
@@ -978,7 +1296,7 @@
 
       <section class="section" id="presentasi">
         <div class="section-heading">
-          <span class="section-number">08</span>
+          <span class="section-number">09</span>
           <h2>Presentasi Ilmiah &amp; Kontribusi Kebijakan</h2>
           <p>Keterlibatan sebagai pemakalah serta penerapan keahlian untuk kebijakan publik.</p>
         </div>
@@ -990,7 +1308,7 @@
 
       <section class="section" id="penghargaan">
         <div class="section-heading">
-          <span class="section-number">09</span>
+          <span class="section-number">10</span>
           <h2>Penghargaan</h2>
           <p>Pengakuan atas kontribusi akademik, disertasi, dan dampak publikasi ilmiah.</p>
         </div>
