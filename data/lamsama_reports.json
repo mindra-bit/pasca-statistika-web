@@ -3,12 +3,13 @@
   "organization": "Lembaga Akreditasi Mandiri Sains Alam dan Ilmu Formal",
   "assessmentDate": "25-26 November 2022",
   "generatedAt": "2026-07-25T10:00:00+07:00",
-  "total": 4,
+  "total": 5,
   "years": [
     2022,
     2023,
     2024,
-    2025
+    2025,
+    2026
   ],
   "reports": [
     {
@@ -77,6 +78,21 @@
       "format": "PDF",
       "pages": 15,
       "sizeKb": 483
+    },
+    {
+      "id": "lamsama-2026",
+      "year": 2026,
+      "sequence": 4,
+      "title": "Laporan Tahunan Akreditasi LAMSAMA 2026",
+      "titleId": "Laporan Tahunan Akreditasi LAMSAMA 2026",
+      "titleEn": "LAMSAMA Annual Accreditation Report 2026",
+      "descriptionId": "Laporan tahun ke-4 pemantauan mutu dan tindak lanjut akreditasi Program S2 Statistika Terapan FMIPA Universitas Padjadjaran.",
+      "descriptionEn": "Year 4 quality monitoring and accreditation follow-up report for the Applied Statistics Master's Program, FMIPA Universitas Padjadjaran.",
+      "file": "Tahun 2026.pdf",
+      "href": "%40Laporan%20Tahunan%20Lamsama/Tahun%202026.pdf",
+      "format": "PDF",
+      "pages": 11,
+      "sizeKb": 565
     }
   ]
 }

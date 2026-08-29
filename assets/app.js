@@ -6144,7 +6144,7 @@ async function loadCurriculumDocs() {
 
 async function loadLamsamaReports() {
   try {
-    const response = await fetch("data/lamsama_reports.json", { cache: "default" });
+    const response = await fetch("data/lamsama_reports.json?v=20260829", { cache: "default" });
     if (!response.ok) throw new Error("Laporan tahunan LAMSAMA tidak dapat dimuat.");
     const data = await response.json();
     if (!data?.reports?.length) throw new Error("Laporan tahunan LAMSAMA kosong.");
