@@ -1428,6 +1428,7 @@ html[lang="en"] .inspiration-voice-lang-id {
 .workspace-panels > .academic-calendar-section,
 .workspace-panels > .scholarship-section,
 .workspace-panels > .lamsama-section,
+.workspace-panels > .sk-doc-section,
 .workspace-panels > .pkm-section,
 .workspace-panels > .research-roadmap-section,
 .workspace-panels > .research-grant-section,
@@ -3579,6 +3580,283 @@ html:not([lang="en"]) .ai-guide-lang-en {
   background:
     linear-gradient(180deg, #ffffff 0%, #f4f8f8 52%, #ffffff 100%),
     var(--paper);
+}
+
+.sk-doc-section {
+  background:
+    radial-gradient(circle at 12% 12%, rgba(242, 169, 0, 0.12), transparent 28%),
+    radial-gradient(circle at 88% 8%, rgba(14, 107, 88, 0.12), transparent 32%),
+    linear-gradient(180deg, #ffffff 0%, #f5f9f8 54%, #ffffff 100%),
+    var(--paper);
+}
+
+.sk-doc-hero {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 24px;
+  align-items: end;
+  border-radius: 8px;
+  padding: 28px;
+  color: #fff;
+  background:
+    linear-gradient(135deg, rgba(9, 47, 78, 0.98), rgba(13, 94, 86, 0.96) 58%, rgba(201, 154, 46, 0.92) 130%),
+    #143d5d;
+  box-shadow: 0 22px 46px rgba(20, 61, 93, 0.18);
+}
+
+.sk-doc-hero::after {
+  content: "SK";
+  position: absolute;
+  right: 28px;
+  top: 16px;
+  color: rgba(255, 255, 255, 0.08);
+  font-size: clamp(88px, 14vw, 180px);
+  font-weight: 950;
+  line-height: 0.8;
+}
+
+.sk-doc-hero-copy,
+.sk-doc-summary {
+  position: relative;
+  z-index: 1;
+}
+
+.sk-doc-hero .section-kicker {
+  color: #ffe091;
+}
+
+.sk-doc-hero h2 {
+  max-width: 870px;
+  margin-bottom: 12px;
+  color: #fff;
+  font-size: clamp(29px, 3vw, 44px);
+}
+
+.sk-doc-hero-copy > p:last-child {
+  max-width: 880px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 15px;
+  line-height: 1.68;
+}
+
+.sk-doc-summary {
+  display: grid;
+  gap: 7px;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 8px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(8px);
+}
+
+.sk-doc-summary > span {
+  color: #ffe091;
+  font-size: 11px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.sk-doc-summary > strong {
+  color: #fff;
+  font-size: 24px;
+  line-height: 1.08;
+}
+
+.sk-doc-summary small {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.sk-doc-summary b {
+  color: #fff;
+  font-size: 16px;
+}
+
+.sk-doc-subblock {
+  margin-top: 18px;
+  border: 1px solid rgba(221, 210, 193, 0.9);
+  border-radius: 8px;
+  padding: clamp(18px, 3vw, 26px);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(248, 252, 250, 0.95)),
+    #fff;
+  box-shadow: 0 16px 38px rgba(23, 23, 23, 0.07);
+}
+
+.sk-doc-subhead {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: start;
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(221, 210, 193, 0.85);
+}
+
+.sk-doc-badge,
+.sk-doc-updated {
+  display: inline-flex;
+  align-items: center;
+  width: max-content;
+  max-width: 100%;
+  border-radius: 999px;
+  padding: 7px 11px;
+  font-size: 11px;
+  font-weight: 950;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.sk-doc-badge {
+  color: #0e6b58;
+  background: rgba(14, 107, 88, 0.1);
+}
+
+.sk-doc-updated {
+  color: #7a5a12;
+  background: rgba(242, 169, 0, 0.16);
+}
+
+.sk-doc-subhead h3 {
+  max-width: 900px;
+  margin: 11px 0 8px;
+  color: var(--blue);
+  font-size: clamp(24px, 2.4vw, 34px);
+}
+
+.sk-doc-subhead p {
+  max-width: 880px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.sk-doc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.sk-doc-card {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto auto;
+  gap: 11px;
+  min-height: 270px;
+  border: 1px solid rgba(221, 210, 193, 0.92);
+  border-top: 5px solid #0e6b58;
+  border-radius: 8px;
+  padding: 19px;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(23, 23, 23, 0.06);
+}
+
+.sk-doc-card::after {
+  content: "";
+  position: absolute;
+  right: -42px;
+  top: -58px;
+  width: 145px;
+  height: 145px;
+  border: 27px solid rgba(20, 61, 93, 0.055);
+  border-radius: 50%;
+}
+
+.sk-doc-card-primary {
+  border-top-color: #c99a2e;
+}
+
+.sk-doc-card-program {
+  border-top-color: #143d5d;
+}
+
+.sk-doc-year {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  width: max-content;
+  max-width: 100%;
+  border-radius: 999px;
+  padding: 6px 10px;
+  color: #0e6b58;
+  background: rgba(14, 107, 88, 0.1);
+  font-size: 11px;
+  font-weight: 950;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.sk-doc-card h4 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--blue);
+  font-size: 19px;
+  line-height: 1.22;
+}
+
+.sk-doc-card p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.sk-doc-meta {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.sk-doc-meta span {
+  display: inline-flex;
+  border: 1px solid rgba(221, 210, 193, 0.95);
+  border-radius: 999px;
+  padding: 6px 9px;
+  color: #4d5b68;
+  background: #fffaf0;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.sk-doc-card a {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  border-radius: 6px;
+  padding: 10px 13px;
+  color: #fff;
+  background: linear-gradient(135deg, #143d5d, #0e6b58);
+  font-size: 13px;
+  font-weight: 950;
+  text-decoration: none;
+  box-shadow: 0 12px 22px rgba(20, 61, 93, 0.13);
+}
+
+.sk-doc-card a:hover {
+  filter: brightness(1.05);
+}
+
+@media (max-width: 760px) {
+  .sk-doc-subhead {
+    grid-template-columns: 1fr;
+  }
+
+  .sk-doc-updated {
+    justify-self: start;
+  }
 }
 
 .lamsama-hero {
@@ -9999,6 +10277,7 @@ tbody tr:hover td {
   .scholarship-hero,
   .pmb-hero,
   .lamsama-hero,
+  .sk-doc-hero,
   .pkm-hero,
   .research-grant-hero,
   .faculty-publication-hero,
@@ -10039,6 +10318,7 @@ tbody tr:hover td {
   .scholarship-grid,
   .pmb-grid,
   .lamsama-grid,
+  .sk-doc-grid,
   .pkm-grid,
   .research-grant-grid,
   .faculty-publication-grid,
@@ -10239,6 +10519,7 @@ tbody tr:hover td {
   .scholarship-grid,
   .pmb-grid,
   .lamsama-grid,
+  .sk-doc-grid,
   .pkm-grid,
   .research-grant-grid,
   .faculty-publication-grid,
