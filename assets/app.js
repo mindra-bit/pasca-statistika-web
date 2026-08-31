@@ -547,6 +547,9 @@ const I18N = {
     learningTreeEvaluationTitle: "Evaluasi PBM",
     learningTreePbmSystemTitle: "Sistem Ijin Kuliah Online",
     learningTreePbmSystemText: "Akses layanan digital pendukung proses belajar mengajar.",
+    learningTreeCurriculumSystemTitle: "Form Monitoring Kurikulum",
+    learningTreeCurriculumSystemText: "Akses layanan digital untuk penguatan kurikulum dan tindak lanjut proses belajar mengajar.",
+    learningTreeOpenForm: "Buka Form",
     learningTreePbmDocs2024: "Dokumen PBM 2024",
     learningTreePbmDocs2024Text: "Arsip proses belajar mengajar tahun 2024",
     learningTreeOpenThesis: "Buka Sistem Tesis Online",
@@ -1264,6 +1267,7 @@ const I18N = {
     openMaterial: "Buka Materi",
     openSummary: "Buka Ringkasan",
     openContract: "Buka Kontrak",
+    openQuiz: "Kuis",
     askChatbot: "Tanya chatbot",
     educationGuideKicker: "Pedoman Pendidikan",
     educationGuideTitle: "Pedoman pendidikan dan akademik Program S2 Statistika Terapan.",
@@ -1428,6 +1432,9 @@ const I18N = {
     learningTreeEvaluationTitle: "PBM Evaluation",
     learningTreePbmSystemTitle: "Online Lecture Permission System",
     learningTreePbmSystemText: "Access the digital service supporting the teaching and learning process.",
+    learningTreeCurriculumSystemTitle: "Curriculum Monitoring Form",
+    learningTreeCurriculumSystemText: "Open the digital service for curriculum strengthening and teaching-learning follow-up.",
+    learningTreeOpenForm: "Open Form",
     learningTreePbmDocs2024: "2024 PBM Documents",
     learningTreePbmDocs2024Text: "Teaching and learning process archive for 2024",
     learningTreeOpenThesis: "Open Online Thesis System",
@@ -2139,6 +2146,7 @@ const I18N = {
     openMaterial: "Open Material",
     openSummary: "Open Summary",
     openContract: "Open Contract",
+    openQuiz: "Quiz",
     askChatbot: "Ask chatbot",
     educationGuideKicker: "Education Guide",
     educationGuideTitle: "Education and academic guides for the Applied Statistics Master's Program.",
@@ -4826,6 +4834,7 @@ function renderMaterials() {
   const rows = materialsData?.materials || [];
   const query = normalize(materialSearch?.value || "");
   const filtered = rows.filter((material) => {
+    const isRegressionQuiz = normalize(material.title || "").includes("analisis regresi tingkat lanjut");
     const haystack = [
       material.title,
       material.category,
@@ -4833,6 +4842,8 @@ function renderMaterials() {
       material.file,
       material.summaryFile,
       material.contractFile,
+      material.quizHref,
+      isRegressionQuiz ? "kuis quiz analisis regresi tingkat lanjut" : "",
       material.source
     ].join(" ");
     return !query || normalize(haystack).includes(query);
@@ -4846,7 +4857,12 @@ function renderMaterials() {
   }
 
   materialRows.innerHTML = filtered
-    .map((material) => `
+    .map((material) => {
+      const isRegressionQuiz = normalize(material.title || "").includes("analisis regresi tingkat lanjut");
+      const quizHref = material.quizHref || (isRegressionQuiz
+        ? "https://script.google.com/a/macros/unpad.ac.id/s/AKfycbwZ_LVa4DNCuDUEqbgiX2atREpG92OeHOZJvlFQse1boCrK0L6tVWurINa_ws1JyWhY/exec"
+        : "");
+      return `
       <article class="material-card">
         <div class="material-card-head">
           <span class="badge">${escapeHTML(groupLabel(material.category || "Materi Kuliah"))}</span>
@@ -4856,13 +4872,15 @@ function renderMaterials() {
         ${material.aiAdoption ? `<p class="material-ai-status">${escapeHTML(currentLang === "en" ? "AI-aligned · Program learning outcomes unchanged" : "Selaras AI · CPL tetap")}</p>` : ""}
         <p class="syllabus-code">${escapeHTML(material.file || t("fileHtml"))}</p>
         <p>${escapeHTML(t("folder"))}: ${escapeHTML(material.folder || material.source || "@Materi Kuliah")}</p>
-        <div class="material-actions">
+        <div class="material-actions${quizHref ? " material-actions--with-quiz" : ""}">
           <a class="material-action material-action--content" href="${escapeHTML(material.viewerHref || material.href)}" target="_blank" rel="noopener">${escapeHTML(t("openMaterial"))}</a>
           <a class="material-action material-action--summary" href="${escapeHTML(material.summaryHref)}" target="_blank" rel="noopener">${escapeHTML(t("openSummary"))}</a>
           <a class="material-action material-action--contract" href="${escapeHTML(material.contractHref)}" target="_blank" rel="noopener">${escapeHTML(t("openContract"))}</a>
+          ${quizHref ? `<a class="material-action material-action--quiz" href="${escapeHTML(quizHref)}" target="_blank" rel="noopener">${escapeHTML(t("openQuiz"))}</a>` : ""}
         </div>
       </article>
-    `)
+    `;
+    })
     .join("");
 }
 
