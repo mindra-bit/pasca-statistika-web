@@ -1268,6 +1268,8 @@ const I18N = {
     openSummary: "Buka Ringkasan",
     openContract: "Buka Kontrak",
     openQuiz: "Kuis",
+    openRpubs: "Buka RPubs",
+    openRegressionSection: "Konsep & Teori",
     askChatbot: "Tanya chatbot",
     educationGuideKicker: "Pedoman Pendidikan",
     educationGuideTitle: "Pedoman pendidikan dan akademik Program S2 Statistika Terapan.",
@@ -2147,6 +2149,8 @@ const I18N = {
     openSummary: "Open Summary",
     openContract: "Open Contract",
     openQuiz: "Quiz",
+    openRpubs: "Open RPubs",
+    openRegressionSection: "Concepts & Theory",
     askChatbot: "Ask chatbot",
     educationGuideKicker: "Education Guide",
     educationGuideTitle: "Education and academic guides for the Applied Statistics Master's Program.",
@@ -4843,6 +4847,7 @@ function renderMaterials() {
       material.summaryFile,
       material.contractFile,
       material.quizHref,
+      isRegressionQuiz ? "rpubs section konsep teori regresi lanjut" : "",
       isRegressionQuiz ? "kuis quiz analisis regresi tingkat lanjut" : "",
       material.source
     ].join(" ");
@@ -4862,6 +4867,20 @@ function renderMaterials() {
       const quizHref = material.quizHref || (isRegressionQuiz
         ? "https://script.google.com/a/macros/unpad.ac.id/s/AKfycbwZ_LVa4DNCuDUEqbgiX2atREpG92OeHOZJvlFQse1boCrK0L6tVWurINa_ws1JyWhY/exec"
         : "");
+      const regressionLinks = isRegressionQuiz
+        ? [
+            {
+              className: "material-action--rpubs",
+              href: "https://rpubs.com/mindra/RegresiLanjutan",
+              label: t("openRpubs")
+            },
+            {
+              className: "material-action--section",
+              href: "%40Materi%20Kuliah/Materi_Analisis_Regresi_Tingkat_Lanjut/Section1_Konsep_dan_Teori_Regresi_Lanjut_Unpad.html",
+              label: t("openRegressionSection")
+            }
+          ]
+        : [];
       return `
       <article class="material-card">
         <div class="material-card-head">
@@ -4872,11 +4891,12 @@ function renderMaterials() {
         ${material.aiAdoption ? `<p class="material-ai-status">${escapeHTML(currentLang === "en" ? "AI-aligned · Program learning outcomes unchanged" : "Selaras AI · CPL tetap")}</p>` : ""}
         <p class="syllabus-code">${escapeHTML(material.file || t("fileHtml"))}</p>
         <p>${escapeHTML(t("folder"))}: ${escapeHTML(material.folder || material.source || "@Materi Kuliah")}</p>
-        <div class="material-actions${quizHref ? " material-actions--with-quiz" : ""}">
+        <div class="material-actions${quizHref || regressionLinks.length ? " material-actions--with-quiz" : ""}">
           <a class="material-action material-action--content" href="${escapeHTML(material.viewerHref || material.href)}" target="_blank" rel="noopener">${escapeHTML(t("openMaterial"))}</a>
           <a class="material-action material-action--summary" href="${escapeHTML(material.summaryHref)}" target="_blank" rel="noopener">${escapeHTML(t("openSummary"))}</a>
           <a class="material-action material-action--contract" href="${escapeHTML(material.contractHref)}" target="_blank" rel="noopener">${escapeHTML(t("openContract"))}</a>
           ${quizHref ? `<a class="material-action material-action--quiz" href="${escapeHTML(quizHref)}" target="_blank" rel="noopener">${escapeHTML(t("openQuiz"))}</a>` : ""}
+          ${regressionLinks.map((link) => `<a class="material-action ${escapeHTML(link.className)}" href="${escapeHTML(link.href)}" target="_blank" rel="noopener">${escapeHTML(link.label)}</a>`).join("")}
         </div>
       </article>
     `;
