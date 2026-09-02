@@ -45,4 +45,19 @@
   };
   buttons.forEach(button => button.addEventListener("click", () => { active = button.dataset.cplFilter; buttons.forEach(item => { const selected = item === button; item.classList.toggle("is-active", selected); item.setAttribute("aria-pressed", selected); }); update(); }));
   search.addEventListener("input", update);
+
+  const followUpMount = document.getElementById("ppeppDocumentGrid");
+  if (followUpMount) {
+    const followUps = years.flatMap((year, index) => [
+      {term:"Ganjil",year,pages:index === 1 ? 11 : 10},
+      {term:"Genap",year,pages:index === 1 ? 11 : 10}
+    ]);
+    followUps.forEach((item, index) => {
+      const file = `dokumen-cpl/tindak-lanjut-ppepp/Dokumen_Tindak_Lanjut_PPEPP_CPL_${item.term}_${item.year}.pdf`;
+      const card = document.createElement("article");
+      card.className = "ppepp-card";
+      card.innerHTML = `<div><span>${String(index + 1).padStart(2,"0")}</span><small>${item.pages} halaman</small></div><p>Semester ${item.term}</p><h4>${item.year.replace("-","/")}</h4><em>Pengendalian · Peningkatan</em><div><a href="${file}" target="_blank" rel="noopener">Buka dokumen</a><a href="${file}" download aria-label="Unduh dokumen tindak lanjut ${item.term} ${item.year}">↓</a></div>`;
+      followUpMount.append(card);
+    });
+  }
 })();
