@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#123e56">
   <title>Portofolio Mahasiswa | S2 Statistika Terapan FMIPA UNPAD</title>
-  <link rel="stylesheet" href="portfolio.css?v=20260820">
+  <link rel="stylesheet" href="portfolio.css?v=20260902-cpl">
 </head>
 <body>
   <header class="portfolio-header">
@@ -66,6 +66,49 @@
       </a>
     </section>
 
+    <section class="cpl-showcase" aria-labelledby="cpl-showcase-title">
+      <div class="cpl-showcase-head">
+        <div>
+          <p class="eyebrow">Evidence Monitoring CPL</p>
+          <h2 id="cpl-showcase-title">Laporan capaian dalam tiga sudut pandang</h2>
+          <p>Jelajahi performa semester, perkembangan angkatan, dan kontribusi mata kuliah pada Capaian Pembelajaran Lulusan.</p>
+        </div>
+        <div class="cpl-orbit" aria-label="Cakupan laporan CPL tahun 2022 sampai 2026">
+          <span>CPL</span><i>Semester</i><i>Angkatan</i><i>Mata Kuliah</i>
+        </div>
+      </div>
+      <div class="cpl-metrics" aria-label="Ringkasan dokumen CPL">
+        <article><strong>18</strong><span>Laporan PDF</span></article>
+        <article><strong>8</strong><span>Periode semester</span></article>
+        <article><strong>4</strong><span>Angkatan</span></article>
+        <article><strong>2022&ndash;2026</strong><span>Rentang pemantauan</span></article>
+      </div>
+      <div class="cpl-coverage" aria-label="Cakupan laporan semester dari tahun akademik 2022/2023 sampai 2025/2026">
+        <div class="cpl-year-axis"><span>2022/23</span><span>2023/24</span><span>2024/25</span><span>2025/26</span></div>
+        <div class="cpl-track-row"><b>Ganjil</b><div><i></i><i></i><i></i><i></i></div></div>
+        <div class="cpl-track-row"><b>Genap</b><div class="is-gold"><i></i><i></i><i></i><i></i></div></div>
+      </div>
+      <div class="cpl-library-head">
+        <div><p class="eyebrow">Perpustakaan Dokumen</p><h3>Temukan laporan yang dibutuhkan</h3></div>
+        <p id="cplResultSummary" aria-live="polite">18 laporan ditampilkan</p>
+      </div>
+      <div class="cpl-toolbar">
+        <label><span aria-hidden="true">⌕</span><span class="sr-only">Cari laporan</span><input id="cplSearch" type="search" placeholder="Cari tahun, semester, atau jenis laporan…" autocomplete="off"></label>
+        <div role="group" aria-label="Filter laporan CPL">
+          <button class="is-active" type="button" data-cpl-filter="all" aria-pressed="true">Semua</button>
+          <button type="button" data-cpl-filter="semester" aria-pressed="false">Semester</button>
+          <button type="button" data-cpl-filter="angkatan" aria-pressed="false">Angkatan</button>
+          <button type="button" data-cpl-filter="mata-kuliah" aria-pressed="false">Mata kuliah</button>
+        </div>
+      </div>
+      <div id="cplReportGroups"></div>
+      <div class="cpl-empty" id="cplEmpty" hidden><strong>Laporan tidak ditemukan.</strong><span>Coba kata kunci atau filter lain.</span></div>
+      <a class="cpl-method-link" href="metodologi-cpl/" target="_blank" rel="noopener">
+        <span><small>Landasan Analisis</small><strong>Pelajari metodologi perhitungan CPL</strong><em>Sumber data, normalisasi bobot, agregasi, benchmark, audit trail, dan batasan interpretasi.</em></span>
+        <b aria-hidden="true">↗</b>
+      </a>
+    </section>
+
     <section class="portfolio-links" aria-label="Akses pendukung portofolio">
       <a href="Modul_Perhitungan_Portofolio_CPL_S2_Statistika_Terapan_UNPAD.html" target="_blank" rel="noopener">
         <span>Modul Perhitungan Portofolio CPL</span>
@@ -79,5 +122,6 @@
   </main>
   <footer>Program Studi Magister Statistika Terapan · FMIPA Universitas Padjadjaran</footer>
   <script src="portfolio.js?v=20260820" defer></script>
+  <script src="cpl-reports.js?v=20260902" defer></script>
 </body>
 </html>
