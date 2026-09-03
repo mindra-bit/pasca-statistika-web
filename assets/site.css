@@ -11075,23 +11075,58 @@ tbody tr:hover td {
 
 @media (max-width: 640px) {
   .contact-action-dock {
-    right: 12px;
-    bottom: 12px;
-    width: min(286px, calc(100vw - 24px));
-    padding: 13px;
-    border-radius: 22px;
+    right: 10px;
+    bottom: max(10px, env(safe-area-inset-bottom));
+    display: grid;
+    grid-template-columns: repeat(3, 42px);
+    gap: 6px;
+    width: auto;
+    padding: 7px;
+    border-radius: 18px;
+    box-shadow: 0 14px 34px rgba(3, 55, 47, 0.28);
+  }
+
+  .contact-action-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 
   .contact-action {
-    min-height: 54px;
-    grid-template-columns: 40px 1fr;
-    padding: 7px 14px 7px 8px;
-    font-size: 0.9rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 42px;
+    min-height: 42px;
+    padding: 5px;
+    border-radius: 13px;
+  }
+
+  .contact-action > span:last-child:not(.contact-action-icon) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 
   .contact-action-icon {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
+    font-size: 0.68rem;
+  }
+
+  .contact-action-icon-brand {
+    font-size: 1.12rem;
   }
 }
 
