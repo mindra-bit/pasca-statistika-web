@@ -3365,14 +3365,18 @@
           dragged = false;
           startX = event.clientX;
           startScrollLeft = viewport.scrollLeft;
-          viewport.classList.add("is-dragging");
-          viewport.setPointerCapture?.(event.pointerId);
+          // Leave a normal press on the link; capture only after an actual drag.
         });
 
         viewport.addEventListener("pointermove", (event) => {
           if (!isDragging) return;
           const distance = event.clientX - startX;
-          if (Math.abs(distance) > 5) dragged = true;
+          if (!dragged && Math.abs(distance) <= 8) return;
+          if (!dragged) {
+            dragged = true;
+            viewport.classList.add("is-dragging");
+            viewport.setPointerCapture?.(event.pointerId);
+          }
           viewport.scrollLeft = startScrollLeft - distance;
         });
 
@@ -3380,7 +3384,9 @@
           if (!isDragging) return;
           isDragging = false;
           viewport.classList.remove("is-dragging");
-          viewport.releasePointerCapture?.(event.pointerId);
+          if (viewport.hasPointerCapture?.(event.pointerId)) {
+            viewport.releasePointerCapture(event.pointerId);
+          }
           pauseMotion();
         };
 
@@ -3394,14 +3400,14 @@
         viewport.addEventListener("wheel", pauseMotion, { passive: true });
         viewport.addEventListener("touchstart", pauseMotion, { passive: true });
 
-        section.querySelectorAll(".academic-news-card").forEach((link) => {
-          link.addEventListener("click", (event) => {
-            if (!dragged) return;
-            event.preventDefault();
-            event.stopPropagation();
-            dragged = false;
-          });
-        });
+        viewport.addEventListener("dragstart", (event) => event.preventDefault());
+        viewport.addEventListener("click", (event) => {
+          // Keyboard activation stays available even after a cancelled drag.
+          if (!dragged || event.detail === 0) return;
+          event.preventDefault();
+          event.stopPropagation();
+          dragged = false;
+        }, true);
       };
 
       if (document.readyState === "loading") {
